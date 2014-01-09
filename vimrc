@@ -1,7 +1,17 @@
+" vundle
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" init vundle with vundle
+Bundle 'gmarik/vundle'
+
 " set encoding
 set encoding=utf-8
 
-" use Unix as the standard file type
+" use unix as the standard file type
 set ffs=unix,dos,mac
 
 " enable filetype plugins
@@ -15,7 +25,7 @@ set autoread
 syntax enable
 
 try
-    colorscheme base16-ocean-dark
+    colorscheme base16-ocean
 catch
 endtry
 
@@ -33,3 +43,6 @@ endif
 set nobackup
 set nowb
 set noswapfile
+
+" end vundle
+filetype plugin indent on
