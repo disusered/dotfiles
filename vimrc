@@ -129,7 +129,7 @@
 " plugin specific ==============================================================
   " easymotion
   let g:EasyMotion_leader_key = '<Leader>'
-  map  <Leader><Leader> <Leader>f
+  map  <Leader><Leader> H<Leader>f
 
   " commentary
   nmap <Leader>/ gcc
