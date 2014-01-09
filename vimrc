@@ -26,6 +26,26 @@
   " set to auto read when a file is changed from the outside
   set autoread
 
+  " enable bg buffers
+  set hidden
+
+  " text editor
+  set ruler
+  set number
+  set title
+  set backspace=indent,eol,start
+  set nostartofline
+
+  " whitespace
+  set tabstop=2
+  set shiftwidth=2
+  set softtabstop=2
+  set expandtab
+  set autoindent
+  set copyindent
+  set list listchars=tab:\ \ ,trail:·
+  set pastetoggle=<F2>
+
   " colors
   syntax enable
 
@@ -38,6 +58,25 @@
   endtry
 
   set background=dark
+
+  " crosshair cursor on active buffer
+  autocmd BufEnter * setlocal cursorcolumn
+  autocmd BufLeave * setlocal nocursorcolumn
+  autocmd BufEnter * setlocal cursorline
+  autocmd BufLeave * setlocal nocursorline
+
+  " mouse control
+  set mouse=a
+  set ttymouse=xterm2
+
+  " fully collapse vertical splits
+  set wmh=0
+
+  " search
+  set hlsearch
+  set incsearch
+  set ignorecase
+  set smartcase
 
   " ignore compiled files
   set wildignore=*.o,*~,*.pyc
@@ -52,5 +91,18 @@
   set nowb
   set noswapfile
 
-  " end vundle
+" syntax specific ==============================================================
+  " make
+  au FileType make set noexpandtab
+
+  " python
+  au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+
+  " additional ruby extensions
+  au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
+
+  " additional js extensions
+  au BufNewFile,BufRead *.json set ft=javascript
+
+" /vundle ======================================================================
   filetype plugin indent on
