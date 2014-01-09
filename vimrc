@@ -1,48 +1,56 @@
-" vundle
-set nocompatible
-filetype off
+" vundle =======================================================================
+  set nocompatible
+  filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+  set rtp+=~/.vim/bundle/vundle/
+  call vundle#rc()
 
-" init vundle with vundle
-Bundle 'gmarik/vundle'
+  " init vundle with vundle
+  Bundle 'gmarik/vundle'
 
-" set encoding
-set encoding=utf-8
+  " bundles
+    " base16 colorschemes
+    Bundle 'chriskempson/base16-vim'
 
-" use unix as the standard file type
-set ffs=unix,dos,mac
+" etc ==========================================================================
+  " set encoding
+  set encoding=utf-8
 
-" enable filetype plugins
-filetype plugin on
-filetype indent on
+  " use unix as the standard file type
+  set ffs=unix,dos,mac
 
-" set to auto read when a file is changed from the outside
-set autoread
+  " enable filetype plugins
+  filetype plugin on
+  filetype indent on
 
-" colors
-syntax enable
+  " set to auto read when a file is changed from the outside
+  set autoread
 
-try
-    colorscheme base16-ocean
-catch
-endtry
+  " colors
+  syntax enable
 
-set background=dark
+  " base16-shell 256 color iTerm2 fix
+  let base16colorspace=256
 
-" ignore compiled files
-set wildignore=*.o,*~,*.pyc
-if has("win16") || has("win32")
-    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
-else
-    set wildignore+=.git\*,.hg\*,.svn\*
-endif
+  try
+      colorscheme base16-ocean
+  catch
+  endtry
 
-" turn backup off
-set nobackup
-set nowb
-set noswapfile
+  set background=dark
 
-" end vundle
-filetype plugin indent on
+  " ignore compiled files
+  set wildignore=*.o,*~,*.pyc
+  if has("win16") || has("win32")
+      set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+  else
+      set wildignore+=.git\*,.hg\*,.svn\*
+  endif
+
+  " turn backup off
+  set nobackup
+  set nowb
+  set noswapfile
+
+  " end vundle
+  filetype plugin indent on
