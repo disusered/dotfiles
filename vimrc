@@ -37,6 +37,9 @@
   " remap leader key
   let mapleader = ","
 
+  " disable ex
+  nnoremap Q <nop>
+
   " use unix as the standard file type
   set ffs=unix,dos,mac
 
