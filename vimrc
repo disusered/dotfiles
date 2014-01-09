@@ -15,6 +15,21 @@
     " easymotion
     Bundle 'Lokaltog/vim-easymotion'
 
+    " syntastic
+    Bundle 'scrooloose/syntastic'
+
+    " surround
+    Bundle 'tpope/vim-surround'
+
+    " speeddating
+    Bundle 'tpope/vim-speeddating'
+
+    " commentary
+    Bundle 'tpope/vim-commentary'
+
+    " repeat
+    Bundle 'tpope/vim-repeat'
+
 " etc ==========================================================================
   " set encoding
   set encoding=utf-8
@@ -115,6 +130,10 @@
   " easymotion
   let g:EasyMotion_leader_key = '<Leader>'
   map  <Leader><Leader> <Leader>f
+
+  " commentary
+  nmap <Leader>/ gcc
+  vmap <Leader>/ gc
 
 " /vundle ======================================================================
   filetype plugin indent on
