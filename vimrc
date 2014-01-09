@@ -12,9 +12,15 @@
     " base16 colorschemes
     Bundle 'chriskempson/base16-vim'
 
+    " easymotion
+    Bundle 'Lokaltog/vim-easymotion'
+
 " etc ==========================================================================
   " set encoding
   set encoding=utf-8
+
+  " remap leader key
+  let mapleader = ","
 
   " use unix as the standard file type
   set ffs=unix,dos,mac
@@ -104,6 +110,11 @@
 
   " additional js extensions
   au BufNewFile,BufRead *.json set ft=javascript
+
+" plugin specific ==============================================================
+  " easymotion
+  let g:EasyMotion_leader_key = '<Leader>'
+  map  <Leader><Leader> <Leader>f
 
 " /vundle ======================================================================
   filetype plugin indent on
