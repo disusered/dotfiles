@@ -35,6 +35,7 @@
   set title
   set backspace=indent,eol,start
   set nostartofline
+  set nowrap
 
   " whitespace
   set tabstop=2
@@ -43,8 +44,13 @@
   set expandtab
   set autoindent
   set copyindent
-  set list listchars=tab:\ \ ,trail:·
   set pastetoggle=<F2>
+
+  " show whitespace
+  autocmd BufEnter * syn match WhiteSpace / / containedin=ALL conceal cchar=·
+  autocmd BufEnter * setl conceallevel=2 concealcursor=nv
+  autocmd BufLeave * setl conceallevel=0 concealcursor=nv
+  set listchars=tab:\ \ ,trail:·
 
   " colors
   syntax enable
@@ -57,13 +63,8 @@
   catch
   endtry
 
+  autocmd ColorScheme * highlight LineNr ctermbg=None
   set background=dark
-
-  " crosshair cursor on active buffer
-  autocmd BufEnter * setlocal cursorcolumn
-  autocmd BufLeave * setlocal nocursorcolumn
-  autocmd BufEnter * setlocal cursorline
-  autocmd BufLeave * setlocal nocursorline
 
   " mouse control
   set mouse=a
