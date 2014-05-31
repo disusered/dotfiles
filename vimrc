@@ -11,37 +11,26 @@
   " bundles
     " base16 colorschemes
     Plugin 'chriskempson/base16-vim'
-
     " easymotion
     Plugin 'Lokaltog/vim-easymotion'
-
     " syntastic
     Plugin 'scrooloose/syntastic'
-
     " surround
     Plugin 'tpope/vim-surround'
-
     " speeddating
     Plugin 'tpope/vim-speeddating'
-
     " commentary
     Plugin 'tpope/vim-commentary'
-
     " eunuch
     Plugin 'tpope/vim-eunuch'
-
     " unimpaired
     Plugin 'tpope/vim-unimpaired'
-
     " tabular
     Plugin 'godlygeek/tabular'
-
     " multiple cursors
     Plugin 'terryma/vim-multiple-cursors'
-
     " airline
     Plugin 'bling/vim-airline'
-
     " repeat
     Plugin 'tpope/vim-repeat'
 
