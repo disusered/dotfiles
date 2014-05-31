@@ -122,8 +122,8 @@
   map <C-Up> [l
   map <C-Down> ]l
 
-  " save
-  nmap  :w<CR>
+  " close pane
+  nmap  :q<CR>
 
   " colors
   syntax enable
