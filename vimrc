@@ -195,6 +195,7 @@
   vmap <Leader>a: :Tabularize /:\zs<CR>
 
   " syntastic
+  nmap  :w<CR>:SyntasticCheck<CR>:Errors<CR>
   map <Leader>l :w<CR>:SyntasticCheck<CR>:Errors<CR>
 
   function s:find_jshintrc(dir)
