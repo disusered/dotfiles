@@ -36,6 +36,8 @@
     Plugin 'tpope/vim-fugitive'
     " signify
     Plugin 'mhinz/vim-signify'
+    " editorconfig
+    Plugin 'editorconfig/editorconfig-vim'
 
   call vundle#end()
   filetype plugin indent on
