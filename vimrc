@@ -150,14 +150,14 @@
   nmap <Leader>/ gcc
   vmap <Leader>/ gc
 
-" syntastic
-  map <Leader>l :SyntasticCheck<enter>:Errors<enter>
   " tabular
   nmap <Leader>a= :Tabularize /=<CR>
   vmap <Leader>a= :Tabularize /=<CR>
   nmap <Leader>a: :Tabularize /:\zs<CR>
   vmap <Leader>a: :Tabularize /:\zs<CR>
 
+  " syntastic
+  map <Leader>l :w<CR>:SyntasticCheck<CR>:Errors<CR>
 
   function s:find_jshintrc(dir)
     let l:found = globpath(a:dir, '.jshintrc')
