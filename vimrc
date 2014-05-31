@@ -39,6 +39,9 @@
     " multiple cursors
     Plugin 'terryma/vim-multiple-cursors'
 
+    " airline
+    Plugin 'bling/vim-airline'
+
     " repeat
     Plugin 'tpope/vim-repeat'
 
@@ -183,3 +186,7 @@
   endfunction
 
   au BufEnter * call UpdateJsHintConf()
+
+  " airline
+  set laststatus=2
+  let g:airline_powerline_fonts = 1
