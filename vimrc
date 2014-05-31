@@ -144,5 +144,3 @@
   nmap <Leader>/ gcc
   vmap <Leader>/ gc
 
-" /vundle ======================================================================
-  filetype plugin indent on
