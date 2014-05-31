@@ -40,6 +40,9 @@
     Plugin 'editorconfig/editorconfig-vim'
     " tmuxline
     Plugin 'edkolev/tmuxline.vim'
+    " javascript
+    Plugin 'jelera/vim-javascript-syntax'
+    Plugin 'pangloss/vim-javascript'
 
   call vundle#end()
   filetype plugin indent on
