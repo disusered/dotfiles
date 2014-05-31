@@ -117,6 +117,10 @@
   vmap <S-Up> [egv
   vmap <S-Down> ]egv
 
+  " location
+  map <C-Up> [l
+  map <C-Down> ]l
+
   " colors
   syntax enable
 
