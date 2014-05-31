@@ -88,6 +88,9 @@
   " remove trailing whitespace
   nnoremap <Leader>rt :%s/\s\+$//e<CR>
 
+  " switch off current search
+  map  :nohlsearch<CR>
+  nnoremap <silent> <Leader>h :nohlsearch<CR>
   " colors
   syntax enable
 
