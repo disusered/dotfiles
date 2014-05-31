@@ -77,6 +77,7 @@
   set autoindent
   set copyindent
   set pastetoggle=<F2>
+  set showbreak=↪
 
   " show whitespace
   autocmd BufEnter * syn match WhiteSpace / / containedin=ALL conceal cchar=·
