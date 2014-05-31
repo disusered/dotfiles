@@ -67,6 +67,7 @@
   set backspace=indent,eol,start
   set nostartofline
   set nowrap
+  set colorcolumn=80
 
   " whitespace
   set tabstop=2
