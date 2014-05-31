@@ -33,6 +33,9 @@
     " unimpaired
     Plugin 'tpope/vim-unimpaired'
 
+    " tabular
+    Plugin 'godlygeek/tabular'
+
     " repeat
     Plugin 'tpope/vim-repeat'
 
@@ -149,6 +152,12 @@
 
 " syntastic
   map <Leader>l :SyntasticCheck<enter>:Errors<enter>
+  " tabular
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+
 
   function s:find_jshintrc(dir)
     let l:found = globpath(a:dir, '.jshintrc')
