@@ -84,6 +84,9 @@
   autocmd BufLeave * setl conceallevel=0 concealcursor=nv
   set listchars=tab:\ \ ,trail:·
 
+  " remove trailing whitespace
+  nnoremap <Leader>rt :%s/\s\+$//e<CR>
+
   " colors
   syntax enable
 
