@@ -36,6 +36,9 @@
     " tabular
     Plugin 'godlygeek/tabular'
 
+    " multiple cursors
+    Plugin 'terryma/vim-multiple-cursors'
+
     " repeat
     Plugin 'tpope/vim-repeat'
 
