@@ -30,6 +30,9 @@
     " eunuch
     Plugin 'tpope/vim-eunuch'
 
+    " unimpaired
+    Plugin 'tpope/vim-unimpaired'
+
     " repeat
     Plugin 'tpope/vim-repeat'
 
