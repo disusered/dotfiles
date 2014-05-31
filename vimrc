@@ -184,3 +184,9 @@
   set laststatus=2
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#tabline#enabled = 1
+
+" autoreload ===================================================================
+augroup reload_vimrc " {
+  autocmd!
+  autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
