@@ -32,6 +32,8 @@
     Plugin 'bling/vim-airline'
     " repeat
     Plugin 'tpope/vim-repeat'
+    " fugitive
+    Plugin 'tpope/vim-fugitive'
 
   call vundle#end()
   filetype plugin indent on
