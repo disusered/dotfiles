@@ -38,6 +38,8 @@
     Plugin 'mhinz/vim-signify'
     " editorconfig
     Plugin 'editorconfig/editorconfig-vim'
+    " tmuxline
+    Plugin 'edkolev/tmuxline.vim'
 
   call vundle#end()
   filetype plugin indent on
