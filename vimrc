@@ -7,7 +7,6 @@
 
   " init vundle with vundle
   Plugin 'gmarik/Vundle.vim'
-
   " bundles
     " base16 colorschemes
     Plugin 'chriskempson/base16-vim'
@@ -132,7 +131,6 @@
   catch
   endtry
 
-  autocmd ColorScheme * highlight LineNr ctermbg=None
   set background=dark
 
   " mouse control
@@ -219,9 +217,3 @@
   set laststatus=2
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#tabline#enabled = 1
-
-" autoreload ===================================================================
-augroup reload_vimrc " {
-  autocmd!
-  autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END " }
