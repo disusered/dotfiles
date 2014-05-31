@@ -2,33 +2,39 @@
   set nocompatible
   filetype off
 
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
 
   " init vundle with vundle
-  Bundle 'gmarik/vundle'
+  Plugin 'gmarik/Vundle.vim'
 
   " bundles
     " base16 colorschemes
-    Bundle 'chriskempson/base16-vim'
+    Plugin 'chriskempson/base16-vim'
 
     " easymotion
-    Bundle 'Lokaltog/vim-easymotion'
+    Plugin 'Lokaltog/vim-easymotion'
 
     " syntastic
-    Bundle 'scrooloose/syntastic'
+    Plugin 'scrooloose/syntastic'
 
     " surround
-    Bundle 'tpope/vim-surround'
+    Plugin 'tpope/vim-surround'
 
     " speeddating
-    Bundle 'tpope/vim-speeddating'
+    Plugin 'tpope/vim-speeddating'
 
     " commentary
-    Bundle 'tpope/vim-commentary'
+    Plugin 'tpope/vim-commentary'
+
+    " eunuch
+    Plugin 'tpope/vim-eunuch'
 
     " repeat
-    Bundle 'tpope/vim-repeat'
+    Plugin 'tpope/vim-repeat'
+
+  call vundle#end()
+  filetype plugin indent on
 
 " etc ==========================================================================
   " set encoding
