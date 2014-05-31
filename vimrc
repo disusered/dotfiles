@@ -168,6 +168,7 @@
   map  <Leader><Leader> H<Leader>f
 
   " commentary
+  map  gcc
   nmap <Leader>/ gcc
   vmap <Leader>/ gc
 
