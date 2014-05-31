@@ -34,6 +34,8 @@
     Plugin 'tpope/vim-repeat'
     " fugitive
     Plugin 'tpope/vim-fugitive'
+    " signify
+    Plugin 'mhinz/vim-signify'
 
   call vundle#end()
   filetype plugin indent on
