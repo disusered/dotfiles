@@ -109,6 +109,14 @@
   map [1;5C <C-Right>
   map [1;5D <C-Left>
 
+  " bubble single lines
+  nmap <S-Up> [e
+  nmap <S-Down> ]e
+
+  " bubble multiple lines
+  vmap <S-Up> [egv
+  vmap <S-Down> ]egv
+
   " colors
   syntax enable
 
