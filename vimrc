@@ -5,6 +5,8 @@
   set runtimepath+=~/.vim/bundle/neobundle.vim/
   call neobundle#begin(expand('~/.vim/bundle/'))
 
+  let g:neobundle#install_process_timeout = 300
+
   " yo dawg
   NeoBundleFetch 'Shougo/neobundle.vim'
   " bundles
@@ -53,6 +55,13 @@
     " unite
     NeoBundle 'Shougo/unite.vim'
     NeoBundle 'h1mesuke/unite-outline'
+    " autocomplete
+    NeoBundle 'Valloric/YouCompleteMe', {
+                \ 'build' : {
+                \    'unix' : './install.sh --clang-completer --omnisharp-completer',
+                \    'mac' : './install.sh --clang-completer'
+                \ },
+                \ }
     " vimproc
     let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
