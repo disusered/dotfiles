@@ -159,7 +159,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   map <C-Down> ]l
 
   " close pane
-  nmap  :q<CR>
+  nmap  :bw<CR>
 
   " file explorer
   map <Leader>kb :Explore<cr>
