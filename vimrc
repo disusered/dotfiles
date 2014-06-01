@@ -86,6 +86,16 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
       \    },
       \ })
 
+
+  " filetype specific
+    " marked
+    NeoBundle 'itspriddle/vim-marked', {
+                \ 'lazy' : 1,
+                \ 'autoload': {
+                \   'filetypes': ['markdown', 'ghmarkdown']
+                \ },
+                \ }
+
   call neobundle#end()
   filetype plugin indent on
   NeoBundleCheck
