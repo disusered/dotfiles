@@ -275,11 +275,8 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   vmap <Leader>fc :call RangeCSSBeautify()<CR>
 
   " unite
-  call unite#filters#matcher_default#use(['matcher_fuzzy'])
-  call unite#filters#sorter_default#use(['sorter_rank'])
-  call unite#custom#source('file_rec/async','sorters','sorter_rank')
-
-  nnoremap <silent>  :Unite -start-insert -buffer-name=files -winheight=10 file_rec/async:!<cr>
+  let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -g ""'
+  nnoremap <silent>  :Unite -start-insert -buffer-name=files -winheight=10 file_rec/async<cr>
   nnoremap <silent>  :Unite -buffer-name=buffers -winheight=10 buffer<cr>
 
   " marked
