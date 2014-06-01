@@ -238,8 +238,9 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
 " plugin specific ==============================================================
   " easymotion
-  let g:EasyMotion_leader_key = '<Leader>'
-  map  <Leader><Leader> H<Leader>f
+  nmap t <Plug>(easymotion-bd-t2)
+  map  / <Plug>(easymotion-sn)
+  omap / <Plug>(easymotion-tn)
 
   " commentary
   nmap  gcc
