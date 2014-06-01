@@ -258,6 +258,8 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   nmap t <Plug>(easymotion-bd-t2)
   map  / <Plug>(easymotion-sn)
   omap / <Plug>(easymotion-tn)
+  map <Leader>j <Plug>(easymotion-j)
+  map <Leader>k <Plug>(easymotion-k)
 
   " commentary
   nmap  gcc
