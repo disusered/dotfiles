@@ -49,6 +49,8 @@
     " javascript
     NeoBundle 'jelera/vim-javascript-syntax'
     NeoBundle 'pangloss/vim-javascript'
+    " syntax
+    NeoBundle 'kchmck/vim-coffee-script'
     " beautify
     NeoBundle 'maksimr/vim-jsbeautify'
     NeoBundle 'einars/js-beautify'
