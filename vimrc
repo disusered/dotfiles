@@ -55,6 +55,13 @@
     " unite
     NeoBundle 'Shougo/unite.vim'
     NeoBundle 'h1mesuke/unite-outline'
+    " ternsjs
+    NeoBundle 'marijnh/tern_for_vim', {
+                \ 'build' : {
+                \    'unix' : 'npm install',
+                \    'mac' : 'npm install'
+                \ },
+                \}
     " autocomplete
     NeoBundle 'Valloric/YouCompleteMe', {
                 \ 'build' : {
