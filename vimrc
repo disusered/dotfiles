@@ -46,7 +46,6 @@
     NeoBundle 'edkolev/tmuxline.vim'
     " delimitor
     NeoBundle 'Raimondi/delimitMate'
-    " unite
     " autocomplete
     NeoBundle 'Valloric/YouCompleteMe', {
                 \ 'build' : {
