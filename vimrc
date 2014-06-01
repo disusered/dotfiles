@@ -247,21 +247,25 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   " syntastic
   nmap  :w<CR>:SyntasticCheck<CR>:Errors<CR>
   map <Leader>l :w<CR>:SyntasticCheck<CR>:Errors<CR>
-
+  let g:syntastic_html_tidy_ignore_errors = [
+      \"trimming empty <i>",
+      \"trimming empty <span>",
+      \"<input> proprietary attribute \"autocomplete\"",
+      \"proprietary attribute \"ng-\"",
+      \"proprietary attribute \"role\"",
+      \"proprietary attribute \"hidden\"",
+      \]
   function s:find_jshintrc(dir)
     let l:found = globpath(a:dir, '.jshintrc')
     if filereadable(l:found)
       return l:found
     endif
-
     let l:parent = fnamemodify(a:dir, ':h')
     if l:parent != a:dir
       return s:find_jshintrc(l:parent)
     endif
-
     return "~/.jshintrc"
   endfunction
-
   function UpdateJsHintConf()
     let l:dir = expand('%:p:h')
     let l:jshintrc = s:find_jshintrc(l:dir)
