@@ -44,8 +44,6 @@
     NeoBundle 'editorconfig/editorconfig-vim'
     " tmuxline
     NeoBundle 'edkolev/tmuxline.vim'
-    " syntax
-    NeoBundle 'kchmck/vim-coffee-script'
     " delimitor
     NeoBundle 'Raimondi/delimitMate'
     " unite
@@ -73,6 +71,14 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
 
   " filetype specific
+    " coffeescript
+    au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
+    NeoBundle 'kchmck/vim-coffee-script', {
+                \ 'lazy' : 1,
+                \ 'autoload': {
+                \   'filetypes': ['coffee']
+                \ },
+                \}
 
     " javascript
     NeoBundle 'jelera/vim-javascript-syntax', {
