@@ -116,11 +116,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   set copyindent
   set pastetoggle=<F2>
 
-  " show trailing whitespace
-  autocmd BufEnter * syn match WhiteSpace /\s\+$/ containedin=ALL conceal cchar=⋅
-  autocmd BufEnter * setl conceallevel=2 concealcursor=nv
-  autocmd BufLeave * setl conceallevel=0 concealcursor=nv
-
   " bind show whitespace
   map <Leader>ws :set list!<CR>
 
