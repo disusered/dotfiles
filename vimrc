@@ -57,6 +57,7 @@
     " unite
     NeoBundle 'Shougo/unite.vim'
     NeoBundle 'Shougo/unite-outline'
+    NeoBundle 'tacroe/unite-mark'
     " ternsjs
     NeoBundle 'marijnh/tern_for_vim', {
                 \ 'build' : {
@@ -311,6 +312,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   nnoremap <silent>  :Unite -no-split -buffer-name=buffers buffer<cr>
   nnoremap <silent>  :Unite -no-split -auto-preview -buffer-name=outline outline<cr>
   nnoremap <silent>  :Unite -no-split -auto-preview grep:.<cr>
+  nnoremap <silent>  :Unite -no-split -auto-preview -buffer-name=marks mark<cr>
 
   " marked
   map <silent> <Leader>md :MarkedOpen!<CR>
