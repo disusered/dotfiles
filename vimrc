@@ -177,11 +177,8 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   map <C-Up> [l
   map <C-Down> ]l
 
-  " close buffer
-  map <silent>  :bw<CR>
-
   " close window
-  map <silent>  :q<CR>
+  map <silent> <F4> :q<CR>
 
   " file explorer
   map <silent> <Leader>kb :Explore<cr>
