@@ -43,6 +43,9 @@
     " javascript
     Plugin 'jelera/vim-javascript-syntax'
     Plugin 'pangloss/vim-javascript'
+    " beautify
+    Plugin 'maksimr/vim-jsbeautify'
+    Plugin 'einars/js-beautify'
 
   call vundle#end()
   filetype plugin indent on
@@ -234,4 +237,7 @@
   let g:airline_powerline_fonts = 1
   " let g:airline#extensions#tabline#enabled = 1
 
-  " javascript
+  " beautify
+  vmap <Leader>fj :call RangeJsBeautify()<CR>
+  vmap <Leader>fh :call RangeHtmlBeautify()<CR>
+  vmap <Leader>fc :call RangeCSSBeautify()<CR>
