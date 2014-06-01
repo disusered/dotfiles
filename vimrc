@@ -44,27 +44,14 @@
     NeoBundle 'editorconfig/editorconfig-vim'
     " tmuxline
     NeoBundle 'edkolev/tmuxline.vim'
-    " javascript
-    NeoBundle 'jelera/vim-javascript-syntax'
-    NeoBundle 'pangloss/vim-javascript'
     " syntax
     NeoBundle 'kchmck/vim-coffee-script'
-    " beautify
-    NeoBundle 'maksimr/vim-jsbeautify'
-    NeoBundle 'einars/js-beautify'
     " delimitor
     NeoBundle 'Raimondi/delimitMate'
     " unite
     NeoBundle 'Shougo/unite.vim'
     NeoBundle 'Shougo/unite-outline'
     NeoBundle 'tacroe/unite-mark'
-    " ternsjs
-    NeoBundle 'marijnh/tern_for_vim', {
-                \ 'build' : {
-                \    'unix' : 'npm install',
-                \    'mac' : 'npm install'
-                \ },
-                \}
     " autocomplete
     NeoBundle 'Valloric/YouCompleteMe', {
                 \ 'build' : {
@@ -86,6 +73,48 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
 
   " filetype specific
+
+    " javascript
+    NeoBundle 'jelera/vim-javascript-syntax', {
+                \ 'lazy' : 1,
+                \ 'autoload': {
+                \   'filetypes': ['javascript']
+                \ },
+                \}
+
+    NeoBundle 'pangloss/vim-javascript', {
+                \ 'lazy' : 1,
+                \ 'autoload': {
+                \   'filetypes': ['javascript']
+                \ },
+                \}
+  
+    " js beautify
+    NeoBundle 'einars/js-beautify', {
+                \ 'lazy' : 1,
+                \ 'autoload': {
+                \   'filetypes': ['javascript']
+                \ },
+                \}
+
+    NeoBundle 'maksimr/vim-jsbeautify', {
+                \ 'lazy' : 1,
+                \ 'autoload': {
+                \   'filetypes': ['javascript', 'html', 'css']
+                \ },
+                \}
+    " ternsjs
+    NeoBundle 'marijnh/tern_for_vim', {
+                \ 'lazy' : 1,
+                \ 'autoload': {
+                \   'filetypes': ['javascript']
+                \ },
+                \ 'build' : {
+                \    'unix' : 'npm install',
+                \    'mac' : 'npm install'
+                \ },
+                \}
+
     " marked
     NeoBundle 'itspriddle/vim-marked', {
                 \ 'lazy' : 1,
