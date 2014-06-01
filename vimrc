@@ -78,6 +78,7 @@
   set nostartofline
   set nowrap
   set colorcolumn=80
+  set relativenumber
 
   " whitespace
   set tabstop=2
