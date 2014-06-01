@@ -305,6 +305,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   let g:unite_source_grep_default_opts='--nocolor --nogroup --hidden'
   let g:unite_source_grep_recursive_opt=''
   autocmd FileType unite call s:unite_settings()
+  autocmd BufLeave \[unite\]* if "nofile" ==# &buftype | setlocal bufhidden=wipe | endif
   function! s:unite_settings()
     let b:SuperTabDisabled=1
   endfunction
