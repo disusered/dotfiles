@@ -5,7 +5,7 @@
   set runtimepath+=~/.vim/bundle/neobundle.vim/
   call neobundle#begin(expand('~/.vim/bundle/'))
 
-  let g:neobundle#install_process_timeout = 300
+  let g:neobundle#install_process_timeout = 600
 
   " yo dawg
   NeoBundleFetch 'Shougo/neobundle.vim'
