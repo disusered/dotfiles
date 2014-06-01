@@ -83,6 +83,9 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   " use unix as the standard file type
   set ffs=unix,dos,mac
 
+  " enable system clipboard
+  set clipboard=unnamed
+
   " enable filetype plugins
   filetype plugin on
   filetype indent on
