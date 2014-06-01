@@ -311,7 +311,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   endfunction
   nnoremap <silent>  :Unite -no-split -buffer-name=files file_rec/async<cr>
   nnoremap <silent>  :Unite -no-split -buffer-name=buffers buffer<cr>
-  nnoremap <silent>  :Unite -no-split -auto-preview -buffer-name=outline outline<cr>
+  nnoremap <silent>  :Unite -no-split -auto-preview -buffer-name=outline outline<cr>
   nnoremap <silent>  :Unite -no-split -auto-preview grep:.<cr>
   nnoremap <silent>  :Unite -no-split -auto-preview -buffer-name=marks mark<cr>
 
