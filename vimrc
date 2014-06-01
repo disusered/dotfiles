@@ -280,7 +280,11 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   " unite
   let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -g ""'
   nnoremap <silent>  :Unite -no-split -start-insert -buffer-name=files file_rec/async<cr>
-  nnoremap <silent>  :Unite -no-split -start-insert -buffer-name=buffers buffer<cr>
+  nnoremap <silent>  :Unite -quick-match -winheight=10 -buffer-name=buffers buffer<cr>
+  autocmd FileType unite call s:unite_settings()
+  function! s:unite_settings()
+    let b:SuperTabDisabled=1
+  endfunction
 
   " marked
   map <Leader>md :MarkedOpen!<CR>
