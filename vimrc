@@ -36,6 +36,8 @@
     Plugin 'tpope/vim-fugitive'
     " signify
     Plugin 'mhinz/vim-signify'
+    " vinegar
+    Plugin 'tpope/vim-vinegar'
     " editorconfig
     Plugin 'editorconfig/editorconfig-vim'
     " tmuxline
@@ -138,6 +140,10 @@
 
   " close pane
   nmap  :q<CR>
+
+  " file explorer
+  map <Leader>kb :Explore<cr>
+  let g:netrw_liststyle = 3
 
   " colors
   syntax enable
