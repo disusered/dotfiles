@@ -50,6 +50,8 @@
     Plugin 'einars/js-beautify'
     " supertab
     Plugin 'ervandew/supertab'
+    " unite
+    Plugin 'Shougo/unite.vim'
 
   call vundle#end()
   filetype plugin indent on
