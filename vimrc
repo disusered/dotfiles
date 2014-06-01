@@ -133,16 +133,16 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   set pastetoggle=<F2>
 
   " bind show whitespace
-  map <Leader>ws :set list!<CR>
+  map <silent> <Leader>ws :set list!<CR>
 
   " whitespace characters
   set listchars=trail:␣,tab:⇥ᐧ,nbsp:⍽,eol:¶,extends:▸,precedes:◂
 
   " remove trailing whitespace
-  nnoremap <Leader>rt :%s/\s\+$//e<CR>
+  nnoremap <silent> <Leader>rt :%s/\s\+$//e<CR>
 
   " switch off current search
-  map  :nohlsearch<CR>
+  map <silent>  :nohlsearch<CR>
   nnoremap <silent> <Leader>h :nohlsearch<CR>
 
   " arrow keys
@@ -175,13 +175,13 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   map <C-Down> ]l
 
   " close buffer
-  map  :bw<CR>
+  map <silent>  :bw<CR>
 
   " close window
-  map  :q<CR>
+  map <silent>  :q<CR>
 
   " file explorer
-  map <Leader>kb :Explore<cr>
+  map <silent> <Leader>kb :Explore<cr>
   let g:netrw_liststyle = 3
 
   " colors
@@ -254,8 +254,8 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   vmap <Leader>a: :Tabularize /:\zs<CR>
 
   " syntastic
-  nmap  :w<CR>:SyntasticCheck<CR>:Errors<CR>
-  map <Leader>l :w<CR>:SyntasticCheck<CR>:Errors<CR>
+  nmap <silent>  :w<CR>:SyntasticCheck<CR>:Errors<CR>
+  map <silent> <Leader>l :w<CR>:SyntasticCheck<CR>:Errors<CR>
   let g:syntastic_html_tidy_ignore_errors = [
       \"trimming empty <i>",
       \"trimming empty <span>",
@@ -289,9 +289,9 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   " let g:airline#extensions#tabline#enabled = 1
 
   " beautify
-  vmap <Leader>fj :call RangeJsBeautify()<CR>
-  vmap <Leader>fh :call RangeHtmlBeautify()<CR>
-  vmap <Leader>fc :call RangeCSSBeautify()<CR>
+  vmap <silent> <Leader>fj :call RangeJsBeautify()<CR>
+  vmap <silent> <Leader>fh :call RangeHtmlBeautify()<CR>
+  vmap <silent> <Leader>fc :call RangeCSSBeautify()<CR>
 
   " unite
   call unite#filters#sorter_default#use(['sorter_rank'])
@@ -313,4 +313,4 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   nnoremap <silent>  :Unite -no-split -auto-preview grep:.<cr>
 
   " marked
-  map <Leader>md :MarkedOpen!<CR>
+  map <silent> <Leader>md :MarkedOpen!<CR>
