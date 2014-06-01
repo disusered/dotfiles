@@ -46,6 +46,8 @@
     " beautify
     Plugin 'maksimr/vim-jsbeautify'
     Plugin 'einars/js-beautify'
+    " supertab
+    Plugin 'ervandew/supertab'
 
   call vundle#end()
   filetype plugin indent on
