@@ -10,6 +10,8 @@
   " bundles
     " base16 colorschemes
     NeoBundle 'chriskempson/base16-vim'
+    " marked
+    NeoBundle 'itspriddle/vim-marked'
     " easymotion
     NeoBundle 'Lokaltog/vim-easymotion'
     " syntastic
