@@ -54,6 +54,17 @@
     NeoBundle 'ervandew/supertab'
     " unite
     NeoBundle 'Shougo/unite.vim'
+    " vimproc
+    let vimproc_updcmd = has('win64') ?
+      \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
+execute "NeoBundle 'Shougo/vimproc.vim'," . string({
+      \ 'build' : {
+      \     'windows' : vimproc_updcmd,
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ })
 
   call neobundle#end()
   filetype plugin indent on
