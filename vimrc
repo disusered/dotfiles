@@ -238,6 +238,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
 " plugin specific ==============================================================
   " easymotion
+  let g:EasyMotion_smartcase = 1
   nmap t <Plug>(easymotion-bd-t2)
   map  / <Plug>(easymotion-sn)
   omap / <Plug>(easymotion-tn)
