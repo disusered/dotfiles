@@ -54,6 +54,7 @@
     NeoBundle 'ervandew/supertab'
     " unite
     NeoBundle 'Shougo/unite.vim'
+    NeoBundle 'h1mesuke/unite-outline'
     " vimproc
     let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
@@ -278,13 +279,23 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   vmap <Leader>fc :call RangeCSSBeautify()<CR>
 
   " unite
+  call unite#filters#sorter_default#use(['sorter_rank'])
+  let g:unite_enable_start_insert=1
   let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -g ""'
-  nnoremap <silent>  :Unite -no-split -start-insert -buffer-name=files file_rec/async<cr>
-  nnoremap <silent>  :Unite -quick-match -winheight=10 -buffer-name=buffers buffer<cr>
+  let g:unite_source_file_rec_ignore_pattern=
+   \'\%(^\|/\)\.$\|\~$\|\.\%(o\|exe\|dll\|ba\?k\|sw[po]\|tmp\)$\|\%(^\|/\)\.
+   \\%(hg\|git\|bzr\|svn\)\%($\|/\)\|node_modules\|platforms\|plugins'
+  let g:unite_source_grep_command='ag'
+  let g:unite_source_grep_default_opts='--nocolor --nogroup --hidden'
+  let g:unite_source_grep_recursive_opt=''
   autocmd FileType unite call s:unite_settings()
   function! s:unite_settings()
     let b:SuperTabDisabled=1
   endfunction
+  nnoremap <silent>  :Unite -no-split -buffer-name=files file_rec/async<cr>
+  nnoremap <silent>  :Unite -no-split -buffer-name=buffers buffer<cr>
+  nnoremap <silent>  :Unite -no-split -auto-preview -buffer-name=outline outline<cr>
+  nnoremap <silent>  :Unite -no-split -auto-preview grep:.<cr>
 
   " marked
   map <Leader>md :MarkedOpen!<CR>
