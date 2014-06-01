@@ -56,7 +56,7 @@
     NeoBundle 'Raimondi/delimitMate'
     " unite
     NeoBundle 'Shougo/unite.vim'
-    NeoBundle 'h1mesuke/unite-outline'
+    NeoBundle 'Shougo/unite-outline'
     " ternsjs
     NeoBundle 'marijnh/tern_for_vim', {
                 \ 'build' : {
