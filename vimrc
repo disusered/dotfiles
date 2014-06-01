@@ -52,6 +52,8 @@
     " beautify
     NeoBundle 'maksimr/vim-jsbeautify'
     NeoBundle 'einars/js-beautify'
+    " delimitor
+    NeoBundle 'Raimondi/delimitMate'
     " unite
     NeoBundle 'Shougo/unite.vim'
     NeoBundle 'h1mesuke/unite-outline'
