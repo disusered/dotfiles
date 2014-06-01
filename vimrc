@@ -1,60 +1,61 @@
-" vundle =======================================================================
+" NeoBundle =======================================================================
   set nocompatible
   filetype off
 
-  set rtp+=~/.vim/bundle/Vundle.vim
-  call vundle#begin()
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  call neobundle#begin(expand('~/.vim/bundle/'))
 
-  " init vundle with vundle
-  Plugin 'gmarik/Vundle.vim'
+  " yo dawg
+  NeoBundleFetch 'Shougo/neobundle.vim'
   " bundles
     " base16 colorschemes
-    Plugin 'chriskempson/base16-vim'
+    NeoBundle 'chriskempson/base16-vim'
     " easymotion
-    Plugin 'Lokaltog/vim-easymotion'
+    NeoBundle 'Lokaltog/vim-easymotion'
     " syntastic
-    Plugin 'scrooloose/syntastic'
+    NeoBundle 'scrooloose/syntastic'
     " surround
-    Plugin 'tpope/vim-surround'
+    NeoBundle 'tpope/vim-surround'
     " speeddating
-    Plugin 'tpope/vim-speeddating'
+    NeoBundle 'tpope/vim-speeddating'
     " commentary
-    Plugin 'tpope/vim-commentary'
+    NeoBundle 'tpope/vim-commentary'
     " eunuch
-    Plugin 'tpope/vim-eunuch'
+    NeoBundle 'tpope/vim-eunuch'
     " unimpaired
-    Plugin 'tpope/vim-unimpaired'
+    NeoBundle 'tpope/vim-unimpaired'
     " tabular
-    Plugin 'godlygeek/tabular'
+    NeoBundle 'godlygeek/tabular'
     " multiple cursors
-    Plugin 'terryma/vim-multiple-cursors'
+    NeoBundle 'terryma/vim-multiple-cursors'
     " airline
-    Plugin 'bling/vim-airline'
+    NeoBundle 'bling/vim-airline'
     " repeat
-    Plugin 'tpope/vim-repeat'
+    NeoBundle 'tpope/vim-repeat'
     " fugitive
-    Plugin 'tpope/vim-fugitive'
+    NeoBundle 'tpope/vim-fugitive'
     " signify
-    Plugin 'mhinz/vim-signify'
+    NeoBundle 'mhinz/vim-signify'
     " vinegar
-    Plugin 'tpope/vim-vinegar'
+    NeoBundle 'tpope/vim-vinegar'
     " editorconfig
-    Plugin 'editorconfig/editorconfig-vim'
+    NeoBundle 'editorconfig/editorconfig-vim'
     " tmuxline
-    Plugin 'edkolev/tmuxline.vim'
+    NeoBundle 'edkolev/tmuxline.vim'
     " javascript
-    Plugin 'jelera/vim-javascript-syntax'
-    Plugin 'pangloss/vim-javascript'
+    NeoBundle 'jelera/vim-javascript-syntax'
+    NeoBundle 'pangloss/vim-javascript'
     " beautify
-    Plugin 'maksimr/vim-jsbeautify'
-    Plugin 'einars/js-beautify'
+    NeoBundle 'maksimr/vim-jsbeautify'
+    NeoBundle 'einars/js-beautify'
     " supertab
-    Plugin 'ervandew/supertab'
+    NeoBundle 'ervandew/supertab'
     " unite
-    Plugin 'Shougo/unite.vim'
+    NeoBundle 'Shougo/unite.vim'
 
-  call vundle#end()
+  call neobundle#end()
   filetype plugin indent on
+  NeoBundleCheck
 
 " etc ==========================================================================
   " set encoding
