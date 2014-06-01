@@ -50,8 +50,6 @@
     " beautify
     NeoBundle 'maksimr/vim-jsbeautify'
     NeoBundle 'einars/js-beautify'
-    " supertab
-    NeoBundle 'ervandew/supertab'
     " unite
     NeoBundle 'Shougo/unite.vim'
     NeoBundle 'h1mesuke/unite-outline'
