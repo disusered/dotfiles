@@ -281,3 +281,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
   nnoremap <silent>  :Unite -start-insert -buffer-name=files -winheight=10 file_rec/async:!<cr>
   nnoremap <silent>  :Unite -buffer-name=buffers -winheight=10 buffer<cr>
+
+  " marked
+  map <Leader>md :MarkedOpen!<CR>
