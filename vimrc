@@ -117,6 +117,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   autocmd BufEnter * setl conceallevel=2 concealcursor=nv
   autocmd BufLeave * setl conceallevel=0 concealcursor=nv
 
+  " bind show whitespace
   map <Leader>ws :set list!<CR>
 
   " whitespace characters
@@ -158,8 +159,11 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   map <C-Up> [l
   map <C-Down> ]l
 
-  " close pane
-  nmap  :bw<CR>
+  " close buffer
+  map  :bw<CR>
+
+  " close window
+  map  :q<CR>
 
   " file explorer
   map <Leader>kb :Explore<cr>
