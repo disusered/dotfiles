@@ -12,4 +12,4 @@
 
 ### Unite
 
-`brew install ag`
+`brew install ag cmake`
