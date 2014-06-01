@@ -47,9 +47,6 @@
     " delimitor
     NeoBundle 'Raimondi/delimitMate'
     " unite
-    NeoBundle 'Shougo/unite.vim'
-    NeoBundle 'Shougo/unite-outline'
-    NeoBundle 'tacroe/unite-mark'
     " autocomplete
     NeoBundle 'Valloric/YouCompleteMe', {
                 \ 'build' : {
@@ -70,7 +67,29 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
       \ })
 
 
-  " filetype specific
+  " lazy load
+    " unite
+    NeoBundle 'Shougo/unite.vim', {
+                \ 'lazy' : 1,
+                \ 'autoload': {
+                \   'command': ['Unite']
+                \ },
+                \}
+
+    NeoBundle 'Shougo/unite-outline', {
+                \ 'lazy' : 1,
+                \ 'autoload': {
+                \   'command': ['Unite']
+                \ },
+                \}
+
+    NeoBundle 'tacroe/unite-mark', {
+                \ 'lazy' : 1,
+                \ 'autoload': {
+                \   'command': ['Unite']
+                \ },
+                \}
+
     " coffeescript
     au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
     NeoBundle 'kchmck/vim-coffee-script', {
