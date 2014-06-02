@@ -395,3 +395,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   " local vimrc
   let g:local_vimrc = {'names':['.vimrc'],'hash_fun':'LVRHashOfFile'}
 
+  " delimit
+  let g:delimitMate_expand_cr = 1
+
