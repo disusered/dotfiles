@@ -123,15 +123,9 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
                 \}
   
     " js beautify
-    NeoBundle 'einars/js-beautify', {
-                \ 'lazy' : 1,
-                \ 'autoload': {
-                \   'filetypes': ['javascript']
-                \ },
-                \}
-
     NeoBundle 'maksimr/vim-jsbeautify', {
                 \ 'lazy' : 1,
+                \ 'depends': 'einars/js-beautify',
                 \ 'autoload': {
                 \   'filetypes': ['javascript', 'html', 'css']
                 \ },
