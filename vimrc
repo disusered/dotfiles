@@ -114,6 +114,13 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
                 \   'filetypes': ['javascript']
                 \ },
                 \}
+
+    NeoBundle 'othree/javascript-libraries-syntax.vim', {
+                \ 'lazy' : 1,
+                \ 'autoload': {
+                \   'filetypes': ['javascript', 'coffee', 'typescript']
+                \ },
+                \}
   
     " js beautify
     NeoBundle 'einars/js-beautify', {
