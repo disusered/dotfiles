@@ -136,17 +136,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
                 \   'filetypes': ['javascript', 'html', 'css']
                 \ },
                 \}
-    " ternsjs
-    NeoBundle 'marijnh/tern_for_vim', {
-                \ 'lazy' : 1,
-                \ 'autoload': {
-                \   'filetypes': ['javascript']
-                \ },
-                \ 'build' : {
-                \    'unix' : 'npm install',
-                \    'mac' : 'npm install'
-                \ },
-                \}
 
     " marked
     NeoBundle 'itspriddle/vim-marked', {
