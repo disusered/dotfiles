@@ -46,6 +46,8 @@
     NeoBundle 'edkolev/tmuxline.vim'
     " delimitor
     NeoBundle 'Raimondi/delimitMate'
+    " local vimrc
+    NeoBundle 'MarcWeber/vim-addon-local-vimrc'
     " autocomplete
     NeoBundle 'Valloric/YouCompleteMe', {
                 \ 'build' : {
@@ -389,3 +391,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
   " marked
   map <silent> <Leader>md :MarkedOpen!<CR>
+
+  " local vimrc
+  let g:local_vimrc = {'names':['.vimrc'],'hash_fun':'LVRHashOfFile'}
+
