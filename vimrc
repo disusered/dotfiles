@@ -213,7 +213,9 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   map <silent> <Leader>ws :set list!<CR>
 
   " whitespace characters
-  set listchars=trail:␣,tab:⇥ᐧ,nbsp:⍽,eol:¶,extends:▸,precedes:◂
+  " set listchars=trail:␣,tab:⇥ᐧ,nbsp:⍽,eol:¶,extends:▸,precedes:◂
+  set list
+  set listchars=trail:·,tab:⇥ᐧ
 
   " remove trailing whitespace
   nnoremap <silent> <Leader>rt :%s/\s\+$//e<CR>
