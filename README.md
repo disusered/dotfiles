@@ -10,6 +10,6 @@
 
 `npm install -g jshint`
 
-### Unite
+### Dependencies
 
-`brew install ag cmake`
+`brew install ag cmake jshint ctags-exuberant`
