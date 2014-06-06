@@ -48,6 +48,8 @@
     NeoBundle 'Raimondi/delimitMate'
     " local vimrc
     NeoBundle 'MarcWeber/vim-addon-local-vimrc'
+    " tagbar
+    NeoBundle 'majutsushi/tagbar'
     " autocomplete
     NeoBundle 'Valloric/YouCompleteMe', {
                 \ 'build' : {
@@ -399,3 +401,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   " delimit
   let g:delimitMate_expand_cr = 1
 
+  " tagbar
+  nnoremap <silent>  :TagbarToggle<CR>
+  let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
