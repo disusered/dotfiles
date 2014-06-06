@@ -364,7 +364,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   " airline
   set laststatus=2
   let g:airline_powerline_fonts = 1
-  " let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#enabled = 1
 
   " beautify
   vmap <silent> <Leader>fj :call RangeJsBeautify()<CR>
