@@ -353,7 +353,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
     if l:parent != a:dir
       return s:find_jshintrc(l:parent)
     endif
-    return "~/.jshintrc"
+    return "~/.vim/jshintrc"
   endfunction
   function UpdateJsHintConf()
     let l:dir = expand('%:p:h')
