@@ -349,9 +349,10 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   let g:syntastic_html_tidy_ignore_errors = [
       \"trimming empty <i>",
       \"trimming empty <span>",
+      \"is not recognized",
+      \"discarding unexpected",
       \"<input> proprietary attribute \"autocomplete\"",
       \"proprietary attribute \"ng-\"",
-      \"proprietary attribute \"ion-\"",
       \"proprietary attribute \"role\"",
       \"proprietary attribute \"hidden\"",
       \]
