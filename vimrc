@@ -146,6 +146,14 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
                 \ },
                 \}
 
+    " emmet
+    NeoBundle 'mattn/emmet-vim', {
+                \ 'lazy' : 1,
+                \ 'autoload': {
+                \   'filetypes': ['javascript', 'html', 'css']
+                \ },
+                \}
+
     " marked
     NeoBundle 'itspriddle/vim-marked', {
                 \ 'lazy' : 1,
