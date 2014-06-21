@@ -38,8 +38,8 @@
     NeoBundle 'tpope/vim-repeat'
     " fugitive
     NeoBundle 'tpope/vim-fugitive'
-    " signify
-    NeoBundle 'mhinz/vim-signify'
+    " gitgutter
+    NeoBundle 'airblade/vim-gitgutter'
     " vinegar
     NeoBundle 'tpope/vim-vinegar'
     " editorconfig
