@@ -14,6 +14,8 @@
     NeoBundle 'chriskempson/base16-vim'
     " easymotion
     NeoBundle 'Lokaltog/vim-easymotion'
+    " dispatch
+    NeoBundle 'tpope/vim-dispatch'
     " syntastic
     NeoBundle 'scrooloose/syntastic'
     " surround
