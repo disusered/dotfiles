@@ -352,7 +352,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
       \"is not recognized",
       \"discarding unexpected",
       \"<input> proprietary attribute \"autocomplete\"",
-      \"proprietary attribute \"ng-\"",
+      \"proprietary attribute \"ng-",
       \"proprietary attribute \"role\"",
       \"proprietary attribute \"hidden\"",
       \]
