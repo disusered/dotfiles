@@ -52,6 +52,8 @@
     NeoBundle 'MarcWeber/vim-addon-local-vimrc'
     " tagbar
     NeoBundle 'majutsushi/tagbar'
+    " json
+    NeoBundle 'elzr/vim-json'
     " autocomplete
     NeoBundle 'Valloric/YouCompleteMe', {
                 \ 'build' : {
@@ -419,5 +421,5 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   nnoremap <silent>  :TagbarToggle<CR>
   let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 
-  " signify
-  let g:signify_update_on_focusgained = 1
+  " json
+  let g:vim_json_syntax_conceal = 0
