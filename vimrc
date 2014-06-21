@@ -351,6 +351,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
       \"trimming empty <span>",
       \"<input> proprietary attribute \"autocomplete\"",
       \"proprietary attribute \"ng-\"",
+      \"proprietary attribute \"ion-\"",
       \"proprietary attribute \"role\"",
       \"proprietary attribute \"hidden\"",
       \]
