@@ -136,7 +136,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
                 \    'mac' : 'npm install'
                 \ },
                 \}
-  
+
     " js beautify
     NeoBundle 'maksimr/vim-jsbeautify', {
                 \ 'lazy' : 1,
