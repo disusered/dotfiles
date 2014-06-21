@@ -322,7 +322,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
 
   " additional js extensions
-  au BufNewFile,BufRead {*.json,.jshintrc,.tern-project} set ft=javascript
+  au BufNewFile,BufRead {*.json,.jshintrc,.tern-project} set ft=json
 
 " plugin specific ==============================================================
   " easymotion
