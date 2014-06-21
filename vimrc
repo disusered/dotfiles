@@ -418,3 +418,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   " tagbar
   nnoremap <silent>  :TagbarToggle<CR>
   let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+
+  " signify
+  let g:signify_update_on_focusgained = 1
