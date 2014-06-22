@@ -315,9 +315,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   " make
   au FileType make set noexpandtab
 
-  " python
-  au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
-
   " additional ruby extensions
   au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
 
