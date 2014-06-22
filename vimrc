@@ -406,7 +406,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   nnoremap <silent>  :Unite -no-split -auto-preview -buffer-name=marks mark<cr>
 
   " marked
-  map <silent> <Leader>md :MarkedOpen!<CR>
+  nnoremap <silent> <Leader>md :MarkedOpen!<CR>
 
   " local vimrc
   let g:local_vimrc = {'names':['.vimrc'],'hash_fun':'LVRHashOfFile'}
