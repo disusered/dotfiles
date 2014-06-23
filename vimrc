@@ -52,6 +52,8 @@
     NeoBundle 'MarcWeber/vim-addon-local-vimrc'
     " tagbar
     NeoBundle 'majutsushi/tagbar'
+    " golden ratio
+    NeoBundle 'roman/golden-ratio'
     " json
     NeoBundle 'elzr/vim-json'
     " autocomplete
