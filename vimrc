@@ -50,8 +50,6 @@
     NeoBundle 'Raimondi/delimitMate'
     " local vimrc
     NeoBundle 'MarcWeber/vim-addon-local-vimrc'
-    " tagbar
-    NeoBundle 'majutsushi/tagbar'
     " golden ratio
     NeoBundle 'roman/golden-ratio'
     " json
@@ -405,7 +403,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   nnoremap <silent>  :Unite -no-split -buffer-name=buffers buffer<cr>
   nnoremap <silent>  :Unite -no-split -auto-preview -buffer-name=outline outline<cr>
   nnoremap <silent>  :Unite -no-split -auto-preview grep:.<cr>
-  nnoremap <silent>  :Unite -no-split -auto-preview -buffer-name=marks mark<cr>
+  nnoremap <silent>  :Unite -no-split -auto-preview -buffer-name=marks mark<cr>
 
   " marked
   nnoremap <silent> <Leader>md :MarkedOpen!<CR>
@@ -415,10 +413,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
   " delimit
   let g:delimitMate_expand_cr = 1
-
-  " tagbar
-  nnoremap <silent>  :TagbarToggle<CR>
-  let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 
   " json
   let g:vim_json_syntax_conceal = 0
