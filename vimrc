@@ -429,3 +429,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   nnoremap <Leader>go :Git checkout<Space>
   nnoremap <Leader>gps :Dispatch! git push<CR>
   nnoremap <Leader>gpl :Dispatch! git pull<CR>
+
+  " youcompleteme
+  let g:ycm_autoclose_preview_window_after_completion = 1
