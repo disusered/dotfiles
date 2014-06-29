@@ -52,6 +52,8 @@
     NeoBundle 'MarcWeber/vim-addon-local-vimrc'
     " json
     NeoBundle 'elzr/vim-json'
+    " github issues
+    NeoBundle 'jaxbot/github-issues.vim'
     " autocomplete
     NeoBundle 'Valloric/YouCompleteMe', {
                 \ 'build' : {
@@ -445,3 +447,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   let g:jsdoc_default_mapping = 0
   let g:jsdoc_allow_input_prompt = 1
   nnoremap <silent> <Leader>jsd :JsDoc<CR>
+
+  " github issues
+  nnoremap <Leader>gi :Gissues<CR>
+
