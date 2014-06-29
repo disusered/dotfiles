@@ -126,6 +126,13 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
                 \ },
                 \}
 
+    NeoBundle 'heavenshell/vim-jsdoc', {
+                \ 'lazy' : 1,
+                \ 'autoload': {
+                \   'filetypes': ['javascript']
+                \ },
+                \}
+
     NeoBundle 'marijnh/tern_for_vim', {
                 \ 'lazy' : 1,
                 \ 'autoload': {
@@ -417,6 +424,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
   " fugitive
   nnoremap <Leader>gs :Gstatus<CR>
+  nnoremap <Leader>ga :Gcommit --amend -v -q %:p<CR>
   nnoremap <Leader>gc :Gcommit -v -q<CR>
   nnoremap <Leader>gt :Gcommit -v -q %:p<CR>
   nnoremap <Leader>gd :Gdiff<CR>
@@ -432,3 +440,8 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
   " youcompleteme
   let g:ycm_autoclose_preview_window_after_completion = 1
+
+  " jsdoc
+  let g:jsdoc_default_mapping = 0
+  let g:jsdoc_allow_input_prompt = 1
+  nnoremap <silent> <Leader>jsd :JsDoc<CR>
