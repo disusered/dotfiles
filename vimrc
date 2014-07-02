@@ -57,12 +57,7 @@
     " characterize
     NeoBundle 'tpope/vim-characterize'
     " autocomplete
-    NeoBundle 'Valloric/YouCompleteMe', {
-                \ 'build' : {
-                \    'unix' : './install.sh --clang-completer --omnisharp-completer',
-                \    'mac' : './install.sh --clang-completer'
-                \ },
-                \ }
+    NeoBundle 'Valloric/YouCompleteMe'
     " vimproc
     let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
@@ -438,6 +433,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   " youcompleteme
   let g:ycm_autoclose_preview_window_after_completion = 1
   let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+  let g:ycm_enable_diagnostic_signs = 0
 
   " jsdoc
   let g:jsdoc_default_mapping = 0
