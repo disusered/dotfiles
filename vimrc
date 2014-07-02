@@ -437,6 +437,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
   " youcompleteme
   let g:ycm_autoclose_preview_window_after_completion = 1
+  let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
   " jsdoc
   let g:jsdoc_default_mapping = 0
