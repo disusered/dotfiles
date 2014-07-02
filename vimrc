@@ -109,13 +109,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
                 \}
 
     " javascript
-    NeoBundle 'jelera/vim-javascript-syntax', {
-                \ 'lazy' : 1,
-                \ 'autoload': {
-                \   'filetypes': ['javascript']
-                \ },
-                \}
-
     NeoBundle 'pangloss/vim-javascript', {
                 \ 'lazy' : 1,
                 \ 'autoload': {
