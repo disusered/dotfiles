@@ -60,6 +60,8 @@
     NeoBundle 'Valloric/YouCompleteMe'
     " limelight
     NeoBundle 'junegunn/limelight.vim'
+    " goyo
+    NeoBundle 'junegunn/goyo.vim'
     " vimproc
     let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
@@ -443,8 +445,20 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   nnoremap <silent> <Leader>jsd :JsDoc<CR>
 
   " github issues
-  nnoremap <Leader>gi :Gissues<CR>
+  nnoremap <silent> <Leader>gi :Gissues<CR>
 
   " limelight
-  nnoremap <Leader>ll :Limelight!!<CR>
+  nnoremap <silent> <Leader>ll :Limelight!!<CR>
 
+  " goyo
+  nnoremap <silent> <Leader>dfm :Goyo<CR>
+  function! GoyoBefore()
+    silent !tmux set status off
+    Limelight
+  endfunction
+
+  function! GoyoAfter()
+    silent !tmux set status on
+    Limelight!
+  endfunction
+  let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
