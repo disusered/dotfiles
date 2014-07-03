@@ -58,6 +58,8 @@
     NeoBundle 'tpope/vim-characterize'
     " autocomplete
     NeoBundle 'Valloric/YouCompleteMe'
+    " limelight
+    NeoBundle 'junegunn/limelight.vim'
     " vimproc
     let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
@@ -442,4 +444,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
   " github issues
   nnoremap <Leader>gi :Gissues<CR>
+
+  " limelight
+  nnoremap <Leader>ll :Limelight!!<CR>
 
