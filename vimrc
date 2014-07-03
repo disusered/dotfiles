@@ -115,6 +115,16 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
                 \ },
                 \}
 
+    NeoBundle 'bigfish/vim-js-context-coloring', {
+                \ 'lazy' : 1,
+                \ 'autoload': {
+                \   'filetypes': ['javascript']
+                \ },
+                \ 'build' : {
+                \     'unix' : 'npm install',
+                \    },
+                \}
+
     NeoBundle 'othree/javascript-libraries-syntax.vim', {
                 \ 'lazy' : 1,
                 \ 'autoload': {
@@ -460,5 +470,13 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   function! GoyoAfter()
     silent !tmux set status on
     Limelight!
+    JSContextColorUpdate
   endfunction
   let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
+
+  " js context
+  nnoremap <silent> <Leader>cx :JSContextColorUpdate<CR>:JSContextColorToggle<CR>
+  let g:js_context_colors_comment_higroup = 'Comment'
+  let g:js_context_colors_insertmode = 0
+  let g:js_context_colors_enabled = 0
+  let g:js_context_colors_usemaps = 0
