@@ -62,6 +62,8 @@
     NeoBundle 'junegunn/limelight.vim'
     " goyo
     NeoBundle 'junegunn/goyo.vim'
+    " tmux nav
+    NeoBundle 'christoomey/vim-tmux-navigator'
     " vimproc
     let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
