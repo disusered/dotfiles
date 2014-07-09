@@ -461,7 +461,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   let g:js_context_colors_usemaps = 0
 
   " no arrows
-  nnoremap <Left> :echoe "Use h"<CR>
-  nnoremap <Right> :echoe "Use l"<CR>
-  nnoremap <Up> :echoe "Use k"<CR>
-  nnoremap <Down> :echoe "Use j"<CR>
+  noremap <Left> :echoe "Use h"<CR>
+  noremap <Right> :echoe "Use l"<CR>
+  noremap <Up> :echoe "Use k"<CR>
+  noremap <Down> :echoe "Use j"<CR>
