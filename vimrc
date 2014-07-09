@@ -247,34 +247,13 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   map <silent>  :nohlsearch<CR>
   nnoremap <silent> <Leader>h :nohlsearch<CR>
 
-  " arrow keys
-  " insert mode, ctrl+v, shortcut
-  map OA <Up>
-  map OB <Down>
-  map OC <Right>
-  map OD <Left>
-
-  map [1;2A <S-Up>
-  map [1;2B <S-Down>
-  map [1;2C <S-Right>
-  map [1;2D <S-Left>
-
-  map [1;5A <C-Up>
-  map [1;5B <C-Down>
-  map [1;5C <C-Right>
-  map [1;5D <C-Left>
-
   " bubble single lines
-  nmap <S-Up> [e
-  nmap <S-Down> ]e
+  nmap <S-k> [e
+  nmap <S-j> ]e
 
   " bubble multiple lines
-  vmap <S-Up> [egv
-  vmap <S-Down> ]egv
-
-  " location
-  map <C-Up> [l
-  map <C-Down> ]l
+  vmap <S-k> [egv
+  vmap <S-j> ]egv
 
   " close window
   map <silent> <F4> :q<CR>
