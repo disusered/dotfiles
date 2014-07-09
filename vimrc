@@ -244,7 +244,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   nnoremap <silent> <Leader>rt :%s/\s\+$//e<CR>
 
   " switch off current search
-  map <silent>  :nohlsearch<CR>
   nnoremap <silent> <Leader>h :nohlsearch<CR>
 
   " bubble single lines
