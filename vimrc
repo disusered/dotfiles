@@ -257,7 +257,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   vmap <S-j> ]egv
 
   " close window
-  map <silent> <F4> :bd<CR>
+  map <silent> <F4> :bw<CR>
 
   " file explorer
   map <silent> <Leader>kb :Explore<cr>
