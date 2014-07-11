@@ -50,6 +50,8 @@
     NeoBundle 'Raimondi/delimitMate'
     " local vimrc
     NeoBundle 'MarcWeber/vim-addon-local-vimrc'
+    " golden ratio
+    NeoBundle 'roman/golden-ratio'
     " json
     NeoBundle 'elzr/vim-json'
     " github issues
