@@ -22,6 +22,8 @@
     NeoBundle 'tpope/vim-surround'
     " speeddating
     NeoBundle 'tpope/vim-speeddating'
+    " abolish
+    NeoBundle 'tpope/vim-abolish'
     " commentary
     NeoBundle 'tpope/vim-commentary'
     " eunuch
