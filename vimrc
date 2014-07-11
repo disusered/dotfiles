@@ -466,3 +466,8 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   noremap <Right> :echoe "Use l"<CR>
   noremap <Up> :echoe "Use k"<CR>
   noremap <Down> :echoe "Use j"<CR>
+
+  " core
+  noremap <silent> <leader>w :w<CR>
+  noremap <silent> <leader>q :q<CR>
+  noremap <silent> <leader>bd :bd<CR>
