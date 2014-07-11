@@ -385,7 +385,8 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   nnoremap <Leader>gr :Gread<CR>
   nnoremap <Leader>ge :Gedit<CR>
   nnoremap <Leader>gw :Gwrite<CR><CR>
-  nnoremap <Leader>gl :silent! Glog<CR>:bot copen<CR>
+  nnoremap <Leader>gl :silent! Glog --<CR>:bot copen<CR>:redraw!<CR>
+  nnoremap <Leader>gh :silent! Glog -- %<CR>:bot copen<CR>:redraw!<CR>
   nnoremap <Leader>gp :Ggrep<Space>
   nnoremap <Leader>gm :Gmove<Space>
   nnoremap <Leader>gb :Git branch<Space>
