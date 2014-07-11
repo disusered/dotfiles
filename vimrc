@@ -24,6 +24,8 @@
     NeoBundle 'tpope/vim-speeddating'
     " abolish
     NeoBundle 'tpope/vim-abolish'
+    " easy-align
+    NeoBundle 'junegunn/vim-easy-align'
     " commentary
     NeoBundle 'tpope/vim-commentary'
     " eunuch
@@ -426,3 +428,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   noremap <silent> <leader>bd :bd<CR>
   noremap <silent> <leader>bw :bw<CR>
   noremap <silent> <leader>ccl :ccl<CR>
+
+  " easy-align
+  vmap <Enter> <Plug>(LiveEasyAlign)
