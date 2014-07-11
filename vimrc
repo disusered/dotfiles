@@ -52,14 +52,8 @@
     NeoBundle 'roman/golden-ratio'
     " json
     NeoBundle 'elzr/vim-json'
-    " github issues
-    NeoBundle 'jaxbot/github-issues.vim'
     " autocomplete
     NeoBundle 'Valloric/YouCompleteMe'
-    " limelight
-    NeoBundle 'junegunn/limelight.vim'
-    " goyo
-    NeoBundle 'junegunn/goyo.vim'
     " tmux nav
     NeoBundle 'christoomey/vim-tmux-navigator'
     " vimproc
@@ -147,15 +141,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
                 \ 'build' : {
                 \    'unix' : 'npm install',
                 \    'mac' : 'npm install'
-                \ },
-                \}
-
-    " js beautify
-    NeoBundle 'maksimr/vim-jsbeautify', {
-                \ 'lazy' : 1,
-                \ 'depends': 'einars/js-beautify',
-                \ 'autoload': {
-                \   'filetypes': ['javascript', 'html', 'css']
                 \ },
                 \}
 
@@ -320,16 +305,8 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   map <Leader>k <Plug>(easymotion-k)
 
   " commentary
-  nmap  gcc
-  vmap  gcc
   nmap <Leader>/ gcc
   vmap <Leader>/ gc
-
-  " tabular
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a: :Tabularize /:\zs<CR>
-  vmap <Leader>a: :Tabularize /:\zs<CR>
 
   " syntastic
   nmap <silent>  :w<CR>:SyntasticCheck<CR>:Errors<CR>
@@ -367,11 +344,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   set laststatus=2
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#tabline#enabled = 1
-
-  " beautify
-  vmap <silent> <Leader>fj :call RangeJsBeautify()<CR>
-  vmap <silent> <Leader>fh :call RangeHtmlBeautify()<CR>
-  vmap <silent> <Leader>fc :call RangeCSSBeautify()<CR>
 
   " unite
   call unite#filters#sorter_default#use(['sorter_rank'])
@@ -431,26 +403,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   let g:jsdoc_default_mapping = 0
   let g:jsdoc_allow_input_prompt = 1
   nnoremap <silent> <Leader>jsd :JsDoc<CR>
-
-  " github issues
-  nnoremap <silent> <Leader>gi :Gissues<CR>
-
-  " limelight
-  nnoremap <silent> <Leader>ll :Limelight!!<CR>
-
-  " goyo
-  nnoremap <silent> <Leader>dfm :Goyo<CR>
-  function! GoyoBefore()
-    silent !tmux set status off
-    Limelight
-  endfunction
-
-  function! GoyoAfter()
-    silent !tmux set status on
-    Limelight!
-    JSContextColorUpdate
-  endfunction
-  let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
 
   " js context
   nnoremap <silent> <Leader>cx :JSContextColorUpdate<CR>:JSContextColorToggle<CR>
