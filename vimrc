@@ -28,8 +28,6 @@
     NeoBundle 'tpope/vim-eunuch'
     " unimpaired
     NeoBundle 'tpope/vim-unimpaired'
-    " tabular
-    NeoBundle 'godlygeek/tabular'
     " multiple cursors
     NeoBundle 'terryma/vim-multiple-cursors'
     " airline
@@ -45,7 +43,7 @@
     " editorconfig
     NeoBundle 'editorconfig/editorconfig-vim'
     " tmuxline
-    NeoBundle 'edkolev/tmuxline.vim'
+    " NeoBundle 'edkolev/tmuxline.vim'
     " delimitor
     NeoBundle 'Raimondi/delimitMate'
     " local vimrc
