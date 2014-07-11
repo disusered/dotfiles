@@ -56,8 +56,6 @@
     NeoBundle 'elzr/vim-json'
     " github issues
     NeoBundle 'jaxbot/github-issues.vim'
-    " characterize
-    NeoBundle 'tpope/vim-characterize'
     " autocomplete
     NeoBundle 'Valloric/YouCompleteMe'
     " limelight
