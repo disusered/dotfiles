@@ -54,6 +54,8 @@
     NeoBundle 'MarcWeber/vim-addon-local-vimrc'
     " json
     NeoBundle 'elzr/vim-json'
+    " handlebars
+    NeoBundle 'mustache/vim-mustache-handlebars'
     " autocomplete
     NeoBundle 'Valloric/YouCompleteMe'
     " tmux nav
@@ -296,6 +298,9 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
   " additional js extensions
   au BufNewFile,BufRead {*.json,.jshintrc,.tern-project} set ft=json
+
+  " additional handlebars extensions
+  au BufNewFile,BufRead {*.hbs,.handlebars} set ft=mustache
 
 " plugin specific ==============================================================
   " easymotion
