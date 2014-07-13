@@ -60,6 +60,8 @@
     NeoBundle 'Valloric/YouCompleteMe'
     " tmux nav
     NeoBundle 'christoomey/vim-tmux-navigator'
+    " vim slime
+    NeoBundle 'jpalardy/vim-slime'
     " vimproc
     let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
@@ -436,3 +438,8 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
   " easy-align
   vmap <Enter> <Plug>(LiveEasyAlign)
+
+  " slime
+  let g:slime_target = "tmux"
+  let g:slime_paste_file = tempname()
+  let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
