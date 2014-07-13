@@ -1,0 +1,13 @@
+snippet if "A simple if conditional"
+if (${1:foo}) {
+	$0
+}
+endsnippet
+
+snippet ife "A simple if else conditional"
+if (${1:foo}) {
+	$2
+} else ${3:if (${4:bar}) }{
+	$0
+}
+endsnippet
