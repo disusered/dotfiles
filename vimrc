@@ -302,7 +302,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   au BufNewFile,BufRead {*.json,.jshintrc,.tern-project} set ft=json
 
   " additional handlebars extensions
-  au BufNewFile,BufRead {*.hbs,.handlebars} set ft=mustache
+  au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache
 
 " plugin specific ==============================================================
   " easymotion
