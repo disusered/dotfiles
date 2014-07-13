@@ -449,7 +449,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
 
   " ultisnips
-  let g:UltiSnipsListSnippets = "<F3>"
   " make ycm compatible with ultisnips (using supertab)
   let g:ycm_key_list_select_completion = ['<c-n>', '<down>']
   let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
