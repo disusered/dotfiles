@@ -14,6 +14,8 @@
     NeoBundle 'chriskempson/base16-vim'
     " easymotion
     NeoBundle 'Lokaltog/vim-easymotion'
+    " supertab
+    NeoBundle 'ervandew/supertab'
     " dispatch
     NeoBundle 'tpope/vim-dispatch'
     " syntastic
@@ -62,6 +64,8 @@
     NeoBundle 'christoomey/vim-tmux-navigator'
     " vim slime
     NeoBundle 'jpalardy/vim-slime'
+    " ultisnips
+    NeoBundle 'SirVer/ultisnips'
     " vimproc
     let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
@@ -443,3 +447,15 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   let g:slime_target = "tmux"
   let g:slime_paste_file = tempname()
   let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
+
+  " ultisnips
+  let g:UltiSnipsListSnippets = "<F3>"
+  " make ycm compatible with ultisnips (using supertab)
+  let g:ycm_key_list_select_completion = ['<c-n>', '<down>']
+  let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+  let g:SuperTabDefaultCompletionType = '<C-n>'
+  " better key bindings for ultisnipsexpandtrigger
+  let g:UltiSnipsExpandTrigger = "<tab>"
+  let g:UltiSnipsJumpForwardTrigger = "<tab>"
+  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
