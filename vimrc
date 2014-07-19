@@ -217,6 +217,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   set nowrap
   set colorcolumn=80
   set relativenumber
+  set nofoldenable
 
   " whitespace
   set tabstop=2
