@@ -443,6 +443,8 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
   " eclim
   let g:EclimCompletionMethod = 'omnifunc'
+  let g:EclimProjectTreeAutoOpen = 1
+
 
   " tagbar
   let g:tagbar_left = 1
