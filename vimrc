@@ -48,6 +48,8 @@
     NeoBundle 'tpope/vim-vinegar'
     " editorconfig
     NeoBundle 'editorconfig/editorconfig-vim'
+    " tagbar
+    NeoBundle 'majutsushi/tagbar'
     " tmuxline
     " NeoBundle 'edkolev/tmuxline.vim'
     " delimitor
@@ -441,3 +443,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
   " eclim
   let g:EclimCompletionMethod = 'omnifunc'
+
+  " tagbar
+  let g:tagbar_left = 1
+  nmap <F5> :TagbarToggle<CR>
