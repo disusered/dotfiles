@@ -439,3 +439,5 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   let g:UltiSnipsJumpForwardTrigger = "<tab>"
   let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
+  " eclim
+  let g:EclimCompletionMethod = 'omnifunc'
