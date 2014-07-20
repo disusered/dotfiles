@@ -449,4 +449,5 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
 
   " tagbar
   let g:tagbar_left = 1
+  let g:tagbar_sort = 0
   nmap <F5> :TagbarToggle<CR>
