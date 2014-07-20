@@ -444,6 +444,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   " eclim
   let g:EclimCompletionMethod = 'omnifunc'
   let g:EclimProjectTreeAutoOpen = 1
+  nmap <F6> :ProjectTree<CR>
 
 
   " tagbar
