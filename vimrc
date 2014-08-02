@@ -68,6 +68,8 @@
     NeoBundle 'jpalardy/vim-slime'
     " ultisnips
     NeoBundle 'SirVer/ultisnips'
+    " vimseek
+    NeoBundle 'goldfeld/vim-seek'
     " vimproc
     let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
