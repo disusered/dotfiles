@@ -82,30 +82,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
       \    },
       \ })
 
-
-  " lazy load
-    " unite
-    NeoBundle 'Shougo/unite.vim', {
-                \ 'lazy' : 1,
-                \ 'autoload': {
-                \   'command': ['Unite']
-                \ },
-                \}
-
-    NeoBundle 'Shougo/unite-outline', {
-                \ 'lazy' : 1,
-                \ 'autoload': {
-                \   'command': ['Unite']
-                \ },
-                \}
-
-    NeoBundle 'tacroe/unite-mark', {
-                \ 'lazy' : 1,
-                \ 'autoload': {
-                \   'command': ['Unite']
-                \ },
-                \}
-
     " coffeescript
     au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
     NeoBundle 'kchmck/vim-coffee-script', {
@@ -345,24 +321,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   set laststatus=2
   let g:airline_powerline_fonts = 1
   " let g:airline#extensions#tabline#enabled = 1
-
-  " unite
-  call unite#filters#sorter_default#use(['sorter_rank'])
-  let g:unite_enable_start_insert=1
-  let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden --follow -g ""'
-  let g:unite_source_grep_command='ag'
-  let g:unite_source_grep_default_opts='--nocolor --nogroup --hidden'
-  let g:unite_source_grep_recursive_opt=''
-  autocmd FileType unite call s:unite_settings()
-  autocmd BufLeave \[unite\]* if "nofile" ==# &buftype | setlocal bufhidden=wipe | endif
-  function! s:unite_settings()
-    let b:SuperTabDisabled=1
-  endfunction
-  nnoremap <silent> <leader>p :Unite -no-split -buffer-name=files file_rec/async<cr>
-  nnoremap <silent> <leader>t :Unite -buffer-name=juggler buffer -quick-match<cr>
-  nnoremap <silent> <leader>o :Unite -no-split -buffer-name=outline outline<cr>
-  nnoremap <silent> <leader>m :Unite -no-split -buffer-name=marks mark<cr>
-  nnoremap <silent> <leader>f :Unite -no-split -auto-preview grep:.<cr>
 
   " marked
   nnoremap <silent> <Leader>md :MarkedOpen!<CR>
