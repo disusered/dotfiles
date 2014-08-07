@@ -70,6 +70,10 @@
     NeoBundle 'SirVer/ultisnips'
     " vimseek
     NeoBundle 'goldfeld/vim-seek'
+    " ctrlp
+    NeoBundle 'kien/ctrlp.vim'
+    NeoBundle 'FelikZ/ctrlp-py-matcher'
+    NeoBundle 'tacahiroy/ctrlp-funky'
     " vimproc
     let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
@@ -406,6 +410,16 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   let g:EclimProjectTreeAutoOpen = 1
   nmap <F6> :ProjectTree<CR>
 
+  " ctrlp
+  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+  let g:ctrlp_clear_cache_on_exit = 0
+  let g:ctrlp_max_files = 0
+  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden -g ""'
+  let g:ctrlp_extensions = ['funky']
+  " bindings
+  nnoremap <leader>p :CtrlP<CR>
+  nnoremap <leader>t :CtrlPBuffer<CR>
+  nnoremap <leader>o :CtrlPFunky<CR>
 
   " tagbar
   let g:tagbar_left = 1
