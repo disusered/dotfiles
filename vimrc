@@ -417,6 +417,7 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   let g:ctrlp_max_files = 0
   let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden -g ""'
   let g:ctrlp_extensions = ['funky']
+
   " bindings
   nnoremap <leader>p :CtrlP<CR>
   nnoremap <leader>t :CtrlPBuffer<CR>
@@ -425,4 +426,4 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   " tagbar
   let g:tagbar_left = 1
   let g:tagbar_sort = 0
-  nmap <F5> :TagbarToggle<CR>
+  nmap <F7> :TagbarToggle<CR>
