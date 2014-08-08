@@ -405,12 +405,6 @@ execute "NeoBundle 'Shougo/vimproc.vim'," . string({
   let g:UltiSnipsJumpForwardTrigger = "<tab>"
   let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
-  " eclim
-  let g:EclimCompletionMethod = 'omnifunc'
-  let g:EclimJavascriptValidate = 0
-  let g:EclimProjectTreeAutoOpen = 1
-  nmap <F6> :ProjectTree<CR>
-
   " ctrlp
   let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
   let g:ctrlp_clear_cache_on_exit = 0
