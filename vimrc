@@ -74,17 +74,6 @@
     NeoBundle 'kien/ctrlp.vim'
     NeoBundle 'FelikZ/ctrlp-py-matcher'
     NeoBundle 'tacahiroy/ctrlp-funky'
-    " vimproc
-    let vimproc_updcmd = has('win64') ?
-      \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
-execute "NeoBundle 'Shougo/vimproc.vim'," . string({
-      \ 'build' : {
-      \     'windows' : vimproc_updcmd,
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ })
 
     " coffeescript
     au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
