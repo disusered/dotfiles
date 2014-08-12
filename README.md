@@ -6,10 +6,9 @@
 
 ## Dependencies
 
-### Syntastic
+```bash
+$ brew install ag lein cmake jshint ctags-exuberant
+$ npm install -g jshint
+$ echo '{:user {:plugins [[cider/cider-nrepl "0.7.0"]]}}' > $HOME/.lein/profiles.clj
+```
 
-`npm install -g jshint`
-
-### Dependencies
-
-`brew install ag cmake jshint ctags-exuberant`
