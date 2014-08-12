@@ -74,6 +74,8 @@
     NeoBundle 'kien/ctrlp.vim'
     NeoBundle 'FelikZ/ctrlp-py-matcher'
     NeoBundle 'tacahiroy/ctrlp-funky'
+    " rainbow parans
+    NeoBundle 'kien/rainbow_parentheses.vim'
 
     " clojure
     NeoBundle 'tpope/vim-leiningen', {
@@ -429,3 +431,7 @@
   let g:tagbar_left = 1
   let g:tagbar_sort = 0
   nmap <F7> :TagbarToggle<CR>
+
+  " rainbow
+  au FileType clojure RainbowParenthesesActivate
+  au Syntax * RainbowParenthesesLoadRound
