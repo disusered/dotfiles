@@ -75,6 +75,19 @@
     NeoBundle 'FelikZ/ctrlp-py-matcher'
     NeoBundle 'tacahiroy/ctrlp-funky'
 
+    " clojure
+    NeoBundle 'tpope/vim-leiningen', {
+                \ 'depends': [
+                \     'tpope/vim-projectionist',
+                \     'tpope/vim-dispatch',
+                \     'tpope/vim-fireplace'
+                \ ],
+                \ 'lazy' : 1,
+                \ 'autoload': {
+                \   'filetypes': ['clojure']
+                \ },
+                \}
+
     " coffeescript
     au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
     NeoBundle 'kchmck/vim-coffee-script', {
