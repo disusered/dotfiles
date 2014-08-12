@@ -88,6 +88,13 @@
                 \ },
                 \}
 
+    NeoBundle 'guns/vim-clojure-static', {
+              \ 'lazy': 1,
+              \ 'autoload': {
+              \   'filetypes': ['clojure']
+              \ }
+              \}
+
     " coffeescript
     au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
     NeoBundle 'kchmck/vim-coffee-script', {
