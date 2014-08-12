@@ -135,7 +135,7 @@
                 \ },
                 \}
 
-    " marked
+    " markdown
     NeoBundle 'itspriddle/vim-marked', {
                 \ 'lazy' : 1,
                 \ 'autoload': {
@@ -143,7 +143,6 @@
                 \ },
                 \ }
 
-    " marked
     NeoBundle 'gabrielelana/vim-markdown', {
                 \ 'lazy' : 1,
                 \ 'autoload': {
