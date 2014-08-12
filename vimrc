@@ -228,12 +228,12 @@
   nnoremap <silent> <Leader>h :nohlsearch<CR>
 
   " bubble single lines
-  nmap <S-k> [e
-  nmap <S-j> ]e
+  nmap ˚ [e
+  nmap ∆ ]e
 
   " bubble multiple lines
-  vmap <S-k> [egv
-  vmap <S-j> ]egv
+  vmap ˚ [egv
+  vmap ∆ ]egv
 
   " close window
   map <silent> <F4> :bw<CR>
