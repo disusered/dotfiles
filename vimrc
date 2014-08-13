@@ -251,10 +251,6 @@
 
   set background=dark
 
-  " mouse control
-  " set mouse=a
-  set ttymouse=xterm2
-
   " fully collapse vertical splits
   set wmh=0
 
