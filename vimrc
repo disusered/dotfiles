@@ -10,8 +10,8 @@
   " yo dawg
   NeoBundleFetch 'Shougo/neobundle.vim'
   " bundles
-    " neocomplcache
-    NeoBundle 'Shougo/neocomplcache.vim'
+    " neocomplete
+    NeoBundle 'Shougo/neocomplete.vim'
     " base16 colorschemes
     NeoBundle 'chriskempson/base16-vim'
     " easymotion
@@ -392,9 +392,9 @@
   let g:clojure_align_multiline_strings = 1
 
   " neocomplete
-  let g:neocomplcache_enable_at_startup = 1
-  let g:neocomplcache_enable_smart_case = 1
-  let g:neocomplcache_force_overwrite_completefunc = 1
+  let g:neocomplete#enable_at_startup = 1
+  let g:neocomplete#enable_smart_case = 1
+  let g:neocomplete#force_overwrite_completefunc = 1
 
   " check for updates
   NeoBundleCheck
