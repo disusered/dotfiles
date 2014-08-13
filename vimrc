@@ -213,9 +213,6 @@
   set copyindent
   set pastetoggle=<F2>
 
-  " bind show whitespace
-  map <silent> <Leader>ws :set list!<CR>
-
   " whitespace characters
   " set listchars=trail:␣,tab:⇥ᐧ,nbsp:⍽,eol:¶,extends:▸,precedes:◂
   set list
@@ -239,7 +236,6 @@
   map <silent> <F4> :bw<CR>
 
   " file explorer
-  map <silent> <Leader>kb :Explore<cr>
   let g:netrw_liststyle = 3
 
   " colors
