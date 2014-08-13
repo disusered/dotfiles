@@ -80,20 +80,18 @@
     NeoBundle 'chrisbra/NrrwRgn'
 
     " clojure
-    NeoBundle 'tpope/vim-leiningen', {
+    NeoBundleLazy 'tpope/vim-leiningen', {
                 \ 'depends': [
                 \     'tpope/vim-projectionist',
                 \     'tpope/vim-dispatch',
                 \     'tpope/vim-fireplace'
                 \ ],
-                \ 'lazy' : 1,
                 \ 'autoload': {
                 \   'filetypes': ['clojure']
                 \ },
                 \}
 
-    NeoBundle 'guns/vim-clojure-static', {
-              \ 'lazy': 1,
+    NeoBundleLazy 'guns/vim-clojure-static', {
               \ 'autoload': {
               \   'filetypes': ['clojure']
               \ }
@@ -101,23 +99,20 @@
 
     " coffeescript
     au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
-    NeoBundle 'kchmck/vim-coffee-script', {
-                \ 'lazy' : 1,
+    NeoBundleLazy 'kchmck/vim-coffee-script', {
                 \ 'autoload': {
                 \   'filetypes': ['coffee']
                 \ },
                 \}
 
     " javascript
-    NeoBundle 'pangloss/vim-javascript', {
-                \ 'lazy' : 1,
+    NeoBundleLazy 'pangloss/vim-javascript', {
                 \ 'autoload': {
                 \   'filetypes': ['javascript']
                 \ },
                 \}
 
-    NeoBundle 'bigfish/vim-js-context-coloring', {
-                \ 'lazy' : 1,
+    NeoBundleLazy 'bigfish/vim-js-context-coloring', {
                 \ 'autoload': {
                 \   'filetypes': ['javascript']
                 \ },
@@ -126,22 +121,19 @@
                 \    },
                 \}
 
-    NeoBundle 'othree/javascript-libraries-syntax.vim', {
-                \ 'lazy' : 1,
+    NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {
                 \ 'autoload': {
                 \   'filetypes': ['javascript', 'coffee', 'typescript']
                 \ },
                 \}
 
-    NeoBundle 'heavenshell/vim-jsdoc', {
-                \ 'lazy' : 1,
+    NeoBundleLazy 'heavenshell/vim-jsdoc', {
                 \ 'autoload': {
                 \   'filetypes': ['javascript']
                 \ },
                 \}
 
-    NeoBundle 'marijnh/tern_for_vim', {
-                \ 'lazy' : 1,
+    NeoBundleLazy 'marijnh/tern_for_vim', {
                 \ 'autoload': {
                 \   'filetypes': ['javascript']
                 \ },
@@ -152,23 +144,20 @@
                 \}
 
     " emmet
-    NeoBundle 'mattn/emmet-vim', {
-                \ 'lazy' : 1,
+    NeoBundleLazy 'mattn/emmet-vim', {
                 \ 'autoload': {
                 \   'filetypes': ['javascript', 'html', 'css']
                 \ },
                 \}
 
     " markdown
-    NeoBundle 'itspriddle/vim-marked', {
-                \ 'lazy' : 1,
+    NeoBundleLazy 'itspriddle/vim-marked', {
                 \ 'autoload': {
                 \   'filetypes': ['markdown', 'ghmarkdown']
                 \ },
                 \ }
 
-    NeoBundle 'gabrielelana/vim-markdown', {
-                \ 'lazy' : 1,
+    NeoBundleLazy 'gabrielelana/vim-markdown', {
                 \ 'autoload': {
                 \   'filetypes': ['markdown', 'ghmarkdown']
                 \ },
