@@ -377,14 +377,6 @@
   noremap <Up> :echoe "Use k"<CR>
   noremap <Down> :echoe "Use j"<CR>
 
-  " core
-  noremap <silent> <leader>w :w<CR>
-  noremap <silent> <leader>q :q<CR>
-  noremap <silent> <leader>wq :wq<CR>
-  noremap <silent> <leader>bd :bd<CR>
-  noremap <silent> <leader>bw :bw<CR>
-  noremap <silent> <leader>ccl :ccl<CR>
-
   " easy-align
   vmap <Enter> <Plug>(LiveEasyAlign)
 
