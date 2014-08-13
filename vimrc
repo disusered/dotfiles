@@ -34,8 +34,6 @@
     NeoBundle 'tpope/vim-eunuch'
     " unimpaired
     NeoBundle 'tpope/vim-unimpaired'
-    " multiple cursors
-    NeoBundle 'terryma/vim-multiple-cursors'
     " airline
     NeoBundle 'bling/vim-airline'
     " repeat
@@ -333,7 +331,7 @@
   " airline
   set laststatus=2
   let g:airline_powerline_fonts = 1
-  " let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#enabled = 1
 
   " marked
   nnoremap <silent> <Leader>md :MarkedOpen!<CR>
