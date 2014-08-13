@@ -49,7 +49,7 @@
     " tagbar
     NeoBundle 'majutsushi/tagbar'
     " tmuxline
-    " NeoBundle 'edkolev/tmuxline.vim'
+    NeoBundle 'edkolev/tmuxline.vim'
     " delimitor
     NeoBundle 'Raimondi/delimitMate'
     " local vimrc
@@ -74,8 +74,6 @@
     NeoBundle 'kien/ctrlp.vim'
     NeoBundle 'FelikZ/ctrlp-py-matcher'
     NeoBundle 'tacahiroy/ctrlp-funky'
-    " rainbow parans
-    NeoBundle 'kien/rainbow_parentheses.vim'
     " narrow region
     NeoBundle 'chrisbra/NrrwRgn'
 
@@ -90,6 +88,8 @@
                 \   'filetypes': ['clojure']
                 \ },
                 \}
+
+    NeoBundle 'kien/rainbow_parentheses.vim'
 
     NeoBundleLazy 'guns/vim-clojure-static', {
               \ 'autoload': {
@@ -256,7 +256,7 @@
   set background=dark
 
   " mouse control
-  set mouse=a
+  " set mouse=a
   set ttymouse=xterm2
 
   " fully collapse vertical splits
