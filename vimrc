@@ -76,6 +76,8 @@
     NeoBundle 'tacahiroy/ctrlp-funky'
     " rainbow parans
     NeoBundle 'kien/rainbow_parentheses.vim'
+    " narrow region
+    NeoBundle 'chrisbra/NrrwRgn'
 
     " clojure
     NeoBundle 'tpope/vim-leiningen', {
