@@ -311,15 +311,12 @@
   nmap t <Plug>(easymotion-bd-t2)
   map  / <Plug>(easymotion-sn)
   omap / <Plug>(easymotion-tn)
-  map <Leader>j <Plug>(easymotion-j)
-  map <Leader>k <Plug>(easymotion-k)
 
   " commentary
   nmap <Leader>/ gcc
   vmap <Leader>/ gc
 
   " syntastic
-  nmap <silent>  :w<CR>:SyntasticCheck<CR>:Errors<CR>
   map <silent> <Leader>l :w<CR>:SyntasticCheck<CR>:Errors<CR>
   let g:syntastic_html_tidy_ignore_errors = [
       \"trimming empty <i>",
