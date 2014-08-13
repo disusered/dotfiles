@@ -70,6 +70,8 @@
     NeoBundle 'SirVer/ultisnips'
     " vimseek
     NeoBundle 'goldfeld/vim-seek'
+    " togglecursor
+    NeoBundle 'jszakmeister/vim-togglecursor'
     " ctrlp
     NeoBundle 'kien/ctrlp.vim'
     NeoBundle 'FelikZ/ctrlp-py-matcher'
