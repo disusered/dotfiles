@@ -366,16 +366,6 @@
   let g:slime_paste_file = tempname()
   let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
 
-  " ultisnips
-  " make ycm compatible with ultisnips (using supertab)
-  let g:ycm_key_list_select_completion = ['<c-n>', '<down>']
-  let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-  let g:SuperTabDefaultCompletionType = '<C-n>'
-  " better key bindings for ultisnipsexpandtrigger
-  let g:UltiSnipsExpandTrigger = "<tab>"
-  let g:UltiSnipsJumpForwardTrigger = "<tab>"
-  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
   " ctrlp
   let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
   let g:ctrlp_clear_cache_on_exit = 0
