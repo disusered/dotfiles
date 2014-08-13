@@ -10,6 +10,8 @@
   " yo dawg
   NeoBundleFetch 'Shougo/neobundle.vim'
   " bundles
+    " neocomplcache
+    NeoBundle 'Shougo/neocomplcache.vim'
     " base16 colorschemes
     NeoBundle 'chriskempson/base16-vim'
     " easymotion
@@ -58,8 +60,6 @@
     NeoBundle 'elzr/vim-json'
     " handlebars
     NeoBundle 'mustache/vim-mustache-handlebars'
-    " autocomplete
-    NeoBundle 'Valloric/YouCompleteMe'
     " tmux nav
     NeoBundle 'christoomey/vim-tmux-navigator'
     " vim slime
@@ -354,11 +354,6 @@
   nnoremap <Leader>gps :Dispatch! git push<CR>
   nnoremap <Leader>gpl :Dispatch! git pull<CR>
 
-  " youcompleteme
-  let g:ycm_autoclose_preview_window_after_completion = 1
-  let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-  let g:ycm_enable_diagnostic_signs = 0
-
   " jsdoc
   let g:jsdoc_default_mapping = 0
   let g:jsdoc_allow_input_prompt = 1
@@ -413,6 +408,11 @@
   " clojure
   let g:clojure_fuzzy_indent = 1
   let g:clojure_align_multiline_strings = 1
+
+  " neocomplete
+  let g:neocomplcache_enable_at_startup = 1
+  let g:neocomplcache_enable_smart_case = 1
+  let g:neocomplcache_force_overwrite_completefunc = 1
 
   " check for updates
   NeoBundleCheck
