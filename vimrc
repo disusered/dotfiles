@@ -396,5 +396,9 @@
   let g:neocomplete#enable_smart_case = 1
   let g:neocomplete#force_overwrite_completefunc = 1
 
+  " ultisnips
+  let g:UltiSnipsJumpForwardTrigger = "<tab>"
+  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
   " check for updates
   NeoBundleCheck
