@@ -371,12 +371,6 @@
   let g:js_context_colors_enabled = 0
   let g:js_context_colors_usemaps = 0
 
-  " no arrows
-  noremap <Left> :echoe "Use h"<CR>
-  noremap <Right> :echoe "Use l"<CR>
-  noremap <Up> :echoe "Use k"<CR>
-  noremap <Down> :echoe "Use j"<CR>
-
   " easy-align
   vmap <Enter> <Plug>(LiveEasyAlign)
 
