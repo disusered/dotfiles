@@ -66,8 +66,6 @@
     NeoBundle 'jpalardy/vim-slime'
     " ultisnips
     NeoBundle 'SirVer/ultisnips'
-    " vimseek
-    NeoBundle 'goldfeld/vim-seek'
     " togglecursor
     NeoBundle 'jszakmeister/vim-togglecursor'
     " ctrlp
