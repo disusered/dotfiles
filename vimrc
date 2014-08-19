@@ -46,8 +46,6 @@
     NeoBundle 'tpope/vim-fugitive'
     " gitgutter
     NeoBundle 'airblade/vim-gitgutter'
-    " vinegar
-    NeoBundle 'tpope/vim-vinegar'
     " editorconfig
     NeoBundle 'editorconfig/editorconfig-vim'
     " tagbar
