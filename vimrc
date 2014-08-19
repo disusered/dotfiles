@@ -394,7 +394,7 @@
   let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
   " nerdtree
-  map - :NERDTreeToggle<CR>
+  map + :NERDTreeToggle<CR>
 
   " check for updates
   NeoBundleCheck
