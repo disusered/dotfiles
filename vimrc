@@ -22,6 +22,8 @@
     NeoBundle 'tpope/vim-dispatch'
     " syntastic
     NeoBundle 'scrooloose/syntastic'
+    " nerdtree
+    NeoBundle 'scrooloose/nerdtree'
     " surround
     NeoBundle 'tpope/vim-surround'
     " speeddating
@@ -397,6 +399,9 @@
   " ultisnips
   let g:UltiSnipsJumpForwardTrigger = "<tab>"
   let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+  " nerdtree
+  map - :NERDTreeToggle<CR>
 
   " check for updates
   NeoBundleCheck
