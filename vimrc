@@ -301,17 +301,7 @@
 
   " syntastic
   map <silent> <Leader>l :w<CR>:SyntasticCheck<CR>:Errors<CR>
-  let g:syntastic_html_tidy_ignore_errors = [
-      \"lacks \"action\" attribute",
-      \"trimming empty <i>",
-      \"trimming empty <span>",
-      \"is not recognized",
-      \"discarding unexpected",
-      \"<input> proprietary attribute \"autocomplete\"",
-      \"proprietary attribute \"ng-",
-      \"proprietary attribute \"role\"",
-      \"proprietary attribute \"hidden\"",
-      \]
+  let g:syntastic_html_checkers=['']
   let g:syntastic_javascript_jshint_args = '--config ~/.vim/jshintrc'
 
   " airline
