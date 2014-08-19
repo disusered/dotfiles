@@ -172,6 +172,10 @@
   " remap leader key
   let mapleader = ","
 
+  " enable mouse
+  set mouse=a
+  set ttymouse=xterm2
+
   " disable ex
   nnoremap Q <nop>
 
