@@ -323,7 +323,7 @@
 
   " fugitive
   nnoremap <Leader>gs :Gstatus<CR>
-  nnoremap <Leader>ga :Gcommit --amend -v -q %:p<CR>
+  nnoremap <Leader>ga :Gcommit --amend<CR>
   nnoremap <Leader>gc :Gcommit -v -q<CR>
   nnoremap <Leader>gt :Gcommit -v -q %:p<CR>
   nnoremap <Leader>gd :Gdiff<CR>
