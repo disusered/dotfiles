@@ -302,6 +302,7 @@
   " syntastic
   map <silent> <Leader>l :w<CR>:SyntasticCheck<CR>:Errors<CR>
   let g:syntastic_html_tidy_ignore_errors = [
+      \"lacks \"action\" attribute",
       \"trimming empty <i>",
       \"trimming empty <span>",
       \"is not recognized",
