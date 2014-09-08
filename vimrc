@@ -75,6 +75,32 @@
     " narrow region
     NeoBundle 'chrisbra/NrrwRgn'
 
+    " ruby
+    NeoBundleLazy 'tpope/vim-rails', {
+                \ 'depends': [
+                \ ],
+                \ 'autoload': {
+                \   'filetypes': ['ruby']
+                \ },
+                \}
+
+
+    NeoBundleLazy 'tpope/vim-endwise', {
+                \ 'depends': [
+                \ ],
+                \ 'autoload': {
+                \   'filetypes': ['ruby']
+                \ },
+                \}
+
+    NeoBundleLazy 'tpope/vim-bundler', {
+                \ 'depends': [
+                \ ],
+                \ 'autoload': {
+                \   'filetypes': ['ruby']
+                \ },
+                \}
+
     " clojure
     NeoBundleLazy 'tpope/vim-leiningen', {
                 \ 'depends': [
