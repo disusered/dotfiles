@@ -205,6 +205,9 @@
   " disable ex
   nnoremap Q <nop>
 
+  " close
+  nnoremap <leader>q :bp\|bd #<CR>
+
   " use unix as the standard file type
   set ffs=unix,dos,mac
 
