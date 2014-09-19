@@ -113,8 +113,6 @@
                 \ },
                 \}
 
-    NeoBundle 'kien/rainbow_parentheses.vim'
-
     NeoBundleLazy 'guns/vim-clojure-static', {
               \ 'autoload': {
               \   'filetypes': ['clojure']
@@ -386,10 +384,6 @@
   " tagbar
   let g:tagbar_left = 1
   let g:tagbar_sort = 0
-
-  " rainbow
-  au FileType clojure RainbowParenthesesActivate
-  au Syntax * RainbowParenthesesLoadRound
   nmap + :TagbarToggle<CR>
 
   " clojure
