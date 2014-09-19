@@ -136,15 +136,6 @@
                 \ },
                 \}
 
-    NeoBundleLazy 'bigfish/vim-js-context-coloring', {
-                \ 'autoload': {
-                \   'filetypes': ['javascript']
-                \ },
-                \ 'build' : {
-                \     'unix' : 'npm install',
-                \    },
-                \}
-
     NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {
                 \ 'autoload': {
                 \   'filetypes': ['javascript', 'coffee', 'typescript']
@@ -371,13 +362,6 @@
   let g:jsdoc_default_mapping = 0
   let g:jsdoc_allow_input_prompt = 1
   nnoremap <silent> <Leader>jsd :JsDoc<CR>
-
-  " js context
-  nnoremap <silent> <Leader>cx :JSContextColorUpdate<CR>:JSContextColorToggle<CR>
-  let g:js_context_colors_comment_higroup = 'Comment'
-  let g:js_context_colors_insertmode = 0
-  let g:js_context_colors_enabled = 0
-  let g:js_context_colors_usemaps = 0
 
   " easy-align
   vmap <Enter> <Plug>(LiveEasyAlign)
