@@ -34,8 +34,6 @@
     NeoBundle 'junegunn/vim-easy-align'
     " commentary
     NeoBundle 'tpope/vim-commentary'
-    " eunuch
-    NeoBundle 'tpope/vim-eunuch'
     " unimpaired
     NeoBundle 'tpope/vim-unimpaired'
     " airline
