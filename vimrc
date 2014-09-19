@@ -386,11 +386,11 @@
   " tagbar
   let g:tagbar_left = 1
   let g:tagbar_sort = 0
-  nmap <F7> :TagbarToggle<CR>
 
   " rainbow
   au FileType clojure RainbowParenthesesActivate
   au Syntax * RainbowParenthesesLoadRound
+  nmap + :TagbarToggle<CR>
 
   " clojure
   let g:clojure_fuzzy_indent = 1
@@ -406,7 +406,7 @@
   let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
   " nerdtree
-  map + :NERDTreeToggle<CR>
+  map = :NERDTreeToggle<CR>
 
   " check for updates
   NeoBundleCheck
