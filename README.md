@@ -1,5 +1,10 @@
 # Vim
 
+## Set key repeat settings in Karabiner
+
+- Delay Until Repeat: 200ms
+- Key Repeat: 40ms
+
 ## Install Vim with Lua support
 
 `brew install vim --with-lua`
