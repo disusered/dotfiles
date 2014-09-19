@@ -93,6 +93,7 @@
 
     NeoBundleLazy 'tpope/vim-bundler', {
                 \ 'depends': [
+                \     'tpope/vim-projectionist',
                 \ ],
                 \ 'autoload': {
                 \   'filetypes': ['ruby']
