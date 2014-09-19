@@ -232,7 +232,6 @@
   set nostartofline
   set nowrap
   set colorcolumn=80
-  set relativenumber
   set nofoldenable
 
   " whitespace
