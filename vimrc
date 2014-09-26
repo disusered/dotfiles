@@ -72,6 +72,8 @@
     NeoBundle 'tacahiroy/ctrlp-funky'
     " narrow region
     NeoBundle 'chrisbra/NrrwRgn'
+    " goyo
+    NeoBundle 'junegunn/goyo.vim'
 
     " ruby
     NeoBundleLazy 'vim-ruby/vim-ruby', {
@@ -419,6 +421,16 @@
 
   " nerdtree
   map = :NERDTreeToggle<CR>
+
+  " goyo
+  nnoremap <silent> <Leader>dfm :Goyo<CR>
+  function! GoyoBefore()
+    set wrap
+  endfunction
+  function! GoyoAfter()
+    set nowrap
+  endfunction
+  let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
 
   " check for updates
   NeoBundleCheck
