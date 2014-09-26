@@ -190,12 +190,6 @@
                 \ },
                 \ }
 
-    NeoBundleLazy 'gabrielelana/vim-markdown', {
-                \ 'autoload': {
-                \   'filetypes': ['markdown', 'ghmarkdown']
-                \ },
-                \ }
-
   call neobundle#end()
   filetype plugin indent on
   NeoBundleCheck
@@ -315,6 +309,9 @@
 " syntax specific ==============================================================
   " make
   au FileType make set noexpandtab
+
+  " markdown
+  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
   " additional ruby extensions
   au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
