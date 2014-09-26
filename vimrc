@@ -162,6 +162,12 @@
                 \ },
                 \}
 
+    NeoBundleLazy 'csscomb/vim-csscomb', {
+                \ 'autoload': {
+                \   'filetypes': ['css', 'scss']
+                \ },
+                \}
+
     " markdown
     NeoBundleLazy 'itspriddle/vim-marked', {
                 \ 'autoload': {
