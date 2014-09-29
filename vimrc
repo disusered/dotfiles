@@ -76,6 +76,8 @@
     NeoBundle 'junegunn/goyo.vim'
     " docker
     NeoBundle 'honza/dockerfile.vim'
+    " markdown
+    NeoBundle 'gabrielelana/vim-markdown'
 
     " ruby
     NeoBundleLazy 'vim-ruby/vim-ruby', {
