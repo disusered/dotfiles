@@ -422,6 +422,7 @@
 
   " nerdtree
   map = :NERDTreeToggle<CR>
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
   " goyo
   nnoremap <silent> <Leader>dfm :Goyo<CR>
