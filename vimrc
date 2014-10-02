@@ -403,7 +403,7 @@
   nnoremap <leader>o :CtrlPFunky<CR>
 
   " tagbar
-  let g:tagbar_left = 1
+  let g:tagbar_left = 0
   let g:tagbar_sort = 0
   nmap + :TagbarToggle<CR>
 
