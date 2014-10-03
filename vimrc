@@ -42,6 +42,8 @@
     NeoBundle 'tpope/vim-repeat'
     " fugitive
     NeoBundle 'tpope/vim-fugitive'
+    " gitv
+    NeoBundle 'gregsexton/gitv'
     " gitgutter
     NeoBundle 'airblade/vim-gitgutter'
     " editorconfig
@@ -368,8 +370,8 @@
   nnoremap <Leader>gr :Gread<CR>
   nnoremap <Leader>ge :Gedit<CR>
   nnoremap <Leader>gw :Gwrite<CR><CR>
-  nnoremap <Leader>gl :silent! Glog --<CR>:bot copen<CR>:redraw!<CR>
-  nnoremap <Leader>gh :silent! Glog -- %<CR>:bot copen<CR>:redraw!<CR>
+  nnoremap <Leader>gl :Gitv<CR>
+  nnoremap <Leader>gh :Gitv!<CR>
   nnoremap <Leader>gp :Ggrep<Space>
   nnoremap <Leader>gm :Gmove<Space>
   nnoremap <Leader>gb :Git branch<Space>
