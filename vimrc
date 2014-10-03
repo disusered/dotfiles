@@ -10,8 +10,6 @@
   " yo dawg
   NeoBundleFetch 'Shougo/neobundle.vim'
   " bundles
-    " neocomplete
-    NeoBundle 'Shougo/neocomplete.vim'
     " base16 colorschemes
     NeoBundle 'chriskempson/base16-vim'
     " easymotion
@@ -80,6 +78,13 @@
     NeoBundle 'honza/dockerfile.vim'
     " markdown
     NeoBundle 'gabrielelana/vim-markdown'
+    " autocomplete
+    NeoBundle 'Valloric/YouCompleteMe', {
+                \ 'build': {
+                \   'unix': './install.sh',
+                \   'mac': './install.sh'
+                \ }
+                \}
 
     " ruby
     NeoBundleLazy 'vim-ruby/vim-ruby', {
@@ -379,6 +384,11 @@
   nnoremap <Leader>gps :Dispatch! git push<CR>
   nnoremap <Leader>gpl :Dispatch! git pull<CR>
 
+  " youcompleteme
+  let g:ycm_autoclose_preview_window_after_completion = 1
+  let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+  let g:ycm_enable_diagnostic_signs = 0
+
   " jsdoc
   let g:jsdoc_default_mapping = 0
   let g:jsdoc_allow_input_prompt = 1
@@ -391,6 +401,16 @@
   let g:slime_target = "tmux"
   let g:slime_paste_file = tempname()
   let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
+
+  " ultisnips
+  " make ycm compatible with ultisnips (using supertab)
+  let g:ycm_key_list_select_completion = ['<c-n>', '<down>']
+  let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+  let g:SuperTabDefaultCompletionType = '<C-n>'
+  " better key bindings for ultisnipsexpandtrigger
+  let g:UltiSnipsExpandTrigger = "<tab>"
+  let g:UltiSnipsJumpForwardTrigger = "<tab>"
+  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
   " ctrlp
   let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
@@ -412,15 +432,6 @@
   " clojure
   let g:clojure_fuzzy_indent = 1
   let g:clojure_align_multiline_strings = 1
-
-  " neocomplete
-  let g:neocomplete#enable_at_startup = 1
-  let g:neocomplete#enable_smart_case = 1
-  let g:neocomplete#force_overwrite_completefunc = 1
-
-  " ultisnips
-  let g:UltiSnipsJumpForwardTrigger = "<tab>"
-  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
   " nerdtree
   map = :NERDTreeToggle<CR>
