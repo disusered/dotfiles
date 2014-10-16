@@ -184,7 +184,7 @@
     " emmet
     NeoBundleLazy 'mattn/emmet-vim', {
                 \ 'autoload': {
-                \   'filetypes': ['javascript', 'html', 'css']
+                \   'filetypes': ['javascript', 'html', 'css', 'eruby']
                 \ },
                 \}
 
