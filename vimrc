@@ -91,7 +91,7 @@
                 \ 'depends': [
                 \ ],
                 \ 'autoload': {
-                \   'filetypes': ['ruby']
+                \   'filetypes': ['ruby', 'eruby']
                 \ },
                 \}
 
@@ -99,7 +99,7 @@
                 \ 'depends': [
                 \ ],
                 \ 'autoload': {
-                \   'filetypes': ['ruby']
+                \   'filetypes': ['ruby', 'eruby']
                 \ },
                 \}
 
@@ -108,7 +108,7 @@
                 \ 'depends': [
                 \ ],
                 \ 'autoload': {
-                \   'filetypes': ['ruby']
+                \   'filetypes': ['ruby', 'eruby']
                 \ },
                 \}
 
@@ -117,7 +117,7 @@
                 \     'tpope/vim-projectionist',
                 \ ],
                 \ 'autoload': {
-                \   'filetypes': ['ruby']
+                \   'filetypes': ['ruby', 'eruby']
                 \ },
                 \}
 
