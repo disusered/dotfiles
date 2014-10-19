@@ -70,6 +70,17 @@ function _completemarks {
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
 
+# History substring search
+if [ -f $HOME/.config/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
+  source $HOME/.config/zsh-history-substring-search/zsh-history-substring-search.zsh
+  zmodload zsh/terminfo
+  # Bind arrows
+  bindkey '^[[A' history-substring-search-up
+  bindkey '^[[B' history-substring-search-down
+  bindkey -M vicmd 'k' history-substring-search-up
+  bindkey -M vicmd 'j' history-substring-search-down
+fi
+
 # Base16
 BASE16_SCHEME="tomorrow"
 BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
