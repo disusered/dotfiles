@@ -10,6 +10,16 @@ export ANDROID_HOME='/usr/local/opt/android-sdk'
 export JAVA_HOME=`/usr/libexec/java_home`
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
+# Temporary files
+export TMPDIR="/tmp/$USER"
+if [[ ! -d "$TMPDIR" ]]; then
+  mkdir -p -m 700 "$TMPDIR"
+fi
+TMPPREFIX="${TMPDIR%/}/zsh"
+if [[ ! -d "$TMPPREFIX" ]]; then
+  mkdir -p "$TMPPREFIX"
+fi
+
 # fn Keys
 bindkey "^[[H" beginning-of-line    # fn ←
 bindkey "^[[F" end-of-line          # fn →
