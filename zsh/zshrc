@@ -10,6 +10,8 @@ export ANDROID_HOME='/usr/local/opt/android-sdk'
 export JAVA_HOME=`/usr/libexec/java_home`
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
+# Aliases
+alias c='clear'
 # Temporary files
 export TMPDIR="/tmp/$USER"
 if [[ ! -d "$TMPDIR" ]]; then
