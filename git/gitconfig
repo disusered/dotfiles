@@ -23,7 +23,7 @@
 	autocrlf = input
 [alias]
 	l = !git log --graph --color --pretty=format:'%C(magenta bold)%h%C(reset) - %s %C(white bold)<%aN>%C(reset) %C(blue bold)(%cr)%C(reset) %C(auto)%d%C(reset)' --abbrev-commit --date=relative --all
-	s = !git status --short
+	s = !git status --short --branch
 	ack = grep --break --heading --line-number
 [credential]
 	helper = osxkeychain
