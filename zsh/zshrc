@@ -1,0 +1,29 @@
+# fn Keys
+bindkey "^[[H" beginning-of-line    # fn ←
+bindkey "^[[F" end-of-line          # fn →
+bindkey "^[[3~" delete-char         # fn delete
+
+# Marks
+export MARKPATH=$HOME/.marks
+function jump {
+  cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
+}
+function mark {
+  mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
+}
+function unmark {
+  rm -i "$MARKPATH/$1"
+}
+function marks {
+  \ls -l "$MARKPATH" | tail -n +2 | sed 's/  / /g' | cut -d' ' -f9- | awk -F ' -> ' '{printf "%-10s -> %s\n", $1, $2}'
+}
+function _completemarks {
+  reply=($(ls $MARKPATH))
+}
+compctl -K _completemarks jump
+compctl -K _completemarks unmark
+
+# Base16
+BASE16_SCHEME="tomorrow"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
+[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL

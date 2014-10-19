@@ -17,3 +17,8 @@
     brew link macvim && brew linkapps
     git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
     ```
+
+- Symlink configs
+  ```bash
+  ln -s .dotfiles/zsh/zshrc .zshrc
+  ```
