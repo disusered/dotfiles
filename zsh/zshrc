@@ -1,3 +1,9 @@
+# Set function paths
+fpath=(
+  /usr/local/share/zsh/site-functions
+  $fpath
+)
+
 # Vi mode
 bindkey -v
 
