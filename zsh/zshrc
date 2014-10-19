@@ -34,6 +34,8 @@ export VAGRANT_DEFAULT_PROVIDER=virtualbox
 alias c='clear'
 alias ls='ls -G'
 alias ag='ag --pager "less -R" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34'
+alias http='http --style vim'
+alias h='http'
 
 alias gc='git commit --verbose'
 alias gca='git commit --verbose --all'
