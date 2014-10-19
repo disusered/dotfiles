@@ -14,6 +14,20 @@ export VAGRANT_DEFAULT_PROVIDER=virtualbox
 alias c='clear'
 alias ag='ag --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34'
 
+alias gc='git commit --verbose'
+alias gca='git commit --verbose --all'
+alias gcm='git commit --message'
+alias gg='git ack'
+alias gia='git add'
+alias gl='git l'
+alias gs='git status -sb'
+alias gp='git push'
+alias gpf='git push --force'
+alias gwd='git diff --no-ext-diff'
+alias gwD='git difftool'
+alias gf='git fetch'
+alias gfm='git pull'
+
 # Temporary files
 export TMPDIR="/tmp/$USER"
 if [[ ! -d "$TMPDIR" ]]; then
