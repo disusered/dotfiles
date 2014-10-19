@@ -12,7 +12,7 @@
 
 - Install dependencies
     ```bash
-    brew install ag ack git-flow node ruby tmux zsh reattach-to-user-namespace
+    brew install ag ack tree git-flow node ruby tmux zsh reattach-to-user-namespace
     brew install macvim --with-cscope --with-lua --override-system-vim
     brew link macvim && brew linkapps
     git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
