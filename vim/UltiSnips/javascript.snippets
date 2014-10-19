@@ -1,0 +1,80 @@
+snippet jdh "Javadoc header"
+/**
+ * `!p snip.rv = fn`
+ *
+ * @author ${1:Carlos Antonio}
+ * @overview ${2:My cool project} 
+ * @copyright © `date +"%Y"` ${3:Carlos Antonio}
+ * @license ${4:GPLv2}
+ */
+endsnippet
+
+snippet gpl "The GPL license"
+/**
+ * `!p snip.rv = fn`
+ *
+ * Copyright (C) `date +"%Y"` ${0:Carlos Antonio}
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ */
+
+endsnippet
+
+snippet if "A simple if condition"
+if (${1:expression}) {
+	$0
+}
+endsnippet
+
+snippet ife "A simple if else condition"
+if (${1:expression}) {
+	$4
+} else ${2:if (${3:bar}) }{
+	$0
+}
+endsnippet
+
+snippet sw "Switch condition"
+switch (${1:expression}) {
+	case ${2:alpha}:
+		${5:console.log($2);}
+		break;
+	case ${3:beta}:
+		${6:console.log($3);}
+		break;${4:
+	default:
+		${7:console.log('default');}}
+}
+endsnippet
+
+snippet f "Hoisted function"
+function ${1:name}(${2:arg1}${3:, ${4:arg2}}){
+	$0
+}
+endsnippet
+
+snippet vf "Variable function"
+var ${1:name} = function ${1:name}(${2:arg1}${3:, ${4:arg2}}){
+	$0
+}
+endsnippet
+
+snippet cl "Log to default console"
+console.log('${0:Some useful message}');
+endsnippet
+
+snippet cd "Log to debug console"
+console.debug('${0:Some debug message}');
+endsnippet
+
+snippet cw "Log to warning  console"
+console.warn('${0:Some warning message}');
+endsnippet
+
+snippet ce "Log to error console"
+console.error('${0:Some error message}');
+endsnippet
