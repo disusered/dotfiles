@@ -2,18 +2,32 @@
 
 ## Set key repeat settings in Karabiner
 
-- Delay Until Repeat: 200ms
-- Key Repeat: 40ms
+- Delay Until Repeat: 150ms
+- Key Repeat: 20ms
 
 ## Install Vim with Lua support
 
 `brew install vim --with-lua`
 
-## Dependencies
+## Install Dependencies
 
 ```bash
-$ brew install ag lein cmake jshint ctags-exuberant
+$ brew install ag
 $ npm install -g jshint
-$ echo '{:user {:plugins [[cider/cider-nrepl "0.7.0"]]}}' > $HOME/.lein/profiles.clj
 ```
 
+## Setup iTerm
+- Install patched powerline fonts: 
+    ```bash
+    $ git clone https://github.com/Lokaltog/powerline-fonts.git
+    ```
+
+- In iTerm Preferences, enable `Load preferences from a custom folder or URL` and point to settings plist
+
+## Setup
+```bash
+$ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+$ git clone git@github.com:disusered/vim.git .vim
+$ ln -s .vim/vimrc .vimrc
+$ ln -s .vim/gvimrc .gvimrc
+```
