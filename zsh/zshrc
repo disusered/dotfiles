@@ -1,3 +1,6 @@
+# Vi mode
+bindkey -v
+
 # Environment variables
 export LANG='en_US.UTF-8'
 
