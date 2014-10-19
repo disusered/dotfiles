@@ -16,6 +16,7 @@
     brew link macvim && brew linkapps
     git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
     git clone https://github.com/sindresorhus/pure.git .config/pure
+    git clone https://github.com/Shougo/neobundle.vim ~/.dotfiles/vim/bundle/neobundle.vim
     ```
 
 - Symlink configs
@@ -28,4 +29,7 @@
     ln -s .dotfiles/git/gitconfig .gitconfig
     ln -s .dotfiles/git/gitignore_global .gitignore_global
     ln -s .dotfiles/slate/slate .slate
+    ln -s .dotfiles/vim .vim
+    ln -s .dotfiles/vim/vimrc .vimrc
+    ln -s .dotfiles/vim/gvimrc .gvimrc
     ```
