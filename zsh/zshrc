@@ -1,6 +1,9 @@
 # Vi mode
 bindkey -v
 
+# Autoload modules
+autoload -U compinit
+
 # History
 SAVEHIST=10000
 HISTFILE=$HOME/.zsh_history
