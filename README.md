@@ -1,5 +1,7 @@
 # Dotfiles
 
+## Setup
+
 1. Clone the repository
     ```bash
     git clone git@github.com:disusered/dotfiles.git ~/.dotfiles
@@ -14,6 +16,7 @@
     reattach-to-user-namespace zsh-history-substring-search \
     macvim --with-cscope --with-lua --override-system-vim
     brew link macvim && brew linkapps
+    npm install -g jshint
     git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
     git clone https://github.com/sindresorhus/pure.git .config/pure
     git clone https://github.com/Shougo/neobundle.vim ~/.dotfiles/vim/bundle/neobundle.vim
@@ -33,3 +36,9 @@
     ln -s .dotfiles/vim/vimrc .vimrc
     ln -s .dotfiles/vim/gvimrc .gvimrc
     ```
+
+## Additional tweaks
+
+#### Set key repeat settings in Karabiner
+- Delay Until Repeat: 150ms
+- Key Repeat: 20ms
