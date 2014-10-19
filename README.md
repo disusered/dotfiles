@@ -14,11 +14,13 @@
     brew install macvim --with-cscope --with-lua --override-system-vim
     brew link macvim && brew linkapps
     git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+    git clone https://github.com/sindresorhus/pure.git .config/pure
     ```
 
 - Symlink configs
     ```bash
     ln -s .dotfiles/tmux/tmux.conf .tmux.conf
+    ln -s $HOME/.config/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
     ln -s .dotfiles/zsh/zshrc .zshrc
     ln -s .dotfiles/ag/agignore .agignore
     ln -s .dotfiles/ack/ackrc .ackrc

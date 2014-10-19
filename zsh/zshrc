@@ -8,7 +8,11 @@ fpath=(
 bindkey -v
 
 # Autoload modules
-autoload -U compinit
+autoload -U compinit && compinit
+autoload -U promptinit && promptinit
+
+# Set prompt
+prompt pure
 
 # History
 SAVEHIST=10000
