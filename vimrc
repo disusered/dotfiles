@@ -121,24 +121,6 @@
                 \ },
                 \}
 
-    " clojure
-    NeoBundleLazy 'tpope/vim-leiningen', {
-                \ 'depends': [
-                \     'tpope/vim-projectionist',
-                \     'tpope/vim-dispatch',
-                \     'tpope/vim-fireplace'
-                \ ],
-                \ 'autoload': {
-                \   'filetypes': ['clojure']
-                \ },
-                \}
-
-    NeoBundleLazy 'guns/vim-clojure-static', {
-              \ 'autoload': {
-              \   'filetypes': ['clojure']
-              \ }
-              \}
-
     " coffeescript
     au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
     NeoBundleLazy 'kchmck/vim-coffee-script', {
@@ -423,10 +405,6 @@
   let g:tagbar_left = 0
   let g:tagbar_sort = 0
   nmap + :TagbarToggle<CR>
-
-  " clojure
-  let g:clojure_fuzzy_indent = 1
-  let g:clojure_align_multiline_strings = 1
 
   " nerdtree
   map = :NERDTreeToggle<CR>
