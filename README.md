@@ -24,4 +24,5 @@
     ln -s .dotfiles/zsh/zshrc .zshrc
     ln -s .dotfiles/ag/agignore .agignore
     ln -s .dotfiles/ack/ackrc .ackrc
+    ln -s .dotfiles/git/gitconfig .gitconfig
     ```
