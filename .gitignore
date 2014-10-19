@@ -1,3 +1,4 @@
+libs/*
 vim/bundle/*
 vim/.netrwhist
 vim/.ycm_extra_conf.pyc
