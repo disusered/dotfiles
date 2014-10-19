@@ -1,6 +1,10 @@
 # Vi mode
 bindkey -v
 
+# History
+SAVEHIST=10000
+HISTFILE=$HOME/.zsh_history
+
 # Environment variables
 export LANG='en_US.UTF-8'
 
