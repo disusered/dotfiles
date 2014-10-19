@@ -21,5 +21,6 @@
 - Symlink configs
   ```bash
   ln -s .dotfiles/zsh/zshrc .zshrc
+  ln -s .dotfiles/ag/agignore .agignore
   ln -s .dotfiles/ack/ackrc .ackrc
   ```
