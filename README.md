@@ -20,6 +20,7 @@
 
 - Symlink configs
   ```bash
+  ln -s .dotfiles/tmux/tmux.conf .tmux.conf
   ln -s .dotfiles/zsh/zshrc .zshrc
   ln -s .dotfiles/ag/agignore .agignore
   ln -s .dotfiles/ack/ackrc .ackrc
