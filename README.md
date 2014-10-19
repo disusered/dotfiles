@@ -26,4 +26,5 @@
     ln -s .dotfiles/ack/ackrc .ackrc
     ln -s .dotfiles/git/gitconfig .gitconfig
     ln -s .dotfiles/git/gitignore_global .gitignore_global
+    ln -s .dotfiles/slate/slate .slate
     ```
