@@ -1,3 +1,15 @@
+# Environment variables
+export LANG='en_US.UTF-8'
+
+export BROWSER='open'
+export EDITOR='vi -e'
+export PAGER='less'
+export LESS='-X -F -g -i -M -R -S -w -z-4'
+
+export ANDROID_HOME='/usr/local/opt/android-sdk'
+export JAVA_HOME=`/usr/libexec/java_home`
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
+
 # fn Keys
 bindkey "^[[H" beginning-of-line    # fn ←
 bindkey "^[[F" end-of-line          # fn →
