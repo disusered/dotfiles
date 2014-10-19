@@ -1,0 +1,26 @@
+--pager=less
+--smart-case
+
+# Colors
+--color-lineno=bold magenta
+--color-filename=bold white
+--color-match=black on_blue
+
+# Flush output immediately, even when piped
+--flush
+
+# Force color and header, even in less -R.
+--color
+--group
+
+# Custom types and abbreviatinos.
+--type-set=sass=.sass
+--type-set=coffee=.coffee
+--type-set=log=.log
+--type-set=dat=.dat
+--type-set=map=.map
+
+# Ignore types
+--nolog
+--nodat
+--nomap
