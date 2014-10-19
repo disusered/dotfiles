@@ -10,6 +10,12 @@
 	filename = white bold
 	linenumber = magenta bold
 	match = black blue
+[color.branch]
+	current = magenta bold
+	local = white bold
+	remote = green bold
+[color.status]
+	header = green
 [core]
 	quotepath = false
 	excludesfile = /Users/carlos/.gitignore_global
