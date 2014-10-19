@@ -74,8 +74,6 @@
     NeoBundle 'chrisbra/NrrwRgn'
     " goyo
     NeoBundle 'junegunn/goyo.vim'
-    " docker
-    NeoBundle 'honza/dockerfile.vim'
     " markdown
     NeoBundle 'gabrielelana/vim-markdown'
     " autocomplete
@@ -262,13 +260,9 @@
   " colors
   syntax enable
 
-  " base16-shell 256 color iTerm2 fix
+  " base16-shell 256 color
   let base16colorspace=256
-
-  try
-      colorscheme base16-ocean
-  catch
-  endtry
+  colorscheme base16-tomorrow
 
   set background=dark
 
