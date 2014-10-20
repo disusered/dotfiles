@@ -76,6 +76,8 @@
     NeoBundle 'junegunn/goyo.vim'
     " markdown
     NeoBundle 'gabrielelana/vim-markdown'
+    " dash
+    NeoBundle 'rizzatti/dash.vim'
     " autocomplete
     NeoBundle 'Valloric/YouCompleteMe', {
                 \ 'build': {
@@ -419,6 +421,9 @@
   let g:rubycomplete_classes_in_global = 1
   let g:rubycomplete_rails = 1
   let g:rubycomplete_use_bundler = 1
+
+  " dash
+  nmap <silent> <leader>d <Plug>DashSearch
 
   " check for updates
   NeoBundleCheck
