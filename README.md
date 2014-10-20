@@ -22,7 +22,6 @@
     macvim --with-cscope --with-lua --override-system-vim
     brew link macvim && brew linkapps
     npm install -g jshint
-    git clone https://github.com/Shougo/neobundle.vim ~/.dotfiles/vim/bundle/neobundle.vim
     ```
 
 - Symlink configs

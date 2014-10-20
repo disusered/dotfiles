@@ -2,8 +2,8 @@
   set nocompatible
   filetype off
 
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#begin(expand('~/.vim/bundle/'))
+  set runtimepath+=~/.dotfiles/vendor/neobundle.vim/
+  call neobundle#begin(expand('~/.dotfiles/vendor/bundles.vim/'))
 
   let g:neobundle#install_process_timeout = 600
 
