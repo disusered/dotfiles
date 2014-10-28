@@ -130,6 +130,12 @@
                 \}
 
     " javascript
+    NeoBundleLazy 'moll/vim-node', {
+                \ 'autoload': {
+                \   'filetypes': ['javascript', 'coffee', 'typescript']
+                \ },
+                \}
+
     NeoBundleLazy 'pangloss/vim-javascript', {
                 \ 'autoload': {
                 \   'filetypes': ['javascript']
