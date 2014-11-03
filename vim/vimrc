@@ -78,6 +78,8 @@
     NeoBundle 'gabrielelana/vim-markdown'
     " dash
     NeoBundle 'rizzatti/dash.vim'
+    " docker
+    NeoBundle 'honza/dockerfile.vim'
     " autocomplete
     NeoBundle 'Valloric/YouCompleteMe', {
                 \ 'build': {
