@@ -358,6 +358,9 @@
   " json
   let g:vim_json_syntax_conceal = 0
 
+  " tern
+  let g:tern_show_argument_hints='on_hold'
+
   " fugitive
   nnoremap <Leader>gs :Gstatus<CR>
   nnoremap <Leader>ga :Gcommit --amend<CR>
