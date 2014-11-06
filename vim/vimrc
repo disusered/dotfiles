@@ -49,7 +49,7 @@
     " tagbar
     NeoBundle 'majutsushi/tagbar'
     " tmuxline
-    NeoBundle 'edkolev/tmuxline.vim'
+    " NeoBundle 'edkolev/tmuxline.vim'
     " delimitor
     NeoBundle 'Raimondi/delimitMate'
     " local vimrc
