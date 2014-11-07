@@ -447,5 +447,9 @@
   " dash
   nmap <silent> <leader>d <Plug>DashSearch
 
+  " tmux
+  let g:airline#extensions#tmuxline#enabled = 0
+  " let g:tmuxline_theme = 'vim_statusline_1'
+
   " check for updates
   NeoBundleCheck
