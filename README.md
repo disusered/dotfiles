@@ -15,14 +15,17 @@
 - Configure iTerm
   ![iTerm2 Configuration](https://raw.githubusercontent.com/disusered/dotfiles/docs/images/iterm.png "iTerm2 Configuration")
 
+
 - Install dependencies
-    ```bash
-    brew install ag ack tree git-flow node ruby tmux zsh httpie \
-    reattach-to-user-namespace zsh-history-substring-search \
-    macvim --with-cscope --with-lua --override-system-vim
-    brew link macvim && brew linkapps
-    npm install -g jshint
-    ```
+  - Install eclim
+  - Install packages:
+      ```bash
+      brew install ag ack tree git-flow node ruby tmux zsh httpie \
+      reattach-to-user-namespace zsh-history-substring-search \
+      macvim --with-cscope --with-lua --override-system-vim
+      brew link macvim && brew linkapps
+      npm install -g jshint
+      ```
 
 - Symlink configs
     ```bash
