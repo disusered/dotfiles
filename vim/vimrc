@@ -455,6 +455,7 @@
   " eclim
   let g:airline#extensions#eclim#enabled = 1
   let g:EclimCompletionMethod = 'omnifunc'
+  let g:EclimJavascriptLintConf = '~/.dotfiles/vim/jslrc'
   let g:EclimJavascriptValidate = 0
   nmap <F6> :ProjectsTree<CR>
 
