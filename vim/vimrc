@@ -452,6 +452,8 @@
 
   " nerdtree
   map + :NERDTreeToggle<CR>
+  let NERDTreeShowHidden = 1
+  let NERDTreeIgnore = ['\.DS_Store', '\.git', '\.vagrant', 'node_modules']
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
   " goyo
