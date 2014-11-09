@@ -313,7 +313,7 @@
   au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
 
   " additional js extensions
-  au BufNewFile,BufRead {*.json,.jshintrc,.tern-project} set ft=json
+  au BufNewFile,BufRead {*.json,.jshintrc,.tern-project,.jscsrc} set ft=json
 
   " additional handlebars extensions
   au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache
