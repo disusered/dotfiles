@@ -304,23 +304,12 @@
   set nowb
   set noswapfile
 
-" syntax specific ==============================================================
-  " make
+" additional extensions ========================================================
   au FileType make set noexpandtab
-
-  " markdown
   autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-
-  " additional ruby extensions
   au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
-
-  " additional js extensions
   au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc} set ft=json
-
-  " additional git extensions
   au BufNewFile,BufRead {*gitconfig} set ft=gitconfig
-
-  " additional handlebars extensions
   au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache
 
 " plugin specific ==============================================================
