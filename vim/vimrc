@@ -97,72 +97,38 @@
                 \   'mac': './install.sh'
                 \ }
                 \}
-
     " ruby
     NeoBundleLazy 'vim-ruby/vim-ruby', {
                 \ 'depends': [
+                \   'tpope/vim-rails',
+                \   'tpope/vim-bundler',
+                \   'tpope/vim-projectionist',
+                \   'tpope/vim-endwise',
+                \   'mattn/emmet-vim'
                 \ ],
                 \ 'autoload': {
                 \   'filetypes': ['ruby', 'eruby']
                 \ },
                 \}
-
-    NeoBundleLazy 'tpope/vim-rails', {
-                \ 'depends': [
-                \ ],
-                \ 'autoload': {
-                \   'filetypes': ['ruby', 'eruby']
-                \ },
-                \}
-
-
-    NeoBundleLazy 'tpope/vim-endwise', {
-                \ 'depends': [
-                \ ],
-                \ 'autoload': {
-                \   'filetypes': ['ruby', 'eruby']
-                \ },
-                \}
-
-    NeoBundleLazy 'tpope/vim-bundler', {
-                \ 'depends': [
-                \     'tpope/vim-projectionist',
-                \ ],
-                \ 'autoload': {
-                \   'filetypes': ['ruby', 'eruby']
-                \ },
-                \}
-
     " coffeescript
     au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
     NeoBundleLazy 'kchmck/vim-coffee-script', {
+                \ 'depends': [
+                \   'othree/javascript-libraries-syntax.vim',
+                \ ],
                 \ 'autoload': {
                 \   'filetypes': ['coffee']
                 \ },
                 \}
-
-
     " javascript
-    NeoBundle 'moll/vim-node'
-    NeoBundleLazy 'othree/yajs.vim', {
-                \ 'autoload': {
-                \   'filetypes': ['javascript']
-                \ },
-                \}
-
-    NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {
-                \ 'autoload': {
-                \   'filetypes': ['javascript', 'coffee', 'typescript']
-                \ },
-                \}
-
-    NeoBundleLazy 'heavenshell/vim-jsdoc', {
-                \ 'autoload': {
-                \   'filetypes': ['javascript']
-                \ },
-                \}
-
     NeoBundleLazy 'marijnh/tern_for_vim', {
+                \ 'depends': [
+                \   'othree/javascript-libraries-syntax.vim',
+                \   'heavenshell/vim-jsdoc',
+                \   'moll/vim-node',
+                \   'mattn/emmet-vim',
+                \   'othree/yajs.vim'
+                \ ],
                 \ 'autoload': {
                 \   'filetypes': ['javascript']
                 \ },
@@ -171,22 +137,26 @@
                 \    'mac' : 'npm install'
                 \ },
                 \}
-
-    " emmet
+    " html
     NeoBundleLazy 'mattn/emmet-vim', {
                 \ 'autoload': {
-                \   'filetypes': ['javascript', 'html', 'css', 'eruby']
+                \   'filetypes': ['html']
                 \ },
                 \}
-
+    " css
     NeoBundleLazy 'csscomb/vim-csscomb', {
+                \ 'depends': [
+                \   'mattn/emmet-vim'
+                \ ],
                 \ 'autoload': {
                 \   'filetypes': ['css', 'scss']
                 \ },
                 \}
-
     " markdown
     NeoBundleLazy 'itspriddle/vim-marked', {
+                \ 'depends': [
+                \   'mattn/emmet-vim'
+                \ ],
                 \ 'autoload': {
                 \   'filetypes': ['markdown', 'ghmarkdown']
                 \ },
