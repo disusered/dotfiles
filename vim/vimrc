@@ -429,7 +429,7 @@
 
   " bindings
   nnoremap <leader>p :CtrlP<CR>
-  nnoremap <leader>t :CtrlPBuffer<CR>
+  nnoremap <leader>b :CtrlPBuffer<CR>
   nnoremap <leader>o :CtrlPFunky<CR>
 
   " tagbar
