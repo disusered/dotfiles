@@ -80,6 +80,12 @@
     NeoBundle 'rizzatti/dash.vim'
     " docker
     NeoBundle 'honza/dockerfile.vim'
+    " notes
+    NeoBundle 'xolox/vim-notes', {
+                \ 'depends': [
+                \     'xolox/vim-misc',
+                \ ]
+                \}
     " autocomplete
     NeoBundle 'Valloric/YouCompleteMe', {
                 \ 'build': {
@@ -458,6 +464,10 @@
   let g:EclimJavascriptLintConf = '~/.dotfiles/vim/jslrc'
   let g:EclimJavascriptValidate = 0
   nmap <F6> :ProjectsTree<CR>
+
+  " notes
+  let g:notes_directories = ['~/Dropbox/Notes']
+  let g:notes_tagsindex = '~/.dotfiles/vim/note_tags'
 
   " check for updates
   NeoBundleCheck
