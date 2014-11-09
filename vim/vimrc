@@ -327,8 +327,6 @@
   " easymotion
   let g:EasyMotion_smartcase = 1
   nmap <Space> <Plug>(easymotion-bd-t2)
-  map  / <Plug>(easymotion-sn)
-  omap / <Plug>(easymotion-tn)
 
   " commentary
   nmap <Leader>/ gcc
