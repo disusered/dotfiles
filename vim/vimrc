@@ -432,6 +432,7 @@
   nnoremap <leader>p :CtrlP<CR>
   nnoremap <leader>b :CtrlPBuffer<CR>
   nnoremap <leader>o :CtrlPFunky<CR>
+  nnoremap <leader>n :RecentNotes<CR>
   nnoremap - :TagbarToggle<CR>
   nnoremap + :NERDTreeToggle<CR>
   nnoremap = :ProjectsTree<CR>
