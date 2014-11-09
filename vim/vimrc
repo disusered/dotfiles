@@ -4,99 +4,50 @@
 
   set runtimepath+=~/.dotfiles/vendor/neobundle.vim/
   call neobundle#begin(expand('~/.dotfiles/vendor/bundles.vim/'))
-
   let g:neobundle#install_process_timeout = 600
-
-  " yo dawg
   NeoBundleFetch 'Shougo/neobundle.vim'
-  " bundles
-    " base16 colorschemes
     NeoBundle 'chriskempson/base16-vim'
-    " easymotion
-    NeoBundle 'Lokaltog/vim-easymotion'
-    " gundo
-    NeoBundle 'sjl/gundo.vim'
-    " supertab
-    NeoBundle 'ervandew/supertab'
-    " dispatch
-    NeoBundle 'tpope/vim-dispatch'
-    " syntastic
-    NeoBundle 'scrooloose/syntastic'
-    " nerdtree
-    NeoBundle 'scrooloose/nerdtree'
-    " surround
-    NeoBundle 'tpope/vim-surround'
-    " speeddating
-    NeoBundle 'tpope/vim-speeddating'
-    " abolish
-    NeoBundle 'tpope/vim-abolish'
-    " easy-align
-    NeoBundle 'junegunn/vim-easy-align'
-    " commentary
-    NeoBundle 'tpope/vim-commentary'
-    " unimpaired
-    NeoBundle 'tpope/vim-unimpaired'
-    " airline
-    NeoBundle 'bling/vim-airline'
-    " repeat
-    NeoBundle 'tpope/vim-repeat'
-    " fugitive
-    NeoBundle 'tpope/vim-fugitive'
-    " rhubarb
-    NeoBundle 'tpope/vim-rhubarb'
-    " gitv
-    NeoBundle 'gregsexton/gitv'
-    " gitgutter
-    NeoBundle 'airblade/vim-gitgutter'
-    " editorconfig
-    NeoBundle 'editorconfig/editorconfig-vim'
-    " tagbar
-    NeoBundle 'majutsushi/tagbar'
-    " tmuxline
-    " NeoBundle 'edkolev/tmuxline.vim'
-    " delimitor
-    NeoBundle 'Raimondi/delimitMate'
-    " local vimrc
-    NeoBundle 'MarcWeber/vim-addon-local-vimrc'
-    " json
-    NeoBundle 'elzr/vim-json'
-    " handlebars
-    NeoBundle 'mustache/vim-mustache-handlebars'
-    " tmux nav
-    NeoBundle 'christoomey/vim-tmux-navigator'
-    " vim slime
-    NeoBundle 'jpalardy/vim-slime'
-    " ultisnips
-    NeoBundle 'SirVer/ultisnips'
-    " togglecursor
-    NeoBundle 'jszakmeister/vim-togglecursor'
-    " ctrlp
     NeoBundle 'kien/ctrlp.vim'
     NeoBundle 'FelikZ/ctrlp-py-matcher'
     NeoBundle 'tacahiroy/ctrlp-funky'
-    " narrow region
-    NeoBundle 'chrisbra/NrrwRgn'
-    " goyo
+    NeoBundle 'bling/vim-airline'
+    NeoBundle 'majutsushi/tagbar'
+    NeoBundle 'scrooloose/nerdtree'
+    NeoBundle 'scrooloose/syntastic'
+    NeoBundle 'sjl/gundo.vim'
+    NeoBundle 'tpope/vim-unimpaired'
+    NeoBundle 'tpope/vim-dispatch'
+    NeoBundle 'tpope/vim-fugitive'
+    NeoBundle 'tpope/vim-rhubarb'
+    NeoBundle 'gregsexton/gitv'
+    NeoBundle 'airblade/vim-gitgutter'
+    NeoBundle 'editorconfig/editorconfig-vim'
+    NeoBundle 'MarcWeber/vim-addon-local-vimrc'
+    NeoBundle 'jpalardy/vim-slime'
+    " NeoBundle 'edkolev/tmuxline.vim'
+    NeoBundle 'christoomey/vim-tmux-navigator'
+    NeoBundle 'SirVer/ultisnips'
+    NeoBundle 'jszakmeister/vim-togglecursor'
     NeoBundle 'junegunn/goyo.vim'
-    " markdown
-    NeoBundle 'gabrielelana/vim-markdown'
-    " dash
     NeoBundle 'rizzatti/dash.vim'
+    NeoBundle 'xolox/vim-notes', {'depends': ['xolox/vim-misc']}
+    NeoBundle 'Lokaltog/vim-easymotion'
+    NeoBundle 'ervandew/supertab'
+    NeoBundle 'tpope/vim-surround'
+    NeoBundle 'tpope/vim-speeddating'
+    NeoBundle 'tpope/vim-abolish'
+    NeoBundle 'tpope/vim-commentary'
+    NeoBundle 'tpope/vim-repeat'
+    NeoBundle 'junegunn/vim-easy-align'
+    NeoBundle 'Raimondi/delimitMate'
+    NeoBundle 'chrisbra/NrrwRgn'
+    NeoBundle 'Valloric/YouCompleteMe', {'build': {'mac': './install.sh'}}
+
+" conditional===================================================================
+    " json
+    NeoBundleLazy 'elzr/vim-json', {'autoload': {'filetypes': ['json']}}
     " docker
-    NeoBundle 'honza/dockerfile.vim'
-    " notes
-    NeoBundle 'xolox/vim-notes', {
-                \ 'depends': [
-                \     'xolox/vim-misc',
-                \ ]
-                \}
-    " autocomplete
-    NeoBundle 'Valloric/YouCompleteMe', {
-                \ 'build': {
-                \   'unix': './install.sh',
-                \   'mac': './install.sh'
-                \ }
-                \}
+    NeoBundleLazy 'honza/dockerfile.vim', {'autoload': {'filetypes': ['dockerfile']}}
     " ruby
     NeoBundleLazy 'vim-ruby/vim-ruby', {
                 \ 'depends': [
@@ -106,19 +57,11 @@
                 \   'tpope/vim-endwise',
                 \   'mattn/emmet-vim'
                 \ ],
-                \ 'autoload': {
-                \   'filetypes': ['ruby', 'eruby']
-                \ },
-                \}
+                \ 'autoload': {'filetypes': ['ruby', 'eruby']}}
     " coffeescript
-    au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
     NeoBundleLazy 'kchmck/vim-coffee-script', {
-                \ 'depends': [
-                \   'othree/javascript-libraries-syntax.vim',
-                \ ],
-                \ 'autoload': {
-                \   'filetypes': ['coffee']
-                \ },
+                \ 'depends': ['othree/javascript-libraries-syntax.vim',],
+                \ 'autoload': {'filetypes': ['coffee']},
                 \}
     " javascript
     NeoBundleLazy 'marijnh/tern_for_vim', {
@@ -129,39 +72,21 @@
                 \   'mattn/emmet-vim',
                 \   'othree/yajs.vim'
                 \ ],
-                \ 'autoload': {
-                \   'filetypes': ['javascript']
-                \ },
-                \ 'build' : {
-                \    'unix' : 'npm install',
-                \    'mac' : 'npm install'
-                \ },
+                \ 'autoload': {'filetypes': ['javascript']},
+                \ 'build' : {'mac' : 'npm install'}
                 \}
     " html
-    NeoBundleLazy 'mattn/emmet-vim', {
-                \ 'autoload': {
-                \   'filetypes': ['html']
-                \ },
-                \}
+    NeoBundleLazy 'mattn/emmet-vim', {'autoload': {'filetypes': ['html']}}
     " css
     NeoBundleLazy 'csscomb/vim-csscomb', {
-                \ 'depends': [
-                \   'mattn/emmet-vim'
-                \ ],
-                \ 'autoload': {
-                \   'filetypes': ['css', 'scss']
-                \ },
+                \ 'depends': ['mattn/emmet-vim'],
+                \ 'autoload': {'filetypes': ['css', 'scss']},
                 \}
     " markdown
     NeoBundleLazy 'itspriddle/vim-marked', {
-                \ 'depends': [
-                \   'mattn/emmet-vim'
-                \ ],
-                \ 'autoload': {
-                \   'filetypes': ['markdown', 'ghmarkdown']
-                \ },
+                \ 'depends': ['mattn/emmet-vim', 'gabrielelana/vim-markdown'],
+                \ 'autoload': {'filetypes': ['markdown', 'ghmarkdown']},
                 \ }
-
   call neobundle#end()
   filetype plugin indent on
   NeoBundleCheck
@@ -281,6 +206,8 @@
   au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc} set ft=json
   au BufNewFile,BufRead {*gitconfig} set ft=gitconfig
   au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache
+  au BufNewFile,BufRead {*Dockerfile} set filetype=dockerfile
+  au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
 
 " plugin settings ==============================================================
   " easymotion
