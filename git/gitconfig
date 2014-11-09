@@ -22,9 +22,30 @@
 	editor = vim
 	autocrlf = input
 [alias]
+	ack = grep --break --heading --line-number
 	l = !git log --graph --color --pretty=format:'%C(magenta bold)%h%C(reset) - %s %C(white bold)<%aN>%C(reset) %C(blue bold)(%cr)%C(reset) %C(auto)%d%C(reset)' --abbrev-commit --date=relative --all
 	s = !git status --short --branch
-	ack = grep --break --heading --line-number
+  b = !git branch
+  bc = !git checkout -b
+  c = !git commit --verbose
+  ca = !git commit --verbose --amend
+  cm = !git commit --message
+  g = !git ack
+  a = !git add
+  p = !git push
+  pf = !git push --force
+  d = !git diff --no-ext-diff
+  dt = !git difftool
+  m = !git merge
+  mt = !git mergetool
+  f = !git fetch
+  fm = !git pull
+  co = !git checkout
+  st = !git stash
+  sl = !git stash list
+  ss = !git stash show -p
+  sa = !git stash apply
+
 [credential]
 	helper = osxkeychain
 [grep]
