@@ -460,9 +460,6 @@
   " dash
   nmap <silent> <leader>d <Plug>DashSearch
 
-  " tmux
-  " let g:tmuxline_theme = 'vim_statusline_1'
-
   " eclim
   let g:airline#extensions#eclim#enabled = 1
   let g:EclimCompletionMethod = 'omnifunc'
