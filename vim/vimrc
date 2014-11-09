@@ -437,10 +437,10 @@
   " tagbar
   let g:tagbar_left = 0
   let g:tagbar_sort = 0
-  nmap <F7> :TagbarToggle<CR>
+  nmap - :TagbarToggle<CR>
 
   " nerdtree
-  map <F5> :NERDTreeToggle<CR>
+  map + :NERDTreeToggle<CR>
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
   " goyo
@@ -467,14 +467,14 @@
   let g:EclimCompletionMethod = 'omnifunc'
   let g:EclimJavascriptLintConf = '~/.dotfiles/vim/jslrc'
   let g:EclimJavascriptValidate = 0
-  nmap <F6> :ProjectsTree<CR>
+  nmap = :ProjectsTree<CR>
 
   " notes
   let g:notes_directories = ['~/Dropbox/Notes']
   let g:notes_tagsindex = '~/.dotfiles/vim/note_tags'
 
   " gundo
-  nnoremap <F8> :GundoToggle<CR>
+  nnoremap _ :GundoToggle<CR>
   let g:gundo_right = 1
 
   " check for updates
