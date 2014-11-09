@@ -351,6 +351,10 @@
   endfunction
   map <silent> <Leader>l :w<CR>:SyntasticCheck<CR>:Errors<CR>
   let g:syntastic_html_checkers=['']
+  " multiple checkers
+  let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+  let g:syntastic_id_checkers = 1
+  let g:syntastic_aggregate_errors = 1
 
   " airline
   set laststatus=2
