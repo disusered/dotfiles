@@ -42,6 +42,8 @@
     NeoBundle 'tpope/vim-repeat'
     " fugitive
     NeoBundle 'tpope/vim-fugitive'
+    " rhubarb
+    NeoBundle 'tpope/vim-rhubarb'
     " gitv
     NeoBundle 'gregsexton/gitv'
     " gitgutter
