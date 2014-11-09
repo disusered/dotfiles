@@ -137,6 +137,9 @@
                 \ },
                 \}
 
+
+    " javascript
+    NeoBundle 'moll/vim-node'
     NeoBundleLazy 'othree/yajs.vim', {
                 \ 'autoload': {
                 \   'filetypes': ['javascript']
