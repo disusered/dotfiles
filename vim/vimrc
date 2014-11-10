@@ -198,12 +198,11 @@
   nnoremap    <Leader>gw     :Gwrite<CR><CR>
   nnoremap    <Leader>gl     :Gitv<CR>
   nnoremap    <Leader>gh     :Gitv!<CR>
-  nnoremap    <Leader>gp     :Ggrep<Space>
   nnoremap    <Leader>gm     :Gmove<Space>
   nnoremap    <Leader>gb     :Git branch<Space>
-  nnoremap    <Leader>go     :Git checkout<Space>
-  nnoremap    <Leader>gps    :Dispatch! git push<CR>
-  nnoremap    <Leader>gpl    :Dispatch! git pull<CR>
+  nnoremap    <Leader>gco    :Git checkout<Space>
+  nnoremap    <Leader>gp     :Dispatch! git push<CR>
+  nnoremap    <Leader>gfm    :Dispatch! git pull<CR>
   nnoremap    <leader>p      :CtrlP<CR>
   nnoremap    <leader>b      :CtrlPBuffer<CR>
   nnoremap    <leader>o      :CtrlPFunky<CR>
@@ -212,8 +211,8 @@
   nnoremap    +              :NERDTreeToggle<CR>
   nnoremap    =              :ProjectsTree<CR>
   nnoremap    _              :GundoToggle<CR>
-  nnoremap <silent> <Leader>rt :%s/\s\+$//e<CR>
-  nnoremap <silent> <Leader>h :nohlsearch<CR>
+  nnoremap    <Leader>rt     :%s/\s\+$//e<CR>
+  nnoremap    <Leader>h      :nohlsearch<CR>
 
 " plugin settings ==============================================================
   let g:EasyMotion_smartcase                          = 1
