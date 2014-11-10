@@ -5,6 +5,7 @@
   set runtimepath+=~/.dotfiles/vendor/neobundle.vim/
   call neobundle#begin(expand('~/.dotfiles/vendor/bundles.vim/'))
   let g:neobundle#install_process_timeout = 600
+
   NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'chriskempson/base16-vim'
     NeoBundle 'kien/ctrlp.vim'
@@ -44,11 +45,15 @@
     NeoBundle 'Valloric/YouCompleteMe', {'build': {'mac': './install.sh'}}
 
 " conditional===================================================================
-    " json
+    au BufRead,BufNewFile *.md set filetype=markdown
+    au BufNewFile,BufRead {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
+    au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc} set ft=json
+    au BufNewFile,BufRead {*gitconfig} set ft=gitconfig
+    au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache
+    au BufNewFile,BufRead {*Dockerfile} set filetype=dockerfile
+    au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
     NeoBundleLazy 'elzr/vim-json', {'autoload': {'filetypes': ['json']}}
-    " docker
     NeoBundleLazy 'honza/dockerfile.vim', {'autoload': {'filetypes': ['dockerfile']}}
-    " ruby
     NeoBundleLazy 'vim-ruby/vim-ruby', {
                 \ 'depends': [
                 \   'tpope/vim-rails',
@@ -58,12 +63,10 @@
                 \   'mattn/emmet-vim'
                 \ ],
                 \ 'autoload': {'filetypes': ['ruby', 'eruby']}}
-    " coffeescript
     NeoBundleLazy 'kchmck/vim-coffee-script', {
                 \ 'depends': ['othree/javascript-libraries-syntax.vim',],
                 \ 'autoload': {'filetypes': ['coffee']},
                 \}
-    " javascript
     NeoBundleLazy 'marijnh/tern_for_vim', {
                 \ 'depends': [
                 \   'othree/javascript-libraries-syntax.vim',
@@ -75,56 +78,31 @@
                 \ 'autoload': {'filetypes': ['javascript']},
                 \ 'build' : {'mac' : 'npm install'}
                 \}
-    " html
     NeoBundleLazy 'mattn/emmet-vim', {'autoload': {'filetypes': ['html']}}
-    " css
     NeoBundleLazy 'csscomb/vim-csscomb', {
                 \ 'depends': ['mattn/emmet-vim'],
                 \ 'autoload': {'filetypes': ['css', 'scss']},
                 \}
-    " markdown
     NeoBundleLazy 'itspriddle/vim-marked', {
                 \ 'depends': ['mattn/emmet-vim', 'gabrielelana/vim-markdown'],
                 \ 'autoload': {'filetypes': ['markdown', 'ghmarkdown']},
                 \ }
+
   call neobundle#end()
   filetype plugin indent on
   NeoBundleCheck
 
-" etc ==========================================================================
-  " set encoding
-  set encoding=utf-8
-
-  " remap leader key
+" settings =====================================================================
   let mapleader = ","
 
-  " enable mouse
+  set encoding=utf-8
+  set laststatus=2
   set mouse=a
   set ttymouse=xterm2
-
-  " disable ex
-  nnoremap Q <nop>
-
-  " close
-  nnoremap <leader>q :bp\|bd #<CR>
-
-  " use unix as the standard file type
   set ffs=unix,dos,mac
-
-  " enable system clipboard
   set clipboard=unnamed
-
-  " enable filetype plugins
-  filetype plugin on
-  filetype indent on
-
-  " set to auto read when a file is changed from the outside
   set autoread
-
-  " enable bg buffers
   set hidden
-
-  " text editor
   set ruler
   set number
   set title
@@ -133,8 +111,6 @@
   set nowrap
   set colorcolumn=80
   set nofoldenable
-
-  " whitespace
   set tabstop=2
   set shiftwidth=2
   set softtabstop=2
@@ -142,76 +118,40 @@
   set autoindent
   set copyindent
   set pastetoggle=<F2>
-
-  " whitespace characters
-  " set listchars=trail:␣,tab:⇥ᐧ,nbsp:⍽,eol:¶,extends:▸,precedes:◂
   set list
   set listchars=trail:·,tab:⇥ᐧ
-
-  " remove trailing whitespace
-  nnoremap <silent> <Leader>rt :%s/\s\+$//e<CR>
-
-  " switch off current search
-  nnoremap <silent> <Leader>h :nohlsearch<CR>
-
-  " bubble single lines
-  nmap ˚ [e
-  nmap ∆ ]e
-
-  " bubble multiple lines
-  vmap ˚ [egv
-  vmap ∆ ]egv
-
-  " close window
-  map <silent> <F4> :bw<CR>
-
-  " file explorer
-  let g:netrw_liststyle = 3
-
-  " colors
-  syntax enable
-
-  " base16-shell 256 color
-  let base16colorspace=256
-  colorscheme base16-tomorrow
-
-  set background=dark
-
-  " fully collapse vertical splits
+  " set listchars=trail:␣,tab:⇥ᐧ,nbsp:⍽,eol:¶,extends:▸,precedes:◂
   set wmh=0
-
-  " search
+  set background=dark
   set hlsearch
   set incsearch
   set ignorecase
   set smartcase
-
-  " ignore compiled files
-  set wildignore=*.o,*~,*.pyc
-  if has("win16") || has("win32")
-      set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
-  else
-      set wildignore+=.git\*,.hg\*,.svn\*
-  endif
-
-  " turn backup off
+  set wildignore+=.git\*,.hg\*,.svn\*
   set nobackup
   set nowb
   set noswapfile
 
-" additional extensions ========================================================
-  au FileType make set noexpandtab
-  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-  au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
-  au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc} set ft=json
-  au BufNewFile,BufRead {*gitconfig} set ft=gitconfig
-  au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache
-  au BufNewFile,BufRead {*Dockerfile} set filetype=dockerfile
-  au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
+  filetype plugin on
+  filetype indent on
+  syntax enable
+  let base16colorspace=256
+  colorscheme base16-tomorrow
 
-" plugin settings ==============================================================
-  " easymotion
-  let g:EasyMotion_smartcase = 1
+  au FileType make set noexpandtab
+  au FileType gitconfig set noexpandtab
+
+" plugin functions =============================================================
+  " nerdtree
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+  " goyo
+  function! GoyoBefore()
+    set wrap
+  endfunction
+  function! GoyoAfter()
+    set nowrap
+  endfunction
 
   " syntastic
   function s:find_jshintrc(dir)
@@ -231,139 +171,105 @@
     let g:syntastic_javascript_jshint_conf = l:jshintrc
     let g:syntastic_javascript_jshint_args = '--config ' + l:jshintrc
   endfunction
-  map <silent> <Leader>l :w<CR>:SyntasticCheck<CR>:Errors<CR>
-  let g:syntastic_html_checkers=['']
-  let g:syntastic_javascript_checkers = ['jshint', 'jscs']
-  let g:syntastic_id_checkers = 1
-  let g:syntastic_aggregate_errors = 1
-  let g:syntastic_error_symbol = '✕'
-  let g:syntastic_warning_symbol = '▵'
-  let g:syntastic_style_error_symbol = '✕'
-  let g:syntastic_style_warning_symbol = '▵'
-  highlight SyntasticErrorSign ctermfg=1 ctermbg=18 guifg=#cc6666 guibg=#282a2e
-
-  " airline
-  set laststatus=2
-  let g:airline_powerline_fonts = 1
-  let g:airline#extensions#tabline#enabled = 1
-  let g:airline#extensions#tabline#show_buffers = 1
-  let g:airline#extensions#tabline#buffer_nr_show = 0
-  let g:airline#extensions#tmuxline#enabled = 0
-
-  " local vimrc
-  let g:local_vimrc = {'names':['.local-vimrc'],'hash_fun':'LVRHashOfFile'}
-
-  " delimit
-  let g:delimitMate_expand_cr = 1
-
-  " json
-  let g:vim_json_syntax_conceal = 0
-
-  " tern
-  let g:tern_show_argument_hints='no'
-  let g:tern_show_signature_in_pum = 1
-
-  " youcompleteme
-  let g:ycm_autoclose_preview_window_after_completion = 1
-  let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-  let g:ycm_enable_diagnostic_signs = 0
-
-  " jsdoc
-  let g:jsdoc_default_mapping = 0
-  let g:jsdoc_allow_input_prompt = 1
-
-  " slime
-  let g:slime_target = "tmux"
-  let g:slime_paste_file = tempname()
-  let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
-
-  " ultisnips
-  " make ycm compatible with ultisnips (using supertab)
-  let g:ycm_key_list_select_completion = ['<c-n>', '<down>']
-  let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-  let g:SuperTabDefaultCompletionType = '<C-n>'
-  " better key bindings for ultisnipsexpandtrigger
-  let g:UltiSnipsExpandTrigger = "<tab>"
-  let g:UltiSnipsJumpForwardTrigger = "<tab>"
-  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
-  " ctrlp
-  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-  let g:ctrlp_clear_cache_on_exit = 0
-  let g:ctrlp_max_files = 0
-  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden -g ""'
-  let g:ctrlp_extensions = ['funky']
-
-  " tagbar
-  let g:tagbar_left = 0
-  let g:tagbar_sort = 0
-
-  " nerdtree
-  let NERDTreeShowHidden = 1
-  let NERDTreeIgnore = ['\.DS_Store', '\.git', '\.vagrant', 'node_modules']
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-  " goyo
-  nnoremap <silent> <Leader>dfm :Goyo<CR>
-  function! GoyoBefore()
-    set wrap
-  endfunction
-  function! GoyoAfter()
-    set nowrap
-  endfunction
-  let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
-
-  " ruby
-  let g:rubycomplete_buffer_loading = 1
-  let g:rubycomplete_classes_in_global = 1
-  let g:rubycomplete_rails = 1
-  let g:rubycomplete_use_bundler = 1
-
-  " eclim
-  let g:airline#extensions#eclim#enabled = 1
-  let g:EclimCompletionMethod = 'omnifunc'
-  let g:EclimJavascriptLintConf = '~/.dotfiles/vim/jslrc'
-  let g:EclimJavascriptValidate = 0
-
-  " notes
-  let g:notes_directories = ['~/Dropbox/Notes']
-  let g:notes_tagsindex = '~/.dotfiles/vim/note_tags'
-  let g:notes_smart_quotes = 0
-
-  " gundo
-  let g:gundo_right = 1
 
 " plugin mappings ==============================================================
-  nmap <Space> <Plug>(easymotion-bd-t2)
-  nmap <silent> <leader>d <Plug>DashSearch
-  nmap <Leader>/ gcc
-  vmap <Leader>/ gc
-  vmap <Enter> <Plug>(LiveEasyAlign)
-  nnoremap <silent> <Leader>md :MarkedOpen!<CR>
-  nnoremap <Leader>gs :Gstatus<CR>
-  nnoremap <Leader>ga :Gcommit --amend<CR>
-  nnoremap <Leader>gc :Gcommit -v -q<CR>
-  nnoremap <Leader>gt :Gcommit -v -q %:p<CR>
-  nnoremap <Leader>gd :Gdiff<CR>
-  nnoremap <Leader>gr :Gread<CR>
-  nnoremap <Leader>ge :Gedit<CR>
-  nnoremap <Leader>gw :Gwrite<CR><CR>
-  nnoremap <Leader>gl :Gitv<CR>
-  nnoremap <Leader>gh :Gitv!<CR>
-  nnoremap <Leader>gp :Ggrep<Space>
-  nnoremap <Leader>gm :Gmove<Space>
-  nnoremap <Leader>gb :Git branch<Space>
-  nnoremap <Leader>go :Git checkout<Space>
-  nnoremap <Leader>gps :Dispatch! git push<CR>
-  nnoremap <Leader>gpl :Dispatch! git pull<CR>
-  nnoremap <leader>p :CtrlP<CR>
-  nnoremap <leader>b :CtrlPBuffer<CR>
-  nnoremap <leader>o :CtrlPFunky<CR>
-  nnoremap <leader>n :RecentNotes<CR>
-  nnoremap - :TagbarToggle<CR>
-  nnoremap + :NERDTreeToggle<CR>
-  nnoremap = :ProjectsTree<CR>
-  nnoremap _ :GundoToggle<CR>
+  nmap        <Space>        <Plug>(easymotion-bd-t2)
+  nmap        <silent>       <leader>d <Plug>DashSearch
+  nmap        <Leader>/      gcc
+  nmap        ˚              [e
+  nmap        ∆              ]e
+  vmap        ˚              [egv
+  vmap        ∆              ]egv
+  vmap        <Leader>/      gc
+  vmap        <Enter>        <Plug>(LiveEasyAlign)
+  nnoremap    Q              <nop>
+  nnoremap    <leader>q      :bp\|bd #<CR>
+  nnoremap    <silent>       <Leader>l :w<CR>:SyntasticCheck<CR>:Errors<CR>
+  nnoremap    <silent>       <Leader>dfm :Goyo<CR>
+  nnoremap    <silent>       <Leader>md :MarkedOpen!<CR>
+  nnoremap    <Leader>gs     :Gstatus<CR>
+  nnoremap    <Leader>ga     :Gcommit --amend<CR>
+  nnoremap    <Leader>gc     :Gcommit -v -q<CR>
+  nnoremap    <Leader>gt     :Gcommit -v -q %:p<CR>
+  nnoremap    <Leader>gd     :Gdiff<CR>
+  nnoremap    <Leader>gr     :Gread<CR>
+  nnoremap    <Leader>ge     :Gedit<CR>
+  nnoremap    <Leader>gw     :Gwrite<CR><CR>
+  nnoremap    <Leader>gl     :Gitv<CR>
+  nnoremap    <Leader>gh     :Gitv!<CR>
+  nnoremap    <Leader>gp     :Ggrep<Space>
+  nnoremap    <Leader>gm     :Gmove<Space>
+  nnoremap    <Leader>gb     :Git branch<Space>
+  nnoremap    <Leader>go     :Git checkout<Space>
+  nnoremap    <Leader>gps    :Dispatch! git push<CR>
+  nnoremap    <Leader>gpl    :Dispatch! git pull<CR>
+  nnoremap    <leader>p      :CtrlP<CR>
+  nnoremap    <leader>b      :CtrlPBuffer<CR>
+  nnoremap    <leader>o      :CtrlPFunky<CR>
+  nnoremap    <leader>n      :RecentNotes<CR>
+  nnoremap    -              :TagbarToggle<CR>
+  nnoremap    +              :NERDTreeToggle<CR>
+  nnoremap    =              :ProjectsTree<CR>
+  nnoremap    _              :GundoToggle<CR>
+  nnoremap <silent> <Leader>rt :%s/\s\+$//e<CR>
+  nnoremap <silent> <Leader>h :nohlsearch<CR>
 
-  " check for updates
-  NeoBundleCheck
+" plugin settings ==============================================================
+  let g:EasyMotion_smartcase                          = 1
+  let g:syntastic_html_checkers                       = ['']
+  let g:syntastic_javascript_checkers                 = ['jshint', 'jscs']
+  let g:syntastic_id_checkers                         = 1
+  let g:syntastic_aggregate_errors                    = 1
+  let g:syntastic_error_symbol                        = '✕'
+  let g:syntastic_warning_symbol                      = '▵'
+  let g:syntastic_style_error_symbol                  = '✕'
+  let g:syntastic_style_warning_symbol                = '▵'
+  let g:airline_powerline_fonts                       = 1
+  let g:airline#extensions#tabline#enabled            = 1
+  let g:airline#extensions#tabline#show_buffers       = 1
+  let g:airline#extensions#tabline#buffer_nr_show     = 0
+  let g:airline#extensions#tmuxline#enabled           = 0
+  let g:local_vimrc                                   = {'names':['.local-vimrc'],'hash_fun':'LVRHashOfFile'}
+  let g:delimitMate_expand_cr                         = 1
+  let g:vim_json_syntax_conceal                       = 0
+  let g:tern_show_argument_hints                      = 'no'
+  let g:tern_show_signature_in_pum                    = 1
+  let g:ycm_autoclose_preview_window_after_completion = 1
+  let g:ycm_global_ycm_extra_conf                     = '~/.vim/.ycm_extra_conf.py'
+  let g:ycm_enable_diagnostic_signs                   = 0
+  let g:jsdoc_default_mapping                         = 0
+  let g:jsdoc_allow_input_prompt                      = 1
+  let g:slime_target                                  = "tmux"
+  let g:slime_paste_file                              = tempname()
+  let g:slime_default_config                          = {"socket_name": "default", "target_pane": "1"}
+  let g:ycm_key_list_select_completion                = ['<c-n>', '<down>']
+  let g:ycm_key_list_previous_completion              = ['<C-p>', '<Up>']
+  let g:SuperTabDefaultCompletionType                 = '<C-n>'
+  let g:UltiSnipsExpandTrigger                        = "<tab>"
+  let g:UltiSnipsJumpForwardTrigger                   = "<tab>"
+  let g:UltiSnipsJumpBackwardTrigger                  = "<s-tab>"
+  let g:ctrlp_match_func                              = { 'match': 'pymatcher#PyMatch' }
+  let g:ctrlp_clear_cache_on_exit                     = 0
+  let g:ctrlp_max_files                               = 0
+  let g:ctrlp_user_command                            = 'ag %s -i --nocolor --nogroup --hidden -g ""'
+  let g:ctrlp_extensions                              = ['funky']
+  let g:tagbar_left                                   = 0
+  let g:tagbar_sort                                   = 0
+  let NERDTreeShowHidden                              = 1
+  let NERDTreeIgnore                                  = ['\.DS_Store', '\.git', '\.vagrant', 'node_modules']
+  let g:goyo_callbacks                                = [function('GoyoBefore'), function('GoyoAfter')]
+  let g:rubycomplete_buffer_loading                   = 1
+  let g:rubycomplete_classes_in_global                = 1
+  let g:rubycomplete_rails                            = 1
+  let g:rubycomplete_use_bundler                      = 1
+  let g:airline#extensions#eclim#enabled              = 1
+  let g:EclimCompletionMethod                         = 'omnifunc'
+  let g:EclimJavascriptLintConf                       = '~/.dotfiles/vim/jslrc'
+  let g:EclimJavascriptValidate                       = 0
+  let g:notes_directories                             = ['~/Dropbox/Notes']
+  let g:notes_tagsindex                               = '~/.dotfiles/vim/note_tags'
+  let g:notes_smart_quotes                            = 0
+  let g:gundo_right                                   = 1
+  let g:netrw_liststyle                               = 3
+
+  highlight SyntasticErrorSign ctermfg=1 ctermbg=18 guifg=#cc6666 guibg=#282a2e
