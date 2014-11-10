@@ -67,11 +67,12 @@
                 \ 'depends': ['othree/javascript-libraries-syntax.vim',],
                 \ 'autoload': {'filetypes': ['coffee']},
                 \}
+    NeoBundle 'moll/vim-node'
     NeoBundleLazy 'marijnh/tern_for_vim', {
                 \ 'depends': [
                 \   'othree/javascript-libraries-syntax.vim',
                 \   'heavenshell/vim-jsdoc',
-                \   'moll/vim-node',
+                \   'marijnh/tern_for_vim',
                 \   'mattn/emmet-vim',
                 \   'othree/yajs.vim'
                 \ ],
