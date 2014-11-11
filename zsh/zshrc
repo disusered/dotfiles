@@ -90,9 +90,6 @@ bindkey "^[[H" beginning-of-line    # fn ←
 bindkey "^[[F" end-of-line          # fn →
 bindkey "^[[3~" delete-char         # fn delete
 
-# rb-env
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 # Marks
 export MARKPATH=$HOME/.marks
 function jump {
