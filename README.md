@@ -25,7 +25,8 @@
       macvim --with-cscope --with-lua --override-system-vim \
       homebrew/binary/jsl ctags-exuberant \
       brew link macvim && brew linkapps
-      npm install -g jshint
+      \curl -sSL https://get.rvm.io | bash -s stable
+      npm install -g jshint jscs
       ```
 
 - Symlink configs
