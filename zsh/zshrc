@@ -128,5 +128,19 @@ if [ -f $HOME/.dotfiles/vendor/base16-shell/base16-$BASE16_SCHEME.dark.sh ]; the
   [[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
 fi
 
+# Adds node_modules/.bin to the PATH
+npm_chpwd_hook() {
+    if [ -n "${PRENPMPATH+x}" ]; then
+        PATH=$PRENPMPATH
+        unset PRENPMPATH
+    fi
+    if [ -f package.json ]; then
+        PRENPMPATH=$PATH
+        PATH=$(npm bin):$PATH
+    fi
+}
+
+add-zsh-hook preexec npm_chpwd_hook
+
 # RVM
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
