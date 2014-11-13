@@ -34,6 +34,7 @@
     ```bash
     ln -s .dotfiles/tmux/tmux.conf .tmux.conf
     ln -s $HOME/.dotfiles/vendor/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
+    ln -s $HOME/.dotfiles/zsh/site-functions/_git /usr/local/share/zsh/site-functions/
     ln -s .dotfiles/zsh/zshrc .zshrc
     ln -s .dotfiles/ag/agignore .agignore
     ln -s .dotfiles/ack/ackrc .ackrc
