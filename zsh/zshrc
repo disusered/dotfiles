@@ -4,9 +4,6 @@ fpath=(
   $fpath
 )
 
-# Vi mode
-bindkey -v
-
 # Autoload modules
 autoload -U compinit && compinit
 autoload -U promptinit && promptinit
