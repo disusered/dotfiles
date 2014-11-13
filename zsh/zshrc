@@ -50,7 +50,7 @@ alias c='clear'
 alias ls='ls -G'
 alias ag='ag --pager "less -R" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34'
 alias http='http --style vim'
-
+alias n='cd $HOME/Dropbox/Notes && vim .'
 alias g='git'
 alias gl='g l'
 alias gs='g s'
