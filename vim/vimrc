@@ -5,42 +5,42 @@
   call plug#begin('~/.dotfiles/vendor/plugged')
 
   Plug 'chriskempson/base16-vim'
-  Plug 'kien/ctrlp.vim'
-  Plug 'FelikZ/ctrlp-py-matcher'
-  Plug 'tacahiroy/ctrlp-funky'
-  Plug 'bling/vim-airline'
-  Plug 'majutsushi/tagbar'
-  Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/syntastic'
-  Plug 'sjl/gundo.vim'
-  Plug 'tpope/vim-unimpaired'
-  Plug 'tpope/vim-dispatch'
-  Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-rhubarb'
-  Plug 'gregsexton/gitv'
   Plug 'airblade/vim-gitgutter'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'MarcWeber/vim-addon-local-vimrc'
-  Plug 'jpalardy/vim-slime'
-  Plug 'edkolev/tmuxline.vim'
   Plug 'christoomey/vim-tmux-navigator'
+  Plug 'kien/ctrlp.vim'
+  Plug 'FelikZ/ctrlp-py-matcher'
+  Plug 'tpope/vim-unimpaired'
+  Plug 'jpalardy/vim-slime'
+  " Plug 'edkolev/tmuxline.vim'
   Plug 'SirVer/ultisnips'
   Plug 'jszakmeister/vim-togglecursor'
-  Plug 'junegunn/goyo.vim'
-  Plug 'rizzatti/dash.vim'
-  Plug 'xolox/vim-notes'
   Plug 'xolox/vim-misc'
-  Plug 'Lokaltog/vim-easymotion'
   Plug 'ervandew/supertab'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-speeddating'
   Plug 'tpope/vim-abolish'
-  Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-repeat'
-  Plug 'junegunn/vim-easy-align'
   Plug 'Raimondi/delimitMate'
-  Plug 'chrisbra/NrrwRgn'
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+  Plug 'junegunn/vim-easy-align'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-dispatch'
+  Plug 'justinmk/vim-gtfo'
+  Plug 'itchyny/lightline.vim'
+  Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
+  Plug 'tpope/vim-commentary',    { 'on': ['<Plug>Commentary', '<Plug>CommentaryLine'] }
+  Plug 'Lokaltog/vim-easymotion', { 'on': '<Plug>(easymotion-bd-t2)'}
+  Plug 'tpope/vim-rhubarb',       { 'on': 'Gcommit' }
+  Plug 'xolox/vim-notes',         { 'on': ['Note', 'RecentNotes']}
+  Plug 'rizzatti/dash.vim',       { 'on': '<Plug>DashSearch' }
+  Plug 'chrisbra/NrrwRgn',        { 'on': ['NarrowRegion', 'NarrowWindow']}
+  Plug 'tacahiroy/ctrlp-funky',   { 'on': ['CtrlPFunky'] }
+  Plug 'majutsushi/tagbar',       { 'on':  'TagbarToggle' }
+  Plug 'scrooloose/nerdtree',     { 'on':  'NERDTreeToggle' }
+  Plug 'sjl/gundo.vim',           { 'on': 'GundoToggle' }
+  Plug 'gregsexton/gitv',         { 'on': 'Gitv' }
 
 " conditional===================================================================
   au BufRead,BufNewFile {*.md,*.markdown} set filetype=markdown
@@ -127,14 +127,6 @@
   " nerdtree
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-  " goyo
-  function! GoyoBefore()
-    set wrap
-  endfunction
-  function! GoyoAfter()
-    set nowrap
-  endfunction
-
   " syntastic
   function s:find_jshintrc(dir)
     let l:found = globpath(a:dir, '.jshintrc')
@@ -154,20 +146,107 @@
     let g:syntastic_javascript_jshint_args = '--config ' + l:jshintrc
   endfunction
 
+  function! MyModified()
+    if &filetype == "help"
+      return ""
+    elseif &modified
+      return "+"
+    elseif &modifiable
+      return ""
+    else
+      return ""
+    endif
+  endfunction
+
+  function! MyReadonly()
+    if &filetype == "help"
+      return ""
+    elseif &readonly
+      return ""
+    else
+      return ""
+    endif
+  endfunction
+
+  function! MyFugitive()
+    try
+      if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && exists('*fugitive#head')
+        let mark = ' '
+        let _ = fugitive#head()
+        return strlen(_) ? mark._ : ''
+      endif
+    catch
+    endtry
+    return ''
+  endfunction
+
+  function! MyFilename()
+    return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
+           \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+           \ ('' != MyModified() ? ' ' . MyModified() : '')
+  endfunction
+
+  function! CtrlPMark()
+    if expand('%:t') =~ 'ControlP'
+      call lightline#link('iR'[g:lightline.ctrlp_regex])
+      return lightline#concatenate([g:lightline.ctrlp_prev, g:lightline.ctrlp_item
+            \ , g:lightline.ctrlp_next], 0)
+    else
+      return ''
+    endif
+  endfunction
+
+  " lightline ctrlp
+  let g:ctrlp_status_func = {
+    \ 'main': 'CtrlPStatusFunc_1',
+    \ 'prog': 'CtrlPStatusFunc_2',
+    \ }
+  function! CtrlPStatusFunc_1(focus, byfname, regex, prev, item, next, marked)
+    let g:lightline.ctrlp_regex = a:regex
+    let g:lightline.ctrlp_prev = a:prev
+    let g:lightline.ctrlp_item = a:item
+    let g:lightline.ctrlp_next = a:next
+    return lightline#statusline(0)
+  endfunction
+  function! CtrlPStatusFunc_2(str)
+    return lightline#statusline(0)
+  endfunction
+
+  " lightline syntastic
+  augroup AutoSyntastic
+    autocmd!
+    autocmd BufWritePost *.js,*.ruby,*.sh call s:syntastic()
+  augroup END
+  function! s:syntastic()
+    SyntasticCheck
+    call lightline#update()
+  endfunction
+
+  function! MyFileformat()
+    return winwidth(0) > 70 ? &fileformat : ''
+  endfunction
+
+  function! MyFiletype()
+    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
+  endfunction
+
+  function! MyFileencoding()
+    return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
+  endfunction
+
 " plugin mappings ==============================================================
   nmap        <Space>        <Plug>(easymotion-bd-t2)
   nmap        <leader>d      <Plug>DashSearch
-  nmap        <Leader>/      gcc
+  nmap        <Leader>/      <Plug>CommentaryLine
+  vmap        <Leader>/      <Plug>Commentary
+  vmap        <Enter>        <Plug>(LiveEasyAlign)
   nmap        ˚              [e
   nmap        ∆              ]e
   vmap        ˚              [egv
   vmap        ∆              ]egv
-  vmap        <Leader>/      gc
-  vmap        <Enter>        <Plug>(LiveEasyAlign)
   nnoremap    Q              <nop>
   nnoremap    <leader>q      :bp\|bd #<CR>
   nnoremap    <Leader>l      :w<CR>:SyntasticCheck<CR>:Errors<CR>
-  nnoremap    <Leader>dfm    :Goyo<CR>
   nnoremap    <Leader>md     :MarkedOpen!<CR>
   nnoremap    <Leader>gs     :Gstatus<CR>
   nnoremap    <Leader>ga     :Gcommit --amend<CR>
@@ -190,7 +269,6 @@
   nnoremap    <leader>n      :RecentNotes<CR>
   nnoremap    -              :TagbarToggle<CR>
   nnoremap    +              :NERDTreeToggle<CR>
-  nnoremap    =              :ProjectsTree<CR>
   nnoremap    _              :GundoToggle<CR>
   nnoremap    <Leader>rt     :%s/\s\+$//e<CR>
   nnoremap    <Leader>h      :nohlsearch<CR>
@@ -238,7 +316,6 @@
   let g:tagbar_sort                                   = 0
   let NERDTreeShowHidden                              = 1
   let NERDTreeIgnore                                  = ['\.DS_Store', '\.git', '\.vagrant', 'node_modules']
-  let g:goyo_callbacks                                = [function('GoyoBefore'), function('GoyoAfter')]
   let g:rubycomplete_buffer_loading                   = 1
   let g:rubycomplete_classes_in_global                = 1
   let g:rubycomplete_rails                            = 1
@@ -252,5 +329,31 @@
   let g:notes_smart_quotes                            = 1
   let g:gundo_right                                   = 1
   let g:netrw_liststyle                               = 3
+  let g:tmuxline_powerline_separators                 = 1
+  let g:lightline                                     = {
+                                                      \ 'colorscheme': 'jellybeans',
+                                                      \ 'active': {
+                                                      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
+                                                      \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+                                                      \ },
+                                                      \ 'component_function': {
+                                                      \   'fugitive': 'MyFugitive',
+                                                      \   'filename': 'MyFilename',
+                                                      \   'fileformat': 'MyFileformat',
+                                                      \   'filetype': 'MyFiletype',
+                                                      \   'readonly': 'MyReadonly',
+                                                      \   'fileencoding': 'MyFileencoding',
+                                                      \   'ctrlpmark': 'CtrlPMark',
+                                                      \   'modified': 'MyModified',
+                                                      \ },
+                                                      \ 'component_expand': {
+                                                      \   'syntastic': 'SyntasticStatuslineFlag',
+                                                      \ },
+                                                      \ 'component_type': {
+                                                      \   'syntastic': 'error',
+                                                      \ },
+                                                      \   'separator': { 'left': '', 'right': '' },
+                                                      \   'subseparator': { 'left': '', 'right': '' }
+                                                      \ }
 
   highlight SyntasticErrorSign ctermfg=1 ctermbg=18 guifg=#cc6666 guibg=#282a2e
