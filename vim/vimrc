@@ -208,6 +208,15 @@
     return lightline#statusline(0)
   endfunction
 
+  " lightline syntastic
+  augroup AutoSyntastic
+    autocmd!
+    autocmd BufWritePost *.js,*.ruby,*.sh call s:syntastic()
+  augroup END
+  function! s:syntastic()
+    SyntasticCheck
+    call lightline#update()
+  endfunction
 " plugin mappings ==============================================================
   nmap        <Space>        <Plug>(easymotion-bd-t2)
   nmap        <leader>d      <Plug>DashSearch
@@ -315,6 +324,12 @@
                                                       \   'modified': 'MyModified',
                                                       \   'filename': 'MyFilename',
                                                       \   'ctrlpmark': 'CtrlPMark'
+                                                      \ },
+                                                      \ 'component_expand': {
+                                                      \   'syntastic': 'SyntasticStatuslineFlag',
+                                                      \ },
+                                                      \ 'component_type': {
+                                                      \   'syntastic': 'error',
                                                       \ },
                                                       \   'separator': { 'left': '', 'right': '' },
                                                       \   'subseparator': { 'left': '', 'right': '' }
