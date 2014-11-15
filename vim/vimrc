@@ -146,6 +146,32 @@
     let g:syntastic_javascript_jshint_args = '--config ' + l:jshintrc
   endfunction
 
+  function! MyFugitive()
+    return exists('*fugitive#head') ? fugitive#head() : ''
+  endfunction
+
+  function! MyModified()
+    if &filetype == "help"
+      return ""
+    elseif &modified
+      return "+"
+    elseif &modifiable
+      return ""
+    else
+      return ""
+    endif
+  endfunction
+
+  function! MyReadonly()
+    if &filetype == "help"
+      return ""
+    elseif &readonly
+      return "⭤"
+    else
+      return ""
+    endif
+  endfunction
+
 " plugin mappings ==============================================================
   nmap        <Space>        <Plug>(easymotion-bd-t2)
   nmap        <leader>d      <Plug>DashSearch
@@ -244,13 +270,14 @@
   let g:tmuxline_powerline_separators                 = 1
   let g:lightline                                     = {
                                                       \ 'colorscheme': 'jellybeans',
-                                                      \ 'component': {
-                                                      \   'readonly': '%{&filetype=="help"?"":&readonly?"":""}',
-                                                      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}'
+                                                      \ 'active': {
+                                                      \   'left': [ [ 'mode', 'paste' ],
+                                                      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
                                                       \ },
-                                                      \ 'component_visible_condition': {
-                                                      \   'readonly': '(&filetype!="help"&& &readonly)',
-                                                      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
+                                                      \ 'component_function': {
+                                                      \   'fugitive': 'MyFugitive',
+                                                      \   'readonly': 'MyReadonly',
+                                                      \   'modified': 'MyModified'
                                                       \ },
                                                       \   'separator': { 'left': '', 'right': '' },
                                                       \   'subseparator': { 'left': '', 'right': '' }
