@@ -27,6 +27,7 @@
   Plug 'junegunn/vim-easy-align'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-dispatch'
+  Plug 'justinmk/vim-gtfo'
   Plug 'tpope/vim-commentary',    { 'on': '<Plug>Commentary' }
   Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
   Plug 'Lokaltog/vim-easymotion', { 'on': '<Plug>(easymotion-bd-t2)'}
