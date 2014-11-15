@@ -169,10 +169,14 @@
   endfunction
 
   function! MyFugitive()
-    if exists("*fugitive#head")
-      let _ = fugitive#head()
-      return strlen(_) ? ' '._ : ''
-    endif
+    try
+      if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && exists('*fugitive#head')
+        let mark = ' '
+        let _ = fugitive#head()
+        return strlen(_) ? mark._ : ''
+      endif
+    catch
+    endtry
     return ''
   endfunction
 
