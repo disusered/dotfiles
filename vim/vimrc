@@ -1,98 +1,78 @@
-" NeoBundle =======================================================================
+" Plug =======================================================================
   set nocompatible
   filetype off
 
-  set runtimepath+=~/.dotfiles/vendor/neobundle.vim/
-  call neobundle#begin(expand('~/.dotfiles/vendor/bundles.vim/'))
-  let g:neobundle#install_process_timeout = 600
+  call plug#begin('~/.dotfiles/vendor/plugged')
 
-  NeoBundleFetch 'Shougo/neobundle.vim'
-    NeoBundle 'chriskempson/base16-vim'
-    NeoBundle 'kien/ctrlp.vim'
-    NeoBundle 'FelikZ/ctrlp-py-matcher'
-    NeoBundle 'tacahiroy/ctrlp-funky'
-    NeoBundle 'bling/vim-airline'
-    NeoBundle 'majutsushi/tagbar'
-    NeoBundle 'scrooloose/nerdtree'
-    NeoBundle 'scrooloose/syntastic'
-    NeoBundle 'sjl/gundo.vim'
-    NeoBundle 'tpope/vim-unimpaired'
-    NeoBundle 'tpope/vim-dispatch'
-    NeoBundle 'tpope/vim-fugitive'
-    NeoBundle 'tpope/vim-rhubarb'
-    NeoBundle 'gregsexton/gitv'
-    NeoBundle 'airblade/vim-gitgutter'
-    NeoBundle 'editorconfig/editorconfig-vim'
-    NeoBundle 'MarcWeber/vim-addon-local-vimrc'
-    NeoBundle 'jpalardy/vim-slime'
-    " NeoBundle 'edkolev/tmuxline.vim'
-    NeoBundle 'christoomey/vim-tmux-navigator'
-    NeoBundle 'SirVer/ultisnips'
-    NeoBundle 'jszakmeister/vim-togglecursor'
-    NeoBundle 'junegunn/goyo.vim'
-    NeoBundle 'rizzatti/dash.vim'
-    NeoBundle 'xolox/vim-notes', {'depends': ['xolox/vim-misc']}
-    NeoBundle 'Lokaltog/vim-easymotion'
-    NeoBundle 'ervandew/supertab'
-    NeoBundle 'tpope/vim-surround'
-    NeoBundle 'tpope/vim-speeddating'
-    NeoBundle 'tpope/vim-abolish'
-    NeoBundle 'tpope/vim-commentary'
-    NeoBundle 'tpope/vim-repeat'
-    NeoBundle 'junegunn/vim-easy-align'
-    NeoBundle 'Raimondi/delimitMate'
-    NeoBundle 'chrisbra/NrrwRgn'
-    NeoBundle 'Valloric/YouCompleteMe', {'build': {'mac': './install.sh'}}
+  Plug 'chriskempson/base16-vim'
+  Plug 'kien/ctrlp.vim'
+  Plug 'FelikZ/ctrlp-py-matcher'
+  Plug 'tacahiroy/ctrlp-funky'
+  Plug 'bling/vim-airline'
+  Plug 'majutsushi/tagbar'
+  Plug 'scrooloose/nerdtree'
+  Plug 'scrooloose/syntastic'
+  Plug 'sjl/gundo.vim'
+  Plug 'tpope/vim-unimpaired'
+  Plug 'tpope/vim-dispatch'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rhubarb'
+  Plug 'gregsexton/gitv'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'editorconfig/editorconfig-vim'
+  Plug 'MarcWeber/vim-addon-local-vimrc'
+  Plug 'jpalardy/vim-slime'
+  Plug 'edkolev/tmuxline.vim'
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'SirVer/ultisnips'
+  Plug 'jszakmeister/vim-togglecursor'
+  Plug 'junegunn/goyo.vim'
+  Plug 'rizzatti/dash.vim'
+  Plug 'xolox/vim-notes'
+  Plug 'xolox/vim-misc'
+  Plug 'Lokaltog/vim-easymotion'
+  Plug 'ervandew/supertab'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-speeddating'
+  Plug 'tpope/vim-abolish'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-repeat'
+  Plug 'junegunn/vim-easy-align'
+  Plug 'Raimondi/delimitMate'
+  Plug 'chrisbra/NrrwRgn'
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 
 " conditional===================================================================
-    au BufRead,BufNewFile {*.md,*.markdown} set filetype=markdown
-    au BufNewFile,BufRead {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
-    au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc} set ft=json
-    au BufNewFile,BufRead {*.es6} set ft=javascript
-    au BufNewFile,BufRead {*gitconfig} set ft=gitconfig
-    au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache
-    au BufNewFile,BufRead {*Dockerfile} set filetype=dockerfile
-    au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
-    NeoBundleLazy 'elzr/vim-json', {'autoload': {'filetypes': ['json']}}
-    NeoBundleLazy 'honza/dockerfile.vim', {'autoload': {'filetypes': ['dockerfile']}}
-    NeoBundleLazy 'vim-ruby/vim-ruby', {
-                \ 'depends': [
-                \   'tpope/vim-rails',
-                \   'tpope/vim-bundler',
-                \   'tpope/vim-projectionist',
-                \   'tpope/vim-endwise',
-                \   'mattn/emmet-vim'
-                \ ],
-                \ 'autoload': {'filetypes': ['ruby', 'eruby']}}
-    NeoBundleLazy 'kchmck/vim-coffee-script', {
-                \ 'depends': ['othree/javascript-libraries-syntax.vim',],
-                \ 'autoload': {'filetypes': ['coffee']},
-                \}
-    NeoBundle 'moll/vim-node'
-    NeoBundleLazy 'marijnh/tern_for_vim', {
-                \ 'depends': [
-                \   'othree/javascript-libraries-syntax.vim',
-                \   'heavenshell/vim-jsdoc',
-                \   'marijnh/tern_for_vim',
-                \   'mattn/emmet-vim',
-                \   'othree/yajs.vim'
-                \ ],
-                \ 'autoload': {'filetypes': ['javascript']},
-                \ 'build' : {'mac' : 'npm install'}
-                \}
-    NeoBundleLazy 'mattn/emmet-vim', {'autoload': {'filetypes': ['html']}}
-    NeoBundleLazy 'csscomb/vim-csscomb', {
-                \ 'depends': ['mattn/emmet-vim'],
-                \ 'autoload': {'filetypes': ['css', 'scss']},
-                \}
-    NeoBundleLazy 'itspriddle/vim-marked', {
-                \ 'depends': ['mattn/emmet-vim', 'gabrielelana/vim-markdown'],
-                \ 'autoload': {'filetypes': ['markdown', 'ghmarkdown']},
-                \ }
+  au BufRead,BufNewFile {*.md,*.markdown} set filetype=markdown
+  au BufNewFile,BufRead {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
+  au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc} set ft=json
+  au BufNewFile,BufRead {*.es6} set ft=javascript
+  au BufNewFile,BufRead {*gitconfig} set ft=gitconfig
+  au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache
+  au BufNewFile,BufRead {*Dockerfile} set filetype=dockerfile
+  au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
 
-  call neobundle#end()
+  Plug 'elzr/vim-json',                          { 'for': 'json' }
+  Plug 'honza/dockerfile.vim',                   { 'for': 'dockerfile' }
+  Plug 'vim-ruby/vim-ruby',                      { 'for': 'ruby' }
+  Plug 'tpope/vim-rails',                        { 'for': 'ruby' }
+  Plug 'tpope/vim-bundler',                      { 'for': 'ruby' }
+  Plug 'tpope/vim-projectionist',                { 'for': 'ruby' }
+  Plug 'tpope/vim-endwise',                      { 'for': ['ruby', 'sh'] }
+  Plug 'kchmck/vim-coffee-script',               { 'for': 'coffee' }
+  Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'coffee' }
+  Plug 'moll/vim-node',                          { 'for': 'javascript' }
+  Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
+  Plug 'heavenshell/vim-jsdoc',                  { 'for': 'javascript' }
+  Plug 'marijnh/tern_for_vim',                   { 'for': 'javascript', 'do': 'npm install' }
+  Plug 'othree/yajs.vim',                        { 'for': 'javascript' }
+  Plug 'csscomb/vim-csscomb',                    { 'for': ['css', 'scss'] }
+  Plug 'itspriddle/vim-marked',                  { 'for': ['markdown', 'ghmarkdown'] }
+  Plug 'gabrielelana/vim-markdown',              { 'for': ['markdown', 'ghmarkdown'] }
+  Plug 'mattn/emmet-vim',                        { 'for': ['html', 'eruby', 'javascript', 'css', 'scss', 'markdown', 'ghmarkdown'] }
+
+  call plug#end()
   filetype plugin indent on
-  NeoBundleCheck
 
 " settings =====================================================================
   let mapleader = ","
