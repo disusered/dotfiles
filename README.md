@@ -49,6 +49,10 @@
 
 ## Additional tweaks
 
+#### Update Tmux theme
+- Enable tmuxline plugin in vimrc
+- :TmuxlineSnapshot! ~/.dotfiles/tmux/tmuxline.conf
+
 #### Set key repeat settings in Karabiner
 - Delay Until Repeat: 150ms
 - Key Repeat: 20ms
