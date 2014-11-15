@@ -217,6 +217,19 @@
     SyntasticCheck
     call lightline#update()
   endfunction
+
+  function! MyFileformat()
+    return winwidth(0) > 70 ? &fileformat : ''
+  endfunction
+
+  function! MyFiletype()
+    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
+  endfunction
+
+  function! MyFileencoding()
+    return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
+  endfunction
+
 " plugin mappings ==============================================================
   nmap        <Space>        <Plug>(easymotion-bd-t2)
   nmap        <leader>d      <Plug>DashSearch
@@ -316,14 +329,18 @@
   let g:lightline                                     = {
                                                       \ 'colorscheme': 'jellybeans',
                                                       \ 'active': {
-                                                      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ]
+                                                      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
+                                                      \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
                                                       \ },
                                                       \ 'component_function': {
                                                       \   'fugitive': 'MyFugitive',
-                                                      \   'readonly': 'MyReadonly',
-                                                      \   'modified': 'MyModified',
                                                       \   'filename': 'MyFilename',
-                                                      \   'ctrlpmark': 'CtrlPMark'
+                                                      \   'fileformat': 'MyFileformat',
+                                                      \   'filetype': 'MyFiletype',
+                                                      \   'readonly': 'MyReadonly',
+                                                      \   'fileencoding': 'MyFileencoding',
+                                                      \   'ctrlpmark': 'CtrlPMark',
+                                                      \   'modified': 'MyModified',
                                                       \ },
                                                       \ 'component_expand': {
                                                       \   'syntastic': 'SyntasticStatuslineFlag',
