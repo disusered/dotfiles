@@ -28,7 +28,8 @@
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-dispatch'
   Plug 'justinmk/vim-gtfo'
-  Plug 'tpope/vim-commentary',    { 'on': '<Plug>Commentary' }
+  Plug 'itchyny/lightline.vim'
+  Plug 'tpope/vim-commentary',    { 'on': ['<Plug>Commentary', '<Plug>CommentaryLine'] }
   Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
   Plug 'Lokaltog/vim-easymotion', { 'on': '<Plug>(easymotion-bd-t2)'}
   Plug 'tpope/vim-rhubarb',       { 'on': 'Gcommit' }
@@ -148,13 +149,13 @@
 " plugin mappings ==============================================================
   nmap        <Space>        <Plug>(easymotion-bd-t2)
   nmap        <leader>d      <Plug>DashSearch
-  nmap        <Leader>/      gcc
+  nmap        <Leader>/      <Plug>CommentaryLine
+  vmap        <Leader>/      <Plug>Commentary
+  vmap        <Enter>        <Plug>(LiveEasyAlign)
   nmap        ˚              [e
   nmap        ∆              ]e
   vmap        ˚              [egv
   vmap        ∆              ]egv
-  vmap        <Leader>/      gc
-  vmap        <Enter>        <Plug>(LiveEasyAlign)
   nnoremap    Q              <nop>
   nnoremap    <leader>q      :bp\|bd #<CR>
   nnoremap    <Leader>l      :w<CR>:SyntasticCheck<CR>:Errors<CR>
