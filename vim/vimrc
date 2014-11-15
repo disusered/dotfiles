@@ -146,10 +146,6 @@
     let g:syntastic_javascript_jshint_args = '--config ' + l:jshintrc
   endfunction
 
-  function! MyFugitive()
-    return exists('*fugitive#head') ? fugitive#head() : ''
-  endfunction
-
   function! MyModified()
     if &filetype == "help"
       return ""
@@ -166,10 +162,24 @@
     if &filetype == "help"
       return ""
     elseif &readonly
-      return "⭤"
+      return ""
     else
       return ""
     endif
+  endfunction
+
+  function! MyFugitive()
+    if exists("*fugitive#head")
+      let _ = fugitive#head()
+      return strlen(_) ? ' '._ : ''
+    endif
+    return ''
+  endfunction
+
+  function! MyFilename()
+    return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
+           \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+           \ ('' != MyModified() ? ' ' . MyModified() : '')
   endfunction
 
 " plugin mappings ==============================================================
@@ -272,12 +282,13 @@
                                                       \ 'colorscheme': 'jellybeans',
                                                       \ 'active': {
                                                       \   'left': [ [ 'mode', 'paste' ],
-                                                      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+                                                      \             [ 'fugitive', 'filename' ] ]
                                                       \ },
                                                       \ 'component_function': {
                                                       \   'fugitive': 'MyFugitive',
                                                       \   'readonly': 'MyReadonly',
-                                                      \   'modified': 'MyModified'
+                                                      \   'modified': 'MyModified',
+                                                      \   'filename': 'MyFilename'
                                                       \ },
                                                       \   'separator': { 'left': '', 'right': '' },
                                                       \   'subseparator': { 'left': '', 'right': '' }
