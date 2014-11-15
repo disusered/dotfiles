@@ -4,6 +4,6 @@
 [submodule "vendor/base16-shell"]
 	path = vendor/base16-shell
 	url = https://github.com/chriskempson/base16-shell.git
-[submodule "vendor/neobundle.vim"]
-	path = vendor/neobundle.vim
-	url = https://github.com/Shougo/neobundle.vim
+[submodule "vendor/vim-plug"]
+	path = vendor/vim-plug
+	url = https://github.com/junegunn/vim-plug.git

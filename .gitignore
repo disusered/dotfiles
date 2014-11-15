@@ -2,3 +2,4 @@ vim/.netrwhist
 vim/.ycm_extra_conf.pyc
 vendor/bundles.vim
 note_tags
+plug.vim
