@@ -31,6 +31,7 @@
   Plug 'tpope/vim-dispatch'
   Plug 'justinmk/vim-gtfo'
   Plug 'itchyny/lightline.vim'
+  Plug 'tpope/vim-vinegar'
   Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
   Plug 'tpope/vim-commentary',    { 'on': ['<Plug>Commentary', '<Plug>CommentaryLine'] }
   Plug 'Lokaltog/vim-easymotion', { 'on': '<Plug>(easymotion-bd-t2)'}
@@ -268,9 +269,9 @@
   nnoremap    <leader>b      :CtrlPBuffer<CR>
   nnoremap    <leader>o      :CtrlPFunky<CR>
   nnoremap    <leader>n      :RecentNotes<CR>
-  nnoremap    -              :TagbarToggle<CR>
-  nnoremap    +              :NERDTreeToggle<CR>
-  nnoremap    _              :GundoToggle<CR>
+  nnoremap    _              :NERDTreeToggle<CR>
+  nnoremap    =              :TagbarToggle<CR>
+  nnoremap    +              :GundoToggle<CR>
   nnoremap    <Leader>rt     :%s/\s\+$//e<CR>
   nnoremap    <Leader>h      :nohlsearch<CR>
 
