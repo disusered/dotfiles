@@ -27,13 +27,13 @@
   Plug 'Raimondi/delimitMate'
   Plug 'junegunn/vim-easy-align'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rhubarb'
   Plug 'tpope/vim-dispatch'
   Plug 'justinmk/vim-gtfo'
   Plug 'itchyny/lightline.vim'
   Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
   Plug 'tpope/vim-commentary',    { 'on': ['<Plug>Commentary', '<Plug>CommentaryLine'] }
   Plug 'Lokaltog/vim-easymotion', { 'on': '<Plug>(easymotion-bd-t2)'}
-  Plug 'tpope/vim-rhubarb',       { 'on': 'Gcommit' }
   Plug 'xolox/vim-notes',         { 'on': ['Note', 'RecentNotes']}
   Plug 'rizzatti/dash.vim',       { 'on': '<Plug>DashSearch' }
   Plug 'chrisbra/NrrwRgn',        { 'on': ['NarrowRegion', 'NarrowWindow']}
