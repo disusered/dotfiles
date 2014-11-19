@@ -129,3 +129,6 @@ fi
 
 # RVM
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# OPAM configuration
+. /Users/carlos/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
