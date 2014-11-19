@@ -23,11 +23,10 @@
       brew install ag ack tree git-flow node ruby tmux zsh httpie \
       reattach-to-user-namespace zsh-history-substring-search \
       macvim --with-cscope --with-lua --override-system-vim \
-      homebrew/binary/jsl ctags-exuberant \
+      homebrew/binary/jsl ctags-exuberant hg \
       brew link macvim && brew linkapps
       npm install -g jshint jscs
       \curl -sSL https://get.rvm.io | bash -s stable
-     
       ```
 
 - Symlink configs
