@@ -36,7 +36,7 @@
   Plug 'tpope/vim-commentary',    { 'on': ['<Plug>Commentary', '<Plug>CommentaryLine'] }
   Plug 'Lokaltog/vim-easymotion', { 'on': '<Plug>(easymotion-bd-t2)'}
   Plug 'xolox/vim-notes',         { 'on': ['Note', 'RecentNotes']}
-  Plug 'rizzatti/dash.vim',       { 'on': '<Plug>DashSearch' }
+  Plug 'rizzatti/dash.vim',       { 'on': ['<Plug>DashSearch'] }
   Plug 'chrisbra/NrrwRgn',        { 'on': ['NarrowRegion', 'NarrowWindow']}
   Plug 'tacahiroy/ctrlp-funky',   { 'on': ['CtrlPFunky'] }
   Plug 'majutsushi/tagbar',       { 'on':  'TagbarToggle' }
@@ -214,7 +214,7 @@
     return lightline#statusline(0)
   endfunction
 
-  " lightline syntastic
+  " lightline
   augroup AutoSyntastic
     autocmd!
     autocmd BufWritePost *.js,*.ruby,*.sh call s:syntastic()
@@ -236,9 +236,15 @@
     return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
   endfunction
 
+  " dash
+  function! s:doc(cmd)
+    return a:cmd
+  endfunction
+
 " plugin mappings ==============================================================
   nmap        <Space>        <Plug>(easymotion-bd-t2)
   nmap        <leader>d      <Plug>DashSearch
+  nmap        <expr> K       <SID>doc("\<Plug>DashSearch")
   nmap        <Leader>/      <Plug>CommentaryLine
   vmap        <Leader>/      <Plug>Commentary
   vmap        <Enter>        <Plug>(LiveEasyAlign)
