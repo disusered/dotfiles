@@ -35,7 +35,7 @@
   Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
   Plug 'tpope/vim-commentary',    { 'on': ['<Plug>Commentary', '<Plug>CommentaryLine'] }
   Plug 'Lokaltog/vim-easymotion', { 'on': '<Plug>(easymotion-bd-t2)'}
-  Plug 'xolox/vim-notes',         { 'on': ['Note', 'RecentNotes']}
+  Plug 'xolox/vim-notes'
   Plug 'rizzatti/dash.vim',       { 'on': ['<Plug>DashSearch'] }
   Plug 'chrisbra/NrrwRgn',        { 'on': ['NarrowRegion', 'NarrowWindow']}
   Plug 'tacahiroy/ctrlp-funky',   { 'on': ['CtrlPFunky'] }
