@@ -53,9 +53,11 @@
   au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache
   au BufNewFile,BufRead {*Dockerfile} set filetype=dockerfile
   au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
+  au BufNewFile,BufRead {*.jade} set filetype=jade
 
   Plug 'elzr/vim-json',                          { 'for': 'json' }
   Plug 'honza/dockerfile.vim',                   { 'for': 'dockerfile' }
+  Plug 'digitaltoad/vim-jade',                   { 'for': 'jade' }
   Plug 'vim-ruby/vim-ruby',                      { 'for': 'ruby' }
   Plug 'tpope/vim-rails',                        { 'for': 'ruby' }
   Plug 'tpope/vim-bundler',                      { 'for': 'ruby' }
