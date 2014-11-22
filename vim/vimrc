@@ -110,6 +110,7 @@
   set hlsearch
   set incsearch
   set smartcase
+  set gdefault
   set wildignore+=.git\*,.hg\*,.svn\*
   set nobackup
   set nowb
