@@ -109,7 +109,6 @@
   set background=dark
   set hlsearch
   set incsearch
-  set ignorecase
   set smartcase
   set wildignore+=.git\*,.hg\*,.svn\*
   set nobackup
@@ -301,7 +300,6 @@
   nnoremap    k              gk
 
 " plugin settings ==============================================================
-  let g:EasyMotion_smartcase                          = 1
   let g:syntastic_html_checkers                       = ['']
   let g:syntastic_javascript_checkers                 = ['jshint', 'jscs']
   let g:syntastic_id_checkers                         = 1
