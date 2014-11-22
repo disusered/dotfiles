@@ -280,6 +280,12 @@
   nnoremap    +              :GundoToggle<CR>
   nnoremap    <Leader>rt     :%s/\s\+$//e<CR>
   nnoremap    <Leader>h      :nohlsearch<CR>
+  nnoremap    n              nzz
+  nnoremap    N              Nzz
+  nnoremap    }              }zz
+  nnoremap    {              {zz
+  nnoremap    j              gj
+  nnoremap    k              gk
 
 " plugin settings ==============================================================
   let g:EasyMotion_smartcase                          = 1
