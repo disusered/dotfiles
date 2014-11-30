@@ -56,6 +56,7 @@
   au BufNewFile,BufRead {*.jade} set filetype=jade
 
   Plug 'elzr/vim-json',                          { 'for': 'json' }
+  Plug 'mustache/vim-mustache-handlebars',       { 'for': 'mustache' }
   Plug 'honza/dockerfile.vim',                   { 'for': 'dockerfile' }
   Plug 'digitaltoad/vim-jade',                   { 'for': 'jade' }
   Plug 'vim-ruby/vim-ruby',                      { 'for': 'ruby' }
