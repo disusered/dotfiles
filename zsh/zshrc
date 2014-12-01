@@ -69,10 +69,6 @@ alias gfm='g pull'
 alias gr='g reset'
 alias grl='g reflog'
 alias gco='g checkout'
-alias gst='g stash'
-alias gsl='g stash list'
-alias gss='g stash show -p'
-alias gsa='g stash apply'
 
 # Temporary files
 export TMPDIR="/tmp/$USER"
