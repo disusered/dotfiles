@@ -64,3 +64,5 @@
 	prompt = false
 [diff]
 	tool = Kaleidoscope
+[url "https://github"]
+	insteadOf = git://github
