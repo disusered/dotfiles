@@ -306,7 +306,7 @@
 
 " plugin settings ==============================================================
   let g:syntastic_html_checkers                       = ['']
-  let g:syntastic_javascript_checkers                 = ['jshint']
+  let g:syntastic_javascript_checkers                 = ['jshint', 'jscs']
   let g:syntastic_id_checkers                         = 1
   let g:syntastic_aggregate_errors                    = 1
   let g:syntastic_error_symbol                        = '✕'
