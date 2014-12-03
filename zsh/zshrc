@@ -69,6 +69,8 @@ alias gfm='g pull'
 alias gr='g reset'
 alias grl='g reflog'
 alias gco='g checkout'
+alias ll='ls -l'
+alias la='ls -la'
 
 # Temporary files
 export TMPDIR="/tmp/$USER"
