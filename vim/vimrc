@@ -32,6 +32,7 @@
   Plug 'justinmk/vim-gtfo'
   Plug 'itchyny/lightline.vim'
   Plug 'xolox/vim-notes'
+  Plug 'tpope/vim-projectionist'
   Plug 'jeetsukumaran/vim-filebeagle'
   Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
   Plug 'tpope/vim-commentary',    { 'on': ['<Plug>Commentary', '<Plug>CommentaryLine'] }
@@ -62,7 +63,6 @@
   Plug 'vim-ruby/vim-ruby',                      { 'for': 'ruby' }
   Plug 'tpope/vim-rails',                        { 'for': 'ruby' }
   Plug 'tpope/vim-bundler',                      { 'for': 'ruby' }
-  Plug 'tpope/vim-projectionist',                { 'for': 'ruby' }
   Plug 'tpope/vim-endwise',                      { 'for': ['ruby', 'sh'] }
   Plug 'kchmck/vim-coffee-script',               { 'for': 'coffee' }
   Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'coffee' }
