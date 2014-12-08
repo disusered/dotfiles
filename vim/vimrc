@@ -72,6 +72,7 @@
   Plug 'marijnh/tern_for_vim',                   { 'for': 'javascript', 'do': 'npm install' }
   Plug 'othree/yajs.vim',                        { 'for': 'javascript' }
   Plug 'csscomb/vim-csscomb',                    { 'for': ['css', 'scss'] }
+  Plug 'ap/vim-css-color',                       { 'for': ['css', 'scss'] }
   Plug 'itspriddle/vim-marked',                  { 'for': ['markdown', 'ghmarkdown'] }
   Plug 'gabrielelana/vim-markdown',              { 'for': ['markdown', 'ghmarkdown'] }
   Plug 'mattn/emmet-vim',                        { 'for': ['html', 'eruby', 'javascript', 'css', 'scss', 'markdown', 'ghmarkdown', 'html.handlebars'] }
