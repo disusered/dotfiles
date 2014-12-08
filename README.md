@@ -20,7 +20,7 @@
   - Install eclim
   - Install packages:
       ```bash
-      brew install ag ack tree git-flow node ruby tmux zsh httpie \
+      brew install ag ack tree git-flow node tmux zsh httpie \
       reattach-to-user-namespace zsh-history-substring-search \
       homebrew/binary/jsl ctags-exuberant hg lua luajit \
       macvim --with-cscope --with-lua \
