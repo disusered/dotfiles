@@ -27,7 +27,6 @@
       vim --with-cscope --with-lua --with-luajit --override-system-vim \
       brew linkapps
       npm install -g jshint jscs
-      \curl -sSL https://get.rvm.io | bash -s stable
       ```
 
 - Symlink configs

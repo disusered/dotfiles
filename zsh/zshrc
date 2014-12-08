@@ -125,8 +125,5 @@ if [ -f $HOME/.dotfiles/vendor/base16-shell/base16-$BASE16_SCHEME.dark.sh ]; the
   [[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
 fi
 
-# RVM
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 # OPAM configuration
 . /Users/carlos/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
