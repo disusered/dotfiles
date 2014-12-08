@@ -95,7 +95,6 @@
   set title
   set backspace=indent,eol,start
   set nostartofline
-  set nowrap
   set colorcolumn=80
   set nofoldenable
   set tabstop=2
@@ -108,6 +107,11 @@
   set list
   set listchars=trail:·,tab:⇥ᐧ
   " set listchars=trail:␣,tab:⇥ᐧ,nbsp:⍽,eol:¶,extends:▸,precedes:◂
+  set wrap
+  set linebreak
+  set nolist
+  set breakindent
+  set showbreak=\ \...
   set wmh=0
   set background=dark
   set hlsearch
