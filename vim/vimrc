@@ -27,7 +27,6 @@
   Plug 'Raimondi/delimitMate'
   Plug 'junegunn/vim-easy-align'
   Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-rhubarb'
   Plug 'tpope/vim-dispatch'
   Plug 'justinmk/vim-gtfo'
   Plug 'itchyny/lightline.vim'
