@@ -320,11 +320,6 @@
   let g:syntastic_warning_symbol                      = '▵'
   let g:syntastic_style_error_symbol                  = '✕'
   let g:syntastic_style_warning_symbol                = '▵'
-  let g:airline_powerline_fonts                       = 1
-  let g:airline#extensions#tabline#enabled            = 1
-  let g:airline#extensions#tabline#show_buffers       = 1
-  let g:airline#extensions#tabline#buffer_nr_show     = 0
-  let g:airline#extensions#tmuxline#enabled           = 0
   let g:local_vimrc                                   = {'names':['.local-vimrc'],'hash_fun':'LVRHashOfFile'}
   let g:delimitMate_expand_cr                         = 1
   let g:vim_json_syntax_conceal                       = 0
