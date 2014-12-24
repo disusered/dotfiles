@@ -134,6 +134,12 @@
   au FileType make set noexpandtab
   au FileType gitconfig set noexpandtab
 
+  augroup cline
+      au!
+      au WinLeave,InsertEnter * set nocursorline
+      au WinEnter,InsertLeave * set cursorline
+  augroup END
+
 " plugin functions =============================================================
   " nerdtree
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
