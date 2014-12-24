@@ -28,13 +28,12 @@
   Plug 'junegunn/vim-easy-align'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-dispatch'
-  Plug 'justinmk/vim-gtfo'
   Plug 'itchyny/lightline.vim'
   Plug 'xolox/vim-notes'
   Plug 'tpope/vim-projectionist'
   Plug 'jeetsukumaran/vim-filebeagle'
-  Plug 'rking/ag.vim'
   Plug 'darfink/vim-plist'
+  Plug 'justinmk/vim-gtfo'
   Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
   Plug 'tpope/vim-commentary',    { 'on': ['<Plug>Commentary', '<Plug>CommentaryLine'] }
   Plug 'Lokaltog/vim-easymotion', { 'on': '<Plug>(easymotion-bd-t2)'}
@@ -45,6 +44,7 @@
   Plug 'scrooloose/nerdtree',     { 'on':  'NERDTreeToggle' }
   Plug 'sjl/gundo.vim',           { 'on': 'GundoToggle' }
   Plug 'gregsexton/gitv',         { 'on': 'Gitv' }
+  Plug 'rking/ag.vim',            { 'on': 'Ag' }
 
 " conditional===================================================================
   au BufRead,BufNewFile {*.md,*.markdown} set filetype=markdown
