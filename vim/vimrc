@@ -69,7 +69,7 @@
   Plug 'moll/vim-node',                          { 'for': 'javascript' }
   Plug 'heavenshell/vim-jsdoc',                  { 'for': 'javascript' }
   Plug 'marijnh/tern_for_vim',                   { 'for': 'javascript', 'do': 'npm install' }
-  Plug 'othree/yajs.vim',                        { 'for': 'javascript' }
+  Plug 'jelera/vim-javascript-syntax',           { 'for': 'javascript' }
   Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
   Plug 'csscomb/vim-csscomb',                    { 'for': ['css', 'scss'] }
   Plug 'ap/vim-css-color',                       { 'for': ['css', 'scss'] }
