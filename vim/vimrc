@@ -40,8 +40,8 @@
   Plug 'rizzatti/dash.vim',       { 'on': ['<Plug>DashSearch'] }
   Plug 'chrisbra/NrrwRgn',        { 'on': ['NarrowRegion', 'NarrowWindow']}
   Plug 'tacahiroy/ctrlp-funky',   { 'on': ['CtrlPFunky'] }
-  Plug 'majutsushi/tagbar',       { 'on':  'TagbarToggle' }
-  Plug 'scrooloose/nerdtree',     { 'on':  'NERDTreeToggle' }
+  Plug 'majutsushi/tagbar',       { 'on': 'TagbarToggle' }
+  Plug 'scrooloose/nerdtree',     { 'on': 'NERDTreeToggle' }
   Plug 'sjl/gundo.vim',           { 'on': 'GundoToggle' }
   Plug 'gregsexton/gitv',         { 'on': 'Gitv' }
   Plug 'rking/ag.vim',            { 'on': 'Ag' }
