@@ -66,12 +66,11 @@
   Plug 'tpope/vim-bundler',                      { 'for': 'ruby' }
   Plug 'tpope/vim-endwise',                      { 'for': ['ruby', 'sh'] }
   Plug 'kchmck/vim-coffee-script',               { 'for': 'coffee' }
-  Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'coffee' }
   Plug 'moll/vim-node',                          { 'for': 'javascript' }
-  Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
   Plug 'heavenshell/vim-jsdoc',                  { 'for': 'javascript' }
   Plug 'marijnh/tern_for_vim',                   { 'for': 'javascript', 'do': 'npm install' }
   Plug 'othree/yajs.vim',                        { 'for': 'javascript' }
+  Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
   Plug 'csscomb/vim-csscomb',                    { 'for': ['css', 'scss'] }
   Plug 'ap/vim-css-color',                       { 'for': ['css', 'scss'] }
   Plug 'itspriddle/vim-marked',                  { 'for': ['markdown', 'ghmarkdown'] }
