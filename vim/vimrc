@@ -34,6 +34,7 @@
   Plug 'tpope/vim-projectionist'
   Plug 'jeetsukumaran/vim-filebeagle'
   Plug 'rking/ag.vim'
+  Plug 'darfink/vim-plist'
   Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
   Plug 'tpope/vim-commentary',    { 'on': ['<Plug>Commentary', '<Plug>CommentaryLine'] }
   Plug 'Lokaltog/vim-easymotion', { 'on': '<Plug>(easymotion-bd-t2)'}
@@ -362,6 +363,8 @@
   let g:netrw_liststyle                               = 3
   let g:bufferline_show_bufnr                         = 0
   let g:tmuxline_powerline_separators                 = 1
+  let g:plist_display_format                          = 'json'
+  let g:plist_json_filetype                           = 'json'
   let g:lightline                                     = {
                                                       \ 'colorscheme': 'jellybeans',
                                                       \ 'active': {
