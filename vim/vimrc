@@ -274,6 +274,8 @@
   nmap        ∆              ]e
   vmap        ˚              [egv
   vmap        ∆              ]egv
+  noremap     H              ^
+  noremap     L              g_
   nnoremap    Q              <nop>
   nnoremap    <leader>q      :bp\|bd #<CR>
   nnoremap    <Leader>l      :w<CR>:SyntasticCheck<CR>:Errors<CR>
