@@ -301,6 +301,7 @@
   nnoremap    <leader>o         :CtrlPFunky<CR>
   nnoremap    <leader>n         :RecentNotes<CR>
   nnoremap    <leader>a         :A<CR>
+  nnoremap    <leader>l         :call <SID>syntastic()<CR>
   nnoremap    _                 :NERDTreeToggle<CR>
   nnoremap    =                 :TagbarToggle<CR>
   nnoremap    +                 :GundoToggle<CR>
