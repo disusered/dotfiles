@@ -229,10 +229,6 @@
   endfunction
 
   " lightline
-  augroup AutoSyntastic
-    autocmd!
-    autocmd BufWritePost *.js,*.ruby,*.sh call s:syntastic()
-  augroup END
   function! s:syntastic()
     SyntasticCheck
     call lightline#update()
