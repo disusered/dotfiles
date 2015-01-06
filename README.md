@@ -43,6 +43,7 @@
     ln -s .dotfiles/vim .vim
     ln -s .dotfiles/vim .nvim
     ln -s .dotfiles/vim/vimrc .vimrc
+    ln -s .dotfiles/vim/vimrc .nvimrc
     ln -s .dotfiles/vim/gvimrc .gvimrc
     ln -s $HOME/.dotfiles/vendor/vim-plug/plug.vim $HOME/.dotfiles/vim/autoload/plug.vim
     ln -s .dotfiles/ag/agignore .agignore
