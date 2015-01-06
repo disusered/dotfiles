@@ -23,27 +23,30 @@
       brew install ag ack tree git-flow node tmux zsh httpie \
       reattach-to-user-namespace zsh-history-substring-search \
       homebrew/binary/jsl ctags-exuberant hg lua luajit \
-      macvim --with-cscope --with-lua \
+      macvim --with-cscope --with-lua neovim \
       vim --with-cscope --with-lua --with-luajit --override-system-vim \
       brew linkapps
+      sudo easy_install pip
+      sudo pip install neovim
       npm install -g jshint jscs
       ```
 
 - Symlink configs
     ```bash
+    ln -s .dotfiles/zsh/zshrc .zshrc
     ln -s .dotfiles/tmux/tmux.conf .tmux.conf
     ln -s $HOME/.dotfiles/vendor/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
-    ln -s $HOME/.dotfiles/vendor/vim-plug/plug.vim $HOME/.dotfiles/vim/autoload/plug.vim
     ln -s $HOME/.dotfiles/zsh/site-functions/_git /usr/local/share/zsh/site-functions/
-    ln -s .dotfiles/zsh/zshrc .zshrc
-    ln -s .dotfiles/ag/agignore .agignore
-    ln -s .dotfiles/ack/ackrc .ackrc
     ln -s .dotfiles/git/gitconfig .gitconfig
     ln -s .dotfiles/git/gitignore_global .gitignore_global
     ln -s .dotfiles/slate/slate .slate
     ln -s .dotfiles/vim .vim
+    ln -s .dotfiles/vim .nvim
     ln -s .dotfiles/vim/vimrc .vimrc
     ln -s .dotfiles/vim/gvimrc .gvimrc
+    ln -s $HOME/.dotfiles/vendor/vim-plug/plug.vim $HOME/.dotfiles/vim/autoload/plug.vim
+    ln -s .dotfiles/ag/agignore .agignore
+    ln -s .dotfiles/ack/ackrc .ackrc
     ```
 
 ## Additional tweaks
