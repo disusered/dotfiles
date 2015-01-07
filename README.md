@@ -30,9 +30,9 @@
       macvim --with-cscope --with-lua \
       vim --with-cscope --with-lua --with-luajit --override-system-vim \
       brew linkapps
-      pip install neovim
       pip install --upgrade setuptools
       pip install --upgrade pip
+      pip install neovim
       npm install -g jshint jscs
       ```
 
