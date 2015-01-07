@@ -1,5 +1,6 @@
 vim/.netrwhist
 vim/.ycm_extra_conf.pyc
 vendor/plugged
+vendor/npm
 note_tags
 plug.vim
