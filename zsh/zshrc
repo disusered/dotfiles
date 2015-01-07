@@ -29,6 +29,7 @@ setopt HIST_BEEP
 
 # Environment variables
 export LANG='en_US.UTF-8'
+export DISPLAY='/private/tmp/com.apple.launchd.SjMhYAsSnY/org.macosforge.xquartz:0'
 
 export BROWSER='open'
 export EDITOR='vim'
@@ -47,6 +48,8 @@ alias git='noglob git'
 
 # Aliases
 alias c='clear'
+alias e='ranger'
+alias p='feh'
 alias ls='ls -G'
 alias ag='ag --pager "less -R" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34'
 alias http='http --style vim'

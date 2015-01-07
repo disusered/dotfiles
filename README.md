@@ -20,14 +20,19 @@
   - Install eclim
   - Install packages:
       ```bash
-      brew install ag ack tree git-flow node tmux zsh httpie \
+      brew install Caskroom/cask/xquartz homebrew/x11/feh \
+      ag ack tree git-flow node tmux zsh httpie \
       reattach-to-user-namespace zsh-history-substring-search \
       homebrew/binary/jsl ctags-exuberant hg lua luajit \
-      macvim --with-cscope --with-lua neovim \
+      ranger mediainfo highlight elinks lynx atool poppler \
+      libcaca --with-imlib2 \
+      neovim \
+      macvim --with-cscope --with-lua \
       vim --with-cscope --with-lua --with-luajit --override-system-vim \
       brew linkapps
-      sudo easy_install pip
-      sudo pip install neovim
+      pip install neovim
+      pip install --upgrade setuptools
+      pip install --upgrade pip
       npm install -g jshint jscs
       ```
 
