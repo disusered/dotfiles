@@ -32,7 +32,6 @@ setopt HIST_BEEP
 # Environment variables
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
-export DISPLAY='/private/tmp/com.apple.launchd.SjMhYAsSnY/org.macosforge.xquartz:0'
 
 export BROWSER='open'
 export EDITOR='vim'
