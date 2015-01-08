@@ -11,6 +11,8 @@ autoload -U promptinit && promptinit
 # Set prompt
 prompt pure
 
+[[ $TMUX = "" ]] && export TERM="xterm-256color"
+
 # History
 SAVEHIST=10000
 HISTSIZE=10000
