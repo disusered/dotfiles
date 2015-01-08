@@ -46,14 +46,13 @@ export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/carlos/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
+# Disable Globbing
+alias git='noglob git'
+
 # Aliases
 alias c='clear'
 alias e='ranger'
-alias p='sxiv'
-alias pdf='mupdf-x11'
-alias tb='sxiv -t *.(jpg|png|gif)'
-alias mplayer='mplayer -zoom -vo x11'
-alias v='mplayer'
+alias p='feh'
 alias xt='xterm -fa "DejaVu Sans Mono for Powerline" -fs 8 &'
 alias ls='ls -G'
 alias ag='ag --pager "less -R" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34'
