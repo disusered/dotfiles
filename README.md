@@ -20,12 +20,13 @@
   - Install eclim
   - Install packages:
       ```bash
-      brew install Caskroom/cask/xquartz homebrew/x11/feh \
+      brew install Caskroom/cask/xquartz \
       ag ack tree git-flow node tmux zsh httpie \
       reattach-to-user-namespace zsh-history-substring-search \
       homebrew/binary/jsl ctags-exuberant hg lua luajit \
-      ranger mediainfo highlight elinks lynx atool poppler \
-      libcaca --with-imlib2 \
+      ranger mediainfo highlight atool sxiv poppler elinks \
+      libcaca --with-imlib2 mupdf \
+      brew install mplayer --with-x11 --with-libcaca \
       neovim \
       macvim --with-cscope --with-lua \
       vim --with-cscope --with-lua --with-luajit --override-system-vim \
