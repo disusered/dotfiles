@@ -15,9 +15,11 @@
 - Configure iTerm
   ![iTerm2 Configuration](https://raw.githubusercontent.com/disusered/dotfiles/docs/images/iterm.png "iTerm2 Configuration")
 
+- Install XCode
 
 - Install dependencies
-  - Install eclim
+  - Install [Homebrew](http://brew.sh/)
+  - Install [MacPorts](https://www.macports.org/install.php)
   - Install packages:
       ```bash
       brew install Caskroom/cask/xquartz \
