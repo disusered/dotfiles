@@ -151,4 +151,4 @@ fi
 source "$HOME/.dotfiles/vendor/npm"
 
 # MacPorts
-export PATH=$HOME/.config/macports/bin:$HOME/.config/macports/sbin:$PATH
+export PATH=$HOME/.macports/bin:$HOME/.macports/sbin:$PATH

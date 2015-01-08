@@ -19,14 +19,18 @@
 
 - Install dependencies
   - Install [Homebrew](http://brew.sh/)
+
   - Install [MacPorts](https://www.macports.org/install.php#source)
     ```bash
     cd ~/Downloads
     tar xjvf MacPorts-2.3.3.tar.bz2
     cd MacPorts-2.3.3
-    ./configure --prefix=$HOME/.config/macports && make && sudo make install
+    ./configure --prefix=$HOME/.macports && make && sudo make install
     sudo port -v selfupdate
     ```
+
+  - Configure MacPorts [permissions](http://superuser.com/a/570146/34947)
+
   - Install packages:
       ```bash
       brew install Caskroom/cask/xquartz \
