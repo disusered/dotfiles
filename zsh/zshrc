@@ -61,6 +61,7 @@ alias tb='sxiv -t *.(jpg|png|gif)'
 alias mplayer='mplayer -zoom -vo x11'
 alias v='mplayer'
 alias xt='urxvt'
+alias vg='viewglob -c zsh'
 alias ls='ls -G'
 alias ag='ag --pager "less -R" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34'
 alias http='http --style vim'
@@ -148,3 +149,6 @@ fi
 
 # NPM completion
 source "$HOME/.dotfiles/vendor/npm"
+
+# MacPorts
+export PATH=$HOME/.config/macports/bin:$HOME/.config/macports/sbin:$PATH

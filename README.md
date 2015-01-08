@@ -19,7 +19,14 @@
 
 - Install dependencies
   - Install [Homebrew](http://brew.sh/)
-  - Install [MacPorts](https://www.macports.org/install.php)
+  - Install [MacPorts](https://www.macports.org/install.php#source)
+    ```bash
+    cd ~/Downloads
+    tar xjvf MacPorts-2.3.3.tar.bz2
+    cd MacPorts-2.3.3
+    ./configure --prefix=$HOME/.config/macports && make && sudo make install
+    sudo port -v selfupdate
+    ```
   - Install packages:
       ```bash
       brew install Caskroom/cask/xquartz \
@@ -27,11 +34,12 @@
       reattach-to-user-namespace zsh-history-substring-search \
       homebrew/binary/jsl ctags-exuberant hg lua luajit \
       ranger mediainfo highlight atool sxiv poppler elinks \
-      libcaca --with-imlib2 mupdf \
+      libcaca --with-imlib2 mupdf rxvt-unicode \
       brew install mplayer --with-x11 --with-libcaca \
+      easy-tag \
       neovim \
-      macvim --with-cscope --with-lua \
-      vim --with-cscope --with-lua --with-luajit --override-system-vim \
+      macvim --with-lua --custom-icons \
+      vim --with-lua --with-luajit --override-system-vim \
       brew linkapps
       pip install --upgrade setuptools
       pip install --upgrade pip
