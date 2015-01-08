@@ -45,8 +45,8 @@
       macvim --with-lua --custom-icons \
       vim --with-lua --with-luajit --override-system-vim \
       brew linkapps
-      sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 +universal \
-      nmap +universal +zenmap mplayer2 zathura +universal catdoc +universal
+      sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 \
+      nmap +zenmap mplayer2 zathura catdoc
       pip install --upgrade setuptools
       pip install --upgrade pip
       pip install neovim
