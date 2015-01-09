@@ -18,8 +18,6 @@
 - Install XCode
 
 - Install dependencies
-  - Install [Homebrew](http://brew.sh/)
-
   - Install [MacPorts](https://www.macports.org/install.php#source)
     ```bash
     cd ~/Downloads
@@ -31,27 +29,30 @@
 
   - Configure MacPorts [permissions](http://superuser.com/a/570146/34947)
 
+  - Install [Android SDK](https://developer.android.com/sdk/installing/index.html?pkg=tools) and update `$PATH` and `$ANDROID_HOME`.
+
   - Install packages:
       ```bash
-      brew install android-sdk homebrew/binary/jsl \
-        reattach-to-user-namespace zsh-history-substring-search
-      brew linkapps
       sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 \
         zathura xathura-plugin-pdf-poppler zathura-plugin-cb tmux \
         xlsfonts mplayer2 rxvt-unicode xterm +utmp feh easytag \
-        source-highlight +universal libcaca +x11 +universal \
+        links +universal +x11 libcaca +x11 +universal \
         tree boost +universal +regex_match_extra \
         ranger mediainfo highlight atool the_silver_searcher +universal \
         git git-flow ack ctags +universal httpie +universal \
+        graphicsmagick +universal imagemagick +rsvg +universal \
         zsh +universal mercurial +universal +zsh_completion \
         lua +universal luajit nodejs +dtrace \
-        python27 py27-pip python_select \
+        python27 py27-pip python_select apache-ant \
+        ruby22 +doc +universal wget +universal \
         macvim +cscope +lua +python27 +ruby20 +universal +breakindent \
-        vim +cscope +lua +python27 +ruby20 +universal +breakindent
+        vim +cscope +lua +python27 +ruby20 +universal +breakindent \
+        tmux-pasteboard
       npm install -g jshint jscs
       sudo chpass -s /Users/carlos/.macports/bin/zsh $USER
       sudo port select --set python python27
       sudo port select --set pip pip27
+      sudo port select --set ruby ruby22
       ```
 
 - Symlink configs

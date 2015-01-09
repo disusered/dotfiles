@@ -38,7 +38,7 @@ export EDITOR='vim'
 export PAGER='less'
 export LESS='-X -F -g -i -M -R -S -w -z-4'
 
-export ANDROID_HOME='/usr/local/opt/android-sdk'
+export ANDROID_HOME='$HOME/Development/SDK/android-sdk'
 export JAVA_HOME=`/usr/libexec/java_home`
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 export DOCKER_HOST=tcp://192.168.59.103:2376
@@ -125,8 +125,9 @@ compctl -K _completemarks jump
 compctl -K _completemarks unmark
 
 # History substring search
-if [ -f /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
-  source /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
+HISTORY_SUB="$HOME/.dotfiles/vendor/zsh-history-substring-search/zsh-history-substring-search.zsh"
+if [ -f $HISTORY_SUB ]; then
+  source $HISTORY_SUB
   zmodload zsh/terminfo
   # Bind arrows
   bindkey '^[[A' history-substring-search-up
@@ -146,4 +147,4 @@ fi
 source "$HOME/.dotfiles/vendor/npm"
 
 # MacPorts
-export PATH=$HOME/.macports/bin:$HOME/.macports/sbin:$PATH
+export PATH=$HOME/.macports/bin:$HOME/.macports/sbin:$HOME/Development/SDK/android-sdk/tools:$PATH
