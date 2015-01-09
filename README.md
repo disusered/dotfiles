@@ -58,6 +58,7 @@
     ```bash
     ln -s $HOME/.dotfiles/zsh/zshrc .zshrc
     ln -s $HOME/.dotfiles/tmux/tmux.conf .tmux.conf
+    ln -s $HOME/.dotfiles/zathura/zathurarc $HOME/.config/zathura/
     ln -s $HOME/.dotfiles/vendor/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
     ln -s $HOME/.dotfiles/zsh/site-functions/_git /usr/local/share/zsh/site-functions/
     ln -s $HOME/.dotfiles/xorg/Xresources $HOME/.Xresources
