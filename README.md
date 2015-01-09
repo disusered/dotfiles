@@ -37,16 +37,13 @@
       ag ack tree git-flow node tmux zsh httpie \
       reattach-to-user-namespace zsh-history-substring-search \
       homebrew/binary/jsl ctags-exuberant hg lua luajit \
-      ranger mediainfo highlight atool sxiv \
-      libcaca --with-imlib2 rxvt-unicode \
-      brew install mplayer --with-x11 --with-libcaca \
-      easy-tag \
+      ranger mediainfo highlight atool sxiv mplayer2 \
+      libcaca --with-imlib2 rxvt-unicode easy-tag \
       neovim \
       macvim --with-lua --custom-icons \
       vim --with-lua --with-luajit --override-system-vim \
       brew linkapps
       sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 \
-      nmap +zenmap mplayer2 catdoc \
       zathura zathura-plugin-pdf-poppler zathura-plugin-cb
       pip install --upgrade setuptools
       pip install --upgrade pip
