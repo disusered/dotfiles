@@ -33,26 +33,23 @@
 
   - Install packages:
       ```bash
-      sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 \
-        zathura xathura-plugin-pdf-poppler zathura-plugin-cb tmux \
-        xlsfonts mplayer2 rxvt-unicode xterm +utmp feh easytag \
-        links +universal +x11 libcaca +x11 +universal \
-        tree boost +universal +regex_match_extra \
-        ranger mediainfo highlight atool the_silver_searcher +universal \
-        git git-flow ack ctags +universal httpie +universal \
-        graphicsmagick +universal imagemagick +rsvg +universal \
-        zsh +universal mercurial +universal +zsh_completion \
-        lua +universal luajit nodejs +dtrace \
-        python27 py27-pip python_select apache-ant \
-        ruby22 +doc +universal wget +universal \
-        macvim +cscope +lua +python27 +ruby20 +universal +breakindent \
-        vim +cscope +lua +python27 +ruby20 +universal +breakindent \
-        tmux-pasteboard
-      npm install -g jshint jscs
-      sudo chpass -s /Users/carlos/.macports/bin/zsh $USER
+      sudo port install python27 py27-pip python_select ruby22 +doc
       sudo port select --set python python27
       sudo port select --set pip pip27
       sudo port select --set ruby ruby22
+      sudo port select --set clang mp-clang-3.5
+      sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 \
+        zathura xathura-plugin-pdf-poppler zathura-plugin-cb tmux \
+        xlsfonts mplayer2 rxvt-unicode xterm +utmp feh easytag \
+        links +x11 libcaca +x11 tree boost +clang35 +regex_match_extra \
+        ranger mediainfo highlight atool the_silver_searcher \
+        git git-flow ack ctags httpie wget apache-ant tmux-pasteboard \
+        graphicsmagick imagemagick +lqr +wmf +rsvg \
+        zsh mercurial +zsh_completion lua luajit nodejs +dtrace \
+        macvim +cscope +lua +python27 +ruby20 +breakindent \
+        vim +cscope +lua +python27 +ruby20 +breakindent
+      npm install -g jshint jscs
+      sudo chpass -s /Users/carlos/.macports/bin/zsh $USER
       ```
 
 - Symlink configs
