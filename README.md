@@ -47,7 +47,7 @@
         lua +universal luajit nodejs +dtrace \
         python27 py27-pip python_select \
         macvim +cscope +lua +python27 +ruby20 +universal +breakindent \
-        vim +cscope +lua +python27 +ruby20 +x11 +universal +breakindent
+        vim +cscope +lua +python27 +ruby20 +universal +breakindent
       npm install -g jshint jscs
       sudo chpass -s /Users/carlos/.macports/bin/zsh $USER
       sudo port select --set python python27
