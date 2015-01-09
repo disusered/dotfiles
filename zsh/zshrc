@@ -147,4 +147,4 @@ fi
 source "$HOME/.dotfiles/vendor/npm"
 
 # MacPorts
-export PATH=$HOME/.macports/bin:$HOME/.macports/sbin:$HOME/Development/SDK/android-sdk/tools:$PATH
+export PATH=$HOME/.macports/bin:$HOME/.macports/sbin:$HOME/Development/SDK/android-sdk/tools:$HOME/Development/SDK/android-sdk/platform-tools:$PATH
