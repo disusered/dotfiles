@@ -33,23 +33,25 @@
 
   - Install packages:
       ```bash
-      brew install Caskroom/cask/xquartz \
-      ag ack tree git-flow node zsh httpie \
-      reattach-to-user-namespace zsh-history-substring-search \
-      homebrew/binary/jsl ctags-exuberant hg lua luajit \
-      ranger mediainfo highlight atool \
-      libcaca --with-imlib2 easy-tag \
-      neovim \
-      macvim --with-lua --custom-icons \
-      vim --with-lua --with-luajit --override-system-vim \
+      brew install android-sdk homebrew/binary/jsl \
+        reattach-to-user-namespace zsh-history-substring-search
       brew linkapps
       sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 \
-      zathura xathura-plugin-pdf-poppler zathura-plugin-cb tmux \
-      xlsfonts mplayer2 rxvt-unicode xterm +utmp feh
-      pip install --upgrade setuptools
-      pip install --upgrade pip
-      pip install neovim
+        zathura xathura-plugin-pdf-poppler zathura-plugin-cb tmux \
+        xlsfonts mplayer2 rxvt-unicode xterm +utmp feh easytag \
+        source-highlight +universal libcaca +x11 +universal \
+        tree boost +universal +regex_match_extra \
+        ranger mediainfo highlight atool the_silver_searcher +universal \
+        git git-flow ack ctags +universal httpie +universal \
+        zsh +universal mercurial +universal +zsh_completion \
+        lua +universal luajit nodejs +dtrace \
+        python27 py27-pip python_select \
+        macvim +cscope +lua +python27 +ruby20 +universal +breakindent \
+        vim +cscope +lua +python27 +ruby20 +x11 +universal +breakindent
       npm install -g jshint jscs
+      sudo chpass -s /Users/carlos/.macports/bin/zsh $USER
+      sudo port select --set python python27
+      sudo port select --set pip pip27
       ```
 
 - Symlink configs
@@ -66,9 +68,7 @@
     ln -s .dotfiles/git/gitignore_global .gitignore_global
     ln -s .dotfiles/slate/slate .slate
     ln -s .dotfiles/vim .vim
-    ln -s .dotfiles/vim .nvim
     ln -s .dotfiles/vim/vimrc .vimrc
-    ln -s .dotfiles/vim/vimrc .nvimrc
     ln -s .dotfiles/vim/gvimrc .gvimrc
     ln -s $HOME/.dotfiles/vendor/vim-plug/plug.vim $HOME/.dotfiles/vim/autoload/plug.vim
     ln -s .dotfiles/ag/agignore .agignore
