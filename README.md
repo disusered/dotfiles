@@ -44,7 +44,7 @@
         links +x11 libcaca +x11 tree boost +clang35 +regex_match_extra \
         ranger mediainfo highlight atool the_silver_searcher \
         git git-flow ack ctags httpie wget apache-ant tmux-pasteboard \
-        graphicsmagick imagemagick +lqr +wmf +rsvg \
+        graphicsmagick imagemagick -x11 +lqr +rsvg +wmf \
         zsh mercurial +zsh_completion lua luajit nodejs +dtrace \
         macvim +cscope +lua +python27 +ruby20 +breakindent \
         vim +cscope +lua +python27 +ruby20 +breakindent
