@@ -31,15 +31,17 @@
 
   - Install packages:
       ```bash
-      sudo port install python27 py27-pip python_select ruby22 +doc
+      sudo port install python27 py27-pip python_select \
+        ruby22 +doc gcc49 clang-3.5
       sudo port select --set python python27
       sudo port select --set pip pip27
       sudo port select --set ruby ruby22
       sudo port select --set clang mp-clang-3.5
+      sudo port select --set gcc gcc49
       sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 \
         zathura zathura-plugin-pdf-poppler zathura-plugin-cb tmux \
         xlsfonts mplayer2 rxvt-unicode xterm +utmp feh toilet go \
-        ndcu \
+        ndcu watch nmap +zenmap \
         links +x11 libcaca +x11 tree boost +clang35 +regex_match_extra \
         ranger mediainfo highlight atool the_silver_searcher txt2regex \
         git git-flow ack ctags httpie wget apache-ant tmux-pasteboard \
