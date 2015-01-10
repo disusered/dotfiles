@@ -18,7 +18,7 @@
 - Install XCode
 
 - Install dependencies
-  - Install [MacPorts](https://www.macports.org/install.php#source)
+  - Download [MacPorts](https://www.macports.org/install.php#source)
     ```bash
     cd ~/Downloads
     tar xjvf MacPorts-2.3.3.tar.bz2
@@ -28,8 +28,6 @@
     ```
 
   - Configure MacPorts [permissions](http://superuser.com/a/570146/34947)
-
-  - Install [Android SDK](https://developer.android.com/sdk/installing/index.html?pkg=tools) and update `$PATH` and `$ANDROID_HOME`.
 
   - Install packages:
       ```bash
