@@ -38,9 +38,9 @@
       sudo port select --set clang mp-clang-3.5
       sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 \
         zathura zathura-plugin-pdf-poppler zathura-plugin-cb tmux \
-        xlsfonts mplayer2 rxvt-unicode xterm +utmp feh toilet \
+        xlsfonts mplayer2 rxvt-unicode xterm +utmp feh toilet go \
         links +x11 libcaca +x11 tree boost +clang35 +regex_match_extra \
-        ranger mediainfo highlight atool the_silver_searcher \
+        ranger mediainfo highlight atool the_silver_searcher txt2regex \
         git git-flow ack ctags httpie wget apache-ant tmux-pasteboard \
         graphicsmagick imagemagick +lqr +rsvg +wmf cmus +aac +flac \
         zsh mercurial +zsh_completion lua luajit nodejs +dtrace \
