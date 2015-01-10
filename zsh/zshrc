@@ -147,3 +147,6 @@ source "$HOME/.dotfiles/vendor/npm"
 
 # MacPorts
 export PATH=$HOME/.macports/bin:$HOME/.macports/sbin:$HOME/Development/SDK/android-sdk/tools:$HOME/Development/SDK/android-sdk/platform-tools:$PATH
+
+# Hello
+[[ $TMUX = "" ]] && toilet -f smbraille `date +"%c"` --filter gay
