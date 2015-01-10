@@ -38,6 +38,8 @@
       sudo port select --set ruby ruby22
       sudo port select --set clang mp-clang-3.5
       sudo port select --set gcc gcc49
+      sudo pip install --upgrade pip
+      sudo pip install --upgrade setuptools
       sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 \
         zathura zathura-plugin-pdf-poppler zathura-plugin-cb tmux \
         xlsfonts mplayer2 rxvt-unicode xterm +utmp feh toilet go \
