@@ -123,6 +123,12 @@ function _completemarks {
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
 
+# Syntax highlighting
+SYNTAX_HIGHLIGHT="$HOME/.dotfiles/vendor/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+if [ -f $SYNTAX_HIGHLIGHT ]; then
+  source $SYNTAX_HIGHLIGHT
+fi
+
 # History substring search
 HISTORY_SUB="$HOME/.dotfiles/vendor/zsh-history-substring-search/zsh-history-substring-search.zsh"
 if [ -f $HISTORY_SUB ]; then
