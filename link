@@ -1,12 +1,13 @@
 #!/bin/bash
 
+# Dotfiles path
 ROOT="${HOME}/.dotfiles"
 
+# Create Symlinks
 ln -s $ROOT/zsh/zshrc $HOME/.zshrc
 ln -s $ROOT/tmux/tmux.conf $HOME/.tmux.conf
 ln -s $ROOT/zathura/zathurarc $HOME/.config/zathura
 ln -s $ROOT/cmus/autosave $HOME/.config/cmus/autosave
-ln -s $ROOT/vendor/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
 ln -s $ROOT/zsh/site-functions/_git /usr/local/share/zsh/site-functions
 ln -s $ROOT/xorg/Xresources $HOME/.Xresources
 ln -s $ROOT/git/gitconfig $HOME/.gitconfig
@@ -18,5 +19,8 @@ ln -s $ROOT/vim/gvimrc $HOME/.gvimrc
 ln -s $ROOT/vendor/vim-plug/plug.vim $ROOT/vim/autoload/plug.vim
 ln -s $ROOT/ag/agignore .agignore
 ln -s $ROOT/ack/ackrc $HOME/.ackrc
+ln -s $ROOT/vendor/pure/pure.zsh \
+      /usr/local/share/zsh/site-functions/prompt_pure_setup
 
+# Create NPM completion script
 npm completion > $ROOT/vendor/npm
