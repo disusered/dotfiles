@@ -24,3 +24,6 @@ ln -s $ROOT/vendor/pure/pure.zsh \
 
 # Create NPM completion script
 npm completion > $ROOT/vendor/npm
+
+# Hide last-logged-in message on new terminals
+touch $HOME/.hushlogin
