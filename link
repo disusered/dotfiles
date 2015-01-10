@@ -1,0 +1,22 @@
+#!/bin/bash
+
+ROOT="${HOME}/.dotfiles"
+
+ln -s $ROOT/zsh/zshrc $HOME/.zshrc
+ln -s $ROOT/tmux/tmux.conf $HOME/.tmux.conf
+ln -s $ROOT/zathura/zathurarc $HOME/.config/zathura
+ln -s $ROOT/cmus/autosave $HOME/.config/cmus/autosave
+ln -s $ROOT/vendor/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
+ln -s $ROOT/zsh/site-functions/_git /usr/local/share/zsh/site-functions
+ln -s $ROOT/xorg/Xresources $HOME/.Xresources
+ln -s $ROOT/git/gitconfig $HOME/.gitconfig
+ln -s $ROOT/git/gitignore_global $HOME/.gitignore_global
+ln -s $ROOT/slate/slate $HOME/.slate
+ln -s $ROOT/vim .$HOME/vim
+ln -s $ROOT/vim/vimrc $HOME/.vimrc
+ln -s $ROOT/vim/gvimrc $HOME/.gvimrc
+ln -s $ROOT/vendor/vim-plug/plug.vim $ROOT/vim/autoload/plug.vim
+ln -s $ROOT/ag/agignore .agignore
+ln -s $ROOT/ack/ackrc $HOME/.ackrc
+
+npm completion > $ROOT/vendor/npm
