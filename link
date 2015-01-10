@@ -27,3 +27,6 @@ npm completion > $ROOT/vendor/npm
 
 # Hide last-logged-in message on new terminals
 touch $HOME/.hushlogin
+
+# Create go path
+mkdir -p $HOME/Development/SDK/gopath
