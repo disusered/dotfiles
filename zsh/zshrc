@@ -38,7 +38,8 @@ export EDITOR='vim'
 export PAGER='less'
 export LESS='-X -F -g -i -M -R -S -w -z-4'
 
-export ANDROID_HOME='$HOME/Development/SDK/android-sdk'
+export ANDROID_HOME="${HOME}/Development/SDK/android-sdk"
+export GOPATH="${HOME}/Development/SDK/gopath"
 export JAVA_HOME=`/usr/libexec/java_home`
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 export DOCKER_HOST=tcp://192.168.59.103:2376
