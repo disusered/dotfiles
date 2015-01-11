@@ -158,4 +158,11 @@ source "$HOME/.dotfiles/vendor/npm"
 export PATH=$HOME/.macports/bin:$HOME/.macports/sbin:$HOME/Development/SDK/android-sdk/tools:$HOME/Development/SDK/android-sdk/platform-tools:$PATH
 
 # Hello
-[[ $TMUX = "" ]] && toilet -f smbraille `date +"%c"` --filter gay
+ZSHELL=`which zsh`
+if [[ $COLORTERM != "rxvt" && $XTERM_SHELL != $ZSHELL ]]
+then
+  if [[ $TMUX = "" ]]
+  then
+    toilet -f smbraille `date +"%c"` --filter gay
+  fi
+fi
