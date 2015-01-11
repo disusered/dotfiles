@@ -1,5 +1,22 @@
-xterm*faceName:   DejaVu Sans Mono for Powerline:style=Regular:size=8
-URxvt*font:       xft:DejaVu Sans Mono for Powerline:size=9
+! DejaVu Sans Mono
+/* xterm*faceName:   DejaVu Sans Mono for Powerline:style=Regular:size=9 */
+/* URxvt*font:       xft:DejaVu Sans Mono for Powerline:size=9 */
+
+! Meslo
+xterm*faceName:   Meslo LG S for Powerline:style=Regular:size=9
+URxvt*font:       xft:Meslo LG S for Powerline:size=9
+
+! Droid Sans Mono
+/* xterm*faceName:   Droid Sans Mono for Powerline:style=Regular:size=8 */
+/* URxvt*font:       xft:Droid Sans Mono for Powerline:size=8 */
+
+! Inconsolata
+/* xterm*facename:   inconsolata for powerline:style=regular:size=9 */
+/* urxvt*font:       xft:inconsolata for powerline:size=9 */
+
+!Source Code Pro
+/* xterm*faceName:   Source Code Pro for Powerline:size=9 */
+/* URxvt*font:       xft:Source Code Pro for Powerline:size=9 */
 
 ! Base16 Tomorrow
 ! Scheme: Chris Kempson (http://chriskempson.com)
