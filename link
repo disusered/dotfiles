@@ -30,3 +30,8 @@ touch $HOME/.hushlogin
 
 # Create go path
 mkdir -p $HOME/Development/SDK/gopath
+
+# Add urxvt font
+mkdir $HOME/.fonts
+ln -s $ROOT/vendor/powerline-fonts/DejaVuSansMono/*.ttf $HOME/.fonts/
+fc-cache -vf ~/.fonts
