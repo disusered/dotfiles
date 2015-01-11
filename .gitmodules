@@ -19,3 +19,6 @@
 [submodule "vendor/zsh-syntax-highlighting"]
 	path = vendor/zsh-syntax-highlighting
 	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
+[submodule "vendor/powerline-fonts"]
+	path = vendor/powerline-fonts
+	url = git@github.com:powerline/fonts.git
