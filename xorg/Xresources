@@ -3,8 +3,8 @@
 /* URxvt*font:       xft:DejaVu Sans Mono for Powerline:size=9 */
 
 ! Meslo
-xterm*faceName:   Meslo LG S for Powerline:style=Regular:size=9
-URxvt*font:       xft:Meslo LG S for Powerline:size=9
+xterm*faceName:   Meslo LG S for Powerline:style=Regular:size=7
+URxvt*font:       xft:Meslo LG S for Powerline:size=7
 
 ! Droid Sans Mono
 /* xterm*faceName:   Droid Sans Mono for Powerline:style=Regular:size=8 */
@@ -17,6 +17,14 @@ URxvt*font:       xft:Meslo LG S for Powerline:size=9
 !Source Code Pro
 /* xterm*faceName:   Source Code Pro for Powerline:size=9 */
 /* URxvt*font:       xft:Source Code Pro for Powerline:size=9 */
+
+! Font Options
+Xft.dpi:       113
+Xft.antialias: true
+Xft.rgba:      rgb
+Xft.hinting:   true
+Xft.autohint:  false
+Xft.hintstyle: hintfull
 
 ! Base16 Tomorrow
 ! Scheme: Chris Kempson (http://chriskempson.com)
