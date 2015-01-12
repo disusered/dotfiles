@@ -33,6 +33,7 @@ URxvt.matcher.button: 1
 
 ! TODO: urxvt - Properly match wrapped URLs
 ! TODO: urxvt - Toggle cursor depending on Vim mode
+! TODO: urxvt - Hide string on top of new terms
 ! TODO: xterm - Ctrl+H to switch TMUX pane
 
 ! Base16 Tomorrow
