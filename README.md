@@ -35,7 +35,7 @@
       sudo port select --set python python27
       sudo port select --set pip pip27
       sudo port select --set clang mp-clang-3.5
-      sudo port select --set gcc gcc49
+      sudo port select --set gcc mp-gcc49
       sudo pip install --upgrade pip
       sudo pip install --upgrade setuptools
       # MacPorts
