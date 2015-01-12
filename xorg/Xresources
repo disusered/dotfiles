@@ -26,6 +26,11 @@ Xft.hinting:   true
 Xft.autohint:  false
 Xft.hintstyle: hintfull
 
+! Options
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/open
+URxvt.matcher.button: 1
+
 ! Base16 Tomorrow
 ! Scheme: Chris Kempson (http://chriskempson.com)
 #define base00 #1d1f21
