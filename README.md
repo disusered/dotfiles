@@ -31,11 +31,9 @@
 
   - Install packages:
       ```bash
-      sudo port install python27 py27-pip python_select \
-        ruby22 +doc gcc49 clang-3.5
+      sudo port install python27 py27-pip python_select gcc49 clang-3.5
       sudo port select --set python python27
       sudo port select --set pip pip27
-      sudo port select --set ruby none
       sudo port select --set clang mp-clang-3.5
       sudo port select --set gcc gcc49
       sudo pip install --upgrade pip
@@ -61,7 +59,7 @@
       # Ruby
       gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
       \curl -sSL https://get.rvm.io | bash -s stable
-      rvm install 2.2.0
+      rvm install ruby-2.1.2 ruby-2.2.0 &&  rvm use 2.2.0
       # ZSH
       sudo chpass -s /Users/carlos/.macports/bin/zsh $USER
       ```
