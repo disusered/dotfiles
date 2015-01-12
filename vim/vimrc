@@ -272,10 +272,13 @@
   nmap        <Leader>/         <Plug>CommentaryLine
   vmap        <Leader>/         <Plug>Commentary
   vmap        <Enter>           <Plug>(LiveEasyAlign)
+
+  " TODO: urxvt bindings
   nmap        ˚                 [e
   nmap        ∆                 ]e
   vmap        ˚                 [egv
   vmap        ∆                 ]egv
+
   noremap     H                 ^
   noremap     L                 g_
   nnoremap    Q                 <nop>
