@@ -1,6 +1,5 @@
 ! TODO: urxvt - Properly match wrapped URLs
 ! TODO: urxvt - Toggle cursor depending on Vim mode
-! TODO: urxvt - Hide string on top of new terms
 ! TODO: urxvt - Use daemon/client mode
 ! TODO: urxvt - Try bitmap font with Powerline fallback
 ! TODO: urxvt - HOME/END ie Fn ←/Fn →
