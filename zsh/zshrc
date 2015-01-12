@@ -159,10 +159,12 @@ export PATH=$HOME/.macports/bin:$HOME/.macports/sbin:$HOME/Development/SDK/andro
 
 # Hello
 ZSHELL=`which zsh`
-if [[ $COLORTERM != "rxvt" && $XTERM_SHELL != $ZSHELL ]]
-then
-  if [[ $TMUX = "" ]]
-  then
-    toilet -f smbraille `date +"%c"` --filter gay
+if [[ $TMUX = "" ]] then
+  if [[ $COLORTERM != "rxvt" && $XTERM_SHELL != $ZSHELL ]] then
+    ZFONT="smbraille"
+  else
+    echo -e '\n'
+    ZFONT="future"
   fi
+  toilet -f $ZFONT `date +"%c"` --filter gay
 fi
