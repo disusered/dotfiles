@@ -159,6 +159,9 @@ fi
 # NPM completion
 source "$HOME/.dotfiles/vendor/npm"
 
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
 # Hello
 ZSHELL=`which zsh`
 if [[ $TMUX = "" ]] then

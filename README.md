@@ -35,11 +35,12 @@
         ruby22 +doc gcc49 clang-3.5
       sudo port select --set python python27
       sudo port select --set pip pip27
-      sudo port select --set ruby ruby22
+      sudo port select --set ruby none
       sudo port select --set clang mp-clang-3.5
       sudo port select --set gcc gcc49
       sudo pip install --upgrade pip
       sudo pip install --upgrade setuptools
+      # MacPorts
       sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 \
         zathura zathura-plugin-pdf-poppler zathura-plugin-cb tmux \
         xlsfonts mplayer2 rxvt-unicode xterm +utmp feh toilet go \
@@ -48,10 +49,20 @@
         ranger mediainfo highlight atool the_silver_searcher txt2regex \
         git git-flow ack ctags httpie wget apache-ant tmux-pasteboard \
         graphicsmagick imagemagick +lqr +rsvg +wmf cmus +aac +flac \
-        zsh mercurial +zsh_completion lua luajit nodejs +dtrace \
+        zsh mercurial +zsh_completion lua luajit gnupg \
         macvim +cscope +lua +python27 +ruby20 +breakindent \
         vim +cscope +lua +python27 +ruby20 +breakindent
-      npm install -g jshint jscs
+      # Node
+      curl https://raw.githubusercontent.com/creationix/nvm/v0.22.1/install.sh | bash
+      nvm install 0.10 && nvm alias default stable
+      npm update npm -g && npm install -g yo gulp grunt-cli cordova ionic \
+        http-server forever ios-deploy ios-sim jscs jshint karma-cli bower \
+        node-inspector nodemon phonegap plugman svgo wiredep browserify
+      # Ruby
+      gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
+      \curl -sSL https://get.rvm.io | bash -s stable
+      rvm install 2.2.0
+      # ZSH
       sudo chpass -s /Users/carlos/.macports/bin/zsh $USER
       ```
 
