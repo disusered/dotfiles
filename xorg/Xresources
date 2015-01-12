@@ -31,6 +31,10 @@ URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/open
 URxvt.matcher.button: 1
 
+! TODO: urxvt - Properly match wrapped URLs
+! TODO: urxvt - Toggle cursor depending on Vim mode
+! TODO: xterm - Ctrl+H to switch TMUX pane
+
 ! Base16 Tomorrow
 ! Scheme: Chris Kempson (http://chriskempson.com)
 #define base00 #1d1f21
