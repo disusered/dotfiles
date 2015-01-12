@@ -36,3 +36,7 @@ mkdir $HOME/.fonts
 find $ROOT/vendor/powerline-fonts -type f -name "*.*tf" \
   -exec ln -s "{}" $HOME/.fonts \;
 fc-cache -vf ~/.fonts
+
+# Enable X extension for Slate/xdotool
+defaults write org.macports.X11 enable_test_extensions -boolean true
+defaults write org.x.X11 enable_test_extensions -boolean true
