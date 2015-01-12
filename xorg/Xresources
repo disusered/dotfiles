@@ -3,6 +3,7 @@
 ! TODO: urxvt - Hide string on top of new terms
 ! TODO: urxvt - Use daemon/client mode
 ! TODO: urxvt - Try bitmap font with Powerline fallback
+! TODO: urxvt - HOME/END ie Fn ←/Fn →
 ! TODO: xterm - Ctrl+H to switch TMUX pane
 ! TODO: both  - Use .xinitrc instead of alias
 ! TODO: both  - Play nice with Slate
