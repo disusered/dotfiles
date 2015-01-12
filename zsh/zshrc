@@ -4,6 +4,9 @@ fpath=(
   $fpath
 )
 
+# MacPorts
+export PATH=$HOME/Development/SDK/android-sdk/tools:$HOME/Development/SDK/android-sdk/platform-tools:$HOME/.macports/bin:$HOME/.macports/sbin:$PATH
+
 # Autoload modules
 autoload -U compinit && compinit
 autoload -U promptinit && promptinit
@@ -153,9 +156,6 @@ fi
 
 # NPM completion
 source "$HOME/.dotfiles/vendor/npm"
-
-# MacPorts
-export PATH=$HOME/.macports/bin:$HOME/.macports/sbin:$HOME/Development/SDK/android-sdk/tools:$HOME/Development/SDK/android-sdk/platform-tools:$PATH
 
 # Hello
 ZSHELL=`which zsh`
