@@ -3,6 +3,13 @@
 # Dotfiles path
 ROOT="${HOME}/.dotfiles"
 
+# Xorg
+mkdir -p $HOME/.xinitrc.d
+chmod a+x $ROOT/xorg/xinit.sh
+ln -s $ROOT/xorg/Xresources $HOME/.Xresources
+ln -s $ROOT/xorg/Xmodmap $HOME/.Xmodmap
+ln -s $ROOT/xorg/xinitrc $HOME/.xinitrc
+
 # Create Symlinks
 ln -s $ROOT/zsh/zshrc $HOME/.zshrc
 ln -s $ROOT/zsh/zshenv $HOME/.zshenv
@@ -10,8 +17,6 @@ ln -s $ROOT/tmux/tmux.conf $HOME/.tmux.conf
 ln -s $ROOT/zathura/zathurarc $HOME/.config/zathura
 ln -s $ROOT/cmus/autosave $HOME/.config/cmus/autosave
 ln -s $ROOT/zsh/site-functions/_git /usr/local/share/zsh/site-functions
-ln -s $ROOT/xorg/Xresources $HOME/.Xresources
-ln -s $ROOT/xorg/Xmodmap $HOME/.Xmodmap
 ln -s $ROOT/git/gitconfig $HOME/.gitconfig
 ln -s $ROOT/git/gitignore_global $HOME/.gitignore_global
 ln -s $ROOT/slate/slate $HOME/.slate

@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# ~/.xinitrc
+
+# Load settings
+xrdb $HOME/.Xresources
+
+# Note that startup items are run in the background with the & suffix added.
+# Otherwise the script would halt and wait for each program and daemon to exit
+# before executing the window manager, which isn't backgrounded.
+
+# Startup
+exec urxvt &
+
+# Window manager
+exec quartz-wm
