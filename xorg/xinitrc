@@ -17,3 +17,6 @@ exec urxvtd \
 
 # Window manager
 exec quartz-wm
+
+# Enable pasteboard integration with quartz-wm proxy
+# /usr/bin/quartz-wm --only-proxy & exec /opt/local/bin/wmake
