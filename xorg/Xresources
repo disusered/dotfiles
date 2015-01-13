@@ -7,6 +7,9 @@
 ! TODO: both  - Use .xinitrc instead of alias
 ! TODO: both  - Play nice with Slate
 
+URxvt*termName: xterm-256color
+XTerm*termName: xterm-256color
+
 ! Fonts ------------------------------------------------------------------------
 
 ! DejaVu Sans Mono
