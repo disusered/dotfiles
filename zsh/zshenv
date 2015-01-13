@@ -1,0 +1,24 @@
+export MARKPATH=$HOME/.marks
+
+export TMPDIR="/tmp/$USER"
+
+export LANG='en_US.UTF-8'
+export LC_ALL='en_US.UTF-8'
+
+export BROWSER='open'
+export EDITOR='vim'
+export PAGER='less'
+export LESS='-X -F -g -i -M -R -S -w -z-4'
+
+export ANDROID_HOME="${HOME}/Development/SDK/android-sdk"
+export GOPATH="${HOME}/Development/SDK/gopath"
+export JAVA_HOME=`/usr/libexec/java_home`
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/carlos/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+export NVM_DIR="/Users/carlos/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# MacPorts
+export PATH=$HOME/Development/SDK/android-sdk/tools:$HOME/Development/SDK/android-sdk/platform-tools:$HOME/.macports/bin:$HOME/.macports/sbin:$PATH

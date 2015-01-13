@@ -4,9 +4,6 @@ fpath=(
   $fpath
 )
 
-# MacPorts
-export PATH=$HOME/Development/SDK/android-sdk/tools:$HOME/Development/SDK/android-sdk/platform-tools:$HOME/.macports/bin:$HOME/.macports/sbin:$PATH
-
 # Autoload modules
 autoload -U compinit && compinit
 autoload -U promptinit && promptinit
@@ -29,25 +26,6 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_VERIFY
 setopt HIST_BEEP
-
-# Environment variables
-export LANG='en_US.UTF-8'
-export LC_ALL='en_US.UTF-8'
-
-export BROWSER='open'
-export EDITOR='vim'
-export PAGER='less'
-export LESS='-X -F -g -i -M -R -S -w -z-4'
-
-export ANDROID_HOME="${HOME}/Development/SDK/android-sdk"
-export GOPATH="${HOME}/Development/SDK/gopath"
-export JAVA_HOME=`/usr/libexec/java_home`
-export VAGRANT_DEFAULT_PROVIDER=virtualbox
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/carlos/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-export NVM_DIR="/Users/carlos/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Disable Globbing
 alias git='noglob git'
@@ -97,7 +75,6 @@ alias ll='ls -l'
 alias la='ls -la'
 
 # Temporary files
-export TMPDIR="/tmp/$USER"
 if [[ ! -d "$TMPDIR" ]]; then
   mkdir -p -m 700 "$TMPDIR"
 fi
@@ -112,7 +89,6 @@ bindkey "^[[F" end-of-line          # fn →
 bindkey "^[[3~" delete-char         # fn delete
 
 # Marks
-export MARKPATH=$HOME/.marks
 function jump {
   cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
 }

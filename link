@@ -5,6 +5,7 @@ ROOT="${HOME}/.dotfiles"
 
 # Create Symlinks
 ln -s $ROOT/zsh/zshrc $HOME/.zshrc
+ln -s $ROOT/zsh/zshenv $HOME/.zshenv
 ln -s $ROOT/tmux/tmux.conf $HOME/.tmux.conf
 ln -s $ROOT/zathura/zathurarc $HOME/.config/zathura
 ln -s $ROOT/cmus/autosave $HOME/.config/cmus/autosave
