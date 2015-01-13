@@ -145,13 +145,5 @@ source "$HOME/.dotfiles/vendor/npm"
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# Hello
-ZSHELL=`which zsh`
-if [[ $TMUX = "" ]] then
-  if [[ $COLORTERM != "rxvt" && $XTERM_SHELL != $ZSHELL ]] then
-    ZFONT="smbraille"
-  else
-    ZFONT="future"
-  fi
-  clear && toilet -f $ZFONT `date +"%c"` --filter gay
-fi
+# NVM
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
