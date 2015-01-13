@@ -1,7 +1,6 @@
 ! TODO: urxvt - Properly match wrapped URLs
 ! TODO: urxvt - Toggle cursor depending on Vim mode
 ! TODO: urxvt - Use daemon/client mode
-! TODO: urxvt - Try bitmap font with Powerline fallback
 ! TODO: urxvt - HOME/END ie Fn ←/Fn →
 ! TODO: xterm - Ctrl+H to switch TMUX pane
 ! TODO: both  - Use .xinitrc instead of alias
@@ -9,6 +8,10 @@
 
 URxvt*termName: xterm-256color
 XTerm*termName: xterm-256color
+
+! Keyboard ---------------------------------------------------------------------
+/* URxvt*keysym.Home: \033[1~ */
+/* URxvt*keysym.End: \033[4~ */
 
 ! Fonts ------------------------------------------------------------------------
 
