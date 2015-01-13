@@ -20,5 +20,3 @@ export DOCKER_TLS_VERIFY=1
 export NVM_DIR="/Users/carlos/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# MacPorts
-export PATH=$HOME/Development/SDK/android-sdk/tools:$HOME/Development/SDK/android-sdk/platform-tools:$HOME/.macports/bin:$HOME/.macports/sbin:$PATH
