@@ -1,6 +1,5 @@
 ! TODO: urxvt - Properly match wrapped URLs
 ! TODO: urxvt - Toggle cursor depending on Vim mode
-! TODO: urxvt - Use daemon/client mode
 ! TODO: urxvt - HOME/END ie Fn ←/Fn → in ZSH
 ! TODO: both  - Play nice with Slate
 

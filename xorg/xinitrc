@@ -10,7 +10,10 @@ xrdb $HOME/.Xresources
 # before executing the window manager, which isn't backgrounded.
 
 # Startup
-exec urxvt &
+exec urxvtd \
+  --fork \
+  --opendisplay \
+  --quiet &
 
 # Window manager
 exec quartz-wm
