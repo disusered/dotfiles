@@ -7,6 +7,12 @@ function xmove(x, y) {
     x + " " + (y - 44) + "'");
 }
 
+function xsize() {
+  // resize
+  S.shell("/bin/bash -c 'export DISPLAY=:0;" +
+    xdotool + " getactivewindow windowmove 0 0 windowsize --usehints 100% 100%'");
+}
+
 function nudge_x11_workaround(win, x, y) {
   x *= 25;
   y *= 25;
@@ -24,7 +30,7 @@ function nudge_x11_workaround(win, x, y) {
   }
 };
 
-S.bind("left:cmd;alt",  function(win) { nudge_x11_workaround(win, -1, 0); });
-S.bind("right:cmd;alt", function(win) { nudge_x11_workaround(win,  1, 0); });
-S.bind("up:cmd;alt",    function(win) { nudge_x11_workaround(win, 0, -1); });
-S.bind("down:cmd;alt",  function(win) { nudge_x11_workaround(win, 0,  1); });
+// S.bind("left:cmd;alt",  function(win) { nudge_x11_workaround(win, -1, 0); });
+// S.bind("right:cmd;alt", function(win) { nudge_x11_workaround(win,  1, 0); });
+// S.bind("up:cmd;alt",    function(win) { nudge_x11_workaround(win, 0, -1); });
+// S.bind("down:cmd;alt",  function(win) { nudge_x11_workaround(win, 0,  1); });
