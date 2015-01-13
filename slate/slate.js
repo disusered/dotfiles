@@ -1,6 +1,19 @@
 var hyper   = 'ctrl;shift;alt;cmd';
 var xdotool = '$HOME/.macports/bin/xdotool';
 
+function screen() {
+  var screen = slate.screen();
+  var rect   = screen.vrect();
+
+  return {
+    id: screen.id(),
+    topLeftX: rect.x,
+    topLeftY: rect.y,
+    width: rect.width,
+    height: rect.height
+  }
+}
+
 function xmove(x, y) {
   S.shell("/bin/bash -c 'export DISPLAY=:0;" +
     xdotool + " getactivewindow windowmove --relative -- " +
@@ -8,9 +21,13 @@ function xmove(x, y) {
 }
 
 function xsize() {
+  var display = screen();
   // resize
   S.shell("/bin/bash -c 'export DISPLAY=:0;" +
-    xdotool + " getactivewindow windowmove 0 0 windowsize --usehints 100% 100%'");
+    xdotool + " getactivewindow windowmove 0 0 windowsize --usehints " +
+      display.width + "% " + display.height + "%'");
+
+  slate.log(display);
 }
 
 function nudge_x11_workaround(win, x, y) {
