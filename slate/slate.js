@@ -13,7 +13,7 @@ var res = {
 };
 
 function screen() {
-  var screen = slate.screen();
+  var display = slate.screen();
   var rect   = screen.vrect();
 
   return {
@@ -22,7 +22,7 @@ function screen() {
     topLeftY: rect.y,
     width: rect.width,
     height: rect.height
-  }
+  };
 }
 
 function xmove(x, y) {
@@ -48,7 +48,7 @@ function nudge_x11_workaround(win, x, y) {
   if (typeof win == "undefined") {
     xmove(x, y);
   } else {
-    if (x == 0) x = "+0";
+    if (x === 0) x = "+0";
     else if (x > 0) x = "+" + x + "%";
     else x = x + "%";
     if (y == 0) y = "+0";
@@ -56,9 +56,9 @@ function nudge_x11_workaround(win, x, y) {
     else y = y + "%";
     win.doOperation(S.operation("nudge", { "x":x, "y":y }));
   }
-};
+}
 
-// S.bind("left:cmd;alt",  function(win) { nudge_x11_workaround(win, -1, 0); });
-// S.bind("right:cmd;alt", function(win) { nudge_x11_workaround(win,  1, 0); });
-// S.bind("up:cmd;alt",    function(win) { nudge_x11_workaround(win, 0, -1); });
-// S.bind("down:cmd;alt",  function(win) { nudge_x11_workaround(win, 0,  1); });
+S.bind('left:cmd;alt',  function(win) { nudge_x11_workaround(win, -1, 0); });
+S.bind('right:cmd;alt', function(win) { nudge_x11_workaround(win,  1, 0); });
+S.bind('up:cmd;alt',    function(win) { nudge_x11_workaround(win, 0, -1); });
+S.bind('down:cmd;alt',  function(win) { nudge_x11_workaround(win, 0,  1); });
