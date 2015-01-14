@@ -58,6 +58,21 @@ function nudge_x11_workaround(win, x, y) {
   }
 }
 
+function fullscreen(win) {
+  var fs = slate.operation('move', {
+    'x' : 'screenOriginX',
+    'y' : 'screenOriginY',
+    'width' : 'screenSizeX',
+    'height' : 'screenSizeY'
+  });
+
+  if (typeof win == "undefined") {
+    
+  } else {
+    win.doOperation(fs);
+  }
+}
+
 S.bind('left:cmd;alt',  function(win) { nudge_x11_workaround(win, -1, 0); });
 S.bind('right:cmd;alt', function(win) { nudge_x11_workaround(win,  1, 0); });
 S.bind('up:cmd;alt',    function(win) { nudge_x11_workaround(win, 0, -1); });
