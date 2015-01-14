@@ -47,9 +47,11 @@
         ranger mediainfo highlight atool the_silver_searcher txt2regex \
         git git-flow ack ctags httpie wget apache-ant tmux-pasteboard \
         graphicsmagick imagemagick +lqr +rsvg +wmf cmus +aac +flac \
+        python34 py34-pip py34-jinja2 asciidoc py34-pygments py34-pyqt5 \
         zsh mercurial +zsh_completion lua luajit gnupg \
         macvim +cscope +lua +python27 +ruby20 +breakindent \
         vim +cscope +lua +python27 +ruby20 +breakindent
+      sudo pip-3.4 install qutebrowser
       # Node
       curl https://raw.githubusercontent.com/creationix/nvm/v0.22.1/install.sh | bash
       nvm install 0.10 && nvm alias default stable
