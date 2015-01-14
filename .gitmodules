@@ -22,3 +22,6 @@
 [submodule "vendor/powerline-fonts"]
 	path = vendor/powerline-fonts
 	url = git@github.com:powerline/fonts.git
+[submodule "vendor/meslo"]
+	path = vendor/meslo
+	url = git@github.com:andreberg/Meslo-Font.git
