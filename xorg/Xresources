@@ -3,8 +3,12 @@
 ! TODO: urxvt - HOME/END ie Fn ←/Fn → in ZSH
 ! TODO: urxvt - Disable Fn+j bind
 
+! Config -----------------------------------------------------------------------
 URxvt*termName: xterm-256color
 XTerm*termName: xterm-256color
+
+URxvt.scrollStyle: rxvt
+URxvt.scrollBar: false
 
 ! Keyboard ---------------------------------------------------------------------
 /* URxvt*keysym.Home: \033[1~ */
