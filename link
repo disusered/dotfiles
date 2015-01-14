@@ -41,6 +41,11 @@ mkdir -p $HOME/Development/SDK/gopath
 
 # Add urxvt fonts
 mkdir $HOME/.fonts
+
+unzip $ROOT/vendor/meslo/dist/v1.2.1/Meslo\ LG\ DZ\ v1.2.1.zip \
+  -d $ROOT/vendor/meslo/dist/v1.2.1/
+find $ROOT/vendor/meslo/dist/v1.2.1 -type f -name "*.*tf" \
+  -exec ln -s "{}" $HOME/.fonts \;
 find $ROOT/vendor/powerline-fonts -type f -name "*.*tf" \
   -exec ln -s "{}" $HOME/.fonts \;
 fc-cache -vf ~/.fonts
