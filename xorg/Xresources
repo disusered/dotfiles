@@ -1,6 +1,7 @@
 ! TODO: urxvt - Properly match wrapped URLs
 ! TODO: urxvt - Toggle cursor depending on Vim mode
 ! TODO: urxvt - HOME/END ie Fn ←/Fn → in ZSH
+! TODO: urxvt - Disable Fn+j bind
 
 URxvt*termName: xterm-256color
 XTerm*termName: xterm-256color
