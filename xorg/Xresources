@@ -1,12 +1,6 @@
 ! TODO: urxvt - Properly match wrapped URLs
 ! TODO: urxvt - Toggle cursor depending on Vim mode
 ! TODO: urxvt - HOME/END ie Fn ←/Fn → in ZSH
-! TODO: slate - Meta+j send to bottom screen
-! TODO: slate - Meta+k send to top screen
-! TODO: slate - Meta+j fullscreen if on bottom screen 
-! TODO: slate - Meta+k fullscreen if on top screen
-! TODO: slate - Meta+l resize width anchored to right
-! TODO: slate - Meta+h resize width anchored to left
 
 URxvt*termName: xterm-256color
 XTerm*termName: xterm-256color
