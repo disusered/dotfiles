@@ -21,15 +21,18 @@ function screen() {
     }
   };
 
+  var active;
+
   if (count = 1) {
+    active = res.internal;
   } else {
-    // TODO
+    // TODO: find out what screen we're in
   }
 
   return {
     id: info.id(),
-    height: res.internal.y,
-    width: res.internal.x
+    height: active.y,
+    width: active.x
   };
 }
 
