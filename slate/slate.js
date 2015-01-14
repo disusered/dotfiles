@@ -1,6 +1,17 @@
 var hyper   = 'ctrl;shift;alt;cmd';
 var xdotool = '$HOME/.macports/bin/xdotool';
 
+var res = {
+  internal: {
+    x: 1280,
+    y: 800
+  },
+  external: {
+    x: 1920,
+    y: 1080
+  }
+};
+
 function screen() {
   var screen = slate.screen();
   var rect   = screen.vrect();
