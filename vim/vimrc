@@ -35,6 +35,7 @@
   Plug 'justinmk/vim-gtfo'
   Plug 'vasconcelloslf/vim-interestingwords'
   Plug 'tpope/vim-commentary' 
+  Plug 'Yggdroot/indentLine'
   Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
   Plug 'Lokaltog/vim-easymotion', { 'on': '<Plug>(easymotion-bd-t2)'}
   Plug 'rizzatti/dash.vim',       { 'on': ['<Plug>DashSearch'] }
@@ -314,6 +315,7 @@
   nnoremap    k                 gk
 
 " plugin settings ==============================================================
+  let g:indentLine_char                               = '¦'
   let g:syntastic_html_checkers                       = ['']
   let g:syntastic_javascript_checkers                 = ['jshint']
   let g:syntastic_mode_map                              = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
