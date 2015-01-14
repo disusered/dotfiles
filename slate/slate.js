@@ -58,7 +58,7 @@ function fullscreen(win) {
   });
 
   if (typeof win == "undefined") {
-    
+    xsize(); 
   } else {
     win.doOperation(fs);
   }
