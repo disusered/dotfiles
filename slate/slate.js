@@ -1,27 +1,30 @@
 var hyper   = 'ctrl;shift;alt;cmd';
 var xdotool = '$HOME/.macports/bin/xdotool';
 
-var res = {
-  internal: {
-    x: 1280,
-    y: 800
-  },
-  external: {
-    x: 1920,
-    y: 1080
-  }
-};
-
 function screen() {
-  var display = slate.screen();
-  var rect   = screen.vrect();
+  var info = slate.screen();
+  var count = slate.screenCount();
+
+  var res = {
+    internal: {
+      x: 1280,
+      y: 800
+    },
+    external: {
+      x: 1920,
+      y: 1080
+    }
+  };
+
+  if (count = 1) {
+  } else {
+    // TODO
+  }
 
   return {
-    id: screen.id(),
-    topLeftX: rect.x,
-    topLeftY: rect.y,
-    width: rect.width,
-    height: rect.height
+    id: info.id(),
+    height: res.internal.y,
+    width: res.internal.x
   };
 }
 
@@ -33,12 +36,9 @@ function xmove(x, y) {
 
 function xsize() {
   var display = screen();
-  // resize
   S.shell("/bin/bash -c 'export DISPLAY=:0;" +
-    xdotool + " getactivewindow windowmove 0 0 windowsize --usehints " +
-      display.width + "% " + display.height + "%'");
-
-  slate.log(display);
+    xdotool + " getactivewindow windowmove --sync 0 0 windowsize " +
+      display.width + " " + display.height + "'");
 }
 
 function nudge_x11_workaround(win, x, y) {
