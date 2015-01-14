@@ -73,6 +73,8 @@ function fullscreen(win) {
   }
 }
 
+S.bind('k' + hyper,  function(win) { fullscreen(win); });
+
 S.bind('left:cmd;alt',  function(win) { nudge_x11_workaround(win, -1, 0); });
 S.bind('right:cmd;alt', function(win) { nudge_x11_workaround(win,  1, 0); });
 S.bind('up:cmd;alt',    function(win) { nudge_x11_workaround(win, 0, -1); });
