@@ -47,7 +47,7 @@ bind h:${hyper} chain ${leftquarter} | ${leftthird} | ${lefthalf}
 
 # bind up to screen alpha
 # replace chain with sequence for single click composite commands
-bind j:${hyper} chain ${beta} | ${full}
+# bind j:${hyper} chain ${beta} | ${full}
 
 # bind down to screen beta
 # bind k:${hyper} chain ${alpha} | ${full}
