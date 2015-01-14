@@ -1,4 +1,4 @@
-var hyper   = 'ctrl;shift;alt;cmd';
+var hyper   = ':ctrl;shift;alt;cmd';
 var xdotool = '$HOME/.macports/bin/xdotool';
 
 function screen() {
