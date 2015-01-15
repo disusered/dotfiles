@@ -38,7 +38,7 @@ Xft.hintstyle: hintfull
 ! Files ------------------------------------------------------------------------
 
 ! Options
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,font-size
 URxvt.url-launcher: /usr/bin/open
 URxvt.matcher.button: 1
 
