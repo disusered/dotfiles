@@ -41,22 +41,24 @@ function xsize(side, fraction) {
   var height  = display.height;
   var width   = display.width;
 
+  var fractionWidth;
+
   var initialHeight = 0;
   var initialWidth = 0;
 
   var ratio = (fraction) ? fraction : 2;
 
   if (side !== 'full') {
-    width = width / ratio;
+    fractionWidth = width / ratio;
   }
 
   if (side && side === 'right') {
-    initialWidth = width;
+    initialWidth = fractionWidth;
   }
 
   S.shell("/bin/bash -c 'export DISPLAY=:0;" +
     xdotool + ' getactivewindow windowsize --sync ' +
-    width + ' ' + height + ' windowmove --sync -- ' +
+    fractionWidth + ' ' + height + ' windowmove --sync -- ' +
     initialWidth + ' ' + initialHeight +
     "'");
 }
