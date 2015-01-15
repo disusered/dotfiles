@@ -6,7 +6,7 @@
 xrdb $HOME/.Xresources
 
 # Default key repeat
-xset r rate
+xset r rate 150
 
 # Note that startup items are run in the background with the & suffix added.
 # Otherwise the script would halt and wait for each program and daemon to exit
