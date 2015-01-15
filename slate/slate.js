@@ -1,7 +1,8 @@
 // TODO: slate - Meta+j throw
-// TODO: slate - Meta+k fullscreen
-// TODO: slate - Meta+l resize width anchored to right
-// TODO: slate - Meta+h resize width anchored to left
+// TODO: slate - Meta+l anchor right x11
+// TODO: slate - Meta+l anchor left quartz
+// TODO: slate - Meta+l anchor left x11
+// TODO: slate - Resize window...
 
 var hyper   = ':ctrl;shift;alt;cmd';
 var xdotool = '$HOME/.macports/bin/xdotool';
