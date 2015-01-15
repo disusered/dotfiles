@@ -148,3 +148,14 @@ source "$HOME/.dotfiles/vendor/npm"
 
 # NVM
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# Login banner
+ZSHELL=`which zsh`
+if [[ $TMUX = "" ]] then
+  if [[ $COLORTERM != "rxvt" && $XTERM_SHELL != $ZSHELL ]] then
+    ZFONT="smbraille"
+  else
+    ZFONT="future"
+  fi
+  clear && toilet -f $ZFONT `date +"%c"` --filter gay
+fi
