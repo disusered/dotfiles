@@ -25,6 +25,7 @@ function screen() {
     active = res.internal;
   } else {
     // TODO: find out what screen we're in
+    active = res.external;
   }
 
   return {
