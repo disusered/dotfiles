@@ -25,3 +25,6 @@
 [submodule "vendor/meslo"]
 	path = vendor/meslo
 	url = git@github.com:andreberg/Meslo-Font.git
+[submodule "vendor/urxvt-font-size"]
+	path = vendor/urxvt-font-size
+	url = git@github.com:majutsushi/urxvt-font-size.git
