@@ -86,4 +86,5 @@ function fullscreen(win) {
 }
 
 S.bind('k' + hyper,  function(win) { fullscreen(win); });
-S.bind('l' + hyper,  function(win) { resize(win); });
+S.bind('l' + hyper,  function(win) { resize(win, 'right'); });
+S.bind('h' + hyper,  function(win) { resize(win, 'left'); });
