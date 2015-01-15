@@ -34,12 +34,6 @@ function screen() {
   };
 }
 
-function xmove(x, y) {
-  S.shell("/bin/bash -c 'export DISPLAY=:0;" +
-    xdotool + ' getactivewindow windowmove --relative -- ' +
-    x + ' ' + (y - 44) + "'");
-}
-
 function xsize(side, fraction) {
   var display = screen();
 
