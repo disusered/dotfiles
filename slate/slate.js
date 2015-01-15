@@ -37,16 +37,16 @@ function screen() {
 }
 
 function xmove(x, y) {
-  S.shell('/bin/bash -c 'export DISPLAY=:0;' +
+  S.shell("/bin/bash -c 'export DISPLAY=:0;" +
     xdotool + ' getactivewindow windowmove --relative -- ' +
-    x + ' ' + (y - 44) + ''');
+    x + ' ' + (y - 44) + "'");
 }
 
 function xsize() {
   var display = screen();
-  S.shell('/bin/bash -c 'export DISPLAY=:0;' +
+  S.shell("/bin/bash -c 'export DISPLAY=:0;" +
     xdotool + ' getactivewindow windowmove --sync 0 0 windowsize ' +
-      display.width + ' ' + display.height + ''');
+      display.width + ' ' + display.height + "'");
 }
 
 function resize(win, side) {
