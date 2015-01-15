@@ -50,17 +50,23 @@ function xsize() {
       display.width + " " + display.height + "'");
 }
 
-function resize(win) {
-   var pushRight = slate.operation("push", {
+function resize(win, side) {
+  var pushRight = slate.operation("push", {
     "direction" : "right",
     "style" : "bar-resize:screenSizeX/2"
   });   
 
+  var pushLeft = slate.operation("push", {
+    "direction" : "left",
+    "style" : "bar-resize:screenSizeX/2"
+  });   
+
+  var pushSide = (side === 'left') ? pushLeft : pushRight;
+
   if (typeof win == "undefined") {
     xsize(); 
   } else {
-    S.log(win)
-    win.doOperation(pushRight);
+    win.doOperation(pushSide);
   }
 }
 
