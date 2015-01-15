@@ -50,17 +50,10 @@ function xsize() {
 }
 
 function resize(win, side) {
-  var pushRight = slate.operation('push', {
-    'direction' : 'right',
+  var pushSide = slate.operation('push', {
+    'direction' : side,
     'style' : 'bar-resize:screenSizeX/2'
   });   
-
-  var pushLeft = slate.operation('push', {
-    'direction' : 'left',
-    'style' : 'bar-resize:screenSizeX/2'
-  });   
-
-  var pushSide = (side === 'left') ? pushLeft : pushRight;
 
   if (typeof win == 'undefined') {
     xsize(); 
