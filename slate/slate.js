@@ -24,7 +24,7 @@ function screen() {
 
   var active;
 
-  if (count = 1) {
+  if (count === 1) {
     active = res.internal;
   } else {
     // TODO: find out what screen we're in
