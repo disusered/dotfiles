@@ -1,6 +1,4 @@
 // TODO: slate - Meta+j throw
-// TODO: slate - Meta+l anchor right x11
-// TODO: slate - Meta+l anchor left x11
 // TODO: slate - Resize window...
 
 var hyper   = ':ctrl;shift;alt;cmd';
@@ -42,19 +40,30 @@ function xmove(x, y) {
     x + ' ' + (y - 44) + "'");
 }
 
-function xsize() {
+function xsize(side, fraction) {
   var display = screen();
-  var width;
-  var height;
 
-  if (arguments.length > 0) {
-  } else {
-    width = display.width;
-    height = display.height;
+  var height  = display.height;
+  var width   = display.width;
+
+  var initialHeight = 0;
+  var initialWidth = 0;
+
+  var ratio = (fraction) ? fraction : 2;
+
+  if (side !== 'full') {
+    width = width / ratio;
   }
+
+  if (side && side === 'right') {
+    initialWidth = width;
+  }
+
   S.shell("/bin/bash -c 'export DISPLAY=:0;" +
-    xdotool + ' getactivewindow windowmove --sync 0 0 windowsize ' +
-      display.width + ' ' + display.height + "'");
+    xdotool + ' getactivewindow windowsize --sync ' +
+    width + ' ' + height + ' windowmove --sync -- ' +
+    initialWidth + ' ' + initialHeight +
+    "'");
 }
 
 function resize(win, side) {
@@ -64,7 +73,7 @@ function resize(win, side) {
   });   
 
   if (typeof win == 'undefined') {
-    xsize(2); 
+    xsize(side); 
   } else {
     win.doOperation(pushSide);
   }
@@ -79,7 +88,7 @@ function fullscreen(win) {
   });
 
   if (typeof win == 'undefined') {
-    xsize(); 
+    xsize('full'); 
   } else {
     win.doOperation(fs);
   }
