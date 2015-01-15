@@ -1,5 +1,6 @@
 // TODO: slate - Meta+j throw X
-// TODO: slate - Resize window...
+// TODO: slate - Meta+h resize X
+// TODO: slate - Meta+l resize X
 
 var hyper   = ':ctrl;shift;alt;cmd';
 var xdotool = '$HOME/.macports/bin/xdotool';
