@@ -3,14 +3,21 @@
 ! TODO: urxvt - HOME/END ie Fn ←/Fn → in ZSH
 
 ! Config -----------------------------------------------------------------------
+! Terminal
 URxvt*termName: xterm-256color
 XTerm*termName: xterm-256color
 
+! Extensions
+URxvt.perl-ext-common: default,matcher,font-size,tabbed
+
+! Disable scrollbars
 URxvt.scrollStyle: rxvt
 URxvt.scrollBar: false
 
+! Disable Ctrl+Shift
 URxvt.iso14755: false
 URxvt.iso14755_52: false
+
 
 ! Keyboard ---------------------------------------------------------------------
 /* URxvt*keysym.Home: \033[1~ */
@@ -37,7 +44,6 @@ Xft.hintstyle: hintfull
 ! Files ------------------------------------------------------------------------
 
 ! Options
-URxvt.perl-ext-common: default,matcher,font-size
 URxvt.url-launcher: /usr/bin/open
 URxvt.matcher.button: 1
 
