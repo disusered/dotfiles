@@ -1,7 +1,6 @@
 ! TODO: urxvt - Properly match wrapped URLs
 ! TODO: urxvt - Toggle cursor depending on Vim mode
 ! TODO: urxvt - HOME/END ie Fn ←/Fn → in ZSH
-! TODO: urxvt - Disable Fn+j bind
 
 ! Config -----------------------------------------------------------------------
 URxvt*termName: xterm-256color
@@ -10,9 +9,16 @@ XTerm*termName: xterm-256color
 URxvt.scrollStyle: rxvt
 URxvt.scrollBar: false
 
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
 ! Keyboard ---------------------------------------------------------------------
 /* URxvt*keysym.Home: \033[1~ */
 /* URxvt*keysym.End: \033[4~ */
+
+! Increase font size
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
 
 ! Fonts ------------------------------------------------------------------------
 
