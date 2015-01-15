@@ -1,4 +1,4 @@
-// TODO: slate - Meta+j throw
+// TODO: slate - Meta+j throw X
 // TODO: slate - Resize window...
 
 var hyper   = ':ctrl;shift;alt;cmd';
@@ -60,10 +60,22 @@ function xsize(side, fraction) {
     "'");
 }
 
+function changescreen(win) {
+  var throwOp = slate.operation('throw', {
+    'screen': 'next'
+  });
+
+  if (typeof win == 'undefined') {
+    // xthrow(); 
+  } else {
+    win.doOperation(throwOp);
+  }
+}
+
 function resize(win, side) {
   var pushSide = slate.operation('push', {
-    'direction' : side,
-    'style' : 'bar-resize:screenSizeX/2'
+    'direction': side,
+    'style':     'bar-resize:screenSizeX/2'
   });   
 
   if (typeof win == 'undefined') {
@@ -75,10 +87,10 @@ function resize(win, side) {
 
 function fullscreen(win) {
   var fs = slate.operation('move', {
-    'x' : 'screenOriginX',
-    'y' : 'screenOriginY',
-    'width' : 'screenSizeX',
-    'height' : 'screenSizeY'
+    'x':      'screenOriginX',
+    'y':      'screenOriginY',
+    'width':  'screenSizeX',
+    'height': 'screenSizeY'
   });
 
   if (typeof win == 'undefined') {
@@ -89,5 +101,6 @@ function fullscreen(win) {
 }
 
 S.bind('k' + hyper,  function(win) { fullscreen(win); });
+S.bind('j' + hyper,  function(win) { changescreen(win); });
 S.bind('l' + hyper,  function(win) { resize(win, 'right'); });
 S.bind('h' + hyper,  function(win) { resize(win, 'left'); });
