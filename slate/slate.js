@@ -44,6 +44,14 @@ function xmove(x, y) {
 
 function xsize() {
   var display = screen();
+  var width;
+  var height;
+
+  if (arguments.length > 0) {
+  } else {
+    width = display.width;
+    height = display.height;
+  }
   S.shell("/bin/bash -c 'export DISPLAY=:0;" +
     xdotool + ' getactivewindow windowmove --sync 0 0 windowsize ' +
       display.width + ' ' + display.height + "'");
@@ -56,7 +64,7 @@ function resize(win, side) {
   });   
 
   if (typeof win == 'undefined') {
-    xsize(); 
+    xsize(2); 
   } else {
     win.doOperation(pushSide);
   }
