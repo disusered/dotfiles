@@ -32,7 +32,7 @@ URxvt.keysym.C-Down:   perl:font-size:decrease
 
 ! Meslo
 xterm*faceName: Meslo LG S for Powerline:style=Regular:size=10
-URxvt.font:     xft:Meslo LG S DZ:size=10,xft:Meslo LG S for Powerline:size=10
+URxvt.font:     xft:Meslo LG S DZ:size=9,xft:Meslo LG S for Powerline:size=9
 
 ! Options
 Xft.dpi:       113
