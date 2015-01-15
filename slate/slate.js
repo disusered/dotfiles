@@ -38,32 +38,32 @@ function screen() {
 }
 
 function xmove(x, y) {
-  S.shell("/bin/bash -c 'export DISPLAY=:0;" +
-    xdotool + " getactivewindow windowmove --relative -- " +
-    x + " " + (y - 44) + "'");
+  S.shell('/bin/bash -c 'export DISPLAY=:0;' +
+    xdotool + ' getactivewindow windowmove --relative -- ' +
+    x + ' ' + (y - 44) + ''');
 }
 
 function xsize() {
   var display = screen();
-  S.shell("/bin/bash -c 'export DISPLAY=:0;" +
-    xdotool + " getactivewindow windowmove --sync 0 0 windowsize " +
-      display.width + " " + display.height + "'");
+  S.shell('/bin/bash -c 'export DISPLAY=:0;' +
+    xdotool + ' getactivewindow windowmove --sync 0 0 windowsize ' +
+      display.width + ' ' + display.height + ''');
 }
 
 function resize(win, side) {
-  var pushRight = slate.operation("push", {
-    "direction" : "right",
-    "style" : "bar-resize:screenSizeX/2"
+  var pushRight = slate.operation('push', {
+    'direction' : 'right',
+    'style' : 'bar-resize:screenSizeX/2'
   });   
 
-  var pushLeft = slate.operation("push", {
-    "direction" : "left",
-    "style" : "bar-resize:screenSizeX/2"
+  var pushLeft = slate.operation('push', {
+    'direction' : 'left',
+    'style' : 'bar-resize:screenSizeX/2'
   });   
 
   var pushSide = (side === 'left') ? pushLeft : pushRight;
 
-  if (typeof win == "undefined") {
+  if (typeof win == 'undefined') {
     xsize(); 
   } else {
     win.doOperation(pushSide);
@@ -78,7 +78,7 @@ function fullscreen(win) {
     'height' : 'screenSizeY'
   });
 
-  if (typeof win == "undefined") {
+  if (typeof win == 'undefined') {
     xsize(); 
   } else {
     win.doOperation(fs);
