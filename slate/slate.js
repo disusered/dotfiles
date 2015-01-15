@@ -50,6 +50,20 @@ function xsize() {
       display.width + " " + display.height + "'");
 }
 
+function resize(win) {
+   var pushRight = slate.operation("push", {
+    "direction" : "right",
+    "style" : "bar-resize:screenSizeX/2"
+  });   
+
+  if (typeof win == "undefined") {
+    xsize(); 
+  } else {
+    S.log(win)
+    win.doOperation(pushRight);
+  }
+}
+
 function fullscreen(win) {
   var fs = slate.operation('move', {
     'x' : 'screenOriginX',
