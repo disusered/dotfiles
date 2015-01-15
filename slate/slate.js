@@ -1,6 +1,5 @@
 // TODO: slate - Meta+j throw
 // TODO: slate - Meta+l anchor right x11
-// TODO: slate - Meta+l anchor left quartz
 // TODO: slate - Meta+l anchor left x11
 // TODO: slate - Resize window...
 
