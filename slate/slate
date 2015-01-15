@@ -42,7 +42,7 @@ alias hyper ctrl;shift;alt;cmd
 # ---------------------------------
 
 # Movement
-bind l:${hyper} chain ${rightquarter} | ${rightthird} | ${righthalf}
+# bind l:${hyper} chain ${rightquarter} | ${rightthird} | ${righthalf}
 bind h:${hyper} chain ${leftquarter} | ${leftthird} | ${lefthalf}
 
 # bind up to screen alpha
