@@ -35,6 +35,29 @@ function screen() {
   };
 }
 
+function xwindow() {
+  var object = {};
+
+  var output = S.shell("/bin/bash -c 'export DISPLAY=:0;" +
+    xdotool + ' getactivewindow getwindowgeometry --shell' +
+    "'", true);
+
+  output = output.split(/[,\n]/);
+
+  output.forEach(function(value) {
+    var key,
+        keyVal;
+
+    keyVal = value.split(/=/);
+    key = keyVal[0];
+    value = keyVal[1];
+
+    object[key] = value; 
+  });
+
+  return object;
+}
+
 function xsize(side, fraction) {
   var display = screen();
 
