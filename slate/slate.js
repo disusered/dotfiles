@@ -126,6 +126,20 @@ function stoggle(side) {
   return chain;
 }
 
+function anchor(win, side) {
+  var push = slate.operation('push', {
+    'direction': side,
+    'style':     'bar-resize:screenSizeX*0.5'
+  });   
+
+  if (typeof win == 'undefined') {
+    // TODO: X11 resize toggle
+  } else {
+    stoggle(side).run();
+    win.doOperation(push);
+  }
+}
+
 function fullscreen(win) {
   var fs = slate.operation('move', {
     'x':      'screenOriginX',
@@ -143,5 +157,5 @@ function fullscreen(win) {
 
 S.bind('k' + hyper,  function(win) { fullscreen(win); });
 S.bind('j' + hyper,  function(win) { changescreen(win); });
-S.bind('l' + hyper,  stoggle('right'));
-S.bind('h' + hyper,  stoggle('left'));
+S.bind('l' + hyper,  function(win) { anchor(win, 'right') });
+S.bind('h' + hyper,  function(win) { anchor(win, 'left') });
