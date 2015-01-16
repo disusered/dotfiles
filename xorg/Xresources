@@ -28,8 +28,6 @@ URxvt.iso14755_52: false
 
 
 ! Keyboard ---------------------------------------------------------------------
-/* URxvt*keysym.Home: \033[1~ */
-/* URxvt*keysym.End: \033[4~ */
 
 ! Increase font size
 URxvt.keysym.C-Up:     perl:font-size:increase
