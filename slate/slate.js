@@ -186,7 +186,15 @@ function leftedge(win) {
     'height': height
   });
 
-  operation = (x === 0) ? resize : move;
+  var push = slate.operation('push', {
+    'direction': 'right'
+  });   
+
+  var sequence = slate.operation("sequence", {
+    "operations" : [ [move, push] ]
+  });
+
+  operation = (x === 0) ? resize : sequence;
 
   win.doOperation(operation);
 }
