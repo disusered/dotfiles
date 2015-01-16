@@ -1,8 +1,6 @@
 // TODO: slate - Refactor resize
 //  [ Will resize the left edge incrementally until 100%
 //  ] Will resize the right edge incrementally until 100%
-//  Anchored left:
-//    ] Will increase by 10%
 // TODO: slate - [ resize Aqua
 // TODO: slate - ] resize Aqua
 // TODO: slate - [ resize X
@@ -159,6 +157,7 @@ function leftedge(win) {
   var info   = query();
 
   var x = info.window.x;
+  var y = info.window.y;
 
   var height = info.window.height;
   var width  = info.window.width;
@@ -181,13 +180,11 @@ function leftedge(win) {
   });
 
   var move = slate.operation('move', {
-    'x': 0,
-    'y': 0,
-    'width': width,
+    'x': x - (x*0.10),
+    'y': y,
+    'width': width + (x*10),
     'height': height
   });
-
-  slate.log(info.window.width);
 
   operation = (x === 0) ? resize : move;
 
