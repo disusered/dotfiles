@@ -74,6 +74,8 @@ function xsize(side, fraction) {
 
   if (side !== 'full') {
     fractionWidth = width / ratio;
+  } else {
+    fractionWidth = width;
   }
 
   if (side && side === 'right') {
@@ -84,7 +86,7 @@ function xsize(side, fraction) {
     xdotool + ' getactivewindow windowsize --sync ' +
     fractionWidth + ' ' + height + ' windowmove --sync -- ' +
     initialWidth + ' ' + initialHeight +
-    "'");
+  "'");
 }
 
 function changescreen(win) {
