@@ -137,24 +137,43 @@ function changescreen(win) {
   }
 }
 
-function rightedge() {
+function rightedge(win) {
   var info = query();
+  var anchor;
+
+  if (info.window.x === 0) {
+    anchor = 'top-left';
+  } else {
+    anchor = 'top-right';
+  }
+
 
   var resize = slate.operation('resize', {
     'width' : '+10%',
     'height' : '+0',
-    'anchor': 'top-left'
+    'anchor': anchor
   });
-  return resize;
+
+  win.doOperation(resize);
 }
 
-function leftedge() {
+function leftedge(win) {
+  var info = query();
+  var anchor;
+
+  if (info.window.x === 0) {
+    anchor = 'top-left';
+  } else {
+    anchor = 'top-right';
+  }
+
   var resize = slate.operation('resize', {
     'width' : '-10%',
     'height' : '+0',
-    'anchor': 'top-left'
+    'anchor': anchor
   });
-  return resize;
+
+  win.doOperation(resize);
 }
 
 function anchor(win, side) {
@@ -196,5 +215,5 @@ S.bind('l' + hyper, function(win) { anchor(win, 'right'); });
 S.bind('h' + hyper, function(win) { anchor(win, 'left'); });
 
 // Scale
-slate.bind(']' + hyper, rightedge());
-slate.bind('[' + hyper, leftedge());
+slate.bind(']' + hyper, function(win) { rightedge(win); });
+slate.bind('[' + hyper, function(win) { leftedge(win); });
