@@ -60,3 +60,6 @@ ln -s $ROOT/vendor/urxvt-font-size/font-size $HOME/.urxvt/ext
 # Enable X extension for Slate/xdotool
 defaults write org.macports.X11 enable_test_extensions -boolean true
 defaults write org.x.X11 enable_test_extensions -boolean true
+
+defaults write org.macports.X11 app_to_run urxvtc
+defaults write org.x.X11 app_to_run urxvtc
