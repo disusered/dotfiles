@@ -101,29 +101,19 @@ function changescreen(win) {
   }
 }
 
-function stoggle(side) {
-  var pushSide50 = slate.operation('push', {
-    'direction': side,
-    'style':     'bar-resize:screenSizeX*0.5'
-  });   
-  var pushSide60 = slate.operation('push', {
-    'direction': side,
-    'style':     'bar-resize:screenSizeX*0.6'
-  });   
-  var pushSide75 = slate.operation('push', {
-    'direction': side,
-    'style':     'bar-resize:screenSizeX*0.75'
-  });   
-
-  var chain = slate.operation("chain", {
-    'operations' : [
-      pushSide75,
-      pushSide60,
-      pushSide50
-    ]
+function sresize() {
+  var resize = slate.operation('resize', {
+    'width' : '+10%',
+    'height' : '+0'
   });
-
-  return chain;
+  var nudge = slate.operation('nudge', {
+    'x' : '-10%',
+    'y' : '+0'
+  })
+  var sequence = slate.operation("sequence", {
+    "operations" : [ [ nudge, resize] ]
+  });
+  return sequence;
 }
 
 function anchor(win, side) {
@@ -133,9 +123,8 @@ function anchor(win, side) {
   });   
 
   if (typeof win == 'undefined') {
-    // TODO: X11 resize toggle
+    xsize(side); 
   } else {
-    stoggle(side).run();
     win.doOperation(push);
   }
 }
@@ -155,7 +144,15 @@ function fullscreen(win) {
   }
 }
 
+// Fullscreen
 S.bind('k' + hyper,  function(win) { fullscreen(win); });
+
+// Throw
 S.bind('j' + hyper,  function(win) { changescreen(win); });
-S.bind('l' + hyper,  function(win) { anchor(win, 'right') });
-S.bind('h' + hyper,  function(win) { anchor(win, 'left') });
+
+// Anchor to sides
+S.bind('l' + hyper, function(win) { anchor(win, 'right'); });
+S.bind('h' + hyper, function(win) { anchor(win, 'left'); });
+
+// Scale
+slate.bind(']' + hyper, sresize());
