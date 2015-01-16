@@ -42,14 +42,14 @@
       sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 \
         zathura zathura-plugin-pdf-poppler zathura-plugin-cb tmux \
         rxvt-unicode +pixbuf dejavu-fonts bitstream-vera terminus-font \
-        xlsfonts mplayer2 xterm +utmp feh toilet go \
+        gdk-pixbuf imlib xlsfonts mplayer2 xterm +utmp feh toilet go \
         ndcu watch nmap +zenmap dict htop xdotool xev xrandr xwininfo \
         links +x11 libcaca +x11 tree boost +clang35 +regex_match_extra \
         ranger mediainfo highlight atool the_silver_searcher txt2regex \
         git git-flow ack ctags httpie wget apache-ant tmux-pasteboard \
         graphicsmagick imagemagick +lqr +rsvg +wmf cmus +aac +flac \
         python34 py34-pip py34-jinja2 asciidoc py34-pygments py34-pyqt5 \
-        zsh mercurial +zsh_completion lua luajit gnupg \
+        zsh mercurial +zsh_completion lua luajit gnupg giflib \
         macvim +cscope +lua +python27 +ruby20 +breakindent \
         vim +cscope +lua +python27 +ruby20 +breakindent
       sudo pip-3.4 install qutebrowser
