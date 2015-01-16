@@ -1,3 +1,6 @@
+// TODO: slate - Move config to js
+// TODO: slate - Remove original config
+// TODO: slate - Make resize commands work on multiple screens
 // TODO: slate - [ resize X
 // TODO: slate - ] resize X
 
