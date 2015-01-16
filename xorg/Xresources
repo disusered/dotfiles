@@ -1,12 +1,14 @@
 ! TODO: urxvt - Properly match wrapped URLs
 ! TODO: urxvt - Toggle cursor depending on Vim mode
 ! TODO: urxvt - HOME/END ie Fn ←/Fn → in ZSH
+! TODO: urxvt - https://powerline.readthedocs.org/en/latest/installation/linux.html#fontconfig
 
 ! Tips -------------------------------------------------------------------------
 ! 
-! font - List font names
-! xev - Capture mouse and keyboard events
-! xlsfonts - List X fonts
+! `font` - List font names
+! `xev` - Capture mouse and keyboard events
+! `xlsfonts` - List X fonts
+! `fc-list | sort | less` - List user fonts
 
 ! Config -----------------------------------------------------------------------
 ! Terminal
@@ -36,8 +38,16 @@ URxvt.keysym.C-Down:   perl:font-size:decrease
 ! Fonts ------------------------------------------------------------------------
 
 ! Meslo
-xterm*faceName: Meslo LG S for Powerline:style=Regular:size=10
-URxvt.font:     xft:Meslo LG S DZ:size=9,xft:Meslo LG S for Powerline:size=9
+/* URxvt.font:     xft:Meslo LG S DZ:size=9, \ */
+/*                 xft:Meslo LG S for Powerline:size=9 */
+
+! DejaVu
+/* urxvt*font: xft:DejaVu Sans Mono:size=8, \ */
+/*             xft:DejaVu Sans Mono for Powerline:size=8 */
+
+! Terminus
+URxvt.font: xft:Terminus:size=8, \
+            xft:Terminess Powerline:size=8
 
 ! Options
 Xft.dpi:       113
