@@ -27,6 +27,9 @@ URxvt.scrollBar: false
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
+!!*fading: 40
+URxvt*fading: 5
+URxvt*fadeColor: #002b36;
 
 ! Keyboard ---------------------------------------------------------------------
 
