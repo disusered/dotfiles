@@ -9,6 +9,7 @@ export BROWSER='open'
 export EDITOR='vim'
 export PAGER='less'
 export LESS='-X -F -g -i -M -R -S -w -z-4'
+export W3MIMGDISPLAY_PATH="${HOME}/.macports/libexec/w3m/w3mimgdisplay"
 
 export ANDROID_HOME="${HOME}/Development/SDK/android-sdk"
 export GOPATH="${HOME}/Development/SDK/gopath"
