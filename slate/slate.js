@@ -1,12 +1,8 @@
 // TODO: slate - Refactor resize
 //  [ Will resize the left edge incrementally until 100%
 //  ] Will resize the right edge incrementally until 100%
-//  Anchored right:
-//    [ Will decrease by 10%
-//    ] Will increase by 10%
 //  Anchored left:
 //    ] Will increase by 10%
-//    [ Will decrease by 10%
 // TODO: slate - [ resize Aqua
 // TODO: slate - ] resize Aqua
 // TODO: slate - [ resize X
@@ -139,17 +135,21 @@ function changescreen(win) {
 
 function rightedge(win) {
   var info = query();
+
   var anchor;
+  var operator;
 
   if (info.window.x === 0) {
     anchor = 'top-left';
+    operator = '+';
   } else {
     anchor = 'top-right';
+    operator = '-';
   }
 
 
   var resize = slate.operation('resize', {
-    'width' : '+10%',
+    'width' : operator + '10%',
     'height' : '+0',
     'anchor': anchor
   });
@@ -159,16 +159,21 @@ function rightedge(win) {
 
 function leftedge(win) {
   var info = query();
+
   var anchor;
+  var operator;
 
   if (info.window.x === 0) {
     anchor = 'top-left';
+    operator = '-';
   } else {
     anchor = 'top-right';
+    operator = '+';
+    // TODO: resize anchored right
   }
 
   var resize = slate.operation('resize', {
-    'width' : '-10%',
+    'width' : operator + '10%',
     'height' : '+0',
     'anchor': anchor
   });
