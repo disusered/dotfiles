@@ -1,3 +1,4 @@
+// TODO: slate - Meta+h resize Aqua
 // TODO: slate - Meta+h resize X
 // TODO: slate - Meta+l resize X
 
@@ -100,17 +101,22 @@ function changescreen(win) {
   }
 }
 
-function sresize() {
+function sresize(direction) {
+  var win = slate.window();
+  var topLeft = win.topLeft();
+  var operator = (direction === 'increase') ? '+' : '-';
+  var opposite = (operator === '+' ? '-' : '+');
+
   var resize = slate.operation('resize', {
-    'width' : '+10%',
+    'width' : operator + '10%',
     'height' : '+0'
   });
   var nudge = slate.operation('nudge', {
-    'x' : '-10%',
+    'x' : opposite + '10%',
     'y' : '+0'
   })
   var sequence = slate.operation("sequence", {
-    "operations" : [ [ nudge, resize] ]
+    "operations" : [ [nudge, resize] ]
   });
   return sequence;
 }
@@ -154,4 +160,5 @@ S.bind('l' + hyper, function(win) { anchor(win, 'right'); });
 S.bind('h' + hyper, function(win) { anchor(win, 'left'); });
 
 // Scale
-slate.bind(']' + hyper, sresize());
+slate.bind(']' + hyper, sresize('increase'));
+slate.bind('[' + hyper, sresize('decrease'));
