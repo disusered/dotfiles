@@ -48,6 +48,8 @@ find /tmp/Meslo\ LG\ DZ\ v1.2.1 -type f -name "*.ttf" \
   -exec cp "{}" $HOME/.fonts/ \;
 find $ROOT/vendor/powerline-fonts -type f -name "*.*tf" \
   -exec ln -s "{}" $HOME/.fonts \;
+find $ROOT/vendor/powerline-fonts -type f -name "*.pcf.gz" \
+  -exec ln -s "{}" $HOME/.fonts \;
 fc-cache -vf ~/.fonts
 
 # Interactive font size for urxvt
