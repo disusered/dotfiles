@@ -162,6 +162,8 @@ function leftedge(win) {
   var height = info.window.height;
   var width  = info.window.width;
 
+  var ratio = info.screen.width / 10;
+
   var anchor;
   var operator;
 
@@ -180,9 +182,9 @@ function leftedge(win) {
   });
 
   var move = slate.operation('move', {
-    'x': x - (x*0.10),
+    'x': x - ratio,
     'y': y,
-    'width': width + (x*10),
+    'width': width + ratio,
     'height': height
   });
 
