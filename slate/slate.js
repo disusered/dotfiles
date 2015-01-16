@@ -1,6 +1,10 @@
-// TODO: slate - Meta+h resize Aqua
-// TODO: slate - Meta+h resize X
-// TODO: slate - Meta+l resize X
+// TODO: slate - Refactor resize
+//  [ Will resize the left edge incrementally until 100%, then reset
+//  ] Will resize the right edge incrementally until 100%, then reset
+// TODO: slate - [ resize Aqua
+// TODO: slate - ] resize Aqua
+// TODO: slate - [ resize X
+// TODO: slate - ] resize X
 
 var hyper   = ':ctrl;shift;alt;cmd';
 var xdotool = '$HOME/.macports/bin/xdotool';
@@ -114,7 +118,7 @@ function sresize(direction) {
   var nudge = slate.operation('nudge', {
     'x' : opposite + '10%',
     'y' : '+0'
-  })
+  });
   var sequence = slate.operation("sequence", {
     "operations" : [ [nudge, resize] ]
   });
