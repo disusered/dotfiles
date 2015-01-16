@@ -1,4 +1,3 @@
-// TODO: slate - Meta+j throw X
 // TODO: slate - Meta+h resize X
 // TODO: slate - Meta+l resize X
 
