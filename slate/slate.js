@@ -105,24 +105,22 @@ function changescreen(win) {
   }
 }
 
-function sresize(direction) {
-  var win = slate.window();
-  var topLeft = win.topLeft();
-  var operator = (direction === 'increase') ? '+' : '-';
-  var opposite = (operator === '+' ? '-' : '+');
-
+function sincrease() {
   var resize = slate.operation('resize', {
-    'width' : operator + '10%',
-    'height' : '+0'
+    'width' : '+10%',
+    'height' : '+0',
+    'anchor': 'top-left'
   });
-  var nudge = slate.operation('nudge', {
-    'x' : opposite + '10%',
-    'y' : '+0'
+  return resize;
+}
+
+function sdecrease() {
+  var resize = slate.operation('resize', {
+    'width' : '-10%',
+    'height' : '+0',
+    'anchor': 'top-left'
   });
-  var sequence = slate.operation("sequence", {
-    "operations" : [ [nudge, resize] ]
-  });
-  return sequence;
+  return resize;
 }
 
 function anchor(win, side) {
@@ -164,5 +162,5 @@ S.bind('l' + hyper, function(win) { anchor(win, 'right'); });
 S.bind('h' + hyper, function(win) { anchor(win, 'left'); });
 
 // Scale
-slate.bind(']' + hyper, sresize('increase'));
-slate.bind('[' + hyper, sresize('decrease'));
+slate.bind(']' + hyper, sincrease());
+slate.bind('[' + hyper, sdecrease());
