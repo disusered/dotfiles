@@ -60,7 +60,7 @@ function query() {
       height: size.height,
       width: size.width
     }
-  }
+  };
 }
 
 
