@@ -2,6 +2,12 @@
 ! TODO: urxvt - Toggle cursor depending on Vim mode
 ! TODO: urxvt - HOME/END ie Fn ←/Fn → in ZSH
 
+! Tips -------------------------------------------------------------------------
+! 
+! font - List font names
+! xev - Capture mouse and keyboard events
+! xlsfonts - List X fonts
+
 ! Config -----------------------------------------------------------------------
 ! Terminal
 URxvt*termName: xterm-256color

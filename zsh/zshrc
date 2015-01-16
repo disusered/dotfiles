@@ -152,7 +152,7 @@ source "$HOME/.dotfiles/vendor/npm"
 # Login banner
 ZSHELL=`which zsh`
 if [[ $TMUX = "" ]] then
-  if [[ $COLORTERM != "rxvt" && $XTERM_SHELL != $ZSHELL ]] then
+  if [[ $COLORTERM != "rxvt-xpm" && $XTERM_SHELL != $ZSHELL ]] then
     ZFONT="smbraille"
   else
     ZFONT="future"
