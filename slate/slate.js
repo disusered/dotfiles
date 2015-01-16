@@ -1,6 +1,12 @@
 // TODO: slate - Refactor resize
-//  [ Will resize the left edge incrementally until 100%, then reset
-//  ] Will resize the right edge incrementally until 100%, then reset
+//  [ Will resize the left edge incrementally until 100%
+//  ] Will resize the right edge incrementally until 100%
+//  Anchored right:
+//    [ Will decrease by 10%
+//    ] Will increase by 10%
+//  Anchored left:
+//    ] Will increase by 10%
+//    [ Will decrease by 10%
 // TODO: slate - [ resize Aqua
 // TODO: slate - ] resize Aqua
 // TODO: slate - [ resize X
