@@ -1,8 +1,3 @@
-// TODO: slate - Refactor resize
-//  [ Will resize the left edge incrementally until 100%
-//  ] Will resize the right edge incrementally until 100%
-// TODO: slate - [ resize Aqua
-// TODO: slate - ] resize Aqua
 // TODO: slate - [ resize X
 // TODO: slate - ] resize X
 
