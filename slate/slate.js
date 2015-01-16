@@ -105,7 +105,34 @@ function changescreen(win) {
   }
 }
 
-function sincrease() {
+function query() {
+  var win = slate.window();
+  var display = screen();
+
+  var topLeft = win.topLeft();
+  var x = topLeft.x;
+  var y = topLeft.y;
+
+  var height  = display.height;
+  var width   = display.width;
+
+  return {
+    screen: {
+      height: height,
+      width: width
+    },
+    window: {
+      x: x,
+      y: y,
+      height: 0,
+      width: 0
+    }
+  }
+}
+
+function rightedge() {
+  var info = query();
+
   var resize = slate.operation('resize', {
     'width' : '+10%',
     'height' : '+0',
@@ -114,7 +141,7 @@ function sincrease() {
   return resize;
 }
 
-function sdecrease() {
+function leftedge() {
   var resize = slate.operation('resize', {
     'width' : '-10%',
     'height' : '+0',
@@ -162,5 +189,5 @@ S.bind('l' + hyper, function(win) { anchor(win, 'right'); });
 S.bind('h' + hyper, function(win) { anchor(win, 'left'); });
 
 // Scale
-slate.bind(']' + hyper, sincrease());
-slate.bind('[' + hyper, sdecrease());
+slate.bind(']' + hyper, rightedge());
+slate.bind('[' + hyper, leftedge());
