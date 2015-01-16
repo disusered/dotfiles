@@ -1,3 +1,5 @@
+" TODO: urxvt toggle cursor
+
 " Plug =======================================================================
   set nocompatible
   filetype off
