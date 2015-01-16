@@ -11,6 +11,7 @@
 ! `fc-list | sort | less` - List user fonts
 
 ! Config -----------------------------------------------------------------------
+
 ! Terminal
 URxvt*termName: xterm-256color
 XTerm*termName: xterm-256color
