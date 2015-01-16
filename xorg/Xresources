@@ -9,6 +9,20 @@
 ! `xev` - Capture mouse and keyboard events
 ! `xlsfonts` - List X fonts
 ! `fc-list | sort | less` - List user fonts
+!
+! 0  - bg
+! 1  - red
+! 2  - green
+! 3  - yellow
+! 4  - cyan
+! 5  - magenta
+! 6  - teal
+! 7  - white
+! 8  - dark
+! 9  - red
+! 10 - yellowgreen
+! 11 - yellow
+! 12 - blue
 
 ! Config -----------------------------------------------------------------------
 
