@@ -1,6 +1,7 @@
 ! TODO: urxvt - Properly match wrapped URLs
 ! TODO: urxvt - Toggle cursor depending on Vim mode
 ! TODO: urxvt - HOME/END ie Fn ←/Fn → in ZSH
+! TODO: urxvt - tabbedex https://wiki.archlinux.org/index.php/rxvt-unicode#Simple_tabs
 ! TODO: urxvt - https://powerline.readthedocs.org/en/latest/installation/linux.html#fontconfig
 
 ! Tips -------------------------------------------------------------------------
