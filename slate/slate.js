@@ -40,6 +40,32 @@ function screen() {
   };
 }
 
+function query() {
+  var win = slate.window();
+  var display = screen();
+
+  var topLeft = win.topLeft();
+  var x = topLeft.x;
+  var y = topLeft.y;
+
+  var height  = display.height;
+  var width   = display.width;
+
+  return {
+    screen: {
+      height: height,
+      width: width
+    },
+    window: {
+      x: x,
+      y: y,
+      height: 0,
+      width: 0
+    }
+  }
+}
+
+
 function xwindow() {
   var object = {};
 
@@ -102,31 +128,6 @@ function changescreen(win) {
     // xthrow(); 
   } else {
     win.doOperation(throwOp);
-  }
-}
-
-function query() {
-  var win = slate.window();
-  var display = screen();
-
-  var topLeft = win.topLeft();
-  var x = topLeft.x;
-  var y = topLeft.y;
-
-  var height  = display.height;
-  var width   = display.width;
-
-  return {
-    screen: {
-      height: height,
-      width: width
-    },
-    window: {
-      x: x,
-      y: y,
-      height: 0,
-      width: 0
-    }
   }
 }
 
