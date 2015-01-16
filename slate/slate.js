@@ -43,13 +43,11 @@ function screen() {
 }
 
 function query() {
-  var win = slate.window();
-  var display = screen();
-
+  var win     = slate.window();
   var topLeft = win.topLeft();
-  var x = topLeft.x;
-  var y = topLeft.y;
+  var size    = win.rect();
 
+  var display = screen();
   var height  = display.height;
   var width   = display.width;
 
@@ -59,10 +57,10 @@ function query() {
       width: width
     },
     window: {
-      x: x,
-      y: y,
-      height: 0,
-      width: 0
+      x: topLeft.x,
+      y: topLeft.y,
+      height: size.height,
+      width: size.width
     }
   }
 }
@@ -158,18 +156,22 @@ function rightedge(win) {
 }
 
 function leftedge(win) {
-  var info = query();
+  var info   = query();
+
+  var x = info.window.x;
+
+  var height = info.window.height;
+  var width  = info.window.width;
 
   var anchor;
   var operator;
 
-  if (info.window.x === 0) {
+  if (x === 0) {
     anchor = 'top-left';
     operator = '-';
   } else {
     anchor = 'top-right';
     operator = '+';
-    // TODO: resize anchored right
   }
 
   var resize = slate.operation('resize', {
@@ -178,7 +180,18 @@ function leftedge(win) {
     'anchor': anchor
   });
 
-  win.doOperation(resize);
+  var move = slate.operation('move', {
+    'x': 0,
+    'y': 0,
+    'width': width,
+    'height': height
+  });
+
+  slate.log(info.window.width);
+
+  operation = (x === 0) ? resize : move;
+
+  win.doOperation(operation);
 }
 
 function anchor(win, side) {
