@@ -123,6 +123,12 @@ if [ -f $SYNTAX_HIGHLIGHT ]; then
   source $SYNTAX_HIGHLIGHT
 fi
 
+# Git flow completion
+GIT_FLOW="$HOME/.dotfiles/vendor/git-flow-completion/git-flow-completion.zsh"
+if [ -f $GIT_FLOW ]; then
+  source $GIT_FLOW
+fi
+
 # History substring search
 HISTORY_SUB="$HOME/.dotfiles/vendor/zsh-history-substring-search/zsh-history-substring-search.zsh"
 if [ -f $HISTORY_SUB ]; then
