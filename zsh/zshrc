@@ -136,7 +136,7 @@ compctl -K _completemarks jump
 compctl -K _completemarks unmark
 
 zle-keymap-select () {
-    if [ $TERM = "xterm-256color" ]; then
+    if [ $TERM = "rxvt-256color" ]; then
         if [ $KEYMAP = vicmd ]; then
             echo -ne "\033]12;#b5bd68\007"
         else
@@ -147,7 +147,7 @@ zle-keymap-select () {
 zle -N zle-keymap-select
 zle-line-init () {
     zle -K viins
-    if [ $TERM = "xterm-256color" ]; then
+    if [ $TERM = "rxvt-256color" ]; then
         echo -ne "\033]12;#b294bb\007"
     fi
 }
@@ -167,3 +167,14 @@ fi
 
 # RVM
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Login banner
+# ZSHELL=`which zsh`
+# if [[ $TMUX = "" ]] then
+#   if [[ $COLORTERM != "rxvt-xpm" && $XTERM_SHELL != $ZSHELL ]] then
+#     ZFONT="smbraille"
+#   else
+#     ZFONT="future"
+#   fi
+#   clear && toilet -f $ZFONT `date +"%c"` --filter gay
+# fi
