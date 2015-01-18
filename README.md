@@ -56,7 +56,7 @@
         vim +cscope +lua +python27 +ruby20 +breakindent
       sudo pip-3.4 install qutebrowser
       # Node
-      npm install -g yo gulp grunt-cli cordova ionic \
+      sudo npm install -g yo gulp grunt-cli cordova ionic \
         http-server forever ios-deploy ios-sim jscs jshint karma-cli bower \
         node-inspector nodemon phonegap plugman svgo wiredep browserify
       # Ruby
