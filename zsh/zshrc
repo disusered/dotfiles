@@ -1,3 +1,30 @@
+# Load zgen
+source "${HOME}/proj/zgen/zgen.zsh"
+
+# Check if there's no init script
+if ! zgen saved; then
+    echo "Creating a zgen save"
+
+    # zgen oh-my-zsh
+
+    # Plugins
+    # zgen oh-my-zsh plugins/git
+    # zgen oh-my-zsh plugins/sudo
+    # zgen oh-my-zsh plugins/command-not-found
+    # zgen load zsh-users/zsh-syntax-highlighting
+    # zgen load /path/to/super-secret-private-plugin
+
+    # Completion-only repositories. Add optional path argument to specify
+    # what subdirectory of the repository to add to your fpath.
+    # zgen completions zsh-users/zsh-completions src
+
+    # theme
+    # zgen oh-my-zsh themes/arrow
+
+    # save all to init script
+    zgen save
+fi
+
 # Set path
 path=(
   $HOME/Development/SDK/android-sdk/tools
