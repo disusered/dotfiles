@@ -29,7 +29,7 @@
 
   - Configure MacPorts [permissions](http://superuser.com/a/570146/34947)
 
-  - Install [Node](https://iojs.org/dist/latest/)
+  - Install [Node](http://nodejs.org/)
 
   - Install packages:
       ```bash
