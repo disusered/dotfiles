@@ -148,12 +148,6 @@ function _completemarks {
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
 
-# Git flow completion
-GIT_FLOW="$HOME/.dotfiles/vendor/git-flow-completion/git-flow-completion.zsh"
-if [ -f $GIT_FLOW ]; then
-  source $GIT_FLOW
-fi
-
 # History substring search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
