@@ -32,7 +32,7 @@ URxvt*termName: xterm-256color
 XTerm*termName: xterm-256color
 
 ! Extensions
-URxvt.perl-ext-common: default,matcher,font-size,tabbed
+URxvt.perl-ext-common: default,matcher,font-size,tabbedex
 
 ! Tabs
 URxvt.tabbed.tabbar-fg: 8
