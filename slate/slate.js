@@ -3,6 +3,7 @@
 // TODO: slate - Make resize commands work on multiple screens
 // TODO: slate - [ resize X
 // TODO: slate - ] resize X
+// TODO: slate - Preserve vertical height on resize
 
 var hyper   = ':ctrl;shift;alt;cmd';
 var xdotool = '$HOME/.macports/bin/xdotool';
