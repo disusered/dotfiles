@@ -33,13 +33,9 @@
 
   - Install packages:
       ```bash
-      sudo port install python27 py27-pip python_select gcc49 clang-3.5
-      sudo port select --set python python27
-      sudo port select --set pip pip27
+      sudo port install gcc49 clang-3.5
       sudo port select --set clang mp-clang-3.5
       sudo port select --set gcc mp-gcc49
-      sudo pip install --upgrade pip
-      sudo pip install --upgrade setuptools
       # MacPorts
       sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 \
         zathura zathura-plugin-pdf-poppler zathura-plugin-cb tmux \
@@ -50,11 +46,9 @@
         ranger mediainfo highlight atool the_silver_searcher txt2regex \
         git git-flow ack ctags httpie wget apache-ant tmux-pasteboard \
         graphicsmagick imagemagick +lqr +rsvg +wmf cmus +aac +flac \
-        python34 py34-pip py34-jinja2 asciidoc py34-pygments py34-pyqt5 \
         zsh mercurial +zsh_completion lua luajit gnupg giflib \
         macvim +cscope +lua +python27 +ruby20 +breakindent \
         vim +cscope +lua +python27 +ruby20 +breakindent
-      sudo pip-3.4 install qutebrowser
       # Node
       sudo npm install -g yo gulp grunt-cli cordova ionic \
         http-server forever ios-deploy ios-sim jscs jshint karma-cli bower \
