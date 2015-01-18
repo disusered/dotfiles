@@ -39,9 +39,9 @@
       # MacPorts
       sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 \
         zathura zathura-plugin-pdf-poppler zathura-plugin-cb tmux \
-        rxvt-unicode +pixbuf dejavu-fonts bitstream-vera terminus-font \
-        gdk-pixbuf imlib xlsfonts mplayer2 xterm +utmp feh toilet go \
-        ndcu watch nmap +zenmap dict htop xdotool xev xrandr xwininfo \
+        rxvt-unicode +pixbuf dejavu-fonts terminus-font \
+        xterm +utmp xdotool xev xrandr xwininfo xlsfonts \
+        mplayer2 feh watch nmap +zenmap dict htop \
         links +x11 libcaca +x11 tree boost +clang35 +regex_match_extra \
         ranger mediainfo highlight atool the_silver_searcher txt2regex \
         git git-flow ack ctags httpie wget apache-ant tmux-pasteboard \
