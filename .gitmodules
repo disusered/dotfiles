@@ -22,3 +22,6 @@
 [submodule "vendor/zgen"]
 	path = vendor/zgen
 	url = git@github.com:tarjoilija/zgen.git
+[submodule "vendor/urxvt-tabbedex"]
+	path = vendor/urxvt-tabbedex
+	url = https://github.com/stepb/urxvt-tabbedex
