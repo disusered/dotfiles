@@ -30,9 +30,6 @@ ln -s $ROOT/ack/ackrc $HOME/.ackrc
 ln -s $ROOT/vendor/pure/pure.zsh \
       /usr/local/share/zsh/site-functions/prompt_pure_setup
 
-# Create NPM completion script
-npm completion > $ROOT/vendor/npm
-
 # Hide last-logged-in message on new terminals
 touch $HOME/.hushlogin
 

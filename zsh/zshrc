@@ -19,7 +19,7 @@ if ! zgen saved; then
 
     # Completion-only repositories. Add optional path argument to specify
     # what subdirectory of the repository to add to your fpath.
-    # zgen completions zsh-users/zsh-completions src
+    zgen completions zsh-users/zsh-completions src
 
     # theme
     # zgen oh-my-zsh themes/arrow
@@ -158,9 +158,6 @@ if [ -f $HOME/.dotfiles/vendor/base16-shell/base16-$BASE16_SCHEME.dark.sh ]; the
   BASE16_SHELL="$HOME/.dotfiles/vendor/base16-shell/base16-$BASE16_SCHEME.dark.sh"
   [[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
 fi
-
-# NPM completion
-source "$HOME/.dotfiles/vendor/npm"
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
