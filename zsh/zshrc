@@ -1,4 +1,7 @@
-# Load zgen
+# TODO: iterm - Home fn ←
+# TODO: iterm - END fn → 
+# TODO: urxvt - Home fn ←
+# TODO: urxvt - END fn → 
 source "${HOME}/.dotfiles/vendor/zgen/zgen.zsh"
 
 # Check if there's no init script
@@ -112,11 +115,6 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
-
-# fn Keys
-# bindkey "^[[H" beginning-of-line    # fn ←
-# bindkey "^[[F" end-of-line          # fn →
-# bindkey "^[[3~" delete-char         # fn delete
 
 # Marks
 function jump {
