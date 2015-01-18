@@ -149,17 +149,3 @@ fi
 
 # NVM
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-# Login banner
-#
-# TODO: Capture output and echo text instead of calling command
-#
-# ZSHELL=`which zsh`
-# if [[ $TMUX = "" ]] then
-#   if [[ $COLORTERM != "rxvt-xpm" && $XTERM_SHELL != $ZSHELL ]] then
-#     ZFONT="smbraille"
-#   else
-#     ZFONT="future"
-#   fi
-#   clear && toilet -f $ZFONT `date +"%c"` --filter gay
-# fi
