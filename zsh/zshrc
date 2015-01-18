@@ -14,6 +14,8 @@ if ! zgen saved; then
     # zgen load zsh-users/zsh-syntax-highlighting
     # zgen load /path/to/super-secret-private-plugin
 
+    zgen load zsh-users/zsh-history-substring-search
+
     # Completion-only repositories. Add optional path argument to specify
     # what subdirectory of the repository to add to your fpath.
     # zgen completions zsh-users/zsh-completions src
@@ -157,14 +159,8 @@ if [ -f $GIT_FLOW ]; then
 fi
 
 # History substring search
-HISTORY_SUB="$HOME/.dotfiles/vendor/zsh-history-substring-search/zsh-history-substring-search.zsh"
-if [ -f $HISTORY_SUB ]; then
-  source $HISTORY_SUB
-  zmodload zsh/terminfo
-  # Bind arrows
-  bindkey '^[[A' history-substring-search-up
-  bindkey '^[[B' history-substring-search-down
-fi
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # Base16
 BASE16_SCHEME="tomorrow"
