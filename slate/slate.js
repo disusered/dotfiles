@@ -145,7 +145,6 @@ function rightedge(win) {
 
   var resize = slate.operation('resize', {
     'width' : operator + '10%',
-    'height' : '+0',
     'anchor': anchor
   });
 
@@ -176,7 +175,6 @@ function leftedge(win) {
 
   var resize = slate.operation('resize', {
     'width' : operator + '10%',
-    'height' : '+0',
     'anchor': anchor
   });
 
