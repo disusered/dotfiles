@@ -63,6 +63,9 @@ URxvt*fadeColor: #002b36;
 URxvt.keysym.C-Up:     perl:font-size:increase
 URxvt.keysym.C-Down:   perl:font-size:decrease
 
+! Disable default tab mappings
+URxvt.tabbed.no-tabbedex-keys: true
+
 ! Next and Previous tab
 URxvt.keysym.Meta-braceleft: perl:tabbedex:prev_tab
 URxvt.keysym.Meta-braceright: perl:tabbedex:next_tab
