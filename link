@@ -53,6 +53,10 @@ mkdir -p $HOME/.urxvt/ext/
 chmod +x $ROOT/vendor/urxvt-font-size
 ln -s $ROOT/vendor/urxvt-font-size/font-size $HOME/.urxvt/ext
 
+# Tab extensions for urxvt
+chmod +x $ROOT/vendor/urxvt-tabbedex/tabbedex
+ln -s $ROOT/vendor/urxvt-tabbedex/tabbedex $HOME/.urxvt/ext
+
 # Enable X extension for Slate/xdotool
 defaults write org.macports.X11 enable_test_extensions -boolean true
 defaults write org.x.X11 enable_test_extensions -boolean true
