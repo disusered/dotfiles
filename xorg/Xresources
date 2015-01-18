@@ -55,6 +55,10 @@ URxvt*fadeColor: #002b36;
 
 ! Keyboard ---------------------------------------------------------------------
 
+! Home/End
+/* URxvt*keysym.Home: \033[1~ */
+/* URxvt*keysym.End: \033[4~ */
+
 ! Increase font size
 URxvt.keysym.C-Up:     perl:font-size:increase
 URxvt.keysym.C-Down:   perl:font-size:decrease
