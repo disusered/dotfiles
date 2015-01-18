@@ -114,9 +114,9 @@ if [[ ! -d "$TMPPREFIX" ]]; then
 fi
 
 # fn Keys
-bindkey "^[[H" beginning-of-line    # fn ←
-bindkey "^[[F" end-of-line          # fn →
-bindkey "^[[3~" delete-char         # fn delete
+# bindkey "^[[H" beginning-of-line    # fn ←
+# bindkey "^[[F" end-of-line          # fn →
+# bindkey "^[[3~" delete-char         # fn delete
 
 # Marks
 function jump {
