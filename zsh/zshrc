@@ -11,7 +11,7 @@ if ! zgen saved; then
     zgen completions zsh-users/zsh-completions src
 
     # theme
-    # zgen oh-my-zsh themes/arrow
+    zgen load sindresorhus/pure
 
     # save all to init script
     zgen save
@@ -34,10 +34,6 @@ fpath=(
 
 # Autoload modules
 # autoload -U compinit && compinit
-autoload -U promptinit && promptinit
-
-# Set prompt
-prompt pure
 
 # History
 SAVEHIST=10000
