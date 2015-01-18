@@ -143,7 +143,7 @@ zle-keymap-select () {
 		if [ $KEYMAP = vicmd ]; then
 				echo -ne "\033]12;#b5bd68\007"
 		else
-				echo -ne "\033]12;#b294bb\007"
+				echo -ne "\033]12;#969896\007"
 		fi
 	fi
 }
@@ -151,7 +151,7 @@ zle -N zle-keymap-select
 zle-line-init () {
     zle -K viins
 		if [[ $COLORTERM == "rxvt-xpm" ]] then
-        echo -ne "\033]12;#b294bb\007"
+        echo -ne "\033]12;#969896\007"
     fi
 }
 zle -N zle-line-init
