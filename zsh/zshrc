@@ -44,7 +44,7 @@ fpath=(
 )
 
 # Autoload modules
-autoload -U compinit && compinit
+# autoload -U compinit && compinit
 autoload -U promptinit && promptinit
 
 # Set prompt
