@@ -29,6 +29,8 @@
 
   - Configure MacPorts [permissions](http://superuser.com/a/570146/34947)
 
+  - Install [Node](https://iojs.org/dist/latest/)
+
   - Install packages:
       ```bash
       sudo port install python27 py27-pip python_select gcc49 clang-3.5
@@ -54,9 +56,7 @@
         vim +cscope +lua +python27 +ruby20 +breakindent
       sudo pip-3.4 install qutebrowser
       # Node
-      curl https://raw.githubusercontent.com/creationix/nvm/v0.22.1/install.sh | bash
-      nvm install 0.10 && nvm alias default stable
-      npm update npm -g && npm install -g yo gulp grunt-cli cordova ionic \
+      npm install -g yo gulp grunt-cli cordova ionic \
         http-server forever ios-deploy ios-sim jscs jshint karma-cli bower \
         node-inspector nodemon phonegap plugman svgo wiredep browserify
       # Ruby
