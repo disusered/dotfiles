@@ -135,19 +135,22 @@ function _completemarks {
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
 
+
+
+ZSHELL=`which zsh`
 zle-keymap-select () {
-    if [ $TERM = "rxvt-256color" ]; then
-        if [ $KEYMAP = vicmd ]; then
-            echo -ne "\033]12;#b5bd68\007"
-        else
-            echo -ne "\033]12;#b294bb\007"
-        fi
-    fi
+	if [[ $COLORTERM == "rxvt-xpm" ]] then
+		if [ $KEYMAP = vicmd ]; then
+				echo -ne "\033]12;#b5bd68\007"
+		else
+				echo -ne "\033]12;#b294bb\007"
+		fi
+	fi
 }
 zle -N zle-keymap-select
 zle-line-init () {
     zle -K viins
-    if [ $TERM = "rxvt-256color" ]; then
+		if [[ $COLORTERM == "rxvt-xpm" ]] then
         echo -ne "\033]12;#b294bb\007"
     fi
 }
