@@ -1,9 +1,17 @@
-// TODO: slate - Move config to js
-// TODO: slate - Remove original config
 // TODO: slate - Make resize commands work on multiple screens
 // TODO: slate - [ resize X
 // TODO: slate - ] resize X
 // TODO: slate - Preserve vertical height on resize
+
+slate.configAll({
+  defaultToCurrentScreen: true,
+  checkDefaultsOnLoad: true,
+  nudgePercentOf: 'screenSize',
+  resizePercentOf: 'screenSize',
+  windowHintsIgnoreHiddenWindows: false,
+  windowHintsShowIcons: true,
+  windowHintsSpread: true
+});
 
 var hyper   = ':ctrl;shift;alt;cmd';
 var xdotool = '$HOME/.macports/bin/xdotool';
