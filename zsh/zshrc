@@ -141,7 +141,7 @@ ZSHELL=`which zsh`
 zle-keymap-select () {
 	if [[ $COLORTERM == "rxvt-xpm" ]] then
 		if [ $KEYMAP = vicmd ]; then
-				echo -ne "\033]12;#b5bd68\007"
+				echo -ne "\033]12;#B294BB\007"
 		else
 				echo -ne "\033]12;#969896\007"
 		fi
