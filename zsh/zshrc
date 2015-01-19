@@ -133,8 +133,6 @@ function _completemarks {
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
 
-
-
 ZSHELL=`which zsh`
 zle-keymap-select () {
 	if [[ $COLORTERM == "rxvt-xpm" ]] then
@@ -199,10 +197,14 @@ bindkey '^[[3~' delete-char
 # Vi bindings
 bindkey -M vicmd '^[[7~' beginning-of-line
 bindkey -M vicmd '^[[8~' end-of-line
-bindkey -M vicmd '^[[3~' delete-char
+bindkey -M vicmd 'H' beginning-of-line
+bindkey -M vicmd 'L' end-of-line
 # mac
 # bindkey "^[[H" beginning-of-line  
 # bindkey "^[[F" end-of-line       
+
+# Delete
+bindkey -M vicmd '^[[3~' delete-char
 
 # Undo/Redo
 bindkey -a u undo
