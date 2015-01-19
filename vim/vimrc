@@ -35,7 +35,8 @@
   Plug 'vasconcelloslf/vim-interestingwords'
   Plug 'tpope/vim-commentary' 
   Plug 'Yggdroot/indentLine'
-  Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
+  Plug 'Shougo/neocomplete.vim'
+  " Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
   Plug 'Lokaltog/vim-easymotion', { 'on': '<Plug>(easymotion-bd-t2)'}
   Plug 'rizzatti/dash.vim',       { 'on': ['<Plug>DashSearch'] }
   Plug 'chrisbra/NrrwRgn',        { 'on': ['NarrowRegion', 'NarrowWindow']}
