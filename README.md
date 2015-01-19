@@ -33,9 +33,11 @@
 
   - Install packages:
       ```bash
-      sudo port install gcc49 clang-3.5
+      sudo port install python27 py27-pip gcc49 clang-3.5
       sudo port select --set clang mp-clang-3.5
       sudo port select --set gcc mp-gcc49
+      sudo port select --set python python27
+      sudo port select --set pip pip27
       # MacPorts
       sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 \
         zathura zathura-plugin-pdf-poppler zathura-plugin-cb tmux \
