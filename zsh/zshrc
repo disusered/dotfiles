@@ -140,19 +140,20 @@ compctl -K _completemarks unmark
 ZSHELL=`which zsh`
 zle-keymap-select () {
 	if [[ $COLORTERM == "rxvt-xpm" ]] then
-		if [ $KEYMAP = vicmd ]; then
-				echo -ne "\033]12;#B294BB\007"
-		else
-				echo -ne "\033]12;#969896\007"
-		fi
-	fi
+    if [ $KEYMAP = vicmd ]; then
+      echo -ne "\033]12;#B294BB\007"
+    else
+      echo -ne "\033]12;#969896\007"
+    fi
+  fi
 }
 zle -N zle-keymap-select
+
 zle-line-init () {
-    zle -K viins
-		if [[ $COLORTERM == "rxvt-xpm" ]] then
-        echo -ne "\033]12;#969896\007"
-    fi
+  zle -K viins
+  if [[ $COLORTERM == "rxvt-xpm" ]] then
+    echo -ne "\033]12;#969896\007"
+  fi
 }
 zle -N zle-line-init
 
