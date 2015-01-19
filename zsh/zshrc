@@ -191,6 +191,11 @@ bindkey -M vicmd 'k' history-substring-search-down
 bindkey -a u undo
 bindkey -a '^R' redo
 
+# backspace and ^h working even after
+# returning from command mode
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+
 # urxvt Home/End
 bindkey "e[8~" end-of-line
 bindkey "e[7~" beginning-of-line
