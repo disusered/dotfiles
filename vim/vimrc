@@ -134,6 +134,7 @@
 
   au FileType make set noexpandtab
   au FileType gitconfig set noexpandtab
+  au FileType javascript setlocal omnifunc=tern#Complete
 
 " plugin functions =============================================================
   " nerdtree
@@ -347,16 +348,29 @@
   let g:vim_json_syntax_conceal                       = 0
   let g:tern_show_argument_hints                      = 'no'
   let g:tern_show_signature_in_pum                    = 1
-  let g:ycm_autoclose_preview_window_after_completion = 1
-  let g:ycm_global_ycm_extra_conf                     = '~/.vim/.ycm_extra_conf.py'
-  let g:ycm_enable_diagnostic_signs                   = 0
+  " let g:ycm_path_to_python_interpreter                = '/usr/bin/python'
+  " let g:ycm_autoclose_preview_window_after_completion = 1
+  " let g:ycm_global_ycm_extra_conf                     = '~/.vim/.ycm_extra_conf.py'
+  " let g:ycm_enable_diagnostic_signs                   = 0
+  " let g:ycm_key_list_select_completion                = ['<c-n>', '<down>']
+  " let g:ycm_key_list_previous_completion              = ['<C-p>', '<Up>']
+  let g:neocomplete#enable_at_startup                 = 1
+  let g:neocomplete#auto_completion_start_length      = 1
+  let g:neocomplete#enable_smart_case                 = 1
+  let g:neocomplete#sources#syntax#min_keyword_length = 3
+  let g:neocomplete#lock_buffer_name_pattern          = '\*ku\*'
+  let g:neocomplete#sources#buffer#cache_limit_size   = 50000
+  let g:neocomplete#data_directory                    = $HOME.'/.vim/cache/noecompl'
+  let g:neocomplete#sources#syntax#min_keyword_length = 2
+  if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+    let g:neocomplete#force_omni_input_patterns.javascript = '[^. \t]\.\w*'
+  endif
   let g:jsdoc_default_mapping                         = 0
   let g:jsdoc_allow_input_prompt                      = 1
   let g:slime_target                                  = "tmux"
   let g:slime_paste_file                              = tempname()
   let g:slime_default_config                          = {"socket_name": "default", "target_pane": "1"}
-  let g:ycm_key_list_select_completion                = ['<c-n>', '<down>']
-  let g:ycm_key_list_previous_completion              = ['<C-p>', '<Up>']
   let g:SuperTabDefaultCompletionType                 = '<C-n>'
   let g:UltiSnipsExpandTrigger                        = "<tab>"
   let g:UltiSnipsJumpForwardTrigger                   = "<tab>"
