@@ -399,6 +399,8 @@
   let g:netrw_liststyle                               = 3
   let g:bufferline_show_bufnr                         = 0
   let g:tmuxline_powerline_separators                 = 1
+  let g:jsdoc_default_mapping                         = 0
+  let g:jsdoc_allow_input_prompt                      = 1
   let g:lightline                                     = {
                                                       \ 'colorscheme': 'jellybeans',
                                                       \ 'active': {
