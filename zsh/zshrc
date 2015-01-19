@@ -1,5 +1,5 @@
-# TODO: update urxvt detection to windowid due to tmux overriding colorterm
-# TODO: conditionally use home/end for iterm/urxvt
+# TODO: Update urxvt detection to WINDOWID due to tmux overriding COLORTERM
+# TODO: Conditionally use Home/End for iTerm/urxvt
 source "${HOME}/.dotfiles/vendor/zgen/zgen.zsh"
 
 # Check if there's no init script
@@ -195,13 +195,17 @@ bindkey '^[[8~' end-of-line
 bindkey '^[[3~' delete-char
 
 # Vi bindings
+# urxvt
 bindkey -M vicmd '^[[7~' beginning-of-line
 bindkey -M vicmd '^[[8~' end-of-line
-bindkey -M vicmd 'H' beginning-of-line
-bindkey -M vicmd 'L' end-of-line
+
 # mac
 # bindkey "^[[H" beginning-of-line  
 # bindkey "^[[F" end-of-line       
+
+# mine
+bindkey -M vicmd 'H' beginning-of-line
+bindkey -M vicmd 'L' end-of-line
 
 # Delete
 bindkey -M vicmd '^[[3~' delete-char
