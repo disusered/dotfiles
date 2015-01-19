@@ -50,9 +50,11 @@
         macvim +cscope +lua +python27 +ruby20 +breakindent \
         vim +cscope +lua +python27 +ruby20 +breakindent
       # Node
+      sudo port select --set gcc none
       sudo npm install -g yo gulp grunt-cli cordova ionic \
         http-server forever ios-deploy ios-sim jscs jshint karma-cli bower \
         node-inspector nodemon phonegap plugman svgo wiredep browserify
+      sudo port select --set gcc mp-gcc49
       # Ruby
       gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
       \curl -sSL https://get.rvm.io | bash -s stable
