@@ -72,7 +72,7 @@
   Plug 'jelera/vim-javascript-syntax',           { 'for': 'javascript' }
   Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
   Plug 'csscomb/vim-csscomb',                    { 'for': ['css', 'scss'] }
-  Plug 'ap/vim-css-color',                       { 'for': ['css', 'scss'] }
+  Plug 'gorodinskiy/vim-coloresque',             { 'for': ['css', 'scss', 'html', 'less', 'vim', 'stylus'] }
   Plug 'itspriddle/vim-marked',                  { 'for': ['markdown', 'ghmarkdown'] }
   Plug 'gabrielelana/vim-markdown',              { 'for': ['markdown', 'ghmarkdown'] }
   Plug 'mattn/emmet-vim',                        { 'for': ['html', 'eruby', 'javascript', 'css', 'scss', 'markdown', 'ghmarkdown', 'html.handlebars'] }
