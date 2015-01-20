@@ -184,25 +184,34 @@ bindkey -M vicmd 'j' history-substring-search-up
 bindkey -M vicmd 'k' history-substring-search-down
 
 # HOME/END bindings
-# urxvt
-bindkey '^[[7~' beginning-of-line
-bindkey '^[[8~' end-of-line
-# mac
-# bindkey "^[[H" beginning-of-line  
-# bindkey "^[[F" end-of-line       
+if [ -z "$WINDOWID" ]
+then
+  if [ -z "$TMUX" ]
+  then
+    # iTerm2
+    bindkey "^[[H" beginning-of-line  
+    bindkey "^[[F" end-of-line       
+    bindkey -M vicmd '^[[H' beginning-of-line  
+    bindkey -M vicmd '^[[F' end-of-line       
+  else
+    # iTerm2 + tmux
+    bindkey "^[[1~" beginning-of-line  
+    bindkey "^[[4~" end-of-line       
+    bindkey -M vicmd '^[[1~' beginning-of-line  
+    bindkey -M vicmd '^[[4~' end-of-line       
+  fi
+else
+  # urxvt
+  bindkey '^[[7~' beginning-of-line
+  bindkey '^[[8~' end-of-line
+  bindkey -M vicmd '^[[7~' beginning-of-line
+  bindkey -M vicmd '^[[8~' end-of-line
+fi
 
 # Delete key
 bindkey '^[[3~' delete-char
 
 # Vi bindings
-# urxvt
-bindkey -M vicmd '^[[7~' beginning-of-line
-bindkey -M vicmd '^[[8~' end-of-line
-
-# mac
-# bindkey "^[[H" beginning-of-line  
-# bindkey "^[[F" end-of-line       
-
 # mine
 bindkey -M vicmd 'H' beginning-of-line
 bindkey -M vicmd 'L' end-of-line
@@ -211,8 +220,8 @@ bindkey -M vicmd 'L' end-of-line
 bindkey -M vicmd '^[[3~' delete-char
 
 # Undo/Redo
-bindkey -a u undo
-bindkey -a '^R' redo
+bindkey -M vicmd 'u' undo
+bindkey -M vicmd '^R' redo
 
 # backspace and ^h working even after
 # returning from command mode
