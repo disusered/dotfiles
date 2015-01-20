@@ -434,3 +434,4 @@
 
   highlight SyntasticErrorSign ctermfg=1 ctermbg=18 guifg=#cc6666 guibg=#282a2e
   highlight Search ctermfg=0 ctermbg=5 guifg=#181818 guibg=#BA8BAF 
+  highlight IncSearch ctermfg=0 ctermbg=4 guifg=#181818 guibg=#0000ff 
