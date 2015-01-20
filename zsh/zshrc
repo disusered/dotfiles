@@ -55,6 +55,7 @@ setopt HIST_BEEP
 
 # Disable Globbing
 alias git='noglob git'
+alias cordova='noglob cordova'
 
 # Aliases
 alias c='clear'
