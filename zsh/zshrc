@@ -134,6 +134,7 @@ function _completemarks {
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
 
+# urxvt modal cursor
 ZSHELL=`which zsh`
 zle-keymap-select () {
   # urxvt
