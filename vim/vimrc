@@ -157,7 +157,7 @@
     if l:parent != a:dir
         return s:find_jshintrc(l:parent)
     endif
-    return "~/.dotfiles/vim/jshintrc"
+    return "$HOME/.dotfiles/vim/jshintrc"
   endfunction
   function UpdateJsHintConf()
     let l:dir = expand('%:p:h')
