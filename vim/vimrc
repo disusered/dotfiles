@@ -37,6 +37,7 @@
   Plug 'Yggdroot/indentLine'
   Plug 'Shougo/neocomplete.vim'
   " Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
+  Plug 'guns/xterm-color-table.vim',{ 'on': 'XtermColorTable' }
   Plug 'Lokaltog/vim-easymotion', { 'on': '<Plug>(easymotion-bd-t2)'}
   Plug 'rizzatti/dash.vim',       { 'on': ['<Plug>DashSearch'] }
   Plug 'chrisbra/NrrwRgn',        { 'on': ['NarrowRegion', 'NarrowWindow']}
@@ -311,12 +312,12 @@
   nnoremap    <Leader>gco       :Git checkout<Space>
   nnoremap    <Leader>gp        :Dispatch! git push<CR>
   nnoremap    <Leader>gfm       :Dispatch! git pull<CR>
-  nnoremap    <leader>p         :CtrlP<CR>
-  nnoremap    <leader>b         :CtrlPBuffer<CR>
-  nnoremap    <leader>o         :CtrlPFunky<CR>
-  nnoremap    <leader>n         :RecentNotes<CR>
-  nnoremap    <leader>a         :A<CR>
-  nnoremap    <leader>l         :call <SID>syntastic()<CR>
+  nnoremap    <Leader>p         :CtrlP<CR>
+  nnoremap    <Leader>b         :CtrlPBuffer<CR>
+  nnoremap    <Leader>o         :CtrlPFunky<CR>
+  nnoremap    <Leader>n         :RecentNotes<CR>
+  nnoremap    <Leader>a         :A<CR>
+  nnoremap    <Leader>l         :call <SID>syntastic()<CR>
   nnoremap    _                 :NERDTreeToggle<CR>
   nnoremap    =                 :TagbarToggle<CR>
   nnoremap    +                 :GundoToggle<CR>
@@ -332,14 +333,17 @@
 
 	" conditional bindings
 	if empty($WINDOWID) ""
-    " iterm2
+    " iterm2 - alt+j/k
     nmap        ˚                 [e
     nmap        ∆                 ]e
     vmap        ˚                 [egv
     vmap        ∆                 ]egv
 	else
-		" urxvt
-    " TODO: urxvt bindings
+		" urxvt - modifier keys
+    nmap        <C-k>             [e
+    nmap        <C-j>             ]e
+    vmap        <C-k>             [egv
+    vmap        <C-j>             ]egv
 	endif
 
 " plugin settings ==============================================================
@@ -434,3 +438,4 @@
                                                       \ }
 
   highlight SyntasticErrorSign ctermfg=1 ctermbg=18 guifg=#cc6666 guibg=#282a2e
+  highlight Search ctermfg=1 ctermbg=54 guibg=#BA8BAF guifg=#282a2e
