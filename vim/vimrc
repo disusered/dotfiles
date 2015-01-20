@@ -321,7 +321,7 @@
   nnoremap    <Leader>o         :CtrlPFunky<CR>
   nnoremap    <Leader>n         :RecentNotes<CR>
   nnoremap    <Leader>a         :A<CR>
-  nnoremap    <Leader>l         :w<CR>:SyntasticCheck<CR>
+  nnoremap    <Leader>l         :call <SID>syntastic()<CR>
   nnoremap    <Leader>e         :Errors<CR>
   nnoremap    <Leader>s         :SyntasticToggleMode<CR>
   nnoremap    <Leader>nr        :NarrowRegion
