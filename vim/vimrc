@@ -36,11 +36,11 @@
   Plug 'tpope/vim-commentary' 
   Plug 'Yggdroot/indentLine'
   Plug 'Shougo/neocomplete.vim'
+  Plug 'chrisbra/NrrwRgn'
   " Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
   Plug 'guns/xterm-color-table.vim', { 'on': 'XtermColorTable' }
   Plug 'Lokaltog/vim-easymotion',    { 'on': '<Plug>(easymotion-bd-t2)'}
   Plug 'rizzatti/dash.vim',          { 'on': ['<Plug>DashSearch'] }
-  Plug 'chrisbra/NrrwRgn',           { 'on': ['NarrowRegion', 'NarrowWindow']}
   Plug 'tacahiroy/ctrlp-funky',      { 'on': ['CtrlPFunky'] }
   Plug 'majutsushi/tagbar',          { 'on': 'TagbarToggle' }
   Plug 'scrooloose/nerdtree',        { 'on': 'NERDTreeToggle' }
@@ -324,7 +324,6 @@ d nmap        <leader>d         <Plug>DashSearch
   nnoremap    <Leader>l         :call <SID>syntastic()<CR>
   nnoremap    <Leader>e         :Errors<CR>
   nnoremap    <Leader>s         :SyntasticToggleMode<CR>
-  nnoremap    <Leader>nr        :NarrowRegion
   nnoremap    _                 :NERDTreeToggle<CR>
   nnoremap    +                 :TagbarToggle<CR>
   nnoremap    =                 :GundoToggle<CR>
