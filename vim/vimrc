@@ -290,6 +290,10 @@
   nmap        <expr> K          <SID>doc("\<Plug>DashSearch")
   nmap        <Leader>/         <Plug>CommentaryLine
   vmap        <Leader>/         <Plug>Commentary
+  nmap        ˚                 [e
+  nmap        ∆                 ]e
+  vmap        ˚                 [egv
+  vmap        ∆                 ]egv
   vmap        <Enter>           <Plug>(LiveEasyAlign)
   noremap     H                 ^
   noremap     L                 g_
@@ -330,21 +334,6 @@
   nnoremap    {                 {zz
   nnoremap    j                 gj
   nnoremap    k                 gk
-
-	" conditional bindings
-	if empty($WINDOWID) ""
-    " iterm2 - alt+j/k
-    nmap        ˚                 [e
-    nmap        ∆                 ]e
-    vmap        ˚                 [egv
-    vmap        ∆                 ]egv
-	else
-		" urxvt - modifier keys
-    nmap        <C-k>             [e
-    nmap        <C-j>             ]e
-    vmap        <C-k>             [egv
-    vmap        <C-j>             ]egv
-	endif
 
 " plugin settings ==============================================================
   let g:indentLine_char                               = '¦'
