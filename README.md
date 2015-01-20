@@ -15,6 +15,9 @@
 - Configure iTerm
   ![iTerm2 Configuration](https://raw.githubusercontent.com/disusered/dotfiles/docs/images/iterm.png "iTerm2 Configuration")
 
+- Configure XQuartz
+  ![XQuartz Configuration](https://raw.githubusercontent.com/disusered/dotfiles/docs/images/xquartz.png "iTerm2 Configuration")
+
 - Install XCode
 
 - Install dependencies
