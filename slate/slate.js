@@ -99,7 +99,8 @@ function xsize(side, fraction) {
   var height  = display.height;
   var width   = display.width;
 
-  var fractionWidth;
+  var finalWidth;
+  var finalHeight;
 
   var initialHeight = 0;
   var initialWidth = 0;
@@ -107,18 +108,20 @@ function xsize(side, fraction) {
   var ratio = (fraction) ? fraction : 2;
 
   if (side !== 'full') {
-    fractionWidth = width / ratio;
+    finalWidth = width / ratio;
   } else {
-    fractionWidth = width;
+    finalWidth = width;
   }
 
+  finalHeight = height - 36;
+
   if (side && side === 'right') {
-    initialWidth = fractionWidth;
+    initialWidth = finalWidth;
   }
 
   S.shell("/bin/bash -c 'export DISPLAY=:0;" +
     xdotool + ' getactivewindow windowsize --sync ' +
-    fractionWidth + ' ' + height + ' windowmove --sync -- ' +
+    finalWidth + ' ' + finalHeight + ' windowmove --sync -- ' +
     initialWidth + ' ' + initialHeight +
   "'");
 }
