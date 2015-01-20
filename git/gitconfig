@@ -1,0 +1,68 @@
+[user]
+	name = Carlos Rosquillas
+	email = crosquillas@gmail.com
+[advice]
+	statusHints = true
+[color]
+	ui = true
+	status = always
+[color.grep]
+	filename = white bold
+	linenumber = magenta bold
+	match = black blue
+[color.branch]
+	current = magenta bold
+	local = white bold
+	remote = green bold
+[color.status]
+	header = green
+[core]
+	quotepath = false
+	excludesfile = /Users/carlos/.gitignore_global
+	editor = vim
+	autocrlf = input
+[alias]
+	ack = grep --break --heading --line-number
+	l = !git log --graph --color --pretty=format:'%C(magenta bold)%h%C(reset) - %s %C(white bold)<%aN>%C(reset) %C(blue bold)(%cr)%C(reset) %C(auto)%d%C(reset)' --abbrev-commit --date=relative --all
+	s = !git status --short --branch
+	b = !git branch
+	bc = !git checkout -b
+	c = !git commit --verbose
+	ca = !git commit --verbose --amend
+	cm = !git commit --message
+	g = !git ack
+	a = !git add
+	p = !git push
+	pf = !git push --force
+	d = !git diff --no-ext-diff
+	dt = !git difftool
+	m = !git merge
+	mt = !git mergetool
+	f = !git fetch
+	fm = !git pull
+	co = !git checkout
+	st = !git stash
+	sl = !git stash list
+	ss = !git stash show -p
+	sa = !git stash apply
+[credential]
+	helper = osxkeychain
+[grep]
+	lineNumber = true
+[push]
+	default = current
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[merge]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+[url "https://github"]
+	insteadOf = git://github
