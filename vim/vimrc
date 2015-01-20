@@ -37,16 +37,16 @@
   Plug 'Yggdroot/indentLine'
   Plug 'Shougo/neocomplete.vim'
   " Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
-  Plug 'guns/xterm-color-table.vim',{ 'on': 'XtermColorTable' }
-  Plug 'Lokaltog/vim-easymotion', { 'on': '<Plug>(easymotion-bd-t2)'}
-  Plug 'rizzatti/dash.vim',       { 'on': ['<Plug>DashSearch'] }
-  Plug 'chrisbra/NrrwRgn',        { 'on': ['NarrowRegion', 'NarrowWindow']}
-  Plug 'tacahiroy/ctrlp-funky',   { 'on': ['CtrlPFunky'] }
-  Plug 'majutsushi/tagbar',       { 'on': 'TagbarToggle' }
-  Plug 'scrooloose/nerdtree',     { 'on': 'NERDTreeToggle' }
-  Plug 'sjl/gundo.vim',           { 'on': 'GundoToggle' }
-  Plug 'gregsexton/gitv',         { 'on': 'Gitv' }
-  Plug 'rking/ag.vim',            { 'on': 'Ag' }
+  Plug 'guns/xterm-color-table.vim', { 'on': 'XtermColorTable' }
+  Plug 'Lokaltog/vim-easymotion',    { 'on': '<Plug>(easymotion-bd-t2)'}
+  Plug 'rizzatti/dash.vim',          { 'on': ['<Plug>DashSearch'] }
+  Plug 'chrisbra/NrrwRgn',           { 'on': ['NarrowRegion', 'NarrowWindow']}
+  Plug 'tacahiroy/ctrlp-funky',      { 'on': ['CtrlPFunky'] }
+  Plug 'majutsushi/tagbar',          { 'on': 'TagbarToggle' }
+  Plug 'scrooloose/nerdtree',        { 'on': 'NERDTreeToggle' }
+  Plug 'sjl/gundo.vim',              { 'on': 'GundoToggle' }
+  Plug 'gregsexton/gitv',            { 'on': 'Gitv' }
+  Plug 'rking/ag.vim',               { 'on': 'Ag' }
 
 " conditional===================================================================
   au BufRead,BufNewFile {*.md,*.markdown} set filetype=markdown
