@@ -290,13 +290,6 @@
   nmap        <Leader>/         <Plug>CommentaryLine
   vmap        <Leader>/         <Plug>Commentary
   vmap        <Enter>           <Plug>(LiveEasyAlign)
-
-  " TODO: urxvt bindings
-  nmap        ˚                 [e
-  nmap        ∆                 ]e
-  vmap        ˚                 [egv
-  vmap        ∆                 ]egv
-
   noremap     H                 ^
   noremap     L                 g_
   nnoremap    Q                 <nop>
@@ -336,6 +329,18 @@
   nnoremap    {                 {zz
   nnoremap    j                 gj
   nnoremap    k                 gk
+
+	" conditional bindings
+	if empty($WINDOWID) ""
+    " iterm2
+    nmap        ˚                 [e
+    nmap        ∆                 ]e
+    vmap        ˚                 [egv
+    vmap        ∆                 ]egv
+	else
+		" urxvt
+    " TODO: urxvt bindings
+	endif
 
 " plugin settings ==============================================================
   let g:indentLine_char                               = '¦'
