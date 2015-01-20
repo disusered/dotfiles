@@ -330,13 +330,16 @@
   nnoremap    +                 :GundoToggle<CR>
   nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
   nnoremap    <Leader><Space>   :nohlsearch<CR>
+  nnoremap    j                 gj
+  nnoremap    k                 gk
   nnoremap    n                 nzz
   nnoremap    N                 Nzz
   nnoremap    *                 *zz
   nnoremap    }                 }zz
   nnoremap    {                 {zz
-  nnoremap    j                 gj
-  nnoremap    k                 gk
+  nnoremap    #                 #zz
+  nnoremap    g*                g*zz
+  nnoremap    g#                g#zz
 
 " plugin settings ==============================================================
   let g:indentLine_char                               = '¦'
