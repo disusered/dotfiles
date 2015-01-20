@@ -287,7 +287,7 @@
 
 " plugin mappings ==============================================================
   nmap        <Space>           <Plug>(easymotion-bd-t2)
-d nmap        <leader>d         <Plug>DashSearch
+  nmap        <Leader>d         <Plug>DashSearch
   nmap        <expr> K          <SID>doc("\<Plug>DashSearch")
   nmap        <Leader>/         <Plug>CommentaryLine
   vmap        <Leader>/         <Plug>Commentary
