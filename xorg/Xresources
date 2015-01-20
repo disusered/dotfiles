@@ -78,16 +78,16 @@ URxvt.keysym.Meta-r: perl:tabbedex:rename_tab
 ! Fonts ------------------------------------------------------------------------
 
 ! Meslo
-URxvt.font:     xft:Meslo LG S DZ:size=9, \
-                xft:Meslo LG S for Powerline:size=9
+/* URxvt.font:     xft:Meslo LG S DZ:size=7, \ */
+/*                 xft:Meslo LG S for Powerline:size=7 */
 
 ! DejaVu
 /* urxvt*font: xft:DejaVu Sans Mono:size=8, \ */
 /*             xft:DejaVu Sans Mono for Powerline:size=8 */
 
 ! Terminus
-/* URxvt.font: xft:Terminus:size=8, \ */
-/*             xft:Terminess Powerline:size=8 */
+URxvt.font: xft:Terminus:size=8, \
+            xft:Terminess Powerline:size=8
 
 ! Options
 Xft.dpi:       113
