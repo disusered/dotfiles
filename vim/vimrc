@@ -287,7 +287,7 @@
 
 " plugin mappings ==============================================================
   nmap        <Space>           <Plug>(easymotion-bd-t2)
-  nmap        <leader>d         <Plug>DashSearch
+d nmap        <leader>d         <Plug>DashSearch
   nmap        <expr> K          <SID>doc("\<Plug>DashSearch")
   nmap        <Leader>/         <Plug>CommentaryLine
   vmap        <Leader>/         <Plug>Commentary
@@ -326,8 +326,8 @@
   nnoremap    <Leader>s         :SyntasticToggleMode<CR>
   nnoremap    <Leader>nr        :NarrowRegion
   nnoremap    _                 :NERDTreeToggle<CR>
-  nnoremap    =                 :TagbarToggle<CR>
-  nnoremap    +                 :GundoToggle<CR>
+  nnoremap    +                 :TagbarToggle<CR>
+  nnoremap    =                 :GundoToggle<CR>
   nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
   nnoremap    <Leader><Space>   :nohlsearch<CR>
   nnoremap    j                 gj
