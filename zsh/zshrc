@@ -8,6 +8,7 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/zsh-history-substring-search
     zgen load mollifier/cd-gitroot
+    zgen load tarruda/zsh-autosuggestions
 
     # completions
     zgen completions zsh-users/zsh-completions src
@@ -156,6 +157,17 @@ zle-line-init () {
 }
 zle -N zle-line-init
 
+# Setup zsh-autosuggestions
+AUTOSUGGEST="${HOME}/.zgen/tarruda/zsh-autosuggestions-master/autosuggestions.zsh"
+source $AUTOSUGGEST
+
+# Enable autosuggestions automatically
+zle-line-init() {
+    zle autosuggest-start
+}
+
+zle -N zle-line-init
+
 # Base16
 BASE16_SCHEME="tomorrow"
 if [ -f $HOME/.dotfiles/vendor/base16-shell/base16-$BASE16_SCHEME.dark.sh ]; then
@@ -230,3 +242,9 @@ bindkey -M vicmd '^R' redo
 # returning from command mode
 bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
+
+# use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
+# zsh-autosuggestions is designed to be unobtrusive)
+bindkey '^T' autosuggest-toggle
+
+bindkey '^n' vi-forward-word
