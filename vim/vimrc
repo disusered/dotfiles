@@ -120,6 +120,7 @@
   set background=dark
   set hlsearch
   set incsearch
+  set ignorecase
   set smartcase
   set gdefault
   set wildignore+=.git\*,.hg\*,.svn\*
