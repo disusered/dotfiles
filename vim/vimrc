@@ -300,7 +300,6 @@
   noremap     L                 g_
   nnoremap    Q                 <nop>
   nnoremap    <Leader>q         :bp\|bd #<CR>
-  nnoremap    <Leader>l         :w<CR>:SyntasticCheck<CR>:Errors<CR>
   nnoremap    <Leader>md        :MarkedOpen!<CR>
   nnoremap    <Leader>gs        :Gstatus<CR>
   nnoremap    <Leader>ga        :Gcommit --amend<CR>
@@ -322,7 +321,10 @@
   nnoremap    <Leader>o         :CtrlPFunky<CR>
   nnoremap    <Leader>n         :RecentNotes<CR>
   nnoremap    <Leader>a         :A<CR>
-  nnoremap    <Leader>l         :call <SID>syntastic()<CR>
+  nnoremap    <Leader>l         :w<CR>:SyntasticCheck<CR>
+  nnoremap    <Leader>e         :Errors<CR>
+  nnoremap    <Leader>s         :SyntasticToggleMode<CR>
+  nnoremap    <Leader>nr        :NarrowRegion
   nnoremap    _                 :NERDTreeToggle<CR>
   nnoremap    =                 :TagbarToggle<CR>
   nnoremap    +                 :GundoToggle<CR>
