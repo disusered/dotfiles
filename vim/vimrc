@@ -1,4 +1,4 @@
-" Plug =======================================================================
+" Plug =========================================================================
   set nocompatible
   filetype off
 
@@ -300,7 +300,7 @@
   noremap     H                 ^
   noremap     L                 g_
   nnoremap    Q                 <nop>
-  nnoremap    <leader>q         :bp\|bd #<CR>
+  nnoremap    <Leader>q         :bp\|bd #<CR>
   nnoremap    <Leader>l         :w<CR>:SyntasticCheck<CR>:Errors<CR>
   nnoremap    <Leader>md        :MarkedOpen!<CR>
   nnoremap    <Leader>gs        :Gstatus<CR>
