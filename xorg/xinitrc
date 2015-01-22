@@ -3,7 +3,7 @@
 # ~/.xinitrc
 
 # Load settings
-xrdb $HOME/.Xresources
+[[ -f ~/.Xresources ]] && xrdb -merge $HOME/.Xresources
 
 # Default key repeat
 xset r rate 150
