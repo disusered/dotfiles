@@ -22,11 +22,11 @@ function screen() {
   var res = {
     internal: {
       x: 1280,
-      y: 800
+      y: 800 - 45
     },
     external: {
       x: 1920,
-      y: 1080
+      y: 1080 - 36
     }
   };
 
@@ -113,7 +113,7 @@ function xsize(side, fraction) {
     finalWidth = width;
   }
 
-  finalHeight = height - 36;
+  finalHeight = height;
 
   if (side && side === 'right') {
     initialWidth = finalWidth;
