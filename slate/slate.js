@@ -1,3 +1,4 @@
+// TODO: slate - Refactor
 // TODO: slate - Make resize commands work on multiple screens
 // TODO: slate - [ resize X
 // TODO: slate - ] resize X
