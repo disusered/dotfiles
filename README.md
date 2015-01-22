@@ -40,6 +40,7 @@
       rxvt-unicode +pixbuf dejavu-fonts terminus-font \
       xterm +utmp xdotool xev xrandr xwininfo xlsfonts \
       mplayer2 feh watch nmap +zenmap dict htop dia \
+      weechat +aspell +lua +perl +python +ruby \
       links +x11 libcaca +x11 tree boost +clang35 +regex_match_extra \
       ranger mediainfo highlight atool the_silver_searcher txt2regex \
       git git-flow ack ctags httpie wget apache-ant tmux-pasteboard \
@@ -53,6 +54,8 @@
       http-server forever ios-deploy ios-sim jscs jshint karma-cli bower \
       node-inspector nodemon phonegap plugman svgo wiredep browserify
     sudo port select --set gcc mp-gcc49
+    # Python
+    sudo pip install websocket-client pync
     # Ruby
     gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
     \curl -sSL https://get.rvm.io | bash -s stable
