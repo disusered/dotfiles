@@ -40,7 +40,7 @@
       rxvt-unicode +pixbuf dejavu-fonts terminus-font \
       xterm +utmp xdotool xev xrandr xwininfo xlsfonts \
       mplayer2 feh watch nmap +zenmap dict htop dia \
-      weechat +aspell +lua +perl +python +ruby \
+      weechat +aspell +lua +perl +python +ruby +tls certsync \
       links +x11 libcaca +x11 tree boost +clang35 +regex_match_extra \
       ranger mediainfo highlight atool the_silver_searcher txt2regex \
       git git-flow ack ctags httpie wget apache-ant tmux-pasteboard \
