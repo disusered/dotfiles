@@ -1,9 +1,18 @@
+# notes
+note_tags
+
+# vim
 vim/.netrwhist
 vim/.ycm_extra_conf.pyc
+vim/cache
 vendor/plugged
 vendor/npm
-note_tags
-plug.vim
-itunes-notify
-vim/cache
 npm-debug.log
+plug.vim
+
+# weechat
+weechat/logs
+weechat/ssl
+weechat/*.log
+weechat/slack.cache
+weechat/urlserver_list.txt
