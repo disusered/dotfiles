@@ -79,6 +79,7 @@
   Plug 'itspriddle/vim-marked',                  { 'for': ['markdown', 'ghmarkdown'] }
   Plug 'gabrielelana/vim-markdown',              { 'for': ['markdown', 'ghmarkdown'] }
   Plug 'mattn/emmet-vim',                        { 'for': ['html', 'eruby', 'javascript', 'css', 'scss', 'markdown', 'ghmarkdown', 'html.handlebars'] }
+  Plug 'tpope/vim-git',                          { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
 
   call plug#end()
   filetype plugin indent on
