@@ -20,7 +20,7 @@ ln -s $ROOT/git/gitconfig $HOME/.gitconfig
 ln -s $ROOT/git/gitignore_global $HOME/.gitignore_global
 ln -s $ROOT/slate/slate $HOME/.slate
 ln -s $ROOT/slate/slate.js $HOME/.slate.js
-ln -s $ROOT/vim .$HOME/vim
+ln -s $ROOT/vim $HOME/.vim
 ln -s $ROOT/vim/vimrc $HOME/.vimrc
 ln -s $ROOT/vim/gvimrc $HOME/.gvimrc
 ln -s $ROOT/vendor/vim-plug/plug.vim $ROOT/vim/autoload/plug.vim
