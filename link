@@ -75,6 +75,9 @@ defaults write org.x.X11 enable_test_extensions -boolean true
 defaults write org.macports.X11 app_to_run urxvtc
 defaults write org.x.X11 app_to_run urxvtc
 
+# Weechat
+ln -s $ROOT/weechat $HOME/.weechat
+
 # WeeSlack
 wget -P $HOME/.weechat/python/autoload \
   https://raw.githubusercontent.com/rawdigits/wee-slack/master/wee_slack.py
