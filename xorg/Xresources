@@ -50,6 +50,8 @@ URxvt.iso14755_52: false
 URxvt*fading: 8
 URxvt*fadeColor: #002b36;
 
+URxvt.colorUL: 5
+
 ! Keyboard ---------------------------------------------------------------------
 
 ! Home/End
