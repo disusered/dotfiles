@@ -16,3 +16,8 @@ weechat/ssl
 weechat/*.log
 weechat/slack.cache
 weechat/urlserver_list.txt
+
+# mps
+mps*/cache*
+mps*/input_history
+mps*/transcode
