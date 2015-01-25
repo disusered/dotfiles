@@ -56,7 +56,7 @@
       node-inspector nodemon phonegap plugman svgo wiredep browserify
     sudo port select --set gcc mp-gcc49
     # Python
-    sudo pip install websocket-client pync mps-youtube
+    sudo pip install websocket-client pync mps mps-youtube
     # Ruby
     gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
     \curl -sSL https://get.rvm.io | bash -s stable
