@@ -11,7 +11,7 @@ if ! zgen saved; then
     zgen load tarruda/zsh-autosuggestions
 
     # completions
-    zgen completions zsh-users/zsh-completions src
+    zgen load zsh-users/zsh-completions src
 
     # theme
     zgen load sindresorhus/pure
