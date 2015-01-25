@@ -32,6 +32,7 @@
     sudo port install python27 py27-pip gcc49 clang-3.5
     sudo port select --set clang mp-clang-3.5
     sudo port select --set gcc mp-gcc49
+    sudo port select --set llvm mp-llvm-3.5
     sudo port select --set python python27
     sudo port select --set pip pip27
     # MacPorts
