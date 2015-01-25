@@ -90,11 +90,6 @@ defaults write org.x.X11 app_to_run urxvtc
 
 # Weechat
 ln -s $ROOT/weechat $HOME/.weechat
-
-# WeeSlack
-wget -P $HOME/.weechat/python/autoload \
-  https://raw.githubusercontent.com/rawdigits/wee-slack/master/wee_slack.py
-
-# Notification Center
+ln -s $ROOT/vendor/wee-slack/wee_slack.py $HOME/.weechat/python/autoload/
 wget -P $HOME/.weechat/python/autoload \
   https://raw.githubusercontent.com/sindresorhus/weechat-notification-center/0.3.0/notification_center.py
