@@ -15,7 +15,6 @@ ln -s $ROOT/zsh/zshrc $HOME/.zshrc
 ln -s $ROOT/zsh/zshenv $HOME/.zshenv
 ln -s $ROOT/tmux/tmux.conf $HOME/.tmux.conf
 ln -s $ROOT/zathura/zathurarc $HOME/.config/zathura
-ln -s $ROOT/cmus/autosave $HOME/.config/cmus/autosave
 ln -s $ROOT/git/gitconfig $HOME/.gitconfig
 ln -s $ROOT/git/gitignore_global $HOME/.gitignore_global
 ln -s $ROOT/slate/slate $HOME/.slate
@@ -28,6 +27,20 @@ ln -s $ROOT/ag/agignore .agignore
 ln -s $ROOT/ack/ackrc $HOME/.ackrc
 ln -s $ROOT/vendor/pure/pure.zsh \
       /usr/local/share/zsh/site-functions/prompt_pure_setup
+
+# cmus
+CMUS_CONF="${HOME}/.config/cmus/autosave"
+if [ -f $CMUS_CONF ] # if autosave exists
+then
+  echo exist 
+  cp $CMUS_CONF $ROOT/cmus/autosave_
+  cp $ROOT/cmus/autosave_ $ROOT/cmus/autosave
+  rm $CMUS_CONF $ROOT/cmus/autosave_ 
+  ln -s $ROOT/cmus/autosave $CMUS_CONF
+else
+  echo no
+  ln -s $ROOT/cmus/autosave $CMUS_CONF
+fi
 
 # Hide last-logged-in message on new terminals
 touch $HOME/.hushlogin
