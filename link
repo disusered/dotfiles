@@ -31,6 +31,15 @@ ln -s $ROOT/ack/ackrc $HOME/.ackrc
 ln -s $ROOT/vendor/pure/pure.zsh \
       /usr/local/share/zsh/site-functions/prompt_pure_setup
 
+# mps
+mkdir -p $HOME/.config/mps
+ln -s $ROOT/mps/config $HOME/.config/mps/
+ln -s $ROOT/mps/playlist $HOME/.config/mps/
+
+mkdir -p $HOME/.config/mps-youtube
+ln -s $ROOT/mps-youtube/config $HOME/.config/mps-youtube/
+ln -s $ROOT/mps-youtube/playlist_v2 $HOME/.config/mps-youtube/
+
 # cmus
 if [ -f $CMUS_CONF ] # if autosave exists
 then
