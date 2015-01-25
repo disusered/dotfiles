@@ -16,3 +16,4 @@ weechat/ssl
 weechat/*.log
 weechat/slack.cache
 weechat/urlserver_list.txt
+sec.conf
