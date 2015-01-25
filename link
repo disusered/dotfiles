@@ -91,7 +91,7 @@ defaults write org.macports.X11 app_to_run urxvtc
 defaults write org.x.X11 app_to_run urxvtc
 
 # Weechat
-ln -s $ROOT/weechat $HOME/.weechat
-ln -s $ROOT/vendor/wee-slack/wee_slack.py $HOME/.weechat/python/autoload/
-wget -P $HOME/.weechat/python/autoload \
-  https://raw.githubusercontent.com/sindresorhus/weechat-notification-center/0.3.0/notification_center.py
+rm -rf $HOME/.weechat
+ln -s $WEECHAT $HOME/.weechat
+[ -f $WEE_SLACK ] && rm $WEE_SLACK
+ln -s $ROOT/vendor/wee-slack/wee_slack.py $WEE_SLACK
