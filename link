@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Dotfiles path
+# Paths
 ROOT="${HOME}/.dotfiles"
+CMUS_CONF="${HOME}/.config/cmus/autosave"
+WEECHAT="${ROOT}/weechat"
+WEE_SLACK="$ROOT/weechat/python/autoload/wee_slack.py"
 
 # Xorg
 mkdir -p $HOME/.xinitrc.d
@@ -29,7 +32,6 @@ ln -s $ROOT/vendor/pure/pure.zsh \
       /usr/local/share/zsh/site-functions/prompt_pure_setup
 
 # cmus
-CMUS_CONF="${HOME}/.config/cmus/autosave"
 if [ -f $CMUS_CONF ] # if autosave exists
 then
   echo exist 
