@@ -1,4 +1,4 @@
-set aaa_mode=all
+set aaa_mode=artist
 set altformat_current= %F 
 set altformat_playlist= %f%= %d 
 set altformat_title=%f
@@ -11,34 +11,34 @@ set color_cmdline_bg=default
 set color_cmdline_fg=default
 set color_cur_sel_attr=default
 set color_error=lightred
-set color_info=lightyellow
-set color_separator=blue
+set color_info=blue
+set color_separator=238
 set color_statusline_attr=default
-set color_statusline_bg=gray
-set color_statusline_fg=black
+set color_statusline_bg=238
+set color_statusline_fg=magenta
 set color_titleline_attr=default
-set color_titleline_bg=blue
-set color_titleline_fg=white
+set color_titleline_bg=238
+set color_titleline_fg=gray
 set color_win_attr=default
-set color_win_bg=default
-set color_win_cur=lightyellow
+set color_win_bg=black
+set color_win_cur=green
 set color_win_cur_sel_attr=default
-set color_win_cur_sel_bg=blue
-set color_win_cur_sel_fg=lightyellow
-set color_win_dir=lightblue
-set color_win_fg=default
+set color_win_cur_sel_bg=magenta
+set color_win_cur_sel_fg=black
+set color_win_dir=magenta
+set color_win_fg=252
 set color_win_inactive_cur_sel_attr=default
-set color_win_inactive_cur_sel_bg=gray
-set color_win_inactive_cur_sel_fg=lightyellow
+set color_win_inactive_cur_sel_bg=240
+set color_win_inactive_cur_sel_fg=255
 set color_win_inactive_sel_attr=default
-set color_win_inactive_sel_bg=gray
-set color_win_inactive_sel_fg=black
+set color_win_inactive_sel_bg=240
+set color_win_inactive_sel_fg=gray
 set color_win_sel_attr=default
-set color_win_sel_bg=blue
+set color_win_sel_bg=magenta
 set color_win_sel_fg=white
 set color_win_title_attr=default
-set color_win_title_bg=blue
-set color_win_title_fg=white
+set color_win_title_bg=240
+set color_win_title_fg=gray
 set confirm_run=true
 set continue=true
 set device=/dev/cdrom
@@ -47,7 +47,7 @@ set dsp.ao.buffer_size=16384
 set dsp.ao.driver=
 set dsp.ao.wav_counter=1
 set dsp.ao.wav_dir=/Users/carlos
-set follow=false
+set follow=true
 set format_current= %a - %l -%3n. %t%= %y 
 set format_playlist= %-25%a %3n. %t%= %y %d 
 set format_playlist_va= %-25%A %3n. %t (%a)%= %y %d 
@@ -159,7 +159,7 @@ bind common z player-prev
 bind common { vol -1% -0
 bind common } vol -0 -1%
 fset 90s=date>=1990&date<2000
-fset classical=genre="Classical"
+fset classical=genre="Rap"
 fset missing-tag=!stream&(artist=""|album=""|title=""|tracknumber=-1|date=-1)
 fset mp3=filename="*.mp3"
 fset ogg=filename="*.ogg"
