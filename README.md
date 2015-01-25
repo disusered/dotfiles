@@ -87,7 +87,5 @@
 - Delay Until Repeat: 150ms
 - Key Repeat: 20ms
 
-- TODO - mps: Backup settings
-- TODO - mps-youtube: Backup settings
 - TODO - mps-youtube: Fix mpv support
 - TODO - docs: Add to source control
