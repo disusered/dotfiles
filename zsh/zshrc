@@ -22,6 +22,7 @@ fi
 
 # Set path
 path=(
+  $HOME/.macports/Library/Frameworks/Python.framework/Versions/2.7/bin
   $HOME/Development/SDK/android-sdk/tools
   $HOME/Development/SDK/android-sdk/platform-tools
   $HOME/.macports/bin
