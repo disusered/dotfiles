@@ -314,7 +314,7 @@
   nnoremap    <Leader>gl        :Gitv<CR>
   nnoremap    <Leader>gh        :Gitv!<CR>
   nnoremap    <Leader>gm        :Gmove<Space>
-  nnoremap    <Leader>gb        :Git branch<Space>
+  nnoremap    <Leader>gb        :MerginalToggle<CR>
   nnoremap    <Leader>gco       :Git checkout<Space>
   nnoremap    <Leader>gp        :Dispatch! git push<CR>
   nnoremap    <Leader>gfm       :Dispatch! git pull<CR>
