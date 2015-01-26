@@ -327,8 +327,8 @@
   nnoremap    <Leader>e         :Errors<CR>
   nnoremap    <Leader>s         :SyntasticToggleMode<CR>
   nnoremap    _                 :NERDTreeToggle<CR>
-  nnoremap    +                 :TagbarToggle<CR>
-  nnoremap    =                 :GundoToggle<CR>
+  nnoremap    <Leader>t         :TagbarToggle<CR>
+  nnoremap    <Leader>u         :GundoToggle<CR>
   nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
   nnoremap    <Leader><Space>   :nohlsearch<CR>
   nnoremap    j                 gj
