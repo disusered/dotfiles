@@ -28,3 +28,6 @@
 [submodule "vendor/wee-slack"]
 	path = vendor/wee-slack
 	url = git@github.com:rawdigits/wee-slack.git
+[submodule "vendor/mps-yt"]
+	path = vendor/mps-yt
+	url = git@github.com:np1/mps-youtube.git
