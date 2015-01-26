@@ -87,3 +87,4 @@
 - Key Repeat: 20ms
 
 - TODO - docs: Add to source control
+- TODO - weechat - Add gtalk
