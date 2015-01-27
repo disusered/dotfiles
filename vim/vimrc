@@ -313,13 +313,15 @@
   nnoremap    <Leader>gr        :Gread<CR>
   nnoremap    <Leader>ge        :Gedit<CR>
   nnoremap    <Leader>gw        :Gwrite<CR><CR>
-  nnoremap    <Leader>gl        :Gitv<CR>
+  nnoremap    <Leader>gl        :Gitv --all<CR>
   nnoremap    <Leader>gh        :Gitv!<CR>
   nnoremap    <Leader>gm        :Gmove<Space>
   nnoremap    <Leader>gb        :MerginalToggle<CR>
   nnoremap    <Leader>gco       :Git checkout<Space>
   nnoremap    <Leader>gp        :Dispatch! git push<CR>
   nnoremap    <Leader>gfm       :Dispatch! git pull<CR>
+  nmap        <Leader>gv        :Gitv! --all<cr>
+  vmap        <Leader>gv        :Gitv! --all<cr>
   nnoremap    <Leader>p         :CtrlP<CR>
   nnoremap    <Leader>b         :CtrlPBuffer<CR>
   nnoremap    <Leader>o         :CtrlPFunky<CR>
