@@ -4,7 +4,6 @@
 ROOT="${HOME}/.dotfiles"
 CMUS_CONF="${HOME}/.config/cmus/autosave"
 WEECHAT="${ROOT}/weechat"
-WEE_SLACK="$ROOT/weechat/python/autoload/wee_slack.py"
 
 # Xorg
 mkdir -p $HOME/.xinitrc.d
@@ -102,5 +101,3 @@ defaults write org.x.X11 app_to_run urxvtc
 # Weechat
 rm -rf $HOME/.weechat
 ln -s $WEECHAT $HOME/.weechat
-[ -f $WEE_SLACK ] && rm $WEE_SLACK
-ln -s $ROOT/vendor/wee-slack/wee_slack.py $WEE_SLACK

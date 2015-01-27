@@ -25,9 +25,6 @@
 [submodule "vendor/urxvt-tabbedex"]
 	path = vendor/urxvt-tabbedex
 	url = https://github.com/stepb/urxvt-tabbedex
-[submodule "vendor/wee-slack"]
-	path = vendor/wee-slack
-	url = git@github.com:rawdigits/wee-slack.git
 [submodule "vendor/mps-yt"]
 	path = vendor/mps-yt
 	url = git@github.com:np1/mps-youtube.git

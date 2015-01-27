@@ -1,1 +1,0 @@
-/Users/carlos/.dotfiles/vendor/wee-slack/wee_slack.py
