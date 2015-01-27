@@ -121,6 +121,7 @@
   set showbreak=\ \...
   set wmh=0
   set background=dark
+  set lazyredraw
   set hlsearch
   set incsearch
   set ignorecase
