@@ -323,7 +323,7 @@
   nmap        <Leader>gv        :Gitv! --all<cr>
   vmap        <Leader>gv        :Gitv! --all<cr>
   nnoremap    <Leader>p         :CtrlP<CR>
-  nnoremap    <Leader>b         :CtrlPBuffer<CR>
+  nnoremap    <Leader>b         :BuffergatorToggle<CR>
   nnoremap    <Leader>o         :CtrlPFunky<CR>
   nnoremap    <Leader>n         :RecentNotes<CR>
   nnoremap    <Leader>a         :A<CR>
@@ -413,6 +413,12 @@
   let g:jsdoc_allow_input_prompt                      = 1
   let g:Gitv_WipeAllOnClose                           = 1
   let g:Gitv_DoNotMapCtrlKey                          = 1
+  let g:buffergator_suppress_keymaps                  = 1
+  let g:buffergator_viewport_split_policy             = 'R'
+  let g:buffergator_sort_regime                       = 'mru'
+  let g:buffergator_display_regime                    = 'basename'
+  let g:buffergator_show_full_directory_path          = 0
+  let g:buffergator_mru_cycle_local_to_window         = 1
   let g:lightline                                     = {
                                                       \ 'colorscheme': 'jellybeans',
                                                       \ 'active': {
