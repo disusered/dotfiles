@@ -411,6 +411,8 @@
   let g:tmuxline_powerline_separators                 = 0
   let g:jsdoc_default_mapping                         = 0
   let g:jsdoc_allow_input_prompt                      = 1
+  let g:Gitv_WipeAllOnClose                           = 1
+  let g:Gitv_DoNotMapCtrlKey                          = 1
   let g:lightline                                     = {
                                                       \ 'colorscheme': 'jellybeans',
                                                       \ 'active': {
