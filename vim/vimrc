@@ -35,11 +35,11 @@
   Plug 'vasconcelloslf/vim-interestingwords'
   Plug 'tpope/vim-commentary' 
   Plug 'Yggdroot/indentLine'
-  Plug 'Shougo/neocomplete.vim'
   Plug 'chrisbra/NrrwRgn'
   Plug 'idanarye/vim-merginal'
   Plug 'jeetsukumaran/vim-buffergator'
-  " Plug 'Valloric/YouCompleteMe',  { 'do': './install.sh' }
+  Plug 'Valloric/YouCompleteMe'
+  " Plug 'Valloric/YouCompleteMe',     { 'do': './install.sh' }
   Plug 'guns/xterm-color-table.vim', { 'on': 'XtermColorTable' }
   Plug 'Lokaltog/vim-easymotion',    { 'on': '<Plug>(easymotion-bd-t2)'}
   Plug 'rizzatti/dash.vim',          { 'on': ['<Plug>DashSearch'] }
