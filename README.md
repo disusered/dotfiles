@@ -47,7 +47,8 @@
       git git-flow ack ctags httpie wget apache-ant tmux-pasteboard \
       graphicsmagick imagemagick +lqr +rsvg +wmf cmus +aac +flac \
       zsh mercurial +zsh_completion lua luajit gnupg giflib \
-      macvim +cscope +lua +python27 +ruby20 +breakindent
+      macvim +cscope +lua +python27 +ruby20 +breakindent \
+      vim +cscope +lua +python27 +ruby20 +breakindent
     # Node
     sudo port select --set gcc none
     sudo npm install -g yo gulp grunt-cli cordova ionic \
