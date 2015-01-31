@@ -35,7 +35,6 @@
   Plug 'tpope/vim-commentary' 
   Plug 'Yggdroot/indentLine'
   Plug 'chrisbra/NrrwRgn'
-  Plug 'idanarye/vim-merginal'
   Plug 'jeetsukumaran/vim-buffergator'
   Plug 'Valloric/YouCompleteMe'
   " Plug 'Valloric/YouCompleteMe',     { 'do': './install.sh' }
