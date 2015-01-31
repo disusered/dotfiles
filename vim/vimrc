@@ -42,7 +42,6 @@
   Plug 'rizzatti/dash.vim',          { 'on': ['<Plug>DashSearch'] }
   Plug 'tacahiroy/ctrlp-funky',      { 'on': ['CtrlPFunky'] }
   Plug 'majutsushi/tagbar',          { 'on': 'TagbarToggle' }
-  Plug 'scrooloose/nerdtree',        { 'on': 'NERDTreeToggle' }
   Plug 'sjl/gundo.vim',              { 'on': 'GundoToggle' }
   Plug 'gregsexton/gitv',            { 'on': 'Gitv' }
   Plug 'rking/ag.vim',               { 'on': 'Ag' }
@@ -145,9 +144,6 @@
   au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " plugin functions =============================================================
-  " nerdtree
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
   " syntastic
   function s:find_jshintrc(dir)
     let l:found = globpath(a:dir, '.jshintrc')
@@ -191,7 +187,7 @@
 
   function! MyFugitive()
     try
-      if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && exists('*fugitive#head')
+      if expand('%:t') !~? 'Tagbar\|Gundo' && exists('*fugitive#head')
         let mark = ' '
         let _ = fugitive#head()
         return strlen(_) ? mark._ : ''
@@ -327,7 +323,6 @@
   nnoremap    <Leader>l         :call <SID>syntastic()<CR>
   nnoremap    <Leader>e         :Errors<CR>
   nnoremap    <Leader>s         :SyntasticToggleMode<CR>
-  nnoremap    _                 :NERDTreeToggle<CR>
   nnoremap    <Leader>t         :TagbarToggle<CR>
   nnoremap    <Leader>u         :GundoToggle<CR>
   nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
@@ -389,8 +384,6 @@
   let g:ctrlp_extensions                              = ['funky']
   let g:tagbar_left                                   = 0
   let g:tagbar_sort                                   = 0
-  let NERDTreeShowHidden                              = 1
-  let NERDTreeIgnore                                  = ['\.DS_Store', '\.git', '\.vagrant', 'node_modules']
   let g:rubycomplete_buffer_loading                   = 1
   let g:rubycomplete_classes_in_global                = 1
   let g:rubycomplete_rails                            = 1
