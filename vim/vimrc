@@ -34,7 +34,8 @@
   Plug 'vasconcelloslf/vim-interestingwords'
   Plug 'tpope/vim-commentary' 
   Plug 'Yggdroot/indentLine'
-  Plug 'chrisbra/NrrwRgn'
+  Plug 'chrisbra/NrrwRgn',
+  Plug 't9md/vim-choosewin'
   Plug 'jeetsukumaran/vim-buffergator'
   Plug 'Valloric/YouCompleteMe',     { 'do': './install.sh' }
   Plug 'guns/xterm-color-table.vim', { 'on': 'XtermColorTable' }
@@ -288,6 +289,7 @@
   nmap        <expr> K          <SID>doc("\<Plug>DashSearch")
   nmap        <Leader>/         <Plug>CommentaryLine
   vmap        <Leader>/         <Plug>Commentary
+  nmap        <Leader>w         <Plug>(choosewin)
   nmap        ˚                 [e
   nmap        ∆                 ]e
   vmap        ˚                 [egv
