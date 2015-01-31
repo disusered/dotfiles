@@ -14,7 +14,6 @@
   Plug 'FelikZ/ctrlp-py-matcher'
   Plug 'tpope/vim-unimpaired'
   Plug 'jpalardy/vim-slime'
-  Plug 'bling/vim-bufferline'
   " Plug 'edkolev/tmuxline.vim'
   Plug 'SirVer/ultisnips'
   Plug 'xolox/vim-misc'
@@ -421,6 +420,7 @@
   let g:buffergator_mru_cycle_local_to_window         = 1
   let g:ag_highlight                                  = 1
   let g:lightline                                     = {
+                                                      \ 'colorscheme': 'jellybeans',
                                                       \ 'active': {
                                                       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
                                                       \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
