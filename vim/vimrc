@@ -363,16 +363,6 @@
   let g:ycm_enable_diagnostic_signs                   = 0
   let g:ycm_key_list_select_completion                = ['<c-n>', '<down>']
   let g:ycm_key_list_previous_completion              = ['<C-p>', '<Up>']
-  let g:neocomplete#enable_at_startup                 = 1
-  let g:neocomplete#auto_completion_start_length      = 1
-  let g:neocomplete#enable_smart_case                 = 1
-  let g:neocomplete#lock_buffer_name_pattern          = '\*ku\*'
-  let g:neocomplete#sources#buffer#cache_limit_size   = 50000
-  let g:neocomplete#data_directory                    = $HOME.'/.vim/cache/noecompl'
-  if !exists('g:neocomplete#force_omni_input_patterns')
-    let g:neocomplete#force_omni_input_patterns = {}
-    let g:neocomplete#force_omni_input_patterns.javascript = '[^. \t]\.\w*'
-  endif
   let g:slime_target                                  = "tmux"
   let g:slime_paste_file                              = tempname()
   let g:slime_default_config                          = {"socket_name": "default", "target_pane": "1"}
