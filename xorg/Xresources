@@ -34,7 +34,7 @@ URxvt.perl-ext-common: default,matcher,font-size,tabbedex
 URxvt.tabbed.tabbar-fg: 8
 URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg: 0
-URxvt.tabbed.tab-bg: 5
+URxvt.tabbed.tab-bg: 103
 URxvt.tabbed.new-button: false
 URxvt.tabbed.autohide: true
 
