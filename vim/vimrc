@@ -58,6 +58,7 @@
   au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
   au BufNewFile,BufRead {*.jade} set filetype=jade
   au BufNewFile,BufRead {*zshrc,*zshenv} set filetype=zsh.sh
+  au BufNewFile,BufRead {.env} set filetype=sh
 
   Plug 'elzr/vim-json',                          { 'for': 'json' }
   Plug 'mustache/vim-mustache-handlebars',       { 'for': 'mustache' }
