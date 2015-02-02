@@ -38,6 +38,7 @@
   Plug 't9md/vim-choosewin'
   Plug 'jeetsukumaran/vim-buffergator'
   Plug 'Valloric/YouCompleteMe',     { 'do': './install.sh' }
+  Plug 'Wolfy87/vim-enmasse',        { 'on': 'EnMasse' }
   Plug 'guns/xterm-color-table.vim', { 'on': 'XtermColorTable' }
   Plug 'Lokaltog/vim-easymotion',    { 'on': '<Plug>(easymotion-bd-t2)'}
   Plug 'rizzatti/dash.vim',          { 'on': ['<Plug>DashSearch'] }
