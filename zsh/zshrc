@@ -66,7 +66,6 @@ alias c='clear'
 alias e='ranger'
 alias m='cmus'
 alias d='dict'
-alias i="pickler search | sed '/;)/d' |selecta | awk '{print $1}' | xargs pickler show"
 alias yt='$HOME/.dotfiles/vendor/mps-yt/mpsyt'
 alias tl='t stream timeline'
 alias mplayer='mpv'
@@ -274,4 +273,10 @@ bindkey '^T' autosuggest-toggle
 
 bindkey '^n' vi-forward-word
 
+# Pickler helpers for Pivotal
+function picklerPicker {
+  pickler search | sed '/;)/d' | selecta | awk '{print $1}' | xargs pickler show
+}
+
 alias j="selectmark"
+alias i="picklerPicker"
