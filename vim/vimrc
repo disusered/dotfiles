@@ -36,7 +36,7 @@
   Plug 'Yggdroot/indentLine'
   Plug 'chrisbra/NrrwRgn',
   Plug 't9md/vim-choosewin'
-  Plug 'jeetsukumaran/vim-buffergator'
+  Plug 'jeetsukumaran/vim-buffergator',
   Plug 'Valloric/YouCompleteMe',     { 'do': './install.sh' }
   Plug 'Wolfy87/vim-enmasse',        { 'on': 'EnMasse' }
   Plug 'guns/xterm-color-table.vim', { 'on': 'XtermColorTable' }
