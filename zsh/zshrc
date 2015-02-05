@@ -66,6 +66,7 @@ alias c='clear'
 alias e='ranger'
 alias m='cmus'
 alias d='dict'
+alias i="pickler search | sed '/;)/d' |selecta | awk '{print $1}' | xargs pickler show"
 alias yt='$HOME/.dotfiles/vendor/mps-yt/mpsyt'
 alias tl='t stream timeline'
 alias mplayer='mpv'
@@ -149,6 +150,10 @@ function marks {
 }
 function _completemarks {
   reply=($(ls $MARKPATH))
+}
+function selectmark {
+  URI="$(marks | cat | selecta | awk '{print $1}')"
+  cd -P "$MARKPATH/$URI" 2>/dev/null || echo "No such mark: $URI"
 }
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
@@ -268,3 +273,5 @@ bindkey '^h' backward-delete-char
 bindkey '^T' autosuggest-toggle
 
 bindkey '^n' vi-forward-word
+
+alias j="selectmark"
