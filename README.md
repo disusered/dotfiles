@@ -30,6 +30,7 @@
     vim --override-system-vi --with-lua --with-luajit --with-tcl \
     weechat --with-aspell --with-curl --with-lua --with-perl \
     --with-python --with-ruby
+    brew install --HEAD neovim
     # ZSH
     sudo chpass -s /bin/zsh $USER
     zgen update
@@ -42,7 +43,7 @@
     # Python
     pip install --upgrade setuptools
     pip install --upgrade pip
-    pip install websocket-client pync mps pafy
+    pip install websocket-client pync mps pafy neovim
     # Ruby
     gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
     \curl -sSL https://get.rvm.io | bash -s stable
