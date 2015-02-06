@@ -275,8 +275,14 @@ bindkey '^n' vi-forward-word
 
 # Pickler helpers for Pivotal
 function picklerPicker {
-  pickler search | sed '/;)/d' | selecta | awk '{print $1}' | xargs pickler show
+  clear
+  ID=$(pickler search | selecta | awk '{print $1}')
+  clear
+  pickler $1 $ID
+  echo -e '\n'
+  read "?Press Enter to return to list"
+  picklerPicker $1
 }
 
 alias j="selectmark"
-alias i="picklerPicker"
+alias pt="picklerPicker show"
