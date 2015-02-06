@@ -6,14 +6,14 @@
 [[ -f ~/.Xresources ]] && xrdb -merge $HOME/.Xresources
 
 # Default key repeat
-xset r rate 150
+xset r rate 175
 
 # Note that startup items are run in the background with the & suffix added.
 # Otherwise the script would halt and wait for each program and daemon to exit
 # before executing the window manager, which isn't backgrounded.
 
 # Startup
-exec urxvtd \
+exec /usr/local/bin/urxvtd \
   --fork \
   --opendisplay \
   --quiet &
