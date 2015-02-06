@@ -14,7 +14,7 @@ slate.configAll({
 });
 
 var hyper   = ':ctrl;shift;alt;cmd';
-var xdotool = '$HOME/.macports/bin/xdotool';
+var xdotool = '/usr/local/bin/xdotool';
 
 function screen() {
   var info = slate.screen();

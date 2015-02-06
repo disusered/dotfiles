@@ -23,12 +23,11 @@ fi
 
 # Set path
 path=(
+  /usr/local/bin
+  /usr/local/sbin
   $HOME/.dotfiles/bin
-  $HOME/.macports/Library/Frameworks/Python.framework/Versions/2.7/bin
   $HOME/Development/SDK/android-sdk/tools
   $HOME/Development/SDK/android-sdk/platform-tools
-  $HOME/.macports/bin
-  $HOME/.macports/sbin
   $path
 )
 
@@ -72,7 +71,6 @@ alias yt='$HOME/.dotfiles/vendor/mps-yt/mpsyt'
 alias tl='t stream timeline'
 alias mplayer='mpv'
 alias tcat='tput smkx; cat; tput rmkx'
-alias dia='dia --integrated'
 alias cdg='cd-gitroot'
 alias top='htop'
 alias pdf='zathura'

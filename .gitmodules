@@ -7,9 +7,6 @@
 [submodule "vendor/base16-xresources"]
 	path = vendor/base16-xresources
 	url = git@github.com:chriskempson/base16-xresources.git
-[submodule "vendor/base16-zathura"]
-	path = vendor/base16-zathura
-	url = git@github.com:esn89/base16-zathura.git
 [submodule "vendor/powerline-fonts"]
 	path = vendor/powerline-fonts
 	url = git@github.com:powerline/fonts.git

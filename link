@@ -7,49 +7,64 @@ WEECHAT="${ROOT}/weechat"
 
 # Xorg
 mkdir -p $HOME/.xinitrc.d
-chmod a+x $ROOT/xorg/xinit.sh
+rm $HOME/.Xresources $HOME/.Xmodmap $HOME/.xinitrc
 ln -s $ROOT/xorg/Xresources $HOME/.Xresources
 ln -s $ROOT/xorg/Xmodmap $HOME/.Xmodmap
 ln -s $ROOT/xorg/xinitrc $HOME/.xinitrc
 
-# Create Symlinks
+# ZSH
+rm $HOME/.zshrc $HOME/.zshenv
 ln -s $ROOT/zsh/zshrc $HOME/.zshrc
 ln -s $ROOT/zsh/zshenv $HOME/.zshenv
+
+# Tmux
+rm $HOME/.tmux.conf
 ln -s $ROOT/tmux/tmux.conf $HOME/.tmux.conf
-ln -s $ROOT/zathura/zathurarc $HOME/.config/zathura
+
+# Git
+rm $HOME/.gitconfig $HOME/.gitignore_global
 ln -s $ROOT/git/gitconfig $HOME/.gitconfig
 ln -s $ROOT/git/gitignore_global $HOME/.gitignore_global
+
+# Slate
+rm $HOME/.slate $HOME/.slate.js
 ln -s $ROOT/slate/slate $HOME/.slate
 ln -s $ROOT/slate/slate.js $HOME/.slate.js
+
+# Vim
+rm $HOME/.vim $HOME/.vimrc $HOME/.gvimrc $ROOT/vim/autoload/plug.vim
 ln -s $ROOT/vim $HOME/.vim
 ln -s $ROOT/vim/vimrc $HOME/.vimrc
 ln -s $ROOT/vim/gvimrc $HOME/.gvimrc
-ln -s $ROOT/vendor/pickler/plugin/pickler.vim $ROOT/vim/autoload/pickler.vim
 ln -s $ROOT/vendor/vim-plug/plug.vim $ROOT/vim/autoload/plug.vim
-ln -s $ROOT/ag/agignore .agignore
+
+# Pivotal
+rm $ROOT/vim/autoload/pickler.vim
+ln -s $ROOT/vendor/pickler/plugin/pickler.vim $ROOT/vim/autoload/pickler.vim
+
+# Ag/Ack
+rm $HOME/.agignore $HOME/.ackrc
+ln -s $ROOT/ag/agignore $HOME/.agignore
 ln -s $ROOT/ack/ackrc $HOME/.ackrc
-ln -s $ROOT/vendor/pure/pure.zsh \
-      /usr/local/share/zsh/site-functions/prompt_pure_setup
 
-# mps
+# MPS/Youtube
 mkdir -p $HOME/.config/mps
-ln -s $ROOT/mps/config $HOME/.config/mps/
-ln -s $ROOT/mps/playlist $HOME/.config/mps/
-
 mkdir -p $HOME/.config/mps-youtube
-ln -s $ROOT/mps-youtube/config $HOME/.config/mps-youtube/
-ln -s $ROOT/mps-youtube/playlist_v2 $HOME/.config/mps-youtube/
+rm $HOME/.config/mps/config $HOME/.config/mps/playlist \
+   $HOME/.config/mps-youtube/config $HOME/.config/mps-youtube/playlist_v2
+ln -s $ROOT/mps/config $HOME/.config/mps/config
+ln -s $ROOT/mps/playlist $HOME/.config/mps/playlist
+ln -s $ROOT/mps-youtube/config $HOME/.config/mps-youtube/config
+ln -s $ROOT/mps-youtube/playlist_v2 $HOME/.config/mps-youtube/playlist_v2
 
 # cmus
 if [ -f $CMUS_CONF ] # if autosave exists
 then
-  echo exist 
   cp $CMUS_CONF $ROOT/cmus/autosave_
   cp $ROOT/cmus/autosave_ $ROOT/cmus/autosave
   rm $CMUS_CONF $ROOT/cmus/autosave_ 
   ln -s $ROOT/cmus/autosave $CMUS_CONF
 else
-  echo no
   ln -s $ROOT/cmus/autosave $CMUS_CONF
 fi
 
@@ -60,18 +75,7 @@ touch $HOME/.hushlogin
 mkdir -p $HOME/Development/SDK/gopath
 
 # urxvt fonts
-mkdir $HOME/.fonts
-
-# Powerline symbols
-wget -P $HOME/.fonts/powerline \
-  https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
-wget -P $HOME/.fonts/powerline \
-  https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
-mkdir -p $HOME/.config/fontconfig/conf.d
-ln -s $HOME/.fonts/powerline/10-powerline-symbols.conf \
-  $HOME/.config/fontconfig/conf.d
-
-# Monospace fonts
+rm -rf ~/.fonts && mkdir $HOME/.fonts
 unzip -o $ROOT/vendor/meslo/dist/v1.2.1/Meslo\ LG\ DZ\ v1.2.1.zip \
   -d /tmp
 find /tmp/Meslo\ LG\ DZ\ v1.2.1 -type f -name "*.ttf" \
@@ -80,23 +84,21 @@ find $ROOT/vendor/powerline-fonts -type f -name "*.*tf" \
   -exec ln -s "{}" $HOME/.fonts \;
 find $ROOT/vendor/powerline-fonts -type f -name "*.pcf.gz" \
   -exec ln -s "{}" $HOME/.fonts \;
-
 fc-cache -vf ~/.fonts
 
 # Interactive font size for urxvt
 mkdir -p $HOME/.urxvt/ext/
 chmod +x $ROOT/vendor/urxvt-font-size
-ln -s $ROOT/vendor/urxvt-font-size/font-size $HOME/.urxvt/ext
+rm $HOME/.urxvt/ext/font-size
+ln -s $ROOT/vendor/urxvt-font-size/font-size $HOME/.urxvt/ext/font-size
 
 # Tab extensions for urxvt
 chmod +x $ROOT/vendor/urxvt-tabbedex/tabbedex
-ln -s $ROOT/vendor/urxvt-tabbedex/tabbedex $HOME/.urxvt/ext
+rm $HOME/.urxvt/ext/tabbedex
+ln -s $ROOT/vendor/urxvt-tabbedex/tabbedex $HOME/.urxvt/ext/tabbedex
 
 # Enable X extension for Slate/xdotool
-defaults write org.macports.X11 enable_test_extensions -boolean true
 defaults write org.x.X11 enable_test_extensions -boolean true
-
-defaults write org.macports.X11 app_to_run urxvtc
 defaults write org.x.X11 app_to_run urxvtc
 
 # Weechat
