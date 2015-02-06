@@ -25,7 +25,7 @@
     --with-webp Caskroom/cask/mpv imagemagick --with-fontconfig \
     --with-ghostscript --with-librsvg --with-webp --with-x11 \
     graphicsmagick --with-ghostscript --with-x11  cmus --with-ffmpeg \
-    Caskroom/cask/xquartz rxvt-unicode --disable-iso14755 \
+    Caskroom/cask/xquartz rxvt-unicode \
     xdotool Caskroom/cask/dia links --with-x11 --with-jpeg
     vim --override-system-vi --with-lua --with-luajit --with-tcl \
     weechat --with-aspell --with-curl --with-lua --with-perl \
