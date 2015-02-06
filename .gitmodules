@@ -28,3 +28,6 @@
 [submodule "vendor/mps-yt"]
 	path = vendor/mps-yt
 	url = git@github.com:np1/mps-youtube.git
+[submodule "vendor/pickler"]
+	path = vendor/pickler
+	url = git@github.com:tpope/pickler.git
