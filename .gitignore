@@ -5,8 +5,6 @@ note_tags
 vim/.netrwhist
 vim/.ycm_extra_conf.pyc
 vim/cache
-vendor/plugged
-vendor/npm
 npm-debug.log
 plug.vim
 
