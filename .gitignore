@@ -19,3 +19,6 @@ weechat/urlserver_list.txt
 mps*/cache*
 mps*/input_history
 mps*/transcode
+
+# pivotal tracker
+vim/autoload/
