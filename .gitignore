@@ -22,3 +22,4 @@ mps*/transcode
 
 # pivotal tracker
 vim/autoload/
+.env
