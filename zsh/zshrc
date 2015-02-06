@@ -23,12 +23,10 @@ fi
 
 # Set path
 path=(
+  /usr/local/bin
   $HOME/.dotfiles/bin
-  $HOME/.macports/Library/Frameworks/Python.framework/Versions/2.7/bin
   $HOME/Development/SDK/android-sdk/tools
   $HOME/Development/SDK/android-sdk/platform-tools
-  $HOME/.macports/bin
-  $HOME/.macports/sbin
   $path
 )
 
