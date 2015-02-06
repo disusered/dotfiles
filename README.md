@@ -4,12 +4,7 @@
 
 1. Clone the repository
     ```bash
-    git clone git@github.com:disusered/dotfiles.git ~/.dotfiles
-    ```
-
-- Check out submodules
-    ```bash
-    git submodule update --init --recursive
+    git clone --recursive git@github.com:disusered/dotfiles.git ~/.dotfiles
     ```
 
 - Install XCode
