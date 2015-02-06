@@ -29,12 +29,6 @@
 
 - Install packages:
     ```bash
-    sudo port install python27 py27-pip gcc49 clang-3.5
-    sudo port select --set clang mp-clang-3.5
-    sudo port select --set gcc mp-gcc49
-    sudo port select --set llvm mp-llvm-3.5
-    sudo port select --set python python27
-    sudo port select --set pip pip27
     # MacPorts
     sudo port install w3m +inline_image_imlib2 +inline_image_gtk2 \
       zathura zathura-plugin-pdf-poppler zathura-plugin-cb tmux \
@@ -49,8 +43,14 @@
       zsh mercurial +zsh_completion lua luajit gnupg giflib \
       macvim +cscope +lua +python27 +ruby20 +breakindent \
       vim +cscope +lua +python27 +ruby20 +breakindent
+    brew install git git-flow vim ack ag
+    npm --without-npm
+    vim --override-system-vi --with-lua --with-luajit --with-tcl
+    ffmpeg --with-faac --with-fdk-aac --with-openssl --with-tools --with-webp \
+    cmus --with-ffmpeg
     # Node
-    sudo port select --set gcc none
+    curl -L https://npmjs.com/install.sh | sh
+    npm update npm -g
     sudo npm install -g yo gulp grunt-cli cordova ionic \
       http-server forever ios-deploy ios-sim jscs jshint karma-cli bower \
       node-inspector nodemon phonegap plugman svgo wiredep browserify
