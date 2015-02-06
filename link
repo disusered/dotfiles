@@ -21,10 +21,6 @@ ln -s $ROOT/zsh/zshenv $HOME/.zshenv
 rm $HOME/.tmux.conf
 ln -s $ROOT/tmux/tmux.conf $HOME/.tmux.conf
 
-# Zathura
-rm $HOME/.config/zathura/zathurarc
-ln -s $ROOT/zathura/zathurarc $HOME/.config/zathura/zathurarc
-
 # Git
 rm $HOME/.gitconfig $HOME/.gitignore_global
 ln -s $ROOT/git/gitconfig $HOME/.gitconfig
