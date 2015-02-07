@@ -8,6 +8,7 @@
   Plug 'chriskempson/base16-vim'
   " Source Control
   Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
 
   " Editor
   Plug 'benekastah/neomake'
