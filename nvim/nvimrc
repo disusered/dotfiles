@@ -2,7 +2,7 @@
   set nocompatible
   filetype off
 
-  call plug#begin('~/.dotfiles/vendor/plugged')
+  call plug#begin('~/.dotfiles/vendor/nplugged')
 
   " Visual
   Plug 'chriskempson/base16-vim'
