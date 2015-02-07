@@ -17,13 +17,15 @@
   Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 
   " Javascript
-  au BufNewFile,BufRead {*.es6,*.jsx} set ft=javascript
-  au FileType javascript setlocal omnifunc=tern#Complete
+  au BufNewFile,BufRead {*.es6} set ft=javascript
   Plug 'moll/vim-node',           { 'for': 'javascript' }
   Plug 'heavenshell/vim-jsdoc',   { 'for': 'javascript' }
   Plug 'marijnh/tern_for_vim',    { 'for': 'javascript', 'do': 'npm install' }
   Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-  Plug 'mxw/vim-jsx',             { 'for': 'javascript' }
+
+  " JSX
+  au BufNewFile,BufRead {*.jsx} set ft=jsx
+  Plug 'mxw/vim-jsx',             { 'for': 'jsx' }
 
   " JSON
   au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc} set ft=json
