@@ -15,11 +15,21 @@
   " Editor
   Plug 'benekastah/neomake'
 
+  " Javascript
+  au BufNewFile,BufRead {*.es6,*.jsx} set ft=javascript
+  au FileType javascript setlocal omnifunc=tern#Complete
+  Plug 'moll/vim-node',           { 'for': 'javascript' }
+  Plug 'heavenshell/vim-jsdoc',   { 'for': 'javascript' }
+  Plug 'marijnh/tern_for_vim',    { 'for': 'javascript', 'do': 'npm install' }
+  Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+  Plug 'mxw/vim-jsx',             { 'for': 'javascript' }
+
+  " JSON
+  au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc} set ft=json
+
 " Conditional ===================================================================
   au BufRead,BufNewFile {*.md,*.markdown} set filetype=markdown
   au BufNewFile,BufRead {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
-  au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc} set ft=json
-  au BufNewFile,BufRead {*.es6} set ft=javascript
   au BufNewFile,BufRead {*gitconfig} set ft=gitconfig
   au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache
   au BufNewFile,BufRead {*Dockerfile} set filetype=dockerfile
@@ -34,7 +44,6 @@
 " Autocommands
   au FileType make set noexpandtab
   au FileType gitconfig set noexpandtab
-  au FileType javascript setlocal omnifunc=tern#Complete
   au FileType css setlocal omnifunc=csscomplete#CompleteCSS
   au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
   au FileType python setlocal omnifunc=pythoncomplete#Complete
@@ -108,6 +117,7 @@
       \ }
   hi WarningMsg ctermfg=3 ctermbg=18
   hi ErrorMsg ctermfg=1 ctermbg=18
+  let g:neomake_javascript_enabled_makers = ['jsxhint']
 
   " lightline
   function! MyModified()
