@@ -1,0 +1,83 @@
+" Plug =========================================================================
+  set nocompatible
+  filetype off
+
+  call plug#begin('~/.dotfiles/vendor/plugged')
+
+" Conditional ===================================================================
+  au BufRead,BufNewFile {*.md,*.markdown} set filetype=markdown
+  au BufNewFile,BufRead {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
+  au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc} set ft=json
+  au BufNewFile,BufRead {*.es6} set ft=javascript
+  au BufNewFile,BufRead {*gitconfig} set ft=gitconfig
+  au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache
+  au BufNewFile,BufRead {*Dockerfile} set filetype=dockerfile
+  au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
+  au BufNewFile,BufRead {*.jade} set filetype=jade
+  au BufNewFile,BufRead {*zshrc,*zshenv} set filetype=zsh.sh
+  au BufNewFile,BufRead {.env} set filetype=sh
+
+  call plug#end()
+  filetype plugin indent on
+
+" Settings =====================================================================
+  let mapleader = ","
+
+  set encoding=utf-8
+  set laststatus=2
+  set mouse=a
+  set ttymouse=xterm2
+  set ffs=unix,dos,mac
+  set clipboard=unnamed
+  set autoread
+  set hidden
+  set ruler
+  set number
+  set title
+  set backspace=indent,eol,start
+  set nostartofline
+  set colorcolumn=80
+  set nofoldenable
+  set tabstop=2
+  set shiftwidth=2
+  set softtabstop=2
+  set expandtab
+  set autoindent
+  set copyindent
+  set pastetoggle=<F2>
+  set list
+  set listchars=trail:·,tab:⇥ᐧ
+  "set listchars=trail:␣,tab:⇥ᐧ,nbsp:⍽,eol:¶,extends:▸,precedes:◂
+  set wrap
+  set linebreak
+  set nolist
+  set breakindent
+  set showbreak=\ \...
+  set wmh=0
+  set background=dark
+  set lazyredraw
+  set hlsearch
+  set incsearch
+  set ignorecase
+  set smartcase
+  set gdefault
+  set wildignore+=.git\*,.hg\*,.svn\*
+  set nobackup
+  set nowb
+  set noswapfile
+  set spellfile=$HOME/.dotfiles/vim/spellfile.utf-8.add
+
+  au FileType make set noexpandtab
+  au FileType gitconfig set noexpandtab
+  au FileType javascript setlocal omnifunc=tern#Complete
+  au FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  au FileType python setlocal omnifunc=pythoncomplete#Complete
+  au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+  au FileType gitcommit setlocal omnifunc=pickler#omnifunc
+
+  filetype plugin on
+  filetype indent on
+  syntax enable
+  let base16colorspace=256
+  colorscheme base16-tomorrow
