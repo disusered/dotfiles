@@ -267,10 +267,8 @@ bindkey -M vicmd '^R' redo
 bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 
-# use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
-# zsh-autosuggestions is designed to be unobtrusive)
+# Autosuggest
 bindkey '^T' autosuggest-toggle
-
 bindkey '^n' vi-forward-word
 
 # Pickler helpers for Pivotal
