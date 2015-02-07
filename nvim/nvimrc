@@ -6,6 +6,10 @@
 
   " Visual
   Plug 'chriskempson/base16-vim'
+
+  " Editor
+  Plug 'benekastah/neomake'
+
 " Conditional ===================================================================
   au BufRead,BufNewFile {*.md,*.markdown} set filetype=markdown
   au BufNewFile,BufRead {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
@@ -83,3 +87,16 @@
   syntax enable
   let base16colorspace=256
   colorscheme base16-tomorrow
+
+" plugin settings ==============================================================
+  " neomake
+  let g:neomake_error_sign = {
+      \ 'text': '✕',
+      \ 'texthl': 'ErrorMsg',
+      \ }
+  let g:neomake_warning_sign = {
+      \ 'text': '▵',
+      \ 'texthl': 'WarningMsg',
+      \ }
+  hi WarningMsg ctermfg=3 ctermbg=18
+  hi ErrorMsg ctermfg=1 ctermbg=18
