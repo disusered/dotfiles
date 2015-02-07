@@ -36,10 +36,9 @@
     zgen update
     # Node
     curl -L https://npmjs.com/install.sh | sh
-    npm update npm -g
-    npm install -g yo gulp grunt-cli cordova ionic \
+    npm update npm -g && npm install -g yo gulp grunt-cli cordova ionic \
     http-server forever ios-deploy ios-sim jscs jshint karma-cli bower \
-    node-inspector nodemon phonegap plugman svgo wiredep browserify
+    node-inspector nodemon phonegap plugman svgo wiredep browserify jsxhint
     # Python
     pip install --upgrade setuptools
     pip install --upgrade pip
