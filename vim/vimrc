@@ -73,7 +73,8 @@
   Plug 'moll/vim-node',                          { 'for': 'javascript' }
   Plug 'heavenshell/vim-jsdoc',                  { 'for': 'javascript' }
   Plug 'marijnh/tern_for_vim',                   { 'for': 'javascript', 'do': 'npm install' }
-  Plug 'jelera/vim-javascript-syntax',           { 'for': 'javascript' }
+  Plug 'pangloss/vim-javascript',                { 'for': 'javascript' }
+  Plug 'mxw/vim-jsx',                            { 'for': 'javascript' }
   Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
   Plug 'csscomb/vim-csscomb',                    { 'for': ['css', 'scss'] }
   Plug 'gorodinskiy/vim-coloresque',             { 'for': ['css', 'scss', 'html', 'less', 'vim', 'stylus'] }
@@ -346,7 +347,7 @@
 " plugin settings ==============================================================
   let g:indentLine_char                               = '¦'
   let g:syntastic_html_checkers                       = ['']
-  let g:syntastic_javascript_checkers                 = ['jshint']
+  let g:syntastic_javascript_checkers                 = ['jsxhint']
   let g:syntastic_mode_map                              = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
   let g:syntastic_id_checkers                         = 1
   let g:syntastic_aggregate_errors                    = 1
