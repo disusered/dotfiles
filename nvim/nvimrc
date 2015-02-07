@@ -52,6 +52,7 @@
   au FileType python setlocal omnifunc=pythoncomplete#Complete
   au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
   au FileType gitcommit setlocal omnifunc=pickler#omnifunc
+  au FileType javascript setlocal omnifunc=tern#Complete
 
   autocmd! BufWritePost *.py,*.js Neomake
 
