@@ -18,7 +18,6 @@
 
   " Javascript
   au BufNewFile,BufRead {*.es6} set ft=javascript
-  Plug 'moll/vim-node',           { 'for': 'javascript' }
   Plug 'heavenshell/vim-jsdoc',   { 'for': 'javascript' }
   Plug 'marijnh/tern_for_vim',    { 'for': 'javascript', 'do': 'npm install' }
   Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
