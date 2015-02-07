@@ -26,6 +26,18 @@
   call plug#end()
   filetype plugin indent on
 
+" Autocommands
+  au FileType make set noexpandtab
+  au FileType gitconfig set noexpandtab
+  au FileType javascript setlocal omnifunc=tern#Complete
+  au FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  au FileType python setlocal omnifunc=pythoncomplete#Complete
+  au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+  au FileType gitcommit setlocal omnifunc=pickler#omnifunc
+
+  autocmd! BufWritePost *.py,*.js Neomake
+
 " Settings =====================================================================
   let mapleader = ","
 
@@ -72,15 +84,6 @@
   set nowb
   set noswapfile
   set spellfile=$HOME/.dotfiles/vim/spellfile.utf-8.add
-
-  au FileType make set noexpandtab
-  au FileType gitconfig set noexpandtab
-  au FileType javascript setlocal omnifunc=tern#Complete
-  au FileType css setlocal omnifunc=csscomplete#CompleteCSS
-  au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-  au FileType python setlocal omnifunc=pythoncomplete#Complete
-  au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-  au FileType gitcommit setlocal omnifunc=pickler#omnifunc
 
   filetype plugin on
   filetype indent on
