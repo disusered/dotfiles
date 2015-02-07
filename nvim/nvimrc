@@ -120,7 +120,6 @@
       \ }
   hi WarningMsg ctermfg=3 ctermbg=18
   hi ErrorMsg ctermfg=1 ctermbg=18
-  let g:neomake_javascript_enabled_makers = ['jsxhint']
 
   " lightline
   function! MyModified()
