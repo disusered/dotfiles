@@ -4,6 +4,8 @@
 
   call plug#begin('~/.dotfiles/vendor/plugged')
 
+  " Visual
+  Plug 'chriskempson/base16-vim'
 " Conditional ===================================================================
   au BufRead,BufNewFile {*.md,*.markdown} set filetype=markdown
   au BufNewFile,BufRead {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
