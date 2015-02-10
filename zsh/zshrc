@@ -274,7 +274,7 @@ bindkey '^n' vi-forward-word
 # Pickler helpers for Pivotal
 function picklerPicker {
   clear
-  ID=$(pickler search | selecta | awk '{print $1}')
+  ID=$(pickler search | sed '/:D/d' | selecta | awk '{print $1}')
   clear
   pickler $1 $ID
   echo -e '\n'
