@@ -1,5 +1,21 @@
 source "${HOME}/.dotfiles/vendor/zgen/zgen.zsh"
 
+# Set path
+path=(
+  /usr/local/bin
+  /usr/local/sbin
+  $HOME/.dotfiles/bin
+  $HOME/Development/SDK/android-sdk/tools
+  $HOME/Development/SDK/android-sdk/platform-tools
+  $path
+)
+
+# Set function paths
+fpath=(
+  /usr/local/share/zsh/site-functions
+  $fpath
+)
+
 # Check if there's no init script
 if ! zgen saved; then
     echo "Creating a zgen save"
@@ -20,22 +36,6 @@ if ! zgen saved; then
     # save all to init script
     zgen save
 fi
-
-# Set path
-path=(
-  /usr/local/bin
-  /usr/local/sbin
-  $HOME/.dotfiles/bin
-  $HOME/Development/SDK/android-sdk/tools
-  $HOME/Development/SDK/android-sdk/platform-tools
-  $path
-)
-
-# Set function paths
-fpath=(
-  /usr/local/share/zsh/site-functions
-  $fpath
-)
 
 # Autoload modules
 # autoload -U compinit && compinit
@@ -88,6 +88,7 @@ alias http='http --style vim'
 alias n='cd $HOME/Dropbox/Notes && vim .'
 alias fonts='fc-list | cut -f2 -d: | sort -u'
 alias g='git'
+alias gfl='git-flow'
 alias gl='g l'
 alias gs='g status --short --branch'
 alias gb='g branch'
