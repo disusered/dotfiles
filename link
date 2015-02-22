@@ -109,6 +109,9 @@ ln -s $ROOT/vendor/urxvt-tabbedex/tabbedex $HOME/.urxvt/ext/tabbedex
 defaults write org.x.X11 enable_test_extensions -boolean true
 defaults write org.x.X11 app_to_run urxvtc
 
+# Rainbow
+ln -s $ROOT/rainbow/rainbow_config.json .rainbow_config.json
+
 # Weechat
 rm -rf $HOME/.weechat
 ln -s $WEECHAT $HOME/.weechat
