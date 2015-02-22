@@ -69,6 +69,7 @@ alias m='cmus'
 alias d='dict'
 alias yt='$HOME/.dotfiles/vendor/mps-yt/mpsyt'
 alias mplayer='mpv'
+alias chat='weechat'
 alias twitter='rainbowstream -iot'
 alias t='twitter'
 alias tcat='tput smkx; cat; tput rmkx'
@@ -121,20 +122,6 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
-
-# Chat
-function chat {
-  tmux start-server
-  tmux new-session -d -s Chat -n feeds
-  tmux send-keys -t 0 'clear; weechat' C-m
-  tmux split-window -t 0 -h -p 30
-  tmux split-window -t 1 -v
-  tmux resize-pane -t 1 -y 11
-  tmux send-keys -t 1 'clear; watch -t -n 3600 "t whoami --csv > /tmp/me; transpose /tmp/me /tmp/me_; column -s, -t /tmp/me_ | sed '\''1d;11d;12d;13d;14d;15d;'\'' | sed -e '\''s/^/   /'\'' | less -E"' C-m
-  tmux send-keys -t 2 'clear; tl' C-m
-  tmux select-pane -t 0
-  tmux attach-session -d -tChat
-}
 
 # Marks
 function jump {
