@@ -47,8 +47,6 @@
     gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
     \curl -sSL https://get.rvm.io | bash -s stable
     rvm install ruby-2.1.2 ruby-2.2.0 && rvm use 2.2.0
-    gem install t pickler
-    t authorize
     # htop
     sudo chown root:wheel /usr/local/Cellar/htop-osx/0.8.2.3/bin/htop
     sudo chmod u+s /usr/local/Cellar/htop-osx/0.8.2.3/bin/htop
