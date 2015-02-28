@@ -7,6 +7,7 @@ vim/.ycm_extra_conf.pyc
 vim/cache
 npm-debug.log
 plug.vim
+vendor/plugged
 
 # weechat
 weechat/logs
