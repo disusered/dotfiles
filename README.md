@@ -18,7 +18,7 @@
     # Packages
     brew install git git-flow ack ag gpg wget ant watch dict tree \
     ctags httpie nmap htop ranger mediainfo atool tmux highlight \
-    pidcat ncdu jq selecta npm --without-npm python \
+    maven pidcat ncdu jq selecta npm --without-npm python \
     lua --universal --with-completion luajit --with-52compat \
     reattach-to-user-namespace aspell --with-lang-es --with-lang-en \
     ffmpeg --with-faac --with-fdk-aac --with-openssl --with-tools \
