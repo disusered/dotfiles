@@ -147,3 +147,4 @@ source $MYCONFIG/gitv.vim
 source $MYCONFIG/buffergator.vim
 source $MYCONFIG/keymap.vim
 source $MYCONFIG/choosewin.vim
+source $MYCONFIG/navigator.vim
