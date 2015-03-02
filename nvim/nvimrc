@@ -53,7 +53,6 @@
   Plug 'tpope/vim-unimpaired'
   Plug 'jeetsukumaran/vim-buffergator'
   Plug 't9md/vim-choosewin'
-  Plug 'christoomey/vim-tmux-navigator'
   Plug 'kien/ctrlp.vim'
   Plug 'FelikZ/ctrlp-py-matcher'
   Plug 'tacahiroy/ctrlp-funky', { 'on': ['CtrlPFunky'] }
@@ -147,4 +146,3 @@ source $MYCONFIG/gitv.vim
 source $MYCONFIG/buffergator.vim
 source $MYCONFIG/keymap.vim
 source $MYCONFIG/choosewin.vim
-source $MYCONFIG/navigator.vim
