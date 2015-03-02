@@ -75,6 +75,9 @@
   au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
   Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
+  " Java
+  au BufRead,BufNewFile {*.gradle} set filetype=groovy
+
   " JSON
   au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc} set ft=json
   Plug 'elzr/vim-json', { 'for': 'json' }
