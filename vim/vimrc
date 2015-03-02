@@ -147,7 +147,6 @@
   au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
   au FileType python setlocal omnifunc=pythoncomplete#Complete
   au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-  au FileType gitcommit setlocal omnifunc=pickler#omnifunc
 
 " plugin functions =============================================================
   function! MyModified()
