@@ -38,7 +38,8 @@
     curl -L https://npmjs.com/install.sh | sh
     npm update npm -g && npm install -g yo gulp grunt-cli cordova ionic \
     http-server forever ios-deploy ios-sim jscs jshint karma-cli bower \
-    node-inspector nodemon phonegap plugman svgo wiredep browserify jsxhint
+    node-inspector nodemon phonegap plugman svgo wiredep browserify \
+    react-tool syntastic-react
     npm adduser
     # Python
     pip install --upgrade setuptools
