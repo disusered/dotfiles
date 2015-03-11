@@ -71,7 +71,7 @@
   Plug 'tpope/vim-bundler',                      { 'for': 'ruby' }
   Plug 'tpope/vim-endwise',                      { 'for': ['ruby', 'sh'] }
   Plug 'kchmck/vim-coffee-script',               { 'for': 'coffee' }
-  Plug 'facebook/vim-flow',                      { 'for': 'javascript' }
+  Plug 'facebook/vim-flow',                      { 'for': 'javascript', 'do': 'npm install -g flow-bin' }
   Plug 'moll/vim-node',                          { 'for': 'javascript' }
   Plug 'heavenshell/vim-jsdoc',                  { 'for': 'javascript' }
   Plug 'marijnh/tern_for_vim',                   { 'for': 'javascript', 'do': 'npm install' }
