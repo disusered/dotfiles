@@ -52,7 +52,7 @@
   au BufRead,BufNewFile {*.md,*.markdown} set filetype=markdown
   au BufRead,BufNewFile {*.gradle} set filetype=groovy
   au BufNewFile,BufRead {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
-  au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc} set ft=json
+  au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc,*.eslintrc} set ft=json
   au BufNewFile,BufRead {*.es6} set ft=javascript
   au BufNewFile,BufRead {*gitconfig} set ft=gitconfig
   au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache

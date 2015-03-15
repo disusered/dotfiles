@@ -79,7 +79,7 @@
   au BufRead,BufNewFile {*.gradle} set filetype=groovy
 
   " JSON
-  au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc} set ft=json
+  au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc,*.eslintrc} set ft=json
   Plug 'elzr/vim-json', { 'for': 'json' }
 
   " Ruby
