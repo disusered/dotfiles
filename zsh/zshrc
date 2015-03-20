@@ -86,7 +86,8 @@ alias v='mplayer'
 alias ls='ls -G'
 alias ag='ag --pager "less -R" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34'
 alias http='http --style vim'
-alias n='cd $HOME/Dropbox/Notes && vim .'
+alias e='vim "$(find ~/Dropbox/Notes/*.md | selecta)"'
+alias n='open "$(find ~/Dropbox/Notes/*.md | selecta)"'
 alias fonts='fc-list | cut -f2 -d: | sort -u'
 alias g='git'
 alias gfl='git-flow'
@@ -259,16 +260,4 @@ bindkey '^h' backward-delete-char
 bindkey '^T' autosuggest-toggle
 bindkey '^n' vi-forward-word
 
-# Pickler helpers for Pivotal
-function picklerPicker {
-  clear
-  ID=$(pickler search | sed '/:D/d' | selecta | awk '{print $1}')
-  clear
-  pickler $1 $ID
-  echo -e '\n'
-  read "?Press Enter to return to list"
-  picklerPicker $1
-}
-
 alias j="selectmark"
-alias pt="picklerPicker show"
