@@ -31,7 +31,7 @@ nnoremap    <Leader>gfm       :Dispatch! git pull<CR>
 nmap        <Leader>gv        :Gitv! --all<cr>
 vmap        <Leader>gv        :Gitv! --all<cr>
 nnoremap    <Leader>p         :CtrlP<CR>
-nnoremap    <Leader>b         :BuffergatorToggle<CR>
+nnoremap    <Leader>b         :BuffergatorOpen<CR>
 nnoremap    <Leader>o         :CtrlPFunky<CR>
 nnoremap    <Leader>a         :A<CR>
 nnoremap    <Leader>l         :call <SID>syntastic()<CR>
