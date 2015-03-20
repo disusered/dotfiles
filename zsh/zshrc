@@ -91,6 +91,7 @@ alias e='vim "$(find ~/Dropbox/Notes/*.md | fzf --reverse --prompt "✏️  ")"'
 alias n='open "$(find ~/Dropbox/Notes/*.md | fzf --reverse --prompt "📔  ")"'
 alias fonts='fc-list | cut -f2 -d: | sort -u'
 alias g='git'
+alias gi="gitinteractive"
 alias gfl='git-flow'
 alias gl='g l'
 alias gs='g status --short --branch'
@@ -123,6 +124,12 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
+
+# Git Interactive
+function gitinteractive {
+  git add $(git status --short | awk '{print $2}' | fzf -m)
+  git commit
+}
 
 # Marks
 function jump {
