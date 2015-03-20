@@ -16,6 +16,7 @@ Plug 'vasconcelloslf/vim-interestingwords'
 Plug 'tpope/vim-commentary' 
 Plug 'tpope/vim-dispatch'
 Plug 'SirVer/ultisnips'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
 Plug 'rking/ag.vim',                     { 'on': 'Ag' }
 Plug 'sjl/gundo.vim',                    { 'on': 'GundoToggle' }
