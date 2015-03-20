@@ -47,8 +47,11 @@ ln -s $ROOT/nvim/nvimrc $HOME/.nvimrc
 ln -s $ROOT/vendor/vim-plug/plug.vim $ROOT/nvim/autoload/plug.vim
 
 # iTerm ^H fix
-infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $ROOT/vendor/$TERM.ti
+FIX='s/kbs=^[hH]/kbs=\\177/';
+infocmp $TERM | sed $FIX > $ROOT/vendor/$TERM.ti
+infocmp screen-256color | sed $FIX > $ROOT/vendor/screen-256color.ti
 tic $ROOT/vendor/$TERM.ti
+tic $ROOT/vendor/screen-256color.ti
 
 # Pivotal
 rm $ROOT/vim/autoload/pickler.vim
