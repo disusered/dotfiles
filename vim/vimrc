@@ -71,8 +71,7 @@
   Plug 'mxw/vim-jsx',                            { 'for': 'javascript' }
   Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
   Plug 'csscomb/vim-csscomb',                    { 'for': ['css', 'scss'] }
-  " Plug 'itspriddle/vim-marked',                  { 'for': ['markdown', 'ghmarkdown'] }
-  " Plug 'gabrielelana/vim-markdown',              { 'for': ['markdown', 'ghmarkdown'] }
+  Plug 'itspriddle/vim-marked',                  { 'for': ['markdown', 'ghmarkdown'] }
   Plug 'mattn/emmet-vim',                        { 'for': ['html', 'eruby', 'javascript', 'css', 'scss', 'markdown', 'ghmarkdown', 'html.handlebars'] }
   Plug 'tpope/vim-git',                          { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
 

@@ -26,6 +26,7 @@ Plug 'Wolfy87/vim-enmasse',              { 'on': 'EnMasse' }
 Plug 'Lokaltog/vim-easymotion',          { 'on': '<Plug>(easymotion-bd-t2)'}
 Plug 'tpope/vim-endwise',                { 'for': ['ruby', 'sh'] }
 Plug 'jpalardy/vim-slime',               { 'for': ['javascript', 'sh']}
+Plug 'itspriddle/vim-marked',            { 'for': ['markdown', 'ghmarkdown'] }
 Plug 'mattn/emmet-vim',                  { 'for': ['html', 'eruby', 'javascript', 'css', 'scss', 'markdown', 'ghmarkdown', 'html.handlebars'] }
 Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'justinmk/vim-gtfo'
