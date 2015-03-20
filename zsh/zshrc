@@ -128,7 +128,8 @@ fi
 
 # Git Interactive
 function gitinteractive {
-  git add $(git status --short | awk '{print $2}' | fzf -m)
+  GFILE=$(git status --short | awk '{print $2}' | fzf -m --reverse --prompt="👜  ")
+  git add $GFILE
   git commit --verbose
 }
 
