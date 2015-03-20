@@ -46,6 +46,10 @@ ln -s $ROOT/nvim $HOME/.nvim
 ln -s $ROOT/nvim/nvimrc $HOME/.nvimrc
 ln -s $ROOT/vendor/vim-plug/plug.vim $ROOT/nvim/autoload/plug.vim
 
+# iTerm ^H fix
+infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $ROOT/vendor/$TERM.ti
+tic $ROOT/vendor/$TERM.ti
+
 # Pivotal
 rm $ROOT/vim/autoload/pickler.vim
 ln -s $ROOT/vendor/pickler/plugin/pickler.vim $ROOT/vim/autoload/pickler.vim
