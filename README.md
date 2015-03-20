@@ -18,7 +18,7 @@
     # Packages
     brew install git git-flow ack ag gpg wget ant watch dict tree \
     ctags httpie nmap htop ranger mediainfo atool tmux highlight \
-    gradle pidcat ncdu jq selecta npm --without-npm python \
+    gradle pidcat ncdu jq fzf npm --without-npm python \
     lua --universal --with-completion luajit --with-52compat \
     reattach-to-user-namespace aspell --with-lang-es --with-lang-en \
     ffmpeg --with-faac --with-fdk-aac --with-openssl --with-tools \
@@ -31,6 +31,7 @@
     weechat --with-aspell --with-curl --with-lua --with-perl \
     --with-python --with-ruby
     brew install --HEAD neovim
+    $(brew info fzf | grep /install)
     # ZSH
     sudo chpass -s /bin/zsh $USER
     zgen update

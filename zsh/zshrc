@@ -63,6 +63,7 @@ alias open='noglob open'
 alias npm='noglob npm'
 
 # Aliases
+alias f='fzf --reverse --prompt "🔎  "'
 alias c='clear'
 alias e='ranger'
 alias m='cmus'
@@ -86,8 +87,8 @@ alias v='mplayer'
 alias ls='ls -G'
 alias ag='ag --pager "less -R" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34'
 alias http='http --style vim'
-alias e='vim "$(find ~/Dropbox/Notes/*.md | selecta)"'
-alias n='open "$(find ~/Dropbox/Notes/*.md | selecta)"'
+alias e='vim "$(find ~/Dropbox/Notes/*.md | f --prompt "✏️  ")"'
+alias n='open "$(find ~/Dropbox/Notes/*.md | f --prompt "📔  ")"'
 alias fonts='fc-list | cut -f2 -d: | sort -u'
 alias g='git'
 alias gfl='git-flow'
@@ -140,7 +141,7 @@ function _completemarks {
   reply=($(ls $MARKPATH))
 }
 function selectmark {
-  URI="$(marks | cat | selecta | awk '{print $1}')"
+  URI="$(marks | cat | f | awk '{print $1}')"
   cd -P "$MARKPATH/$URI" 2>/dev/null || echo "No such mark: $URI"
 }
 compctl -K _completemarks jump
@@ -261,3 +262,4 @@ bindkey '^T' autosuggest-toggle
 bindkey '^n' vi-forward-word
 
 alias j="selectmark"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
