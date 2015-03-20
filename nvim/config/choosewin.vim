@@ -1,1 +1,0 @@
-nmap B <Plug>(choosewin)

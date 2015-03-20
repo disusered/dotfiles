@@ -25,7 +25,6 @@ nnoremap    <Leader>gw        :Gwrite<CR><CR>
 nnoremap    <Leader>gl        :Gitv --all<CR>
 nnoremap    <Leader>gh        :Gitv!<CR>
 nnoremap    <Leader>gm        :Gmove<Space>
-nnoremap    <Leader>gb        :MerginalToggle<CR>
 nnoremap    <Leader>gco       :Git checkout<Space>
 nnoremap    <Leader>gp        :Dispatch! git push<CR>
 nnoremap    <Leader>gfm       :Dispatch! git pull<CR>
@@ -34,11 +33,9 @@ vmap        <Leader>gv        :Gitv! --all<cr>
 nnoremap    <Leader>p         :CtrlP<CR>
 nnoremap    <Leader>b         :BuffergatorToggle<CR>
 nnoremap    <Leader>o         :CtrlPFunky<CR>
-nnoremap    <Leader>n         :RecentNotes<CR>
 nnoremap    <Leader>a         :A<CR>
 nnoremap    <Leader>l         :call <SID>syntastic()<CR>
 nnoremap    <Leader>e         :Errors<CR>
-nnoremap    <Leader>s         :SyntasticToggleMode<CR>
 nnoremap    <Leader>t         :TagbarToggle<CR>
 nnoremap    <Leader>u         :GundoToggle<CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>

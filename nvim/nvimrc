@@ -9,7 +9,6 @@
   " Visual
   Plug 'chriskempson/base16-vim'
   Plug 'itchyny/lightline.vim'
-  Plug 'Yggdroot/indentLine'
 
   " Source Control
   au BufNewFile,BufRead {*gitconfig} set ft=gitconfig
@@ -25,13 +24,11 @@
   Plug 'Raimondi/delimitMate'
   Plug 'junegunn/vim-easy-align'
   Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-speeddating'
   Plug 'tpope/vim-abolish'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-projectionist'
   Plug 'vasconcelloslf/vim-interestingwords'
   Plug 'tpope/vim-commentary' 
-  Plug 'chrisbra/NrrwRgn'
   Plug 'tpope/vim-dispatch'
   Plug 'SirVer/ultisnips'
   Plug 'ervandew/supertab'
@@ -41,7 +38,6 @@
   Plug 'rizzatti/dash.vim',          { 'on': ['<Plug>DashSearch'] }
   Plug 'Valloric/YouCompleteMe',     { 'do': './install.sh' }
   Plug 'Wolfy87/vim-enmasse',        { 'on': 'EnMasse' }
-  Plug 'guns/xterm-color-table.vim', { 'on': 'XtermColorTable' }
   Plug 'Lokaltog/vim-easymotion',    { 'on': '<Plug>(easymotion-bd-t2)'}
   Plug 'tpope/vim-endwise',          { 'for': ['ruby', 'sh'] }
   Plug 'jpalardy/vim-slime',         { 'for': ['javascript', 'sh']}
@@ -52,7 +48,6 @@
   Plug 'justinmk/vim-gtfo'
   Plug 'tpope/vim-unimpaired'
   Plug 'jeetsukumaran/vim-buffergator'
-  Plug 't9md/vim-choosewin'
   Plug 'kien/ctrlp.vim'
   Plug 'FelikZ/ctrlp-py-matcher'
   Plug 'tacahiroy/ctrlp-funky', { 'on': ['CtrlPFunky'] }
@@ -90,8 +85,6 @@
 
   " Markdown
   au BufRead,BufNewFile {*.md,*.markdown} set filetype=markdown
-  Plug 'itspriddle/vim-marked', { 'for': ['markdown', 'ghmarkdown'] }
-  Plug 'gabrielelana/vim-markdown', { 'for': ['markdown', 'ghmarkdown'] }
 
   " Mustache
   au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache
@@ -150,4 +143,3 @@ source $MYCONFIG/jsdoc.vim
 source $MYCONFIG/gitv.vim
 source $MYCONFIG/buffergator.vim
 source $MYCONFIG/keymap.vim
-source $MYCONFIG/choosewin.vim

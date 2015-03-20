@@ -13,13 +13,11 @@
   Plug 'kien/ctrlp.vim'
   Plug 'FelikZ/ctrlp-py-matcher'
   Plug 'tpope/vim-unimpaired'
-  Plug 'jpalardy/vim-slime'
+  " Plug 'jpalardy/vim-slime'
   " Plug 'edkolev/tmuxline.vim'
   Plug 'SirVer/ultisnips'
-  Plug 'xolox/vim-misc'
   Plug 'ervandew/supertab'
   Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-speeddating'
   Plug 'tpope/vim-abolish'
   Plug 'tpope/vim-repeat'
   Plug 'Raimondi/delimitMate'
@@ -27,19 +25,14 @@
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-dispatch'
   Plug 'itchyny/lightline.vim'
-  Plug 'xolox/vim-notes'
   Plug 'tpope/vim-projectionist'
   Plug 'jeetsukumaran/vim-filebeagle'
   Plug 'justinmk/vim-gtfo'
   Plug 'vasconcelloslf/vim-interestingwords'
-  Plug 'tpope/vim-commentary' 
-  Plug 'Yggdroot/indentLine'
-  Plug 'chrisbra/NrrwRgn',
-  Plug 't9md/vim-choosewin'
+  Plug 'tpope/vim-commentary'
   Plug 'jeetsukumaran/vim-buffergator'
   Plug 'Valloric/YouCompleteMe',     { 'do': './install.sh' }
   Plug 'Wolfy87/vim-enmasse',        { 'on': 'EnMasse' }
-  Plug 'guns/xterm-color-table.vim', { 'on': 'XtermColorTable' }
   Plug 'Lokaltog/vim-easymotion',    { 'on': '<Plug>(easymotion-bd-t2)'}
   Plug 'rizzatti/dash.vim',          { 'on': ['<Plug>DashSearch'] }
   Plug 'tacahiroy/ctrlp-funky',      { 'on': ['CtrlPFunky'] }
@@ -78,9 +71,8 @@
   Plug 'mxw/vim-jsx',                            { 'for': 'javascript' }
   Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
   Plug 'csscomb/vim-csscomb',                    { 'for': ['css', 'scss'] }
-  Plug 'gorodinskiy/vim-coloresque',             { 'for': ['css', 'scss', 'html', 'less', 'vim', 'stylus'] }
-  Plug 'itspriddle/vim-marked',                  { 'for': ['markdown', 'ghmarkdown'] }
-  Plug 'gabrielelana/vim-markdown',              { 'for': ['markdown', 'ghmarkdown'] }
+  " Plug 'itspriddle/vim-marked',                  { 'for': ['markdown', 'ghmarkdown'] }
+  " Plug 'gabrielelana/vim-markdown',              { 'for': ['markdown', 'ghmarkdown'] }
   Plug 'mattn/emmet-vim',                        { 'for': ['html', 'eruby', 'javascript', 'css', 'scss', 'markdown', 'ghmarkdown', 'html.handlebars'] }
   Plug 'tpope/vim-git',                          { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
 
@@ -275,7 +267,6 @@
   nmap        <expr> K          <SID>doc("\<Plug>DashSearch")
   nmap        <Leader>/         <Plug>CommentaryLine
   vmap        <Leader>/         <Plug>Commentary
-  nmap        <Leader>w         <Plug>(choosewin)
   nmap        ˚                 [e
   nmap        ∆                 ]e
   vmap        ˚                 [egv
@@ -285,7 +276,6 @@
   noremap     L                 g_
   nnoremap    Q                 <nop>
   nnoremap    <Leader>q         :bp\|bd #<CR>
-  nnoremap    <Leader>md        :MarkedOpen!<CR>
   nnoremap    <Leader>gs        :Gstatus<CR>
   nnoremap    <Leader>ga        :Gcommit --amend<CR>
   nnoremap    <Leader>gc        :Gcommit -v -q<CR>
@@ -297,7 +287,6 @@
   nnoremap    <Leader>gl        :Gitv --all<CR>
   nnoremap    <Leader>gh        :Gitv!<CR>
   nnoremap    <Leader>gm        :Gmove<Space>
-  nnoremap    <Leader>gb        :MerginalToggle<CR>
   nnoremap    <Leader>gco       :Git checkout<Space>
   nnoremap    <Leader>gp        :Dispatch! git push<CR>
   nnoremap    <Leader>gfm       :Dispatch! git pull<CR>
@@ -306,7 +295,6 @@
   nnoremap    <Leader>p         :CtrlP<CR>
   nnoremap    <Leader>b         :BuffergatorToggle<CR>
   nnoremap    <Leader>o         :CtrlPFunky<CR>
-  nnoremap    <Leader>n         :RecentNotes<CR>
   nnoremap    <Leader>a         :A<CR>
   nnoremap    <Leader>l         :call <SID>syntastic()<CR>
   nnoremap    <Leader>e         :Errors<CR>
@@ -327,7 +315,6 @@
   nnoremap    g#                g#zz
 
 " plugin settings ==============================================================
-  let g:indentLine_char                               = '¦'
   let g:syntastic_html_checkers                       = ['']
   let g:syntastic_javascript_checkers                 = ['jshint']
   let g:syntastic_javascript_jsxhint_exec             = 'jsx-jshint-wrapper'
@@ -344,7 +331,6 @@
   let g:vim_json_syntax_conceal                       = 0
   let g:tern_show_argument_hints                      = 'no'
   let g:tern_show_signature_in_pum                    = 1
-  "let g:ycm_path_to_python_interpreter                = '/Users/carlos/.macports/Library/Frameworks/Python.framework/Versions/2.7/bin/python'
   let g:ycm_autoclose_preview_window_after_completion = 1
   let g:ycm_global_ycm_extra_conf                     = '~/.vim/.ycm_extra_conf.py'
   let g:ycm_enable_diagnostic_signs                   = 0
@@ -368,13 +354,6 @@
   let g:rubycomplete_classes_in_global                = 1
   let g:rubycomplete_rails                            = 1
   let g:rubycomplete_use_bundler                      = 1
-  let g:airline#extensions#eclim#enabled              = 1
-  let g:EclimCompletionMethod                         = 'omnifunc'
-  let g:EclimJavascriptLintConf                       = '~/.dotfiles/vim/jslrc'
-  let g:EclimJavascriptValidate                       = 0
-  let g:notes_directories                             = ['~/Dropbox/Notes']
-  let g:notes_tagsindex                               = '~/.dotfiles/vim/note_tags'
-  let g:notes_smart_quotes                            = 1
   let g:gundo_right                                   = 1
   let g:netrw_liststyle                               = 3
   let g:bufferline_show_bufnr                         = 0
@@ -391,6 +370,7 @@
   let g:buffergator_mru_cycle_local_to_window         = 1
   let g:ag_highlight                                  = 1
   let g:filebeagle_show_hidden                        = 1
+  let g:instant_markdown_autostart                    = 0
   let g:lightline                                     = {
                                                       \ 'colorscheme': 'jellybeans',
                                                       \ 'active': {
@@ -426,6 +406,6 @@ function! s:syntastic()
   call lightline#update()
 endfunction
 
-  highlight SyntasticErrorSign ctermfg=1 ctermbg=18 guifg=#cc6666 guibg=#282a2e
-  highlight Search ctermfg=0 ctermbg=5 guifg=#181818 guibg=#BA8BAF 
-  highlight IncSearch ctermfg=0 ctermbg=4 guifg=#181818 guibg=#0000ff 
+highlight SyntasticErrorSign ctermfg=1 ctermbg=18 guifg=#cc6666 guibg=#282a2e
+highlight Search ctermfg=0 ctermbg=5 guifg=#181818 guibg=#BA8BAF
+highlight IncSearch ctermfg=0 ctermbg=4 guifg=#181818 guibg=#0000ff
