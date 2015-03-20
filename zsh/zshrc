@@ -18,23 +18,23 @@ fpath=(
 
 # Check if there's no init script
 if ! zgen saved; then
-    echo "Creating a zgen save"
+  echo "Creating a zgen save"
 
-    # plugins
-    zgen load zsh-users/zsh-syntax-highlighting
-    zgen load zsh-users/zsh-history-substring-search
-    zgen load mollifier/cd-gitroot
-    zgen load Tarrasch/zsh-autoenv
-    zgen load tarruda/zsh-autosuggestions
+  # plugins
+  zgen load zsh-users/zsh-syntax-highlighting
+  zgen load zsh-users/zsh-history-substring-search
+  zgen load mollifier/cd-gitroot
+  zgen load Tarrasch/zsh-autoenv
+  zgen load tarruda/zsh-autosuggestions
 
-    # completions
-    zgen load zsh-users/zsh-completions src
+  # completions
+  zgen load zsh-users/zsh-completions src
 
-    # theme
-    zgen load sindresorhus/pure
+  # theme
+  zgen load sindresorhus/pure
 
-    # save all to init script
-    zgen save
+  # save all to init script
+  zgen save
 fi
 
 # Autoload modules
