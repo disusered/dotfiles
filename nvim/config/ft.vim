@@ -1,0 +1,13 @@
+au BufNewFile,BufRead {*gitconfig} set ft=gitconfig
+au BufNewFile,BufRead {*.es6} set ft=javascript
+au BufNewFile,BufRead {*.jsx} set ft=jsx
+au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
+au BufRead,BufNewFile {*.gradle} set filetype=groovy
+au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc,*.eslintrc} set ft=json
+au BufNewFile,BufRead {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
+au BufRead,BufNewFile {*.md,*.markdown} set filetype=markdown
+au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache
+au BufNewFile,BufRead {*.jade} set filetype=jade
+au BufNewFile,BufRead {*Dockerfile} set filetype=dockerfile
+au BufNewFile,BufRead {*zshrc,*zshenv} set filetype=zsh.sh
+au BufNewFile,BufRead {.env} set filetype=sh

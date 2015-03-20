@@ -6,121 +6,16 @@
 
   call plug#begin('~/.dotfiles/vendor/nplugged')
 
-  " Visual
-  Plug 'chriskempson/base16-vim'
-  Plug 'itchyny/lightline.vim'
-
-  " Source Control
-  au BufNewFile,BufRead {*gitconfig} set ft=gitconfig
-  Plug 'tpope/vim-fugitive'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'gregsexton/gitv', { 'on': 'Gitv' }
-  Plug 'tpope/vim-git', { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
-
-  " Editor
+  source $MYCONFIG/ft.vim
+  source $MYCONFIG/plugins.vim
   Plug 'benekastah/neomake'
-  Plug 'editorconfig/editorconfig-vim'
-  Plug 'MarcWeber/vim-addon-local-vimrc'
-  Plug 'Raimondi/delimitMate'
-  Plug 'junegunn/vim-easy-align'
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-abolish'
-  Plug 'tpope/vim-repeat'
-  Plug 'tpope/vim-projectionist'
-  Plug 'vasconcelloslf/vim-interestingwords'
-  Plug 'tpope/vim-commentary' 
-  Plug 'tpope/vim-dispatch'
-  Plug 'SirVer/ultisnips'
-  Plug 'ervandew/supertab'
-  Plug 'rking/ag.vim',               { 'on': 'Ag' }
-  Plug 'sjl/gundo.vim',              { 'on': 'GundoToggle' }
-  Plug 'majutsushi/tagbar',          { 'on': 'TagbarToggle' }
-  Plug 'rizzatti/dash.vim',          { 'on': ['<Plug>DashSearch'] }
-  Plug 'Valloric/YouCompleteMe',     { 'do': './install.sh' }
-  Plug 'Wolfy87/vim-enmasse',        { 'on': 'EnMasse' }
-  Plug 'Lokaltog/vim-easymotion',    { 'on': '<Plug>(easymotion-bd-t2)'}
-  Plug 'tpope/vim-endwise',          { 'for': ['ruby', 'sh'] }
-  Plug 'jpalardy/vim-slime',         { 'for': ['javascript', 'sh']}
-  Plug 'mattn/emmet-vim',            { 'for': ['html', 'eruby', 'javascript', 'css', 'scss', 'markdown', 'ghmarkdown', 'html.handlebars'] }
-
-  " Navigation
-  Plug 'jeetsukumaran/vim-filebeagle'
-  Plug 'justinmk/vim-gtfo'
-  Plug 'tpope/vim-unimpaired'
-  Plug 'jeetsukumaran/vim-buffergator'
-  Plug 'kien/ctrlp.vim'
-  Plug 'FelikZ/ctrlp-py-matcher'
-  Plug 'tacahiroy/ctrlp-funky', { 'on': ['CtrlPFunky'] }
-
-  " CSS
-  Plug 'csscomb/vim-csscomb', { 'for': ['css', 'scss'] }
-  Plug 'gorodinskiy/vim-coloresque', { 'for': ['css', 'scss', 'html', 'less', 'vim', 'stylus'] }
-
-  " Javascript
-  au BufNewFile,BufRead {*.es6} set ft=javascript
-  Plug 'heavenshell/vim-jsdoc',   { 'for': 'javascript' }
-  Plug 'marijnh/tern_for_vim',    { 'for': 'javascript', 'do': 'npm install' }
-  Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-
-  " JSX
-  au BufNewFile,BufRead {*.jsx} set ft=jsx
-  Plug 'mxw/vim-jsx', { 'for': 'jsx' }
-
-  " CoffeeScript
-  au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
-  Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-
-  " Java
-  au BufRead,BufNewFile {*.gradle} set filetype=groovy
-
-  " JSON
-  au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc,*.eslintrc} set ft=json
-  Plug 'elzr/vim-json', { 'for': 'json' }
-
-  " Ruby
-  au BufNewFile,BufRead {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
-  Plug 'vim-ruby/vim-ruby',                      { 'for': 'ruby' }
-  Plug 'tpope/vim-rails',                        { 'for': 'ruby' }
-  Plug 'tpope/vim-bundler',                      { 'for': 'ruby' }
-
-  " Markdown
-  au BufRead,BufNewFile {*.md,*.markdown} set filetype=markdown
-
-  " Mustache
-  au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache
-  Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache' }
-
-  " Jade
-  au BufNewFile,BufRead {*.jade} set filetype=jade
-  Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
-
-  " Docker
-  au BufNewFile,BufRead {*Dockerfile} set filetype=dockerfile
-  Plug 'honza/dockerfile.vim', { 'for': 'dockerfile' }
 
   call plug#end()
-  filetype plugin indent on
 
-" Autocommands
-  au FileType make set noexpandtab
-  au FileType gitconfig set noexpandtab
-  au FileType gitcommit setlocal omnifunc=pickler#omnifunc
-  au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-  au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-  au FileType css setlocal omnifunc=csscomplete#CompleteCSS
-  au FileType javascript setlocal omnifunc=tern#Complete
-  au FileType python setlocal omnifunc=pythoncomplete#Complete
-
-  au FileType scss set commentstring=/*\ %s\ */
-
-  au BufWritePost *.py,*.js Neomake
-
-  au BufNewFile,BufRead {*zshrc,*zshenv} set filetype=zsh.sh
-  au BufNewFile,BufRead {.env} set filetype=sh
+  source $MYCONFIG/autocommands.vim
 
 " Settings =====================================================================
 source $MYCONFIG/vim.vim
-source $MYCONFIG/neomake.vim
 source $MYCONFIG/lightline.vim
 source $MYCONFIG/youcompleteme.vim
 source $MYCONFIG/tern.vim
@@ -133,7 +28,6 @@ source $MYCONFIG/dash.vim
 source $MYCONFIG/typos.vim
 source $MYCONFIG/cursors.vim
 source $MYCONFIG/json.vim
-source $MYCONFIG/indentline.vim
 source $MYCONFIG/supertab.vim
 source $MYCONFIG/ultisnips.vim
 source $MYCONFIG/ctrlp.vim
@@ -143,3 +37,5 @@ source $MYCONFIG/jsdoc.vim
 source $MYCONFIG/gitv.vim
 source $MYCONFIG/buffergator.vim
 source $MYCONFIG/keymap.vim
+
+source $MYCONFIG/neomake.vim
