@@ -1,7 +1,6 @@
 Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
 Plug 'gregsexton/gitv',                  { 'on': 'Gitv' }
 Plug 'tpope/vim-git',                    { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
 Plug 'editorconfig/editorconfig-vim'
@@ -39,7 +38,6 @@ Plug 'tacahiroy/ctrlp-funky',            { 'on': ['CtrlPFunky'] }
 Plug 'csscomb/vim-csscomb',              { 'for': ['css', 'scss'] }
 Plug 'gorodinskiy/vim-coloresque',       { 'for': ['css', 'scss', 'html', 'less', 'vim', 'stylus'] }
 Plug 'heavenshell/vim-jsdoc',            { 'for': 'javascript' }
-Plug 'marijnh/tern_for_vim',             { 'for': 'javascript', 'do': 'npm install' }
 Plug 'pangloss/vim-javascript',          { 'for': 'javascript' }
 Plug 'mxw/vim-jsx',                      { 'for': 'jsx' }
 Plug 'kchmck/vim-coffee-script',         { 'for': 'coffee' }

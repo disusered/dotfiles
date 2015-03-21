@@ -18,7 +18,6 @@
 source $MYCONFIG/vim.vim
 source $MYCONFIG/lightline.vim
 source $MYCONFIG/youcompleteme.vim
-source $MYCONFIG/tern.vim
 source $MYCONFIG/delimitmate.vim
 source $MYCONFIG/localvimrc.vim
 source $MYCONFIG/slime.vim
