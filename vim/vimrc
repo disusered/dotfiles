@@ -25,11 +25,11 @@
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-dispatch'
   Plug 'itchyny/lightline.vim'
-  Plug 'tpope/vim-projectionist'
   Plug 'jeetsukumaran/vim-filebeagle'
   Plug 'justinmk/vim-gtfo'
   Plug 'vasconcelloslf/vim-interestingwords'
   Plug 'tpope/vim-commentary'
+  Plug 'dsawardekar/portkey'
   Plug 'jeetsukumaran/vim-buffergator'
   Plug 'Valloric/YouCompleteMe',     { 'do': './install.sh' }
   Plug 'Wolfy87/vim-enmasse',        { 'on': 'EnMasse' }
@@ -80,6 +80,7 @@
 
 " settings =====================================================================
   let mapleader = ","
+  let g:maplocalleader = '='
 
   set encoding=utf-8
   set laststatus=2

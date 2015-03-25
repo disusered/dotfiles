@@ -1,4 +1,5 @@
 Plug 'chriskempson/base16-vim'
+Plug 'dsawardekar/portkey'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv',                  { 'on': 'Gitv' }
@@ -10,7 +11,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-projectionist'
 Plug 'vasconcelloslf/vim-interestingwords'
 Plug 'tpope/vim-commentary' 
 Plug 'tpope/vim-dispatch'
