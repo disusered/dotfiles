@@ -2,9 +2,9 @@ Plug 'chriskempson/base16-vim'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'dsawardekar/portkey'
 Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-git',                    { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
 Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv',                  { 'on': 'Gitv' }
-Plug 'tpope/vim-git',                    { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'MarcWeber/vim-addon-local-vimrc'
 Plug 'Raimondi/delimitMate'
@@ -37,7 +37,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'tacahiroy/ctrlp-funky',            { 'on': ['CtrlPFunky'] }
 Plug 'csscomb/vim-csscomb',              { 'for': ['css', 'scss'] }
-Plug 'gorodinskiy/vim-coloresque',       { 'for': ['css', 'scss', 'html', 'less', 'vim', 'stylus'] }
 Plug 'heavenshell/vim-jsdoc',            { 'for': 'javascript' }
 Plug 'pangloss/vim-javascript',          { 'for': 'javascript' }
 Plug 'mxw/vim-jsx',                      { 'for': 'jsx' }
