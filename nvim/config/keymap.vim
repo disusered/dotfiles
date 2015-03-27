@@ -39,6 +39,7 @@ nnoremap    <Leader>e         :Errors<CR>
 nnoremap    <Leader>u         :GundoToggle<CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
 nnoremap    <Leader><Space>   :nohlsearch<CR>
+nnoremap    <Leader>t         :terminal<CR>
 nnoremap    j                 gj
 nnoremap    k                 gk
 nnoremap    n                 nzz
@@ -49,3 +50,8 @@ nnoremap    {                 {zz
 nnoremap    #                 #zz
 nnoremap    g*                g*zz
 nnoremap    g#                g#zz
+
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-l> <C-\><C-n><C-w>l

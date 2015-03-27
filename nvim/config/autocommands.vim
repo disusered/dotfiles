@@ -8,3 +8,4 @@ au FileType javascript setlocal omnifunc=tern#Complete
 au FileType python setlocal omnifunc=pythoncomplete#Complete
 au FileType scss set commentstring=/*\ %s\ */
 au BufWritePost *.py,*.js Neomake
+au WinEnter *pid:* call feedkeys('i')
