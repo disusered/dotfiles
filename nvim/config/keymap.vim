@@ -26,8 +26,8 @@ nnoremap    <Leader>gl        :Gitv --all<CR>
 nnoremap    <Leader>gh        :Gitv!<CR>
 nnoremap    <Leader>gm        :Gmove<Space>
 nnoremap    <Leader>gco       :Git checkout<Space>
-nnoremap    <Leader>gp        <C-w><C-v><C-l>:terminal git push<CR><C-h>
-nnoremap    <Leader>gfm       <C-w><C-v><C-l>:terminal git pull<CR><C-h>
+nnoremap    <Leader>gp        :terminal git push<CR>
+nnoremap    <Leader>gfm       :terminal git pull<CR>
 nmap        <Leader>gv        :Gitv! --all<cr>
 vmap        <Leader>gv        :Gitv! --all<cr>
 nnoremap    <Leader>p         :CtrlP<CR>
