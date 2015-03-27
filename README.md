@@ -18,8 +18,8 @@
     # Packages
     brew install git git-flow ack ag gpg wget ant watch dict tree \
     ctags httpie nmap htop ranger mediainfo atool tmux highlight \
-    gradle pidcat ncdu jq fzf npm --without-npm python \
-    lua --universal --with-completion luajit --with-52compat \
+    gradle pidcat ncdu jq fzf npm --without-npm python watchman \
+    lua --universal --with-completion luajit --with-52compat flow \
     reattach-to-user-namespace aspell --with-lang-es --with-lang-en \
     ffmpeg --with-faac --with-fdk-aac --with-openssl --with-tools \
     --with-webp Caskroom/cask/mpv imagemagick --with-fontconfig \
