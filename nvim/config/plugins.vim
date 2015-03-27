@@ -1,4 +1,5 @@
 Plug 'chriskempson/base16-vim'
+Plug 'vim-scripts/vim-auto-save'
 Plug 'dsawardekar/portkey'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
