@@ -24,6 +24,7 @@ source $MYCONFIG/slime.vim
 source $MYCONFIG/filebeagle.vim
 source $MYCONFIG/javascript.vim
 source $MYCONFIG/dash.vim
+source $MYCONFIG/flow.vim
 source $MYCONFIG/typos.vim
 source $MYCONFIG/cursors.vim
 source $MYCONFIG/json.vim
