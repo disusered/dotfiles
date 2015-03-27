@@ -17,6 +17,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'SirVer/ultisnips'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
+Plug 'airblade/vim-gitgutter'
 Plug 'rking/ag.vim',                     { 'on': 'Ag' }
 Plug 'sjl/gundo.vim',                    { 'on': 'GundoToggle' }
 Plug 'majutsushi/tagbar',                { 'on': 'TagbarToggle' }
