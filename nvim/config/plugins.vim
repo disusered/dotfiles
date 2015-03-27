@@ -20,7 +20,6 @@ Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
 Plug 'rking/ag.vim',                     { 'on': 'Ag' }
 Plug 'sjl/gundo.vim',                    { 'on': 'GundoToggle' }
-Plug 'majutsushi/tagbar',                { 'on': 'TagbarToggle' }
 Plug 'rizzatti/dash.vim',                { 'on': ['<Plug>DashSearch'] }
 Plug 'Valloric/YouCompleteMe',           { 'do': './install.sh' }
 Plug 'Wolfy87/vim-enmasse',              { 'on': 'EnMasse' }

@@ -36,7 +36,6 @@ nnoremap    <Leader>o         :CtrlPFunky<CR>
 nnoremap    <Leader>a         :A<CR>
 nnoremap    <Leader>l         :call <SID>syntastic()<CR>
 nnoremap    <Leader>e         :Errors<CR>
-nnoremap    <Leader>t         :TagbarToggle<CR>
 nnoremap    <Leader>u         :GundoToggle<CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
 nnoremap    <Leader><Space>   :nohlsearch<CR>

@@ -36,7 +36,6 @@
   Plug 'Lokaltog/vim-easymotion',    { 'on': '<Plug>(easymotion-bd-t2)'}
   Plug 'rizzatti/dash.vim',          { 'on': ['<Plug>DashSearch'] }
   Plug 'tacahiroy/ctrlp-funky',      { 'on': ['CtrlPFunky'] }
-  Plug 'majutsushi/tagbar',          { 'on': 'TagbarToggle' }
   Plug 'sjl/gundo.vim',              { 'on': 'GundoToggle' }
   Plug 'gregsexton/gitv',            { 'on': 'Gitv' }
   Plug 'rking/ag.vim',               { 'on': 'Ag' }
@@ -166,7 +165,7 @@
 
   function! MyFugitive()
     try
-      if expand('%:t') !~? 'Tagbar\|Gundo' && exists('*fugitive#head')
+      if expand('%:t') !~? 'Gundo' && exists('*fugitive#head')
         let mark = ' '
         let _ = fugitive#head()
         return strlen(_) ? mark._ : ''
@@ -300,7 +299,6 @@
   nnoremap    <Leader>l         :call <SID>syntastic()<CR>
   nnoremap    <Leader>e         :Errors<CR>
   nnoremap    <Leader>s         :SyntasticToggleMode<CR>
-  nnoremap    <Leader>t         :TagbarToggle<CR>
   nnoremap    <Leader>u         :GundoToggle<CR>
   nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
   nnoremap    <Leader><Space>   :nohlsearch<CR>
@@ -349,8 +347,6 @@
   let g:ctrlp_max_files                               = 0
   let g:ctrlp_user_command                            = 'ag %s -i --nocolor --nogroup --hidden -g ""'
   let g:ctrlp_extensions                              = ['funky']
-  let g:tagbar_left                                   = 0
-  let g:tagbar_sort                                   = 0
   let g:rubycomplete_buffer_loading                   = 1
   let g:rubycomplete_classes_in_global                = 1
   let g:rubycomplete_rails                            = 1

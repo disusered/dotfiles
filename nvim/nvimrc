@@ -31,7 +31,6 @@ source $MYCONFIG/jsx.vim
 source $MYCONFIG/supertab.vim
 source $MYCONFIG/ultisnips.vim
 source $MYCONFIG/ctrlp.vim
-source $MYCONFIG/tagbar.vim
 source $MYCONFIG/rubycomplete.vim
 source $MYCONFIG/jsdoc.vim
 source $MYCONFIG/gitv.vim
