@@ -65,7 +65,7 @@ alias npm='noglob npm'
 # Aliases
 alias f='fzf --reverse --prompt "🔎  "'
 alias c='clear'
-alias e='ranger'
+alias r='ranger'
 alias m='cmus'
 alias d='dict'
 alias j="selectmark"
