@@ -37,6 +37,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'tacahiroy/ctrlp-funky',            { 'on': ['CtrlPFunky'] }
 Plug 'csscomb/vim-csscomb',              { 'for': ['css', 'scss'] }
+Plug 'groenewege/vim-less',              { 'for': 'less' }
 Plug 'heavenshell/vim-jsdoc',            { 'for': 'javascript' }
 Plug 'pangloss/vim-javascript',          { 'for': 'javascript' }
 Plug 'facebook/vim-flow',                { 'for': 'javascript' }
