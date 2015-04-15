@@ -2,7 +2,6 @@
 
 # Paths
 ROOT="${HOME}/.dotfiles"
-CMUS_CONF="${HOME}/.config/cmus/autosave"
 WEECHAT="${ROOT}/weechat"
 
 # Xorg
@@ -71,17 +70,6 @@ ln -s $ROOT/mps/config $HOME/.config/mps/config
 ln -s $ROOT/mps/playlist $HOME/.config/mps/playlist
 ln -s $ROOT/mps-youtube/config $HOME/.config/mps-youtube/config
 ln -s $ROOT/mps-youtube/playlist_v2 $HOME/.config/mps-youtube/playlist_v2
-
-# cmus
-if [ -f $CMUS_CONF ] # if autosave exists
-then
-  cp $CMUS_CONF $ROOT/cmus/autosave_
-  cp $ROOT/cmus/autosave_ $ROOT/cmus/autosave
-  rm $CMUS_CONF $ROOT/cmus/autosave_ 
-  ln -s $ROOT/cmus/autosave $CMUS_CONF
-else
-  ln -s $ROOT/cmus/autosave $CMUS_CONF
-fi
 
 # Hide last-logged-in message on new terminals
 touch $HOME/.hushlogin

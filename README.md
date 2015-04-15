@@ -24,7 +24,7 @@
     ffmpeg --with-faac --with-fdk-aac --with-openssl --with-tools \
     --with-webp Caskroom/cask/mpv imagemagick --with-fontconfig \
     --with-ghostscript --with-librsvg --with-webp --with-x11 \
-    graphicsmagick --with-ghostscript --with-x11  cmus --with-ffmpeg \
+    graphicsmagick --with-ghostscript --with-x11 \
     gcc Caskroom/cask/xquartz rxvt-unicode --cc=gcc4.9 \
     xdotool Caskroom/cask/dia links --with-x11 --with-jpeg
     vim --override-system-vi --with-lua --with-luajit --with-tcl \
