@@ -61,16 +61,6 @@ rm $HOME/.agignore $HOME/.ackrc
 ln -s $ROOT/ag/agignore $HOME/.agignore
 ln -s $ROOT/ack/ackrc $HOME/.ackrc
 
-# MPS/Youtube
-mkdir -p $HOME/.config/mps
-mkdir -p $HOME/.config/mps-youtube
-rm $HOME/.config/mps/config $HOME/.config/mps/playlist \
-   $HOME/.config/mps-youtube/config $HOME/.config/mps-youtube/playlist_v2
-ln -s $ROOT/mps/config $HOME/.config/mps/config
-ln -s $ROOT/mps/playlist $HOME/.config/mps/playlist
-ln -s $ROOT/mps-youtube/config $HOME/.config/mps-youtube/config
-ln -s $ROOT/mps-youtube/playlist_v2 $HOME/.config/mps-youtube/playlist_v2
-
 # Hide last-logged-in message on new terminals
 touch $HOME/.hushlogin
 
