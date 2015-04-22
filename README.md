@@ -45,7 +45,7 @@
     # Python
     pip install --upgrade setuptools
     pip install --upgrade pip
-    pip install requests websocket-client pync mps pafy neovim rainbowstream
+    pip install requests websocket-client pync pafy neovim rainbowstream
     # Ruby
     gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
     \curl -sSL https://get.rvm.io | bash -s stable
