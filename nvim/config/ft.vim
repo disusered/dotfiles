@@ -12,5 +12,3 @@ au BufNewFile,BufRead {*.jade} set filetype=jade
 au BufNewFile,BufRead {*Dockerfile} set filetype=dockerfile
 au BufNewFile,BufRead {*zshrc,*zshenv} set filetype=zsh.sh
 au BufNewFile,BufRead {.env} set filetype=sh
-au BufNewFile,BufRead {*.js} set ft=jsx
-au BufNewFile,BufRead {*.js} set ft=javascript
