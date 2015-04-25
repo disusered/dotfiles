@@ -1,2 +1,2 @@
 let g:filebeagle_show_hidden = 1
-let g:netrw_liststyle = 3
+let g:filebeagle_check_gitignore = 1

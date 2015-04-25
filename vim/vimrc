@@ -367,6 +367,7 @@
   let g:buffergator_mru_cycle_local_to_window         = 1
   let g:ag_highlight                                  = 1
   let g:filebeagle_show_hidden                        = 1
+  let g:filebeagle_check_gitignore                    = 1
   let g:instant_markdown_autostart                    = 0
   let g:lightline                                     = {
                                                       \ 'colorscheme': 'jellybeans',
