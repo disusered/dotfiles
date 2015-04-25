@@ -27,6 +27,7 @@ source $MYCONFIG/dash.vim
 source $MYCONFIG/typos.vim
 source $MYCONFIG/cursors.vim
 source $MYCONFIG/json.vim
+source $MYCONFIG/flow.vim
 source $MYCONFIG/jsx.vim
 source $MYCONFIG/supertab.vim
 source $MYCONFIG/ultisnips.vim

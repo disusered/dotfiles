@@ -64,6 +64,7 @@
   Plug 'tpope/vim-endwise',                      { 'for': ['ruby', 'sh'] }
   Plug 'kchmck/vim-coffee-script',               { 'for': 'coffee' }
   Plug 'moll/vim-node',                          { 'for': 'javascript' }
+  Plug 'facebook/vim-flow',                      { 'for': 'javascript' }
   Plug 'heavenshell/vim-jsdoc',                  { 'for': 'javascript' }
   Plug 'marijnh/tern_for_vim',                   { 'for': 'javascript', 'do': 'npm install' }
   Plug 'pangloss/vim-javascript',                { 'for': 'javascript' }
@@ -369,6 +370,8 @@
   let g:filebeagle_show_hidden                        = 1
   let g:filebeagle_check_gitignore                    = 1
   let g:instant_markdown_autostart                    = 0
+  let g:flow#enable                                   = 0
+  let g:flow#autoclose                                = 1
   let g:lightline                                     = {
                                                       \ 'colorscheme': 'jellybeans',
                                                       \ 'active': {
