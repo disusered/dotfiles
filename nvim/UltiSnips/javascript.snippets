@@ -42,8 +42,15 @@ snippet => "Fat arrow" i
 }
 endsnippet
 
-snippet fd "Function declaration" i
+
+snippet fd "Function declaration"
 function ${1:name}(${2}){
+	$0
+}
+endsnippet
+
+snippet _f "Function declaration" i
+function(${2}){
 	$0
 }
 endsnippet
@@ -74,16 +81,6 @@ snippet us "Use strict definition"
 'use strict';
 endsnippet
 
-snippet r "Return"
-return ${1:variable};
-endsnippet
-
-snippet ro "Return object"
-return {
-	${1:key}: ${2:value}
-};
-endsnippet
-
 snippet flow "Flow type checking"
 /* @flow */
 endsnippet
@@ -100,31 +97,35 @@ snippet rptf "React.PropTypes.Function" i
 React.PropTypes.func
 endsnippet
 
-snippet rptn "React.PropTypes.Number" i
+snippet rptn "React.PropTypes.number" i
 React.PropTypes.number
 endsnippet
 
-snippet rpto "React.PropTypes.Object" i
+snippet rpto "React.PropTypes.object" i
 React.PropTypes.object
 endsnippet
 
-snippet rpts "React.PropTypes.String" i
+snippet rpts "React.PropTypes.string" i
 React.PropTypes.string
 endsnippet
 
-snippet rpte "React.PropTypes.Element" i
+snippet rpte "React.PropTypes.element" i
 React.PropTypes.element
 endsnippet
 
-snippet rptao "React.PropTypes.ArrayOf"
+snippet rpton "React.PropTypes.oneOf"
+React.PropTypes.oneOf([$0])
+endsnippet
+
+snippet rptao "React.PropTypes.arrayOf"
 React.PropTypes.arrayOf($0)
 endsnippet
 
-snippet rptoo "React.PropTypes.ObjectOf"
+snippet rptoo "React.PropTypes.objectOf"
 React.PropTypes.objectOf($0)
 endsnippet
 
-snippet rptsh "React.PropTypes.Shape" i
+snippet rptsh "React.PropTypes.shape" i
 React.PropTypes.shape({
 	${1:key}: $0
 })
@@ -132,4 +133,40 @@ endsnippet
 
 snippet ir ".isRequired" i
 .isRequired
+endsnippet
+
+snippet regex "New RegEx"
+var ${1:re} = new RegExp($0, '${2:i}');
+endsnippet
+
+snippet re "Return"
+return ${1:variable};
+endsnippet
+
+snippet ro "Return object"
+return {
+	${1:key}: ${2:value}
+};
+endsnippet
+
+snippet @ "this" i
+this
+endsnippet
+
+snippet r "require()"
+require('$0');
+endsnippet
+
+snippet v "var"
+var ${1:name} = $0
+endsnippet
+
+snippet it "it should..."
+it('${1:should...}', function() {
+	$0
+});
+endsnippet
+
+snippet d "debugger;"
+debugger;
 endsnippet
