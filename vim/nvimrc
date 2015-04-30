@@ -37,6 +37,7 @@ source $MYCONFIG/rubycomplete.vim
 source $MYCONFIG/jsdoc.vim
 source $MYCONFIG/gitv.vim
 source $MYCONFIG/buffergator.vim
+source $MYCONFIG/webdevicons.vim
 source $MYCONFIG/keymap.vim
 
 " nvim specific
