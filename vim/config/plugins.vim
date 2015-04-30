@@ -38,9 +38,9 @@ Plug 'csscomb/vim-csscomb',              { 'for': ['css', 'scss'] }
 Plug 'groenewege/vim-less',              { 'for': 'less' }
 Plug 'heavenshell/vim-jsdoc',            { 'for': 'javascript' }
 Plug 'pangloss/vim-javascript',          { 'for': 'javascript' }
+Plug 'mxw/vim-jsx'
 Plug 'facebook/vim-flow',                { 'for': 'javascript' }
 Plug 'moll/vim-node',                    { 'for': 'javascript' }
-Plug 'mxw/vim-jsx',                      { 'for': 'jsx' }
 Plug 'kchmck/vim-coffee-script',         { 'for': 'coffee' }
 Plug 'elzr/vim-json',                    { 'for': 'json' }
 Plug 'vim-ruby/vim-ruby',                { 'for': 'ruby' }

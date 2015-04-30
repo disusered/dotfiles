@@ -1,6 +1,5 @@
 au BufNewFile,BufRead {*gitconfig} set ft=gitconfig
 au BufNewFile,BufRead {*.es6} set ft=javascript
-au BufNewFile,BufRead {*.jsx} set ft=jsx
 au BufNewFile,BufRead {*.less} set ft=less
 au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
 au BufRead,BufNewFile {*.gradle} set filetype=groovy
