@@ -39,6 +39,7 @@ nnoremap    <Leader>e         :Errors<CR>
 nnoremap    <Leader>u         :GundoToggle<CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
 nnoremap    <Leader><Space>   :nohlsearch<CR>
+nnoremap    <Leader>t         :VimuxPromptCommand<CR> 
 nnoremap    j                 gj
 nnoremap    k                 gk
 nnoremap    n                 nzz

@@ -18,6 +18,7 @@ Plug 'SirVer/ultisnips'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
+Plug 'benmills/vimux'
 Plug 'rking/ag.vim',                     { 'on': 'Ag' }
 Plug 'sjl/gundo.vim',                    { 'on': 'GundoToggle' }
 Plug 'Valloric/YouCompleteMe',           { 'do': './install.sh' }
