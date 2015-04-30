@@ -1,6 +1,6 @@
 {
     "HEARTBEAT_TIMEOUT": 120, 
-    "IMAGE_ON_TERM": true, 
+    "IMAGE_ON_TERM": false, 
     "THEME": "tomorrow_night", 
     "ASCII_ART": true, 
     "HIDE_PROMPT": true, 
