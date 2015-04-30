@@ -1,5 +1,4 @@
 Plug 'chriskempson/base16-vim'
-Plug 'vim-scripts/vim-auto-save'
 Plug 'dsawardekar/portkey'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-git',                    { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
@@ -21,7 +20,6 @@ Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
 Plug 'rking/ag.vim',                     { 'on': 'Ag' }
 Plug 'sjl/gundo.vim',                    { 'on': 'GundoToggle' }
-Plug 'rizzatti/dash.vim',                { 'on': ['<Plug>DashSearch'] }
 Plug 'Valloric/YouCompleteMe',           { 'do': './install.sh' }
 Plug 'Wolfy87/vim-enmasse',              { 'on': 'EnMasse' }
 Plug 'Lokaltog/vim-easymotion',          { 'on': '<Plug>(easymotion-bd-t2)'}
@@ -41,6 +39,7 @@ Plug 'groenewege/vim-less',              { 'for': 'less' }
 Plug 'heavenshell/vim-jsdoc',            { 'for': 'javascript' }
 Plug 'pangloss/vim-javascript',          { 'for': 'javascript' }
 Plug 'facebook/vim-flow',                { 'for': 'javascript' }
+Plug 'moll/vim-node',                    { 'for': 'javascript' }
 Plug 'mxw/vim-jsx',                      { 'for': 'jsx' }
 Plug 'kchmck/vim-coffee-script',         { 'for': 'coffee' }
 Plug 'elzr/vim-json',                    { 'for': 'json' }

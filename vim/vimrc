@@ -1,411 +1,45 @@
-" Plug =========================================================================
+" Init =========================================================================
   set nocompatible
   filetype off
-
+  let $MYCONFIG="$HOME/.dotfiles/vim/config"
   call plug#begin('~/.dotfiles/vendor/plugged')
 
-  Plug 'chriskempson/base16-vim'
+  source $MYCONFIG/ft.vim
+  source $MYCONFIG/plugins.vim
+
+  " vim specific
   Plug 'scrooloose/syntastic'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'editorconfig/editorconfig-vim'
-  Plug 'MarcWeber/vim-addon-local-vimrc'
-  Plug 'christoomey/vim-tmux-navigator'
-  Plug 'kien/ctrlp.vim'
-  Plug 'FelikZ/ctrlp-py-matcher'
-  Plug 'tpope/vim-unimpaired'
-  " Plug 'jpalardy/vim-slime'
-  " Plug 'edkolev/tmuxline.vim'
-  Plug 'SirVer/ultisnips'
-  Plug 'ervandew/supertab'
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-abolish'
-  Plug 'tpope/vim-repeat'
-  Plug 'Raimondi/delimitMate'
-  Plug 'junegunn/vim-easy-align'
-  Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-dispatch'
-  Plug 'itchyny/lightline.vim'
-  Plug 'jeetsukumaran/vim-filebeagle'
-  Plug 'justinmk/vim-gtfo'
-  Plug 'vasconcelloslf/vim-interestingwords'
-  Plug 'tpope/vim-commentary'
-  Plug 'dsawardekar/portkey'
-  Plug 'jeetsukumaran/vim-buffergator'
-  Plug 'Valloric/YouCompleteMe',     { 'do': './install.sh' }
-  Plug 'Wolfy87/vim-enmasse',        { 'on': 'EnMasse' }
-  Plug 'Lokaltog/vim-easymotion',    { 'on': '<Plug>(easymotion-bd-t2)'}
-  Plug 'tacahiroy/ctrlp-funky',      { 'on': ['CtrlPFunky'] }
-  Plug 'sjl/gundo.vim',              { 'on': 'GundoToggle' }
-  Plug 'gregsexton/gitv',            { 'on': 'Gitv' }
-  Plug 'rking/ag.vim',               { 'on': 'Ag' }
-
-" conditional===================================================================
-  au BufRead,BufNewFile {*.md,*.markdown} set filetype=markdown
-  au BufRead,BufNewFile {*.gradle} set filetype=groovy
-  au BufNewFile,BufRead {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,compass.config} set ft=ruby
-  au BufNewFile,BufRead {*.json,*jshintrc,*tern-project,*jscsrc,*.eslintrc} set ft=json
-  au BufNewFile,BufRead {*.es6} set ft=javascript
-  au BufNewFile,BufRead {*gitconfig} set ft=gitconfig
-  au BufNewFile,BufRead {*.hbs,*.handlebars} set ft=mustache
-  au BufNewFile,BufRead {*Dockerfile} set filetype=dockerfile
-  au BufNewFile,BufRead {*.coffee,*.litcoffee} set filetype=coffee
-  au BufNewFile,BufRead {*.jade} set filetype=jade
-  au BufNewFile,BufRead {*zshrc,*zshenv} set filetype=zsh.sh
-  au BufNewFile,BufRead {.env} set filetype=sh
-
-  Plug 'elzr/vim-json',                          { 'for': 'json' }
-  Plug 'mustache/vim-mustache-handlebars',       { 'for': 'mustache' }
-  Plug 'honza/dockerfile.vim',                   { 'for': 'dockerfile' }
-  Plug 'digitaltoad/vim-jade',                   { 'for': 'jade' }
-  Plug 'vim-ruby/vim-ruby',                      { 'for': 'ruby' }
-  Plug 'tpope/vim-rails',                        { 'for': 'ruby' }
-  Plug 'tpope/vim-bundler',                      { 'for': 'ruby' }
-  Plug 'tpope/vim-endwise',                      { 'for': ['ruby', 'sh'] }
-  Plug 'kchmck/vim-coffee-script',               { 'for': 'coffee' }
-  Plug 'moll/vim-node',                          { 'for': 'javascript' }
-  Plug 'facebook/vim-flow',                      { 'for': 'javascript' }
-  Plug 'heavenshell/vim-jsdoc',                  { 'for': 'javascript' }
-  " Plug 'marijnh/tern_for_vim',                   { 'for': 'javascript', 'do': 'npm install' }
-  Plug 'pangloss/vim-javascript',                { 'for': 'javascript' }
-  Plug 'mxw/vim-jsx',                            { 'for': 'javascript' }
-  Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
-  Plug 'csscomb/vim-csscomb',                    { 'for': ['css', 'scss'] }
-  Plug 'itspriddle/vim-marked',                  { 'for': ['markdown', 'ghmarkdown'] }
-  Plug 'mattn/emmet-vim',                        { 'for': ['html', 'eruby', 'javascript', 'css', 'scss', 'markdown', 'ghmarkdown', 'html.handlebars'] }
-  Plug 'tpope/vim-git',                          { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
 
   call plug#end()
-  filetype plugin indent on
 
-" settings =====================================================================
-  let mapleader = ","
-  let g:maplocalleader = '='
+  source $MYCONFIG/autocommands.vim
 
-  set encoding=utf-8
-  set laststatus=2
-  set mouse=a
-  set ttymouse=xterm2
-  set ffs=unix,dos,mac
-  set clipboard=unnamed
-  set autoread
-  set hidden
-  set ruler
-  set number
-  set title
-  set backspace=indent,eol,start
-  set nostartofline
-  set colorcolumn=80
-  set nofoldenable
-  set tabstop=2
-  set shiftwidth=2
-  set softtabstop=2
-  set expandtab
-  set autoindent
-  set copyindent
-  set pastetoggle=<F2>
-  set list
-  set listchars=trail:·,tab:⇥ᐧ
-  "set listchars=trail:␣,tab:⇥ᐧ,nbsp:⍽,eol:¶,extends:▸,precedes:◂
-  set nowrap
-  set linebreak
-  set nolist
-  set breakindent
-  set showbreak=\ \...
-  set wmh=0
-  set background=dark
-  set lazyredraw
-  set hlsearch
-  set incsearch
-  set ignorecase
-  set smartcase
-  set gdefault
-  set wildignore+=.git\*,.hg\*,.svn\*
-  set nobackup
-  set nowb
-  set noswapfile
-  set spellfile=$HOME/.dotfiles/vim/spellfile.utf-8.add
+" Settings =====================================================================
+source $MYCONFIG/vim.vim
+source $MYCONFIG/lightline.vim
+source $MYCONFIG/youcompleteme.vim
+source $MYCONFIG/delimitmate.vim
+source $MYCONFIG/localvimrc.vim
+source $MYCONFIG/slime.vim
+source $MYCONFIG/filebeagle.vim
+source $MYCONFIG/javascript.vim
+source $MYCONFIG/dash.vim
+source $MYCONFIG/typos.vim
+source $MYCONFIG/cursors.vim
+source $MYCONFIG/json.vim
+source $MYCONFIG/flow.vim
+source $MYCONFIG/jsx.vim
+source $MYCONFIG/supertab.vim
+source $MYCONFIG/ultisnips.vim
+source $MYCONFIG/ctrlp.vim
+source $MYCONFIG/rubycomplete.vim
+source $MYCONFIG/jsdoc.vim
+source $MYCONFIG/gitv.vim
+source $MYCONFIG/buffergator.vim
+source $MYCONFIG/keymap.vim
 
-  filetype plugin on
-  filetype indent on
-  syntax enable
-  let base16colorspace=256
-  colorscheme base16-tomorrow
-
-  au FileType make set noexpandtab
-  au FileType gitconfig set noexpandtab
-  autocmd FileType scss set commentstring=/*\ %s\ */
-  " au FileType javascript setlocal omnifunc=tern#Complete
-  au FileType css setlocal omnifunc=csscomplete#CompleteCSS
-  au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-  au FileType python setlocal omnifunc=pythoncomplete#Complete
-  au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" plugin functions =============================================================
-  function! MyModified()
-    if &filetype == "help"
-      return ""
-    elseif &modified
-      return "+"
-    elseif &modifiable
-      return ""
-    else
-      return ""
-    endif
-  endfunction
-
-  function! MyReadonly()
-    if &filetype == "help"
-      return ""
-    elseif &readonly
-      return ""
-    else
-      return ""
-    endif
-  endfunction
-
-  function! MyFugitive()
-    try
-      if expand('%:t') !~? 'Gundo' && exists('*fugitive#head')
-        let mark = ' '
-        let _ = fugitive#head()
-        return strlen(_) ? mark._ : ''
-      endif
-    catch
-    endtry
-    return ''
-  endfunction
-
-  function! MyFilename()
-    return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-           \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
-           \ ('' != MyModified() ? ' ' . MyModified() : '')
-  endfunction
-
-  function! CtrlPMark()
-    if expand('%:t') =~ 'ControlP'
-      call lightline#link('iR'[g:lightline.ctrlp_regex])
-      return lightline#concatenate([g:lightline.ctrlp_prev, g:lightline.ctrlp_item
-            \ , g:lightline.ctrlp_next], 0)
-    else
-      return ''
-    endif
-  endfunction
-
-  " lightline ctrlp
-  let g:ctrlp_status_func = {
-    \ 'main': 'CtrlPStatusFunc_1',
-    \ 'prog': 'CtrlPStatusFunc_2',
-    \ }
-  function! CtrlPStatusFunc_1(focus, byfname, regex, prev, item, next, marked)
-    let g:lightline.ctrlp_regex = a:regex
-    let g:lightline.ctrlp_prev = a:prev
-    let g:lightline.ctrlp_item = a:item
-    let g:lightline.ctrlp_next = a:next
-    return lightline#statusline(0)
-  endfunction
-  function! CtrlPStatusFunc_2(str)
-    return lightline#statusline(0)
-  endfunction
-
-  " lightline
-  function! s:syntastic()
-    SyntasticCheck
-    call lightline#update()
-  endfunction
-
-  function! MyFileformat()
-    return winwidth(0) > 70 ? &fileformat : ''
-  endfunction
-
-  function! MyFiletype()
-    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
-  endfunction
-
-  function! MyFileencoding()
-    return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
-  endfunction
-
-  " dash
-  function! s:doc(cmd)
-    return a:cmd
-  endfunction
-
-  " fix common ex typos
-  if has("user_commands")
-      command! -bang -nargs=? -complete=file E e<bang> <args>
-      command! -bang -nargs=? -complete=file W w<bang> <args>
-      command! -bang -nargs=? -complete=file Wq wq<bang> <args>
-      command! -bang -nargs=? -complete=file WQ wq<bang> <args>
-      command! -bang Wa wa<bang>
-      command! -bang WA wa<bang>
-      command! -bang Q q<bang>
-      command! -bang QA qa<bang>
-      command! -bang Qa qa<bang>
-  endif
-
-  " modal cursors
-	if empty($WINDOWID) ""
-		if empty($TMUX)
-			" iterm2
-			let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-			let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-		else
-			" iterm2 + tmux
-			let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-			let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-		endif
-	else
-		" urxvt
-		let &t_SI = "\033]12;#b5bd68\007"
-		let &t_EI = "\033]12;#969896\007"
-	endif
-
-" plugin mappings ==============================================================
-  nmap        <Space>           <Plug>(easymotion-bd-t2)
-  nmap        <Leader>d         <Plug>DashSearch
-  nmap        <expr> K          <SID>doc("\<Plug>DashSearch")
-  nmap        <Leader>/         <Plug>CommentaryLine
-  vmap        <Leader>/         <Plug>Commentary
-  nmap        ˚                 [e
-  nmap        ∆                 ]e
-  vmap        ˚                 [egv
-  vmap        ∆                 ]egv
-  vmap        <Enter>           <Plug>(LiveEasyAlign)
-  noremap     H                 ^
-  noremap     L                 g_
-  nnoremap    Q                 <nop>
-  nnoremap    <Leader>q         :bp\|bd #<CR>
-  nnoremap    <Leader>md        :MarkedOpen!<CR>
-  nnoremap    <Leader>gs        :Gstatus<CR>
-  nnoremap    <Leader>ga        :Gcommit --amend<CR>
-  nnoremap    <Leader>gc        :Gcommit -v -q<CR>
-  nnoremap    <Leader>gt        :Gcommit -v -q %:p<CR>
-  nnoremap    <Leader>gd        :Gdiff<CR>
-  nnoremap    <Leader>gr        :Gread<CR>
-  nnoremap    <Leader>ge        :Gedit<CR>
-  nnoremap    <Leader>gw        :Gwrite<CR><CR>
-  nnoremap    <Leader>gl        :Gitv --all<CR>
-  nnoremap    <Leader>gh        :Gitv!<CR>
-  nnoremap    <Leader>gm        :Gmove<Space>
-  nnoremap    <Leader>gco       :Git checkout<Space>
-  nnoremap    <Leader>gp        :Dispatch! git push<CR>
-  nnoremap    <Leader>gfm       :Dispatch! git pull<CR>
-  nmap        <Leader>gv        :Gitv! --all<cr>
-  vmap        <Leader>gv        :Gitv! --all<cr>
-  nnoremap    <Leader>p         :CtrlP<CR>
-  nnoremap    <Leader>b         :BuffergatorOpen<CR>
-  nnoremap    <Leader>o         :CtrlPFunky<CR>
-  nnoremap    <Leader>a         :A<CR>
-  nnoremap    <Leader>l         :call <SID>syntastic()<CR>
-  nnoremap    <Leader>e         :Errors<CR>
-  nnoremap    <Leader>s         :SyntasticToggleMode<CR>
-  nnoremap    <Leader>u         :GundoToggle<CR>
-  nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
-  nnoremap    <Leader><Space>   :nohlsearch<CR>
-  nnoremap    j                 gj
-  nnoremap    k                 gk
-  nnoremap    n                 nzz
-  nnoremap    N                 Nzz
-  nnoremap    *                 *zz
-  nnoremap    }                 }zz
-  nnoremap    {                 {zz
-  nnoremap    #                 #zz
-  nnoremap    g*                g*zz
-  nnoremap    g#                g#zz
-
-" plugin settings ==============================================================
-  let g:syntastic_html_checkers                       = ['']
-  let g:syntastic_javascript_checkers                 = ['jshint']
-  let g:syntastic_javascript_jsxhint_exec             = 'jsx-jshint-wrapper'
-  let g:jsx_ext_required                              = 0
-  let g:syntastic_mode_map                            = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-  let g:syntastic_id_checkers                         = 1
-  let g:syntastic_aggregate_errors                    = 1
-  let g:syntastic_error_symbol                        = '✕'
-  let g:syntastic_warning_symbol                      = '▵'
-  let g:syntastic_style_error_symbol                  = '✕'
-  let g:syntastic_style_warning_symbol                = '▵'
-  let g:local_vimrc                                   = {'names':['.local-vimrc'],'hash_fun':'LVRHashOfFile'}
-  let g:delimitMate_expand_cr                         = 1
-  let g:vim_json_syntax_conceal                       = 0
-  let g:tern_show_argument_hints                      = 'no'
-  let g:tern_show_signature_in_pum                    = 1
-  let g:ycm_autoclose_preview_window_after_completion = 1
-  let g:ycm_global_ycm_extra_conf                     = '~/.vim/.ycm_extra_conf.py'
-  let g:ycm_enable_diagnostic_signs                   = 0
-  let g:ycm_key_list_select_completion                = ['<c-n>', '<down>']
-  let g:ycm_key_list_previous_completion              = ['<C-p>', '<Up>']
-  let g:slime_target                                  = "tmux"
-  let g:slime_paste_file                              = tempname()
-  let g:slime_default_config                          = {"socket_name": "default", "target_pane": "1"}
-  let g:SuperTabDefaultCompletionType                 = '<C-n>'
-  let g:UltiSnipsExpandTrigger                        = "<tab>"
-  let g:UltiSnipsJumpForwardTrigger                   = "<tab>"
-  let g:UltiSnipsJumpBackwardTrigger                  = "<s-tab>"
-  let g:ctrlp_match_func                              = { 'match': 'pymatcher#PyMatch' }
-  let g:ctrlp_clear_cache_on_exit                     = 0
-  let g:ctrlp_max_files                               = 0
-  let g:ctrlp_user_command                            = 'ag %s -i --nocolor --nogroup --hidden -g ""'
-  let g:ctrlp_extensions                              = ['funky']
-  let g:rubycomplete_buffer_loading                   = 1
-  let g:rubycomplete_classes_in_global                = 1
-  let g:rubycomplete_rails                            = 1
-  let g:rubycomplete_use_bundler                      = 1
-  let g:gundo_right                                   = 1
-  let g:netrw_liststyle                               = 3
-  let g:bufferline_show_bufnr                         = 0
-  let g:tmuxline_powerline_separators                 = 0
-  let g:jsdoc_default_mapping                         = 0
-  let g:jsdoc_allow_input_prompt                      = 1
-  let g:Gitv_WipeAllOnClose                           = 1
-  let g:Gitv_DoNotMapCtrlKey                          = 1
-  let g:buffergator_suppress_keymaps                  = 1
-  let g:buffergator_viewport_split_policy             = 'R'
-  let g:buffergator_sort_regime                       = 'mru'
-  let g:buffergator_display_regime                    = 'basename'
-  let g:buffergator_show_full_directory_path          = 0
-  let g:buffergator_mru_cycle_local_to_window         = 1
-  let g:ag_highlight                                  = 1
-  let g:filebeagle_show_hidden                        = 1
-  let g:filebeagle_check_gitignore                    = 1
-  let g:instant_markdown_autostart                    = 0
-  let g:flow#enable                                   = 0
-  let g:flow#autoclose                                = 1
-  let g:lightline                                     = {
-                                                      \ 'colorscheme': 'jellybeans',
-                                                      \ 'active': {
-                                                      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
-                                                      \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
-                                                      \ },
-                                                      \ 'component_function': {
-                                                      \   'fugitive': 'MyFugitive',
-                                                      \   'filename': 'MyFilename',
-                                                      \   'fileformat': 'MyFileformat',
-                                                      \   'filetype': 'MyFiletype',
-                                                      \   'readonly': 'MyReadonly',
-                                                      \   'fileencoding': 'MyFileencoding',
-                                                      \   'ctrlpmark': 'CtrlPMark',
-                                                      \   'modified': 'MyModified',
-                                                      \ },
-                                                      \ 'component_expand': {
-                                                      \   'syntastic': 'SyntasticStatuslineFlag',
-                                                      \ },
-                                                      \ 'component_type': {
-                                                      \   'syntastic': 'error',
-                                                      \ },
-                                                      \   'separator': { 'left': '', 'right': '' },
-                                                      \   'subseparator': { 'left': '', 'right': '' }
-                                                      \ }
-
-augroup AutoSyntastic
-  autocmd!
-  autocmd BufWritePost *.jsx,*.js call s:syntastic()
-augroup END
-function! s:syntastic()
-  SyntasticCheck
-  call lightline#update()
-endfunction
-
-highlight SyntasticErrorSign ctermfg=1 ctermbg=18 guifg=#cc6666 guibg=#282a2e
-highlight Search ctermfg=0 ctermbg=5 guifg=#181818 guibg=#BA8BAF
-highlight IncSearch ctermfg=0 ctermbg=4 guifg=#181818 guibg=#0000ff
+" nvim specific
+source $MYCONFIG/syntastic.vim
+source $MYCONFIG/v_keymap.vim
+source $MYCONFIG/v_lightline.vim
+source $MYCONFIG/v_colors.vim

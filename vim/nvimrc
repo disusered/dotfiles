@@ -1,17 +1,17 @@
 " Init =========================================================================
-  let $MYCONFIG="$HOME/.dotfiles/vim/config"
-
   set nocompatible
   filetype off
-
+  let $MYCONFIG="$HOME/.dotfiles/vim/config"
   call plug#begin('~/.dotfiles/vendor/nplugged')
 
   source $MYCONFIG/ft.vim
   source $MYCONFIG/plugins.vim
+
+  " nvim specific
   Plug 'benekastah/neomake'
+  Plug 'vim-scripts/vim-auto-save'
 
   call plug#end()
-
   source $MYCONFIG/autocommands.vim
 
 " Settings =====================================================================
@@ -38,4 +38,7 @@ source $MYCONFIG/gitv.vim
 source $MYCONFIG/buffergator.vim
 source $MYCONFIG/keymap.vim
 
+" nvim specific
 source $MYCONFIG/neomake.vim
+source $MYCONFIG/n_keymap.vim
+source $MYCONFIG/n_lightline.vim
