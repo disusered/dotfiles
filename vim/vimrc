@@ -34,7 +34,6 @@
   Plug 'Valloric/YouCompleteMe',     { 'do': './install.sh' }
   Plug 'Wolfy87/vim-enmasse',        { 'on': 'EnMasse' }
   Plug 'Lokaltog/vim-easymotion',    { 'on': '<Plug>(easymotion-bd-t2)'}
-  Plug 'rizzatti/dash.vim',          { 'on': ['<Plug>DashSearch'] }
   Plug 'tacahiroy/ctrlp-funky',      { 'on': ['CtrlPFunky'] }
   Plug 'sjl/gundo.vim',              { 'on': 'GundoToggle' }
   Plug 'gregsexton/gitv',            { 'on': 'Gitv' }

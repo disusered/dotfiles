@@ -1,5 +1,5 @@
 " Init =========================================================================
-  let $MYCONFIG="$HOME/.dotfiles/nvim/config"
+  let $MYCONFIG="$HOME/.dotfiles/vim/config"
 
   set nocompatible
   filetype off
