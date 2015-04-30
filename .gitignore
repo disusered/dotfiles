@@ -26,3 +26,4 @@ mps*/transcode
 vim/autoload/
 .env
 sec.conf
+vim/view
