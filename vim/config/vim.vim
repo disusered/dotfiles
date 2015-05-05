@@ -46,6 +46,7 @@ set wildignore+=.git\*,.hg\*,.svn\*
 set nobackup
 set nowb
 set noswapfile
+set foldmethod=syntax
 set spellfile=$HOME/.dotfiles/vim/spellfile.utf-8.add
 
 filetype plugin on
