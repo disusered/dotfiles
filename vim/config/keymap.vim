@@ -34,6 +34,7 @@ nnoremap    <Leader>p         :CtrlP<CR>
 nnoremap    <Leader>b         :BuffergatorOpen<CR>
 nnoremap    <Leader>o         :CtrlPFunky<CR>
 nnoremap    <Leader>a         :A<CR>
+nnoremap    <Leader>c         :R<CR>
 nnoremap    <Leader>l         :call <SID>syntastic()<CR>
 nnoremap    <Leader>e         :Errors<CR>
 nnoremap    <Leader>u         :GundoToggle<CR>
