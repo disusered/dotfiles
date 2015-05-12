@@ -18,9 +18,10 @@ Plug 'SirVer/ultisnips'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
-Plug 'benmills/vimux'
+Plug 'jszakmeister/vim-togglecursor'
+Plug 'benmills/vimux',                   { 'on': 'VimuxPromptCommand' }
 Plug 'rking/ag.vim',                     { 'on': 'Ag' }
-Plug 'sjl/gundo.vim',                    { 'on': 'GundoToggle' }
+Plug 'simnalamburt/vim-mundo',           { 'on': 'GundoToggle' }
 Plug 'Valloric/YouCompleteMe',           { 'do': './install.sh' }
 Plug 'Wolfy87/vim-enmasse',              { 'on': 'EnMasse' }
 Plug 'Lokaltog/vim-easymotion',          { 'on': '<Plug>(easymotion-bd-t2)'}

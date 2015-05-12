@@ -1,0 +1,27 @@
+" plugins
+source $MYCONFIG/ag.vim
+source $MYCONFIG/buffergator.vim
+source $MYCONFIG/ctrlp.vim
+source $MYCONFIG/dash.vim
+source $MYCONFIG/delimitmate.vim
+source $MYCONFIG/filebeagle.vim
+source $MYCONFIG/flow.vim
+source $MYCONFIG/gitv.vim
+source $MYCONFIG/mundo.vim
+source $MYCONFIG/javascript.vim
+source $MYCONFIG/jsdoc.vim
+source $MYCONFIG/json.vim
+source $MYCONFIG/jsx.vim
+source $MYCONFIG/lightline.vim
+source $MYCONFIG/localvimrc.vim
+source $MYCONFIG/rubycomplete.vim
+source $MYCONFIG/slime.vim
+source $MYCONFIG/supertab.vim
+source $MYCONFIG/ultisnips.vim
+source $MYCONFIG/webdevicons.vim
+source $MYCONFIG/youcompleteme.vim
+
+" config
+source $MYCONFIG/vim.vim
+source $MYCONFIG/keymap.vim
+source $MYCONFIG/typos.vim

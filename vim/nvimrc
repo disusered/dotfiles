@@ -16,31 +16,10 @@
   source $MYCONFIG/n_autocommands.vim
 
 " Settings =====================================================================
-source $MYCONFIG/vim.vim
-source $MYCONFIG/lightline.vim
-source $MYCONFIG/youcompleteme.vim
-source $MYCONFIG/delimitmate.vim
-source $MYCONFIG/localvimrc.vim
-source $MYCONFIG/slime.vim
-source $MYCONFIG/filebeagle.vim
-source $MYCONFIG/javascript.vim
-source $MYCONFIG/dash.vim
-source $MYCONFIG/typos.vim
-source $MYCONFIG/cursors.vim
-source $MYCONFIG/json.vim
-source $MYCONFIG/flow.vim
-source $MYCONFIG/jsx.vim
-source $MYCONFIG/supertab.vim
-source $MYCONFIG/ultisnips.vim
-source $MYCONFIG/ctrlp.vim
-source $MYCONFIG/rubycomplete.vim
-source $MYCONFIG/jsdoc.vim
-source $MYCONFIG/gitv.vim
-source $MYCONFIG/buffergator.vim
-source $MYCONFIG/webdevicons.vim
-source $MYCONFIG/keymap.vim
+source $MYCONFIG/shared.vim
 
 " nvim specific
-source $MYCONFIG/neomake.vim
+source $MYCONFIG/n_neomake.vim
+source $MYCONFIG/n_autosave.vim
 source $MYCONFIG/n_keymap.vim
 source $MYCONFIG/n_lightline.vim
