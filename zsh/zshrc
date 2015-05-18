@@ -63,6 +63,7 @@ alias open='noglob open'
 alias npm='noglob npm'
 
 # Aliases
+alias sudo='sudo '
 alias f='fzf --reverse --prompt "🔎  "'
 alias c='clear'
 alias r='ranger'
