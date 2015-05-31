@@ -15,6 +15,7 @@
   source $MYCONFIG/autocommands.vim
 
 " Settings =====================================================================
+set ttymouse=xterm2
 source $MYCONFIG/shared.vim
 
 " vim specific

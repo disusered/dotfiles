@@ -7,7 +7,6 @@ let g:maplocalleader = '='
 set encoding=utf-8
 set laststatus=2
 set mouse=a
-set ttymouse=xterm2
 set ffs=unix,dos,mac
 set clipboard=unnamed
 set autoread
