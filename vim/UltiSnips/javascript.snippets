@@ -169,8 +169,16 @@ snippet r "require()"
 require('$0');
 endsnippet
 
+snippet i "import"
+import $1 from '$0';
+endsnippet
+
 snippet v "var"
 var ${1:name} = $0
+endsnippet
+
+snippet u "undefined"
+undefined$0
 endsnippet
 
 snippet it "it should..."
