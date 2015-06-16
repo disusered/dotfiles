@@ -40,7 +40,7 @@
     npm update npm -g && npm install -g yo gulp grunt-cli cordova ionic \
     http-server forever ios-deploy ios-sim jscs jshint karma-cli bower \
     node-inspector nodemon phonegap plugman svgo wiredep browserify \
-    react-tool syntastic-react david eslint babel-eslint flow-bin
+    react-tool syntastic-react david eslint babel-eslint flow-bin csscomb
     npm adduser
     # Python
     pip install --upgrade setuptools
