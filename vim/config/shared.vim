@@ -6,6 +6,7 @@ source $MYCONFIG/dash.vim
 source $MYCONFIG/delimitmate.vim
 source $MYCONFIG/filebeagle.vim
 source $MYCONFIG/flow.vim
+source $MYCONFIG/eighties.vim
 source $MYCONFIG/gitv.vim
 source $MYCONFIG/mundo.vim
 source $MYCONFIG/javascript.vim

@@ -19,8 +19,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
 Plug 'jszakmeister/vim-togglecursor'
-Plug 'roman/golden-ratio'
 Plug 'benmills/vimux',                   { 'on': 'VimuxPromptCommand' }
+Plug 'justincampbell/vim-eighties'
 Plug 'rking/ag.vim',                     { 'on': 'Ag' }
 Plug 'simnalamburt/vim-mundo',           { 'on': 'GundoToggle' }
 Plug 'Valloric/YouCompleteMe',           { 'do': './install.sh' }
