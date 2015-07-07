@@ -19,7 +19,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
 Plug 'jszakmeister/vim-togglecursor'
-Plug 'benmills/vimux',                   { 'on': 'VimuxPromptCommand' }
 Plug 'justincampbell/vim-eighties'
 Plug 'rking/ag.vim',                     { 'on': 'Ag' }
 Plug 'simnalamburt/vim-mundo',           { 'on': 'GundoToggle' }
@@ -37,6 +36,7 @@ Plug 'jeetsukumaran/vim-buffergator'
 Plug 'kien/ctrlp.vim'
 Plug 'ryanoasis/vim-webdevicons'
 Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'janko-m/vim-test'
 Plug 'tacahiroy/ctrlp-funky',            { 'on': ['CtrlPFunky'] }
 Plug 'csscomb/vim-csscomb',              { 'for': ['css', 'scss'] }
 Plug 'groenewege/vim-less',              { 'for': 'less' }

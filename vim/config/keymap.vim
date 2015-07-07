@@ -30,6 +30,11 @@ nnoremap    <Leader>gp        :terminal git push<CR>
 nnoremap    <Leader>gfm       :terminal git pull<CR>
 nmap        <Leader>gv        :Gitv! --all<cr>
 vmap        <Leader>gv        :Gitv! --all<cr>
+nmap        <Silent><Leader>t :TestNearest<CR>
+nmap        <Silent><Leader>T :TestFile<CR>
+nmap        <Silent><Leader>a :TestSuite<CR>
+" nmap        <Silent><Leader>l :TestLast<CR>
+" nmap        <Silent><Leader>g :TestVisit<CR>
 nnoremap    <Leader>p         :CtrlP<CR>
 nnoremap    <Leader>b         :BuffergatorOpen<CR>
 nnoremap    <Leader>o         :CtrlPFunky<CR>
@@ -40,7 +45,6 @@ nnoremap    <Leader>e         :Errors<CR>
 nnoremap    <Leader>u         :GundoToggle<CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
 nnoremap    <Leader><Space>   :nohlsearch<CR>
-nnoremap    <Leader>t         :VimuxPromptCommand<CR> 
 nnoremap    j                 gj
 nnoremap    k                 gk
 nnoremap    n                 nzz
