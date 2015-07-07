@@ -47,6 +47,7 @@ set nowb
 set noswapfile
 set foldmethod=syntax
 set spellfile=$HOME/.dotfiles/vim/spellfile.utf-8.add
+set synmaxcol=2048
 
 filetype plugin on
 filetype indent on
