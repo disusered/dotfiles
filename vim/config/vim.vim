@@ -28,7 +28,7 @@ set pastetoggle=<F2>
 set list
 set listchars=trail:·,tab:⇥ᐧ
 "set listchars=trail:␣,tab:⇥ᐧ,nbsp:⍽,eol:¶,extends:▸,precedes:◂
-set wrap
+set nowrap
 set linebreak
 set nolist
 set breakindent
