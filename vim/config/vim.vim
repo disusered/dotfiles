@@ -41,7 +41,7 @@ set incsearch
 set ignorecase
 set smartcase
 set gdefault
-set wildignore+=.git\*,.hg\*,.svn\*
+set wildignore+=.git\*,.hg\*,.svn\*,node_modules/**
 set nobackup
 set nowb
 set noswapfile
