@@ -36,7 +36,6 @@ Plug 'jeetsukumaran/vim-buffergator'
 Plug 'kien/ctrlp.vim'
 Plug 'ryanoasis/vim-webdevicons'
 Plug 'FelikZ/ctrlp-py-matcher'
-Plug 'janko-m/vim-test'
 Plug 'tacahiroy/ctrlp-funky',            { 'on': ['CtrlPFunky'] }
 Plug 'csscomb/vim-csscomb',              { 'for': ['css', 'scss'] }
 Plug 'groenewege/vim-less',              { 'for': 'less' }
