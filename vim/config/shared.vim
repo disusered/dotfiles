@@ -21,6 +21,8 @@ source $MYCONFIG/supertab.vim
 source $MYCONFIG/ultisnips.vim
 source $MYCONFIG/webdevicons.vim
 source $MYCONFIG/youcompleteme.vim
+source $MYCONFIG/youcompleteme.vim
+source $MYCONFIG/hardtime.vim
 
 " config
 source $MYCONFIG/vim.vim
