@@ -34,7 +34,6 @@ Plug 'justinmk/vim-gtfo'
 Plug 'tpope/vim-unimpaired'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'kien/ctrlp.vim'
-Plug 'ryanoasis/vim-webdevicons'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'tacahiroy/ctrlp-funky',            { 'on': ['CtrlPFunky'] }
 Plug 'csscomb/vim-csscomb',              { 'for': ['css', 'scss'] }
@@ -53,3 +52,5 @@ Plug 'suan/vim-instant-markdown',        { 'for': ['markdown', 'ghmarkdown'] }
 Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache' }
 Plug 'digitaltoad/vim-jade',             { 'for': 'jade' }
 Plug 'honza/dockerfile.vim',             { 'for': 'dockerfile' }
+
+Plug 'ryanoasis/vim-webdevicons'
