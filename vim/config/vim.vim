@@ -26,11 +26,9 @@ set autoindent
 set copyindent
 set pastetoggle=<F2>
 set list
-set listchars=trail:·,tab:⇥ᐧ
-"set listchars=trail:␣,tab:⇥ᐧ,nbsp:⍽,eol:¶,extends:▸,precedes:◂
+set listchars=trail:●,tab:⇥ᐧ,nbsp:⍽,extends:▸,precedes:◂
 set nowrap
 set linebreak
-set nolist
 set breakindent
 set showbreak=\ \...
 set wmh=0
