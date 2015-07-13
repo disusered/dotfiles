@@ -10,6 +10,7 @@
   " nvim specific
   Plug 'benekastah/neomake'
   Plug 'vim-scripts/vim-auto-save'
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
   call plug#end()
   source $MYCONFIG/autocommands.vim
