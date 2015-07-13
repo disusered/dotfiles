@@ -35,6 +35,7 @@ Plug 'facebook/vim-flow',                { 'for': ['javascript', 'javascript.jsx
 Plug 'moll/vim-node',                    { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'kchmck/vim-coffee-script',         { 'for': 'coffee' }
 Plug 'elzr/vim-json',                    { 'for': 'json' }
+Plug 'Quramy/vison',                     { 'on': ['VisonSetup', 'Vison'], 'for': 'json' }
 Plug 'vim-ruby/vim-ruby',                { 'for': 'ruby' }
 Plug 'tpope/vim-rails',                  { 'for': 'ruby' }
 Plug 'tpope/vim-bundler',                { 'for': 'ruby' }
