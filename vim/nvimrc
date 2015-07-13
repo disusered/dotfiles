@@ -8,8 +8,7 @@
   call plug#begin('~/.dotfiles/vendor/nplugged')
   source $MYCONFIG/plugins.vim
   " nvim specific
-  Plug 'benekastah/neomake'
-  Plug 'vim-scripts/vim-auto-save'
+  Plug 'benekastah/neomake', {'for': ['javascript', 'javascript.jsx']}
 
   call plug#end()
 
@@ -17,7 +16,7 @@
   source $MYCONFIG/n_autocommands.vim
 
 " Settings =====================================================================
-  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 source $MYCONFIG/shared.vim
 
 " nvim specific

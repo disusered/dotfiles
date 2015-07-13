@@ -2,7 +2,6 @@
 source $MYCONFIG/ag.vim
 source $MYCONFIG/buffergator.vim
 source $MYCONFIG/ctrlp.vim
-source $MYCONFIG/dash.vim
 source $MYCONFIG/delimitmate.vim
 source $MYCONFIG/filebeagle.vim
 source $MYCONFIG/flow.vim
@@ -19,7 +18,6 @@ source $MYCONFIG/rubycomplete.vim
 source $MYCONFIG/slime.vim
 source $MYCONFIG/supertab.vim
 source $MYCONFIG/ultisnips.vim
-source $MYCONFIG/webdevicons.vim
 source $MYCONFIG/youcompleteme.vim
 
 " config
