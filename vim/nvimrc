@@ -2,21 +2,22 @@
   set nocompatible
   filetype off
   let $MYCONFIG="$HOME/.dotfiles/vim/config"
-  call plug#begin('~/.dotfiles/vendor/nplugged')
 
   source $MYCONFIG/ft.vim
-  source $MYCONFIG/plugins.vim
 
+  call plug#begin('~/.dotfiles/vendor/nplugged')
+  source $MYCONFIG/plugins.vim
   " nvim specific
   Plug 'benekastah/neomake'
   Plug 'vim-scripts/vim-auto-save'
-  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
   call plug#end()
+
   source $MYCONFIG/autocommands.vim
   source $MYCONFIG/n_autocommands.vim
 
 " Settings =====================================================================
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 source $MYCONFIG/shared.vim
 
 " nvim specific
