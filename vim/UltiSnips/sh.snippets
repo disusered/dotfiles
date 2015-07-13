@@ -1,3 +1,14 @@
+snippet for "For loop"
+for i in $(seq 1 ${1:10});
+do
+	${0:echo $i}
+done
+endsnippet
+
+snippet sh "Shell script"
+#!/bin/sh $0
+endsnippet
+
 snippet if "A simple if condition"
 if [ ${1:-z "\$1"} ]
 then
