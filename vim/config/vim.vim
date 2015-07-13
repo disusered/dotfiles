@@ -2,7 +2,7 @@ let base16colorspace=256
 colorscheme base16-tomorrow
 
 let mapleader = ","
-let g:maplocalleader = '='
+let g:maplocalleader = 'm'
 
 set encoding=utf-8
 set laststatus=2
