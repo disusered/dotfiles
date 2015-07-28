@@ -50,7 +50,7 @@
 [grep]
 	lineNumber = true
 [push]
-	default = current
+	default = upstream
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustexitcode = true
@@ -66,3 +66,5 @@
 	tool = Kaleidoscope
 [url "https://github"]
 	insteadOf = git://github
+[branch]
+	autosetuprebase = always
