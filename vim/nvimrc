@@ -8,7 +8,7 @@
   call plug#begin('~/.dotfiles/vendor/nplugged')
   source $MYCONFIG/plugins.vim
   " nvim specific
-  Plug 'benekastah/neomake', {'for': ['javascript', 'javascript.jsx']}
+  Plug 'benekastah/neomake', {'for': ['javascript', 'javascript.jsx', 'json']}
 
   call plug#end()
 

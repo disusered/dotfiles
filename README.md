@@ -41,7 +41,7 @@
     http-server forever ios-deploy ios-sim jscs jshint karma-cli bower \
     node-inspector nodemon phonegap plugman svgo wiredep browserify \
     react-tool syntastic-react david eslint babel-eslint flow-bin csscomb \
-    jscs babel-jscs babel eslint-plugin-react mocha
+    jscs babel-jscs babel eslint-plugin-react mocha jsonlint
     npm adduser
     # Python
     pip install --upgrade setuptools
