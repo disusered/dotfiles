@@ -1,0 +1,36 @@
+snippet flow "Flow and ESLint"
+function! s:lint()
+  Neomake
+  FlowMake
+endfunction
+
+map <silent> <Leader>m :Dispatch npm start<CR>
+
+let g:flow#enable = 1
+nnoremap <Leader>l :Neomake<CR>:FlowMake<CR>
+
+let g:flow#omnifunc = 1
+au FileType {javascript,javascript.jsx} setl omnifunc=flowcomplete#Complete
+
+if has('nvim')
+  autocmd BufWritePost *.jsx,*.js,*.json call s:lint()
+  let g:neomake_json_enabled_makers = ['jsonlint']
+  let g:neomake_javascript_enabled_makers = ['eslint']
+else
+  let g:syntastic_javascript_checkers = ['eslint']
+endif
+endsnippet
+
+snippet eslint "ESLint"
+function! s:lint()
+  Neomake
+endfunction
+
+if has('nvim')
+  autocmd BufWritePost *.jsx,*.js,*.json call s:lint()
+  let g:neomake_json_enabled_makers = ['jsonlint']
+  let g:neomake_javascript_enabled_makers = ['eslint']
+else
+  let g:syntastic_javascript_checkers = ['eslint']
+endif
+endsnippet

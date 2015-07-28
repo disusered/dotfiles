@@ -190,3 +190,23 @@ endsnippet
 snippet d "debugger;"
 debugger;
 endsnippet
+
+snippet me "module.exports"
+module.exports = $0;
+endsnippet
+
+snippet webpack "Webpack Babel Seed"
+module.exports = {
+  entry: './app/components/Main.js',
+  output: {
+    filename: 'public/bundle.js'
+  },
+  module: {
+    loaders: [{
+      test: /\.j(s|sx)$/,
+      exclude: /(node_modules)/,
+      loader: 'babel'
+    }]
+  }
+};
+endsnippet
