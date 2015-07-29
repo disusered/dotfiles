@@ -131,6 +131,20 @@ React.PropTypes.shape({
 })
 endsnippet
 
+snippet react_component_es5 "React Component (ES5)" i
+var React = require('react');
+
+var ${1:`!p snip.rv = snip.basename`} = React.createClass({
+  render: function() {
+    return (
+      <div>`!p snip.rv = t[1]`</div>
+    );
+  }
+});
+
+module.exports = `!p snip.rv = t[1]`;
+endsnippet
+
 snippet tp "this.props"
 this.props.$0
 endsnippet
