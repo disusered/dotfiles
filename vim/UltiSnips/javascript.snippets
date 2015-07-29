@@ -210,16 +210,27 @@ module.exports = $0;
 endsnippet
 
 snippet webpack "Webpack Babel Seed"
+var path = require('path');
+var webpack = require('webpack');
+
 module.exports = {
-  entry: './app/components/Main.js',
+  entry: ['./app/App.js'],
+
   output: {
-    filename: 'public/bundle.js'
+    path: path.join(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/'
   },
+
+  plugins: [
+    new webpack.NoErrorsPlugin()
+  ],
+
   module: {
     loaders: [{
       test: /\.j(s|sx)$/,
-      exclude: /(node_modules)/,
-      loader: 'babel'
+      include: path.join(__dirname, 'app'),
+      loaders: ['babel']
     }]
   }
 };
