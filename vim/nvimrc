@@ -3,12 +3,20 @@
   filetype off
   let $MYCONFIG="$HOME/.dotfiles/vim/config"
 
+  function! UpdateRemote(info)
+    if a:info.status != 'unchanged' || a:info.force
+      UpdateRemotePlugins
+    endif
+  endfunction
+
   source $MYCONFIG/ft.vim
 
   call plug#begin('~/.dotfiles/vendor/nplugged')
   source $MYCONFIG/plugins.vim
+
   " nvim specific
   Plug 'benekastah/neomake', {'for': ['javascript', 'javascript.jsx', 'json']}
+  Plug 'disusered/node-neovim-plugin', { 'branch': 'develop', 'do': function('UpdateRemote') }
 
   call plug#end()
 
