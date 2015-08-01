@@ -34,3 +34,18 @@ else
   let g:syntastic_javascript_checkers = ['eslint']
 endif
 endsnippet
+
+snippet npm "Basic npm commands"
+map <silent> <Leader>mh :Start! npm start<CR>
+map <silent> <Leader>mt :Start! npm test<CR>
+endsnippet
+
+snippet chrome "Chrome, no CORS, remote debugging"
+map <silent> <Leader>mc :Start! noglob open -a Google\ Chrome --args --remote-debugging-port=9222 --allow-file-access-from-files --disable-web-security http://localhost:8000/webpack-dev-server/<CR>
+$0
+endsnippet
+
+snippet canary "Chrome, no CORS, remote debugging"
+map <silent> <Leader>mc :Start! noglob open -a Google\ Chrome\ Canary --args --remote-debugging-port=9222 --allow-file-access-from-files --disable-web-security http://localhost:8000/webpack-dev-server/<CR>
+$0
+endsnippet
