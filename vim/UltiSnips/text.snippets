@@ -1,0 +1,43 @@
+snippet vimdoc "Vim Documentation Skeleton"
+*${1:`!p snip.rv = snip.basename`}.txt*
+
+Author:     ${2:Carlos Antonio <crosquillas@gmail.com>}
+License:    ${3:MIT}
+
+==============================================================================
+
+INTRODUCTION                            *`!p snip.rv = t[1]`*
+
+$0
+
+OPTIONS                                 *`!p snip.rv = t[1]`-options*
+
+g:`!p snip.rv = t[1].replace ("-", "_")`_foo                *g:`!p snip.rv = t[1].replace ("-", "_")`_foo*
+            Suspendisse porta urna eu feugiat eleifend. Phasellus malesuada
+            ligula in dictum pharetra.
+
+g:`!p snip.rv = t[1].replace ("-", "_")`_bar                *g:`!p snip.rv = t[1].replace ("-", "_")`_bar*
+            Maecenas hendrerit turpis vitae quam bibendum, sit amet
+            hendrerit erat fermentum.
+
+COMMANDS                                *`!p snip.rv = t[1]`-commands*
+
+Sed vitae arcu rhoncus, sagittis leo vitae, gravida massa. Nulla venenatis,
+magna sit amet consectetur imperdiet, ligula augue rhoncus lacus, id
+commodo dui nulla a lacus.
+
+                                        *`!p snip.rv = t[1]`-:Foo*
+:Foo                                Nam congue varius tortor.
+
+                                        *`!p snip.rv = t[1]`-:Bar*
+:Bar                                Sed tempor blandit sapien eu congue.
+
+ABOUT                                   *`!p snip.rv = t[1]`-about*
+
+Please report all bugs and feature requests on GitHub here:
+
+    https://github.com/disusered/`!p snip.rv = t[1]`
+
+  vim:tw=78:et:ft=help:norl:
+endsnippet
+
