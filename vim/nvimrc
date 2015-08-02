@@ -4,8 +4,9 @@
   let $MYCONFIG="$HOME/.dotfiles/vim/config"
 
   function! UpdateRemote(info)
-    if a:info.status != 'unchanged' || a:info.force
+    if a:info.status == 'installed' || a:info.status == 'updated' || a:info.force
       UpdateRemotePlugins
+      echom "Remember to restart!"
     endif
   endfunction
 
@@ -16,7 +17,7 @@
 
   " nvim specific
   Plug 'benekastah/neomake', {'for': ['javascript', 'javascript.jsx', 'json']}
-  Plug 'disusered/node-neovim-plugin', { 'branch': 'develop', 'do': function('UpdateRemote') }
+  Plug 'neovim/node-host', { 'do': 'npm install' } | Plug 'disusered/node-neovim-plugin', { 'branch': 'feature/bridge', 'do': function('UpdateRemote') }
 
   call plug#end()
 
