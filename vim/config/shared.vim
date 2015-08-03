@@ -19,6 +19,7 @@ source $MYCONFIG/slime.vim
 source $MYCONFIG/supertab.vim
 source $MYCONFIG/ultisnips.vim
 source $MYCONFIG/youcompleteme.vim
+source $MYCONFIG/easymotion.vim
 
 " config
 source $MYCONFIG/vim.vim

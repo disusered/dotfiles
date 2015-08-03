@@ -17,7 +17,6 @@ Plug 'justincampbell/vim-eighties'
 Plug 'rking/ag.vim',                     { 'on': 'Ag' }
 Plug 'simnalamburt/vim-mundo',           { 'on': 'GundoToggle' }
 Plug 'Wolfy87/vim-enmasse',              { 'on': 'EnMasse' }
-Plug 'Lokaltog/vim-easymotion',          { 'on': '<Plug>(easymotion-bd-t2)'}
 Plug 'tpope/vim-endwise',                { 'for': ['ruby', 'sh'] }
 Plug 'jpalardy/vim-slime',               { 'for': ['javascript', 'sh']}
 Plug 'itspriddle/vim-marked',            { 'for': ['markdown', 'ghmarkdown'] }
@@ -48,7 +47,7 @@ Plug 'FelikZ/ctrlp-py-matcher',          { 'on': ['CtrlP', 'CtrlPFunky']}
 Plug 'tacahiroy/ctrlp-funky',            { 'on': ['CtrlPFunky'] }
 
 " post
-Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat' | Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
 Plug 'ervandew/supertab',                { 'on': [] }
 Plug 'SirVer/ultisnips',                 { 'on': [] }
 Plug 'tpope/vim-fugitive',               { 'on': [] }
