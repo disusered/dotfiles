@@ -1,4 +1,5 @@
 Plug 'chriskempson/base16-vim'
+Plug 'troydm/zoomwintab.vim'
 Plug 'tpope/vim-projectionist'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-git',                    { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
