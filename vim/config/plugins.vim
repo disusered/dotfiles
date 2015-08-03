@@ -39,7 +39,6 @@ Plug 'Quramy/vison',                     { 'on': ['VisonSetup', 'Vison'], 'for':
 Plug 'vim-ruby/vim-ruby',                { 'for': 'ruby' }
 Plug 'tpope/vim-rails',                  { 'for': 'ruby' }
 Plug 'tpope/vim-bundler',                { 'for': 'ruby' }
-Plug 'suan/vim-instant-markdown',        { 'for': ['markdown', 'ghmarkdown'] }
 Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache' }
 Plug 'digitaltoad/vim-jade',             { 'for': 'jade' }
 Plug 'honza/dockerfile.vim',             { 'for': 'dockerfile' }
