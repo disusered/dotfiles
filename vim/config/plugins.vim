@@ -56,7 +56,7 @@ Plug 'Valloric/YouCompleteMe',           { 'do': './install.sh', 'on': [] }
 
 augroup load_us_ycm
   autocmd!
-	autocmd VimEnter * call plug#load('vim-fugitive')
+  autocmd VimEnter * call plug#load('vim-fugitive')
   autocmd InsertEnter * call plug#load('ultisnips', 'YouCompleteMe', 'editorconfig-vim')
                      \| call youcompleteme#Enable() | autocmd! load_us_ycm
 augroup END
