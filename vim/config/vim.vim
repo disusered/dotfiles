@@ -1,7 +1,7 @@
 let base16colorspace=256
 colorscheme base16-tomorrow
 
-let mapleader = ","
+let mapleader = "\<Space>"
 let g:maplocalleader = 'm'
 
 set encoding=utf-8
