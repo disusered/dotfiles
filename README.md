@@ -29,7 +29,7 @@
     xdotool Caskroom/cask/dia links --with-x11 --with-jpeg
     vim --override-system-vi --with-lua --with-luajit --with-tcl \
     weechat --with-aspell --with-curl --with-lua --with-perl \
-    --with-python --with-ruby
+    --with-python --with-ruby planck
     brew install --HEAD neovim
     $(brew info fzf | grep /install)
     # ZSH
@@ -41,7 +41,10 @@
     http-server forever ios-deploy ios-sim jscs jshint karma-cli bower \
     node-inspector nodemon phonegap plugman svgo wiredep browserify \
     react-tool syntastic-react david eslint babel-eslint flow-bin csscomb \
-    jscs babel-jscs babel eslint-plugin-react mocha jsonlint crconsole
+    jscs babel-jscs babel eslint-plugin-react mocha jsonlint crconsole \
+    nesh
+    nesh --enable nesh-lodash
+    nesh --enable tesh-history-search
     npm adduser
     # Python
     pip install --upgrade setuptools

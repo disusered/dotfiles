@@ -115,6 +115,9 @@ alias grl='g reflog'
 alias gco='g checkout'
 alias ll='ls -l'
 alias la='ls -la'
+alias repl-babel='nesh -b'
+alias repl-coffee='nesh -c'
+alias repl-cljs='planck'
 
 # Temporary files
 if [[ ! -d "$TMPDIR" ]]; then
