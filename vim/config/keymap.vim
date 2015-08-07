@@ -54,6 +54,7 @@ nnoremap    <Leader>c         :R<CR>
 nnoremap    <Leader>u         :GundoToggle<CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
 nnoremap    <Leader><Space>   :nohlsearch<CR>
+nnoremap    <Leader>ciu       :split<CR>:Caniuse <c-r>=expand("<cword>")<CR><CR>
 nnoremap    j                 gj
 nnoremap    k                 gk
 nnoremap    n                 nzz
