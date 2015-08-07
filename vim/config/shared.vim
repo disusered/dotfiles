@@ -24,5 +24,6 @@ source $MYCONFIG/markdown.vim
 
 " config
 source $MYCONFIG/vim.vim
+source $MYCONFIG/commands.vim
 source $MYCONFIG/keymap.vim
 source $MYCONFIG/typos.vim
