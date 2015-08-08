@@ -6,7 +6,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-git',                    { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
 Plug 'gregsexton/gitv',                  { 'on': 'Gitv' }
 Plug 'arkwright/vim-manhunt',            { 'on': 'Manhunt' }
-Plug 'MarcWeber/vim-addon-local-vimrc'
 Plug 'Raimondi/delimitMate'
 Plug 'junegunn/vim-easy-align',          { 'on': ['<Plug>(EasyAlign)', '<Plug>(LiveEasyAlign)'] }
 Plug 'tpope/vim-surround'
@@ -49,6 +48,10 @@ Plug 'honza/dockerfile.vim',             { 'for': 'dockerfile' }
 Plug 'ctrlpvim/ctrlp.vim',               { 'on': ['CtrlP', 'CtrlPFunky']}
 Plug 'FelikZ/ctrlp-py-matcher',          { 'on': ['CtrlP', 'CtrlPFunky']}
 Plug 'tacahiroy/ctrlp-funky',            { 'on': ['CtrlPFunky'] }
+
+if !empty(glob(getcwd().'/.local-vimrc'))
+  Plug 'MarcWeber/vim-addon-local-vimrc'
+endif
 
 " post
 Plug 'tpope/vim-repeat' | Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
