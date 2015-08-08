@@ -49,8 +49,6 @@ vmap        <Leader>gv        :Gitv! --all<cr>
 nnoremap    <Leader>p         :CtrlP<CR>
 nnoremap    <Leader>b         :BuffergatorOpen<CR>
 nnoremap    <Leader>o         :CtrlPFunky<CR>
-nnoremap    <Leader>a         :A<CR>
-nnoremap    <Leader>c         :R<CR>
 nnoremap    <Leader>u         :GundoToggle<CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
 nnoremap    <Leader><Space>   :nohlsearch<CR>
