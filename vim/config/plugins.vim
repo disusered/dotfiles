@@ -29,9 +29,10 @@ Plug 'tpope/vim-unimpaired'
 Plug 'jeetsukumaran/vim-buffergator',    { 'on': 'BuffergatorOpen' }
 Plug 'csscomb/vim-csscomb',              { 'for': ['css', 'scss'] }
 Plug 'groenewege/vim-less',              { 'for': 'less' }
+Plug 'mxw/vim-jsx',                      { 'for': ['javascript.jsx'] }
 Plug 'heavenshell/vim-jsdoc',            { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'pangloss/vim-javascript',          { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'mxw/vim-jsx',                      { 'for': ['javascript.jsx'] }
+Plug 'janko-m/vim-test',                 { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'facebook/vim-flow',                { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'moll/vim-node',                    { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'kchmck/vim-coffee-script',         { 'for': 'coffee' }
