@@ -64,6 +64,7 @@ alias open='noglob open'
 alias npm='noglob npm'
 
 # Aliases
+alias vim='nvim'
 alias sudo='sudo '
 alias f='fzf --reverse --prompt "🔎  "'
 alias c='clear'
