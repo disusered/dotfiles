@@ -4,6 +4,7 @@ Plug 'tpope/vim-projectionist'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-git',                    { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
 Plug 'gregsexton/gitv',                  { 'on': 'Gitv' }
+Plug 'arkwright/vim-manhunt',            { 'on': 'Manhunt' }
 Plug 'MarcWeber/vim-addon-local-vimrc'
 Plug 'Raimondi/delimitMate'
 Plug 'junegunn/vim-easy-align',          { 'on': ['<Plug>(EasyAlign)', '<Plug>(LiveEasyAlign)'] }
