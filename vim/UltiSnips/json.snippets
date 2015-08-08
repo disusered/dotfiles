@@ -8,15 +8,15 @@ snippet eslint "ESLint Seed"
   "globals": {${4:
     "${5:jQuery}": true
   }},
-  "rules": {
-    "strict": [2, "never"],
-    "quotes": [2, "single"],
-    "semi": [2, "always"],
-    "curly": [2, "multi-line"],
-    "no-unused-vars": [2, {"vars": "all", "args": "none"}],
+  "rules": {${6:
+    "strict": [1, "never"],}
+    "quotes": [1, "single"],
+    "semi": [1, "always"],
+    "curly": [1, "multi-line"],
+    "no-unused-vars": [1, {"vars": "all", "args": "none"}],
     "no-underscore-dangle": 0,
     "no-use-before-define": [1, "nofunc"],
-    "new-cap": [2, {
+    "new-cap": [1, {
       "capIsNewExceptions": []
     }],
     "valid-jsdoc": [2, {
