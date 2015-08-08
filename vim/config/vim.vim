@@ -12,7 +12,7 @@ set clipboard=unnamed
 set autoread
 set hidden
 set ruler
-set relativenumber
+set number
 set title
 set backspace=indent,eol,start
 set nostartofline
