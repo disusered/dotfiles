@@ -10,7 +10,7 @@
 
   " nvim specific
   Plug 'benekastah/neomake', {'for': ['javascript', 'javascript.jsx', 'json']}
-  Plug 'kassio/neoterm'
+  Plug 'kassio/neoterm', {'on':['T', 'Tmap', 'TestNearest', 'TestFile', 'TestLast', 'TestVisit']}
 
   call plug#end()
 
