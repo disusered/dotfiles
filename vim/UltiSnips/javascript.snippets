@@ -1,3 +1,7 @@
+snippet use "Use Strict"
+'use strict';
+endsnippet
+
 snippet jdh "Javadoc header"
 /**
  * `!p snip.rv = fn`
@@ -53,6 +57,12 @@ snippet _f "Function declaration" i
 function(${2}){
 	$0
 }
+endsnippet
+
+snippet iife "Immediately Invoked Function Expression"
+(function($1) {
+  $0
+})($2);
 endsnippet
 
 snippet fe "Function expression"
