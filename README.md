@@ -31,7 +31,8 @@
     weechat --with-aspell --with-curl --with-lua --with-perl \
     --with-python --with-ruby planck ansible
     brew install --HEAD neovim
-    $(brew info fzf | grep /install)
+    # FZF
+    $(brew info fzf | grep /install | sed -E "s/([0-9]{1,3}\.){2}[0-9]{1,3}/HEAD/")
     # ZSH
     sudo chpass -s /bin/zsh $USER
     zgen update
