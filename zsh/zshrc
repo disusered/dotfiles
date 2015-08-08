@@ -66,7 +66,7 @@ alias npm='noglob npm'
 # Aliases
 alias vim='nvim'
 alias sudo='sudo '
-alias f='fzf --reverse --prompt "🔎  "'
+alias f='fzf-tmux --reverse'
 alias c='clear'
 alias r='ranger'
 alias d='dict'
@@ -85,8 +85,8 @@ alias v='mpv'
 alias ls='ls -G'
 alias ag='ag --pager "less -R" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34'
 alias http='http --style vim'
-alias help='vim $(ls ~/.dotfiles/help/ | fzf --reverse --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%)'
-alias e='vim $(ls ~/Dropbox/Notes/ | fzf --reverse --prompt "✏️  " | xargs -I % echo ~/Dropbox/Notes/%)'
+alias help='vim $(ls ~/.dotfiles/help/ | f --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%)'
+alias e='vim $(ls ~/Dropbox/Notes/ | f --prompt "✏️  " | xargs -I % echo ~/Dropbox/Notes/%)'
 alias fonts='fc-list | cut -f2 -d: | sort -u'
 alias g='git'
 alias gi="gitaddinteractive"
@@ -128,11 +128,11 @@ fi
 
 # Git Interactive
 function gitaddinteractive {
-  git add $(git status --short | fzf --multi --reverse --prompt="📦  " --ansi | awk '{print $2}' ORS=' ')
+  git add $(git status --short | f --multi --prompt="📦  " --ansi | awk '{print $2}' ORS=' ')
 }
 
 function gitrefloginteractive {
-  git reset $(git reflog --color | fzf --reverse --prompt="🏥  " --ansi | awk '{print $2}' | sed 's/:$//')
+  git reset $(git reflog --color | f --prompt="🏥  " --ansi | awk '{print $2}' | sed 's/:$//')
 }
 
 # Marks
