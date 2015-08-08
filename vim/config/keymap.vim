@@ -1,3 +1,4 @@
+map         <Leader>n         :NERDTreeToggle<CR>
 nmap <silent> <Leader>t       :TestNearest<CR>
 nmap <silent> <Leader>T       :TestFile<CR>
 nmap <silent> <Leader>l       :TestLast<CR>

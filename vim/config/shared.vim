@@ -22,6 +22,7 @@ source $MYCONFIG/youcompleteme.vim
 source $MYCONFIG/easymotion.vim
 source $MYCONFIG/markdown.vim
 source $MYCONFIG/manhunt.vim
+source $MYCONFIG/nerdtree.vim
 
 " config
 source $MYCONFIG/vim.vim
