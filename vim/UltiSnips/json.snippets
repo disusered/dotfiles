@@ -5,8 +5,9 @@ snippet eslint "ESLint Seed"
     "es6": ${2:false},
     "browser": ${3:true}
   },
-  "globals": {
-  },
+  "globals": {${4:
+    "${5:jQuery}": true
+  }},
   "rules": {
     "strict": [2, "never"],
     "quotes": [2, "single"],
