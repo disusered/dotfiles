@@ -2,9 +2,11 @@ Shortcuts
 —————————
 <Space>   Leader
 
-:Browser
-:Trun
-:Tstart
+:Browser  Open Chrome Canary
+
+:Nstart   npm start
+:Ninstall npm install
+:Nrun     npm run <arg>
 
 :Ag   Search
 :EnMasse  Replace on quickfix set
