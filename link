@@ -56,10 +56,9 @@ tic $ROOT/vendor/screen-256color.ti
 rm $ROOT/vim/autoload/pickler.vim
 ln -s $ROOT/vendor/pickler/plugin/pickler.vim $ROOT/vim/autoload/pickler.vim
 
-# Ag/Ack
-rm $HOME/.agignore $HOME/.ackrc
+# Ag
+rm $HOME/.agignore
 ln -s $ROOT/ag/agignore $HOME/.agignore
-ln -s $ROOT/ack/ackrc $HOME/.ackrc
 
 # Hide last-logged-in message on new terminals
 touch $HOME/.hushlogin
