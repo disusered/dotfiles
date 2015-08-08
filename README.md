@@ -29,7 +29,7 @@
     xdotool Caskroom/cask/dia links --with-x11 --with-jpeg
     vim --override-system-vi --with-lua --with-luajit --with-tcl \
     weechat --with-aspell --with-curl --with-lua --with-perl \
-    --with-python --with-ruby planck
+    --with-python --with-ruby planck ansible
     brew install --HEAD neovim
     $(brew info fzf | grep /install)
     # ZSH
@@ -57,6 +57,8 @@
     # htop
     sudo chown root:wheel /usr/local/Cellar/htop-osx/0.8.2.3/bin/htop
     sudo chmod u+s /usr/local/Cellar/htop-osx/0.8.2.3/bin/htop
+    # Composer
+    curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
     ```
 
 - Symlink configs
