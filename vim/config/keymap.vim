@@ -43,13 +43,11 @@ nnoremap    <Leader>gr        :Gread<CR>
 nnoremap    <Leader>ge        :Gedit<CR>
 nnoremap    <Leader>gw        :Gwrite<CR><CR>
 nnoremap    <Leader>gl        :Gitv --all<CR>
-nnoremap    <Leader>gh        :Gitv!<CR>
 nnoremap    <Leader>gm        :Gmove<Space>
 nnoremap    <Leader>gco       :Git checkout<Space>
 nnoremap    <Leader>gp        :terminal git push<CR>
 nnoremap    <Leader>gfm       :terminal git pull<CR>
-nmap        <Leader>gv        :Gitv! --all<cr>
-vmap        <Leader>gv        :Gitv! --all<cr>
+nnoremap    <Leader>gh        :Manhunt<CR>
 nnoremap    <Leader>p         :CtrlP<CR>
 nnoremap    <Leader>b         :BuffergatorOpen<CR>
 nnoremap    <Leader>o         :CtrlPFunky<CR>

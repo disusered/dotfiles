@@ -21,6 +21,7 @@ source $MYCONFIG/ultisnips.vim
 source $MYCONFIG/youcompleteme.vim
 source $MYCONFIG/easymotion.vim
 source $MYCONFIG/markdown.vim
+source $MYCONFIG/manhunt.vim
 
 " config
 source $MYCONFIG/vim.vim
