@@ -1,1 +1,1 @@
-let g:manhunt_default_mode = 'pair'
+let g:manhunt_default_mode = 'working'
