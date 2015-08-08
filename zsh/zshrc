@@ -89,7 +89,8 @@ alias help='vim $(ls ~/.dotfiles/help/ | fzf --reverse --prompt "❓  " | xargs 
 alias e='vim $(ls ~/Dropbox/Notes/ | fzf --reverse --prompt "✏️  " | xargs -I % echo ~/Dropbox/Notes/%)'
 alias fonts='fc-list | cut -f2 -d: | sort -u'
 alias g='git'
-alias gi="gitinteractive"
+alias gi="gitaddinteractive"
+alias grl="gitrefloginteractive"
 alias gfl='git-flow'
 alias gl='g l'
 alias gs='g status --short --branch'
@@ -109,7 +110,6 @@ alias gmt='g mergetool'
 alias gf='g fetch'
 alias gfm='g pull'
 alias gr='g reset'
-alias grl='g reflog'
 alias gco='g checkout'
 alias ll='ls -l'
 alias la='ls -la'
@@ -127,10 +127,12 @@ if [[ ! -d "$TMPPREFIX" ]]; then
 fi
 
 # Git Interactive
-function gitinteractive {
-  GFILE=$(git status --short | awk '{print $2}' | fzf -m --reverse --prompt="📦  ")
-  git add $GFILE
-  git commit --verbose
+function gitaddinteractive {
+  git add $(git status --short | fzf --multi --reverse --prompt="📦  " --ansi | awk '{print $2}' ORS=' ')
+}
+
+function gitrefloginteractive {
+  git reset $(git reflog --color | fzf --reverse --prompt="🏥  " --ansi | awk '{print $2}' | sed 's/:$//')
 }
 
 # Marks
