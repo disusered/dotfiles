@@ -22,7 +22,7 @@
 	editor = vim
 	autocrlf = input
 [alias]
-	ack = grep --break --heading --line-number
+	ag = grep --break --heading --line-number
 	l = !git log --graph --color --pretty=format:'%C(magenta bold)%h%C(reset) - %s %C(white bold)<%aN>%C(reset) %C(blue bold)(%cr)%C(reset) %C(auto)%d%C(reset)' --abbrev-commit --date=relative --all
 	s = !git status --short --branch
 	b = !git branch
@@ -30,7 +30,7 @@
 	c = !git commit --verbose
 	ca = !git commit --verbose --amend
 	cm = !git commit --message
-	g = !git ack
+	g = !git ag
 	a = !git add
 	p = !git push
 	pf = !git push --force
