@@ -22,6 +22,3 @@
 [submodule "vendor/urxvt-tabbedex"]
 	path = vendor/urxvt-tabbedex
 	url = https://github.com/stepb/urxvt-tabbedex
-[submodule "vendor/zsh-completions"]
-	path = vendor/zsh-completions
-	url = git@github.com:zsh-users/zsh-completions.git
