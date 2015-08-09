@@ -49,9 +49,8 @@ nnoremap    <Leader>gco       :Git checkout<Space>
 nnoremap    <Leader>gp        :terminal git push<CR>
 nnoremap    <Leader>gfm       :terminal git pull<CR>
 nnoremap    <Leader>gh        :Manhunt<CR>
-nnoremap    <Leader>p         :CtrlP<CR>
+nnoremap    <Leader>p         :FZF<CR>
 nnoremap    <Leader>b         :BuffergatorOpen<CR>
-nnoremap    <Leader>o         :CtrlPFunky<CR>
 nnoremap    <Leader>u         :GundoToggle<CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
 nnoremap    <Leader><Space>   :nohlsearch<CR>

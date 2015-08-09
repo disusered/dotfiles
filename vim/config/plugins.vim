@@ -46,9 +46,7 @@ Plug 'tpope/vim-bundler',                { 'for': 'ruby' }
 Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache' }
 Plug 'digitaltoad/vim-jade',             { 'for': 'jade' }
 Plug 'honza/dockerfile.vim',             { 'for': 'dockerfile' }
-Plug 'ctrlpvim/ctrlp.vim',               { 'on': ['CtrlP', 'CtrlPFunky']}
-Plug 'FelikZ/ctrlp-py-matcher',          { 'on': ['CtrlP', 'CtrlPFunky']}
-Plug 'tacahiroy/ctrlp-funky',            { 'on': ['CtrlPFunky'] }
+Plug 'junegunn/fzf',                    { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
 if !empty(glob(getcwd().'/.local-vimrc'))
   Plug 'MarcWeber/vim-addon-local-vimrc'
