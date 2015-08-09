@@ -26,13 +26,13 @@ vim
 | 💡 k      | Highlight word          |
 | 💡 K      | Clear highlights        |
 
-|     | Testing                  |
-|-----|--------------------------|
-| 💡 t | Test Nearest             |
-| 💡 T | Test File                |
-| 💡 a | Test Suite               |
-| 💡 l | Test Last                |
-| 💡 g | Vist last used test file |
+|      | Testing                  |
+|------|--------------------------|
+| 💡 tn | Test Nearest             |
+| 💡 T  | Test File                |
+| 💡 a  | Test Suite               |
+| 💡 l  | Test Last                |
+| 💡 g  | Vist last used test file |
 
 |           | User Commands        |
 |-----------|----------------------|
