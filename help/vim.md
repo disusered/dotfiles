@@ -1,121 +1,103 @@
-Shortcuts
-—————————
-<Space>   Leader
+vim
+---------
 
-:Browser  Open Chrome Canary
+|          | Action             |
+|----------|--------------------|
+| <Space\> | Leader             |
+| F5       | Update CtrlP cache |
+| 💡 p      | Files              |
+| 💡 b      | Buffers            |
 
-:Nstart   npm start
-:Ninstall npm install
-:Nrun     npm run <arg>
+|           | Motion         |
+|-----------|----------------|
+| s/t/f/T/F | EasyMotion     |
+| ;         | Next match     |
+| ,         | Previous match |
 
-:Ag   Search
-:EnMasse  Replace on quickfix set
+|      | Writing           |
+|------|-------------------|
+| 💡 tm | Toggle table mode |
+| 💡 tt | CSV to table      |
 
-,t  Test Nearest
-,T  Test File
-,a  Test Suite
-,l  Test Last
-,g  Vist last used test file
+|          | Search                  |
+|----------|-------------------------|
+| :Ag i    | Search                  |
+| :EnMasse | Replace on quickfix set |
+| 💡 k      | Highlight word          |
+| 💡 K      | Clear highlights        |
 
-:Caniuse
-,ciu  Caniuse under cursor
+|     | Testing                  |
+|-----|--------------------------|
+| 💡 t | Test Nearest             |
+| 💡 T | Test File                |
+| 💡 a | Test Suite               |
+| 💡 l | Test Last                |
+| 💡 g | Vist last used test file |
 
-s EasyMotion
+|           | User Commands        |
+|-----------|----------------------|
+| :Browser  | Open Chrome Canary   |
+| :Caniuse  | Caniuse under cursor |
+| :Nstart   | npm start            |
+| :Ninstall | npm install          |
+| :Nrun     | npm run <arg\>        |
 
-; Next match
-, Previous match
+|    | Spelling                |
+|----|-------------------------|
+| ]s | Next spelling error     |
+| [s | Previous spelling error |
+| z= | Fix spelling error      |
+| zg | Add word to wordlist    |
 
-,t  Terminal
-C-\ C-n Exit Terminal
+|        | Window Management                   |
+|--------|-------------------------------------|
+| gT     | Go to next tab                      |
+| gt     | Go to previous tab                  |
+| ^+e    | Moves screen up one line            |
+| ^+y    | Moves screen down one line          |
+| ^+u    | Moves screen up ½ page              |
+| ^+d    | Moves screen down ½ page            |
+| ^+b    | Moves screen up one page            |
+| ^+f    | Moves screen down one page          |
+| ^+w s  | Horizontal split                    |
+| ^+w v  | Vertical split                      |
+| ^+w t  | New tab                             |
+| ^+w q  | Close split                         |
+| ^+hjkl | Move to vim/tmux split in direction |
 
+|  | Folds          |
+|---------|----------------|
+| za      | Toggle fold    |
+| zc      | Reenable folds |
 
-^X ^F Insert path
+|                                         | Rename                          |
+|-----------------------------------------|---------------------------------|
+| crs                                     | Coerce to snake_case            |
+| crm                                     | Coerce to MixedCase             |
+| crc                                     | Coerce to camelCase             |
+| cru                                     | Coerce to UPPER_CASE            |
+| :%Subvert/facilit{y,ies}/building{,s}/g | Rename preserving plural & caps |
 
-[oc Enable cursorline
-]oc Disable cursorline
+|              | REPL                             |
+|--------------|----------------------------------|
+| ^c+^c        | Send to pane to evaluate (slime) |
+| <C-x\><C-o\> | Trigger omnifunc completion      |
 
-]s  Next spelling error
-[s  Previous spelling error
+|               | Etc                                    |
+|---------------|----------------------------------------|
+| <C-y\>💡       | Emmet expansion                        |
+| 💡 rt          | Remove Trailing Whitespace             |
+| gof           | Open current file location in Finder   |
+| got           | Open current file location in Terminal |
+| [oc           | Enable cursorline                      |
+| ]oc           | Disable cursorline                     |
+| <C-x\><C-f\>  | Insert path                            |
+| <C-\\\><C-n\> | Exit Neovim Terminal                   |
 
-ga  Get character info (HTML entity, Unicode, Digraph, etc)
-
-z=  Fix spelling error
-zg  Add word to wordlist
-
-,l  Lint file with Syntastic
-,e  Open errors window
-,s  Toggle active or passive mode
-
-,k  Highlight word
-,K  Clear highlights
-
-H Alias to start of string
-L Alias to end of string
-
-gof Open current file location in Finder
-got Open current file location in Terminal
-
-,u  Open Gundo
-
-gT  Go to next tab
-gt  Go to previous tab
-
-,e  Edit fenced code block in markdown
-,n  Open recent notes
-
-:CSScomb Sort CSS properties
-
-,d  Look up in Dash
-
-
-^c+^c Send to pane to evaluate (slime)
-
-C-x C-o Trigger omnifunc completion
-
-g_  Go to the last non-blank character of line
-%   Go to the corresponding (, {, [.
-* Highlight and jump between occurrences of word
-
-
-za  Toggle fold
-zc  Reenable folds
-
-do  :diffget
-dp  :diffput
-:diffu  :diffupdate
-
-:%Subvert/facilit{y,ies}/building{,s}/g
-
-crs Coerce to snake_case
-crm Coerce to MixedCase
-crc Coerce to camelCase
-cru Coerce to UPPER_CASE
-
-^+e   Moves screen up one line
-^+y   Moves screen down one line
-^+u   Moves screen up ½ page
-^+d   Moves screen down ½ page
-^+b   Moves screen up one page
-^+f   Moves screen down one page
-
-^+w s Horizontal split
-^+w v Vertical split
-^+w s New tab
-^+w q   Close split
-
-^+hjkl  Move to vim/tmux split in direction
-
-][c Next/Previous change
-
-<C-y>,  Emmet expansion
-
-⌃+o Previous Cursor Position
-⌃+i Next Cursor Position
-
-,l  Lint
-,rt Remove Trailing Whitespace
-
-,p  Files
-,b  Buffers
-
-F5  Update CtrlP cache
+|     | Movement                                       |
+|-----|------------------------------------------------|
+| g_  | Go to the last non-blank character of line     |
+| %   | Go to the corresponding bracket                |
+| *   | Highlight and jump between occurrences of word |
+| ⌃+o | Previous Cursor Position                       |
+| ⌃+i | Next Cursor Position                           |
