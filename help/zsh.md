@@ -47,7 +47,3 @@ gst   = git stash
 gsl   = git stash list
 gss   = git shash show -p <tab>
 gsa   = git stash apply
-
-zgen
-----
-zgen update
