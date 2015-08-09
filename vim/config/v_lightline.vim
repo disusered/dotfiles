@@ -7,7 +7,7 @@ endfunction
 let g:lightline = {
   \ 'colorscheme': 'jellybeans',
   \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
+  \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ]],
   \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
   \ },
   \ 'component_function': {
@@ -17,7 +17,6 @@ let g:lightline = {
   \   'filetype': 'MyFiletype',
   \   'readonly': 'MyReadonly',
   \   'fileencoding': 'MyFileencoding',
-  \   'ctrlpmark': 'CtrlPMark',
   \   'modified': 'MyModified',
   \ },
   \ 'component_expand': {

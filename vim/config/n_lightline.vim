@@ -1,7 +1,7 @@
 let g:lightline = {
   \ 'colorscheme': 'jellybeans',
   \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
+  \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ]],
   \   'right': [ [ 'neomake', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
   \ },
   \ 'component_function': {
@@ -11,7 +11,6 @@ let g:lightline = {
   \   'filetype': 'MyFiletype',
   \   'readonly': 'MyReadonly',
   \   'fileencoding': 'MyFileencoding',
-  \   'ctrlpmark': 'MyCtrlPMark',
   \   'modified': 'MyModified',
   \   'neomake': 'StatuslineLocList'
   \ },
