@@ -16,8 +16,8 @@ vim
 
 |      | Writing           |
 |------|-------------------|
-| 💡 tm | Toggle table mode |
-| 💡 tt | CSV to table      |
+| 💡 mm | Toggle table mode |
+| 💡 mt | CSV to table      |
 
 |          | Search                  |
 |----------|-------------------------|
