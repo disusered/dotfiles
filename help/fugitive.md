@@ -1,22 +1,40 @@
 Fugitive
 ---------
-,gl Git history
-,gh Git history of current file
-  i     Info
-  D Diff
-  S Diffstat
-  q Quit
 
+|       | Git                             |
+|-------|---------------------------------|
+| 💡 ge  | :Gedit                          |
+| 💡 gw  | :Gwrite                         |
+| 💡 gs  | :Gstatus                        |
+| 💡 gd  | :Gdiff                          |
+| 💡 gr  | :Gread                          |
+| 💡 gc  | Git commit                      |
+| 💡 ga  | Git commit —amend               |
+| 💡 gt  | Git add current file and commit |
+| 💡 gps | :Dispatch! git push             |
+| 💡 gpl | :Dispatch! git pull             |
 
-,ge :Gedit
-,gw :Gwrite
-,gs :Gstatus
-,gd :Gdiff
-,gr :Gread
+|      | Git Interactive Log |
+|------|---------------------|
+| 💡 gl | Git history         |
+| i    | Info                |
+| D    | Diff                |
+| S    | Diffstat            |
+| q    | Quit                |
 
-,gc Git commit
-,ga Git commit —amend
-,gt Git add current file and commit
+|          | Git Interactive File Log                |
+|----------|-----------------------------------------|
+| 💡 gh     | Git history of current file             |
+| :Manhunt | Change file comparison mode             |
+| working  | Compare against working version         |
+| pair     | Compare immediately subsequent versions |
+| pin      | Compare user defined versions           |
+| L/R      | Pin left/right view in pin mode         |
 
-,gps  :Dispatch! git push
-,gpl  :Dispatch! git pull
+|        | Diff View            |
+|--------|----------------------|
+| 💡 u    | Open Gundo           |
+| do     | :diffget             |
+| dp     | :diffput             |
+| :diffu | :diffupdate          |
+| ][c    | Next/Previous change |
