@@ -23,6 +23,7 @@ source $MYCONFIG/markdown.vim
 source $MYCONFIG/manhunt.vim
 source $MYCONFIG/nerdtree.vim
 source $MYCONFIG/tablemode.vim
+source $MYCONFIG/fzf.vim
 
 " config
 source $MYCONFIG/vim.vim
