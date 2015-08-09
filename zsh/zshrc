@@ -284,6 +284,7 @@ zle -N zle-keymap-select
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_COMPLETION_TRIGGER=''
 export FZF_DEFAULT_OPTS='--color hl:5,hl+:5,fg:8 --color info:8,prompt:5,spinner:135,pointer:12,marker:2'
+export FZF_DEFAULT_COMMAND='ag -l -g ""'
 export FZF_COMPLETION_OPTS=''
 
 bindkey '^T' fzf-completion
