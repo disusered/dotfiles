@@ -131,7 +131,23 @@ function gitaddinteractive {
 }
 
 function gitrefloginteractive {
-  git reset $(git reflog --color | f --prompt="🏥  " --ansi | awk '{print $2}' | sed 's/:$//')
+  local out q k index
+    while out=$(git reflog --color | f --prompt="🏥  " --ansi --no-sort --query="$q" --print-query --expect=ctrl-d,ctrl-r);
+    do
+      q=$(head -1 <<< "$out")
+      k=$(head -2 <<< "$out" | tail -1)
+      index=$(echo $out | awk '{print $2}' | sed 's/:$//' | sed -E 's/HEAD@{(.+)}/\1/' | tr -d '[[:space:]]')
+      [ -z "$index" ] && continue
+      if [ "$k" = 'ctrl-d' ]; then
+        git diff HEAD@{$(($index+1))} HEAD@{$index}
+      elif [ "$k" = 'ctrl-r' ]; then
+        git difftool HEAD@{$index}
+        break;
+      else
+        git reset HEAD@{$index}
+        break;
+      fi
+    done
 }
 
 # Marks

@@ -47,3 +47,7 @@ gst   = git stash
 gsl   = git stash list
 gss   = git shash show -p <tab>
 gsa   = git stash apply
+
+grl   = interactive git reflog
+  <C-d> Diff
+  <C-r> Kaleidescope
