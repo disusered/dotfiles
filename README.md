@@ -43,7 +43,7 @@
     node-inspector nodemon phonegap plugman svgo wiredep browserify \
     react-tool syntastic-react david eslint babel-eslint flow-bin csscomb \
     jscs babel-jscs babel eslint-plugin-react mocha jsonlint crconsole \
-    nesh caniuse-cmd
+    nesh caniuse-cmd neovim-client
     nesh --enable nesh-lodash
     nesh --enable tesh-history-search
     npm adduser
