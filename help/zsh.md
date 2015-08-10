@@ -9,7 +9,7 @@ zsh
 | r       | Ranger: Explore current directory |
 | use     | Get disk usage information        |
 | hs      | Local http server                 |
-| <C-l/>  | Clear Screen                      |
+| <C-l\>  | Clear Screen                      |
 | pbc     | pbcopy                            |
 | pbp     | pbpaste                           |
 
@@ -17,10 +17,11 @@ zsh
 |----------|------------------|
 | gl       | Log              |
 | grl      | Ref Log          |
-| <Enter/> | git show <hash/> |
-| <C-d/>   | Kaleidescope     |
-| <C-r/>   | Reset to commit  |
-| <C-i/>   | Toggle Details   |
+| \`       | Sort results     |
+| <Enter\> | git show <hash\> |
+| <C-d\>   | Kaleidescope     |
+| <C-r\>   | Reset to commit  |
+| <C-i\>   | Toggle Details   |
 
 | Binding | Git Bindings                 |
 |---------|------------------------------|
