@@ -21,8 +21,12 @@
 	excludesfile = /Users/carlos/.gitignore_global
 	editor = vim
 	autocrlf = input
+[pretty]
+	basic = %C(magenta bold)%h%C(reset) %C(auto)%d%C(reset) %s
+	extended = %C(magenta bold)%h%C(reset)  %C(blue bold)%aN%C(reset) %C(auto)%d%C(reset) %s %C(8)(%cr)%C(reset)
+	reflog = %C(magenta bold)%h%C(reset)  %C(blue bold)%gd%C(reset) %gs %C(8)(%cr)%C(reset)
 [alias]
-	l = !git log --graph --color --pretty=format:'%C(magenta bold)%h%C(reset)  %C(blue bold)%aN%C(reset) %C(auto)%d%C(reset) %s %C(8)(%cr)%C(reset)' --abbrev-commit --date=relative --all
+	l = !git log --graph --color --pretty=extended --abbrev-commit --date=relative --all
 	s = !git status --short --branch
 	b = !git branch
 	bc = !git checkout -b
