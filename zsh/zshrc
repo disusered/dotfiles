@@ -87,6 +87,7 @@ alias http='http --style vim'
 alias help='vim $(ls ~/.dotfiles/help/ | f --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%)'
 alias e='vim $(ls ~/Dropbox/Notes/ | f --prompt "✏️  " | xargs -I % echo ~/Dropbox/Notes/%)'
 alias fonts='fc-list | cut -f2 -d: | sort -u'
+alias adbi="adbinteractive"
 alias g='git'
 alias gi="gitaddinteractive"
 alias grl="gitrefloginteractive"
@@ -179,6 +180,26 @@ function gitloginteractive {
       git show --color=always $shas | LESS="-X -g -i -M -R -S -w -z-4" less
     fi
   done
+}
+
+function adbinteractive {
+  local out q k device
+  while out=$(adb devices | tail -n +2 |
+      f --query="$q" --prompt "📱 " --print-query --expect=ctrl-s |
+      awk '{print $1}'); do
+    q=$(head -1 <<< "$out")
+    k=$(head -2 <<< "$out" | tail -1)
+    device=$(head <<< "$out" | tail -1)
+    echo $device
+    [ -z "$device" ] && continue
+    if [ "$k" = ctrl-s ]; then
+      adb -s $device shell
+    else
+      echo -n "adb -s $device " | pbcopy
+      echo "Device ID copied to clipboard."
+      break;
+    fi;
+  done;
 }
 
 # Marks
