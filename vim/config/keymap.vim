@@ -3,6 +3,9 @@ nmap <silent> <Leader>tn      :TestNearest<CR>
 nmap <silent> <Leader>T       :TestFile<CR>
 nmap <silent> <Leader>l       :TestLast<CR>
 nmap <silent> <Leader>g       :TestVisit<CR>
+nmap        <Leader>e         <Plug>SlimeMotionSend
+nmap        <Leader>e         <Plug>SlimeLineSend
+xmap        <Leader>ea        <Plug>SlimeRegionSend
 nmap        s                 <Plug>(easymotion-s)
 nmap        t                 <Plug>(easymotion-tl)
 vmap        t                 <Plug>(easymotion-tl)
