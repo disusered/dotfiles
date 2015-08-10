@@ -18,8 +18,9 @@ zsh
 | gl       | Log              |
 | grl      | Ref Log          |
 | <Enter/> | git show <hash/> |
-| <C-i/>   | Show Details     |
 | <C-d/>   | Kaleidescope     |
+| <C-r/>   | Reset to commit  |
+| <C-i/>   | Toggle Details   |
 
 | Binding | Git Bindings                 |
 |---------|------------------------------|
