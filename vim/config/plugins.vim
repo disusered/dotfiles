@@ -20,7 +20,7 @@ Plug 'rking/ag.vim',                     { 'on': 'Ag' }
 Plug 'simnalamburt/vim-mundo',           { 'on': 'GundoToggle' }
 Plug 'Wolfy87/vim-enmasse',              { 'on': 'EnMasse' }
 Plug 'tpope/vim-endwise',                { 'for': ['ruby', 'sh'] }
-Plug 'jpalardy/vim-slime',               { 'for': ['javascript', 'sh']}
+Plug 'jpalardy/vim-slime',               { 'for': ['javascript', 'sh', 'markdown']}
 Plug 'itspriddle/vim-marked',            { 'for': ['markdown'] }
 Plug 'tpope/vim-markdown',               { 'for': ['markdown'] }
 Plug 'mattn/emmet-vim',                  { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'css', 'scss', 'markdown', 'html.handlebars'] }
