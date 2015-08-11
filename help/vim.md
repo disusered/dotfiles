@@ -19,12 +19,15 @@ vim
 | 💡 mm | Toggle table mode |
 | 💡 mt | CSV to table      |
 
-|          | Search                  |
-|----------|-------------------------|
-| :Ag i    | Search                  |
-| :EnMasse | Replace on quickfix set |
-| 💡 k      | Highlight word          |
-| 💡 K      | Clear highlights        |
+|             | Search                           |
+|-------------|----------------------------------|
+| :EnMasse    | Replace on quickfix set          |
+| :Ag pattern | Search for pattern interactively |
+| <Tab\>      | Open and add to quickfix list    |
+| [q          | Go to previous result            |
+| ]q          | Go to next result                |
+| 💡 k         | Highlight word                   |
+| 💡 K         | Clear highlights                 |
 
 |      | Testing                  |
 |------|--------------------------|
