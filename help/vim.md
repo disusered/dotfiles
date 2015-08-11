@@ -65,7 +65,8 @@ vim
 | ^+w s  | Horizontal split                    |
 | ^+w v  | Vertical split                      |
 | ^+w t  | New tab                             |
-| ^+w q  | Close split                         |
+| ^+w q  | Close pane                          |
+| ^+w x  | Transpose panes                     |
 | ^+hjkl | Move to vim/tmux split in direction |
 
 |    | Folds          |
