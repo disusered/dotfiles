@@ -45,7 +45,7 @@ Plug 'tpope/vim-bundler',                { 'for': 'ruby' }
 Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache' }
 Plug 'digitaltoad/vim-jade',             { 'for': 'jade' }
 Plug 'honza/dockerfile.vim',             { 'for': 'dockerfile' }
-Plug 'junegunn/fzf',                    { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+Plug 'junegunn/fzf',                     { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
 if !empty(glob(getcwd().'/.local-vimrc'))
   Plug 'MarcWeber/vim-addon-local-vimrc'
