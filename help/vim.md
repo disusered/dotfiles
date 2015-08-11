@@ -65,10 +65,10 @@ vim
 | ^+w q  | Close split                         |
 | ^+hjkl | Move to vim/tmux split in direction |
 
-|  | Folds          |
-|---------|----------------|
-| za      | Toggle fold    |
-| zc      | Reenable folds |
+|    | Folds          |
+|----|----------------|
+| za | Toggle fold    |
+| zc | Reenable folds |
 
 |                                         | Rename                          |
 |-----------------------------------------|---------------------------------|
@@ -78,10 +78,11 @@ vim
 | cru                                     | Coerce to UPPER_CASE            |
 | :%Subvert/facilit{y,ies}/building{,s}/g | Rename preserving plural & caps |
 
-|              | REPL                             |
-|--------------|----------------------------------|
-| ^c+^c        | Send to pane to evaluate (slime) |
-| <C-x\><C-o\> | Trigger omnifunc completion      |
+|              | Slime           |
+|--------------|-----------------|
+| 💡 e          | Evaluate line   |
+| <motion>💡 ee | Evaluate motion |
+| 💡 ea         | Evaluate region |
 
 |               | Etc                                    |
 |---------------|----------------------------------------|
