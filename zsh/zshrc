@@ -249,7 +249,7 @@ source $AUTOSUGGEST
 
 # Enable autosuggestions automatically
 zle-line-init() {
-    zle autosuggest-start
+  zle autosuggest-start
 }
 
 # Base16
