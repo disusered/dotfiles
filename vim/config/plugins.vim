@@ -16,7 +16,6 @@ Plug 'tpope/vim-dispatch'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-gitgutter'
 Plug 'justincampbell/vim-eighties'
-Plug 'rking/ag.vim',                     { 'on': 'Ag' }
 Plug 'simnalamburt/vim-mundo',           { 'on': 'GundoToggle' }
 Plug 'Wolfy87/vim-enmasse',              { 'on': 'EnMasse' }
 Plug 'tpope/vim-endwise',                { 'for': ['ruby', 'sh'] }
