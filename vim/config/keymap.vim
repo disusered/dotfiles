@@ -36,6 +36,7 @@ vmap        <Enter>           <Plug>(LiveEasyAlign)
 noremap     H                 ^
 noremap     L                 g_
 nnoremap    Q                 <nop>
+nnoremap    <Leader><Enter>   :w<CR>
 nnoremap    <Leader>q         :bp\|bd #<CR>
 nnoremap    <Leader>md        :MarkedOpen!<CR>
 nnoremap    <Leader>gs        :Gstatus<CR>
