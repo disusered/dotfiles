@@ -29,6 +29,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'jeetsukumaran/vim-buffergator',    { 'on': 'BuffergatorOpen' }
 Plug 'csscomb/vim-csscomb',              { 'for': ['css', 'scss'] }
+Plug 'wavded/vim-stylus',                { 'for': ['stylus'] }
 Plug 'groenewege/vim-less',              { 'for': 'less' }
 Plug 'mxw/vim-jsx',                      { 'for': ['javascript.jsx'] }
 Plug 'heavenshell/vim-jsdoc',            { 'for': ['javascript', 'javascript.jsx'] }
