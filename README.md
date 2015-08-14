@@ -2,18 +2,13 @@
 
 ## Setup
 
-1. Install XCode and open once to accept license
+- Install XCode and open once to accept license
 
 - Add public key to [Github](https://github.com/settings/ssh) and [BitBucket](https://bitbucket.org/account/user/disusered/ssh-keys/)
 
 - Install everything:
     ```bash
-    # Run install script
     $HOME/.dotfiles/link
-
-    # Install additional FZF extensions.
-    # Choose n, y
-    $(brew info fzf | grep /install | sed -E "s/([0-9]{1,3}\.){2}[0-9]{1,3}/HEAD/")
     ```
 
 - Configure iTerm
