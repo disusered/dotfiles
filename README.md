@@ -4,7 +4,7 @@
 
 1. Install XCode and open once to accept license
 
-- Add public key to [Github](https://github.com/settings/ssh)
+- Add public key to [Github](https://github.com/settings/ssh) and [BitBucket](https://bitbucket.org/account/user/disusered/ssh-keys/)
 
 - Install everything:
     ```bash
