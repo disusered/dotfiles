@@ -3,6 +3,10 @@
   filetype off
   let $MYCONFIG="$HOME/.dotfiles/vim/config"
 
+  " nvim plugin hosts
+  let g:python_host_prog='/usr/local/bin/python'
+  let g:python_host_skip_check=1
+
   source $MYCONFIG/ft.vim
 
   call plug#begin('~/.dotfiles/vendor/nplugged')
