@@ -4,7 +4,6 @@ source "${HOME}/.dotfiles/vendor/zgen/zgen.zsh"
 path=(
   /usr/local/bin
   /usr/local/sbin
-  $HOME/.dotfiles/bin
   $HOME/Development/SDK/android-sdk/tools
   $HOME/Development/SDK/android-sdk/platform-tools
   $path
