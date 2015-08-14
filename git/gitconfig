@@ -18,7 +18,7 @@
 	header = green
 [core]
 	quotepath = false
-	excludesfile = /Users/carlos/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	editor = vim
 	autocrlf = input
 [pretty]
