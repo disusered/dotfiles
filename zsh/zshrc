@@ -64,7 +64,6 @@ alias open='noglob open'
 alias npm='noglob npm'
 
 # Aliases
-alias vim='nvim'
 alias sudo='sudo '
 alias f='fzf-tmux'
 alias c='clear'
