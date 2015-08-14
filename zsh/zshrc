@@ -243,12 +243,13 @@ function zle-line-finish {
 
 # Setup zsh-autosuggestions
 AUTOSUGGEST="${HOME}/.zgen/tarruda/zsh-autosuggestions-master/autosuggestions.zsh"
-source $AUTOSUGGEST
+if [ -f $AUTOSUGGEST ]; then
+  source $AUTOSUGGEST
 
-# Enable autosuggestions automatically
-zle-line-init() {
-  zle autosuggest-start
-}
+  zle-line-init() {
+    zle autosuggest-start
+  }
+fi
 
 # Base16
 BASE16_SCHEME="tomorrow"
