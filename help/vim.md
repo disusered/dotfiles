@@ -6,6 +6,7 @@ vim
 | <Space\> | Leader             |
 | F5       | Update CtrlP cache |
 | 💡 p      | Files              |
+| 💡 p      | Show File          |
 | 💡 b      | Buffers            |
 
 |           | Motion         |
