@@ -22,3 +22,6 @@
 [submodule "vendor/urxvt-tabbedex"]
 	path = vendor/urxvt-tabbedex
 	url = https://github.com/stepb/urxvt-tabbedex
+[submodule "vendor/nerd-fonts"]
+	path = vendor/nerd-fonts
+	url = https://github.com/ryanoasis/nerd-fonts.git
