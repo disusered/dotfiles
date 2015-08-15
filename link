@@ -17,7 +17,8 @@ brew install caskroom/cask/brew-cask
 # Install essential packages
 brew cask install java xquartz
 brew install git git-flow ag wget zsh tmux reattach-to-user-namespace \
-node --without-npm python lua --universal --with-completion luajit --with-52compat \
+node --without-npm python planck \
+lua --universal --with-completion luajit --with-52compat \
 vim --override-system-vi --with-lua --with-luajit --with-tcl
 
 # Install Neovim
@@ -125,7 +126,7 @@ brew install watch dict tree ncdu nmap htop mediainfo atool \
 highlight ranger watchman flow jq ansible ant httpie gradle gcc \
 imagemagick --with-webp graphicsmagick --with-webp \
 ffmpeg --with-faac --with-fdk-aac --with-openssl --with-tools --with-webp \
-planck homebrew/x11/xdotool aspell --with-lang-es --with-lang-en \
+aspell --with-lang-es --with-lang-en \
 weechat --with-aspell --with-curl --with-lua --with-perl --with-python --with-ruby
 
 # Configure htop
@@ -154,6 +155,7 @@ ln -s $ROOT/vendor/urxvt-tabbedex/tabbedex $HOME/.urxvt/ext/tabbedex
 # Enable X extension for Slate/xdotool
 defaults write org.x.X11 enable_test_extensions -boolean true
 defaults write org.x.X11 app_to_run urxvtc
+defaults write org.macosforge.xquartz.X11 app_to_run urxvtc
 
 # Xorg
 mkdir -p $HOME/.xinitrc.d
@@ -162,5 +164,6 @@ ln -s $ROOT/xorg/Xresources $HOME/.Xresources
 ln -s $ROOT/xorg/Xmodmap $HOME/.Xmodmap
 ln -s $ROOT/xorg/xinitrc $HOME/.xinitrc
 
+# Install Aqua apps
 brew cask install alfred iterm2 java kaleidoscope karabiner seil sourcetree \
-xquartz slate transmission
+slate transmission flux appdelete keepingyouawake
