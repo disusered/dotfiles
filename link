@@ -163,4 +163,4 @@ ln -s $ROOT/xorg/Xmodmap $HOME/.Xmodmap
 ln -s $ROOT/xorg/xinitrc $HOME/.xinitrc
 
 brew cask install alfred iterm2 java kaleidoscope karabiner seil sourcetree \
-xquartz slate
+xquartz slate transmission
