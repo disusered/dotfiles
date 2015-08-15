@@ -60,3 +60,7 @@ endfunction
 function! MyFileencoding()
   return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
 endfunction
+
+function! MyFileformat()
+  return winwidth(0) > 70 ? (&fileformat) : ''
+endfunction
