@@ -1,7 +1,7 @@
 Plug 'chriskempson/base16-vim'
 Plug 'troydm/zoomwintab.vim'
 Plug 'tpope/vim-projectionist'
-Plug 'scrooloose/nerdtree',              { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
+Plug 'scrooloose/nerdtree',              { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-git',                    { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
 Plug 'gregsexton/gitv',                  { 'on': 'Gitv' }

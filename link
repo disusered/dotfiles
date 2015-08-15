@@ -96,6 +96,8 @@ find $ROOT/vendor/powerline-fonts -type f -name "*.pcf.gz" \
   -exec cp "{}" $HOME/.fonts/ \;
 find $HOME/.fonts -type f -name "*.*tf" \
   -exec cp "{}" $HOME/Library/Fonts/ \;
+find $ROOT/vendor/nerd-fonts/patched-fonts/SourceCodePro/ \
+  -type f -name "*.*tf" -exec cp "{}" $HOME/Library/Fonts/ \;
 fc-cache -vf ~/.fonts
 
 # Install npm and packages
