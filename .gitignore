@@ -9,6 +9,7 @@ npm-debug.log
 plug.vim
 vendor/plugged
 vendor/nplugged
+vendor/*.ti
 
 # weechat
 weechat/logs
