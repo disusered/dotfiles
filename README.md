@@ -18,10 +18,18 @@
   ![XQuartz Configuration](https://raw.githubusercontent.com/disusered/dotfiles/docs/images/xquartz-input.png "iTerm2 Configuration")
   ![XQuartz Configuration](https://raw.githubusercontent.com/disusered/dotfiles/docs/images/xquartz-pasteboard.png "iTerm2 Configuration")
 
-## Additional tweaks
+- Configure Seil
+  - System Preferences → Keyboard → Modifier Keys → Caps Lock → No Action
+  - Change the caps lock key behaviour in Seil to keycode **53**
 
-#### Set key repeat settings in Karabiner
-- Delay Until Repeat: 150ms
-- Key Repeat: 20ms
-
-- TODO: Karabiner & Seil configs
+- Configure Karabiner
+  - Change Key
+    - Shift+Delete to Pipe(|)
+    - Makes Fn key behave as {⇧⌃⌥⌘} + {letter, number, symbol}
+  - Key Repeat
+    - Delay Until Repeat: 150ms
+    - Key Repeat: 20ms
+  - Status Message
+    - Disable all
+  - AXNotifier
+    - Disable AXNotifier
