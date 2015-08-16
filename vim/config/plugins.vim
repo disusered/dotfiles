@@ -1,5 +1,6 @@
 Plug 'chriskempson/base16-vim'
 Plug 'troydm/zoomwintab.vim'
+Plug 'chrisbra/vim-diff-enhanced',      { 'on' : ['EnhancedDiff', 'PatienceDiff']}
 Plug 'tpope/vim-projectionist'
 Plug 'scrooloose/nerdtree',              { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/lightline.vim'
@@ -54,13 +55,12 @@ endif
 Plug 'tpope/vim-repeat' | Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
 Plug 'ervandew/supertab',                { 'on': [] }
 Plug 'SirVer/ultisnips',                 { 'on': [] }
-Plug 'tpope/vim-fugitive',               { 'on': [] }
+Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim',    { 'on': [] }
 Plug 'Valloric/YouCompleteMe',           { 'do': './install.sh', 'on': [] }
 
 augroup load_us_ycm
   autocmd!
-  autocmd VimEnter * call plug#load('vim-fugitive')
   autocmd InsertEnter * call plug#load('ultisnips', 'YouCompleteMe', 'editorconfig-vim')
                      \| call youcompleteme#Enable() | autocmd! load_us_ycm
 augroup END

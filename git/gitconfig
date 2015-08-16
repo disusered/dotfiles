@@ -50,19 +50,23 @@
 	lineNumber = true
 [push]
 	default = upstream
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustexitcode = true
+[diff]
+	tool = Kaleidoscope
 [merge]
 	tool = Kaleidoscope
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
 	prompt = false
 [mergetool]
 	prompt = false
-[diff]
-	tool = Kaleidoscope
+[mergetool "fugitive"]
+	cmd = nvim +PatienceDiff -f -c \"Gdiff\" \"$MERGED\"
+[difftool "vimdiff"]
+	cmd = nvim +PatienceDiff -d -u ~/.nvimrc \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [url "https://github"]
 	insteadOf = git://github
 [branch]
