@@ -175,6 +175,9 @@ function gitloginteractive {
       else
         style=$basic
       fi
+    elif [ "$k" = 'ctrl-r' ]; then
+      git reset $shas
+      break;
     else
       clear
       git show --color=always $shas | LESS="-X -g -i -M -R -S -w -z-4" less
