@@ -39,3 +39,21 @@ command! -nargs=* Ag call fzf#run({
 \            '--color hl:68,hl+:1',
 \ 'down':    '50%'
 \ })
+
+function! s:buflist()
+  redir => ls
+  silent ls
+  redir END
+  return split(ls, '\n')
+endfunction
+
+function! s:bufopen(e)
+  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+endfunction
+
+command! Buffers call fzf#run({
+\   'source':  reverse(<sid>buflist()),
+\   'sink':    function('<sid>bufopen'),
+\   'options': '--multi --reverse',
+\   'right':   '25%'
+\ })

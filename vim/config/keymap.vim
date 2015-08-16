@@ -50,7 +50,7 @@ nnoremap    <Leader>gw        :Gwrite<CR><CR>:GitGutter<CR>
 nnoremap    <Leader>gl        :Gitv --all<CR>
 nnoremap    <Leader>gh        :Manhunt<CR>
 nnoremap    <Leader>p         :FZF<CR>
-nnoremap    <Leader>b         :BuffergatorOpen<CR>
+nnoremap    <Leader>b         :Buffers<CR>
 nnoremap    <Leader>u         :GundoToggle<CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
 nnoremap    <Leader><Space>   :nohlsearch<CR>
