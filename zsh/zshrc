@@ -86,7 +86,6 @@ alias e='vim $(ls ~/Dropbox/Notes/ | f --prompt "✏️  " | xargs -I % echo ~/D
 alias fonts='fc-list | cut -f2 -d: | sort -u'
 alias adbi="adbinteractive"
 alias g='git'
-alias gi="gitaddinteractive"
 alias grl="gitrefloginteractive"
 alias gl="gitloginteractive"
 alias gfl='git-flow'
@@ -125,10 +124,6 @@ if [[ ! -d "$TMPPREFIX" ]]; then
 fi
 
 # Git Interactive
-function gitaddinteractive {
-  git add $(git status --short | f --multi --prompt="📦  " --ansi | awk '{print $2}' ORS=' ')
-}
-
 function gitrefloginteractive {
   local out q k index
   while out=$(git reflog --format=reflog --color "$@" |
