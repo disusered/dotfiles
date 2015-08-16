@@ -1,6 +1,5 @@
 " plugins
 source $MYCONFIG/ag.vim
-source $MYCONFIG/buffergator.vim
 source $MYCONFIG/delimitmate.vim
 source $MYCONFIG/filebeagle.vim
 source $MYCONFIG/flow.vim

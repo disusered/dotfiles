@@ -27,7 +27,6 @@ Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'justinmk/vim-gtfo'
 Plug 'tpope/vim-unimpaired'
 Plug 'dhruvasagar/vim-table-mode'
-Plug 'jeetsukumaran/vim-buffergator',    { 'on': 'BuffergatorOpen' }
 Plug 'csscomb/vim-csscomb',              { 'for': ['css', 'scss'] }
 Plug 'wavded/vim-stylus',                { 'for': ['stylus'] }
 Plug 'groenewege/vim-less',              { 'for': 'less' }
