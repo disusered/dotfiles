@@ -168,4 +168,4 @@ ln -s $ROOT/xorg/xinitrc $HOME/.xinitrc
 
 # Install Aqua apps
 brew cask install alfred iterm2 java kaleidoscope karabiner seil sourcetree \
-slate transmission flux appdelete keepingyouawake
+slate transmission flux appdelete keepingyouawake imageoptim imagealpha
