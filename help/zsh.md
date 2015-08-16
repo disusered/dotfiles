@@ -13,15 +13,17 @@ zsh
 | pbc     | pbcopy                            |
 | pbp     | pbpaste                           |
 
-| Binding  | Interactive Git  |
-|----------|------------------|
-| gl       | Log              |
-| grl      | Ref Log          |
-| \`       | Sort results     |
-| <Enter\> | git show <hash\> |
-| <C-d\>   | Kaleidescope     |
-| <C-r\>   | Reset to commit  |
-| <C-i\>   | Toggle Details   |
+| Binding  | Interactive Git              |
+|----------|------------------------------|
+| gl       | Log                          |
+| grl      | Ref Log                      |
+| \`       | Sort results                 |
+| <Enter\> | git show <hash\>             |
+| <C-d\>   | Kaleidescope (log/ref/stash) |
+| <C-r\>   | Reset to commit (log/ref)    |
+| <C-r\>   | Pop stash as branch (stash)  |
+| <C-i\>   | Toggle details (log)         |
+
 
 | Binding | Git Bindings                 |
 |---------|------------------------------|
