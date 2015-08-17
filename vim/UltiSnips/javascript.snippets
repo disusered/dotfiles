@@ -155,6 +155,18 @@ var ${1:`!p snip.rv = snip.basename`} = React.createClass({
 module.exports = `!p snip.rv = t[1]`;
 endsnippet
 
+snippet react_component_es6 "React Component (ES6)" i
+import React, { Component } from 'react';
+
+export default class ${1:`!p snip.rv = snip.basename`} extends Component {
+  render() {
+    return (
+      <div>`!p snip.rv = t[1]`</div>
+    );
+  }
+}
+endsnippet
+
 snippet tp "this.props"
 this.props.$0
 endsnippet
