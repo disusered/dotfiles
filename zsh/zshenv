@@ -15,6 +15,8 @@ export ANDROID_HOME="${HOME}/Development/SDK/android-sdk"
 export GOPATH="${HOME}/Development/SDK/gopath"
 export JAVA_HOME=`/usr/libexec/java_home`
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/carlos/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+
+export FZF_COMPLETION_TRIGGER=''
+export FZF_DEFAULT_OPTS='--color hl:2,hl+:2,fg:8,bg+:18,info:8,prompt:5,spinner:135,pointer:12,marker:2'
+export FZF_DEFAULT_COMMAND='ag -l -g ""'
+export FZF_COMPLETION_OPTS=''
