@@ -128,7 +128,7 @@ brew install watch dict tree ncdu nmap htop mediainfo atool \
 highlight ranger watchman flow jq ansible ant httpie gradle gcc \
 imagemagick --with-webp graphicsmagick --with-webp \
 ffmpeg --with-faac --with-fdk-aac --with-openssl --with-tools --with-webp \
-aspell --with-lang-es --with-lang-en \
+android-sdk aspell --with-lang-es --with-lang-en \
 weechat --with-aspell --with-curl --with-lua --with-perl --with-python --with-ruby
 
 # Configure htop
