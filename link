@@ -13,6 +13,8 @@ source $HOME/.bash_profile
 brew update
 brew upgrade --all
 brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
+brew update
 
 # Install essential packages
 brew cask install java xquartz
@@ -143,21 +145,8 @@ ln -s $ROOT/rainbow/rainbow_config.json .rainbow_config.json
 rm -rf $HOME/.weechat
 ln -s $WEECHAT $HOME/.weechat
 
-# Add Interactive font resizing for urxvt
-mkdir -p $HOME/.urxvt/ext/
-chmod +x $ROOT/vendor/urxvt-font-size
-rm $HOME/.urxvt/ext/font-size
-ln -s $ROOT/vendor/urxvt-font-size/font-size $HOME/.urxvt/ext/font-size
-
-# Install tab extensions for urxvt
-chmod +x $ROOT/vendor/urxvt-tabbedex/tabbedex
-rm $HOME/.urxvt/ext/tabbedex
-ln -s $ROOT/vendor/urxvt-tabbedex/tabbedex $HOME/.urxvt/ext/tabbedex
-
 # Enable X extension for Slate/xdotool
 defaults write org.x.X11 enable_test_extensions -boolean true
-defaults write org.x.X11 app_to_run urxvtc
-defaults write org.macosforge.xquartz.X11 app_to_run urxvtc
 
 # Xorg
 mkdir -p $HOME/.xinitrc.d
@@ -167,5 +156,6 @@ ln -s $ROOT/xorg/Xmodmap $HOME/.Xmodmap
 ln -s $ROOT/xorg/xinitrc $HOME/.xinitrc
 
 # Install Aqua apps
-brew cask install alfred iterm2 java kaleidoscope karabiner seil sourcetree \
-slate transmission flux appdelete keepingyouawake imageoptim imagealpha
+brew cask install alfred java kaleidoscope karabiner seil sourcetree slate \
+transmission flux appdelete keepingyouawake imageoptim imagealpha charles \
+paw iterm2-nightly
