@@ -48,17 +48,21 @@ Plug 'honza/dockerfile.vim',             { 'for': 'dockerfile' }
 Plug 'junegunn/fzf',                     { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'tpope/vim-fugitive'
 
-if !empty(glob(getcwd().'/.local-vimrc'))
-  Plug 'MarcWeber/vim-addon-local-vimrc'
-endif
-
 " post
 Plug 'tpope/vim-repeat' | Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
+Plug 'MarcWeber/vim-addon-local-vimrc',  { 'on': [] }
 Plug 'ervandew/supertab',                { 'on': [] }
 Plug 'SirVer/ultisnips',                 { 'on': [] }
 Plug 'editorconfig/editorconfig-vim',    { 'on': [] }
 Plug 'Valloric/YouCompleteMe',           { 'do': './install.sh', 'on': [] }
 
-autocmd InsertEnter * call plug#load('ultisnips', 'editorconfig-vim', 'supertab', 'YouCompleteMe')
-autocmd! User YouCompleteMe call youcompleteme#Enable()
+augroup conditional_load
+  autocmd!
 
+  if !empty(glob(getcwd().'/.local-vimrc'))
+    call plug#load('vim-addon-local-vimrc')
+  endif
+
+  autocmd InsertEnter * call plug#load('supertab', 'YouCompleteMe', 'ultisnips', 'editorconfig-vim')
+                     \| call youcompleteme#Enable() | autocmd! conditional_load
+augroup END
