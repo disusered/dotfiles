@@ -46,6 +46,7 @@ Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache' }
 Plug 'digitaltoad/vim-jade',             { 'for': 'jade' }
 Plug 'honza/dockerfile.vim',             { 'for': 'dockerfile' }
 Plug 'junegunn/fzf',                     { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+Plug 'tpope/vim-fugitive'
 
 if !empty(glob(getcwd().'/.local-vimrc'))
   Plug 'MarcWeber/vim-addon-local-vimrc'
@@ -55,15 +56,9 @@ endif
 Plug 'tpope/vim-repeat' | Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
 Plug 'ervandew/supertab',                { 'on': [] }
 Plug 'SirVer/ultisnips',                 { 'on': [] }
-Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim',    { 'on': [] }
 Plug 'Valloric/YouCompleteMe',           { 'do': './install.sh', 'on': [] }
 
-augroup load_us_ycm
-  autocmd!
-  autocmd InsertEnter * call plug#load('ultisnips', 'YouCompleteMe', 'editorconfig-vim')
-                     \| call youcompleteme#Enable() | autocmd! load_us_ycm
-augroup END
-
+autocmd InsertEnter * call plug#load('ultisnips', 'editorconfig-vim', 'supertab', 'YouCompleteMe')
 autocmd! User YouCompleteMe call youcompleteme#Enable()
 
