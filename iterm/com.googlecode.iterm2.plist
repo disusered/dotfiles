@@ -1623,6 +1623,8 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSColorPanelMode</key>
+	<string>0</string>
 	<key>NSFontPanelAttributes</key>
 	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
@@ -1659,12 +1661,14 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSColorPanel</key>
+	<string>193 181 231 329 0 0 1280 777 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>259 42 969 451 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>213 317 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1280 800 0 0 1280 777 </string>
+	<string>0 9 1270 768 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>638 320 570 448 0 0 1280 777 </string>
 	<key>NeverWarnAboutShortLivedSessions_8068CDF1-29D8-4035-B06B-E49B289AC73F</key>
@@ -2553,12 +2557,16 @@
 			<true/>
 			<key>Background Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.12941177189350128</real>
+				<real>0.098039215686274508</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.12156862765550613</real>
+				<real>0.090196078431372548</real>
 				<key>Red Component</key>
-				<real>0.11372549086809158</real>
+				<real>0.086274509803921567</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -3122,6 +3130,10 @@
 			<string>/Users/carlos</string>
 		</dict>
 	</array>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
+	<integer>0</integer>
 	<key>NoSyncLastTipTime</key>
 	<real>461885758.57329297</real>
 	<key>NoSyncTimeOfLastPromo</key>
@@ -3192,7 +3204,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-08-19T23:31:23Z</date>
+	<date>2015-08-20T23:31:24Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
