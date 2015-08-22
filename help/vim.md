@@ -20,6 +20,13 @@ vim
 | 💡 mm | Toggle table mode |
 | 💡 mt | CSV to table      |
 
+|          | Registers                              |
+|----------|----------------------------------------|
+| <Ctrl\>R | Show registers in insert mode          |
+| "        | Show registers in normal mode (ex "1p) |
+| @        | Executes registers in ex mode          |
+| <Space\> | Fullscreen                             |
+
 |             | Search                           |
 |-------------|----------------------------------|
 | :EnMasse    | Replace on quickfix set          |
