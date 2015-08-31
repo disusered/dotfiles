@@ -1668,7 +1668,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>213 317 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 9 1270 768 0 0 1280 777 </string>
+	<string>0 0 1280 800 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>638 320 570 448 0 0 1280 777 </string>
 	<key>NeverWarnAboutShortLivedSessions_8068CDF1-29D8-4035-B06B-E49B289AC73F</key>
@@ -3135,11 +3135,15 @@
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
 	<integer>0</integer>
 	<key>NoSyncLastTipTime</key>
-	<real>461885758.57329297</real>
+	<real>461991968.52519298</real>
+	<key>NoSyncSuppressAnnyoingBellOffer</key>
+	<true/>
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>461285430.56446302</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
 	<real>461719885.98320502</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -3204,7 +3208,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-08-20T23:31:24Z</date>
+	<date>2015-08-26T19:40:52Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -3247,6 +3251,10 @@
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findIgnoreCase_iTerm</key>
+	<true/>
+	<key>findRegex_iTerm</key>
+	<false/>
 	<key>iTerm Version</key>
 	<string>2.9.20150812-nightly</string>
 </dict>
