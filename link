@@ -17,7 +17,7 @@ brew tap caskroom/versions
 brew update
 
 # Install essential packages
-brew cask install java xquartz
+brew cask install java xquartz ruby
 brew install git git-flow ag wget zsh tmux reattach-to-user-namespace \
 node --without-npm python planck \
 lua --universal --with-completion luajit --with-52compat \
