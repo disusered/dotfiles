@@ -155,8 +155,7 @@ function gitloginteractive {
   style=$basic
 
   while out=$(
-      git log --graph --color=always --format=$style "$@" |
-      fzf --ansi --no-sort --reverse --query="$q" --prompt "📖 " \
+      git l | fzf --ansi --no-sort --reverse --query="$q" --prompt "📖 " \
           --print-query --expect=ctrl-d,ctrl-i,ctrl-r --toggle-sort=\`); do
     q=$(head -1 <<< "$out")
     k=$(head -2 <<< "$out" | tail -1)
