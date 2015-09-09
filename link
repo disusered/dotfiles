@@ -110,7 +110,7 @@ npm install -g yo gulp grunt-cli cordova ionic http-server forever \
 ios-deploy ios-sim jshint karma-cli bower nesh caniuse-cmd \
 node-inspector nodemon phonegap plugman svgo wiredep browserify \
 david eslint babel-eslint flow-bin csscomb babel eslint-plugin-react \
-mocha jsonlint neovim-client
+eslint-config-airbnb eslint-config-google mocha jsonlint neovim-client
 nesh --enable nesh-lodash
 nesh --enable nesh-history-search
 
@@ -131,7 +131,8 @@ highlight ranger watchman flow jq ansible ant httpie gradle gcc \
 imagemagick --with-webp graphicsmagick --with-webp \
 ffmpeg --with-faac --with-fdk-aac --with-openssl --with-tools --with-webp \
 android-sdk aspell --with-lang-es --with-lang-en \
-weechat --with-aspell --with-curl --with-lua --with-perl --with-python --with-ruby
+weechat --with-aspell --with-curl --with-lua --with-perl --with-python --with-ruby \
+inkscape --with-poppler
 
 # Configure htop
 HTOP_VERSION=$(brew info htop | awk 'NR==1{ print $3 }')
