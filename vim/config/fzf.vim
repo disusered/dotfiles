@@ -55,5 +55,5 @@ command! Buffers call fzf#run({
 \   'source':  reverse(<sid>buflist()),
 \   'sink':    function('<sid>bufopen'),
 \   'options': '--multi --reverse',
-\   'right':   '25%'
+\   'down':    '50%'
 \ })
