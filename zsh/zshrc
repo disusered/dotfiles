@@ -226,12 +226,10 @@ if [ -f $AUTOSUGGEST ]; then
   }
 fi
 
-# Base16
+# Base16 Shell
 BASE16_SCHEME="tomorrow"
-if [ -f $HOME/.dotfiles/vendor/base16-shell/base16-$BASE16_SCHEME.dark.sh ]; then
-  BASE16_SHELL="$HOME/.dotfiles/vendor/base16-shell/base16-$BASE16_SCHEME.dark.sh"
-  [[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
-fi
+BASE16_SHELL="${HOME}/.dotfiles/vendor/base16-shell/base16-$BASE16_SCHEME.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 man() {
   env LESS_TERMCAP_mb=$'\E[01;31m' \
