@@ -14,10 +14,6 @@
 - Configure iTerm
   ![iTerm2 Configuration](https://raw.githubusercontent.com/disusered/dotfiles/docs/images/iterm.png "iTerm2 Configuration")
 
-- Configure XQuartz
-  ![XQuartz Configuration](https://raw.githubusercontent.com/disusered/dotfiles/docs/images/xquartz-input.png "iTerm2 Configuration")
-  ![XQuartz Configuration](https://raw.githubusercontent.com/disusered/dotfiles/docs/images/xquartz-pasteboard.png "iTerm2 Configuration")
-
 - Configure Seil
   - System Preferences → Keyboard → Modifier Keys → Caps Lock → No Action
   - Change the caps lock key behaviour in Seil to keycode **53**

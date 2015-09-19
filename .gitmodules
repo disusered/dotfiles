@@ -4,24 +4,12 @@
 [submodule "vendor/vim-plug"]
 	path = vendor/vim-plug
 	url = https://github.com/junegunn/vim-plug.git
-[submodule "vendor/base16-xresources"]
-	path = vendor/base16-xresources
-	url = git@github.com:chriskempson/base16-xresources.git
-[submodule "vendor/powerline-fonts"]
-	path = vendor/powerline-fonts
-	url = git@github.com:powerline/fonts.git
 [submodule "vendor/meslo"]
 	path = vendor/meslo
 	url = git@github.com:andreberg/Meslo-Font.git
-[submodule "vendor/urxvt-font-size"]
-	path = vendor/urxvt-font-size
-	url = git@github.com:majutsushi/urxvt-font-size.git
 [submodule "vendor/zgen"]
 	path = vendor/zgen
 	url = git@github.com:tarjoilija/zgen.git
-[submodule "vendor/urxvt-tabbedex"]
-	path = vendor/urxvt-tabbedex
-	url = https://github.com/stepb/urxvt-tabbedex
 [submodule "vendor/nerd-fonts"]
 	path = vendor/nerd-fonts
 	url = https://github.com/ryanoasis/nerd-fonts.git
