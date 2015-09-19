@@ -120,11 +120,6 @@ nesh --enable nesh-history-search
 # Python Packages
 pip install requests websocket-client pync pafy rainbowstream
 
-# Ruby
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-\curl -sSL https://get.rvm.io | bash -s stable
-rvm install ruby-2.1.2 ruby-2.2.0 && rvm use 2.2.0
-
 # PHP
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
@@ -173,6 +168,6 @@ ln -s $ROOT/xorg/Xmodmap $HOME/.Xmodmap
 ln -s $ROOT/xorg/xinitrc $HOME/.xinitrc
 
 # Install Aqua apps
-brew cask install alfred java kaleidoscope karabiner seil sourcetree slate \
+brew cask install alfred kaleidoscope karabiner seil sourcetree slate \
 transmission flux appdelete keepingyouawake imageoptim imagealpha charles \
 paw iterm2-nightly licecap webkit-nightly virtualbox vagrant

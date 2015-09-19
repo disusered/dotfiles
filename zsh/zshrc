@@ -291,9 +291,6 @@ man() {
   man "$@"
 }
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 bindkey -v
 
 # History substring search
