@@ -1,9 +1,9 @@
 map  <silent> <Leader>n       :NERDTreeToggle<CR>
 map  <silent> <Leader>N       :NERDTreeFind<CR>
 nmap <silent> <Leader>tn      :TestNearest<CR>
-nmap <silent> <Leader>T       :TestFile<CR>
-nmap <silent> <Leader>l       :TestLast<CR>
-nmap <silent> <Leader>g       :TestVisit<CR>
+nmap <silent> <Leader>tf      :TestFile<CR>
+nmap <silent> <Leader>tl      :TestLast<CR>
+nmap <silent> <Leader>tv      :TestVisit<CR>
 nmap        <Leader>e         <Plug>SlimeLineSend
 nmap        <Leader>ee        <Plug>SlimeMotionSend
 xmap        <Leader>ea        <Plug>SlimeRegionSend

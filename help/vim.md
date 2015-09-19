@@ -40,10 +40,9 @@ vim
 |      | Testing                  |
 |------|--------------------------|
 | 💡 tn | Test Nearest             |
-| 💡 T  | Test File                |
-| 💡 a  | Test Suite               |
-| 💡 l  | Test Last                |
-| 💡 g  | Vist last used test file |
+| 💡 tf | Test File                |
+| 💡 tl | Test Last                |
+| 💡 tv | Vist last used test file |
 
 |           | User Commands        |
 |-----------|----------------------|

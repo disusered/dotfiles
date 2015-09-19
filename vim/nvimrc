@@ -15,7 +15,7 @@
   " nvim specific
   Plug 'benekastah/neomake', {'for': ['javascript', 'javascript.jsx', 'json']}
   Plug 'neovim/node-host', {'on': [], 'do': 'npm install'}
-  Plug 'kassio/neoterm', {'on':['T', 'Tmap', 'TestNearest', 'TestFile', 'TestLast', 'TestVisit']}
+  Plug 'kassio/neoterm'
 
   augroup load_us_ycm
     autocmd VimEnter * call plug#load('node-host')
