@@ -83,11 +83,9 @@ alias http='http --style vim'
 alias help='vim $(ls ~/.dotfiles/help/ | f --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%)'
 alias e='vim $(ls ~/Dropbox/Notes/ | f --prompt "✏️  " | xargs -I % echo ~/Dropbox/Notes/%)'
 alias fonts='fc-list | cut -f2 -d: | sort -u'
-alias adbi="adbinteractive"
 alias g='git'
 alias grl="gitrefloginteractive"
 alias gl="gitloginteractive"
-alias gsh="gitstashinteractive"
 alias gfl='git-flow'
 alias gs='g status --short --branch'
 alias gb='g branch'
@@ -177,50 +175,6 @@ function gitloginteractive {
       git show --color=always $shas | LESS="-X -g -i -M -R -S -w -z-4" less
     fi
   done
-}
-
-function gitstashinteractive {
-  local out q k sha
-    while out=$(
-      git stash list --pretty="%C(yellow)%h %>(14)%Cgreen%cr %C(blue)%gs" |
-      fzf --ansi --no-sort --query="$q" --print-query \
-          --expect=ctrl-d,ctrl-r);
-    do
-      q=$(head -1 <<< "$out")
-      k=$(head -2 <<< "$out" | tail -1)
-      sha=$(tail -1 <<< "$out" | cut -d' ' -f1)
-      [ -z "$sha" ] && continue
-      if [ "$k" = 'ctrl-d' ]; then
-        git difftool $sha
-      elif [ "$k" = 'ctrl-r' ]; then
-        git stash branch "stash-$sha" $sha
-        break;
-      else
-        clear
-        echo "enter"
-        git diff $sha --color=always | LESS="-X -g -i -M -R -S -w -z-4" less
-      fi
-    done
-}
-
-function adbinteractive {
-  local out q k device
-  while out=$(adb devices | tail -n +2 |
-      f --query="$q" --prompt "📱 " --print-query --expect=ctrl-s |
-      awk '{print $1}'); do
-    q=$(head -1 <<< "$out")
-    k=$(head -2 <<< "$out" | tail -1)
-    device=$(head <<< "$out" | tail -1)
-    echo $device
-    [ -z "$device" ] && continue
-    if [ "$k" = ctrl-s ]; then
-      adb -s $device shell
-    else
-      echo -n "adb -s $device " | pbcopy
-      echo "Device ID copied to clipboard."
-      break;
-    fi;
-  done;
 }
 
 # Marks
