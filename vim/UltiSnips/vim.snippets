@@ -35,6 +35,10 @@ else
 endif
 endsnippet
 
+snippet mocha "Mocha Options"
+let test#javascript#mocha#options = '${0:--compilers js:babel/register}'
+endsnippet
+
 snippet npm "Basic npm commands"
 map <silent> <Leader>mh :Start! npm start<CR>
 map <silent> <Leader>mt :Start! npm test<CR>
