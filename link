@@ -153,3 +153,10 @@ ln -s $ROOT/xorg/xinitrc $HOME/.xinitrc
 brew cask install alfred java kaleidoscope karabiner seil sourcetree slate \
 transmission flux appdelete keepingyouawake imageoptim imagealpha charles \
 paw iterm2-nightly licecap webkit-nightly virtualbox vagrant
+
+# Install ranger
+ROOT="${HOME}/.dotfiles"
+chmod +x $ROOT/ranger/imgcat
+rm $HOME/.config/ranger /usr/local/bin/imgcat
+ln -s $ROOT/ranger $HOME/.config/ranger
+ln -s $ROOT/ranger/imgcat /usr/local/bin/imgcat
