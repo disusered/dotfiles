@@ -31,7 +31,6 @@ pip install --upgrade pip
 pip install neovim
 
 # Install FZF
-# Choose no, no for prompt
 brew install --HEAD fzf
 
 # Symlink zsh configs and install
@@ -39,9 +38,6 @@ rm $HOME/.zshrc $HOME/.zshenv
 ln -s $ROOT/zsh/zshrc $HOME/.zshrc
 ln -s $ROOT/zsh/zshenv $HOME/.zshenv
 sudo chpass -s $(which zsh) $USER
-# If above fails:
-# echo $(which zsh) | sudo tee -a /etc/shells
-# chsh -s $(which zsh)
 
 # Symlink Tmux config
 rm $HOME/.tmux.conf
