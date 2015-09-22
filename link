@@ -154,3 +154,14 @@ brew cask install alfred java kaleidoscope karabiner seil sourcetree slate \
 transmission flux appdelete keepingyouawake imageoptim imagealpha charles \
 paw iterm2-nightly licecap webkit-nightly virtualbox vagrant unicodechecker
 
+# Configure QuickLook
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json \
+qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook \
+suspicious-package
+
+defaults write com.apple.finder QLEnableTextSelection -bool true && killall Finder
+
+# Install ranger
+ROOT="${HOME}/.dotfiles"
+rm $HOME/.config/ranger
+ln -s $ROOT/ranger $HOME/.config/ranger

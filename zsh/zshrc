@@ -68,6 +68,8 @@ alias c='clear'
 alias r='ranger'
 alias d='dict'
 alias j="selectmark"
+alias p='preview'
+alias pp='ppreview'
 alias flushdns='sudo discoveryutil udnsflushcaches'
 alias chat='weechat'
 alias twitter='rainbowstream -iot'
@@ -312,8 +314,8 @@ HELPDIR=/usr/local/share/zsh/help
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# rbenv
-eval "$(rbenv init -)"
+# Preview
+[ -f $HOME/.dotfiles/zsh/preview.zsh ] && source $HOME/.dotfiles/zsh/preview.zsh
 
 export NVM_DIR="/Users/carlos/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
