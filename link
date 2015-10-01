@@ -17,9 +17,9 @@ brew tap caskroom/versions
 brew update
 
 # Install essential packages
-brew cask install java xquartz ruby
+brew cask install java xquartz
 brew install git git-flow ag wget zsh tmux reattach-to-user-namespace \
-node --without-npm python planck \
+node --without-npm python planck ruby \
 lua --universal --with-completion luajit --with-52compat \
 vim --override-system-vi --with-lua --with-luajit --with-tcl
 
@@ -142,21 +142,15 @@ ln -s $WEECHAT $HOME/.weechat
 # Enable X extension for Slate/xdotool
 defaults write org.x.X11 enable_test_extensions -boolean true
 
-# Xorg
-mkdir -p $HOME/.xinitrc.d
-rm $HOME/.Xresources $HOME/.Xmodmap $HOME/.xinitrc
-ln -s $ROOT/xorg/Xresources $HOME/.Xresources
-ln -s $ROOT/xorg/Xmodmap $HOME/.Xmodmap
-ln -s $ROOT/xorg/xinitrc $HOME/.xinitrc
-
-# Install Aqua apps
-brew cask install alfred java kaleidoscope karabiner seil sourcetree slate \
-transmission flux appdelete keepingyouawake imageoptim imagealpha charles \
-paw iterm2-nightly licecap webkit-nightly virtualbox vagrant
-
 # Install ranger
 ROOT="${HOME}/.dotfiles"
 chmod +x $ROOT/ranger/imgcat
 rm $HOME/.config/ranger /usr/local/bin/imgcat
 ln -s $ROOT/ranger $HOME/.config/ranger
 ln -s $ROOT/ranger/imgcat /usr/local/bin/imgcat
+
+# Install Aqua apps
+brew cask install alfred java kaleidoscope karabiner seil sourcetree slate \
+transmission flux appdelete keepingyouawake imageoptim imagealpha charles \
+paw iterm2-nightly licecap webkit-nightly virtualbox vagrant
+
