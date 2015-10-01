@@ -1,0 +1,83 @@
+#!/bin/bash
+
+# Paths
+ROOT="${HOME}/.dotfiles"
+WEECHAT="${ROOT}/weechat"
+
+# Symlink zsh configs and install
+rm $HOME/.zshrc $HOME/.zshenv
+ln -s $ROOT/zsh/zshrc $HOME/.zshrc
+ln -s $ROOT/zsh/zshenv $HOME/.zshenv
+
+# Symlink Tmux config
+rm $HOME/.tmux.conf
+ln -s $ROOT/tmux/tmux.conf $HOME/.tmux.conf
+
+# Symlink Git config
+rm $HOME/.gitconfig $HOME/.gitignore_global
+ln -s $ROOT/git/gitconfig $HOME/.gitconfig
+ln -s $ROOT/git/gitignore_global $HOME/.gitignore_global
+
+# Symlink Slate config
+rm $HOME/.slate $HOME/.slate.js
+ln -s $ROOT/slate/slate.js $HOME/.slate.js
+
+# Symlink Vim config and install plugins
+rm $HOME/.vim $HOME/.vimrc $HOME/.gvimrc
+mkdir -p $ROOT/vim/autoload
+ln -s $ROOT/vim $HOME/.vim
+ln -s $ROOT/vim/vimrc $HOME/.vimrc
+ln -s $ROOT/vim/gvimrc $HOME/.gvimrc
+
+# Symlink Neovim config and install plugins
+rm $HOME/.nvim $HOME/.nvimrc
+mkdir -p $ROOT/vim/autoload
+ln -s $ROOT/vim $HOME/.nvim
+ln -s $ROOT/vim/nvimrc $HOME/.nvimrc
+
+# Symlink Ag config
+rm $HOME/.agignore
+ln -s $ROOT/ag/agignore $HOME/.agignore
+
+# Hide last-logged-in message on new terminals
+touch $HOME/.hushlogin
+
+# Extras and related dependencies
+# Rainbow
+rm $HOME/.rainbow_config.json
+ln -s $ROOT/rainbow/rainbow_config.json $HOME/.rainbow_config.json
+
+# Weechat
+rm -rf $HOME/.weechat
+ln -s $WEECHAT $HOME/.weechat
+
+# Install ranger
+ROOT="${HOME}/.dotfiles"
+chmod +x $ROOT/ranger/imgcat
+rm -rf $HOME/.config/ranger /usr/local/bin/imgcat
+ln -s $ROOT/ranger $HOME/.config/ranger
+ln -s $ROOT/ranger/imgcat /usr/local/bin/imgcat
+
+# Install npm and packages
+npm update npm -g
+npm update -g
+
+# Update Homebrew
+brew update
+brew upgrade --all
+
+# Update Neovim
+brew reinstall --HEAD neovim
+pip install --upgrade setuptools
+pip install --upgrade pip
+pip install neovim
+
+# Install FZF
+brew install --HEAD fzf
+
+# Update cask
+brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
+brew cask install alfred kaleidoscope karabiner seil sourcetree slate \
+transmission flux appdelete keepingyouawake imageoptim imagealpha charles \
+paw iterm2-nightly licecap virtualbox vagrant java xquartz
