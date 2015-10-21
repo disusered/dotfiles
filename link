@@ -19,7 +19,7 @@ brew update
 # Install essential packages
 brew cask install java xquartz
 brew install git git-flow ag wget zsh tmux reattach-to-user-namespace \
-node --without-npm python planck ruby \
+node --without-npm python planck ruby rbenv ruby-build \
 lua --universal --with-completion luajit --with-52compat \
 vim --override-system-vi --with-lua --with-luajit --with-tcl
 
