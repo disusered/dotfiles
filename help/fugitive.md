@@ -1,6 +1,18 @@
 Fugitive
 ---------
 
+|      | Merginal                                   |
+|------|--------------------------------------------|
+| 💡 gm | :Merginal                                  |
+| R    | Refresh branch list                        |
+| A    | Create branch based on current             |
+| C    | Checkout branch under cursor               |
+| D    | Delete branch under cursor                 |
+| M    | Merge branch under cursor into current     |
+| rb   | Rebase current against branch under cursor |
+| gd   | Diff against branch under cursor           |
+| rn   | Rename branch under cursor                 |
+
 |       | Git                             |
 |-------|---------------------------------|
 | 💡 ge  | :Gedit                          |
