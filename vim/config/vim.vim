@@ -4,6 +4,7 @@ colorscheme base16-tomorrow
 let mapleader = "\<Space>"
 let g:maplocalleader = 'm'
 
+set textwidth=0
 set encoding=utf-8
 set laststatus=2
 set mouse=a
