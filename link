@@ -152,5 +152,5 @@ ln -s $ROOT/ranger/imgcat /usr/local/bin/imgcat
 # Install Aqua apps
 brew cask install alfred java kaleidoscope karabiner seil sourcetree slate \
 transmission flux appdelete keepingyouawake imageoptim imagealpha charles \
-paw iterm2-nightly licecap webkit-nightly virtualbox vagrant
+paw iterm2-nightly licecap webkit-nightly virtualbox vagrant unicodechecker
 
