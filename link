@@ -52,22 +52,15 @@ ln -s $ROOT/git/gitignore_global $HOME/.gitignore_global
 rm $HOME/.slate $HOME/.slate.js
 ln -s $ROOT/slate/slate.js $HOME/.slate.js
 
-# Symlink Vim config and install plugins
-rm $HOME/.vim $HOME/.vimrc $HOME/.gvimrc $ROOT/vim/autoload/plug.vim
+# Symlink Neo/Vim config and install plugins
 mkdir -p $ROOT/vim/autoload
+rm $ROOT/vim/autoload/plug.vim
+ln -s $ROOT/vendor/vim-plug/plug.vim $ROOT/vim/autoload/plug.vim
+rm -rf $HOME/.vim $HOME/.vimrc $HOME/.gvimrc $HOME/.config/nvim
 ln -s $ROOT/vim $HOME/.vim
 ln -s $ROOT/vim/vimrc $HOME/.vimrc
 ln -s $ROOT/vim/gvimrc $HOME/.gvimrc
-ln -s $ROOT/vendor/vim-plug/plug.vim $ROOT/vim/autoload/plug.vim
-vim +PlugInstall +qall
-
-# Symlink Neovim config and install plugins
-mkdir -p $HOME/.config/nvim
-mkdir -p $ROOT/vim/autoload
-rm $ROOT/vim/autoload/plug.vim $HOME/.config/nvim/init.vim
 ln -s $ROOT/vim $HOME/.config/nvim
-ln -s $ROOT/vendor/vim-plug/plug.vim $ROOT/vim/autoload/plug.vim
-nvim +PlugInstall +qall
 
 # iTerm ^H fix
 FIX='s/kbs=^[hH]/kbs=\\177/';
