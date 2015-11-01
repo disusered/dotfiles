@@ -50,10 +50,8 @@ ln -s $WEECHAT $HOME/.weechat
 
 # Install ranger
 ROOT="${HOME}/.dotfiles"
-chmod +x $ROOT/ranger/imgcat
-rm -rf $HOME/.config/ranger /usr/local/bin/imgcat
+rm -rf $HOME/.config/ranger
 ln -s $ROOT/ranger $HOME/.config/ranger
-ln -s $ROOT/ranger/imgcat /usr/local/bin/imgcat
 
 # Install npm and packages
 npm update npm -g
