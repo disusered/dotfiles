@@ -140,10 +140,8 @@ defaults write org.x.X11 enable_test_extensions -boolean true
 
 # Install ranger
 ROOT="${HOME}/.dotfiles"
-chmod +x $ROOT/ranger/imgcat
-rm $HOME/.config/ranger /usr/local/bin/imgcat
+rm $HOME/.config/ranger
 ln -s $ROOT/ranger $HOME/.config/ranger
-ln -s $ROOT/ranger/imgcat /usr/local/bin/imgcat
 
 # Install Aqua apps
 brew cask install alfred java kaleidoscope karabiner seil sourcetree slate \
