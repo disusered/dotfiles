@@ -30,10 +30,12 @@ ln -s $ROOT/vim/vimrc $HOME/.vimrc
 ln -s $ROOT/vim/gvimrc $HOME/.gvimrc
 
 # Symlink Neovim config and install plugins
-rm $HOME/.nvim $HOME/.nvimrc
+mkdir -p $HOME/.config/nvim
 mkdir -p $ROOT/vim/autoload
-ln -s $ROOT/vim $HOME/.nvim
-ln -s $ROOT/vim/nvimrc $HOME/.nvimrc
+rm $ROOT/vim/autoload/plug.vim $HOME/.config/nvim/init.vim
+ln -s $ROOT/vim $HOME/.config/nvim
+ln -s $ROOT/vendor/vim-plug/plug.vim $ROOT/vim/autoload/plug.vim
+nvim +PlugInstall +qall
 
 # Symlink Ag config
 rm $HOME/.agignore
