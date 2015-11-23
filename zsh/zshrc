@@ -59,7 +59,6 @@ setopt HIST_BEEP
 alias git='noglob git'
 alias cordova='noglob cordova'
 alias open='noglob open'
-alias npm='noglob npm'
 
 # Aliases
 alias sudo='sudo '
@@ -123,6 +122,17 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
+
+# NVM
+function nvm {
+  if [ type nvm >/dev/null 2>&1 ]
+  then
+    nvm
+  else
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+  fi
+}
 
 # Git Interactive
 function gitrefloginteractive {
@@ -317,6 +327,3 @@ HELPDIR=/usr/local/share/zsh/help
 
 # Preview
 [ -f $HOME/.dotfiles/zsh/preview.zsh ] && source $HOME/.dotfiles/zsh/preview.zsh
-
-export NVM_DIR="/Users/carlos/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

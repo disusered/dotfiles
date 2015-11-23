@@ -93,6 +93,12 @@ find $ROOT/vendor/nerd-fonts/patched-fonts/SourceCodePro/ \
   -type f -name "*.*tf" -exec cp "{}" $HOME/Library/Fonts/ \;
 fc-cache -vf ~/.fonts
 
+# Install nvm
+git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
+source $HOME/.nvm/nvm.sh
+nvm install node
+nvm alias default node
+
 # Install npm and packages
 curl -L https://npmjs.com/install.sh | sh
 npm update npm -g
@@ -104,9 +110,6 @@ david eslint babel-eslint flow-bin csscomb babel eslint-plugin-react \
 eslint-config-airbnb eslint-config-google mocha jsonlint neovim-client
 nesh --enable nesh-lodash
 nesh --enable nesh-history-search
-
-# Install nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
 
 # Python Packages
 pip install requests websocket-client pync pafy rainbowstream
