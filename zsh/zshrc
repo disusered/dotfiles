@@ -6,6 +6,7 @@ path=(
   /usr/local/sbin
   $HOME/Development/SDK/android-sdk/tools
   $HOME/Development/SDK/android-sdk/platform-tools
+  $HOME/.dotfiles/bin
   $path
 )
 
@@ -72,7 +73,7 @@ alias pp='ppreview'
 alias flushdns='sudo discoveryutil udnsflushcaches'
 alias chat='weechat'
 alias twitter='rainbowstream -iot'
-alias imgcat='preview'
+alias preview='imgcat'
 alias t='twitter'
 alias cdg='cd-gitroot'
 alias top='htop'
@@ -324,6 +325,3 @@ HELPDIR=/usr/local/share/zsh/help
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Preview
-[ -f $HOME/.dotfiles/zsh/preview.zsh ] && source $HOME/.dotfiles/zsh/preview.zsh
