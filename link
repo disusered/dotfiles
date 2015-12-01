@@ -163,3 +163,6 @@ defaults write com.apple.finder QLEnableTextSelection -bool true && killall Find
 ROOT="${HOME}/.dotfiles"
 rm $HOME/.config/ranger
 ln -s $ROOT/ranger $HOME/.config/ranger
+
+# Setup imgcat
+chmod +x $ROOT/bin/imgcat
