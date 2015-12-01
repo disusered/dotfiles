@@ -7,7 +7,7 @@ nmap <silent> <Leader>tv      :TestVisit<CR>
 nmap        <Leader>e         <Plug>SlimeLineSend
 nmap        <Leader>ee        <Plug>SlimeMotionSend
 xmap        <Leader>ea        <Plug>SlimeRegionSend
-nmap        s                 <Plug>(easymotion-s)
+nmap        s                 <Plug>(easymotion-s2)
 nmap        t                 <Plug>(easymotion-tl)
 vmap        t                 <Plug>(easymotion-tl)
 omap        t                 <Plug>(easymotion-tl)
