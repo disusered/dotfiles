@@ -150,7 +150,7 @@ ln -s $ROOT/ranger $HOME/.config/ranger
 brew cask install alfred java kaleidoscope karabiner seil sourcetree slate \
 transmission flux appdelete keepingyouawake imageoptim imagealpha charles \
 paw iterm2-nightly licecap webkit-nightly virtualbox vagrant unicodechecker \
-firefox firefoxdeveloperedition teleport
+firefox firefoxdeveloperedition teleport vlc
 
 # Configure QuickLook
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json \
