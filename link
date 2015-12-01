@@ -103,9 +103,9 @@ nvm alias default node
 curl -L https://npmjs.com/install.sh | sh
 npm update npm -g
 npm adduser
-npm install -g yo gulp grunt-cli cordova ionic http-server forever \
+npm install -g yo gulp grunt-cli cordova@latest ionic http-server forever \
 ios-deploy ios-sim jshint karma-cli bower nesh caniuse-cmd \
-node-inspector nodemon phonegap plugman svgo wiredep browserify \
+node-inspector nodemon phonegap plugman svgo browserify \
 david eslint babel-eslint flow-bin csscomb babel eslint-plugin-react \
 eslint-config-airbnb eslint-config-google mocha jsonlint neovim-client
 nesh --enable nesh-lodash
