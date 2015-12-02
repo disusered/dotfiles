@@ -16,12 +16,11 @@
   Plug 'benekastah/neomake', {'for': ['javascript', 'javascript.jsx', 'json']}
   Plug 'neovim/node-host', {'on': [], 'do': 'npm install'}
   Plug 'kassio/neoterm'
+  call plug#end()
 
   augroup load_us_ycm
     autocmd VimEnter * call plug#load('node-host')
   augroup END
-
-  call plug#end()
 
   source $MYCONFIG/autocommands.vim
   source $MYCONFIG/n_autocommands.vim
