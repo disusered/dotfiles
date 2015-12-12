@@ -107,7 +107,8 @@ npm install -g yo gulp grunt-cli cordova@latest ionic http-server forever \
 ios-deploy ios-sim jshint karma-cli bower nesh caniuse-cmd \
 node-inspector nodemon phonegap plugman svgo browserify \
 david eslint babel-eslint flow-bin csscomb babel eslint-plugin-react \
-eslint-config-airbnb eslint-config-google mocha jsonlint neovim-client
+eslint-config-airbnb eslint-config-google mocha jsonlint neovim-client \
+babel-cli
 nesh --enable nesh-lodash
 nesh --enable nesh-history-search
 

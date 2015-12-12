@@ -1,6 +1,12 @@
 snippet babelrc "Babel Config"
-{
-  "stage": ${0:0}
+${0:npm i babel-preset-es2015 babel-preset-react --save-dev
+}{
+  "plugins": [${5}],
+  "presets": [${1:${2:"es2015"}${3:, "react"}}],
+  "ignore": [${4:
+    "foo.js",
+    "bar/**/*.js"
+  }]
 }
 endsnippet
 
