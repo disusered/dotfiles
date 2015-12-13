@@ -82,7 +82,7 @@ alias ztime='/usr/bin/time zsh -i -c exit'
 alias used='ncdu'
 alias ag='ag --pager "less -R" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34'
 alias http='http --style vim'
-alias help='vim $(ls ~/.dotfiles/help/ | f --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%)'
+alias help='rmd $(ls ~/.dotfiles/help/ | f --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%)'
 alias fonts='fc-list | cut -f2 -d: | sort -u'
 alias g='git'
 alias grl="gitrefloginteractive"
@@ -121,6 +121,11 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
+
+# Markdown
+rmd () {
+  pandoc $1 | w3m -T text/html
+}
 
 # NVM
 function nvm {
