@@ -14,12 +14,7 @@
 
   " nvim specific
   Plug 'benekastah/neomake', {'for': ['javascript', 'javascript.jsx', 'json']}
-  Plug 'neovim/node-host', {'on': [], 'do': 'npm install'}
   call plug#end()
-
-  augroup load_us_ycm
-    autocmd VimEnter * call plug#load('node-host')
-  augroup END
 
   source $MYCONFIG/autocommands.vim
   source $MYCONFIG/n_autocommands.vim
