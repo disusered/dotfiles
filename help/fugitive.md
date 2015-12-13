@@ -1,7 +1,7 @@
 Fugitive
 ---------
 
-|      | Merginal                                   |
+|      | **Merginal**                               |
 |------|--------------------------------------------|
 | 💡 gm | :Merginal                                  |
 | R    | Refresh branch list                        |
@@ -13,7 +13,7 @@ Fugitive
 | gd   | Diff against branch under cursor           |
 | rn   | Rename branch under cursor                 |
 
-|       | Git                             |
+|       | **Git**                         |
 |-------|---------------------------------|
 | 💡 ge  | :Gedit                          |
 | 💡 gw  | :Gwrite                         |
@@ -26,15 +26,15 @@ Fugitive
 | 💡 gps | :Dispatch! git push             |
 | 💡 gpl | :Dispatch! git pull             |
 
-|      | Git Interactive Log |
-|------|---------------------|
-| 💡 gl | Git history         |
-| i    | Info                |
-| D    | Diff                |
-| S    | Diffstat            |
-| q    | Quit                |
+|      | **Git Interactive Log** |
+|------|-------------------------|
+| 💡 gl | Git history             |
+| i    | Info                    |
+| D    | Diff                    |
+| S    | Diffstat                |
+| q    | Quit                    |
 
-|          | Git Interactive File Log                |
+|          | **Git Interactive File Log**            |
 |----------|-----------------------------------------|
 | 💡 gh     | Git history of current file             |
 | :Manhunt | Change file comparison mode             |
@@ -43,7 +43,7 @@ Fugitive
 | pin      | Compare user defined versions           |
 | L/R      | Pin left/right view in pin mode         |
 
-|        | Diff View            |
+|        | **Diff View**        |
 |--------|----------------------|
 | 💡 u    | Open Gundo           |
 | do     | :diffget             |
