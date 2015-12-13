@@ -1,1 +1,1 @@
-let test#strategy = "neoterm"
+let test#strategy = "neovim"
