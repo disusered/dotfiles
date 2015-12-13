@@ -15,7 +15,6 @@
   " nvim specific
   Plug 'benekastah/neomake', {'for': ['javascript', 'javascript.jsx', 'json']}
   Plug 'neovim/node-host', {'on': [], 'do': 'npm install'}
-  Plug 'kassio/neoterm'
   call plug#end()
 
   augroup load_us_ycm
@@ -31,7 +30,6 @@ source $MYCONFIG/shared.vim
 
 " nvim specific
 source $MYCONFIG/n_test.vim
-source $MYCONFIG/n_neoterm.vim
 source $MYCONFIG/n_neomake.vim
 source $MYCONFIG/n_autosave.vim
 source $MYCONFIG/n_keymap.vim
