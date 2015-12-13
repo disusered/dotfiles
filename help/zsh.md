@@ -4,12 +4,12 @@ zsh
 | Binding | Action                            |
 |---------|-----------------------------------|
 | adbi    | Interactive Android Device Bridge |
-| <C-s\>  | Open selected device's shell      |
+| C-s     | Open selected device's shell      |
 | t       | Rainbowstream: Twitter client     |
 | r       | Ranger: Explore current directory |
 | use     | Get disk usage information        |
 | hs      | Local http server                 |
-| <C-l\>  | Clear Screen                      |
+| C-l     | Clear Screen                      |
 | pbc     | pbcopy                            |
 | pbp     | pbpaste                           |
 
@@ -18,11 +18,11 @@ zsh
 | gl       | Log                          |
 | grl      | Ref Log                      |
 | \`       | Sort results                 |
-| <Enter\> | git show <hash\>             |
-| <C-d\>   | Kaleidescope (log/ref/stash) |
-| <C-r\>   | Reset to commit (log/ref)    |
-| <C-r\>   | Pop stash as branch (stash)  |
-| <C-i\>   | Toggle details (log)         |
+| Enter | git show hash             |
+| C-d   | Kaleidescope (log/ref/stash) |
+| C-r   | Reset to commit (log/ref)    |
+| C-r   | Pop stash as branch (stash)  |
+| C-i   | Toggle details (log)         |
 
 
 | Binding | Git Bindings                 |

@@ -1,4 +1,7 @@
 ranger
 ------
-l	Open
-r	Open with
+
+|   | **Open**  |
+|---|-----------|
+| l | Open      |
+| r | Open with |

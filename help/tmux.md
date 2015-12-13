@@ -1,6 +1,12 @@
 tmux
 -----
-} 	Move pane right
-{ 	Move pane left
 
-[	Copy mode
+|   | **Movement**    |
+|---|-----------------|
+| } | Move pane right |
+| { | Move pane left  |
+
+|   | **Modes**   |
+|---|-------------|
+| [ | Copy mode   |
+| [ | Scroll mode |
