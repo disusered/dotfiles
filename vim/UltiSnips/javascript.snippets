@@ -242,10 +242,10 @@ export default $0
 endsnippet
 
 snippet react_index "React seed entry file"
-import React from 'react';
+import ReactDOM from 'react-dom';
 import App from './App';
 
-React.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 endsnippet
 
 snippet server_hot "Webpack React Hot Module Replacement"
@@ -256,7 +256,8 @@ var config = require('./webpack.config.js');
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
   hot: true,
-  historyApiFallback: true
+  historyApiFallback: true,
+  stats: { colors: true }
 }).listen(3000, 'localhost', function (err, result) {
   if (err) {
     console.log(err);
@@ -269,7 +270,7 @@ endsnippet
 snippet webpack "Webpack Babel Seed"
 /*
 
-npm install react --save
+npm install react react-dom --save
 
 npm install babel-core babel-loader webpack webpack-dev-server react-hot-loader --save-dev
 
