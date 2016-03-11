@@ -108,7 +108,8 @@ ios-deploy ios-sim jshint karma-cli bower nesh caniuse-cmd \
 node-inspector nodemon phonegap plugman svgo browserify \
 david eslint babel-eslint flow-bin csscomb babel eslint-plugin-react \
 eslint-config-airbnb eslint-config-google mocha jsonlint neovim-client \
-babel-cli typescript
+babel-cli typescript eslint-config-metalab eslint-plugin-filenames \
+eslint-plugin-import
 nesh --enable nesh-lodash
 nesh --enable nesh-history-search
 
