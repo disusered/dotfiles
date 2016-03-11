@@ -22,12 +22,7 @@ endif
 endsnippet
 
 snippet eslint "ESLint"
-function! s:lint()
-  Neomake
-endfunction
-
 if has('nvim')
-  autocmd BufWritePost *.jsx,*.js,*.json call s:lint()
   let g:neomake_json_enabled_makers = ['jsonlint']
   let g:neomake_javascript_enabled_makers = ['eslint']
 else
