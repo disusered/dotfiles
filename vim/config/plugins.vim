@@ -54,7 +54,6 @@ Plug 'MarcWeber/vim-addon-local-vimrc',  { 'on': [] }
 Plug 'ervandew/supertab',                { 'on': [] }
 Plug 'SirVer/ultisnips',                 { 'on': [] }
 Plug 'editorconfig/editorconfig-vim',    { 'on': [] }
-Plug 'Valloric/YouCompleteMe',           { 'do': './install.sh --tern-completer', 'on': [] }
 
 augroup conditional_load
   autocmd!
@@ -63,6 +62,6 @@ augroup conditional_load
     call plug#load('vim-addon-local-vimrc')
   endif
 
-  autocmd InsertEnter * call plug#load('supertab', 'YouCompleteMe', 'ultisnips', 'editorconfig-vim')
-                     \| call youcompleteme#Enable() | autocmd! conditional_load
+  autocmd InsertEnter * call plug#load('supertab', 'ultisnips', 'editorconfig-vim')
+                     \| autocmd! conditional_load
 augroup END
