@@ -62,6 +62,10 @@ augroup conditional_load
     call plug#load('vim-addon-local-vimrc')
   endif
 
-  autocmd InsertEnter * call plug#load('supertab', 'ultisnips', 'editorconfig-vim')
+  if !empty(glob(getcwd().'/.editorconfig'))
+    call plug#load('editorconfig-vim')
+  endif
+
+  autocmd InsertEnter * call plug#load('supertab', 'ultisnips')
                      \| autocmd! conditional_load
 augroup END
