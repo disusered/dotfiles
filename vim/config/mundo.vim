@@ -1,1 +1,1 @@
-let g:gundo_right = 1
+let g:mundo_right = 1
