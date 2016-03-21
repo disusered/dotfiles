@@ -109,7 +109,7 @@ node-inspector nodemon phonegap plugman svgo browserify \
 david eslint babel-eslint flow-bin csscomb babel eslint-plugin-react \
 eslint-config-airbnb eslint-config-google mocha jsonlint neovim-client \
 babel-cli typescript eslint-config-metalab eslint-plugin-filenames \
-eslint-plugin-import
+eslint-plugin-import term-img-cli
 nesh --enable nesh-lodash
 nesh --enable nesh-history-search
 
