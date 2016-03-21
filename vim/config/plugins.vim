@@ -47,12 +47,12 @@ Plug 'honza/dockerfile.vim',             { 'for': 'dockerfile' }
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/vim-peekaboo'
 Plug 'idanarye/vim-merginal' | Plug 'tpope/vim-fugitive'
+Plug 'ervandew/supertab'
+Plug 'SirVer/ultisnips'
 
 " post
 Plug 'tpope/vim-repeat' | Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-s2)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
 Plug 'MarcWeber/vim-addon-local-vimrc',  { 'on': [] }
-Plug 'ervandew/supertab',                { 'on': [] }
-Plug 'SirVer/ultisnips',                 { 'on': [] }
 Plug 'editorconfig/editorconfig-vim',    { 'on': [] }
 
 augroup conditional_load
@@ -65,7 +65,4 @@ augroup conditional_load
   if !empty(glob(getcwd().'/.editorconfig'))
     call plug#load('editorconfig-vim')
   endif
-
-  autocmd InsertEnter * call plug#load('supertab', 'ultisnips')
-                     \| autocmd! conditional_load
 augroup END
