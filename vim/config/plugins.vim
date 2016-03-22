@@ -46,7 +46,6 @@ Plug 'honza/dockerfile.vim',             { 'for': 'dockerfile' }
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/vim-peekaboo'
 Plug 'idanarye/vim-merginal' | Plug 'tpope/vim-fugitive'
-Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
 
 " post
