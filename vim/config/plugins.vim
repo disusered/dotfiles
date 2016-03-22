@@ -30,9 +30,8 @@ Plug 'tpope/vim-unimpaired'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'wavded/vim-stylus',                { 'for': ['stylus'] }
 Plug 'groenewege/vim-less',              { 'for': 'less' }
-Plug 'mxw/vim-jsx',                      { 'for': ['javascript.jsx'] }
+Plug 'mxw/vim-jsx' | Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'heavenshell/vim-jsdoc',            { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'pangloss/vim-javascript',          { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'janko-m/vim-test',                 { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'facebook/vim-flow',                { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'moll/vim-node',                    { 'for': ['javascript', 'javascript.jsx'] }
