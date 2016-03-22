@@ -143,6 +143,13 @@ React.PropTypes.shape({
 })
 endsnippet
 
+snippet react_component_stateless "React Component (Stateless)"
+const ${1:`!p snip.rv = snip.basename.capitalize()`} = ({ ${2:children}${3: = ${4:'Hello World!'}} }) =>
+  ${8:<div>{${0:`!p snip.rv = t[2]`}}</div>}${5:
+
+`!p snip.rv = t[1]`.propTypes = { `!p snip.rv = t[2]`: ${7:React.PropTypes.string} };}
+endsnippet
+
 snippet react_component_es5 "React Component (ES5)" i
 var React = require('react');
 
