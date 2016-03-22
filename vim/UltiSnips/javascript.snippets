@@ -146,7 +146,7 @@ endsnippet
 snippet react_component_es5 "React Component (ES5)" i
 var React = require('react');
 
-var ${1:`!p snip.rv = snip.basename`} = React.createClass({
+var ${1:`!p snip.rv = snip.basename.capitalize()`} = React.createClass({
   render: function() {
     return (
       <div>`!p snip.rv = t[1]`</div>
@@ -160,7 +160,7 @@ endsnippet
 snippet react_component_es6 "React Component (ES6)" i
 import React, { Component } from 'react';
 
-export default class ${1:`!p snip.rv = snip.basename`} extends Component {
+export default class ${1:`!p snip.rv = snip.basename.capitalize()`} extends Component {
   render() {
     return (
       <div>`!p snip.rv = t[1]`</div>
