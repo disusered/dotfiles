@@ -17,7 +17,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-gitgutter'
 Plug 'justincampbell/vim-eighties'
-Plug 'simnalamburt/vim-mundo',           { 'on': 'GundoToggle' }
+Plug 'simnalamburt/vim-mundo',           { 'on': 'MundoToggle' }
 Plug 'Wolfy87/vim-enmasse',              { 'on': 'EnMasse' }
 Plug 'tpope/vim-endwise',                { 'for': ['ruby', 'sh'] }
 Plug 'jpalardy/vim-slime',               { 'for': ['javascript', 'sh', 'markdown']}

@@ -37,7 +37,7 @@ endfunction
 
 function! MyFugitive()
   try
-    if expand('%:t') !~? 'Gundo' && exists('*fugitive#head')
+    if expand('%:t') !~? 'Mundo' && exists('*fugitive#head')
       let mark = ' '
       let _ = fugitive#head()
       return strlen(_) ? mark._ : ''

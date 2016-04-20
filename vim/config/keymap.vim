@@ -52,7 +52,7 @@ nnoremap    <Leader>gh        :Manhunt<CR>
 nnoremap    <Leader>gm        :Merginal<CR>
 nnoremap    <Leader>p         :FZF<CR>
 nnoremap    <Leader>b         :Buffers<CR>
-nnoremap    <Leader>u         :GundoToggle<CR>
+nnoremap    <Leader>u         :MundoToggle<CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
 nnoremap    <Leader><Space>   :nohlsearch<CR>
 nnoremap    <Leader>ciu       :split<CR>:Caniuse <c-r>=expand("<cword>")<CR><CR>
