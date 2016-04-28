@@ -34,7 +34,6 @@ Plug 'briancollins/vim-jst'
 Plug 'mxw/vim-jsx' | Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'heavenshell/vim-jsdoc',            { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'janko-m/vim-test',                 { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'facebook/vim-flow',                { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'moll/vim-node',                    { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'kchmck/vim-coffee-script',         { 'for': 'coffee' }
 Plug 'elzr/vim-json',                    { 'for': 'json' }
@@ -53,6 +52,7 @@ Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-repeat' | Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-s2)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
 Plug 'MarcWeber/vim-addon-local-vimrc',  { 'on': [] }
 Plug 'editorconfig/editorconfig-vim',    { 'on': [] }
+Plug 'facebook/vim-flow',                { 'on': [], 'for': ['javascript', 'javascript.jsx'], 'do': 'npm i flow-bin -g' }
 
 augroup conditional_load
   autocmd!
@@ -63,5 +63,9 @@ augroup conditional_load
 
   if !empty(glob(getcwd().'/.editorconfig'))
     call plug#load('editorconfig-vim')
+  endif
+
+  if !empty(glob(getcwd().'/.flowconfig'))
+    call plug#load('vim-flow')
   endif
 augroup END
