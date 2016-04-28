@@ -116,7 +116,7 @@ caniuse-cmd neovim-client csscomb
 # node deps
 npm install -g yo gulp grunt-cli cordova ionic http-server forever \
 ios-deploy ios-sim karma-cli bower nesh node-inspector nodemon \
-phonegap plugman svgo browserify david mocha \
+phonegap plugman svgo browserify david mocha redux-cli \
 term-img-cli  typescript
 nesh --enable nesh-lodash
 nesh --enable nesh-history-search
