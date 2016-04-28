@@ -27,7 +27,7 @@
 	<key>CopyLastNewline</key>
 	<false/>
 	<key>CopySelection</key>
-	<true/>
+	<false/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>base16-ashes.dark</key>
@@ -1674,7 +1674,7 @@
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1280 800 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>638 320 570 448 0 0 1280 777 </string>
+	<string>0 0 1280 800 0 0 1280 777 </string>
 	<key>NeverWarnAboutShortLivedSessions_8068CDF1-29D8-4035-B06B-E49B289AC73F</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -3138,6 +3138,8 @@
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
 	<integer>0</integer>
+	<key>NoSyncInstallationId</key>
+	<string>8D919704-38D1-4DFE-98C3-FD2ECE85EE3F</string>
 	<key>NoSyncLastTipTime</key>
 	<real>461991968.52519298</real>
 	<key>NoSyncSuppressAnnyoingBellOffer</key>
@@ -3156,6 +3158,8 @@
 	<false/>
 	<key>OpenBookmark</key>
 	<false/>
+	<key>OpenNoWindowsAtStartup</key>
+	<true/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
 	<key>PassOnControlClick</key>
@@ -3210,11 +3214,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/nightly.xml</string>
+	<string>https://iterm2.com/appcasts/nightly.xml?shard=68</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-11-30T10:03:35Z</date>
+	<date>2016-04-27T21:17:38Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -3264,6 +3268,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20151117-nightly</string>
+	<string>2.9.20160427-nightly</string>
 </dict>
 </plist>
