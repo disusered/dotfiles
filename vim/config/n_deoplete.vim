@@ -6,3 +6,6 @@ let g:deoplete#ignore_sources._ = ['buffer']
 let g:deoplete#sources = {}
 let g:deoplete#sources.javascript = ['omni']
 let g:deoplete#sources.jsx = ['omni']
+let g:deoplete#omni_patterns = {}
+let g:deoplete#omni_patterns.javascript = '[^. \t]\.\w*'
+let g:deoplete#omni_patterns.jsx = '[^. \t]\.\w*'
