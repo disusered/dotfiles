@@ -4,3 +4,4 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_key_list_select_completion = ['<c-n>', '<down>']
 let g:ycm_key_list_previous_completion  = ['<C-p>', '<Up>']
+let g:ycm_min_num_of_chars_for_completion = 1
