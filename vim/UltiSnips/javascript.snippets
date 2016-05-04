@@ -51,7 +51,7 @@ function ${1:name}(${2}){
 }
 endsnippet
 
-snippet _f "Function declaration" i
+snippet _f "Inline Function declaration" i
 function(${2}){
 	$0
 }
@@ -233,10 +233,6 @@ it('${1:should...}', function() {
 endsnippet
 
 snippet d "debugger;"
-debugger;
-endsnippet
-
-snippet d! "debugger; ignoring ESLint"
 debugger; // eslint-disable-line
 endsnippet
 
@@ -248,7 +244,7 @@ snippet exd "export default"
 export default $0
 endsnippet
 
-snippet react_index "React seed entry file"
+snippet react_render "ReactDOM render component"
 import ReactDOM from 'react-dom';
 import App from './App';
 
