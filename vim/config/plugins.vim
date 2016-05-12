@@ -47,14 +47,13 @@ Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/vim-peekaboo'
 Plug 'idanarye/vim-merginal' | Plug 'tpope/vim-fugitive'
 Plug 'SirVer/ultisnips'
-Plug 'ervandew/supertab'
+Plug 'Konfekt/FastFold'
 
 " post
 Plug 'tpope/vim-repeat' | Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-s2)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
 Plug 'MarcWeber/vim-addon-local-vimrc',  { 'on': [] }
 Plug 'editorconfig/editorconfig-vim',    { 'on': [] }
 Plug 'facebook/vim-flow',                { 'on': [], 'for': ['javascript', 'javascript.jsx'], 'do': 'npm i flow-bin -g' }
-Plug 'Valloric/YouCompleteMe',           { 'do': './install.sh --tern-completer' }
 
 augroup conditional_load
   autocmd!
