@@ -15,8 +15,6 @@ source $MYCONFIG/localvimrc.vim
 source $MYCONFIG/rubycomplete.vim
 source $MYCONFIG/slime.vim
 source $MYCONFIG/ultisnips.vim
-source $MYCONFIG/supertab.vim
-source $MYCONFIG/youcompleteme.vim
 source $MYCONFIG/easymotion.vim
 source $MYCONFIG/markdown.vim
 source $MYCONFIG/manhunt.vim

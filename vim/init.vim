@@ -9,12 +9,24 @@
 
   source $MYCONFIG/ft.vim
 
+  function! Do(init)
+    UpdateRemotePlugins
+  endfunction
+
+
   call plug#begin('~/.dotfiles/vendor/nplugged')
   source $MYCONFIG/plugins.vim
 
   " nvim specific
   Plug 'benekastah/neomake', {'for': ['javascript', 'javascript.jsx', 'json']}
+  Plug 'carlitux/deoplete-ternjs', {'do': 'npm i tern -g'} | Plug 'Shougo/deoplete.nvim', { 'do': function('Do') }
+  Plug 'Shougo/echodoc.vim', { 'on': [] }
   call plug#end()
+
+  augroup insert_load
+    autocmd!
+    autocmd InsertEnter * call plug#load('echodoc.vim') | autocmd! insert_load
+  augroup END
 
   source $MYCONFIG/autocommands.vim
   source $MYCONFIG/n_autocommands.vim
@@ -29,3 +41,5 @@ source $MYCONFIG/n_neomake.vim
 source $MYCONFIG/n_autosave.vim
 source $MYCONFIG/n_keymap.vim
 source $MYCONFIG/n_lightline.vim
+source $MYCONFIG/n_deoplete.vim
+source $MYCONFIG/n_echodoc.vim

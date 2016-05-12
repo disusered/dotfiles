@@ -9,6 +9,8 @@
 
   " vim specific
   Plug 'scrooloose/syntastic'
+  Plug 'ervandew/supertab'
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --tern-completer' }
 
   call plug#end()
 
@@ -23,3 +25,5 @@ source $MYCONFIG/v_colors.vim
 source $MYCONFIG/v_keymap.vim
 source $MYCONFIG/v_lightline.vim
 source $MYCONFIG/v_syntastic.vim
+source $MYCONFIG/v_supertab.vim
+source $MYCONFIG/v_youcompleteme.vim
