@@ -54,7 +54,7 @@ Plug 'tpope/vim-repeat' | Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easym
 Plug 'MarcWeber/vim-addon-local-vimrc',  { 'on': [] }
 Plug 'editorconfig/editorconfig-vim',    { 'on': [] }
 Plug 'facebook/vim-flow',                { 'on': [], 'for': ['javascript', 'javascript.jsx'], 'do': 'npm i flow-bin -g' }
-Plug 'Valloric/YouCompleteMe',           { 'do': './install.sh' }
+Plug 'Valloric/YouCompleteMe',           { 'do': './install.sh --tern-completer' }
 
 augroup conditional_load
   autocmd!
