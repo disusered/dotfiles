@@ -32,7 +32,7 @@ Plug 'wavded/vim-stylus',                { 'for': ['stylus'] }
 Plug 'groenewege/vim-less',              { 'for': 'less' }
 Plug 'briancollins/vim-jst'
 Plug 'mxw/vim-jsx' | Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/es.next.syntax.vim' | Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/es.next.syntax.vim' | Plug 'othree/yajs.vim' | Plug 'gavocanov/vim-js-indent', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/html5.vim',                 { 'for': ['html', 'eruby', 'html.handlebars' ]}
 Plug 'heavenshell/vim-jsdoc',            { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'janko-m/vim-test',                 { 'for': ['javascript', 'javascript.jsx'] }
