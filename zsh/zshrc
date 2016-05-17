@@ -69,7 +69,6 @@ alias r='ranger'
 alias d='dict'
 alias j="selectmark"
 alias p='preview'
-alias pp='ppreview'
 alias flushdns='sudo discoveryutil udnsflushcaches'
 alias md='mdless'
 alias chat='weechat'
