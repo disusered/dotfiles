@@ -128,6 +128,9 @@ mix archive.install https://github.com/phoenixframework/archives/raw/master/phoe
 # Python Packages
 pip install requests websocket-client pync pafy rainbowstream
 
+# Ruby packages
+gem install mdless
+
 # PHP
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
