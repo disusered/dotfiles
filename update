@@ -74,5 +74,5 @@ brew install --HEAD fzf
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 brew cask install alfred kaleidoscope karabiner seil sourcetree slate \
-transmission flux appdelete keepingyouawake imageoptim imagealpha charles \
+transmission flux keepingyouawake imageoptim imagealpha charles \
 paw iterm2-nightly licecap virtualbox vagrant java xquartz

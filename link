@@ -162,7 +162,7 @@ ln -s $ROOT/ranger $HOME/.config/ranger
 
 # Install Aqua apps
 brew cask install alfred java kaleidoscope karabiner seil sourcetree slate \
-transmission flux appdelete keepingyouawake imageoptim imagealpha charles \
+transmission flux appcleaner keepingyouawake imageoptim imagealpha charles \
 paw iterm2-nightly licecap webkit-nightly virtualbox vagrant unicodechecker \
 firefox firefoxdeveloperedition teleport vlc virtualbox-extension-pack \
 dockertoolbox macid bartender
