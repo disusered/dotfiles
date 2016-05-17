@@ -95,9 +95,15 @@ vim
 | motion💡 ee | Evaluate motion |
 | 💡 ea       | Evaluate region |
 
+| -   | Emmet               |
+|-----|---------------------|
+| C-y | Emmet               |
+| ,   | Expansion           |
+| n   | Next edit point     |
+| N   | Previous edit point |
+
 |          | **Etc**                                |
 |----------|----------------------------------------|
-| C-y💡     | Emmet expansion                        |
 | 💡 rt     | Remove Trailing Whitespace             |
 | gof      | Open current file location in Finder   |
 | got      | Open current file location in Terminal |
