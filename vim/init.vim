@@ -14,7 +14,6 @@
     UpdateRemotePlugins
   endfunction
 
-
   call plug#begin('~/.dotfiles/vendor/nplugged')
   source $MYCONFIG/plugins.vim
 
