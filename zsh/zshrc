@@ -85,6 +85,7 @@ alias used='ncdu'
 alias ag='ag --pager "less -R" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34'
 alias http='http --style vim'
 alias help='mdless $(ls ~/.dotfiles/help/ | f --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%)'
+alias edit='nvim $(ls ~/.dotfiles/help/ | f --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%)'
 alias fonts='fc-list | cut -f2 -d: | sort -u'
 alias g='git'
 alias grl="gitrefloginteractive"
