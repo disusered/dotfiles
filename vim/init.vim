@@ -1,6 +1,7 @@
 " Init =========================================================================
   set nocompatible
   filetype off
+  set notermguicolors
   let $MYCONFIG="$HOME/.dotfiles/vim/config"
 
   " nvim plugin hosts
