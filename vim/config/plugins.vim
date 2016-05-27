@@ -4,6 +4,7 @@ Plug 'chrisbra/vim-diff-enhanced',      { 'on' : ['EnhancedDiff', 'PatienceDiff'
 Plug 'tpope/vim-projectionist'
 Plug 'scrooloose/nerdtree',              { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/lightline.vim'
+Plug 'ap/vim-css-color'
 Plug 'tpope/vim-git',                    { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
 Plug 'gregsexton/gitv',                  { 'on': 'Gitv' }
 Plug 'arkwright/vim-manhunt',            { 'on': 'Manhunt' }
