@@ -30,6 +30,8 @@ vim
 |-------------|----------------------------------|
 | :EnMasse    | Replace on quickfix set          |
 | :Ag pattern | Search for pattern interactively |
+| rAlt-A      | Select All                       |
+| rAlt-D      | Deselect All                     |
 | Tab         | Open and add to quickfix list    |
 | \[q         | Go to previous result            |
 | \]q         | Go to next result                |
