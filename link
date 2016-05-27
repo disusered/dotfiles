@@ -173,7 +173,7 @@ dockertoolbox macid bartender
 # Configure QuickLook
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json \
 qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook \
-suspicious-package
+suspicious-package xscope
 
 defaults write com.apple.finder QLEnableTextSelection -bool true && killall Finder
 
