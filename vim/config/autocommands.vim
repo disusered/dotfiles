@@ -6,4 +6,4 @@ au FileType gitconfig set noexpandtab
 
 autocmd FileType json setlocal completeopt+=menu,preview
 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
