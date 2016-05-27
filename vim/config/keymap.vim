@@ -50,8 +50,8 @@ nnoremap    <Leader>gw        :Gwrite<CR><CR>:GitGutter<CR>
 nnoremap    <Leader>gl        :Gitv --all<CR>
 nnoremap    <Leader>gh        :Manhunt<CR>
 nnoremap    <Leader>gm        :Merginal<CR>
-nnoremap    <Leader>p         :GitFiles<CR>
-nnoremap    <Leader>f         :Files<CR>
+nnoremap <silent><Leader>p    :GitFiles<CR>
+nnoremap <silent><Leader>f    :Files<CR>
 nnoremap    <Leader>b         :Buffers<CR>
 nnoremap    <Leader>u         :MundoToggle<CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
