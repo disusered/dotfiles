@@ -8,6 +8,7 @@ set textwidth=0
 set encoding=utf-8
 set laststatus=2
 set showtabline=2
+set noshowmode
 set mouse=a
 set ffs=unix,dos,mac
 set clipboard=unnamed
