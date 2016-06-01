@@ -114,6 +114,7 @@ alias la='ls -la'
 alias repl-babel='nesh -b'
 alias repl-coffee='nesh -c'
 alias repl-cljs='planck'
+alias colors='( x=`tput op` y=`printf %$((${COLUMNS}-6))s`;for i in {0..256};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done; )'
 
 # Temporary files
 if [[ ! -d "$TMPDIR" ]]; then
