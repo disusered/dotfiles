@@ -23,7 +23,6 @@ source $MYCONFIG/shared.vim
 " vim specific
 source $MYCONFIG/v_colors.vim
 source $MYCONFIG/v_keymap.vim
-source $MYCONFIG/v_lightline.vim
 source $MYCONFIG/v_syntastic.vim
 source $MYCONFIG/v_supertab.vim
 source $MYCONFIG/v_youcompleteme.vim

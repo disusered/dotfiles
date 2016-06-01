@@ -10,7 +10,6 @@ source $MYCONFIG/javascript.vim
 source $MYCONFIG/jsdoc.vim
 source $MYCONFIG/json.vim
 source $MYCONFIG/jsx.vim
-source $MYCONFIG/lightline.vim
 source $MYCONFIG/localvimrc.vim
 source $MYCONFIG/rubycomplete.vim
 source $MYCONFIG/slime.vim
@@ -21,6 +20,7 @@ source $MYCONFIG/manhunt.vim
 source $MYCONFIG/nerdtree.vim
 source $MYCONFIG/tablemode.vim
 source $MYCONFIG/fzf.vim
+source $MYCONFIG/flagship.vim
 
 " config
 source $MYCONFIG/vim.vim
@@ -30,3 +30,4 @@ source $MYCONFIG/typos.vim
 
 " colors
 highlight EasyMotionMoveHL ctermfg=46 ctermbg=0
+source $MYCONFIG/hi.vim
