@@ -10,7 +10,8 @@
   " vim specific
   Plug 'scrooloose/syntastic'
   Plug 'ervandew/supertab'
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --tern-completer' }
+  Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'javascript.jsx', 'html'], 'do': './install.sh --tern-completer' }
+  autocmd! User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
 
   call plug#end()
 
