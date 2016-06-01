@@ -19,7 +19,7 @@ brew update
 # Install essential packages
 brew cask install java xquartz
 brew install git git-flow ag wget zsh tmux reattach-to-user-namespace \
-node --without-npm python planck ruby rbenv ruby-build python3 \
+node --without-npm python ruby rbenv ruby-build python3 \
 lua --universal --with-completion luajit --with-52compat \
 vim --override-system-vi --with-lua --with-luajit --with-tcl
 
@@ -116,11 +116,9 @@ eslint-config-standard eslint-plugin-standard eslint-plugin-promise \
 flow-bin caniuse-cmd neovim-client csscomb
 # node deps
 npm install -g yo gulp grunt-cli cordova ionic http-server forever \
-ios-deploy ios-sim karma-cli bower nesh node-inspector nodemon \
+ios-deploy ios-sim karma-cli bower node-inspector nodemon \
 phonegap plugman svgo browserify david mocha redux-cli \
 term-img-cli  typescript
-nesh --enable nesh-lodash
-nesh --enable nesh-history-search
 
 # Elixir
 mix local.hex
