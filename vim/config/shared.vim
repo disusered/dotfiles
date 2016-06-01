@@ -20,6 +20,7 @@ source $MYCONFIG/manhunt.vim
 source $MYCONFIG/nerdtree.vim
 source $MYCONFIG/tablemode.vim
 source $MYCONFIG/fzf.vim
+source $MYCONFIG/echodoc.vim
 source $MYCONFIG/flagship.vim
 
 " config

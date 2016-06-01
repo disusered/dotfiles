@@ -50,6 +50,7 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'idanarye/vim-merginal' | Plug 'tpope/vim-fugitive'
 Plug 'SirVer/ultisnips'
 Plug 'Konfekt/FastFold'
+Plug 'Shougo/echodoc.vim'
 
 " post
 Plug 'tpope/vim-repeat' | Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-s2)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
