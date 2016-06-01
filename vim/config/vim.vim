@@ -1,5 +1,5 @@
 let base16colorspace=256
-colorscheme base16-tomorrow
+colorscheme base16-ocean
 
 let mapleader = "\<Space>"
 let g:maplocalleader = 'm'
