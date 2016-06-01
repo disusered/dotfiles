@@ -11,7 +11,6 @@ let g:syntastic_style_warning_symbol                = '▵'
 
 function! s:syntastic()
   SyntasticCheck
-  call lightline#update()
 endfunction
 
 augroup AutoSyntastic
@@ -20,7 +19,6 @@ augroup AutoSyntastic
 augroup END
 function! s:syntastic()
   SyntasticCheck
-  call lightline#update()
 endfunction
 
 highlight SyntasticErrorSign ctermfg=1 ctermbg=18 guifg=#cc6666 guibg=#282a2e

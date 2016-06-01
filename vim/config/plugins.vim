@@ -3,7 +3,7 @@ Plug 'troydm/zoomwintab.vim'
 Plug 'chrisbra/vim-diff-enhanced',      { 'on' : ['EnhancedDiff', 'PatienceDiff']}
 Plug 'tpope/vim-projectionist'
 Plug 'scrooloose/nerdtree',              { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'ryanoasis/vim-devicons'
-Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-flagship'
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-git',                    { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
 Plug 'gregsexton/gitv',                  { 'on': 'Gitv' }
