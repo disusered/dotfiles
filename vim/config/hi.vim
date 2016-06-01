@@ -15,3 +15,5 @@ hi FlagshipWarn ctermfg=18 ctermbg=11 guifg=#222222 guibg=#f9c15b
 hi FlagshipError ctermfg=18 ctermbg=1 guifg=#222222 guibg=#e25d6a
 
 highlight EasyMotionMoveHL ctermfg=46 ctermbg=0
+
+highlight SyntasticErrorSign ctermfg=1 ctermbg=18 guifg=#cc6666 guibg=#282a2e

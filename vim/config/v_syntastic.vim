@@ -20,5 +20,3 @@ augroup END
 function! s:syntastic()
   SyntasticCheck
 endfunction
-
-highlight SyntasticErrorSign ctermfg=1 ctermbg=18 guifg=#cc6666 guibg=#282a2e
