@@ -9,9 +9,6 @@ let g:neomake_warning_sign = {
     \ 'texthl': 'WarningMsg',
     \ }
 
-hi WarningMsg ctermfg=3 ctermbg=18
-hi ErrorMsg ctermfg=1 ctermbg=18
-
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_json_enabled_makers = ['jsonlint']
 
