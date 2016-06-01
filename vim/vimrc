@@ -8,7 +8,7 @@
   source $MYCONFIG/plugins.vim
 
   " vim specific
-  Plug 'scrooloose/syntastic'
+  Plug 'mtscout6/syntastic-local-eslint.vim' | Plug 'scrooloose/syntastic'
   Plug 'ervandew/supertab'
   Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'javascript.jsx', 'html'], 'do': './install.sh --tern-completer' }
   autocmd! User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
