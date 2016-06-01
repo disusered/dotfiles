@@ -29,5 +29,4 @@ source $MYCONFIG/keymap.vim
 source $MYCONFIG/typos.vim
 
 " colors
-highlight EasyMotionMoveHL ctermfg=46 ctermbg=0
 source $MYCONFIG/hi.vim
