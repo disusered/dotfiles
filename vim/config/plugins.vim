@@ -32,7 +32,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'wavded/vim-stylus',                { 'for': ['stylus'] }
 Plug 'groenewege/vim-less',              { 'for': 'less' }
 Plug 'briancollins/vim-jst'
-Plug 'mxw/vim-jsx' | Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx' | Plug 'gavocanov/vim-js-indent' | Plug 'othree/es.next.syntax.vim' | Plug 'othree/yajs.vim'
 Plug 'othree/html5.vim',                 { 'for': ['html', 'eruby', 'html.handlebars' ]}
 Plug 'heavenshell/vim-jsdoc',            { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'janko-m/vim-test',                 { 'for': ['javascript', 'javascript.jsx'] }
