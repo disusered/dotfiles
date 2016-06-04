@@ -1672,7 +1672,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>328 288 620 392 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 329 585 448 0 0 1280 777 </string>
+	<string>638 329 585 448 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 329 570 448 0 0 1280 777 </string>
 	<key>NeverWarnAboutShortLivedSessions_8068CDF1-29D8-4035-B06B-E49B289AC73F</key>
@@ -3303,7 +3303,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-01T08:42:49Z</date>
+	<date>2016-06-03T10:05:10Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -3322,6 +3322,8 @@
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
 	<integer>6</integer>
+	<key>TabStyle</key>
+	<integer>0</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>ThreeFingerEmulates</key>
@@ -3353,6 +3355,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.20160601-nightly</string>
+	<string>3.0.20160602-nightly</string>
 </dict>
 </plist>
