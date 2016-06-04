@@ -10,3 +10,7 @@ tmux
 |---|-------------|
 | [ | Copy mode   |
 | [ | Scroll mode |
+
+|   | **Commands**   |
+|---|----------------|
+| $ | Rename session |
