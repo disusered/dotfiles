@@ -121,3 +121,5 @@ vim
 | *   | Highlight and jump between occurrences of word |
 | ⌃+o | Previous Cursor Position                       |
 | ⌃+i | Next Cursor Position                           |
+
+***

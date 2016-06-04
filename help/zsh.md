@@ -44,3 +44,5 @@ zsh
 | gf      | git fetch                    |
 | gfm     | git pull                     |
 | gco     | git checkout                 |
+
+***

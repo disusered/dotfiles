@@ -54,3 +54,5 @@ notifications
 terminal-notifier -title 'Weechat Highlight' -message 'Your highlight was triggered in Weechat' -sender org.macports.X11 -sound Submarine -activate org.macports.X11
 
 /set trigger.trigger.beep.command "/print -beep;/exec -bg /Users/carlos/.macports/bin/terminal-notifier -title 'Weechat Highlight' -message 'Your highlight was triggered in Weechat' -sender org.macports.X11 -sound Submarine -activate org.macports.X11"
+
+***
