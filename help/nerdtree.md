@@ -30,3 +30,5 @@ nerdtree
 | m  | Show menu                          |
 | cd | Change the CWD to the selected dir |
 | CD | Change tree root to CWD            |
+
+***

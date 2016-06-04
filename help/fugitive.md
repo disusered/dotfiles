@@ -50,3 +50,5 @@ Fugitive
 | dp     | :diffput             |
 | :diffu | :diffupdate          |
 | ][c    | Next/Previous change |
+
+***

@@ -29,3 +29,5 @@ FileBeagle
 | :ClipDirname  | Copy full path of selected directory                    |
 | cd            | Change vim working directory to current focal directory |
 | cl            | Change vim local directory to current focal directory   |
+
+***
