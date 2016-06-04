@@ -45,6 +45,7 @@ Plug 'tpope/vim-bundler',                { 'for': 'ruby' }
 Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache' }
 Plug 'digitaltoad/vim-jade',             { 'for': 'jade' }
 Plug 'honza/dockerfile.vim',             { 'for': 'dockerfile' }
+Plug 'elixir-lang/vim-elixir'
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/vim-peekaboo'
 Plug 'idanarye/vim-merginal' | Plug 'tpope/vim-fugitive'
