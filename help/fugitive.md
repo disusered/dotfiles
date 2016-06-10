@@ -26,13 +26,16 @@ Fugitive
 | 💡 gps | :Dispatch! git push             |
 | 💡 gpl | :Dispatch! git pull             |
 
-|      | **Git Interactive Log** |
-|------|-------------------------|
-| 💡 gl | Git history             |
-| i    | Info                    |
-| D    | Diff                    |
-| S    | Diffstat                |
-| q    | Quit                    |
+|      | **Git Interactive Log**                   |
+|------|-------------------------------------------|
+| 💡 gl | Git history                               |
+| i    | Info                                      |
+| D    | Diff                                      |
+| S    | Diffstat                                  |
+| yc   | Copy sha                                  |
+| x    | Go to next branching point in history     |
+| X    | Go to previous branching point in history |
+| q    | Quit                                      |
 
 |          | **Git Interactive File Log**            |
 |----------|-----------------------------------------|
