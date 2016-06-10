@@ -90,6 +90,7 @@ alias g='git'
 alias grl="gitrefloginteractive"
 alias gl="gitloginteractive"
 alias gfl='git-flow'
+alias gcp='g cherry-pick'
 alias gs='g status --short --branch'
 alias gb='g branch'
 alias gbc='g checkout -b'
