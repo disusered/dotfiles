@@ -43,7 +43,7 @@ Plug 'vim-ruby/vim-ruby',                { 'for': 'ruby' }
 Plug 'tpope/vim-rails',                  { 'for': 'ruby' }
 Plug 'tpope/vim-bundler',                { 'for': 'ruby' }
 Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache' }
-Plug 'digitaltoad/vim-jade',             { 'for': 'jade' }
+Plug 'digitaltoad/vim-pug',              { 'for': 'pug' }
 Plug 'honza/dockerfile.vim',             { 'for': 'dockerfile' }
 Plug 'elixir-lang/vim-elixir'
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
