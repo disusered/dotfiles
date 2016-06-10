@@ -18,7 +18,7 @@
   source $MYCONFIG/plugins.vim
 
   " nvim specific
-  Plug 'benekastah/neomake', {'for': ['javascript', 'javascript.jsx', 'json']}
+  Plug 'benekastah/neomake'
   Plug 'carlitux/deoplete-ternjs', {'do': 'npm i tern -g'} | Plug 'Shougo/deoplete.nvim', { 'do': function('Do') }
   call plug#end()
 
