@@ -1,66 +1,64 @@
+" theme
 Plug 'chriskempson/base16-vim'
+
+" syntax
+Plug 'sheerun/vim-polyglot'
+Plug 'gavocanov/vim-js-indent' | Plug 'othree/es.next.syntax.vim' | Plug 'othree/yajs.vim'
+
+" always load
+Plug 'ryanoasis/vim-devicons'
 Plug 'troydm/zoomwintab.vim'
-Plug 'chrisbra/vim-diff-enhanced',      { 'on' : ['EnhancedDiff', 'PatienceDiff']}
 Plug 'tpope/vim-projectionist'
-Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-flagship'
 Plug 'ap/vim-css-color'
-Plug 'tpope/vim-git',                    { 'for': ['git','gitconfig','gitcommit','gitrebase','gitsendemail']}
-Plug 'gregsexton/gitv',                  { 'on': 'Gitv' }
-Plug 'arkwright/vim-manhunt',            { 'on': 'Manhunt' }
 Plug 'Raimondi/delimitMate'
-Plug 'junegunn/vim-easy-align',          { 'on': ['<Plug>(EasyAlign)', '<Plug>(LiveEasyAlign)'] }
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-abolish',                { 'on': ['Abolish', 'Subvert']}
 Plug 'vasconcelloslf/vim-interestingwords'
-Plug 'tpope/vim-commentary',             { 'on': ['<Plug>Commentary', '<Plug>CommentaryLine']}
 Plug 'tpope/vim-dispatch'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-gitgutter'
 Plug 'justincampbell/vim-eighties'
-Plug 'simnalamburt/vim-mundo',           { 'on': 'MundoToggle' }
-Plug 'Wolfy87/vim-enmasse',              { 'on': 'EnMasse' }
-Plug 'tpope/vim-endwise',                { 'for': ['ruby', 'sh'] }
-Plug 'jpalardy/vim-slime',               { 'for': ['javascript', 'sh', 'markdown']}
-Plug 'itspriddle/vim-marked',            { 'for': ['markdown'] }
-Plug 'tpope/vim-markdown',               { 'for': ['markdown'] }
-Plug 'mattn/emmet-vim',                  { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'css', 'scss', 'markdown', 'html.handlebars'] }
 Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'justinmk/vim-gtfo'
 Plug 'tpope/vim-unimpaired'
 Plug 'dhruvasagar/vim-table-mode'
-Plug 'wavded/vim-stylus',                { 'for': ['stylus'] }
-Plug 'groenewege/vim-less',              { 'for': 'less' }
 Plug 'briancollins/vim-jst'
-Plug 'mxw/vim-jsx' | Plug 'gavocanov/vim-js-indent' | Plug 'othree/es.next.syntax.vim' | Plug 'othree/yajs.vim'
-Plug 'othree/html5.vim',                 { 'for': ['html', 'eruby', 'html.handlebars' ]}
-Plug 'heavenshell/vim-jsdoc',            { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'janko-m/vim-test',                 { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'moll/vim-node',                    { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'kchmck/vim-coffee-script',         { 'for': 'coffee' }
-Plug 'elzr/vim-json',                    { 'for': 'json' }
-Plug 'vim-ruby/vim-ruby',                { 'for': 'ruby' }
-Plug 'tpope/vim-rails',                  { 'for': 'ruby' }
-Plug 'tpope/vim-bundler',                { 'for': 'ruby' }
-Plug 'mustache/vim-mustache-handlebars', { 'for': 'mustache' }
-Plug 'digitaltoad/vim-pug',              { 'for': 'pug' }
-Plug 'honza/dockerfile.vim',             { 'for': 'dockerfile' }
 Plug 'elixir-lang/vim-elixir'
-Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/vim-peekaboo'
-Plug 'idanarye/vim-merginal' | Plug 'tpope/vim-fugitive'
 Plug 'SirVer/ultisnips'
 Plug 'Konfekt/FastFold'
 Plug 'Shougo/echodoc.vim'
+Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 
-" post
+
+" load on command
+Plug 'simnalamburt/vim-mundo',     { 'on': 'MundoToggle' }
+Plug 'Wolfy87/vim-enmasse',        { 'on': 'EnMasse' }
+Plug 'junegunn/vim-easy-align',    { 'on': ['<Plug>(EasyAlign)', '<Plug>(LiveEasyAlign)'] }
+Plug 'tpope/vim-commentary',       { 'on': ['<Plug>Commentary', '<Plug>CommentaryLine']}
+Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'tpope/vim-repeat' | Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-s2)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
-Plug 'MarcWeber/vim-addon-local-vimrc',  { 'on': [] }
-Plug 'editorconfig/editorconfig-vim',    { 'on': [] }
-Plug 'facebook/vim-flow',                { 'on': [], 'for': ['javascript', 'javascript.jsx'], 'do': 'npm i flow-bin -g' }
+
+" load for ft
+Plug 'tpope/vim-endwise',                { 'for': ['ruby', 'sh'] }
+Plug 'heavenshell/vim-jsdoc',            { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'mattn/emmet-vim',                  { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'css', 'scss', 'markdown', 'html.handlebars'] }
+Plug 'jpalardy/vim-slime',               { 'for': ['javascript', 'sh']}
+Plug 'itspriddle/vim-marked',            { 'for': ['markdown'] }
+
+" load conditionally
+Plug 'MarcWeber/vim-addon-local-vimrc', { 'on': [] }
+Plug 'editorconfig/editorconfig-vim',   { 'on': [] }
+Plug 'moll/vim-node',                   { 'on': [] }
+Plug 'gregsexton/gitv',                 { 'on': [] } | Plug 'tpope/vim-fugitive',  { 'on': [] }
+Plug 'facebook/vim-flow',               { 'on': [], 'do': 'npm i flow-bin -g' }
 
 augroup conditional_load
   autocmd!
+
+  if !empty(glob(getcwd().'/.git/config'))
+    call plug#load('vim-fugitive', 'gitv')
+  endif
 
   if !empty(glob(getcwd().'/.local-vimrc'))
     call plug#load('vim-addon-local-vimrc')
@@ -68,6 +66,10 @@ augroup conditional_load
 
   if !empty(glob(getcwd().'/.editorconfig'))
     call plug#load('editorconfig-vim')
+  endif
+
+  if !empty(glob(getcwd().'/package.json'))
+    call plug#load('vim-node')
   endif
 
   if !empty(glob(getcwd().'/.flowconfig'))

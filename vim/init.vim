@@ -32,6 +32,5 @@ source $MYCONFIG/shared.vim
 " nvim specific
 source $MYCONFIG/n_test.vim
 source $MYCONFIG/n_neomake.vim
-source $MYCONFIG/n_autosave.vim
 source $MYCONFIG/n_keymap.vim
 source $MYCONFIG/n_deoplete.vim

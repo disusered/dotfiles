@@ -1,2 +1,5 @@
 " fix bindings
-au WinEnter *pid:* call feedkeys('i')
+augroup user_neovim
+  autocmd!
+  autocmd WinEnter *pid:* call feedkeys('i')
+augroup END
