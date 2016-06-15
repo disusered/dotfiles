@@ -1652,7 +1652,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>307</string>
+		<string>322</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -1670,11 +1670,11 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>213 317 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>328 288 620 392 0 0 1280 777 </string>
+	<string>328 306 620 392 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>638 329 585 448 0 0 1280 777 </string>
+	<string>0 0 1280 800 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 329 570 448 0 0 1280 777 </string>
+	<string>0 0 1280 800 0 0 1280 777 </string>
 	<key>NeverWarnAboutShortLivedSessions_8068CDF1-29D8-4035-B06B-E49B289AC73F</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -3303,7 +3303,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-03T10:05:10Z</date>
+	<date>2016-06-06T19:18:24Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -3330,6 +3330,11 @@
 	<false/>
 	<key>TmuxDashboardLimit</key>
 	<integer>10</integer>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Profiles</string>
+		<string>Recent Directories</string>
+	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
 	<key>URLHandlersByGuid</key>
@@ -3355,6 +3360,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.20160602-nightly</string>
+	<string>3.0.20160606-nightly</string>
 </dict>
 </plist>
