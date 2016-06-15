@@ -11,7 +11,10 @@ function! s:fzf_statusline()
   setlocal statusline=%#FZF#ctrl-v,ctrl-s,ctrl-t
 endfunction
 
-autocmd! User FzfStatusLine call <SID>fzf_statusline()
+augroup user_fzf
+  autocmd!
+  autocmd! User FzfStatusLine call <SID>fzf_statusline()
+augroup END
 
 " Insert mode completion
 imap <c-x><c-j> <plug>(fzf-complete-file-ag)

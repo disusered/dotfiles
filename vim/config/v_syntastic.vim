@@ -15,8 +15,3 @@ function! s:syntastic()
   SyntasticCheck
   lwindow
 endfunction
-
-augroup AutoSyntastic
-  autocmd!
-  autocmd! BufWritePost *.jsx,*.js call s:syntastic()
-augroup END

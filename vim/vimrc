@@ -11,7 +11,10 @@
   Plug 'mtscout6/syntastic-local-eslint.vim' | Plug 'scrooloose/syntastic'
   Plug 'ervandew/supertab'
   Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'javascript.jsx', 'html'], 'do': './install.sh --tern-completer' }
-  autocmd! User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
+  augroup user_ycm
+    autocmd!
+    autocmd User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
+  augroup END
 
   call plug#end()
 

@@ -1,9 +1,9 @@
-set omnifunc=syntaxcomplete#Complete
+augroup user_commentstring
+  autocmd FileType scss set commentstring=/*\ %s\ */
+augroup END
 
-au FileType scss set commentstring=/*\ %s\ */
-au FileType make set noexpandtab
-au FileType gitconfig set noexpandtab
-
-autocmd FileType json setlocal completeopt+=menu,preview
-
-autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+augroup user_tabstop
+  autocmd!
+  autocmd FileType make set noexpandtab
+  autocmd FileType gitconfig set noexpandtab
+augroup END
