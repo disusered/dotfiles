@@ -73,4 +73,5 @@ augroup conditional_load
   if !empty(glob(getcwd().'/.flowconfig'))
     call plug#load('vim-flow')
   endif
+
 augroup END

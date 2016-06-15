@@ -92,10 +92,13 @@ function! ReadOnlyStatus()
   endif
 endfunction
 
-autocmd User Flags call Hoist("window", -2000, " %{ReadOnlyStatus()}", {'hl': 'FlagshipLock'})
-if isdirectory(glob(getcwd().'/.git'))
-  autocmd User Flags call Hoist("window", -1500, " %{FugitiveStatus()} ", {'hl': 'FlagshipGit'})
-endif
-autocmd User Flags call Hoist("window", -1000, "%{ModeStatus()} ", {'hl': 'FlagshipVisualMode'})
-autocmd User Flags call Hoist("window", "%{NeomakeStatus('E')}", {'hl': 'FlagshipError'})
-autocmd User Flags call Hoist("window", "%{NeomakeStatus('W')}", {'hl': 'FlagshipWarn'})
+augroup user_modeline
+  autocmd!
+  autocmd User Flags call Hoist("window", -2000, " %{ReadOnlyStatus()}", {'hl': 'FlagshipLock'})
+  if isdirectory(glob(getcwd().'/.git'))
+    autocmd User Flags call Hoist("window", -1500, " %{FugitiveStatus()} ", {'hl': 'FlagshipGit'})
+  endif
+  autocmd User Flags call Hoist("window", -1000, "%{ModeStatus()} ", {'hl': 'FlagshipVisualMode'})
+  autocmd User Flags call Hoist("window", "%{NeomakeStatus('E')}", {'hl': 'FlagshipError'})
+  autocmd User Flags call Hoist("window", "%{NeomakeStatus('W')}", {'hl': 'FlagshipWarn'})
+augroup END
