@@ -52,6 +52,7 @@
 	default = upstream
 [diff]
 	tool = Kaleidoscope
+	compactionHeuristic = true
 [merge]
 	tool = Kaleidoscope
 [difftool]
@@ -71,3 +72,5 @@
 	insteadOf = git://github
 [branch]
 	autosetuprebase = always
+[submodule]
+	fetchJobs = 0
