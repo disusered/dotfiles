@@ -18,7 +18,7 @@
   source $MYCONFIG/plugins.vim
 
   " nvim specific
-  Plug 'benekastah/neomake'
+  Plug 'jaawerth/neomake-local-eslint-first' | Plug 'benekastah/neomake'
   Plug 'carlitux/deoplete-ternjs', {'do': 'npm i tern -g'} | Plug 'Shougo/deoplete.nvim', { 'do': function('Do') }
   call plug#end()
 
