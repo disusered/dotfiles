@@ -12,3 +12,5 @@ let g:neomake_warning_sign = {
 
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_json_enabled_makers = ['jsonlint']
+
+autocmd! FileType javascript, BufWritePost * Neomake
