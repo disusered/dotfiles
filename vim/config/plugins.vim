@@ -3,7 +3,6 @@ Plug 'chriskempson/base16-vim'
 
 " syntax
 Plug 'sheerun/vim-polyglot'
-Plug 'gavocanov/vim-js-indent' | Plug 'othree/es.next.syntax.vim' | Plug 'othree/yajs.vim'
 
 " always load
 Plug 'ryanoasis/vim-devicons'
