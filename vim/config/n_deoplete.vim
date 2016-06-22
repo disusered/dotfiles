@@ -1,4 +1,5 @@
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#file#enable_buffer_path = 1
 let g:deoplete#auto_complete_start_length = 1
 let g:deoplete#max_menu_width = 80
 let g:deoplete#ignore_sources = {}
