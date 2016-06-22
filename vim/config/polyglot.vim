@@ -1,1 +1,1 @@
-let g:polyglot_disabled = ['javascript']
+let g:polyglot_disabled = []
