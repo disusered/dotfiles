@@ -9,7 +9,6 @@ Plug 'gavocanov/vim-js-indent' | Plug 'othree/es.next.syntax.vim' | Plug 'othree
 Plug 'ryanoasis/vim-devicons'
 Plug 'troydm/zoomwintab.vim'
 Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-flagship'
 Plug 'ap/vim-css-color'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
