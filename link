@@ -148,7 +148,7 @@ sudo chown root:wheel /usr/local/Cellar/htop-osx/$HTOP_VERSION/bin/htop
 sudo chmod u+s /usr/local/Cellar/htop-osx/$HTOP_VERSION/bin/htop
 
 # Rainbow
-ln -s $ROOT/rainbow/rainbow_config.json .rainbow_config.json
+ln -s $ROOT/rainbow/rainbow_config.json $HOME/.rainbow_config.json
 
 # Weechat
 rm -rf $HOME/.weechat
