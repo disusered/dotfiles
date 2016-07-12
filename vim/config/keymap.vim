@@ -3,7 +3,9 @@ map  <silent> <Leader>N       :NERDTreeFind<CR>
 nmap        <Leader>e         <Plug>SlimeLineSend
 nmap        <Leader>ee        <Plug>SlimeMotionSend
 xmap        <Leader>ea        <Plug>SlimeRegionSend
-nmap        s                 <Plug>(easymotion-s2)
+nmap        s                 <Plug>(easymotion-s)
+vmap        s                 <Plug>(easymotion-s)
+omap        s                 <Plug>(easymotion-s)
 nmap        t                 <Plug>(easymotion-tl)
 vmap        t                 <Plug>(easymotion-tl)
 omap        t                 <Plug>(easymotion-tl)
