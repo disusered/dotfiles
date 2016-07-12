@@ -25,6 +25,7 @@ vmap        ,                 <Plug>(easymotion-prev)
 nmap        <Leader>/         <Plug>CommentaryLine
 vmap        <Leader>/         <Plug>Commentary
 nmap        <Leader>w         <Plug>(choosewin)
+nmap<silent><Leader>,         :vertical resize 80<CR>
 nmap        ˚                 [e
 nmap        ∆                 ]e
 vmap        ˚                 [egv
