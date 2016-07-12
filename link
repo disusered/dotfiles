@@ -19,7 +19,7 @@ brew update
 # Install essential packages
 brew cask install java xquartz
 brew install git git-flow ag wget zsh tmux reattach-to-user-namespace \
-node --without-npm python ruby rbenv ruby-build python3 \
+node --without-npm python ruby rbenv ruby-build python3 elixir \
 lua --universal --with-completion luajit --with-52compat \
 vim --override-system-vi --with-lua --with-luajit --with-tcl
 
@@ -153,6 +153,10 @@ ln -s $ROOT/rainbow/rainbow_config.json .rainbow_config.json
 # Weechat
 rm -rf $HOME/.weechat
 ln -s $WEECHAT $HOME/.weechat
+
+# Elixir
+rm -rf $HOME/.iex.exs
+ln -s $ROOT/iex/iex.exs $HOME/.iex.exs
 
 # Enable X extension for Slate/xdotool
 defaults write org.x.X11 enable_test_extensions -boolean true
