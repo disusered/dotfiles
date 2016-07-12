@@ -48,6 +48,7 @@ Plug 'MarcWeber/vim-addon-local-vimrc', { 'on': [] }
 Plug 'editorconfig/editorconfig-vim',   { 'on': [] }
 Plug 'moll/vim-node',                   { 'on': [] }
 Plug 'gregsexton/gitv',                 { 'on': [] } | Plug 'tpope/vim-fugitive',  { 'on': [] }
+Plug 'ternjs/tern_for_vim',             { 'on': [], 'do': 'npm i tern -g' }
 Plug 'facebook/vim-flow',               { 'on': [], 'do': 'npm i flow-bin -g' }
 
 augroup conditional_load
@@ -71,6 +72,10 @@ augroup conditional_load
 
   if !empty(glob(getcwd().'/.flowconfig'))
     call plug#load('vim-flow')
+  endif
+
+  if !empty(glob(getcwd().'/.tern-project'))
+    call plug#load('tern_for_vim')
   endif
 
 augroup END

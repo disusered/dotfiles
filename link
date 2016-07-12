@@ -113,7 +113,7 @@ eslint-config-metalab eslint-config-airbnb eslint-config-google \
 eslint-plugin-filenames eslint-plugin-import eslint-plugin-jsx-a11y \
 eslint-plugin-react eslint-plugin-flow-vars eslint-config-standard-react \
 eslint-config-standard eslint-plugin-standard eslint-plugin-promise \
-flow-bin caniuse-cmd neovim-client csscomb emoj
+flow-bin caniuse-cmd neovim-client csscomb emoj tern-fetch
 # node deps
 npm install -g yo gulp grunt-cli cordova ionic http-server forever \
 ios-deploy ios-sim karma-cli bower node-inspector nodemon \
