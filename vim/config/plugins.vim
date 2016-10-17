@@ -26,6 +26,7 @@ Plug 'SirVer/ultisnips'
 Plug 'Konfekt/FastFold'
 Plug 'Shougo/echodoc.vim'
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
+Plug 'slashmili/alchemist.vim', { 'for': ['elixir'] } | Plug 'powerman/vim-plugin-AnsiEsc'
 
 
 " load on command
@@ -40,7 +41,7 @@ Plug 'tpope/vim-repeat' | Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easym
 Plug 'tpope/vim-endwise',                { 'for': ['ruby', 'sh'] }
 Plug 'heavenshell/vim-jsdoc',            { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mattn/emmet-vim',                  { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'css', 'scss', 'markdown', 'html.handlebars'] }
-Plug 'jpalardy/vim-slime',               { 'for': ['javascript', 'sh']}
+Plug 'jpalardy/vim-slime',               { 'for': ['javascript', 'sh', 'elixir']}
 Plug 'itspriddle/vim-marked',            { 'for': ['markdown'] }
 
 " load conditionally
