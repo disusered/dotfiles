@@ -74,3 +74,5 @@
 	autosetuprebase = always
 [submodule]
 	fetchJobs = 0
+[rerere]
+	enabled = true
