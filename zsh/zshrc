@@ -158,17 +158,18 @@ function gitloginteractive {
 
   basic="%C(magenta bold)%h%C(reset) %C(auto)%d%C(reset) %s"
   complex="%C(magenta bold)%h%C(reset) %C(blue bold)%aN%C(reset) %C(auto)%d%C(reset) %s %C(8)(%cr)%C(reset)"
-  style=$basic
+  style=$complex
 
   while out=$(
-      git l | fzf --ansi --no-sort --reverse --query="$q" --prompt "📖 " \
+      git l --format=$style | fzf --ansi --no-sort --reverse --query="$q" --prompt "📖 " \
           --print-query --expect=ctrl-d,ctrl-i,ctrl-r --toggle-sort=\`); do
     q=$(head -1 <<< "$out")
     k=$(head -2 <<< "$out" | tail -1)
     shas=$(sed '1,2d;s/^[^a-z0-9]*//;/^$/d' <<< "$out" | awk '{print $1}')
     [ -z "$shas" ] && continue
     if [ "$k" = ctrl-d ]; then
-      git difftool $shas
+      # git show --color=always $shas | LESS="-X -g -i -M -R -S -w -z-4" less
+      git difftool $shas~1 $shas
     elif [ "$k" = ctrl-i ]; then
       if [ ${#style} -eq ${#basic} ]
       then
@@ -179,9 +180,10 @@ function gitloginteractive {
     elif [ "$k" = 'ctrl-r' ]; then
       git reset $shas
       break;
+    elif [ "$k" = 'ctrl-s' ]; then
+      break;
     else
-      clear
-      git show --color=always $shas | LESS="-X -g -i -M -R -S -w -z-4" less
+      echo "$shas" | pbcopy
     fi
   done
 }
