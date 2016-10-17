@@ -6,6 +6,8 @@ let g:deoplete#ignore_sources = {}
 let g:deoplete#ignore_sources._ = ['buffer']
 let g:deoplete#sources = {}
 let g:deoplete#omni_patterns = {}
+let g:deoplete#auto_complete_delay = 50
+
 let g:tern_request_timeout = 1
 let g:tern_show_signature_in_pum = 0
 let g:tern#command = ["tern"]
