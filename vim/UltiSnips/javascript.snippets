@@ -46,13 +46,13 @@ endsnippet
 
 
 snippet fd "Function declaration"
-function ${1:name}(${2}){
+function ${1:name}(${2}) {
 	$0
 }
 endsnippet
 
 snippet _f "Inline Function declaration" i
-function(${2}){
+function(${2}) {
 	$0
 }
 endsnippet
@@ -144,7 +144,7 @@ React.PropTypes.shape({
 endsnippet
 
 snippet react_component_stateless "React Component (Stateless)"
-const ${1:`!p snip.rv = snip.basename.capitalize()`} = ({ ${2:children}${3: = ${4:'Hello World!'}} }) =>
+const ${1:`!p snip.rv = snip.basename`} = ({ ${2:children}${3: = ${4:'Hello World!'}} }) =>
   ${8:<div>{${0:`!p snip.rv = t[2]`}}</div>}${5:
 
 `!p snip.rv = t[1]`.propTypes = { `!p snip.rv = t[2]`: ${7:React.PropTypes.string} };}
@@ -153,7 +153,7 @@ endsnippet
 snippet react_component_es5 "React Component (ES5)" i
 var React = require('react');
 
-var ${1:`!p snip.rv = snip.basename.capitalize()`} = React.createClass({
+var ${1:`!p snip.rv = snip.basename`} = React.createClass({
   render: function() {
     return (
       <div>`!p snip.rv = t[1]`</div>
@@ -167,7 +167,7 @@ endsnippet
 snippet react_component_es6 "React Component (ES6)" i
 import React, { Component } from 'react';
 
-export default class ${1:`!p snip.rv = snip.basename.capitalize()`} extends Component {
+export default class ${1:`!p snip.rv = snip.basename`} extends Component {
   render() {
     return (
       <div>`!p snip.rv = t[1]`</div>
@@ -227,9 +227,21 @@ undefined$0
 endsnippet
 
 snippet it "it should..."
-it('${1:should...}', function() {
+it('${1:should...}', function () {
 	$0
 });
+endsnippet
+
+snippet des "describe"
+describe('$1', function () {
+	$0
+});
+endsnippet
+
+snippet exp "expect"
+const expected = $1;
+const actual = $0;
+expect(actual).to.eq(expected);
 endsnippet
 
 snippet d "debugger;"
@@ -246,6 +258,10 @@ endsnippet
 
 snippet exd "export default"
 export default $0
+endsnippet
+
+snippet ex "export default"
+export $0
 endsnippet
 
 snippet react_render "ReactDOM render component"
