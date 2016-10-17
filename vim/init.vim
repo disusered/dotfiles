@@ -20,6 +20,7 @@
   " nvim specific
   Plug 'jaawerth/neomake-local-eslint-first' | Plug 'benekastah/neomake'
   Plug 'carlitux/deoplete-ternjs', {'do': 'npm i tern -g'} | Plug 'Shougo/deoplete.nvim', { 'do': function('Do') }
+  Plug 'kassio/neoterm'
   call plug#end()
 
   source $MYCONFIG/autocommands.vim
@@ -30,7 +31,7 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 source $MYCONFIG/shared.vim
 
 " nvim specific
-source $MYCONFIG/n_test.vim
+source $MYCONFIG/n_term.vim
 source $MYCONFIG/n_neomake.vim
 source $MYCONFIG/n_keymap.vim
 source $MYCONFIG/n_deoplete.vim

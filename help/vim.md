@@ -38,12 +38,13 @@ vim
 | 💡 k         | Highlight word                   |
 | 💡 K         | Clear highlights                 |
 
-|      | **Testing**              |
-|------|--------------------------|
-| 💡 tn | Test Nearest             |
-| 💡 tf | Test File                |
-| 💡 tl | Test Last                |
-| 💡 tv | Vist last used test file |
+|     | **Testing**            |
+|-----|------------------------|
+| ^tf | Test File in terminal  |
+| ^ta | Test All in terminal   |
+| ^th | Toggle terminal window |
+| ^tc | Clear terminal window  |
+| ^tk | Kill terminal process  |
 
 |           | **User Commands**    |
 |-----------|----------------------|
