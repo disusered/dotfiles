@@ -1,12 +1,12 @@
 vim
 ---------
 
-|       | **Action**         |
-|-------|--------------------|
-| Space | Leader             |
-| 💡 p   | Files              |
-| 💡 p   | Show File          |
-| 💡 b   | Buffers            |
+|       | **Action** |
+|-------|------------|
+| Space | Leader     |
+| ^p    | Git files  |
+| ^f    | All files  |
+| ^b    | Buffers    |
 
 |           | **Motion**     |
 |-----------|----------------|
@@ -14,10 +14,10 @@ vim
 | ;         | Next match     |
 | ,         | Previous match |
 
-|      | **Writing**       |
-|------|-------------------|
-| 💡 mm | Toggle table mode |
-| 💡 mt | CSV to table      |
+|     | **Writing**       |
+|-----|-------------------|
+| ^mm | Toggle table mode |
+| ^mt | CSV to table      |
 
 |       | **Registers**                          |
 |-------|----------------------------------------|
@@ -35,8 +35,8 @@ vim
 | Tab         | Open and add to quickfix list    |
 | \[q         | Go to previous result            |
 | \]q         | Go to next result                |
-| 💡 k         | Highlight word                   |
-| 💡 K         | Clear highlights                 |
+| ^k          | Highlight word                   |
+| ^K          | Clear highlights                 |
 
 |     | **Testing**            |
 |-----|------------------------|
@@ -61,42 +61,34 @@ vim
 | z= | Fix spelling error      |
 | zg | Add word to wordlist    |
 
-|        | **Window Management**               |
-|--------|-------------------------------------|
-| gT     | Go to next tab                      |
-| gt     | Go to previous tab                  |
-| ^+e    | Moves screen up one line            |
-| ^+y    | Moves screen down one line          |
-| ^+u    | Moves screen up ½ page              |
-| ^+d    | Moves screen down ½ page            |
-| ^+b    | Moves screen up one page            |
-| ^+f    | Moves screen down one page          |
-| ^+w s  | Horizontal split                    |
-| ^+w v  | Vertical split                      |
-| ^+w t  | New tab                             |
-| ^+w q  | Close pane                          |
-| ^+w x  | Transpose panes                     |
-| ^+w x  | Previous pane                       |
-| ^+hjkl | Move to vim/tmux split in direction |
+|           | **Window Management**               |
+|-----------|-------------------------------------|
+| gT        | Go to next tab                      |
+| gt        | Go to previous tab                  |
+| ctrl+e    | Moves screen up one line            |
+| ctrl+y    | Moves screen down one line          |
+| ctrl+u    | Moves screen up ½ page              |
+| ctrl+d    | Moves screen down ½ page            |
+| ctrl+b    | Moves screen up one page            |
+| ctrl+f    | Moves screen down one page          |
+| ctrl+w s  | Horizontal split                    |
+| ctrl+w v  | Vertical split                      |
+| ctrl+w t  | New tab                             |
+| ctrl+w q  | Close pane                          |
+| ctrl+w x  | Transpose panes                     |
+| ctrl+w x  | Previous pane                       |
+| ctrl+hjkl | Move to vim/tmux split in direction |
 
 |    | **Folds**      |
 |----|----------------|
 | za | Toggle fold    |
 | zc | Reenable folds |
 
-|                                         | **Rename**                      |
-|-----------------------------------------|---------------------------------|
-| crs                                     | Coerce to snake_case            |
-| crm                                     | Coerce to MixedCase             |
-| crc                                     | Coerce to camelCase             |
-| cru                                     | Coerce to UPPER_CASE            |
-| :%Subvert/facilit{y,ies}/building{,s}/g | Rename preserving plural & caps |
-
 |            | **Slime**       |
 |------------|-----------------|
-| 💡 e        | Evaluate line   |
-| motion💡 ee | Evaluate motion |
-| 💡 ea       | Evaluate region |
+| ^e         | Evaluate line   |
+| motion ^ee | Evaluate motion |
+| ^ea        | Evaluate region |
 
 | -   | Emmet               |
 |-----|---------------------|
@@ -107,7 +99,7 @@ vim
 
 |          | **Etc**                                |
 |----------|----------------------------------------|
-| 💡 rt     | Remove Trailing Whitespace             |
+| ^rt      | Remove Trailing Whitespace             |
 | gof      | Open current file location in Finder   |
 | got      | Open current file location in Terminal |
 | [oc      | Enable cursorline                      |
@@ -115,12 +107,12 @@ vim
 | C-x C-f  | Insert path                            |
 | C-\\ C-n | Exit Neovim Terminal                   |
 
-|     | **Movement**                                   |
-|-----|------------------------------------------------|
-| g_  | Go to the last non-blank character of line     |
-| %   | Go to the corresponding bracket                |
-| *   | Highlight and jump between occurrences of word |
-| ⌃+o | Previous Cursor Position                       |
-| ⌃+i | Next Cursor Position                           |
+|        | **Movement**                                   |
+|--------|------------------------------------------------|
+| g_     | Go to the last non-blank character of line     |
+| %      | Go to the corresponding bracket                |
+| *      | Highlight and jump between occurrences of word |
+| ctrl+o | Previous Cursor Position                       |
+| ctrl+i | Next Cursor Position                           |
 
 ***
