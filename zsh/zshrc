@@ -26,6 +26,7 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-history-substring-search
   zgen load mollifier/cd-gitroot
   zgen load junegunn/fzf shell
+  zgen load lukechilds/zsh-nvm
 
   # completions
   zgen load zsh-users/zsh-completions src
@@ -127,15 +128,7 @@ if [[ ! -d "$TMPPREFIX" ]]; then
 fi
 
 # NVM
-function nvm {
-  if [ type nvm >/dev/null 2>&1 ]
-  then
-    nvm
-  else
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-  fi
-}
+export NVM_DIR=~/.nvm
 
 # Git Interactive
 function gitrefloginteractive {
