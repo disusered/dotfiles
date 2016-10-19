@@ -19,7 +19,7 @@ brew update
 # Install essential packages
 brew cask install java xquartz
 brew install git git-flow ag wget zsh tmux reattach-to-user-namespace \
-node --without-npm python ruby rbenv ruby-build python3 elixir \
+node python ruby rbenv ruby-build python3 elixir \
 lua --universal --with-completion luajit --with-52compat \
 vim --override-system-vi --with-lua --with-luajit --with-tcl
 
@@ -103,8 +103,6 @@ nvm install node
 nvm alias default node
 
 # Install npm and packages
-echo prefix=~/.npm-packages > ~/.npmrc
-curl -L https://npmjs.com/install.sh | sh
 npm install -g npm@latest
 npm update -g npm
 # vim deps
@@ -115,10 +113,7 @@ eslint-plugin-react eslint-plugin-flow-vars eslint-config-standard-react \
 eslint-config-standard eslint-plugin-standard eslint-plugin-promise \
 flow-bin caniuse-cmd neovim-client csscomb emoj tern-fetch
 # node deps
-npm install -g yo gulp grunt-cli cordova ionic http-server forever \
-ios-deploy ios-sim karma-cli bower node-inspector nodemon \
-phonegap plugman svgo browserify david mocha redux-cli \
-term-img-cli  typescript
+npm install -g http-server ios-deploy ios-sim plugman term-img-cli
 
 # Elixir
 mix local.hex
