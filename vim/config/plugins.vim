@@ -21,7 +21,6 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'junegunn/vim-peekaboo'
 Plug 'SirVer/ultisnips'
 Plug 'Konfekt/FastFold'
-Plug 'Shougo/echodoc.vim'
 Plug 'ervandew/supertab'
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 
