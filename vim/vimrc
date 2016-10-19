@@ -9,12 +9,6 @@
 
   " vim specific
   Plug 'mtscout6/syntastic-local-eslint.vim' | Plug 'scrooloose/syntastic'
-  Plug 'ervandew/supertab'
-  Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'javascript.jsx', 'html'], 'do': './install.sh --tern-completer' }
-  augroup user_ycm
-    autocmd!
-    autocmd User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
-  augroup END
 
   call plug#end()
 
@@ -27,5 +21,3 @@ source $MYCONFIG/shared.vim
 " vim specific
 source $MYCONFIG/v_keymap.vim
 source $MYCONFIG/v_syntastic.vim
-source $MYCONFIG/v_supertab.vim
-source $MYCONFIG/v_youcompleteme.vim

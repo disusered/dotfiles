@@ -19,6 +19,8 @@ source $MYCONFIG/tablemode.vim
 source $MYCONFIG/fzf.vim
 source $MYCONFIG/echodoc.vim
 source $MYCONFIG/tern.vim
+source $MYCONFIG/supertab.vim
+source $MYCONFIG/youcompleteme.vim
 
 " config
 source $MYCONFIG/vim.vim

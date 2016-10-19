@@ -22,6 +22,7 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'SirVer/ultisnips'
 Plug 'Konfekt/FastFold'
 Plug 'Shougo/echodoc.vim'
+Plug 'ervandew/supertab'
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 
 
@@ -48,6 +49,12 @@ Plug 'moll/vim-node',                   { 'on': [] }
 Plug 'gregsexton/gitv',                 { 'on': [] } | Plug 'tpope/vim-fugitive',  { 'on': [] }
 Plug 'ternjs/tern_for_vim',             { 'on': [], 'do': 'npm i tern -g' }
 Plug 'facebook/vim-flow',               { 'on': [], 'do': 'npm i flow-bin -g' }
+Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'javascript.jsx', 'html'], 'do': './install.sh --tern-completer' }
+
+augroup user_ycm
+  autocmd!
+  autocmd User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
+augroup END
 
 augroup conditional_load
   autocmd!
