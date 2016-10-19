@@ -46,7 +46,7 @@ Plug 'MarcWeber/vim-addon-local-vimrc', { 'on': [] }
 Plug 'editorconfig/editorconfig-vim',   { 'on': [] }
 Plug 'moll/vim-node',                   { 'on': [] }
 Plug 'gregsexton/gitv',                 { 'on': [] } | Plug 'tpope/vim-fugitive',  { 'on': [] }
-Plug 'ternjs/tern_for_vim',             { 'on': [], 'do': 'npm i tern -g' }
+Plug 'ternjs/tern_for_vim',             { 'on': [] }
 Plug 'facebook/vim-flow',               { 'on': [], 'do': 'npm i flow-bin -g' }
 Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'javascript.jsx', 'html'], 'do': './install.sh --tern-completer' }
 
