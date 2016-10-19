@@ -111,7 +111,7 @@ eslint-config-metalab eslint-config-airbnb eslint-config-google \
 eslint-plugin-filenames eslint-plugin-import eslint-plugin-jsx-a11y \
 eslint-plugin-react eslint-plugin-flow-vars eslint-config-standard-react \
 eslint-config-standard eslint-plugin-standard eslint-plugin-promise \
-flow-bin caniuse-cmd neovim-client csscomb emoj tern-fetch
+flow-bin caniuse-cmd neovim-client csscomb emoj tern-fetch typescript
 # node deps
 npm install -g http-server ios-deploy ios-sim plugman term-img-cli
 
