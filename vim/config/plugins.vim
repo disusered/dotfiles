@@ -7,8 +7,6 @@ Plug 'sheerun/vim-polyglot'
 " always load
 Plug 'ryanoasis/vim-devicons'
 Plug 'troydm/zoomwintab.vim'
-Plug 'tpope/vim-projectionist'
-Plug 'ap/vim-css-color'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'vasconcelloslf/vim-interestingwords'
@@ -16,9 +14,8 @@ Plug 'tpope/vim-dispatch'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-gitgutter'
 Plug 'jeetsukumaran/vim-filebeagle'
-Plug 'justinmk/vim-gtfo'
 Plug 'tpope/vim-unimpaired'
-Plug 'dhruvasagar/vim-table-mode'
+Plug 'tpope/vim-endwise'
 Plug 'briancollins/vim-jst'
 Plug 'elixir-lang/vim-elixir'
 Plug 'junegunn/vim-peekaboo'
@@ -26,7 +23,6 @@ Plug 'SirVer/ultisnips'
 Plug 'Konfekt/FastFold'
 Plug 'Shougo/echodoc.vim'
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
-Plug 'slashmili/alchemist.vim', { 'for': ['elixir'] } | Plug 'powerman/vim-plugin-AnsiEsc'
 
 
 " load on command
@@ -38,11 +34,12 @@ Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'scrooloose/nerdtree', { 'on': ['NERDT
 Plug 'tpope/vim-repeat' | Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-s2)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
 
 " load for ft
-Plug 'tpope/vim-endwise',                { 'for': ['ruby', 'sh'] }
 Plug 'heavenshell/vim-jsdoc',            { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mattn/emmet-vim',                  { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'css', 'scss', 'markdown', 'html.handlebars'] }
+Plug 'slashmili/alchemist.vim', { 'for': ['elixir'] } | Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'jpalardy/vim-slime',               { 'for': ['javascript', 'sh', 'elixir']}
 Plug 'itspriddle/vim-marked',            { 'for': ['markdown'] }
+Plug 'dhruvasagar/vim-table-mode',       { 'for': ['markdown'] }
 
 " load conditionally
 Plug 'MarcWeber/vim-addon-local-vimrc', { 'on': [] }
