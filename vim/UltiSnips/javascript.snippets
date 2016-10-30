@@ -93,52 +93,52 @@ snippet flow "Flow type checking"
 /* @flow */
 endsnippet
 
-snippet rpta "React.PropTypes.Array" i
-React.PropTypes.array
+snippet rpta "PropTypes.Array" i
+PropTypes.array
 endsnippet
 
-snippet rptb "React.PropTypes.Boolean" i
-React.PropTypes.bool
+snippet rptb "PropTypes.Boolean" i
+PropTypes.bool
 endsnippet
 
-snippet rptf "React.PropTypes.Function" i
-React.PropTypes.func
+snippet rptf "PropTypes.Function" i
+PropTypes.func
 endsnippet
 
-snippet rptn "React.PropTypes.number" i
-React.PropTypes.number
+snippet rptn "PropTypes.number" i
+PropTypes.number
 endsnippet
 
-snippet rptno "React.PropTypes.node" i
-React.PropTypes.node
+snippet rptno "PropTypes.node" i
+PropTypes.node
 endsnippet
 
-snippet rpto "React.PropTypes.object" i
-React.PropTypes.object
+snippet rpto "PropTypes.object" i
+PropTypes.object
 endsnippet
 
-snippet rpts "React.PropTypes.string" i
-React.PropTypes.string
+snippet rpts "PropTypes.string" i
+PropTypes.string
 endsnippet
 
-snippet rpte "React.PropTypes.element" i
-React.PropTypes.element
+snippet rpte "PropTypes.element" i
+PropTypes.element
 endsnippet
 
-snippet rpton "React.PropTypes.oneOf"
-React.PropTypes.oneOf([$0])
+snippet rpton "PropTypes.oneOf"
+PropTypes.oneOf([$0])
 endsnippet
 
-snippet rptao "React.PropTypes.arrayOf"
-React.PropTypes.arrayOf($0)
+snippet rptao "PropTypes.arrayOf"
+PropTypes.arrayOf($0)
 endsnippet
 
-snippet rptoo "React.PropTypes.objectOf"
-React.PropTypes.objectOf($0)
+snippet rptoo "PropTypes.objectOf"
+PropTypes.objectOf($0)
 endsnippet
 
-snippet rptsh "React.PropTypes.shape" i
-React.PropTypes.shape({
+snippet rptsh "PropTypes.shape" i
+PropTypes.shape({
 	${1:key}: $0
 })
 endsnippet
@@ -147,7 +147,7 @@ snippet react_component_stateless "React Component (Stateless)"
 const ${1:`!p snip.rv = snip.basename`} = ({ ${2:children}${3: = ${4:'Hello World!'}} }) =>
   ${8:<div>{${0:`!p snip.rv = t[2]`}}</div>}${5:
 
-`!p snip.rv = t[1]`.propTypes = { `!p snip.rv = t[2]`: ${7:React.PropTypes.string} };}
+`!p snip.rv = t[1]`.propTypes = { `!p snip.rv = t[2]`: ${7:PropTypes.string} };}
 endsnippet
 
 snippet react_component_es5 "React Component (ES5)" i
