@@ -49,7 +49,7 @@ Plug 'moll/vim-node',                   { 'on': [] }
 Plug 'gregsexton/gitv',                 { 'on': [] } | Plug 'tpope/vim-fugitive',  { 'on': [] }
 Plug 'ternjs/tern_for_vim',             { 'on': [] }
 Plug 'facebook/vim-flow',               { 'on': [], 'do': 'npm i flow-bin -g' }
-Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'javascript.jsx', 'html'], 'do': './install.sh --tern-completer' }
+Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'javascript.jsx', 'html'], 'do': './install.py --tern-completer' }
 
 augroup user_ycm
   autocmd!
