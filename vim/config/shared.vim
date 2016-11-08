@@ -20,6 +20,7 @@ source $MYCONFIG/fzf.vim
 source $MYCONFIG/tern.vim
 source $MYCONFIG/supertab.vim
 source $MYCONFIG/youcompleteme.vim
+source $MYCONFIG/neomake.vim
 
 " config
 source $MYCONFIG/vim.vim

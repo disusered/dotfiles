@@ -12,9 +12,6 @@
   source $MYCONFIG/ft.vim
   source $MYCONFIG/plugins.vim
 
-  " vim specific
-  Plug 'mtscout6/syntastic-local-eslint.vim' | Plug 'scrooloose/syntastic'
-
   call plug#end()
 
   source $MYCONFIG/autocommands.vim
@@ -25,4 +22,3 @@ source $MYCONFIG/shared.vim
 
 " vim specific
 source $MYCONFIG/v_keymap.vim
-source $MYCONFIG/v_syntastic.vim

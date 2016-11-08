@@ -37,7 +37,6 @@
   source $MYCONFIG/plugins.vim
 
   " nvim specific
-  Plug 'jaawerth/neomake-local-eslint-first' | Plug 'benekastah/neomake'
   Plug 'kassio/neoterm'
   call plug#end()
 
@@ -50,5 +49,4 @@ source $MYCONFIG/shared.vim
 
 " nvim specific
 source $MYCONFIG/n_term.vim
-source $MYCONFIG/n_neomake.vim
 source $MYCONFIG/n_keymap.vim
