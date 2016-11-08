@@ -7,7 +7,7 @@ let g:fzf_action = {
 
 " Neovim Statusline
 function! s:fzf_statusline()
-  highlight FZF ctermfg=8 ctermbg=18
+  highlight FZF ctermfg=8 ctermbg=18 guifg=#65737d guibg=#343d46
   setlocal statusline=%#FZF#ctrl-v,ctrl-s,ctrl-t
 endfunction
 
