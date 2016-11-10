@@ -167,7 +167,7 @@ brew cask install alfred java kaleidoscope karabiner seil sourcetree slate \
 transmission flux appcleaner keepingyouawake imageoptim imagealpha charles \
 paw iterm2-nightly licecap webkit-nightly virtualbox vagrant unicodechecker \
 firefox firefoxdeveloperedition teleport vlc virtualbox-extension-pack \
-macid bartender fpp
+macid bartender
 
 # Configure QuickLook
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json \
