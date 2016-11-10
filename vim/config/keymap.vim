@@ -26,7 +26,6 @@ omap        ,                 <Plug>(easymotion-prev)
 vmap        ,                 <Plug>(easymotion-prev)
 nmap        <Leader>/         <Plug>CommentaryLine
 vmap        <Leader>/         <Plug>Commentary
-nmap        <Leader>w         <Plug>(choosewin)
 nmap<silent><Leader>,         :vertical resize 87<CR>
 nmap        ˚                 [e
 nmap        ∆                 ]e
@@ -47,8 +46,6 @@ nnoremap    <Leader>gd        :Gdiff<CR>
 nnoremap    <Leader>gr        :Gread<CR>:GitGutter<CR>
 nnoremap    <Leader>gw        :Gwrite<CR><CR>:GitGutter<CR>
 nnoremap    <Leader>gl        :Gitv --all<CR>
-nnoremap    <Leader>gh        :Manhunt<CR>
-nnoremap    <Leader>gm        :Merginal<CR>
 nnoremap <silent><Leader>p    :GitFiles<CR>
 nnoremap <silent><Leader>f    :Files<CR>
 nnoremap    <Leader>b         :Buffers<CR>
