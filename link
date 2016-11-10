@@ -82,10 +82,8 @@ touch $HOME/.hushlogin
 # Install fonts
 rm -rf $HOME/.fonts
 mkdir -p $HOME/Library/Fonts $HOME/.fonts
-unzip -o $ROOT/vendor/meslo/dist/v1.2.1/Meslo\ LG\ DZ\ v1.2.1.zip \
-  -d /tmp
-find /tmp/Meslo\ LG\ DZ\ v1.2.1 -type f -name "*.ttf" \
   -exec cp "{}" $HOME/.fonts/ \;
+
 find $ROOT/vendor/powerline-fonts -type f -name "*.*tf" \
   -exec cp "{}" $HOME/.fonts/ \;
 find $ROOT/vendor/powerline-fonts -type f -name "*.pcf.gz" \
