@@ -136,7 +136,7 @@ imagemagick --with-webp graphicsmagick --with-webp \
 ffmpeg --with-faac --with-fdk-aac --with-openssl --with-tools --with-webp \
 android-sdk aspell --with-lang-es --with-lang-en \
 weechat --with-aspell --with-curl --with-lua --with-perl --with-python --with-ruby \
-inkscape --with-poppler pandoc w3m heroku-toolbelt
+inkscape --with-poppler pandoc w3m heroku-toolbelt diff-so-fancy
 
 # Configure htop
 HTOP_VERSION=$(brew info htop | awk 'NR==1{ print $3 }')
