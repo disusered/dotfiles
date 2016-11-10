@@ -106,13 +106,15 @@ nvm alias default node
 npm install -g npm@latest
 npm update -g npm
 # vim deps
-npm install -g eslint babel babel-cli babel-eslint jsonlint jshint \
-eslint-config-metalab eslint-config-airbnb eslint-config-google \
+npm install -g  jsonlint jshint \
 eslint-plugin-filenames eslint-plugin-import eslint-plugin-jsx-a11y \
-eslint-plugin-react eslint-plugin-flow-vars eslint-config-standard-react \
-eslint-config-standard eslint-plugin-standard eslint-plugin-promise \
-eslint-plugin-lodash-fp babel-plugin-module-resolver \
+eslint-plugin-standard babel-plugin-module-resolver eslint-plugin-promise \
+eslint-plugin-react eslint-plugin-flowtype eslint-plugin-lodash-fp \
+eslint-config-standard-react eslint-config-standard \
+eslint-config-metalab eslint-config-airbnb eslint-config-google \
 flow-bin caniuse-cmd neovim-client csscomb emoj tern-fetch typescript
+
+npm install -g babel-cli babel-eslint jsonlint jshint eslint \
 # node deps
 npm install -g http-server ios-deploy ios-sim plugman term-img-cli
 
