@@ -184,7 +184,7 @@ function gitloginteractive {
     elif [ "$k" = 'ctrl-s' ]; then
       break;
     else
-      echo "$shas" | pbcopy
+      echo -n "$shas" | pbcopy
     fi
   done
 }
