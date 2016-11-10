@@ -47,6 +47,7 @@ Plug 'dhruvasagar/vim-table-mode',       { 'for': ['markdown'] }
 Plug 'MarcWeber/vim-addon-local-vimrc', { 'on': [] }
 Plug 'editorconfig/editorconfig-vim',   { 'on': [] }
 Plug 'moll/vim-node',                   { 'on': [] }
+Plug 'jreybert/vimagit',                { 'on': [] }
 Plug 'gregsexton/gitv',                 { 'on': [] } | Plug 'tpope/vim-fugitive',  { 'on': [] }
 Plug 'ternjs/tern_for_vim',             { 'on': [] }
 Plug 'facebook/vim-flow',               { 'on': [], 'do': 'npm i flow-bin -g' }
@@ -61,7 +62,7 @@ augroup conditional_load
   autocmd!
 
   if !empty(glob(getcwd().'/.git/config'))
-    call plug#load('vim-fugitive', 'gitv')
+    call plug#load('vim-fugitive', 'gitv', 'vimagit')
   endif
 
   if !empty(glob(getcwd().'/.local-vimrc'))
