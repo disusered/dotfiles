@@ -14,8 +14,6 @@
 
   call plug#end()
 
-  source $MYCONFIG/autocommands.vim
-
 " Settings =====================================================================
 set ttymouse=xterm2
 source $MYCONFIG/shared.vim

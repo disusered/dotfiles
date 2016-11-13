@@ -40,7 +40,6 @@
   Plug 'kassio/neoterm'
   call plug#end()
 
-  source $MYCONFIG/autocommands.vim
   source $MYCONFIG/n_autocommands.vim
 
 " Settings =====================================================================
