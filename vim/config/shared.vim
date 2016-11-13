@@ -21,6 +21,7 @@ source $MYCONFIG/tern.vim
 source $MYCONFIG/supertab.vim
 source $MYCONFIG/youcompleteme.vim
 source $MYCONFIG/neomake.vim
+source $MYCONFIG/vimagit.vim
 
 " config
 source $MYCONFIG/vim.vim

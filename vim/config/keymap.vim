@@ -38,7 +38,7 @@ nnoremap    Q                 <nop>
 nnoremap    <Leader><Enter>   :w<CR>
 nnoremap    <Leader>q         :bp\|bd #<CR>
 nnoremap    <Leader>md        :MarkedOpen!<CR>
-nnoremap    <Leader>gs        :Gstatus<CR>
+nnoremap    <Leader>gs         :Magit<CR>
 nnoremap    <Leader>ga        :Gcommit --amend<CR>
 nnoremap    <Leader>gc        :Gcommit -v -q<CR>
 nnoremap    <Leader>gt        :Gcommit -v -q %:p<CR>
