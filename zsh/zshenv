@@ -6,16 +6,20 @@ export KEYTIMEOUT=1
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
-export BROWSER='open'
 export EDITOR='vim'
 export PAGER='less'
 export LESS='-X -F -g -i -M -R -S -w -z-4'
 
-export ANDROID_HOME=/usr/local/opt/android-sdk
-export GOPATH="${HOME}/Development/SDK/gopath"
-export JAVA_HOME=`/usr/libexec/java_home`
-export VAGRANT_DEFAULT_PROVIDER=virtualbox
-
 export FZF_DEFAULT_OPTS='--color hl:2,hl+:2,fg:8,fg+:15,bg+:0,info:8,prompt:5,spinner:135,pointer:12,marker:2'
 export FZF_DEFAULT_COMMAND='ag -l -g ""'
 export FZF_COMPLETION_OPTS=''
+
+case $(uname) in
+  'Darwin')
+    export BROWSER='open'
+    export JAVA_HOME=`/usr/libexec/java_home`
+    export GOPATH="${HOME}/Development/SDK/gopath"
+    export ANDROID_HOME=/usr/local/opt/android-sdk
+    export VAGRANT_DEFAULT_PROVIDER=virtualbox
+    ;;
+esac

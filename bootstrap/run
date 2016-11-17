@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ROOT="${HOME}/.dotfiles/bootstrap"
+
+case $(uname) in
+  'Linux')
+    source $ROOT/dependencies
+    source $ROOT/symlink
+    ;;
+  'Darwin')
+    source $ROOT/dependencies
+    source $ROOT/symlink
+    source $ROOT/brew
+    ;;
+esac

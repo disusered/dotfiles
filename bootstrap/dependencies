@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Neovim
+pip install --user --upgrade setuptools
+pip install --user --upgrade pip
+pip install --user --upgrade --force-reinstall neovim
+
+pip2 install --user --upgrade setuptools
+pip2 install --user --upgrade pip
+pip2 install --user --upgrade --force-reinstall neovim
+
+pip3 install --user --upgrade setuptools
+pip3 install --user --upgrade pip
+pip3 install --user --upgrade --force-reinstall neovim
+
+# Python Packages
+pip install requests websocket-client pync pafy rainbowstream
+
+# Ruby packages
+gem install mdless
+
+# Install nvm
+git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
+source $HOME/.nvm/nvm.sh
+nvm install node
+nvm alias default node
+
+# Install npm and packages
+npm install -g npm@latest
+npm update -g npm
+
+# Neo/vim deps
+npm install -g babel-cli babel-eslint jsonlint jshint eslint jsonlint jshint \
+eslint-plugin-filenames eslint-plugin-import eslint-plugin-jsx-a11y \
+eslint-plugin-standard babel-plugin-module-resolver eslint-plugin-promise \
+eslint-plugin-react eslint-plugin-flowtype eslint-plugin-lodash-fp \
+eslint-config-standard-react eslint-config-standard \
+eslint-config-metalab eslint-config-airbnb eslint-config-google \
+flow-bin caniuse-cmd neovim-client csscomb emoj tern-fetch typescript \
+diff-so-fancy
+
+# node deps
+npm install -g http-server plugman term-img-cli
+
+# Mac deps
+case $(uname) in
+  'Darwin')
+    npm install -g ios-deploy ios-sim
+    ;;
+esac

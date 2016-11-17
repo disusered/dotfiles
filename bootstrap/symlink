@@ -1,0 +1,122 @@
+#!/bin/bash
+
+# Paths
+ROOT="${HOME}/.dotfiles"
+WEECHAT="${ROOT}/weechat"
+
+# Update submodules
+git submodule update --init --recursive
+
+# Symlink zsh configs and install
+touch $HOME/.zshrc $HOME/.zshenv
+rm $HOME/.zshrc $HOME/.zshenv
+ln -s $ROOT/zsh/zshrc $HOME/.zshrc
+ln -s $ROOT/zsh/zshenv $HOME/.zshenv
+case $(uname) in
+  'Darwin')
+    sudo chpass -s $(which zsh) $USER
+    ;;
+esac
+
+# Symlink Tmux config
+touch $HOME/.tmux.conf
+mkdir -p $HOME/.tmux
+rm -rf $HOME/.tmux.conf $HOME/.tmux
+mkdir -p $HOME/.tmux/plugins
+ln -s $ROOT/tmux/tmux.conf $HOME/.tmux.conf
+ln -s $ROOT/vendor/tpm $HOME/.tmux/plugins/tpm
+
+# Symlink Git config
+touch $HOME/.gitconfig $HOME/.gitignore_global
+rm $HOME/.gitconfig $HOME/.gitignore_global
+ln -s $ROOT/git/gitconfig $HOME/.gitconfig
+ln -s $ROOT/git/gitignore_global $HOME/.gitignore_global
+
+# Symlink Slate config
+case $(uname) in
+  'Darwin')
+    rm $HOME/.slate $HOME/.slate.js
+    ln -s $ROOT/slate/slate.js $HOME/.slate.js
+    ;;
+esac
+
+# Symlink Neo/Vim config and install plugins
+touch $HOME/.vimrc $HOME/.gvimrc
+mkdir -p $ROOT/vim/autoload $HOME/.vim $HOME/.config/nvim
+rm -rf $ROOT/vim/autoload/* $HOME/.vim $HOME/.config/nvim $HOME/.vimrc $HOME/.gvimrc
+ln -s $ROOT/vendor/vim-plug/plug.vim $ROOT/vim/autoload/plug.vim
+ln -s $ROOT/vim $HOME/.vim
+ln -s $ROOT/vim/vimrc $HOME/.vimrc
+ln -s $ROOT/vim/gvimrc $HOME/.gvimrc
+ln -s $ROOT/vim $HOME/.config/nvim
+
+# iTerm ^H fix
+case $(uname) in
+  'Darwin')
+    FIX='s/kbs=^[hH]/kbs=\\177/';
+    infocmp $TERM | sed $FIX > $ROOT/vendor/$TERM.ti
+    infocmp screen-256color | sed $FIX > $ROOT/vendor/screen-256color.ti
+    tic $ROOT/vendor/$TERM.ti
+    tic $ROOT/vendor/screen-256color.ti
+    ;;
+esac
+
+# Symlink Ag config
+rm $HOME/.agignore
+ln -s $ROOT/ag/agignore $HOME/.agignore
+
+# Hide last-logged-in message on new terminals
+touch $HOME/.hushlogin
+
+# Install fonts
+case $(uname) in
+  'Darwin')
+    rm -rf $HOME/.fonts
+    mkdir -p $HOME/Library/Fonts $HOME/.fonts
+      -exec cp "{}" $HOME/.fonts/ \;
+
+    find $ROOT/vendor/powerline-fonts -type f -name "*.*tf" \
+      -exec cp "{}" $HOME/.fonts/ \;
+    find $ROOT/vendor/powerline-fonts -type f -name "*.pcf.gz" \
+      -exec cp "{}" $HOME/.fonts/ \;
+    find $HOME/.fonts -type f -name "*.*tf" \
+      -exec cp "{}" $HOME/Library/Fonts/ \;
+    find $ROOT/vendor/nerd-fonts/patched-fonts/SourceCodePro/ \
+      -type f -name "*.*tf" -exec cp "{}" $HOME/Library/Fonts/ \;
+    fc-cache -vf ~/.fonts
+    ;;
+esac
+
+# Configure htop
+case $(uname) in
+  'Darwin')
+      HTOP_VERSION=$(brew info htop | awk 'NR==1{ print $3 }')
+      sudo chown root:wheel /usr/local/Cellar/htop-osx/$HTOP_VERSION/bin/htop
+      sudo chmod u+s /usr/local/Cellar/htop-osx/$HTOP_VERSION/bin/htop
+      ;;
+esac
+
+# Rainbow
+ln -s $ROOT/rainbow/rainbow_config.json $HOME/.rainbow_config.json
+
+# Weechat
+rm -rf $HOME/.weechat
+ln -s $WEECHAT $HOME/.weechat
+
+# Elixir
+rm -rf $HOME/.iex.exs
+ln -s $ROOT/iex/iex.exs $HOME/.iex.exs
+
+# Enable X extension for Slate/xdotool
+case $(uname) in
+  'Darwin')
+    defaults write org.x.X11 enable_test_extensions -boolean true
+    ;;
+esac
+
+# Install ranger
+rm $HOME/.config/ranger
+ln -s $ROOT/ranger $HOME/.config/ranger
+
+# Setup imgcat
+chmod +x $ROOT/bin/imgcat
