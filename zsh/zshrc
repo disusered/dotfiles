@@ -1,21 +1,36 @@
 source "${HOME}/.dotfiles/vendor/zgen/zgen.zsh"
 
 # Set path
-path=(
-  /usr/local/bin
-  /usr/local/sbin
-  $HOME/Development/SDK/android-sdk/tools
-  $HOME/Development/SDK/android-sdk/platform-tools
-  $HOME/.dotfiles/bin
-  /usr/local/Cellar/node/7.0.0/bin # $(npm config --global get prefix)/bin
-  $path
-)
+case $(uname) in
+  'Darwin')
+    path=(
+      /usr/local/bin
+      /usr/local/sbin
+      $HOME/Development/SDK/android-sdk/tools
+      $HOME/Development/SDK/android-sdk/platform-tools
+      $HOME/.dotfiles/bin
+      /usr/local/Cellar/node/7.0.0/bin # $(npm config --global get prefix)/bin
+      $path
+    )
+    ;;
+  'Linux')
+    path=(
+      $HOME/.dotfiles/bin
+      $HOME/.rbenv/bin
+      $path
+    )
+    ;;
+esac
 
 # Set function paths
-fpath=(
-  /usr/local/share/zsh/site-functions
-  $fpath
-)
+case $(uname) in
+  'Darwin')
+    fpath=(
+      /usr/local/share/zsh/site-functions
+      $fpath
+    )
+    ;;
+esac
 
 # Check if there's no init script
 if ! zgen saved; then
@@ -69,8 +84,6 @@ alias c='clear'
 alias r='ranger'
 alias d='dict'
 alias j="selectmark"
-alias p='preview'
-alias flushdns='sudo discoveryutil udnsflushcaches'
 alias md='mdless'
 alias chat='weechat'
 alias twitter='rainbowstream -iot'
@@ -78,8 +91,6 @@ alias preview='term-img'
 alias t='twitter'
 alias cdg='cd-gitroot'
 alias top='htop'
-alias pbc='pbcopy'
-alias pbp='pbpaste'
 alias ztime='/usr/bin/time zsh -i -c exit'
 alias used='ncdu'
 alias ag='ag --pager "less -R" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34'
@@ -87,7 +98,6 @@ alias http='http --style vim'
 alias help='mdless $(ls ~/.dotfiles/help/ | f --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%)'
 alias edit='nvim $(ls ~/.dotfiles/help/ | f --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%)'
 alias magit="nvim -c MagitOnly"
-alias fonts='fc-list | cut -f2 -d: | sort -u'
 alias g='git'
 alias grl="gitrefloginteractive"
 alias gl="gitloginteractive"
@@ -111,13 +121,24 @@ alias gf='g fetch'
 alias gfm='g pull'
 alias gr='g reset'
 alias gco='g checkout'
-alias ls='ls -G'
 alias ll='ls -l'
 alias la='ls -la'
-alias repl-babel='nesh -b'
-alias repl-coffee='nesh -c'
-alias repl-cljs='planck'
 alias colors='( x=`tput op` y=`printf %$((${COLUMNS}-6))s`;for i in {0..256};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done; )'
+
+# Mac Aliases
+case $(uname) in
+  'Darwin')
+    alias ls='ls -G'
+    alias p='preview'
+    alias flushdns='sudo discoveryutil udnsflushcaches'
+    alias pbc='pbcopy'
+    alias pbp='pbpaste'
+    alias fonts='fc-list | cut -f2 -d: | sort -u'
+    ;;
+  'Linux')
+    alias ls='ls --color'
+    alias tmux='tmux-next'
+esac
 
 # Temporary files
 if [[ ! -d "$TMPDIR" ]]; then
@@ -212,7 +233,7 @@ function selectmark {
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
 
-# urxvt modal cursor
+# modal cursor
 function zle-keymap-select zle-line-init {
   # change cursor shape in iTerm2
   case $KEYMAP in
@@ -317,7 +338,11 @@ zle -N zle-line-finish
 zle -N zle-keymap-select
 
 # Help
-unalias run-help
+case $(uname) in
+  'Darwin')
+    unalias run-help
+    ;;
+esac
 autoload run-help
 HELPDIR=/usr/local/share/zsh/help
 

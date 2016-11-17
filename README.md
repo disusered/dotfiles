@@ -2,14 +2,14 @@
 
 ## Setup
 
+```bash
+$ git clone --recursive https://github.com/disusered/dotfiles.git $HOME/.dotfiles
+$ ~/.dotfiles/run
+```
+
+## Mac
+
 - Install XCode and open once to accept license
-
-- Add public key to [Github](https://github.com/settings/ssh) and [BitBucket](https://bitbucket.org/account/user/disusered/ssh-keys/)
-
-- Install everything:
-    ```bash
-    $HOME/.dotfiles/link
-    ```
 
 - Configure iTerm
   ![iTerm2 Configuration](https://raw.githubusercontent.com/disusered/dotfiles/docs/images/iterm.png "iTerm2 Configuration")
