@@ -21,7 +21,6 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'junegunn/vim-peekaboo'
 Plug 'SirVer/ultisnips'
 Plug 'Konfekt/FastFold'
-Plug 'ervandew/supertab'
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'ap/vim-css-color'
 Plug 'jaawerth/neomake-local-eslint-first' | Plug 'benekastah/neomake'
@@ -51,7 +50,6 @@ Plug 'jreybert/vimagit',                { 'on': [] }
 Plug 'gregsexton/gitv',                 { 'on': [] } | Plug 'tpope/vim-fugitive',  { 'on': [] }
 Plug 'ternjs/tern_for_vim',             { 'on': [] }
 Plug 'flowtype/vim-flow',               { 'on': [], 'do': 'npm i flow-bin -g' }
-Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'javascript.jsx', 'html'], 'do': './install.py --tern-completer' }
 
 augroup user_ycm
   autocmd!
