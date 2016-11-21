@@ -18,8 +18,6 @@ source $MYCONFIG/nerdtree.vim
 source $MYCONFIG/tablemode.vim
 source $MYCONFIG/fzf.vim
 source $MYCONFIG/tern.vim
-source $MYCONFIG/supertab.vim
-source $MYCONFIG/youcompleteme.vim
 source $MYCONFIG/neomake.vim
 source $MYCONFIG/vimagit.vim
 
