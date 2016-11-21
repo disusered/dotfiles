@@ -37,7 +37,7 @@ eslint-plugin-react eslint-plugin-flowtype eslint-plugin-lodash-fp \
 eslint-config-standard-react eslint-config-standard \
 eslint-config-metalab eslint-config-airbnb eslint-config-google \
 flow-bin caniuse-cmd neovim-client csscomb emoj tern-fetch typescript \
-diff-so-fancy
+diff-so-fancy tern
 
 # node deps
 npm install -g http-server plugman term-img-cli
