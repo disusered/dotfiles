@@ -24,8 +24,8 @@ omap        ;                 <Plug>(easymotion-next)
 nmap        ,                 <Plug>(easymotion-prev)
 omap        ,                 <Plug>(easymotion-prev)
 vmap        ,                 <Plug>(easymotion-prev)
-nmap        <Leader>/         <Plug>CommentaryLine
-vmap        <Leader>/         <Plug>Commentary
+nmap        <Leader>/         gcc
+vmap        <Leader>/         gc
 nmap<silent><Leader>,         :vertical resize 87<CR>
 nmap        ˚                 [e
 nmap        ∆                 ]e

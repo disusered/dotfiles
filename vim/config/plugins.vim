@@ -25,12 +25,12 @@ Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'ap/vim-css-color'
 Plug 'jaawerth/neomake-local-eslint-first' | Plug 'benekastah/neomake'
 
+Plug 'tomtom/tcomment_vim'
 
 " load on command
 Plug 'simnalamburt/vim-mundo',     { 'on': 'MundoToggle' }
 Plug 'Wolfy87/vim-enmasse',        { 'on': 'EnMasse' }
 Plug 'junegunn/vim-easy-align',    { 'on': ['<Plug>(EasyAlign)', '<Plug>(LiveEasyAlign)'] }
-Plug 'tpope/vim-commentary',       { 'on': ['<Plug>Commentary', '<Plug>CommentaryLine']}
 Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'tpope/vim-repeat' | Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-s2)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
 
