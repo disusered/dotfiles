@@ -50,6 +50,9 @@ set foldmethod=syntax
 set spellfile=$HOME/.dotfiles/vim/spellfile.utf-8.add
 set synmaxcol=1024
 
+set undodir=$HOME/.dotfiles/vim/undo
+set undofile
+
 filetype plugin on
 filetype indent on
 syntax enable
