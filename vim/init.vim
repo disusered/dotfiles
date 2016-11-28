@@ -1,5 +1,6 @@
 " Init =========================================================================
   set nocompatible
+  set inccommand=split
   filetype off
 
   set termguicolors
