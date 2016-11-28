@@ -23,7 +23,7 @@ Plug 'SirVer/ultisnips'
 Plug 'Konfekt/FastFold'
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'ap/vim-css-color'
-Plug 'jaawerth/neomake-local-eslint-first' | Plug 'benekastah/neomake'
+Plug 'benekastah/neomake'
 
 Plug 'tomtom/tcomment_vim'
 
