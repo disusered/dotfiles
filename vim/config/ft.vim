@@ -3,7 +3,6 @@ augroup user_ft
   autocmd FileType magit set foldenable
   autocmd FileType make set noexpandtab
   autocmd FileType gitconfig set noexpandtab
-  autocmd FileType scss set commentstring=/*\ %s\ */
 
   autocmd BufNewFile,BufRead {.jshintrc,.tern-project,.jscsrc,.eslintrc,.babelrc} set ft=json
   autocmd BufNewFile,BufRead {*.md,*.markdown} set filetype=markdown
