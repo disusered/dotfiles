@@ -1,8 +1,8 @@
-snippet use "Use Strict"
+snippet use "Use Strict" b
 'use strict';
 endsnippet
 
-snippet jdh "Javadoc header"
+snippet jdh "Javadoc header" b
 /**
  * `!p snip.rv = fn`
  *
@@ -13,13 +13,13 @@ snippet jdh "Javadoc header"
  */
 endsnippet
 
-snippet if "A simple if condition"
+snippet if "A simple if condition" b
 if (${1:expression}) {
 	$0
 }
 endsnippet
 
-snippet ife "A simple if else condition"
+snippet ife "A simple if else condition" b
 if (${1:expression}) {
 	$4
 } else ${2:if (${3:bar}) }{
@@ -27,7 +27,7 @@ if (${1:expression}) {
 }
 endsnippet
 
-snippet sw "Switch condition"
+snippet sw "Switch condition" b
 switch (${1:expression}) {
 	case ${2:alpha}:
 		${5:console.log($2);}
@@ -63,7 +63,13 @@ snippet iife "Immediately Invoked Function Expression"
 })($2);
 endsnippet
 
-snippet fe "Function expression"
+snippet =>i "Immediately Invoked Fat Arrow"
+(($1) => {
+  $0
+})($2);
+endsnippet
+
+snippet fe "Function expression" b
 var ${1:name} = function ${1:name}(${2}){
 	$0
 }
@@ -85,12 +91,12 @@ snippet ce "Log to error console"
 console.error(${0});
 endsnippet
 
-snippet us "Use strict definition"
-'use strict';
+snippet flow "Flow type checking" b
+/* @flow */
 endsnippet
 
-snippet flow "Flow type checking"
-/* @flow */
+snippet R "React"
+React
 endsnippet
 
 snippet rpta "PropTypes.Array" i
@@ -215,7 +221,8 @@ require('$0');
 endsnippet
 
 snippet i "import"
-import $1 from '$0';
+import ${2:`!p snip.rv = t[1]`} from '$1';
+$0
 endsnippet
 
 snippet v "var"
@@ -226,7 +233,7 @@ snippet c "const"
 const ${1:name} = $0
 endsnippet
 
-snippet cp "const with destructuring"
+snippet c} "const with destructuring"
 const { ${1:name} } = $0
 endsnippet
 
@@ -235,13 +242,13 @@ undefined$0
 endsnippet
 
 snippet it "it should..."
-it('${1:should...}', function () {
+it('${1:should...}', () => {
 	$0
 });
 endsnippet
 
 snippet des "describe"
-describe('$1', function () {
+describe('$1', () => {
 	$0
 });
 endsnippet
@@ -252,24 +259,41 @@ const actual = $0;
 expect(actual).to.eq(expected);
 endsnippet
 
+snippet ava "AVA" b
+import test from 'ava';
+import $1 from '$2';
+
+test('${3:title}', t => {
+	t.is($1(), '$4');
+});
+$0
+endsnippet
+
+snippet test " AVA Test" b
+test('${1:title}', t => {
+	$2
+});
+$0
+endsnippet
+
 snippet d "debugger;"
 debugger; // eslint-disable-line
 endsnippet
 
-snippet di "eslint-disable-line"
-// eslint-disable-line
+snippet esd "eslint-disable"
+/* eslint-disable ${0:rule }*/
 endsnippet
 
 snippet me "module.exports"
 module.exports = $0;
 endsnippet
 
-snippet exd "export default"
-export default $0
+snippet ex "export"
+export $0
 endsnippet
 
-snippet ex "export default"
-export $0
+snippet exd "export default"
+export default $0
 endsnippet
 
 snippet react_render "ReactDOM render component"
