@@ -12,14 +12,13 @@
   source $MYCONFIG/ft.vim
   source $MYCONFIG/plugins.vim
 
-  function! TernInstall(info)
-      if ( a:info.status ==# 'installed' || a:info.force ) && executable('npm')
-          call system('cd ./pythonx/completers/javascript && npm install')
-      endif
-  endfunction
-
   Plug 'ervandew/supertab'
-  Plug 'maralla/completor.vim', { 'do': function('TernInstall') }
+  Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'javascript.jsx', 'html'], 'do': './install.py --tern-completer' }
+
+  augroup user_ycm
+    autocmd!
+    autocmd User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
+  augroup END
 
   call plug#end()
 
@@ -29,4 +28,5 @@ source $MYCONFIG/shared.vim
 
 " vim specific
 source $MYCONFIG/v_keymap.vim
-source $MYCONFIG/v_completor.vim
+source $MYCONFIG/v_supertab.vim
+source $MYCONFIG/v_youcompleteme.vim
