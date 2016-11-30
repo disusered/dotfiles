@@ -51,11 +51,6 @@ Plug 'gregsexton/gitv',                 { 'on': [] } | Plug 'tpope/vim-fugitive'
 Plug 'ternjs/tern_for_vim',             { 'on': [] }
 Plug 'flowtype/vim-flow',               { 'on': [], 'do': 'npm i flow-bin -g' }
 
-augroup user_ycm
-  autocmd!
-  autocmd User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
-augroup END
-
 augroup conditional_load
   autocmd!
 
