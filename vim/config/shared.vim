@@ -18,7 +18,7 @@ source $MYCONFIG/nerdtree.vim
 source $MYCONFIG/tablemode.vim
 source $MYCONFIG/fzf.vim
 source $MYCONFIG/tern.vim
-source $MYCONFIG/neomake.vim
+source $MYCONFIG/ale.vim
 source $MYCONFIG/vimagit.vim
 
 " config
