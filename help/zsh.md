@@ -5,7 +5,6 @@ zsh
 |---------|-----------------------------------|
 | adbi    | Interactive Android Device Bridge |
 | C-s     | Open selected device's shell      |
-| t       | Rainbowstream: Twitter client     |
 | r       | Ranger: Explore current directory |
 | use     | Get disk usage information        |
 | hs      | Local http server                 |

@@ -86,7 +86,6 @@ alias d='dict'
 alias j="selectmark"
 alias md='mdless'
 alias chat='weechat'
-alias twitter='rainbowstream -iot'
 alias preview='term-img'
 alias t='twitter'
 alias cdg='cd-gitroot'
