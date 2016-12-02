@@ -65,7 +65,7 @@
 	default = upstream
 [diff]
 	tool = Kaleidoscope
-	compactionHeuristic = true
+	indentHeuristic = true
 [merge]
 	tool = Kaleidoscope
 [difftool]
