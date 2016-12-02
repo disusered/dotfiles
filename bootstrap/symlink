@@ -18,6 +18,14 @@ case $(uname) in
     ;;
 esac
 
+# Symlink hammerspoon config
+case $(uname) in
+  'Darwin')
+    rm -rf $HOME/.hammerspoon
+    ln -s $ROOT/hammerspoon $HOME/.hammerspoon
+    ;;
+esac
+
 # Symlink Tmux config
 touch $HOME/.tmux.conf
 mkdir -p $HOME/.tmux
@@ -31,14 +39,6 @@ touch $HOME/.gitconfig $HOME/.gitignore_global
 rm $HOME/.gitconfig $HOME/.gitignore_global
 ln -s $ROOT/git/gitconfig $HOME/.gitconfig
 ln -s $ROOT/git/gitignore_global $HOME/.gitignore_global
-
-# Symlink Slate config
-case $(uname) in
-  'Darwin')
-    rm $HOME/.slate $HOME/.slate.js
-    ln -s $ROOT/slate/slate.js $HOME/.slate.js
-    ;;
-esac
 
 # Symlink Neo/Vim config and install plugins
 touch $HOME/.vimrc $HOME/.gvimrc
@@ -62,6 +62,7 @@ case $(uname) in
 esac
 
 # Symlink Ag config
+touch $HOME/.agignore
 rm $HOME/.agignore
 ln -s $ROOT/ag/agignore $HOME/.agignore
 
@@ -71,17 +72,18 @@ touch $HOME/.hushlogin
 # Install fonts
 case $(uname) in
   'Darwin')
-    rm -rf $HOME/.fonts
-    mkdir -p $HOME/Library/Fonts $HOME/.fonts
-      -exec cp "{}" $HOME/.fonts/ \;
+    mkdir -p $ROOT/vendor/fonts/
+    mkdir -p $HOME/Library/Fonts
 
-    find $ROOT/vendor/powerline-fonts -type f -name "*.*tf" \
-      -exec cp "{}" $HOME/.fonts/ \;
-    find $ROOT/vendor/powerline-fonts -type f -name "*.pcf.gz" \
-      -exec cp "{}" $HOME/.fonts/ \;
-    find $HOME/.fonts -type f -name "*.*tf" \
-      -exec cp "{}" $HOME/Library/Fonts/ \;
-    find $ROOT/vendor/nerd-fonts/patched-fonts/SourceCodePro/ \
+    wget https://github.com/i-tu/Hasklig/releases/download/v1.0-beta/Hasklig-1.0-Beta.zip \
+      -o $ROOT/vendor/fonts/hasklig.zip
+    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v0.8.0/SourceCodePro.zip \
+      -o $ROOT/vendor/fonts/iconfont.zip
+
+    unzip $ROOT/vendor/fonts/hasklig.zip
+    unzip $ROOT/vendor/fonts/iconfont.zip
+
+    find $ROOT/vendor/fonts/ \
       -type f -name "*.*tf" -exec cp "{}" $HOME/Library/Fonts/ \;
     fc-cache -vf ~/.fonts
     ;;
@@ -96,14 +98,13 @@ case $(uname) in
       ;;
 esac
 
-# Rainbow
-ln -s $ROOT/rainbow/rainbow_config.json $HOME/.rainbow_config.json
-
 # Weechat
+touch $HOME/.weechat
 rm -rf $HOME/.weechat
 ln -s $WEECHAT $HOME/.weechat
 
 # Elixir
+touch $HOME/.iex.exs
 rm -rf $HOME/.iex.exs
 ln -s $ROOT/iex/iex.exs $HOME/.iex.exs
 
@@ -115,7 +116,9 @@ case $(uname) in
 esac
 
 # Install ranger
-rm $HOME/.config/ranger
+mkdir -p $HOME/.config/ranger
+rm -rf $HOME/.config/ranger
+mkdir -p $HOME/.config/ranger
 ln -s $ROOT/ranger $HOME/.config/ranger
 
 # Setup imgcat

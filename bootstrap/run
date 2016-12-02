@@ -8,8 +8,8 @@ case $(uname) in
     source $ROOT/symlink
     ;;
   'Darwin')
+    source $ROOT/macos
     source $ROOT/dependencies
     source $ROOT/symlink
-    source $ROOT/brew
     ;;
 esac

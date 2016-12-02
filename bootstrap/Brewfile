@@ -1,0 +1,106 @@
+# taps
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+tap 'homebrew/bundle'
+tap 'neovim/neovim'
+
+# base
+brew 'mas'
+brew 'git'
+brew 'git-flow'
+brew 'ag'
+brew 'wget'
+brew 'zsh'
+brew 'tmux'
+brew 'node'
+brew 'python'
+brew 'ruby'
+brew 'rbenv'
+brew 'ruby-build'
+brew 'python3'
+brew 'elixir'
+brew 'zplug'
+brew 'openconnect'
+brew 'lua', args: ['universal', 'with-completion']
+brew 'luajit', args: ['with-52compat']
+brew 'vim', args: ['override-system-vi', 'with-lua', 'with-luajit', 'with-tcl']
+brew 'ruby'
+brew 'fzf', args: ['HEAD']
+brew 'neovim', args: ['HEAD']
+
+# utilities
+brew 'watch'
+brew 'tree'
+brew 'ncdu'
+brew 'htop'
+brew 'ranger'
+brew 'jq'
+brew 'httpie'
+brew 'w3m'
+brew 'heroku-toolbelt'
+brew 'weechat', args: ['with-aspell', 'with-curl', 'with-lua', 'with-perl', 'with-python', 'with-ruby']
+
+# dependencies
+brew 'atool'
+brew 'mediainfo'
+brew 'highlight'
+brew 'gcc'
+brew 'imagemagick', args: ['with-webp']
+brew 'graphicsmagick', args: ['with-webp']
+brew 'ffmpeg', args: ['with-faac', 'with-fdk-aac', 'with-openssl', 'with-tools', 'with-webp']
+brew 'aspell', args: ['with-lang-es', 'with-lang-en']
+brew 'pandoc'
+
+# cordova
+brew 'ant'
+brew 'gradle'
+brew 'android-sdk'
+
+# casks
+cask '1password-beta'
+cask 'iterm2-nightly'
+cask 'safari-technology-preview'
+cask 'hammerspoon'
+cask 'dropbox'
+cask 'appcleaner'
+cask 'imageoptim'
+cask 'imagealpha'
+cask 'paw'
+cask 'kaleidoscope'
+cask 'sourcetree'
+cask 'transmission'
+cask 'licecap'
+cask 'vlc'
+cask 'bartender'
+cask 'firefox'
+cask 'firefoxdeveloperedition'
+cask 'google-chrome'
+cask 'google-chrome-beta'
+cask 'google-chrome-canary'
+cask 'onyx'
+cask 'karabiner-elements'
+cask 'java'
+cask 'xquartz-beta'
+cask 'skype'
+cask 'dash'
+cask 'monolingual'
+
+# quicklook
+cask 'qlcolorcode'
+cask 'qlstephen'
+cask 'qlmarkdown'
+cask 'quicklook-json'
+cask 'qlprettypatch'
+cask 'quicklook-csv'
+cask 'qlimagesize'
+cask 'webpquicklook'
+cask 'suspicious-package'
+cask 'betterzipql'
+
+# mac app store
+mas 'Xcode', id: 497799835
+mas 'Copied', id: 1026349850
+mas 'xScope 4', id: 889428659
+mas 'Sim Daltonism', id: 693112260
+mas 'The Unarchiver', id: 425424353
+mas 'Slack', id: 803453959

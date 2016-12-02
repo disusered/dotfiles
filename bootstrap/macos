@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Install Homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+source $HOME/.bash_profile
+
+# Install dependencies
+cd bootstrap && brew bundle
+
+# Enable text selection in QuickLook
+defaults write com.apple.finder QLEnableTextSelection -bool true && killall Finder
+
+# Set a blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 1
+
+# Set a shorter Delay until key repeat
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+# Add a context menu item for showing the Web Inspector in web views
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# Show the ~/Library folder
+chflags nohidden ~/Library
