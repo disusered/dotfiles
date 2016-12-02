@@ -93,8 +93,8 @@ esac
 case $(uname) in
   'Darwin')
       HTOP_VERSION=$(brew info htop | awk 'NR==1{ print $3 }')
-      sudo chown root:wheel /usr/local/Cellar/htop-osx/$HTOP_VERSION/bin/htop
-      sudo chmod u+s /usr/local/Cellar/htop-osx/$HTOP_VERSION/bin/htop
+      sudo chown root:wheel /usr/local/Cellar/htop/$HTOP_VERSION/bin/htop
+      sudo chmod u+s /usr/local/Cellar/htop/$HTOP_VERSION/bin/htop
       ;;
 esac
 
