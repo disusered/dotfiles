@@ -24,6 +24,7 @@ git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git check
 source $HOME/.nvm/nvm.sh
 nvm install node
 nvm alias default node
+nvm use system
 
 # Install npm and packages
 npm install -g npm@latest
