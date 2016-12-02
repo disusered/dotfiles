@@ -76,12 +76,12 @@ case $(uname) in
     mkdir -p $HOME/Library/Fonts
 
     wget https://github.com/i-tu/Hasklig/releases/download/v1.0-beta/Hasklig-1.0-Beta.zip \
-      -o $ROOT/vendor/fonts/hasklig.zip
+      -O $ROOT/vendor/fonts/hasklig.zip
     wget https://github.com/ryanoasis/nerd-fonts/releases/download/v0.8.0/SourceCodePro.zip \
-      -o $ROOT/vendor/fonts/iconfont.zip
+      -O $ROOT/vendor/fonts/iconfont.zip
 
-    unzip $ROOT/vendor/fonts/hasklig.zip
-    unzip $ROOT/vendor/fonts/iconfont.zip
+    unzip $ROOT/vendor/fonts/hasklig.zip -d $ROOT/vendor/fonts/
+    unzip $ROOT/vendor/fonts/iconfont.zip -d $ROOT/vendor/fonts/
 
     find $ROOT/vendor/fonts/ \
       -type f -name "*.*tf" -exec cp "{}" $HOME/Library/Fonts/ \;

@@ -7,9 +7,6 @@
 [submodule "vendor/zgen"]
 	path = vendor/zgen
 	url = https://github.com/tarjoilija/zgen.git
-[submodule "vendor/nerd-fonts"]
-	path = vendor/nerd-fonts
-	url = https://github.com/ryanoasis/nerd-fonts.git
 [submodule "vendor/tpm"]
 	path = vendor/tpm
 	url = https://github.com/tmux-plugins/tpm
