@@ -101,7 +101,6 @@ cask 'betterzipql'
 
 # mac app store
 mas 'Xcode', id: 497799835
-mas 'Copied', id: 1026349850
 mas 'xScope 4', id: 889428659
 mas 'Sim Daltonism', id: 693112260
 mas 'The Unarchiver', id: 425424353
