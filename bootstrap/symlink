@@ -26,6 +26,17 @@ case $(uname) in
     ;;
 esac
 
+# Symlink karabiner-elements config
+case $(uname) in
+  'Darwin')
+    mkdir -p $HOME/.karabiner.d/configuration/
+    rm -rf $HOME/.karabiner.d
+    mkdir -p $HOME/.karabiner.d/configuration/
+    touch $HOME/.karabiner.d/configuration/
+    ln -s $ROOT/karabiner/karabiner.json $HOME/.karabiner.d/configuration/
+    ;;
+esac
+
 # Symlink Tmux config
 touch $HOME/.tmux.conf
 mkdir -p $HOME/.tmux
