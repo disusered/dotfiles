@@ -58,6 +58,7 @@ brew 'gradle'
 brew 'android-sdk'
 
 # casks
+cask 'alfred'
 cask '1password-beta'
 cask 'iterm2-nightly'
 cask 'safari-technology-preview'
