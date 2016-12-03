@@ -1,4 +1,4 @@
-source "${HOME}/.dotfiles/vendor/zgen/zgen.zsh"
+source $ZPLUG_HOME/init.zsh
 
 # Set path
 case $(uname) in
@@ -32,30 +32,33 @@ case $(uname) in
     ;;
 esac
 
-# Check if there's no init script
-if ! zgen saved; then
-  echo "Creating a zgen save"
+# plugins
+zplug 'junegunn/fzf', use:"shell/*.zsh"
+zplug 'lukechilds/zsh-nvm'
+zplug 'mollifier/cd-gitroot'
+zplug 'zsh-users/zsh-history-substring-search'
 
-  # plugins
-  zgen load zsh-users/zsh-syntax-highlighting
-  zgen load zsh-users/zsh-history-substring-search
-  zgen load mollifier/cd-gitroot
-  zgen load junegunn/fzf shell
-  zgen load lukechilds/zsh-nvm
+# zsh-syntax-highlighting must be loaded after executing compinit
+# command and sourcing other plugins
+zplug "zsh-users/zsh-syntax-highlighting", nice:10
 
-  # completions
-  zgen load zsh-users/zsh-completions src
+# completions
+zplug "zsh-users/zsh-completions"
 
-  # theme
-  zgen load mafredri/zsh-async # required for pure
-  zgen load sindresorhus/pure
+# theme
+zplug "mafredri/zsh-async", on:"sindresorhus/pure"
+zplug "sindresorhus/pure", use:"pure.zsh"
 
-  # save all to init script
-  zgen save
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
 fi
 
 # Autoload modules
-# autoload -U compinit && compinit
+autoload -U compinit && compinit
 
 # History
 SAVEHIST=10000
@@ -329,7 +332,7 @@ bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 
 # Autosuggest
-bindkey '^T' autosuggest-toggle
+# bindkey '^T' autosuggest-toggle
 bindkey '^n' vi-forward-word
 
 zle -N zle-line-init
@@ -350,3 +353,6 @@ HELPDIR=/usr/local/share/zsh/help
 
 # rbenv
 eval "$(rbenv init -)"
+
+# Initialize zplug
+zplug load --verbose

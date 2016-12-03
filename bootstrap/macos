@@ -7,6 +7,9 @@ source $HOME/.bash_profile
 # Install dependencies
 cd bootstrap && brew bundle
 
+# Install shell plugins
+zplug install
+
 # Enable text selection in QuickLook
 defaults write com.apple.finder QLEnableTextSelection -bool true && killall Finder
 
