@@ -44,6 +44,7 @@ zplug "zsh-users/zsh-syntax-highlighting", nice:10
 
 # completions
 zplug "zsh-users/zsh-completions"
+zplug "lukechilds/zsh-better-npm-completion"
 
 # theme
 zplug "mafredri/zsh-async", on:"sindresorhus/pure"
