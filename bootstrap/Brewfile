@@ -98,6 +98,7 @@ cask 'qlimagesize'
 cask 'webpquicklook'
 cask 'suspicious-package'
 cask 'betterzipql'
+cask 'airfoil'
 
 # mac app store
 mas 'Xcode', id: 497799835
