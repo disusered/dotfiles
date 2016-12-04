@@ -37,6 +37,7 @@ zplug 'junegunn/fzf', use:"shell/*.zsh"
 zplug 'lukechilds/zsh-nvm'
 zplug 'mollifier/cd-gitroot'
 zplug 'zsh-users/zsh-history-substring-search'
+zplug 'hchbaw/zce.zsh'
 
 # zsh-syntax-highlighting must be loaded after executing compinit
 # command and sourcing other plugins
@@ -284,6 +285,7 @@ bindkey -v
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+bindkey -M vicmd 's' zce
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
