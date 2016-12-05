@@ -1,4 +1,5 @@
 require "caffeine"
 require "hyper"
+require "keybinds"
 require "paste"
 require "window"
