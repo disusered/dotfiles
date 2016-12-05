@@ -358,4 +358,4 @@ HELPDIR=/usr/local/share/zsh/help
 eval "$(rbenv init -)"
 
 # Initialize zplug
-zplug load --verbose
+zplug load
