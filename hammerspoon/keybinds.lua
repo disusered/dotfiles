@@ -8,6 +8,11 @@ k:bind({}, "p", hyperUp, hyperDown("p"));
 k:bind({}, "1", hyperUp, hyperDown("1"));
 k:bind({}, "c", hyperUp, hyperDown("c"));
 
+-- hyper+delete
+k:bind({}, "delete", hyperUp, function()
+  hs.eventtap.keyStroke({}, "forwarddelete")
+end);
+
 -- shift+delete pipe |
 hs.hotkey.bind({"shift"}, "delete", nil, function()
   hs.eventtap.keyStroke({"shift"}, "\\")
