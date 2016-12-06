@@ -26,6 +26,7 @@ source $MYCONFIG/vim.vim
 source $MYCONFIG/commands.vim
 source $MYCONFIG/keymap.vim
 source $MYCONFIG/typos.vim
+source $MYCONFIG/statusbar.vim
 
 " colors
 source $MYCONFIG/hi.vim
