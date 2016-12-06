@@ -12,5 +12,7 @@ let g:ale_javascript_eslint_use_global = 0
 let g:ale_sign_error = '✕'
 let g:ale_sign_warning = '▵'
 
+let g:ale_statusline_format = ['E:%d', 'W:%d', '']
+
 hi link ALEErrorSign ErrorMsg
 hi link ALEWarningSign WarningMsg
