@@ -30,15 +30,8 @@
 
   source $MYCONFIG/ft.vim
 
-  function! Do(init)
-    UpdateRemotePlugins
-  endfunction
-
   call plug#begin('~/.dotfiles/vendor/nplugged')
   source $MYCONFIG/plugins.vim
-
-  " nvim specific
-  Plug 'kassio/neoterm'
 
   call plug#end()
 
@@ -49,5 +42,4 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 source $MYCONFIG/shared.vim
 
 " nvim specific
-source $MYCONFIG/n_term.vim
 source $MYCONFIG/n_keymap.vim

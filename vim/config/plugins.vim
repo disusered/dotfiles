@@ -16,7 +16,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-endwise'
-Plug 'briancollins/vim-jst'
 Plug 'elixir-lang/vim-elixir'
 Plug 'junegunn/vim-peekaboo'
 Plug 'SirVer/ultisnips'
@@ -24,7 +23,6 @@ Plug 'Konfekt/FastFold'
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'ap/vim-css-color'
 Plug 'w0rp/ale'
-
 Plug 'tomtom/tcomment_vim'
 
 " load on command
@@ -50,11 +48,6 @@ Plug 'jreybert/vimagit',                { 'on': [] }
 Plug 'gregsexton/gitv',                 { 'on': [] } | Plug 'tpope/vim-fugitive',  { 'on': [] }
 Plug 'ternjs/tern_for_vim',             { 'on': [] }
 Plug 'flowtype/vim-flow',               { 'on': [], 'do': 'npm i flow-bin -g' }
-
-augroup user_ycm
-  autocmd!
-  autocmd User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
-augroup END
 
 augroup conditional_load
   autocmd!
