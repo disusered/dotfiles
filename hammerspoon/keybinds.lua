@@ -7,6 +7,11 @@ end
 k:bind({}, "p", hyperUp, hyperDown("p"));
 k:bind({}, "1", hyperUp, hyperDown("1"));
 k:bind({}, "c", hyperUp, hyperDown("c"));
+k:bind({}, "x", hyperUp, hyperDown("x"));
+k:bind({}, "d", hyperUp, hyperDown("d"));
+k:bind({}, "z", hyperUp, hyperDown("z"));
+k:bind({}, "g", hyperUp, hyperDown("g"));
+
 
 -- hyper+delete
 k:bind({}, "delete", hyperUp, function()

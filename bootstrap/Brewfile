@@ -85,6 +85,7 @@ cask 'java'
 cask 'xquartz-beta'
 cask 'skype'
 cask 'dash'
+cask 'xscope'
 cask 'monolingual'
 
 # quicklook
