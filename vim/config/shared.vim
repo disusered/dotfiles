@@ -1,6 +1,5 @@
 " plugins
 source $MYCONFIG/polyglot.vim
-source $MYCONFIG/ag.vim
 source $MYCONFIG/delimitmate.vim
 source $MYCONFIG/filebeagle.vim
 source $MYCONFIG/flow.vim
@@ -8,7 +7,6 @@ source $MYCONFIG/gitv.vim
 source $MYCONFIG/mundo.vim
 source $MYCONFIG/javascript.vim
 source $MYCONFIG/jsdoc.vim
-source $MYCONFIG/jsx.vim
 source $MYCONFIG/localvimrc.vim
 source $MYCONFIG/slime.vim
 source $MYCONFIG/ultisnips.vim
