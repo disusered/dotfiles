@@ -40,14 +40,23 @@ for key, action in pairs(mediaKeys) do
 end
 
 -- hyper+delete
-k:bind({}, "delete", hyperUp, function()
-  hs.eventtap.keyStroke({}, "forwarddelete")
-end);
+k:bind({}, "delete", hyperUp,
+  function() hs.eventtap.keyStroke({}, "forwarddelete") end,
+  function()
+    local event = require("hs.eventtap").event
+    event.newKeyEvent({}, "forwarddelete", true):post()
+    hs.timer.usleep(50000)
+    event.newKeyEvent({}, "forwarddelete", false):post()
+  end)
 
 -- shift+delete pipe |
-hs.hotkey.bind({"shift"}, "delete", nil, function()
-  hs.eventtap.keyStroke({"shift"}, "\\")
-end)
+hs.hotkey.bind({"shift"}, "delete", nil,
+  function() hs.eventtap.keyStroke({"shift"}, "\\") end,
+  function()
+    local event = require("hs.eventtap").event
+    event.newKeyEvent({"shift"}, "\\", true):post()
+    event.newKeyEvent({"shift"}, "\\", false):post()
+  end)
 
 -- fullscreen
 k:bind({}, "k", hyperUp, function()
