@@ -53,21 +53,3 @@ function stagger(focusedWindow, m1, m2)
 
   resize(focusedWindow, m1)
 end
-
--- fullscreen
-k:bind({}, "k", function()
-  nextKey = "k"
-  resize(hs.window.focusedWindow, {1, 1, 1, 1}, function(win) myWindows[win:id()] = nil end);
-end)
-
--- left
-k:bind({}, "h", function()
-  nextKey = "h"
-  stagger(hs.window.focusedWindow, {1, 1, (2/3), 1}, {1, 1, (1/2), 1});
-end)
-
--- right
-k:bind({}, "l", function()
-  nextKey = "l"
-  stagger(hs.window.focusedWindow, {(1+1/3), 1, (2/3), 1}, {(1+1/2), 1, (1/2), 1});
-end)
