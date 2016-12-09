@@ -25,7 +25,7 @@ brew 'lua', args: ['universal', 'with-completion']
 brew 'luajit', args: ['with-52compat']
 brew 'vim', args: ['override-system-vi', 'with-lua', 'with-luajit', 'with-tcl']
 brew 'ruby'
-brew 'reattach-to-user-namespace', args: ['wrap-pbcopy-and-pbpaste']
+brew 'reattach-to-user-namespace', args: ['with-wrap-pbcopy-and-pbpaste']
 brew 'fzf', args: ['HEAD']
 brew 'neovim', args: ['HEAD']
 
