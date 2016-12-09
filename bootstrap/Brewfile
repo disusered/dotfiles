@@ -39,6 +39,7 @@ brew 'jq'
 brew 'httpie'
 brew 'w3m'
 brew 'heroku-toolbelt'
+brew 'fpp'
 brew 'weechat', args: ['with-aspell', 'with-curl', 'with-lua', 'with-perl', 'with-python', 'with-ruby']
 
 # dependencies
