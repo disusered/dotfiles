@@ -59,7 +59,7 @@ hs.hotkey.bind({"shift"}, "delete", nil,
   end)
 
 -- show desktop
-k:bind({}, "j", hyperUp, function()
+k:bind({"shift"}, "j", hyperUp, function()
   hs.eventtap.keyStroke({"shift"}, "f13")
 end);
 
@@ -68,20 +68,33 @@ k:bind({"shift"}, "k", hyperUp, function()
   hs.eventtap.keyStroke({"cmd"}, "f13")
 end);
 
+k:bind({}, "j", hyperUp, function()
+  nextKey = "j"
+  stagger(hs.window.focusedWindow,
+    {1, (1+1/2), 1, (1/2)},
+    {1, (1+1/3), 1, (2/3)});
+end)
+
 -- fullscreen
 k:bind({}, "k", hyperUp, function()
   nextKey = "k"
-  resize(hs.window.focusedWindow, {1, 1, 1, 1}, function(win) myWindows[win:id()] = nil end);
+  stagger(hs.window.focusedWindow,
+    {1, 1, 1, 1},
+    {1, 1, 1, (1/2)});
 end)
 
 -- left
 k:bind({}, "h", hyperUp, function()
   nextKey = "h"
-  stagger(hs.window.focusedWindow, {1, 1, (2/3), 1}, {1, 1, (1/2), 1});
+  stagger(hs.window.focusedWindow,
+    {1, 1, (2/3), 1},
+    {1, 1, (1/2), 1});
 end)
 
 -- right
 k:bind({}, "l", hyperUp, function()
   nextKey = "l"
-  stagger(hs.window.focusedWindow, {(1+1/3), 1, (2/3), 1}, {(1+1/2), 1, (1/2), 1});
+  stagger(hs.window.focusedWindow,
+    {(1+1/3), 1, (2/3), 1},
+    {(1+1/2), 1, (1/2), 1});
 end)
