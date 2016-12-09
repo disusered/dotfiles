@@ -58,6 +58,16 @@ hs.hotkey.bind({"shift"}, "delete", nil,
     event.newKeyEvent({"shift"}, "\\", false):post()
   end)
 
+-- show desktop
+k:bind({}, "j", hyperUp, function()
+  hs.eventtap.keyStroke({"shift"}, "f13")
+end);
+
+-- show mission control
+k:bind({"shift"}, "k", hyperUp, function()
+  hs.eventtap.keyStroke({"cmd"}, "f13")
+end);
+
 -- fullscreen
 k:bind({}, "k", hyperUp, function()
   nextKey = "k"
