@@ -33,9 +33,11 @@ for key, action in pairs(mediaKeys) do
   end, function()
     event.newSystemKeyEvent(action, false):post()
   end, function()
-    event.newSystemKeyEvent(action, true):post()
-    hs.timer.usleep(50000)
-    event.newSystemKeyEvent(action, false):post()
+    if action ~= "PLAY" and action ~= "MUTE" and
+       action ~= "PREVIOUS" and action ~="NEXT" then
+      event.newSystemKeyEvent(action, true):post()
+      event.newSystemKeyEvent(action, false):post()
+     end
   end)
 end
 
