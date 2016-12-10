@@ -1,7 +1,7 @@
 hs.window.animationDuration = 0
 
 nextKey = nil
-prevKey = nil
+prevKey = nil;
 myWindows = {}
 
 function resize(focusedWindow, m)
