@@ -32,7 +32,7 @@ set statusline=
 set statusline+=%0*\ %{toupper(g:currentmode[mode()])}   " Current mode
 set statusline+=%1*\ %<%f\ %m\ %w\ %{ReadOnly()}\         " File+path
 set statusline+=%#warningmsg#
-set statusline+=%2*\ %{ALEGetStatusLine()}                " ALE errors
+set statusline+=%2*\ %{neomake#statusline#LoclistStatus()}
 set statusline+=%*
 set statusline+=%1*\ %=                                  " Space
 set statusline+=%1*\ %y                                  " FileType

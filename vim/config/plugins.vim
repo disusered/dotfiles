@@ -22,7 +22,7 @@ Plug 'SirVer/ultisnips'
 Plug 'Konfekt/FastFold'
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'ap/vim-css-color'
-Plug 'w0rp/ale'
+Plug 'benekastah/neomake'
 Plug 'tomtom/tcomment_vim'
 
 " load on command
