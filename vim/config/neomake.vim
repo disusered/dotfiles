@@ -1,4 +1,6 @@
-let g:neomake_airline =  0
+scriptencoding utf-8
+
+let g:neomake_airline = 0
 let g:neomake_open_list = 0
 let g:neomake_error_sign = {
     \ 'text': '✕',
@@ -16,5 +18,5 @@ let g:neomake_lua_enabled_makers = ['luacheck']
 
 augroup user_lint
   autocmd!
-  autocmd Filetype {javascript,lua,json} autocmd BufWritePost,BufEnter * Neomake
+  autocmd Filetype {javascript,lua,json,vim} autocmd BufWritePost,BufEnter * Neomake
 augroup END

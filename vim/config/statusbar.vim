@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 let g:currentmode={
     \ 'n'  : 'NORMAL ',
     \ 'no' : 'N·Operator Pending ',
@@ -25,6 +27,7 @@ function! ReadOnly()
     return ''
   else
     return ''
+  endif
 endfunction
 
 set laststatus=2
