@@ -1,6 +1,9 @@
+local k = require "utils/hyper-key"
+local stagger = require "utils/window-stagger"
+
 -- trigger existing hyper key shortcuts
-hyperUp = function() k.triggered = true end
-hyperDown = function(key)
+local hyperUp = function() k.triggered = true end
+local hyperDown = function(key)
   return function() hs.eventtap.keyStroke({"cmd","alt","shift","ctrl"}, key) end
 end
 
@@ -13,7 +16,7 @@ k:bind({}, "z", hyperUp, hyperDown("z"))
 k:bind({}, "g", hyperUp, hyperDown("g"))
 
 -- media keys
-mediaKeys = {}
+local mediaKeys = {}
 mediaKeys["f1"]  = "BRIGHTNESS_DOWN"
 mediaKeys["f2"]  = "BRIGHTNESS_UP"
 mediaKeys["f5"]  = "ILLUMINATION_DOWN"
