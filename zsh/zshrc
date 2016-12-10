@@ -6,10 +6,8 @@ case $(uname) in
     path=(
       /usr/local/bin
       /usr/local/sbin
-      $HOME/Development/SDK/android-sdk/tools
-      $HOME/Development/SDK/android-sdk/platform-tools
+      $HOME/.luarocks/bin
       $HOME/.dotfiles/bin
-      /usr/local/Cellar/node/7.0.0/bin # $(npm config --global get prefix)/bin
       $path
     )
     ;;
