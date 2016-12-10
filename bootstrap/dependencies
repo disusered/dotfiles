@@ -14,10 +14,10 @@ pip3 install --user --upgrade pip
 pip3 install --user --upgrade --force-reinstall neovim
 
 # Python Packages
-pip install requests websocket-client pync pafy vim-vint
+pip install requests websocket-client pync pafy vim-vint proselint yamllint
 
 # Ruby packages
-gem install mdless
+gem install mdless mdl
 
 # Install nvm
 git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
@@ -38,7 +38,7 @@ eslint-plugin-react eslint-plugin-flowtype eslint-plugin-lodash-fp \
 eslint-config-standard-react eslint-config-standard eslint-plugin-ava eslint_d \
 eslint-config-metalab eslint-config-airbnb eslint-config-google \
 flow-bin caniuse-cmd neovim-client csscomb emoj tern-fetch typescript \
-diff-so-fancy tern flow-bin yarn
+diff-so-fancy tern flow-bin yarn sass-lint alex
 
 # node deps
 npm install -g http-server plugman term-img-cli
