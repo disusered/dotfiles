@@ -1,16 +1,17 @@
-let base16colorspace=256
+scriptencoding utf-8
+
+let g:base16colorspace=256
 colorscheme base16-ocean
 
-let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
 let g:maplocalleader = 'm'
 
 set textwidth=0
-set encoding=utf-8
 set laststatus=2
 set showtabline=2
 set noshowmode
 set mouse=
-set ffs=unix,dos,mac
+set fileformats=unix,dos,mac
 set clipboard=unnamed
 set autoread
 set hidden
@@ -34,7 +35,7 @@ set nowrap
 set linebreak
 set breakindent
 set showbreak=\ \...
-set wmh=0
+set winminheight=0
 set background=dark
 set lazyredraw
 set hlsearch
@@ -44,7 +45,7 @@ set smartcase
 set gdefault
 set wildignore+=.git\*,.hg\*,.svn\*,node_modules/**
 set nobackup
-set nowb
+set nowritebackup
 set noswapfile
 set foldmethod=syntax
 set spellfile=$HOME/.dotfiles/vim/spellfile.utf-8.add

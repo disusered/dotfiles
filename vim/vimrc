@@ -1,12 +1,12 @@
 " Init =========================================================================
-  set nocompatible
   filetype off
+  set encoding=utf-8
 
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 
-  let $MYCONFIG="$HOME/.dotfiles/vim/config"
+  let $MYCONFIG='$HOME/.dotfiles/vim/config'
   call plug#begin('~/.dotfiles/vendor/plugged')
 
   source $MYCONFIG/ft.vim
@@ -27,6 +27,5 @@ set ttymouse=xterm2
 source $MYCONFIG/shared.vim
 
 " vim specific
-source $MYCONFIG/v_keymap.vim
 source $MYCONFIG/v_supertab.vim
 source $MYCONFIG/v_youcompleteme.vim

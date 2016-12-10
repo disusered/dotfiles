@@ -14,7 +14,7 @@ pip3 install --user --upgrade pip
 pip3 install --user --upgrade --force-reinstall neovim
 
 # Python Packages
-pip install requests websocket-client pync pafy
+pip install requests websocket-client pync pafy vim-vint
 
 # Ruby packages
 gem install mdless
