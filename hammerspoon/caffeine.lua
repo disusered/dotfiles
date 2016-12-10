@@ -1,10 +1,10 @@
-require "icon"
+local createMenubarIcon = require "utils/create-menubar-icon"
 
 local caffeine = hs.menubar.new()
 local awake = createMenubarIcon("awake.png")
 local asleep = createMenubarIcon("asleep.png")
 
-function setCaffeineDisplay(state)
+local function setCaffeineDisplay(state)
   if state then
     caffeine:setIcon(awake)
   else
@@ -12,7 +12,7 @@ function setCaffeineDisplay(state)
   end
 end
 
-function caffeineClicked()
+local function caffeineClicked()
   setCaffeineDisplay(hs.caffeinate.toggle("displayIdle"))
 end
 
