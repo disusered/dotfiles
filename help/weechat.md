@@ -10,14 +10,16 @@ https://weechat.org/files/doc/devel/weechat_user.en.html#notify_levels
 /set weechat.notify*	List hotlist rules
 /buffer notify <type>	Set hotlist trigger for buffer
 
+---
 
 main
 ----
 M ←	Previous buffer
 M →	Next buffer
-
 M ↑	Previous buffer
 M ↓	Next buffer
+Ctrl n	Next buffer
+Ctrl p	Previous buffer
 
 <M-g>	Go to buffer
 <M-w> 	Close buffer
@@ -32,9 +34,11 @@ M ↓	Next buffer
 
 <S-M+M1> Paste
 
+/save
 /layout store <name>
 /layout apply <name>
 
+---
 
 slack
 -----
@@ -46,6 +50,7 @@ slack
 
 /help layout
 
+---
 
 notifications
 -------------
