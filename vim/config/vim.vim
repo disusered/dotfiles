@@ -53,6 +53,7 @@ set foldmethod=syntax
 set spellfile=$HOME/.dotfiles/vim/spellfile.utf-8.add
 set synmaxcol=1024
 set diffopt+=vertical
+set updatetime=750
 
 set undodir=$HOME/.dotfiles/vim/undo
 set undofile
