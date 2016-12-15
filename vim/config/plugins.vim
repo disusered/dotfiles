@@ -23,6 +23,7 @@ Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'ap/vim-css-color'
 Plug 'benekastah/neomake'
 Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-eunuch'
 
 " load on command
 Plug 'simnalamburt/vim-mundo',     { 'on': 'MundoToggle' }
