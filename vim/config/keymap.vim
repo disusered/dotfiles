@@ -34,6 +34,8 @@ nmap        ∆                 ]e
 vmap        ˚                 [egv
 vmap        ∆                 ]egv
 vmap        <Enter>           <Plug>(LiveEasyAlign)
+nmap        gl                <Plug>(EasyAlign)
+xmap        gl                <Plug>(EasyAlign)
 noremap     H                 ^
 noremap     L                 g_
 nnoremap    Q                 <nop>
