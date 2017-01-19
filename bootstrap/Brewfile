@@ -21,6 +21,7 @@ brew 'python3'
 brew 'elixir'
 brew 'zplug'
 brew 'openconnect'
+brew 'go', args: ['cross-compile-common']
 brew 'lua', args: ['universal', 'with-completion']
 brew 'luajit', args: ['with-52compat']
 brew 'vim', args: ['override-system-vi', 'with-lua', 'with-luajit', 'with-tcl']
