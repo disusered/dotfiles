@@ -34,9 +34,9 @@ Ctrl p	Previous buffer
 
 <S-M+M1> Paste
 
+/autojoin --run
+/layout store
 /save
-/layout store <name>
-/layout apply <name>
 
 ---
 
