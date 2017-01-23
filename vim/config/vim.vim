@@ -2,8 +2,10 @@ set encoding=utf-8
 scriptencoding utf-8
 set termencoding=utf-8
 
-let g:base16colorspace=256
-colorscheme base16-ocean
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 let g:mapleader = "\<Space>"
 let g:maplocalleader = 'm'
