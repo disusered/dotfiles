@@ -73,9 +73,9 @@
 [mergetool]
 	prompt = false
 [mergetool "fugitive"]
-	cmd = nvim +PatienceDiff -f -c \"Gdiff\" \"$MERGED\"
+	cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
 [difftool "vimdiff"]
-	cmd = nvim +PatienceDiff -d -u ~/.nvimrc \"$LOCAL\" \"$REMOTE\"
+	cmd = nvim -d -u ~/.nvimrc \"$LOCAL\" \"$REMOTE\"
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustexitcode = true
