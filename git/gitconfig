@@ -64,10 +64,10 @@
 [push]
 	default = upstream
 [diff]
-	tool = Kaleidoscope
+	tool = fugitive
 	indentHeuristic = true
 [merge]
-	tool = Kaleidoscope
+	tool = fugitive
 [difftool]
 	prompt = false
 [mergetool]
