@@ -5,7 +5,6 @@ Plug 'chriskempson/base16-vim'
 Plug 'sheerun/vim-polyglot'
 
 " always load
-Plug 'ryanoasis/vim-devicons'
 Plug 'troydm/zoomwintab.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
@@ -15,28 +14,26 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-endwise'
-Plug 'elixir-lang/vim-elixir'
-Plug 'junegunn/vim-peekaboo'
 Plug 'SirVer/ultisnips'
 Plug 'Konfekt/FastFold'
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
-Plug 'ap/vim-css-color'
 Plug 'benekastah/neomake'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-repeat'
+Plug 'elixir-lang/vim-elixir'
 
 " load on command
-Plug 'Wolfy87/vim-enmasse',        { 'on': 'EnMasse' }
-Plug 'junegunn/vim-easy-align',    { 'on': ['<Plug>(EasyAlign)', '<Plug>(LiveEasyAlign)'] }
-Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
-Plug 'tpope/vim-repeat' | Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-s2)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
+Plug 'Wolfy87/vim-enmasse',     { 'on': 'EnMasse' }
+Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', '<Plug>(LiveEasyAlign)'] }
+Plug 'scrooloose/nerdtree',     { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
+Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-s2)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
 
 " load for ft
 Plug 'heavenshell/vim-jsdoc',            { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mattn/emmet-vim',                  { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'css', 'scss', 'markdown', 'html.handlebars'] }
-Plug 'slashmili/alchemist.vim', { 'for': ['elixir'] } | Plug 'powerman/vim-plugin-AnsiEsc'
+Plug 'slashmili/alchemist.vim',          { 'for': ['elixir'] } | Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'jpalardy/vim-slime',               { 'for': ['javascript', 'sh', 'elixir']}
-Plug 'itspriddle/vim-marked',            { 'for': ['markdown'] }
 Plug 'dhruvasagar/vim-table-mode',       { 'for': ['markdown'] }
 
 " load conditionally
