@@ -26,7 +26,6 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
 
 " load on command
-Plug 'simnalamburt/vim-mundo',     { 'on': 'MundoToggle' }
 Plug 'Wolfy87/vim-enmasse',        { 'on': 'EnMasse' }
 Plug 'junegunn/vim-easy-align',    { 'on': ['<Plug>(EasyAlign)', '<Plug>(LiveEasyAlign)'] }
 Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}

@@ -48,7 +48,6 @@ Fugitive
 
 |        | **Diff View**        |
 |--------|----------------------|
-| 💡 u    | Open Mundo           |
 | do     | :diffget             |
 | dp     | :diffput             |
 | :diffu | :diffupdate          |

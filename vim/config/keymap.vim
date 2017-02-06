@@ -53,7 +53,6 @@ nnoremap    <Leader>gl        :Gitv --all<CR>
 nnoremap <silent><Leader>p    :GitFiles<CR>
 nnoremap <silent><Leader>f    :Files<CR>
 nnoremap    <Leader>b         :Buffers<CR>
-nnoremap    <Leader>u         :MundoToggle<CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
 nnoremap    <Leader><Space>   :nohlsearch<CR>
 nnoremap    <Leader>ciu       :split<CR>:Caniuse <c-r>=expand("<cword>")<CR><CR>
