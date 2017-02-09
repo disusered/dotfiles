@@ -5,8 +5,6 @@ Plug 'chriskempson/base16-vim'
 Plug 'sheerun/vim-polyglot'
 
 " always load
-Plug 'troydm/zoomwintab.vim'
-Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-dispatch'
 Plug 'christoomey/vim-tmux-navigator'
@@ -15,13 +13,11 @@ Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-endwise'
 Plug 'SirVer/ultisnips'
-Plug 'Konfekt/FastFold'
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'benekastah/neomake'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat'
-Plug 'elixir-lang/vim-elixir'
 Plug 'majutsushi/tagbar'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
@@ -34,8 +30,7 @@ Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymot
 " load for ft
 Plug 'heavenshell/vim-jsdoc',            { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mattn/emmet-vim',                  { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'css', 'scss', 'markdown', 'html.handlebars'] }
-Plug 'slashmili/alchemist.vim',          { 'for': ['elixir'] } | Plug 'powerman/vim-plugin-AnsiEsc'
-Plug 'jpalardy/vim-slime',               { 'for': ['javascript', 'sh', 'elixir']}
+Plug 'jpalardy/vim-slime',               { 'for': ['javascript', 'sh']}
 Plug 'dhruvasagar/vim-table-mode',       { 'for': ['markdown'] }
 
 " load conditionally

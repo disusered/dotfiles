@@ -1,6 +1,5 @@
 " plugins
 source $MYCONFIG/polyglot.vim
-source $MYCONFIG/delimitmate.vim
 source $MYCONFIG/filebeagle.vim
 source $MYCONFIG/flow.vim
 source $MYCONFIG/gitv.vim

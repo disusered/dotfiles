@@ -41,7 +41,6 @@ noremap     L                 g_
 nnoremap    Q                 <nop>
 nnoremap    <Leader><Enter>   :w<CR>
 nnoremap    <Leader>q         :bp\|bd #<CR>
-nnoremap    <Leader>md        :MarkedOpen!<CR>
 nnoremap    <Leader>gs         :Magit<CR>
 nnoremap    <Leader>ga        :Gcommit --amend<CR>
 nnoremap    <Leader>gc        :Gcommit -v -q<CR>
@@ -55,7 +54,6 @@ nnoremap <silent><Leader>f    :Files<CR>
 nnoremap    <Leader>b         :Buffers<CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
 nnoremap    <Leader><Space>   :nohlsearch<CR>
-nnoremap    <Leader>ciu       :split<CR>:Caniuse <c-r>=expand("<cword>")<CR><CR>
 map<silent> -                 <Plug>FileBeagleOpenCurrentBufferDir
 nnoremap    j                 gj
 nnoremap    k                 gk
