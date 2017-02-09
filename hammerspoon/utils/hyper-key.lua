@@ -7,12 +7,12 @@ local pressedF18 = function()
   k:enter()
 end
 
--- leave hyper-mode when F18 is pressed, send ESCAPE if no other keys are pressed
+-- leave hyper-mode when F18 is pressed
 local releasedF18 = function()
   k:exit()
-  if not k.triggered then
-    hs.eventtap.keyStroke({}, 'ESCAPE')
-  end
+  -- if not k.triggered then
+    -- action for when F18 is pressed on its own
+  -- end
 end
 
 -- bind hyper
