@@ -136,5 +136,4 @@ ln -s $ROOT/ranger $HOME/.config/ranger
 chmod +x $ROOT/bin/imgcat
 
 # Setup Go
-rm -rf $HOME/Development/SDK/gopath
 mkdir $HOME/Development/SDK/gopath

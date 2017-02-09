@@ -22,6 +22,8 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat'
 Plug 'elixir-lang/vim-elixir'
+Plug 'majutsushi/tagbar'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " load on command
 Plug 'Wolfy87/vim-enmasse',     { 'on': 'EnMasse' }

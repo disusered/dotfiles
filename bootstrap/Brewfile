@@ -43,6 +43,7 @@ brew 'w3m'
 brew 'shellcheck'
 brew 'heroku-toolbelt'
 brew 'fpp'
+brew 'ctags'
 brew 'weechat', args: ['with-aspell', 'with-curl', 'with-lua', 'with-perl', 'with-python', 'with-ruby']
 
 # dependencies
