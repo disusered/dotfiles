@@ -5,3 +5,5 @@ command! BrowserCORS :Start! noglob open -a Google\ Chrome\ Canary --args --allo
 command! -nargs=+ Nrun :Start! npm run <args>
 command! Ninstall :Dispatch npm prune && npm install
 command! Nstart :Start! npm start
+
+command! T :TagbarToggle

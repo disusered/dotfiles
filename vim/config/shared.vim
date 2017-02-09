@@ -6,6 +6,7 @@ source $MYCONFIG/flow.vim
 source $MYCONFIG/gitv.vim
 source $MYCONFIG/javascript.vim
 source $MYCONFIG/jsdoc.vim
+source $MYCONFIG/go.vim
 source $MYCONFIG/localvimrc.vim
 source $MYCONFIG/slime.vim
 source $MYCONFIG/ultisnips.vim
