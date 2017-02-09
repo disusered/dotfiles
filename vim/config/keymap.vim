@@ -48,7 +48,7 @@ nnoremap    <Leader>gc        :Gcommit -v -q<CR>
 nnoremap    <Leader>gt        :Gcommit -v -q %:p<CR>
 nnoremap    <Leader>gd        :Gdiff<CR>
 nnoremap    <Leader>gr        :Gread<CR>:GitGutter<CR>
-nnoremap    <Leader>gw        :Gwrite<CR><CR>:GitGutter<CR>
+nnoremap    <Leader>gw        :Gwrite<CR>:GitGutter<CR>
 nnoremap    <Leader>gl        :Gitv --all<CR>
 nnoremap <silent><Leader>p    :GitFiles<CR>
 nnoremap <silent><Leader>f    :Files<CR>
@@ -67,3 +67,5 @@ nnoremap    {                 {zz
 nnoremap    #                 #zz
 nnoremap    g*                g*zz
 nnoremap    g#                g#zz
+nmap        [c                <Plug>GitGutterPrevHunk
+nmap        ]c                <Plug>GitGutterNextHunk
