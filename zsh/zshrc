@@ -194,8 +194,7 @@ function gitloginteractive {
     shas=$(sed '1,2d;s/^[^a-z0-9]*//;/^$/d' <<< "$out" | awk '{print $1}')
     [ -z "$shas" ] && continue
     if [ "$k" = ctrl-d ]; then
-      # git show --color=always $shas | LESS="-X -g -i -M -R -S -w -z-4" less
-      git difftool $shas~1 $shas
+      git show --color=always $shas | LESS="-X -g -i -M -R -S -w -z-4" less
     elif [ "$k" = ctrl-i ]; then
       if [ ${#style} -eq ${#basic} ]
       then
