@@ -34,8 +34,8 @@
   source $MYCONFIG/plugins.vim
 
   " nvim specific
-  Plug 'Shougo/echodoc.vim'
   Plug 'Shougo/deoplete.nvim'
+  Plug 'zchee/deoplete-go', { 'for': ['go'], 'do': 'make'}
   Plug 'carlitux/deoplete-ternjs', { 'on': [], 'do': 'npm i tern -g' }
   Plug 'steelsojka/deoplete-flow', { 'on': [], 'do': 'npm i flow-bin -g' }
 
