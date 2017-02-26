@@ -13,6 +13,7 @@ let g:neomake_warning_sign = {
     \ }
 
 let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_typescript_enabled_makers = ['tsc', 'tslint']
 let g:neomake_json_enabled_makers = ['jsonlint']
 let g:neomake_lua_enabled_makers = ['luacheck']
 let g:neomake_scss_enabled_makers = ['sasslint']
@@ -24,5 +25,5 @@ let g:neomake_go_enabled_makers = ['go', 'golint', 'govet']
 
 augroup user_lint
   autocmd!
-  autocmd Filetype {javascript,lua,json,vim,scss,markdown,sh,zsh,yaml,go} autocmd BufWritePost * Neomake
+  autocmd Filetype {javascript,typescript,lua,json,vim,scss,markdown,sh,zsh,yaml,go} autocmd BufWritePost * Neomake
 augroup END
