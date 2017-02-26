@@ -19,6 +19,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat'
 Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-obsession'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " load on command
