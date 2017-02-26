@@ -12,8 +12,14 @@
   source $MYCONFIG/ft.vim
   source $MYCONFIG/plugins.vim
 
+  " vim specific
+  Plug 'maralla/completor.vim', { 'do': 'make js'}
+
   call plug#end()
 
 " Settings =====================================================================
 set ttymouse=xterm2
 source $MYCONFIG/shared.vim
+
+" vim specific
+source $MYCONFIG/v_completor.vim
