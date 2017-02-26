@@ -41,7 +41,7 @@ eslint-plugin-standard babel-plugin-module-resolver eslint-plugin-promise \
 eslint-plugin-react eslint-plugin-flowtype eslint-plugin-lodash-fp \
 eslint-config-standard-react eslint-config-standard eslint-plugin-ava eslint_d \
 eslint-config-metalab eslint-config-airbnb eslint-config-google \
-flow-bin caniuse-cmd neovim-client csscomb emoj tern-fetch typescript \
+flow-bin caniuse-cmd neovim-client csscomb emoj tern-fetch typescript tslint \
 diff-so-fancy tern flow-bin yarn sass-lint alex
 
 # node deps
