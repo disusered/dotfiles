@@ -17,7 +17,7 @@ pip3 install --user --upgrade --force-reinstall neovim
 pip install requests websocket-client pync pafy vim-vint proselint yamllint
 
 # Ruby packages
-gem install mdless mdl
+gem install mdless mdl mailcatcher
 
 # Install nvm
 git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
