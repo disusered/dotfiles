@@ -22,10 +22,10 @@ set hidden
 set noruler
 set number
 set title
+set nolazyredraw
 set backspace=indent,eol,start
 set nostartofline
 set colorcolumn=80
-set nofoldenable
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -41,21 +41,20 @@ set breakindent
 set showbreak=\ \...
 set winminheight=0
 set background=dark
-set lazyredraw
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
 set gdefault
-set wildignore+=.git\*,.hg\*,.svn\*,node_modules/**
+set wildignore+=.git\*,.hg\*,.svn\*,node_modules/**,sdfk,dsf,dsfkj,sdfkj,kjsdf,kjsdf,kjdsf,'wut','no',ya,ok,lol,wut,yayayaya,
 set nobackup
 set nowritebackup
 set noswapfile
-set foldmethod=syntax
+set foldmethod=manual
 set spellfile=$HOME/.dotfiles/vim/spellfile.utf-8.add
-set synmaxcol=1024
+set synmaxcol=256
 set diffopt+=vertical
-set updatetime=750
+set updatetime=1000
 
 set undodir=$HOME/.dotfiles/vim/undo
 set undofile
@@ -63,3 +62,4 @@ set undofile
 filetype plugin on
 filetype indent on
 syntax enable
+syntax sync minlines=256

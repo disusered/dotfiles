@@ -33,24 +33,6 @@
   call plug#begin('~/.dotfiles/vendor/nplugged')
   source $MYCONFIG/plugins.vim
 
-  " nvim specific
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'zchee/deoplete-go', { 'for': ['go'], 'do': 'make'}
-  Plug 'carlitux/deoplete-ternjs', { 'on': [], 'do': 'npm i tern -g' }
-  Plug 'steelsojka/deoplete-flow', { 'on': [], 'do': 'npm i flow-bin -g' }
-  Plug 'mhartington/nvim-typescript', { 'do': 'npm i typescript -g' }
-
-  augroup neovim_conditional_load
-    autocmd!
-    if !empty(glob(getcwd().'/.tern-project'))
-      call plug#load('deoplete-ternjs')
-    endif
-
-    if !empty(glob(getcwd().'/.flowconfig'))
-      call plug#load('deoplete-flow')
-    endif
-  augroup END
-
   call plug#end()
 
   source $MYCONFIG/n_autocommands.vim
@@ -61,5 +43,3 @@ source $MYCONFIG/shared.vim
 
 " nvim specific
 source $MYCONFIG/n_keymap.vim
-source $MYCONFIG/n_deoplete.vim
-source $MYCONFIG/n_echodoc.vim

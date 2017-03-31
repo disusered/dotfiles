@@ -20,7 +20,6 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-obsession'
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " load on command
 Plug 'Wolfy87/vim-enmasse',     { 'on': 'EnMasse' }
@@ -38,16 +37,13 @@ Plug 'dhruvasagar/vim-table-mode',       { 'for': ['markdown'] }
 Plug 'MarcWeber/vim-addon-local-vimrc', { 'on': [] }
 Plug 'editorconfig/editorconfig-vim',   { 'on': [] }
 Plug 'moll/vim-node',                   { 'on': [] }
-Plug 'jreybert/vimagit',                { 'on': [] }
-Plug 'gregsexton/gitv',                 { 'on': [] } | Plug 'tpope/vim-fugitive',  { 'on': [] }
-Plug 'ternjs/tern_for_vim',             { 'on': [] }
-Plug 'flowtype/vim-flow',               { 'on': [], 'do': 'npm i flow-bin -g' }
+Plug 'jreybert/vimagit', { 'on': [] } | Plug 'tpope/vim-fugitive',  { 'on': [] }
 
 augroup conditional_load
   autocmd!
 
   if !empty(glob(getcwd().'/.git/config'))
-    call plug#load('vim-fugitive', 'gitv', 'vimagit')
+    call plug#load('vim-fugitive', 'vimagit')
   endif
 
   if !empty(glob(getcwd().'/.local-vimrc'))
@@ -61,13 +57,4 @@ augroup conditional_load
   if !empty(glob(getcwd().'/package.json'))
     call plug#load('vim-node')
   endif
-
-  if !empty(glob(getcwd().'/.flowconfig'))
-    call plug#load('vim-flow')
-  endif
-
-  if !empty(glob(getcwd().'/.tern-project'))
-    call plug#load('tern_for_vim')
-  endif
-
 augroup END

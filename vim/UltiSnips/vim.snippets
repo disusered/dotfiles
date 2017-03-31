@@ -1,6 +1,4 @@
 snippet flow "Flow and ESLint"
-let g:flow#enable = 1
-let g:flow#omnifunc = 1
 let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
 let g:neomake_jsx_enabled_makers = ['eslint', 'flow']
 endsnippet
@@ -11,10 +9,6 @@ endsnippet
 
 snippet eslint "ESLint Daemon"
 let g:neomake_javascript_eslint_exe = '/usr/local/bin/eslint_d'
-endsnippet
-
-snippet mocha "Mocha Options"
-let test#javascript#mocha#options = '${0:--compilers js:babel/register}'
 endsnippet
 
 snippet npm "Basic npm commands"

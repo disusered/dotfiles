@@ -41,14 +41,13 @@ noremap     L                 g_
 nnoremap    Q                 <nop>
 nnoremap    <Leader><Enter>   :w<CR>
 nnoremap    <Leader>q         :bp\|bd #<CR>
-nnoremap    <Leader>gs         :Magit<CR>
+nnoremap    <Leader>gs        :Magit<CR>
 nnoremap    <Leader>ga        :Gcommit --amend<CR>
 nnoremap    <Leader>gc        :Gcommit -v -q<CR>
 nnoremap    <Leader>gt        :Gcommit -v -q %:p<CR>
 nnoremap    <Leader>gd        :Gdiff<CR>
 nnoremap    <Leader>gr        :Gread<CR>:GitGutter<CR>
 nnoremap    <Leader>gw        :Gwrite<CR>:GitGutter<CR>
-nnoremap    <Leader>gl        :Gitv --all<CR>
 nnoremap <silent><Leader>p    :GitFiles<CR>
 nnoremap <silent><Leader>f    :Files<CR>
 nnoremap    <Leader>b         :Buffers<CR>
