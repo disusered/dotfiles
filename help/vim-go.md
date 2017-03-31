@@ -54,5 +54,3 @@ vim-go
 | <ctrl>+n            | Go to next top level tag                            |
 | <ctrl>+p            | Go to previous top level tag                        |
 |---------------------|-----------------------------------------------------|
-
-### TODO: deoplete go

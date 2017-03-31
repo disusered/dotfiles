@@ -1,11 +1,8 @@
 " plugins
 source $MYCONFIG/polyglot.vim
 source $MYCONFIG/filebeagle.vim
-source $MYCONFIG/flow.vim
-source $MYCONFIG/gitv.vim
 source $MYCONFIG/javascript.vim
 source $MYCONFIG/jsdoc.vim
-source $MYCONFIG/go.vim
 source $MYCONFIG/localvimrc.vim
 source $MYCONFIG/slime.vim
 source $MYCONFIG/ultisnips.vim
@@ -14,7 +11,6 @@ source $MYCONFIG/markdown.vim
 source $MYCONFIG/nerdtree.vim
 source $MYCONFIG/tablemode.vim
 source $MYCONFIG/fzf.vim
-source $MYCONFIG/tern.vim
 source $MYCONFIG/neomake.vim
 source $MYCONFIG/vimagit.vim
 source $MYCONFIG/gitgutter.vim
