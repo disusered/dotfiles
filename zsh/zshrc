@@ -236,32 +236,6 @@ function selectmark {
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
 
-# modal cursor
-function zle-keymap-select zle-line-init {
-  # change cursor shape in iTerm2
-  case $KEYMAP in
-    vicmd)      print -n -- "\E]50;CursorShape=0\C-G";;  # block cursor
-    viins|main) print -n -- "\E]50;CursorShape=1\C-G";;  # line cursor
-  esac
-
-  zle reset-prompt
-  zle -R
-}
-
-function zle-line-finish {
-  print -n -- "\E]50;CursorShape=0\C-G"  # block cursor
-}
-
-# Setup zsh-autosuggestions
-AUTOSUGGEST="${HOME}/.zgen/tarruda/zsh-autosuggestions-master/autosuggestions.zsh"
-if [ -f $AUTOSUGGEST ]; then
-  source $AUTOSUGGEST
-
-  zle-line-init() {
-    zle autosuggest-start
-  }
-fi
-
 # Base16 Shell
 BASE16_SHELL=$HOME/.dotfiles/vendor/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
@@ -332,14 +306,6 @@ bindkey -M vicmd '^R' redo
 # returning from command mode
 bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
-
-# Autosuggest
-# bindkey '^T' autosuggest-toggle
-bindkey '^n' vi-forward-word
-
-zle -N zle-line-init
-zle -N zle-line-finish
-zle -N zle-keymap-select
 
 # Help
 case $(uname) in
