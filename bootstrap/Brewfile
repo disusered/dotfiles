@@ -55,6 +55,8 @@ brew 'atool'
 brew 'mediainfo'
 brew 'highlight'
 brew 'gcc'
+brew 'ant'
+brew 'gradle'
 brew 'composer'
 brew 'imagemagick', args: ['with-webp']
 brew 'graphicsmagick', args: ['with-webp']
@@ -63,12 +65,10 @@ brew 'aspell', args: ['with-lang-es', 'with-lang-en']
 brew 'pandoc'
 
 # cordova
-brew 'ant'
-brew 'gradle'
-brew 'android-sdk'
 
 # casks
 cask 'alfred'
+cask 'android-sdk'
 cask '1password-beta'
 cask 'iterm2-nightly'
 cask 'safari-technology-preview'
