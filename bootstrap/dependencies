@@ -51,5 +51,8 @@ npm install -g http-server plugman term-img-cli
 case $(uname) in
   'Darwin')
     npm install -g ios-deploy ios-sim
+    vagrant plugin install vagrant-bindfs
+    vagrant plugin install vagrant-hostmanager
+    sudo chmod 600 ~/.netrc # ansible
     ;;
 esac
