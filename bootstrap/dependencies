@@ -17,7 +17,7 @@ pip3 install --user --upgrade --force-reinstall neovim
 pip install requests websocket-client pync pafy vim-vint proselint yamllint
 
 # Ruby packages
-gem install mdless mdl mailcatcher
+gem install mdless mdl
 
 # Go deps
 go get github.com/tools/godep

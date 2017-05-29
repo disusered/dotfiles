@@ -35,6 +35,7 @@ brew 'neovim', args: ['HEAD']
 
 # utilities
 brew 'ansible'
+brew 'mailhog'
 brew 'watch'
 brew 'tree'
 brew 'ncdu'
