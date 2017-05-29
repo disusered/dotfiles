@@ -22,15 +22,20 @@
                 "f9": "fastforward"
             },
             "name": "Default profile",
-            "one_to_many_mappings": {},
-            "selected": true,
-            "simple_modifications": {},
-            "standalone_keys": {
-              "caps_lock": "escape",
-              "fn": "f17"
-            },
             "one_to_many_mappings": {
-              "fn": ["left_control", "left_shift", "left_option", "left_command"]
+                "fn": [
+                    "left_control",
+                    "left_shift",
+                    "left_option",
+                    "left_command"
+                ]
+            },
+            "selected": true,
+            "simple_modifications": {
+                "caps_lock": "escape"
+            },
+            "standalone_keys": {
+                "caps_lock": "escape"
             },
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
