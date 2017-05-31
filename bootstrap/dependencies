@@ -28,29 +28,40 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.3.0
 # asdf node
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 sh ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-asdf global nodejs system
+LATEST_NODE_VERSION=`asdf list-all nodejs | tail -n 1 | tr -d '\n'`
+asdf install nodejs $LATEST_NODE_VERSION
+asdf global nodejs $LATEST_NODE_VERSION
+
 
 # Install npm and packages
 npm install -g npm@latest
 npm update -g npm
 
 # Neo/vim deps
-npm install -g babel-cli babel-eslint jsonlint jshint eslint jsonlint jshint \
-eslint-plugin-filenames eslint-plugin-import eslint-plugin-jsx-a11y \
+npm install -g babel-cli jsonlint jshint eslint babel-eslint jsonlint jshint \
+eslint-plugin-filenames eslint-plugin-flowtype eslint-plugin-lodash-fp \
 eslint-plugin-standard babel-plugin-module-resolver eslint-plugin-promise \
-eslint-plugin-react eslint-plugin-flowtype eslint-plugin-lodash-fp \
-eslint-config-standard-react eslint-config-standard eslint-plugin-ava eslint_d \
-eslint-config-metalab eslint-config-airbnb eslint-config-google \
-flow-bin caniuse-cmd neovim-client csscomb emoj tern-fetch typescript tslint \
-diff-so-fancy tern flow-bin yarn sass-lint alex
+eslint-config-standard-react eslint-config-standard eslint_d \
+flow-bin caniuse-cmd neovim-client csscomb emoj typescript tslint \
+diff-so-fancy tern tern-fetch yarn sass-lint alex
 
-# node deps
-npm install -g http-server plugman term-img-cli
+# airbnb-eslint
+(
+  export PKG=eslint-config-airbnb;
+  npm info "$PKG@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "$PKG@latest"
+)
+
+# other node deps
+npm install -g http-server plugman term-img-cli bs-platform cordova
+case $(uname) in
+  'Darwin')
+    npm install -g ios-deploy ios-sim
+    ;;
+esac
 
 # Mac deps
 case $(uname) in
   'Darwin')
-    npm install -g ios-deploy ios-sim
     vagrant plugin install vagrant-bindfs
     vagrant plugin install vagrant-hostmanager
     sudo chmod 600 ~/.netrc # ansible
