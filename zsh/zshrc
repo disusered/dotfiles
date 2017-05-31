@@ -9,14 +9,12 @@ case $(uname) in
       $GOPATH/bin
       $HOME/.luarocks/bin
       $HOME/.dotfiles/bin
-      $HOME/.rbenv/bin
       $path
     )
     ;;
   'Linux')
     path=(
       $HOME/.dotfiles/bin
-      $HOME/.rbenv/bin
       $path
     )
     ;;
@@ -278,9 +276,6 @@ HELPDIR=/usr/local/share/zsh/help
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# rbenv
-eval "$(rbenv init -)"
 
 # asdf
 source $HOME/.asdf/asdf.sh
