@@ -34,7 +34,6 @@ esac
 
 # plugins
 zplug 'junegunn/fzf', use:"shell/*.zsh"
-zplug 'lukechilds/zsh-nvm'
 zplug 'mollifier/cd-gitroot'
 zplug 'zsh-users/zsh-history-substring-search'
 zplug 'hchbaw/zce.zsh'
@@ -153,9 +152,6 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
-
-# NVM
-export NVM_DIR=~/.nvm
 
 # gh - get git commit hash
 # example usage: git rebase -i `gh`
@@ -285,6 +281,10 @@ HELPDIR=/usr/local/share/zsh/help
 
 # rbenv
 eval "$(rbenv init -)"
+
+# asdf
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
 
 # Initialize zplug
 zplug load
