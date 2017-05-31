@@ -137,3 +137,8 @@ chmod +x $ROOT/bin/imgcat
 
 # Setup Go
 mkdir $HOME/Development/SDK/gopath
+
+# Setup asdf
+touch $HOME/.asdfrc
+rm -rf $HOME/.asdfrc
+ln -s $ROOT/asdf/asdfrc $HOME/.asdfrc

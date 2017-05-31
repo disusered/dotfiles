@@ -23,12 +23,12 @@ gem install mdless mdl
 go get github.com/tools/godep
 go get github.com/Unknwon/bra
 
-# Install nvm
-git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
-source $HOME/.nvm/nvm.sh
-nvm install node
-nvm alias default node
-nvm use system
+# Install asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.3.0
+# asdf node
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+sh ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+asdf global nodejs system
 
 # Install npm and packages
 npm install -g npm@latest
