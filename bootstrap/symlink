@@ -139,6 +139,7 @@ chmod +x $ROOT/bin/imgcat
 mkdir $HOME/Development/SDK/gopath
 
 # Setup asdf
-touch $HOME/.asdfrc
-rm -rf $HOME/.asdfrc
+touch $HOME/.asdfrc $HOME/.default-gems
+rm $HOME/.asdfrc $HOME/.default-gems
 ln -s $ROOT/asdf/asdfrc $HOME/.asdfrc
+ln -s $ROOT/asdf/default-gems $HOME/.default-gems
