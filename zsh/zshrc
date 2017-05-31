@@ -157,61 +157,15 @@ fi
 # NVM
 export NVM_DIR=~/.nvm
 
-# Git Interactive
-function gitrefloginteractive {
-  local out q k index
-  while out=$(git reflog --format=reflog --color "$@" |
-    f --prompt="🏥  " --ansi --no-sort --query="$q" \
-      --print-query --expect=ctrl-d,ctrl-r);
-  do
-    q=$(head -1 <<< "$out")
-    k=$(head -2 <<< "$out" | tail -1)
-    index=$(echo $out | awk '{print $2}' | sed 's/:$//' | sed -E 's/HEAD@{(.+)}/\1/' | tr -d '[[:space:]]')
-    [ -z "$index" ] && continue
-    if [ "$k" = 'ctrl-d' ]; then
-      git difftool HEAD@{$index}
-    elif [ "$k" = 'ctrl-r' ]; then
-      git reset HEAD@{$index}
-      break;
-    else
-      clear
-      git show --color=always HEAD@{$index} | LESS="-X -g -i -M -R -S -w -z-4" less
-    fi
-  done
-}
-
-function gitloginteractive {
-  local out shas q k style complex basic
-
-  basic="%C(magenta bold)%h%C(reset) %C(auto)%d%C(reset) %s"
-  complex="%C(magenta bold)%h%C(reset) %C(blue bold)%aN%C(reset) %C(auto)%d%C(reset) %s %C(8)(%cr)%C(reset)"
-  style=$complex
-
-  while out=$(
-      git l --format=$style | fzf --ansi --no-sort --reverse --query="$q" --prompt "📖 " \
-          --print-query --expect=ctrl-d,ctrl-i,ctrl-r --toggle-sort=\`); do
-    q=$(head -1 <<< "$out")
-    k=$(head -2 <<< "$out" | tail -1)
-    shas=$(sed '1,2d;s/^[^a-z0-9]*//;/^$/d' <<< "$out" | awk '{print $1}')
-    [ -z "$shas" ] && continue
-    if [ "$k" = ctrl-d ]; then
-      git show --color=always $shas | LESS="-X -g -i -M -R -S -w -z-4" less
-    elif [ "$k" = ctrl-i ]; then
-      if [ ${#style} -eq ${#basic} ]
-      then
-        style=$complex
-      else
-        style=$basic
-      fi
-    elif [ "$k" = 'ctrl-r' ]; then
-      git reset $shas
-      break;
-    elif [ "$k" = 'ctrl-s' ]; then
-      break;
-    else
-      echo -n "$shas" | pbcopy
-    fi
-  done
+# git log interactive
+gli() {
+  git l --format=$GIT_LOG_STYLE |
+  fzf --ansi --no-sort --reverse --tiebreak=index \
+      --preview "echo {} | grep -o '[a-f0-9]\{7\}' | head -1 |
+                 xargs -I % sh -c 'git show --color=always % | head -$LINES'" \
+      --bind "enter:execute(echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs -I % echo -n % | pbcopy)" \
+      --bind "ctrl-d:execute:echo {} | grep -o '[a-f0-9]\{7\}' | head -1 |
+              xargs -I % sh -c 'vim fugitive://\$(git rev-parse --show-toplevel)/.git//% < /dev/tty'"
 }
 
 # Marks

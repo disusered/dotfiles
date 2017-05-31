@@ -20,6 +20,10 @@ export FZF_DEFAULT_OPTS='--color hl:2,hl+:2,fg:8,fg+:15,bg+:0,info:8,prompt:5,sp
 export FZF_DEFAULT_COMMAND='ag -l -g ""'
 export FZF_COMPLETION_OPTS=''
 
+export GIT_LOG_STYLE_BASIC="%C(magenta bold)%h%C(reset) %C(auto)%d%C(reset) %s"
+export GIT_LOG_STYLE_COMPLEX="%C(magenta bold)%h%C(reset) %C(blue bold)%aN%C(reset) %C(auto)%d%C(reset) %s %C(8)(%cr)%C(reset)"
+export GIT_LOG_STYLE=$GIT_LOG_STYLE_COMPLEX
+
 case $(uname) in
   'Darwin')
     export BROWSER='open'
