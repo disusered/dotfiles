@@ -22,8 +22,9 @@ let g:neomake_sh_enabled_makers = ['sh', 'shellcheck']
 let g:neomake_zsh_enabled_makers = ['zsh']
 let g:neomake_yaml_enabled_makers = ['yamllint']
 let g:neomake_go_enabled_makers = ['go', 'golint', 'govet']
+let g:neomake_reason_enabled_makers = ['merlin']
 
 augroup user_lint
   autocmd!
-  autocmd Filetype {javascript,typescript,lua,json,vim,scss,markdown,sh,zsh,yaml,go} autocmd BufWritePost * Neomake
+  autocmd Filetype {javascript,typescript,lua,json,vim,scss,markdown,sh,zsh,yaml,go,reason} autocmd BufWritePost * Neomake
 augroup END
