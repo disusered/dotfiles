@@ -82,6 +82,7 @@ alias open='noglob open'
 
 # Aliases
 alias sudo='sudo '
+alias ta='tmux attach -t'
 alias f='fzf-tmux'
 alias c='clear'
 alias r='ranger'
