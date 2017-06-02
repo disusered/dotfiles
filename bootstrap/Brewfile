@@ -43,6 +43,7 @@ brew 'fzf', args: ['HEAD']
 brew 'neovim', args: ['HEAD']
 
 # utilities
+brew 'awscli'
 brew 'ansible'
 brew 'mailhog'
 brew 'watch'
