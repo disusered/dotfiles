@@ -52,7 +52,7 @@ diff-so-fancy tern tern-fetch yarn sass-lint alex
 )
 
 # other node deps
-npm install -g http-server plugman term-img-cli bs-platform cordova
+npm install -g http-server plugman term-img-cli cordova grunt-cli
 case $(uname) in
   'Darwin')
     npm install -g ios-deploy ios-sim
