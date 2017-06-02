@@ -10,6 +10,7 @@ tap 'homebrew/php'
 brew 'mas'
 brew 'git'
 brew 'git-flow'
+brew 'git-ftp'
 brew 'hub'
 brew 'ag'
 brew 'wget'
@@ -66,6 +67,7 @@ brew 'highlight'
 brew 'gcc'
 brew 'ant'
 brew 'gradle'
+brew 'curl', args: ['with-ssl', 'with-libssh2']
 brew 'composer'
 brew 'imagemagick', args: ['with-webp']
 brew 'graphicsmagick', args: ['with-webp']
