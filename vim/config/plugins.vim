@@ -20,6 +20,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-obsession'
+Plug 'reasonml/vim-reason'
 
 " load on command
 Plug 'Wolfy87/vim-enmasse',     { 'on': 'EnMasse' }
