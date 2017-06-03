@@ -14,10 +14,10 @@ pip3 install --user --upgrade pip
 pip3 install --user --upgrade --force-reinstall neovim
 
 # Python Packages
-pip install requests websocket-client pync pafy vim-vint proselint yamllint
+pip install requests websocket-client pync pafy vim-vint proselint yamllint mdv
 
 # Ruby packages
-gem install mdless mdl
+gem install mdl
 
 # Go deps
 go get github.com/tools/godep
