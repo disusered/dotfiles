@@ -114,5 +114,3 @@ vim
 | *      | Highlight and jump between occurrences of word |
 | ctrl+o | Previous Cursor Position                       |
 | ctrl+i | Next Cursor Position                           |
-
-***
