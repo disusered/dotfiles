@@ -7,4 +7,4 @@ merlin
 | m, n | Grow selection         |
 | m, p | Shrink selection       |
 | m, e | :MerlinErrorCheck      |
-
+| m, f | :ReasonPrettyPrint      |
