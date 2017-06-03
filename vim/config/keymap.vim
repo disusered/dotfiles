@@ -66,4 +66,6 @@ nnoremap    g*                g*zz
 nnoremap    g#                g#zz
 nmap        [c                <Plug>GitGutterPrevHunk
 nmap        ]c                <Plug>GitGutterNextHunk
-map  <silent> <LocalLeader>e  :MerlinErrorCheck<CR>
+
+autocmd FileType reason map <buffer> <LocalLeader>e :MerlinErrorCheck<CR>
+autocmd FileType reason map <buffer> <LocalLeader>f :ReasonPrettyPrint<Cr>
