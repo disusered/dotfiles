@@ -1,5 +1,7 @@
 export ZPLUG_HOME=/usr/local/opt/zplug
 
+export MDV_THEME=884.0977
+
 export MARKPATH=$HOME/.marks
 export TMPDIR="/tmp/$USER"
 export KEYTIMEOUT=1
