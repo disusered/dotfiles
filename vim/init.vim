@@ -22,16 +22,17 @@
   let g:terminal_color_15 = '#eff1f5'
   let g:terminal_color_16 = '#cf8772'
 
-  let $MYCONFIG='$HOME/.dotfiles/vim/config'
-
   " nvim plugin hosts
   let g:python_host_prog='/usr/local/bin/python'
   let g:python_host_skip_check=1
 
-  source $MYCONFIG/ft.vim
-
+  let $MYCONFIG='$HOME/.dotfiles/vim/config'
   call plug#begin('~/.dotfiles/vendor/nplugged')
+
+  source $MYCONFIG/ft.vim
   source $MYCONFIG/plugins.vim
+
+  " nvim specific
 
   call plug#end()
 
