@@ -1,9 +1,15 @@
 " Init =========================================================================
-  set inccommand=split
   filetype off
   set encoding=utf-8
+  set inccommand=split
 
-  set termguicolors
+  if has('macunix')
+    set termguicolors
+  elseif has('unix')
+    set notermguicolors
+    set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
+  endif
+
   let g:terminal_color_0 = '#2b303b'
   let g:terminal_color_1 = '#bd626b'
   let g:terminal_color_2 = '#a4bd8e'
@@ -23,9 +29,15 @@
   let g:terminal_color_16 = '#cf8772'
 
   " nvim plugin hosts
-  let g:python_host_prog = '/usr/local/bin/python2'
-  let g:python3_host_prog = '/usr/local/bin/python3'
-  let g:python_host_skip_check=1
+  if has('macunix')
+    let g:python_host_prog = '/usr/local/bin/python2'
+    let g:python3_host_prog = '/usr/local/bin/python3'
+  elseif has('unix')
+    let g:python_host_prog = '/usr/bin/python2'
+    let g:python3_host_prog = '/usr/bin/python3'
+  endif
+
+  " let g:python_host_skip_check=1
 
   let $MYCONFIG='$HOME/.dotfiles/vim/config'
   call plug#begin('~/.dotfiles/vendor/nplugged')
@@ -41,7 +53,6 @@
   source $MYCONFIG/n_autocommands.vim
 
 " Settings =====================================================================
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 source $MYCONFIG/shared.vim
 
 " nvim specific

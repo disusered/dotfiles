@@ -4,7 +4,12 @@
 
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
+
+  if has('macunix')
+    set termguicolors
+  elseif has('unix')
+    set notermguicolors
+  endif
 
   let $MYCONFIG='$HOME/.dotfiles/vim/config'
   call plug#begin('~/.dotfiles/vendor/plugged')
