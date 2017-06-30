@@ -1,20 +1,19 @@
 #!/bin/bash
 
 # Neovim
-pip install --user --upgrade setuptools
-pip install --user --upgrade pip
-pip install --user --upgrade --force-reinstall neovim
+case $(uname) in
+  'Darwin')
+    pip2 install --user --upgrade setuptools pip
+    pip3 install --user --upgrade setuptools pip
+    ;;
+  'Linux')
+    sudo pip2 install --user --upgrade setuptools pip
+    sudo pip3 install --user --upgrade setuptools pip
+    ;;
+esac
 
-pip2 install --user --upgrade setuptools
-pip2 install --user --upgrade pip
-pip2 install --user --upgrade --force-reinstall neovim
-
-pip3 install --user --upgrade setuptools
-pip3 install --user --upgrade pip
-pip3 install --user --upgrade --force-reinstall neovim
-
-# Python Packages
-pip install requests websocket-client pync pafy vim-vint proselint yamllint mdv
+pip2 install neovim
+pip3 install neovim
 
 # Ruby packages
 gem install mdl
