@@ -1,0 +1,33 @@
+case $(uname) in
+  'Darwin')
+    path=(
+      /usr/local/bin
+      /usr/local/sbin
+      $GOPATH/bin
+      $HOME/.luarocks/bin
+      $HOME/.dotfiles/bin
+      $path
+    )
+    ;;
+  'Linux')
+    path=(
+      $HOME/.dotfiles/bin
+      $HOME/.cargo/bin
+      $HOME/.local/bin
+      $HOME/.gem/ruby/2.4.0/bin
+      $HOME/Android/Sdk/tools/bin
+      $HOME/Android/Sdk/platform-tools
+      $path
+    )
+    ;;
+esac
+
+# Set function paths
+case $(uname) in
+  'Darwin')
+    fpath=(
+      /usr/local/share/zsh/site-functions
+      $fpath
+    )
+    ;;
+esac

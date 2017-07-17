@@ -8,10 +8,11 @@ WEECHAT="${ROOT}/weechat"
 git submodule update --init --recursive
 
 # Symlink zsh configs and install
-touch $HOME/.zshrc $HOME/.zshenv
-rm $HOME/.zshrc $HOME/.zshenv
-ln -s $ROOT/zsh/zshrc $HOME/.zshrc
-ln -s $ROOT/zsh/zshenv $HOME/.zshenv
+touch "$HOME/.zshrc" "$HOME/.zshenv" "$HOME/.zprofile"
+rm "$HOME/.zshrc" "$HOME/.zshenv" "$HOME/.zprofile"
+ln -s "$ROOT/zsh/zshrc" "$HOME/.zshrc"
+ln -s "$ROOT/zsh/zshenv" "$HOME/.zshenv"
+ln -s "$ROOT/zsh/zprofile" "$HOME/.zprofile"
 case $(uname) in
   'Darwin')
     sudo chpass -s $(which zsh) $USER

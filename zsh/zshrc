@@ -1,32 +1,10 @@
 source $ZPLUG_HOME/init.zsh
 
 # Set path
-case $(uname) in
-  'Darwin')
-    path=(
-      /usr/local/bin
-      /usr/local/sbin
-      $GOPATH/bin
-      $HOME/.luarocks/bin
-      $HOME/.dotfiles/bin
-      $path
-    )
-    ;;
-  'Linux')
-    path=(
-      $HOME/.dotfiles/bin
-      $path
-    )
-    ;;
-esac
+source $HOME/.dotfiles/zsh/zshpath
 
-# Set function paths
 case $(uname) in
   'Darwin')
-    fpath=(
-      /usr/local/share/zsh/site-functions
-      $fpath
-    )
     ;;
 esac
 
