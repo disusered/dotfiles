@@ -6,6 +6,9 @@ case $(uname) in
   'Darwin')
     source $ZPLUG_HOME/init.zsh
     ;;
+  'Linux')
+    source /usr/share/zsh/scripts/zplug/init.zsh
+    ;;
 esac
 
 # plugins
