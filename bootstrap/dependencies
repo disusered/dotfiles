@@ -7,13 +7,16 @@ case $(uname) in
     pip3 install --user --upgrade setuptools pip
     ;;
   'Linux')
-    sudo pip2 install --user --upgrade setuptools pip
-    sudo pip3 install --user --upgrade setuptools pip
+    sudo pip2 install --upgrade setuptools pip
+    sudo pip3 install --upgrade setuptools pip
     ;;
 esac
 
-pip2 install neovim
-pip3 install neovim
+pip2 install --user neovim
+pip3 install --user neovim
+
+# Python packages
+pip install --user proselint
 
 # Ruby packages
 gem install mdl
