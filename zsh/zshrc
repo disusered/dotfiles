@@ -1,4 +1,4 @@
-# Set path
+# Set $path
 source $HOME/.dotfiles/zsh/zshpath
 
 # zplug init
@@ -17,8 +17,7 @@ zplug 'mollifier/cd-gitroot'
 zplug 'zsh-users/zsh-history-substring-search'
 zplug 'hchbaw/zce.zsh'
 
-# zsh-syntax-highlighting must be loaded after executing compinit
-# command and sourcing other plugins
+# zsh-syntax-highlighting must be loaded after executing compinit & sourcing plugins
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # completions
@@ -49,7 +48,6 @@ autoload -U compinit && compinit
 SAVEHIST=10000
 HISTSIZE=10000
 HISTFILE=$HOME/.zsh_history
-
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
@@ -63,19 +61,19 @@ setopt HIST_BEEP
 
 # Disable Globbing
 alias git='noglob git'
-alias open='noglob open'
+case $(uname) in
+  'Darwin')
+    alias open='noglob open'
+    ;;
+esac
 
 # Aliases
-alias sudo='sudo '
 alias ta='tmux attach -t'
 alias f='fzf-tmux'
 alias c='clear'
 alias r='ranger'
-alias d='dict'
 alias j="selectmark"
-alias md='mdv'
-alias chat='weechat'
-alias preview='term-img'
+alias md='nohup showdown > /dev/null &!'
 alias t='twitter'
 alias cdg='cd-gitroot'
 alias top='htop'
@@ -83,7 +81,6 @@ alias ztime='/usr/bin/time zsh -i -c exit'
 alias used='ncdu'
 alias ag='ag --pager "less -R" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34'
 alias http='http --style vim'
-alias help='md $(ls ~/.dotfiles/help/ | f --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%)'
 alias edit='nvim $(ls ~/.dotfiles/help/ | f --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%)'
 alias magit="nvim -c MagitOnly"
 alias g='git'
@@ -116,16 +113,21 @@ alias colors='( x=`tput op` y=`printf %$((${COLUMNS}-6))s`;for i in {0..256};do 
 case $(uname) in
   'Darwin')
     alias ls='ls -G'
+    alias d='dict'
     alias p='preview'
     alias flushdns='sudo discoveryutil udnsflushcaches'
     alias pbc='pbcopy'
     alias pbp='pbpaste'
     alias fonts='fc-list | cut -f2 -d: | sort -u'
+    alias help='md $(ls ~/.dotfiles/help/ | f --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%)'
+    alias chat='weechat'
+    alias preview='term-img'
     ;;
   'Linux')
+    alias pbc='clipcopy'
     alias ls='ls --color'
-    alias i3lock='i3lock-fancy'
-    alias lock='i3lock'
+    alias lock='i3lock-fancy'
+    alias help='nohup showdown $(ls ~/.dotfiles/help/ | f --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%) > /dev/null &! exit'
     ;;
 esac
 
@@ -143,6 +145,7 @@ BASE16_SHELL=$HOME/.dotfiles/vendor/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 base16_ocean
 
+# Manual page (man) coloring
 man() {
   env LESS_TERMCAP_mb=$'\E[01;31m' \
   LESS_TERMCAP_md=$'\E[01;35;74m' \
@@ -154,6 +157,7 @@ man() {
   man "$@"
 }
 
+# Enable vim mode
 bindkey -v
 
 # History substring search
