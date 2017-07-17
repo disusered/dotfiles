@@ -92,3 +92,6 @@
 	changeHunkIndicators = true
 	stripLeadingSymbols = true
 	useUnicodeRuler = true
+[cola]
+	spellcheck = false
+	fontdiff = Source Code Pro,9,-1,5,50,0,0,0,0,0
