@@ -170,6 +170,6 @@ client.background       $base07
 # gaps outer 0
 
 # Startup
-exec_always --no-startup-id xautolock -time 3 -locker 'i3lock-fancy -d -c 000000'
+exec_always --no-startup-id xautolock -time 2 -locker 'i3lock-fancy'
 exec_always --no-startup-id numlockx on
 # exec --no-startup-id polybar top
