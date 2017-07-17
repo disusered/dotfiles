@@ -124,7 +124,9 @@ case $(uname) in
     ;;
   'Linux')
     alias ls='ls --color'
-    alias tmux='tmux-next'
+    alias i3lock='i3lock-fancy'
+    alias lock='i3lock'
+    ;;
 esac
 
 # Temporary files
