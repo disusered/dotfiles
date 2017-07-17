@@ -2,6 +2,9 @@ case $(uname) in
   'Darwin')
     export ZPLUG_HOME=/usr/local/opt/zplug
     ;;
+  'Linux')
+    export ZPLUG_HOME=$HOME/.zplug
+    ;;
 esac
 
 export MDV_THEME=884.0977
