@@ -1,10 +1,10 @@
-source $ZPLUG_HOME/init.zsh
-
 # Set path
 source $HOME/.dotfiles/zsh/zshpath
 
+# zplug init
 case $(uname) in
   'Darwin')
+    source $ZPLUG_HOME/init.zsh
     ;;
 esac
 
@@ -21,7 +21,11 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 # completions
 zplug "zsh-users/zsh-completions"
 zplug "lukechilds/zsh-better-npm-completion"
-zplug "Homebrew/homebrew-services", use:"completions/zsh"
+case $(uname) in
+  'Darwin')
+    zplug "Homebrew/homebrew-services", use:"completions/zsh"
+    ;;
+esac
 
 # theme
 zplug "mafredri/zsh-async", on:"sindresorhus/pure"

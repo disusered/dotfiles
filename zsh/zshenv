@@ -1,4 +1,8 @@
-export ZPLUG_HOME=/usr/local/opt/zplug
+case $(uname) in
+  'Darwin')
+    export ZPLUG_HOME=/usr/local/opt/zplug
+    ;;
+esac
 
 export MDV_THEME=884.0977
 

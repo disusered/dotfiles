@@ -137,7 +137,11 @@ ln -s $ROOT/ranger $HOME/.config/ranger
 chmod +x $ROOT/bin/imgcat
 
 # Setup Go
-mkdir $HOME/Development/SDK/gopath
+case $(uname) in
+  'Darwin')
+    mkdir $HOME/Development/SDK/gopath
+    ;;
+esac
 
 # Setup asdf
 touch $HOME/.asdfrc $HOME/.default-gems
