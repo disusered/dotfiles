@@ -5,6 +5,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'sheerun/vim-polyglot'
 
 " always load
+Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-dispatch'
 Plug 'christoomey/vim-tmux-navigator'
