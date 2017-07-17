@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Paths
-ROOT="${HOME}/.dotfiles"
-WEECHAT="${ROOT}/weechat"
+ROOT="$HOME/.dotfiles"
+WEECHAT="$ROOT/weechat"
 
 # Update submodules
 git submodule update --init --recursive
