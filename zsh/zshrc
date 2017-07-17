@@ -252,6 +252,31 @@ bindkey -M vicmd '^R' redo
 bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 
+# Modal cursor
+case $(uname) in
+  'Linux')
+    zle-keymap-select () {
+      if [ $TERM = "rxvt-unicode-256color" ]; then
+        if [ $KEYMAP = vicmd ]; then
+          echo -ne "\033]12;#B48EAD\007"
+        else
+          echo -ne "\033]12;Grey\007"
+        fi
+      fi
+    }
+
+    zle-line-init () {
+      zle -K viins
+      if [ $TERM = "rxvt-256color" ]; then
+        echo -ne "\033]12;Grey\007"
+      fi
+    }
+
+    zle -N zle-keymap-select
+    zle -N zle-line-init
+  ;;
+esac
+
 # Help
 case $(uname) in
   'Darwin')
