@@ -138,49 +138,6 @@ if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
 
-# gh - get git commit hash
-# example usage: git rebase -i `gh`
-gh() {
-  local commits commit
-  commits=$(git log --color=always --pretty=oneline --abbrev-commit --reverse) &&
-  commit=$(echo "$commits" | fzf --tac +s +m -e --ansi --reverse) &&
-  echo -n $(echo "$commit" | sed "s/ .*//")
-}
-
-# git log interactive
-gli() {
-  git l --format=$GIT_LOG_STYLE |
-  fzf --ansi --no-sort --reverse --tiebreak=index \
-      --preview "echo {} | grep -o '[a-f0-9]\{7\}' | head -1 |
-                 xargs -I % sh -c 'git show --color=always % | head -$LINES'" \
-      --bind "enter:execute(echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs -I % echo -n % | clipcopy)" \
-      --bind "ctrl-d:execute:echo {} | grep -o '[a-f0-9]\{7\}' | head -1 |
-              xargs -I % sh -c 'vim fugitive://\$(git rev-parse --show-toplevel)/.git//% < /dev/tty'"
-}
-
-# Marks
-function jump {
-  cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
-}
-function mark {
-  mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
-}
-function unmark {
-  rm -i "$MARKPATH/$1"
-}
-function marks {
-  \ls -l "$MARKPATH" | tail -n +2 | sed 's/  / /g' | cut -d' ' -f9- | awk -F ' -> ' '{printf "%-10s -> %s\n", $1, $2}'
-}
-function _completemarks {
-  reply=($(ls $MARKPATH))
-}
-function selectmark {
-  URI="$(marks | cat | f | awk '{print $1}')"
-  cd -P "$MARKPATH/$URI" 2>/dev/null || echo "No such mark: $URI"
-}
-compctl -K _completemarks jump
-compctl -K _completemarks unmark
-
 # Base16 Shell
 BASE16_SHELL=$HOME/.dotfiles/vendor/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"

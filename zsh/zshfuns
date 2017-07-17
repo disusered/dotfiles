@@ -1,0 +1,64 @@
+# Universal clipboard copy
+# Adapted from https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/clipboard.zsh
+function clipcopy() {
+  emulate -L zsh
+  local file=$1
+  if [[ $OSTYPE == darwin* ]]; then
+    if [[ -z $file ]]; then
+      pbcopy
+    else
+      cat $file | pbcopy
+    fi
+  elif [[ $OSTYPE == cygwin* ]]; then
+    if [[ -z $file ]]; then
+      cat > /dev/clipboard
+    else
+      cat $file > /dev/clipboard
+    fi
+  else
+    if (( $+commands[xsel] )); then
+      if [[ -z $file ]]; then
+        xsel --primary --input
+      else
+        cat "$file" | xsel --primary --input
+      fi
+    else
+      print "clipcopy: Platform $OSTYPE not supported or xclip/xsel not installed" >&2
+      return 1
+    fi
+  fi
+}
+
+# Git Log Interactive
+gli() {
+  git l --format=$GIT_LOG_STYLE |
+  fzf --ansi --no-sort --reverse --tiebreak=index \
+      --preview "echo {} | grep -o '[a-f0-9]\{7\}' | head -1 |
+                 xargs -I % sh -c 'git show --color=always % | head -$LINES'" \
+      --bind "enter:execute(echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs -I % echo -n % | clipcopy)" \
+      --bind "ctrl-d:execute:echo {} | grep -o '[a-f0-9]\{7\}' | head -1 |
+              xargs -I % sh -c 'vim fugitive://\$(git rev-parse --show-toplevel)/.git//% < /dev/tty'"
+}
+
+# Marks
+function jump {
+  cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
+}
+function mark {
+  mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
+}
+function unmark {
+  rm -i "$MARKPATH/$1"
+}
+function marks {
+  \ls -l "$MARKPATH" | tail -n +2 | sed 's/  / /g' | cut -d' ' -f9- | awk -F ' -> ' '{printf "%-10s -> %s\n", $1, $2}'
+}
+function _completemarks {
+  reply=($(ls $MARKPATH))
+}
+function selectmark {
+  URI="$(marks | cat | f | awk '{print $1}')"
+  cd -P "$MARKPATH/$URI" 2>/dev/null || echo "No such mark: $URI"
+}
+compctl -K _completemarks jump
+compctl -K _completemarks unmark
