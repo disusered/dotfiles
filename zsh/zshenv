@@ -37,3 +37,33 @@ case $(uname) in
     export VAGRANT_DEFAULT_PROVIDER=virtualbox
     ;;
 esac
+
+# Universal clipboard copy
+function clipcopy() {
+  emulate -L zsh
+  local file=$1
+  if [[ $OSTYPE == darwin* ]]; then
+    if [[ -z $file ]]; then
+      pbcopy
+    else
+      cat $file | pbcopy
+    fi
+  elif [[ $OSTYPE == cygwin* ]]; then
+    if [[ -z $file ]]; then
+      cat > /dev/clipboard
+    else
+      cat $file > /dev/clipboard
+    fi
+  else
+    if (( $+commands[xsel] )); then
+      if [[ -z $file ]]; then
+        xsel --primary --input
+      else
+        cat "$file" | xsel --primary --input
+      fi
+    else
+      print "clipcopy: Platform $OSTYPE not supported or xclip/xsel not installed" >&2
+      return 1
+    fi
+  fi
+}
