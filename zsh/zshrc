@@ -252,6 +252,15 @@ bindkey -M vicmd '^R' redo
 bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 
+# Clipboard
+case $(uname) in
+  'Linux')
+    vi-append-x-selection () { RBUFFER=$(xsel -o -p </dev/null)$RBUFFER; }
+    zle -N vi-append-x-selection
+    bindkey -a 'p' vi-append-x-selection
+  ;;
+esac
+
 # Modal cursor
 case $(uname) in
   'Linux')
