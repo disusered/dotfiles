@@ -36,6 +36,9 @@ case $(uname) in
     export ANDROID_HOME=/usr/local/opt/android-sdk
     export VAGRANT_DEFAULT_PROVIDER=virtualbox
     ;;
+  'Linux')
+    export ALSA_CARD=Audio
+    ;;
 esac
 
 # Universal clipboard copy
