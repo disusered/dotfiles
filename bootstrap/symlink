@@ -18,6 +18,7 @@ case $(uname) in
     ;;
   'Linux')
     stow xorg
+    stow i3
     ;;
 esac
 
@@ -122,11 +123,5 @@ case $(uname) in
     ;;
 esac
 
-# Setup i3
-case $(uname) in
-  'Linux')
-    rm -rf $HOME/.config/i3
-    mkdir -p $HOME/.config/i3
-    ln -s $ROOT/i3/config $HOME/.config/i3/config
     ;;
 esac
