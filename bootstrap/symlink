@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# stow installs
+cd "$HOME/.dotfiles" || exit
+case $(uname) in
+  'Darwin')
+    ;;
+  'Linux')
+    stow xorg
+    ;;
+esac
+
 # Paths
 ROOT="$HOME/.dotfiles"
 WEECHAT="$ROOT/weechat"
