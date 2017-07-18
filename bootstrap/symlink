@@ -8,6 +8,7 @@ stow tmux
 stow git
 stow vim
 stow neovim
+stow ag
 
 case $(uname) in
   'Darwin')
@@ -63,11 +64,6 @@ case $(uname) in
     tic $ROOT/vendor/screen-256color.ti
     ;;
 esac
-
-# Symlink Ag config
-touch $HOME/.agignore
-rm $HOME/.agignore
-ln -s $ROOT/ag/agignore $HOME/.agignore
 
 # Hide last-logged-in message on new terminals
 touch $HOME/.hushlogin
