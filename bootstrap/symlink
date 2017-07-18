@@ -9,6 +9,7 @@ stow git
 stow vim
 stow neovim
 stow ag
+stow weechat
 
 case $(uname) in
   'Darwin')
@@ -96,11 +97,6 @@ case $(uname) in
       sudo chmod u+s /usr/local/Cellar/htop/$HTOP_VERSION/bin/htop
       ;;
 esac
-
-# Weechat
-touch $HOME/.weechat
-rm -rf $HOME/.weechat
-ln -s $WEECHAT $HOME/.weechat
 
 # Elixir
 touch $HOME/.iex.exs

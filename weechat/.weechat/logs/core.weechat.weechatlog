@@ -1,0 +1,23 @@
+2017-07-17 19:35:58	⚠	Warning: /home/carlos/.weechat/aspell.conf, line 7: unknown option for section "color": suggestions = default
+2017-07-17 19:35:58		New key binding (context "default"): meta-meta-OQ => /bar scroll buflist * e
+2017-07-17 19:35:58		New key binding (context "default"): meta-meta-OP => /bar scroll buflist * b
+2017-07-17 19:35:58		New key binding (context "default"): meta-OQ => /bar scroll buflist * +100%
+2017-07-17 19:35:58		New key binding (context "default"): meta-OP => /bar scroll buflist * -100%
+2017-07-17 19:35:58		python: stdout/stderr: Traceback (most recent call last):
+2017-07-17 19:35:58		python: stdout/stderr:   File "/home/carlos/.dotfiles/weechat/.weechat/python/autoload/notification_center.py", line 7, in <module>
+2017-07-17 19:35:58		python: stdout/stderr:     from pync import Notifier
+2017-07-17 19:35:58		python: stdout/stderr: ImportError: No module named pync
+2017-07-17 19:35:58	⚠	python: unable to parse file "/home/carlos/.dotfiles/weechat/.weechat/python/autoload/notification_center.py"
+2017-07-17 19:35:58		URL server listening on ('127.0.0.1', 30012)
+2017-07-17 19:35:58		python scripts loaded: autojoin, buffer_autoclose, colorize_nicks, go, urlserver
+2017-07-17 19:35:59	⚠	buflist: warning: the script buffers.pl is loaded and provides a bar with list of buffers similar to the buflist plugin; you may want to uninstall the script buffers.pl (/script remove buffers.pl) or disable/unload the buflist plugin; see WeeChat release notes for more information
+2017-07-17 19:35:59		perl scripts loaded: buffers, highmon, iset
+2017-07-17 19:35:59	⚠	Warning: /home/carlos/.weechat/script.conf, line 50: unknown option for section "scripts": url_force_https = on
+2017-07-17 19:35:59		script: downloading list of scripts...
+2017-07-17 19:35:59		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-17 19:36:01		script: 349 scripts for WeeChat 1.9
+2017-07-17 19:36:47		fifo: pipe closed
+2017-07-17 19:36:47		Highmon buffer has been closed but output is still set to buffer, unusual results may occur. To recreate the buffer use /highmon fix
+2017-07-17 19:36:47		perl: scripts unloaded
+2017-07-17 19:36:47		URL server stopped
+2017-07-17 19:36:47		python: scripts unloaded
