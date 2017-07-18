@@ -2,6 +2,9 @@
 
 # stow installs
 cd "$HOME/.dotfiles" || exit
+
+stow zsh
+
 case $(uname) in
   'Darwin')
     ;;
@@ -17,15 +20,10 @@ WEECHAT="$ROOT/weechat"
 # Update submodules
 git submodule update --init --recursive
 
-# Symlink zsh configs and install
-touch "$HOME/.zshrc" "$HOME/.zshenv" "$HOME/.zprofile"
-rm "$HOME/.zshrc" "$HOME/.zshenv" "$HOME/.zprofile"
-ln -s "$ROOT/zsh/zshrc" "$HOME/.zshrc"
-ln -s "$ROOT/zsh/zshenv" "$HOME/.zshenv"
-ln -s "$ROOT/zsh/zprofile" "$HOME/.zprofile"
+# Setup zsh
 case $(uname) in
   'Darwin')
-    sudo chpass -s $(which zsh) $USER
+    sudo chpass -s "$(which zsh)" $USER
     ;;
 esac
 

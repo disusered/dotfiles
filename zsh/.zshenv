@@ -42,4 +42,4 @@ case $(uname) in
 esac
 
 # Load custom functions
-source $HOME/.dotfiles/zsh/zshfuns
+source $HOME/.config/zsh/zshfuns

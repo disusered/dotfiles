@@ -1,5 +1,5 @@
 # Set $path
-source $HOME/.dotfiles/zsh/zshpath
+source $HOME/.config/zsh/zshpath
 
 # zplug init
 case $(uname) in
