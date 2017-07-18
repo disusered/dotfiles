@@ -4,6 +4,7 @@
 cd "$HOME/.dotfiles" || exit
 
 stow zsh
+stow tmux
 
 case $(uname) in
   'Darwin')
@@ -46,13 +47,8 @@ case $(uname) in
     ;;
 esac
 
-# Symlink Tmux config
-touch $HOME/.tmux.conf
-mkdir -p $HOME/.tmux
-rm -rf $HOME/.tmux.conf $HOME/.tmux
-mkdir -p $HOME/.tmux/plugins
-ln -s $ROOT/tmux/tmux.conf $HOME/.tmux.conf
-ln -s $ROOT/vendor/tpm $HOME/.tmux/plugins/tpm
+# Symlink Tmux Plugin Manager
+ln -s "$HOME/.dotfiles/vendor/tpm" "$HOME/.tmux/plugins/tpm"
 
 # Symlink Git config
 touch $HOME/.gitconfig $HOME/.gitignore_global
