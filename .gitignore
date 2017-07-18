@@ -6,6 +6,7 @@ vim/.netrwhist
 vim/.ycm_extra_conf.pyc
 vim/cache
 vim/.vim/undo
+neovim/.config/nvim/undo
 npm-debug.log
 plug.vim
 vendor/plugged

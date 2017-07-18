@@ -7,6 +7,7 @@ stow zsh
 stow tmux
 stow git
 stow vim
+stow neovim
 
 case $(uname) in
   'Darwin')
