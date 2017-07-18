@@ -15,6 +15,7 @@ stow asdf
 
 case $(uname) in
   'Darwin')
+    stow hammerspoon
     ;;
   'Linux')
     stow xorg
@@ -36,13 +37,6 @@ case $(uname) in
     ;;
 esac
 
-# Symlink hammerspoon config
-case $(uname) in
-  'Darwin')
-    rm -rf $HOME/.hammerspoon
-    ln -s $ROOT/hammerspoon $HOME/.hammerspoon
-    ;;
-esac
 
 # Symlink karabiner-elements config
 case $(uname) in
