@@ -4,6 +4,4 @@ $HOME/.fehbg &
 
 setxkbmap -option caps:escape
 
-/usr/bin/dropbox &
-
 exec i3

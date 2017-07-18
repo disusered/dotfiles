@@ -156,3 +156,4 @@ client.background       $base07
 exec_always --no-startup-id xautolock -time 2 -locker 'i3lock-fancy'
 exec_always --no-startup-id numlockx on
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id exec ~/.dropbox-dist/dropboxd
