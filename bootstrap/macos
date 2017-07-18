@@ -24,3 +24,14 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # Show the ~/Library folder
 chflags nohidden ~/Library
+
+# iTerm ^H fix
+case $(uname) in
+  'Darwin')
+    FIX='s/kbs=^[hH]/kbs=\\177/';
+    infocmp $TERM | sed $FIX > $HOME/.dotfiles/vendor/$TERM.ti
+    infocmp screen-256color | sed $FIX > $HOME/.dotfiles/vendor/screen-256color.ti
+    tic $HOME/.dotfiles/vendor/$TERM.ti
+    tic $HOME/.dotfiles/vendor/screen-256color.ti
+    ;;
+esac

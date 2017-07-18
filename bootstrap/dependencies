@@ -55,17 +55,34 @@ diff-so-fancy tern tern-fetch yarn sass-lint alex
 
 # other node deps
 npm install -g http-server plugman cordova grunt-cli
-case $(uname) in
-  'Darwin')
-    npm install -g ios-deploy ios-sim term-img-cli
-    ;;
-esac
 
 # Mac deps
 case $(uname) in
   'Darwin')
+    # cordova-ios
+    npm install -g ios-deploy ios-sim
+
+    # vagrant
     vagrant plugin install vagrant-bindfs
     vagrant plugin install vagrant-hostmanager
-    sudo chmod 600 ~/.netrc # ansible
+
+    # ansible
+    sudo chmod 600 ~/.netrc
+
+    # fonts
+    mkdir -p "$HOME/.dotfiles/vendor/fonts/"
+    mkdir -p "$HOME/Library/Fonts"
+
+    wget https://github.com/i-tu/Hasklig/releases/download/v1.0-beta/Hasklig-1.0-Beta.zip \
+      -O "$HOME/.dotfiles/vendor/fonts/hasklig.zip"
+    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v0.8.0/SourceCodePro.zip \
+      -O "$HOME/.dotfiles/vendor/fonts/iconfont.zip"
+
+    unzip "$HOME/.dotfiles/vendor/fonts/hasklig.zip" -d "$HOME/.dotfiles/vendor/fonts/"
+    unzip "$HOME/.dotfiles/vendor/fonts/iconfont.zip" -d "$HOME/.dotfiles/vendor/fonts/"
+
+    find "$HOME/.dotfiles/vendor/fonts/" \
+      -type f -name "*.*tf" -exec cp "{}" "$HOME/Library/Fonts/" \;
+    fc-cache -vf ~/.fonts
     ;;
 esac
