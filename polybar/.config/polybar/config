@@ -1,0 +1,106 @@
+;vim: set ft=dosini
+
+[colors]
+fg = #3c3836
+modfg = #b48ead
+bg = #f2e5bc
+muted = #65737e
+white = #eff1f5
+gray = #dfe1e8
+black = #2b303b
+red = #bf616a
+blue = #8fa1b3
+yellow = #ebcb8b
+green = #a3be8c
+
+[bar/main]
+bottom = false
+border-size = 0
+override-redirect = false
+; Scroll anywhere to change workspace
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+; Set up modules
+modules-left = i3
+modules-center = xwindow
+modules-right = date volume
+; System Tray
+tray-position = right
+tray-padding = 2
+tray-background = ${colors.black}
+; Styles
+background = ${colors.black}
+foreground = ${colors.white}
+underline-size = 4
+underline-color = ${colors.modfg}
+; Fonts
+font-0 = Source Code Pro:size=9;0
+font-1 = SauceCodePro Nerd Font:size=9;0
+font-2 = SauceCodePro Nerd Font:size=10;0
+font-3 = SauceCodePro Nerd Font:size=12;0
+
+[module/xwindow]
+type = internal/xwindow
+label = %{T3}%{F#8fa1b3}%{F-}%{T-} %title%
+label-underline = ${colors.blue}
+label-padding = 1
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+; Mode i.e. resize
+label-mode = %mode%
+label-mode-padding = 3
+label-mode-foreground = ${colors.modfg}
+label-mode-underline = ${colors.modfg}
+; Focused workspace
+label-focused = %name%
+label-focused-foreground = ${colors.white}
+label-focused-underline = ${colors.green}
+label-focused-padding = 3
+; Unfocused workspace
+label-unfocused = %name%
+label-unfocused-foreground = ${colors.muted}
+label-unfocused-underline = #4f5b66
+label-unfocused-padding = 3
+; Urgent
+label-urgent = %name%
+label-urgent-foreground = ${colors.red}
+label-urgent-padding = 3
+
+[module/date]
+type = internal/date
+interval = 5
+date = "%a, %b %d"
+date-alt = "%Y-%m-%d"
+time = "%l:%M %p"
+time-alt = "%H:%M:%S"
+label = %{T3}%{F#d08770}%{F-}%{T-} %date% %time%
+label-padding = 1
+label-underline = #d08770
+
+[module/volume]
+type = internal/volume
+; Soundcard to be used
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+; Name of the master mixer
+; Default: Master
+; Use the following command to list available mixer controls:
+; amixer scontrols | sed -nr "s/.*'([[:alnum:]]+)'.*/\1/p"
+master-mixer = PCM
+; Format
+format-volume = <ramp-volume><label-volume>
+ramp-volume-underline = #ebcb8b
+ramp-volume-foreground = #ebcb8b
+label-volume-underline = #ebcb8b
+; Muted
+label-muted = %{T4}%{F#bf616a}%{F-}%{T-} muted
+label-muted-underline = #bf616a
+label-muted-padding = 1
+; Ramp Volume icons. Only applies if <ramp-volume> is used
+ramp-volume-0 = %{T4}%{T-}
+ramp-volume-1 = %{T4}%{T-}
+ramp-volume-2 = %{T4}%{T-}
+ramp-volume-padding = 1

@@ -25,6 +25,7 @@ case $(uname) in
   'Linux')
     stow xorg
     stow i3
+    stow polybar
     ;;
 esac
 
