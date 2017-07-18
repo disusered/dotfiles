@@ -5,6 +5,7 @@ cd "$HOME/.dotfiles" || exit
 
 stow zsh
 stow tmux
+stow git
 
 case $(uname) in
   'Darwin')
@@ -49,12 +50,6 @@ esac
 
 # Symlink Tmux Plugin Manager
 ln -s "$HOME/.dotfiles/vendor/tpm" "$HOME/.tmux/plugins/tpm"
-
-# Symlink Git config
-touch $HOME/.gitconfig $HOME/.gitignore_global
-rm $HOME/.gitconfig $HOME/.gitignore_global
-ln -s $ROOT/git/gitconfig $HOME/.gitconfig
-ln -s $ROOT/git/gitignore_global $HOME/.gitignore_global
 
 # Symlink Neo/Vim config and install plugins
 touch $HOME/.vimrc $HOME/.gvimrc
