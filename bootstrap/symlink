@@ -11,6 +11,7 @@ stow neovim
 stow ag
 stow weechat
 stow ranger
+stow asdf
 
 case $(uname) in
   'Darwin')
@@ -120,12 +121,6 @@ case $(uname) in
     mkdir $HOME/Development/SDK/gopath
     ;;
 esac
-
-# Setup asdf
-touch $HOME/.asdfrc $HOME/.default-gems
-rm $HOME/.asdfrc $HOME/.default-gems
-ln -s $ROOT/asdf/asdfrc $HOME/.asdfrc
-ln -s $ROOT/asdf/default-gems $HOME/.default-gems
 
 # Setup i3
 case $(uname) in
