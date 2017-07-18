@@ -16,6 +16,7 @@ stow asdf
 case $(uname) in
   'Darwin')
     stow hammerspoon
+    stow karabiner
     ;;
   'Linux')
     stow xorg
@@ -34,18 +35,6 @@ git submodule update --init --recursive
 case $(uname) in
   'Darwin')
     sudo chpass -s "$(which zsh)" $USER
-    ;;
-esac
-
-
-# Symlink karabiner-elements config
-case $(uname) in
-  'Darwin')
-    mkdir -p $HOME/.karabiner.d/configuration/
-    rm -rf $HOME/.karabiner.d
-    mkdir -p $HOME/.karabiner.d/configuration/
-    touch $HOME/.karabiner.d/configuration/
-    ln -s $ROOT/karabiner/karabiner.json $HOME/.karabiner.d/configuration/
     ;;
 esac
 
