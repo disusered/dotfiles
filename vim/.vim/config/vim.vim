@@ -56,9 +56,7 @@ set synmaxcol=256
 set diffopt+=vertical
 set updatetime=1000
 
-set undodir=$HOME/.dotfiles/vim/undo
 set undofile
-
 filetype plugin on
 filetype indent on
 syntax enable

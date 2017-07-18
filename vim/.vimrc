@@ -11,7 +11,7 @@
     set notermguicolors
   endif
 
-  let $MYCONFIG='$HOME/.dotfiles/vim/config'
+  let $MYCONFIG='$HOME/.vim/config'
   call plug#begin('~/.dotfiles/vendor/plugged')
 
   source $MYCONFIG/ft.vim
@@ -24,6 +24,7 @@
 
 " Settings =====================================================================
 set ttymouse=xterm2
+set undodir=$HOME/.vim/undo
 source $MYCONFIG/shared.vim
 
 " vim specific

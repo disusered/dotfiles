@@ -6,6 +6,7 @@ cd "$HOME/.dotfiles" || exit
 stow zsh
 stow tmux
 stow git
+stow vim
 
 case $(uname) in
   'Darwin')
@@ -50,16 +51,6 @@ esac
 
 # Symlink Tmux Plugin Manager
 ln -s "$HOME/.dotfiles/vendor/tpm" "$HOME/.tmux/plugins/tpm"
-
-# Symlink Neo/Vim config and install plugins
-touch $HOME/.vimrc $HOME/.gvimrc
-mkdir -p $ROOT/vim/autoload $HOME/.vim $HOME/.config/nvim
-rm -rf $ROOT/vim/autoload/* $HOME/.vim $HOME/.config/nvim $HOME/.vimrc $HOME/.gvimrc
-ln -s $ROOT/vendor/vim-plug/plug.vim $ROOT/vim/autoload/plug.vim
-ln -s $ROOT/vim $HOME/.vim
-ln -s $ROOT/vim/vimrc $HOME/.vimrc
-ln -s $ROOT/vim/gvimrc $HOME/.gvimrc
-ln -s $ROOT/vim $HOME/.config/nvim
 
 # iTerm ^H fix
 case $(uname) in
