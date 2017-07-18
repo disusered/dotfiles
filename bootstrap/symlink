@@ -10,6 +10,7 @@ stow vim
 stow neovim
 stow ag
 stow weechat
+stow ranger
 
 case $(uname) in
   'Darwin')
@@ -109,12 +110,6 @@ case $(uname) in
     defaults write org.x.X11 enable_test_extensions -boolean true
     ;;
 esac
-
-# Install ranger
-mkdir -p $HOME/.config/ranger
-rm -rf $HOME/.config/ranger
-mkdir -p $HOME/.config/ranger
-ln -s $ROOT/ranger $HOME/.config/ranger
 
 # Setup imgcat
 chmod +x $ROOT/bin/imgcat
