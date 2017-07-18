@@ -18,6 +18,8 @@ export LC_ALL='en_US.UTF-8'
 
 export EDITOR='vim'
 export PAGER='less'
+export LESSPIPE=`which src-hilite-lesspipe.sh`
+export LESSOPEN="| ${LESSPIPE} %s"
 export LESS='-X -F -g -i -M -R -S -w -z-4'
 
 export FZF_DEFAULT_OPTS='--color hl:2,hl+:2,fg:8,fg+:15,bg+:0,info:8,prompt:5,spinner:135,pointer:12,marker:2'

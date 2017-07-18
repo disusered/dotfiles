@@ -31,7 +31,7 @@ brew 'libtool'
 brew 'unixodbc'
 brew 'postgresql'
 brew 'zplug'
-brew 'openconnect'
+brew 'source-highlight'
 brew 'go', args: ['cross-compile-common']
 brew 'lua', args: ['universal', 'with-completion']
 brew 'luajit', args: ['with-52compat']
