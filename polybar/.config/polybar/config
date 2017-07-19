@@ -17,13 +17,13 @@ green = #a3be8c
 bottom = false
 border-size = 0
 override-redirect = false
-; Scroll anywhere to change workspace
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
 ; Set up modules
 modules-left = i3
 modules-center = xwindow
 modules-right = volume network date
+; Scroll anywhere to change workspace
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
 ; System Tray
 tray-position = right
 tray-padding = 2
