@@ -30,6 +30,3 @@ vim/autoload/
 .env
 sec.conf
 vim/view
-ranger/bookmarks
-ranger/history
-ranger/tagged
