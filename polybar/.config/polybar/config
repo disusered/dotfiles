@@ -1,4 +1,4 @@
-;vim: set ft=dosini
+; vim:ft=dosini
 
 [colors]
 fg = #3c3836
