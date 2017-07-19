@@ -13,8 +13,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+w kill
 
 # start rofi
-set $execute exec zsh -c "rofi -show run"
-bindsym Ctrl+space $execute
+bindsym Ctrl+space exec zsh -c "rofi -show run"
+# bindsym Ctrl+space exec zsh -c "rofi -show drun"
+bindsym Ctrl+Shift+space exec --no-startup-id "rofi -show run -run-command 'gksudo {cmd}'"
 
 # list open windows to switch to
 # bindsym $mod+Tab exec rofi -show window
