@@ -76,9 +76,9 @@ date = "%a, %b %d"
 date-alt = "%Y-%m-%d"
 time = "%l:%M %p"
 time-alt = "%H:%M:%S"
-label = %{T3}%{F#d08770}%{F-}%{T-} %date% %time%
+label = %{T3}%{F#ebcb8b}%{F-}%{T-} %date% %time%
 label-padding = 1
-label-underline = #d08770
+label-underline = #ebcb8b
 
 [module/volume]
 type = internal/volume
@@ -93,9 +93,10 @@ headphone-soundcard = default
 master-mixer = PCM
 ; Format
 format-volume = <ramp-volume><label-volume>
-ramp-volume-underline = #ebcb8b
-ramp-volume-foreground = #ebcb8b
-label-volume-underline = #ebcb8b
+ramp-volume-underline = #b48ead
+ramp-volume-foreground = #b48ead
+label-volume-underline = #b48ead
+label-volume-padding = 1
 ; Muted
 label-muted = %{T4}%{F#bf616a}%{F-}%{T-} muted
 label-muted-underline = #bf616a
@@ -104,7 +105,6 @@ label-muted-padding = 1
 ramp-volume-0 = %{T4}%{T-}
 ramp-volume-1 = %{T4}%{T-}
 ramp-volume-2 = %{T4}%{T-}
-ramp-volume-padding = 1
 
 [module/network]
 type = internal/network
