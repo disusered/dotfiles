@@ -23,7 +23,7 @@ scroll-down = i3wm-wsprev
 ; Set up modules
 modules-left = i3
 modules-center = xwindow
-modules-right = date volume
+modules-right = volume network date
 ; System Tray
 tray-position = right
 tray-padding = 2
@@ -104,3 +104,17 @@ ramp-volume-0 = %{T4}%{T-}
 ramp-volume-1 = %{T4}%{T-}
 ramp-volume-2 = %{T4}%{T-}
 ramp-volume-padding = 1
+
+[module/network]
+type = internal/network
+interface = enp0s31f6
+; Seconds to sleep between updates
+interval = 3.0
+; Connected
+label-connected = %{T4}%{F#96b5b4}%{F-}%{T-} %ifname% %local_ip%
+label-connected-padding = 1
+label-connected-underline = #96b5b4
+; Disconnected
+label-disconnected = %{T4}%{F#bf616a}%{F-}%{T-} %ifname% disconnected
+label-disconnected-underline = #bf616a
+label-disconnected-padding = 1
