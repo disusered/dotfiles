@@ -20,7 +20,7 @@ override-redirect = false
 ; Set up modules
 modules-left = i3
 modules-center = xwindow
-modules-right = volume network date
+modules-right = github volume network date
 ; Scroll anywhere to change workspace
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -119,3 +119,11 @@ label-connected-underline = #96b5b4
 label-disconnected = %{T4}%{F#bf616a}%{F-}%{T-} %ifname% disconnected
 label-disconnected-underline = #bf616a
 label-disconnected-padding = 1
+
+[module/github]
+type = internal/github
+token = ${file:/home/carlos/.github_access_token}
+empty-notifications = false
+label = %{T4}%{F#d08770}%{F-}%{T-} %notifications%
+label-underline = #d08770
+label-padding = 1
