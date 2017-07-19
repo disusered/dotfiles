@@ -42,6 +42,7 @@ font-3 = SauceCodePro Nerd Font:size=12;0
 [module/xwindow]
 type = internal/xwindow
 label = %{T3}%{F#8fa1b3}%{F-}%{T-} %title%
+label-maxlen = 80
 label-underline = ${colors.blue}
 label-padding = 1
 
