@@ -2,16 +2,18 @@
   filetype off
   set encoding=utf-8
 
+  let $MYCONFIG='$HOME/.vim/config'
+  source $MYCONFIG/os.vim
+
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-  if has('macunix')
+  if g:os == 'Darwin'
     set termguicolors
-  elseif has('unix')
+  elseif g:os == 'Linux'
     set notermguicolors
   endif
 
-  let $MYCONFIG='$HOME/.vim/config'
   call plug#begin('~/.dotfiles/vendor/plugged')
 
   source $MYCONFIG/ft.vim

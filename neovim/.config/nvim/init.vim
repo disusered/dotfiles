@@ -3,9 +3,12 @@
   set encoding=utf-8
   set inccommand=split
 
-  if has('macunix')
+  let $MYCONFIG='$HOME/.config/nvim/config'
+  source $MYCONFIG/os.vim
+
+  if g:os == 'Darwin'
     set termguicolors
-  elseif has('unix')
+  elseif g:os == 'Linux'
     set notermguicolors
     set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
   endif
@@ -29,25 +32,20 @@
   let g:terminal_color_16 = '#cf8772'
 
   " nvim plugin hosts
-  if has('macunix')
+  if g:os == 'Darwin'
     let g:python_host_prog = '/usr/local/bin/python2'
     let g:python3_host_prog = '/usr/local/bin/python3'
-  elseif has('unix')
+  elseif g:os == 'Linux'
     let g:python_host_prog = '/usr/bin/python2'
     let g:python3_host_prog = '/usr/bin/python3'
   endif
-
   " let g:python_host_skip_check=1
 
-  let $MYCONFIG='$HOME/.config/nvim/config'
   call plug#begin('~/.dotfiles/vendor/nplugged')
 
   source $MYCONFIG/ft.vim
   source $MYCONFIG/plugins.vim
-
-  " nvim specific
   Plug 'roxma/nvim-completion-manager'
-
   call plug#end()
 
   source $MYCONFIG/n_autocommands.vim
@@ -55,6 +53,4 @@
 " Settings =====================================================================
 set undodir=$HOME/.config/nvim/undo
 source $MYCONFIG/shared.vim
-
-" nvim specific
 source $MYCONFIG/n_keymap.vim
