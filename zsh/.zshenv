@@ -16,7 +16,8 @@ export KEYTIMEOUT=1
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
-export EDITOR='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export PAGER='less'
 export LESSPIPE=`which src-hilite-lesspipe.sh`
 export LESSOPEN="| ${LESSPIPE} %s"
