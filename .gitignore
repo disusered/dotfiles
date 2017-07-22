@@ -30,3 +30,4 @@ vim/autoload/
 .env
 sec.conf
 vim/view
+/tmux/.tmux/resurrect
