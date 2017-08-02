@@ -4,6 +4,7 @@ case $(uname) in
       /usr/local/bin
       /usr/local/sbin
       $GOPATH/bin
+      $HOME/.cargo/bin
       $HOME/.luarocks/bin
       $HOME/.dotfiles/bin
       $path
