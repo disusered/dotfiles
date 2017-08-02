@@ -7,6 +7,3 @@
 [submodule "vendor/tpm"]
 	path = vendor/tpm
 	url = https://github.com/tmux-plugins/tpm
-[submodule "lsp/javascript-typescript-langserver"]
-	path = lsp/javascript-typescript-langserver
-	url = https://github.com/sourcegraph/javascript-typescript-langserver.git
