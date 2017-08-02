@@ -126,6 +126,8 @@ cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'vagrant'
 cask 'vagrant-manager'
+cask 'basictex'
+cask 'tex-live-utility'
 
 # mac app store
 mas 'Xcode', id: 497799835

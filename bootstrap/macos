@@ -10,6 +10,11 @@ cd bootstrap && brew bundle
 # Install shell plugins
 zplug install
 
+# Install BasicTex
+open /usr/local/Caskroom/basictex/20170607/mactex-basictex-20170607.pkg
+sudo tlmgr update --self
+sudo tlmgr install setspace hyperref tucv lipsum dirtytalk
+
 # Enable text selection in QuickLook
 defaults write com.apple.finder QLEnableTextSelection -bool true && killall Finder
 
