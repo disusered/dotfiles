@@ -8,6 +8,7 @@ tap 'homebrew/php'
 
 # base
 brew 'mas'
+brew 'stow'
 brew 'git'
 brew 'git-flow'
 brew 'git-ftp'
