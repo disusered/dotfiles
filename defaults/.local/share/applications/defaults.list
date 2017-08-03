@@ -3,3 +3,4 @@ inode/directory=thunar.desktop
 [Added Associations]
 text/markdown=org.gnome.Showdown.desktop;
 text/plain=gvim.desktop;nvim.desktop;
+x-scheme-handler/file=thunar.desktop
