@@ -17,7 +17,7 @@ bindsym $mod+w kill
 
 # start rofi
 bindsym Ctrl+space exec zsh -c "rofi -show run"
-# bindsym Ctrl+space exec zsh -c "rofi -show drun"
+bindsym Mod1+space exec zsh -c "rofi -show drun"
 bindsym Ctrl+Shift+space exec --no-startup-id "rofi -show run -run-command 'gksudo {cmd}'"
 
 # list open windows to switch to
