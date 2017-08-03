@@ -29,6 +29,7 @@ case $(uname) in
     stow polybar
     stow defaults
     stow greenclip
+    stow fonts
     ;;
 esac
 
