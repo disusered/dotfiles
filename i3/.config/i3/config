@@ -19,6 +19,7 @@ bindsym $mod+w kill
 bindsym Ctrl+space exec zsh -c "rofi -show run"
 bindsym Mod1+space exec zsh -c "rofi -show drun"
 bindsym Ctrl+Shift+space exec --no-startup-id "rofi -show run -run-command 'gksudo {cmd}'"
+bindsym $mod+c exec zsh -c 'rofi -modi "clipboard:greenclip print" -show clipboard'
 
 # list open windows to switch to
 # bindsym $mod+Tab exec rofi -show window
@@ -167,5 +168,6 @@ exec --no-startup-id xautolock -time 2 -locker 'i3lock-fancy'
 exec --no-startup-id numlockx on
 exec --no-startup-id exec ~/.dropbox-dist/dropboxd
 exec --no-startup-id thunar --daemon
+exec --no-startup-id greenclip daemon
 exec --no-startup-id $HOME/.dotfiles/bin/thunar-tumbler.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
