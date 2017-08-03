@@ -16,6 +16,7 @@ stow ag
 stow weechat
 stow ranger
 stow asdf
+stow npm
 
 case $(uname) in
   'Darwin')
