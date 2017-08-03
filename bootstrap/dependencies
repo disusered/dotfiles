@@ -45,7 +45,8 @@ eslint-plugin-filenames eslint-plugin-flowtype eslint-plugin-lodash-fp \
 eslint-plugin-standard babel-plugin-module-resolver eslint-plugin-promise \
 eslint-config-standard-react eslint-config-standard eslint_d \
 flow-bin caniuse-cmd neovim-client csscomb emoj typescript tslint \
-diff-so-fancy tern tern-fetch yarn sass-lint alex
+diff-so-fancy tern tern-fetch yarn sass-lint alex flow-language-server \
+javascript-typescript-langserver
 
 # airbnb-eslint
 (

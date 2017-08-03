@@ -46,6 +46,7 @@
   source $MYCONFIG/ft.vim
   source $MYCONFIG/plugins.vim
   Plug 'roxma/nvim-completion-manager'
+  Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
   call plug#end()
 
   source $MYCONFIG/n_autocommands.vim
@@ -54,3 +55,4 @@
 set undodir=$HOME/.config/nvim/undo
 source $MYCONFIG/shared.vim
 source $MYCONFIG/n_keymap.vim
+source $MYCONFIG/n_langserver.vim
