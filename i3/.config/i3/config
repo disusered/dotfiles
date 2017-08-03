@@ -165,3 +165,4 @@ exec_always --no-startup-id numlockx on
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id exec ~/.dropbox-dist/dropboxd
 exec --no-startup-id thunar --daemon
+exec --no-startup-id $HOME/.dotfiles/bin/thunar-tumbler.sh
