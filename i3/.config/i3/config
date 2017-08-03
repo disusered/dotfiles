@@ -163,9 +163,9 @@ gaps inner 5
 gaps outer 0
 
 # Startup
-exec_always --no-startup-id xautolock -time 2 -locker 'i3lock-fancy'
-exec_always --no-startup-id numlockx on
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id xautolock -time 2 -locker 'i3lock-fancy'
+exec --no-startup-id numlockx on
 exec --no-startup-id exec ~/.dropbox-dist/dropboxd
 exec --no-startup-id thunar --daemon
 exec --no-startup-id $HOME/.dotfiles/bin/thunar-tumbler.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
