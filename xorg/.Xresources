@@ -15,10 +15,8 @@ Xft.rgba:      rgb
 
 URxvt.font: xft:Source Code Pro:pixelsize=13,\
             xft:SauceCodePro Nerd Font:pixelsize=13,\
-            xft:Noto Color Emoji:pixelsize=13
-
-URxvt.boldfont: xft:Source Code Pro:bold:pixelsize=13,\
-                xft:SauceCodePro Nerd Font:bold:pixelsize=13
+            xft:Noto Color Emoji:pixelsize=13, \
+            Unifont
 
 ! URxvt.letterSpace: 0
 
