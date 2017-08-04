@@ -216,7 +216,7 @@ bindkey '^h' backward-delete-char
 # Clipboard
 case $(uname) in
   'Linux')
-    vi-append-x-selection () { RBUFFER=$(xsel -o --primary </dev/null)$RBUFFER; }
+    vi-append-x-selection () { RBUFFER=$(xsel -o --clipboard </dev/null)$RBUFFER; }
     zle -N vi-append-x-selection
     bindkey -a 'p' vi-append-x-selection
   ;;

@@ -18,9 +18,9 @@ function clipcopy() {
   else
     if (( $+commands[xsel] )); then
       if [[ -z $file ]]; then
-        xsel --primary --input
+        xsel --clipboard --input
       else
-        cat "$file" | xsel --primary --input
+        cat "$file" | xsel --clipboard --input
       fi
     else
       print "clipcopy: Platform $OSTYPE not supported or xclip/xsel not installed" >&2

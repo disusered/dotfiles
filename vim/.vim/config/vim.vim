@@ -10,13 +10,18 @@ endif
 let g:mapleader = "\<Space>"
 let g:maplocalleader = 'm'
 
+if g:os == 'Darwin'
+  set clipboard=unnamed
+elseif g:os == 'Linux'
+  set clipboard=unnamedplus
+endif
+
 set textwidth=0
 set laststatus=2
 set showtabline=2
 set noshowmode
 set mouse=
 set fileformats=unix,dos,mac
-set clipboard=unnamed
 set autoread
 set hidden
 set noruler
