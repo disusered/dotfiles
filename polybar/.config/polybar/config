@@ -20,14 +20,13 @@ override-redirect = false
 ; Set up modules
 modules-left = i3
 modules-center = xwindow
-modules-right = github volume network date
+modules-right = github pkg volume network date
 ; Scroll anywhere to change workspace
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 ; System Tray
 tray-position = right
 tray-padding = 2
-tray-background = ${colors.black}
 ; Styles
 background = ${colors.black}
 foreground = ${colors.white}
@@ -127,3 +126,15 @@ empty-notifications = false
 label = %{T4}%{F#d08770}%{F-}%{T-} %notifications%
 label-underline = #d08770
 label-padding = 1
+
+[module/pkg]
+type = custom/script
+interval = 1200
+format = <label>
+format-underline = #dc322f
+label = "%{T2}%{F#bf616a}%{F-}%{T-} %output:0:30%"
+label-underline = ${colors.red}
+label-padding = 1
+exec = .config/polybar/pkg.sh
+exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
+click-left = "urxvtc --hold -e yaourt -Syu --aur"
