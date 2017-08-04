@@ -30,6 +30,7 @@ case $(uname) in
     stow defaults
     stow greenclip
     stow fonts
+    stow gpg
     ;;
 esac
 
