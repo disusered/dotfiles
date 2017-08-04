@@ -32,6 +32,7 @@ case $(uname) in
     stow fonts
     stow gpg
     stow compton
+    stow dunst
     ;;
 esac
 

@@ -170,5 +170,6 @@ exec --no-startup-id exec ~/.dropbox-dist/dropboxd
 exec --no-startup-id thunar --daemon
 exec --no-startup-id greenclip daemon
 exec --no-startup-id compton -b --config $HOME/.config/compton.conf
+exec --no-startup-id dunst
 exec --no-startup-id $HOME/.dotfiles/bin/thunar-tumbler.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
