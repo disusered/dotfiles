@@ -1,0 +1,17 @@
+[Default Applications]
+text/html=chromium.desktop;
+x-scheme-handler/about=chromium.desktop;
+x-scheme-handler/http=chromium.desktop;
+x-scheme-handler/https=chromium.desktop;
+x-scheme-handler/unknown=chromium.desktop;
+inode/directory=Thunar.desktop;
+x-scheme-handler/file=Thunar.desktop;
+application/x-directory=Thunar.desktop
+[Added Associations]
+application/pdf=zathura-pdf-poppler.desktop;
+application/zip=org.gnome.FileRoller.desktop;
+image/jpeg=feh.desktop;firefox-developer.desktop;
+image/png=feh.desktop;
+text/markdown=gvim.desktop;org.gnome.Showdown.desktop;nvim.desktop;
+text/plain=gvim.desktop;nvim.desktop;
+
