@@ -25,8 +25,8 @@
     startup_notification = false
     dmenu = /usr/bin/rofi -dmenu -p notifications:
     # https://github.com/knopwob/dunst/issues/26#issuecomment-36159395
-    #icon_position = left
-    #icon_folders = /usr/share/icons/elementary/actions/16/
+    icon_position = left
+    icon_path = /usr/share/icons/Adwaita/24x24/
 
 [shortcuts]
     close = mod4 + space
