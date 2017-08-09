@@ -1,0 +1,1 @@
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="091e", ATTRS{idProduct}=="0003", OWNER="gps", GROUP="gps", MODE="0664"

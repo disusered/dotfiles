@@ -3,6 +3,27 @@
 # go to dotfiles directory
 cd "$HOME/.dotfiles" || exit
 
+case $(uname) in
+  'Darwin')
+    # setup zsh
+    sudo chpass -s "$(which zsh)" $USER
+
+    # configure htop
+    HTOP_VERSION=$(brew info htop | awk 'NR==1{ print $3 }')
+    sudo chown root:wheel "/usr/local/Cellar/htop/$HTOP_VERSION/bin/htop"
+    sudo chmod u+s "/usr/local/Cellar/htop/$HTOP_VERSION/bin/htop"
+
+    # enable X extension for Slate/xdotool
+    defaults write org.x.X11 enable_test_extensions -boolean true
+    ;;
+
+  'Linux')
+    # setup groups
+    sudo groupadd gps
+    sudo gpasswd -a $USER gps
+    ;;
+esac
+
 # update submodules
 git submodule update --init --recursive
 
@@ -33,25 +54,13 @@ case $(uname) in
     stow gpg
     stow compton
     stow dunst
+    sudo stow --target=/ garmin
+    sudo systemctl daemon-reload
+    sudo udevadm control --reload
+    sudo udevadm trigger
     ;;
 esac
 
 # Symlink Tmux Plugin Manager
 rm -f "$HOME/.tmux/plugins/tpm"
 ln -s "$HOME/.dotfiles/vendor/tpm" "$HOME/.tmux/plugins/tpm"
-
-# macos specific
-case $(uname) in
-  'Darwin')
-    # setup zsh
-    sudo chpass -s "$(which zsh)" $USER
-
-    # configure htop
-    HTOP_VERSION=$(brew info htop | awk 'NR==1{ print $3 }')
-    sudo chown root:wheel "/usr/local/Cellar/htop/$HTOP_VERSION/bin/htop"
-    sudo chmod u+s "/usr/local/Cellar/htop/$HTOP_VERSION/bin/htop"
-
-    # enable X extension for Slate/xdotool
-    defaults write org.x.X11 enable_test_extensions -boolean true
-    ;;
-esac
