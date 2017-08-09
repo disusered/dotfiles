@@ -22,6 +22,7 @@ Plug 'tpope/vim-repeat'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-obsession'
 Plug 'reasonml/vim-reason'
+Plug 'editorconfig/editorconfig-vim'
 
 " load on command
 Plug 'Wolfy87/vim-enmasse',     { 'on': 'EnMasse' }
@@ -51,7 +52,6 @@ endif
 
 " load conditionally
 Plug 'MarcWeber/vim-addon-local-vimrc', { 'on': [] }
-Plug 'editorconfig/editorconfig-vim',   { 'on': [] }
 Plug 'moll/vim-node',                   { 'on': [] }
 Plug 'jreybert/vimagit', { 'on': [] } | Plug 'tpope/vim-fugitive',  { 'on': [] }
 
@@ -64,10 +64,6 @@ augroup conditional_load
 
   if !empty(glob(getcwd().'/.local-vimrc'))
     call plug#load('vim-addon-local-vimrc')
-  endif
-
-  if !empty(glob(getcwd().'/.editorconfig'))
-    call plug#load('editorconfig-vim')
   endif
 
   if !empty(glob(getcwd().'/package.json'))
