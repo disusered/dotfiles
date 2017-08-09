@@ -15,3 +15,4 @@ image/png=feh.desktop;
 text/markdown=gvim.desktop;org.gnome.Showdown.desktop;nvim.desktop;
 text/plain=gvim.desktop;nvim.desktop;
 
+x-scheme-handler/steamvr=valve-steamvr.desktop
