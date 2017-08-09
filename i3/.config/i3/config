@@ -62,6 +62,11 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+d focus child
 
+# media keys
+bindsym XF86AudioRaiseVolume exec amixer set PCM 3%+ unmute
+bindsym XF86AudioLowerVolume exec amixer set PCM 3%- unmute
+bindsym XF86AudioMute exec amixer set PCM mute
+
 # named workspaces
 set $ws1 "1:main"
 set $ws2 "2:term"
