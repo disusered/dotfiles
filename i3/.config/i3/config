@@ -168,6 +168,11 @@ smart_gaps on
 gaps inner 5
 gaps outer 0
 
+for_window [class="mpv" instance="gl"] floating enable
+for_window [class="Vlc" instance="vlc"] floating enable
+for_window [class="Blueman-manager" instance="blueman-manager"] floating enable
+for_window [class="Thunar" instance="thunar"] floating enable
+
 # Startup
 exec --no-startup-id xautolock -time 2 -locker 'i3lock-fancy'
 exec --no-startup-id numlockx on
