@@ -3,8 +3,8 @@
 # Neovim
 case $(uname) in
   'Darwin')
-    pip2 install --user --upgrade setuptools pip
-    pip3 install --user --upgrade setuptools pip
+    sudo easy_install pip virtualenv
+    pip install --upgrade setuptools pip
     ;;
   'Linux')
     sudo pip2 install --upgrade setuptools pip
