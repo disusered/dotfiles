@@ -18,7 +18,7 @@ bindsym $mod+w kill
 # start rofi
 bindsym Ctrl+space exec zsh -c "rofi -show run"
 bindsym Mod1+space exec zsh -c "rofi -show drun"
-bindsym Ctrl+Shift+space exec --no-startup-id "rofi -show run -run-command 'gksudo {cmd}'"
+bindsym Mod1+Shift+space exec --no-startup-id "rofi -show drun -run-command 'gksudo {cmd}'"
 bindsym $mod+c exec zsh -c 'rofi -modi "clipboard:greenclip print" -show clipboard'
 
 # change focus
