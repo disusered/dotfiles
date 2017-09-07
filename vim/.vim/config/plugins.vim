@@ -23,6 +23,7 @@ Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-obsession'
 Plug 'reasonml/vim-reason'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'freitass/todo.txt-vim'
 
 " load on command
 Plug 'Wolfy87/vim-enmasse',     { 'on': 'EnMasse' }
