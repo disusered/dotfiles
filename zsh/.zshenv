@@ -38,9 +38,11 @@ case $(uname) in
     export GOPATH="${HOME}/Development/SDK/gopath"
     export ANDROID_HOME=/usr/local/opt/android-sdk
     export VAGRANT_DEFAULT_PROVIDER=virtualbox
+    export DROPBOX_HOME=$HOME/Dropbox\ \(Personal\)
     ;;
   'Linux')
     export ALSA_CARD=Audio
+    export DROPBOX_HOME=$HOME/Dropbox
     ;;
 esac
 
