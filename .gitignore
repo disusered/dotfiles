@@ -12,6 +12,8 @@ plug.vim
 vendor/plugged
 vendor/nplugged
 vendor/*.ti
+vim/autoload/
+vim/view
 
 # weechat
 weechat/logs
@@ -25,12 +27,14 @@ mps*/cache*
 mps*/input_history
 mps*/transcode
 
-# pivotal tracker
-vim/autoload/
+# sh
 .env
-sec.conf
-vim/view
+
+# tmux
 /tmux/.tmux/resurrect
+
+# weechat
+sec.conf
 
 # autokey
 autokey.log
