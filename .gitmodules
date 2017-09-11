@@ -7,3 +7,6 @@
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "marker/.marker"]
+	path = marker/.marker
+	url = https://github.com/pindexis/marker

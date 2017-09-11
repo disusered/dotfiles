@@ -38,6 +38,7 @@ stow weechat
 stow ranger
 stow asdf
 stow npm
+stow marker
 
 case $(uname) in
   'Darwin')
@@ -61,6 +62,9 @@ case $(uname) in
     sudo udevadm trigger
     ;;
 esac
+
+# Install marker
+$HOME/.marker/install.py
 
 # Symlink Tmux Plugin Manager
 rm -f "$HOME/.tmux/plugins/tpm"
