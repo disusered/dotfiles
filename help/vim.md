@@ -14,14 +14,15 @@ vim
 | ;         | Next match     |
 | ,         | Previous match |
 
-|     | **Writing**             |
-|-----|-------------------------|
-| ^mm | Toggle table mode       |
-| ^mt | CSV to table            |
-| ]s  | Next spelling error     |
-| [s  | Previous spelling error |
-| zg  | Add to dictionary       |
-| z=  | Suggestions             |
+|                   | **Writing**             |
+|-------------------|-------------------------|
+| ^mm               | Toggle table mode       |
+| ^mt               | CSV to table            |
+| ]s                | Next spelling error     |
+| [s                | Previous spelling error |
+| zg                | Add to dictionary       |
+| z=                | Suggestions             |
+| :set spelllang=es | Set language            |
 
 |       | **Registers**                          |
 |-------|----------------------------------------|
