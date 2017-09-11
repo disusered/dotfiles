@@ -55,6 +55,7 @@ case $(uname) in
     stow gpg
     stow compton
     stow dunst
+    stow autokey
     sudo stow --target=/ garmin
     sudo stow --target=/ oculus
     sudo systemctl daemon-reload

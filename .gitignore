@@ -31,3 +31,7 @@ vim/autoload/
 sec.conf
 vim/view
 /tmux/.tmux/resurrect
+
+# autokey
+autokey.log
+autokey.pid

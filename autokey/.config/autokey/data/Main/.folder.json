@@ -1,0 +1,25 @@
+{
+    "type": "folder",
+    "title": "Main",
+    "modes": [],
+    "usageCount": 23,
+    "showInTrayMenu": false,
+    "abbreviation": {
+        "abbreviations": [],
+        "backspace": true,
+        "ignoreCase": false,
+        "immediate": false,
+        "triggerInside": false,
+        "wordChars": "[\\w]"
+    },
+    "hotkey": {
+        "modifiers": [
+            "<ctrl>"
+        ],
+        "hotKey": "<escape>"
+    },
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    }
+}
