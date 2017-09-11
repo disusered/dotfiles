@@ -93,5 +93,5 @@
 	stripLeadingSymbols = true
 	useUnicodeRuler = true
 [cola]
-	spellcheck = false
+	spellcheck = true
 	fontdiff = Source Code Pro,9,-1,5,50,0,0,0,0,0
