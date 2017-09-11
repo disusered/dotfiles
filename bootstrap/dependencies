@@ -55,7 +55,7 @@ javascript-typescript-langserver
 )
 
 # other node deps
-npm install -g http-server plugman cordova grunt-cli
+npm install -g http-server plugman cordova grunt-cli tldr
 
 # Mac deps
 case $(uname) in
