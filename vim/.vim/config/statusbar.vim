@@ -157,7 +157,7 @@ set statusline+=%1*\                             " Space
 hi! link StatusLine User1
 hi! User1 ctermfg=20 ctermbg=18 guifg=#a7adb9 guibg=#343d46
 hi! User2 ctermfg=3 ctermbg=18 guifg=#bd626b guibg=#343d46
-hi! User3 ctermfg=18 ctermbg=2 guifg=#a4bd8e guibg=#343d46
+hi! User3 ctermfg=2 ctermbg=18 guifg=#a4bd8e guibg=#343d46
 hi! User4 ctermfg=18 ctermbg=5 guifg=#9a8ec4 guibg=#343d46
 hi! User5 ctermfg=18 ctermbg=4 guifg=#5b85a3 guibg=#343d46
 hi! User6 ctermfg=20 ctermbg=18 guifg=#343d46 guibg=#4f5b66
