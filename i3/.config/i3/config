@@ -183,5 +183,7 @@ exec --no-startup-id greenclip daemon
 exec --no-startup-id compton -b --config $HOME/.config/compton.conf
 exec --no-startup-id dunst
 exec --no-startup-id blueman-applet
+exec --no-startup-id emoji-keyboard
+exec --no-startup-id autokey-gtk
 exec --no-startup-id $HOME/.dotfiles/bin/thunar-tumbler.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
