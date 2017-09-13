@@ -18,9 +18,10 @@ case $(uname) in
     ;;
 
   'Linux')
-    # setup groups
-    sudo groupadd gps
+    # gps
+    sudo useradd --no-create-home --shell /usr/bin/nologin --user-group gps
     sudo gpasswd -a $USER gps
+    newgrp gps
     ;;
 esac
 
