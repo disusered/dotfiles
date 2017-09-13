@@ -55,12 +55,13 @@ endif
 Plug 'MarcWeber/vim-addon-local-vimrc', { 'on': [] }
 Plug 'moll/vim-node',                   { 'on': [] }
 Plug 'jreybert/vimagit', { 'on': [] } | Plug 'tpope/vim-fugitive',  { 'on': [] }
+Plug 'gregsexton/gitv', { 'on': [] } | Plug 'tpope/vim-fugitive',  { 'on': [] }
 
 augroup conditional_load
   autocmd!
 
   if !empty(glob(getcwd().'/.git/config'))
-    call plug#load('vim-fugitive', 'vimagit')
+    call plug#load('vim-fugitive', 'vimagit', 'gitv')
   endif
 
   if !empty(glob(getcwd().'/.local-vimrc'))
