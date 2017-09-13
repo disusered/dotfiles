@@ -5,6 +5,7 @@ augroup user_ft
   autocmd FileType gitconfig set noexpandtab
   autocmd FileType tex setlocal spell
   autocmd FileType markdown setlocal spell
+  autocmd FileType gitcommit setlocal spell
 
   autocmd BufNewFile,BufRead {.jshintrc,.tern-project,.jscsrc,.eslintrc,.babelrc} set ft=json
   autocmd BufNewFile,BufRead {*.md,*.markdown} set filetype=markdown
