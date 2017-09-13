@@ -37,7 +37,6 @@ stow neovim
 stow ag
 stow weechat
 stow ranger
-stow asdf
 stow npm
 stow marker
 

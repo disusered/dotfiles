@@ -25,15 +25,6 @@ gem install mdl
 go get github.com/tools/godep
 go get github.com/Unknwon/bra
 
-# Install asdf
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.3.0
-# asdf node
-asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-sh ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-LATEST_NODE_VERSION=`asdf list-all nodejs | tail -n 1 | tr -d '\n'`
-asdf install nodejs $LATEST_NODE_VERSION
-asdf global nodejs $LATEST_NODE_VERSION
-
 
 # Install npm and packages
 npm install -g npm@latest
