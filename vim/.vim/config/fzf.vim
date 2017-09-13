@@ -19,3 +19,8 @@ augroup END
 " Insert mode completion
 imap <c-x><c-j> <plug>(fzf-complete-file-ag)
 imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" Show hidden files in Ag
+function! fzf#vim#ag_raw(command_suffix, ...)
+  return call('fzf#vim#grep', extend(['ag --hidden --nogroup --column --color '.a:command_suffix, 1], a:000))
+endfunction

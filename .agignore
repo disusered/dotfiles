@@ -1,4 +1,4 @@
 vim/bundles
 vendor
-_git
+/.git/
 weechat/python
