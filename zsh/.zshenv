@@ -46,8 +46,13 @@ case $(uname) in
   'Linux')
     export ALSA_CARD=Audio
     export DROPBOX_HOME=$HOME/Dropbox
+    # nvm
+    [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+    source /usr/share/nvm/nvm.sh
+    source /usr/share/nvm/install-nvm-exec
     ;;
 esac
+
 
 # Load custom functions
 source $HOME/.config/zsh/zshfuns

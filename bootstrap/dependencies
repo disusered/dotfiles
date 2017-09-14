@@ -25,6 +25,9 @@ gem install mdl
 go get github.com/tools/godep
 go get github.com/Unknwon/bra
 
+# Install node
+nvm install node
+nvm alias default node
 
 # Install npm and packages
 npm install -g npm@latest

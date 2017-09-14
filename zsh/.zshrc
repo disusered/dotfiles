@@ -198,7 +198,6 @@ fi
 bindkey '^[[3~' delete-char
 
 # Vi bindings
-# mine
 bindkey -M vicmd 'H' beginning-of-line
 bindkey -M vicmd 'L' end-of-line
 
