@@ -64,6 +64,7 @@
 [diff]
 	tool = fugitive
 	indentHeuristic = true
+	submodule = log
 [merge]
 	tool = fugitive
 [difftool]
@@ -95,3 +96,5 @@
 [cola]
 	spellcheck = true
 	fontdiff = Source Code Pro,9,-1,5,50,0,0,0,0,0
+[status]
+	submoduleSummary = true
