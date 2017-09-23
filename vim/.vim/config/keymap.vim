@@ -41,7 +41,7 @@ noremap     L                 g_
 nnoremap    Q                 <nop>
 nnoremap    <Leader><Enter>   :w<CR>
 nnoremap    <Leader>q         :bp\|bd #<CR>
-nnoremap    <Leader>gs        :Magit<CR>
+nnoremap    <Leader>gs        :Gstatus<CR>
 nnoremap    <Leader>ga        :Gcommit --amend<CR>
 nnoremap    <Leader>gc        :Gcommit -v -q<CR>
 nnoremap    <Leader>gt        :Gcommit -v -q %:p<CR>

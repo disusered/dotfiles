@@ -54,7 +54,6 @@ endif
 " load conditionally
 Plug 'MarcWeber/vim-addon-local-vimrc', { 'on': [] }
 Plug 'moll/vim-node',                   { 'on': [] }
-Plug 'jreybert/vimagit', { 'on': [] } | Plug 'tpope/vim-fugitive',  { 'on': [] }
 Plug 'gregsexton/gitv', { 'on': [] } | Plug 'tpope/vim-fugitive',  { 'on': [] }
 
 augroup conditional_load
