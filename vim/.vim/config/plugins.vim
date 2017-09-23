@@ -25,8 +25,8 @@ Plug 'reasonml/vim-reason'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'freitass/todo.txt-vim'
 Plug 'actionshrimp/vim-xpath'
-Plug 'gregsexton/gitv' | Plug 'tpope/vim-fugitive'
 Plug 'junegunn/vim-slash'
+Plug 'junegunn/gv.vim' | Plug 'tpope/vim-fugitive'
 
 " load on command
 Plug 'Wolfy87/vim-enmasse',     { 'on': 'EnMasse' }
