@@ -24,6 +24,7 @@ Plug 'tpope/vim-obsession'
 Plug 'reasonml/vim-reason'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'freitass/todo.txt-vim'
+Plug 'actionshrimp/vim-xpath'
 Plug 'gregsexton/gitv' | Plug 'tpope/vim-fugitive'
 
 " load on command
