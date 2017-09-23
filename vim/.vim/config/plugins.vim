@@ -24,7 +24,6 @@ Plug 'tpope/vim-obsession'
 Plug 'reasonml/vim-reason'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'freitass/todo.txt-vim'
-Plug 'actionshrimp/vim-xpath'
 Plug 'junegunn/vim-slash'
 Plug 'junegunn/gv.vim' | Plug 'tpope/vim-fugitive'
 
@@ -35,10 +34,11 @@ Plug 'scrooloose/nerdtree',     { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-s2)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
 
 " load for ft
-Plug 'heavenshell/vim-jsdoc',            { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'mattn/emmet-vim',                  { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'css', 'scss', 'markdown', 'html.handlebars', 'xml'] }
-Plug 'jpalardy/vim-slime',               { 'for': ['javascript', 'sh']}
-Plug 'dhruvasagar/vim-table-mode',       { 'for': ['markdown'] }
+Plug 'actionshrimp/vim-xpath',     { 'for': ['xml'] }
+Plug 'heavenshell/vim-jsdoc',      { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'mattn/emmet-vim',            { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'css', 'scss', 'markdown', 'html.handlebars', 'xml'] }
+Plug 'jpalardy/vim-slime',         { 'for': ['javascript', 'sh']}
+Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 
 if g:os == 'Linux'
   function! BuildComposer(info)
