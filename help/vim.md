@@ -1,12 +1,13 @@
 vim
 ---------
 
-|       | **Action** |
-|-------|------------|
-| Space | Leader     |
-| ^p    | Git files  |
-| ^f    | All files  |
-| ^b    | Buffers    |
+|       | **Action**                                  |
+|-------|---------------------------------------------|
+| Space | Leader                                      |
+| ^p    | Git files                                   |
+| ^f    | All files                                   |
+| ^b    | Buffers                                     |
+| ^s    | Symbols (depends on LanguageServer support) |
 
 |           | **Motion**     |
 |-----------|----------------|
@@ -14,15 +15,10 @@ vim
 | ;         | Next match     |
 | ,         | Previous match |
 
-|                   | **Writing**             |
-|-------------------|-------------------------|
-| ^mm               | Toggle table mode       |
-| ^mt               | CSV to table            |
-| ]s                | Next spelling error     |
-| [s                | Previous spelling error |
-| zg                | Add to dictionary       |
-| z=                | Suggestions             |
-| :set spelllang=es | Set language            |
+|     | **Column/CSV**    |
+|-----|-------------------|
+| ^mm | Toggle table mode |
+| ^mt | CSV to table      |
 
 |       | **Registers**                          |
 |-------|----------------------------------------|
@@ -35,13 +31,11 @@ vim
 |-------------|----------------------------------|
 | :EnMasse    | Replace on quickfix set          |
 | :Ag pattern | Search for pattern interactively |
-| rAlt-A      | Select All                       |
-| rAlt-D      | Deselect All                     |
+| Alt-A       | Select All                       |
+| Alt-D       | Deselect All                     |
 | Tab         | Open and add to quickfix list    |
 | \[q         | Go to previous result            |
 | \]q         | Go to next result                |
-| ^k          | Highlight word                   |
-| ^K          | Clear highlights                 |
 
 |     | **Testing**            |
 |-----|------------------------|
@@ -59,12 +53,13 @@ vim
 | :Ninstall | npm install          |
 | :Nrun     | npm run arg          |
 
-|    | **Spelling**            |
-|----|-------------------------|
-| ]s | Next spelling error     |
-| [s | Previous spelling error |
-| z= | Fix spelling error      |
-| zg | Add word to wordlist    |
+|                   | **Spelling**            |
+|-------------------|-------------------------|
+| ]s                | Next spelling error     |
+| [s                | Previous spelling error |
+| z=                | Fix spelling error      |
+| zg                | Add word to wordlist    |
+| :set spelllang=es | Set language            |
 
 |           | **Window Management**               |
 |-----------|-------------------------------------|
@@ -105,8 +100,6 @@ vim
 |          | **Etc**                                |
 |----------|----------------------------------------|
 | ^rt      | Remove Trailing Whitespace             |
-| gof      | Open current file location in Finder   |
-| got      | Open current file location in Terminal |
 | [oc      | Enable cursorline                      |
 | ]oc      | Disable cursorline                     |
 | C-x C-f  | Insert path                            |
