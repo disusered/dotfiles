@@ -14,6 +14,7 @@ source $MYCONFIG/fzf.vim
 source $MYCONFIG/neomake.vim
 source $MYCONFIG/vimagit.vim
 source $MYCONFIG/gitgutter.vim
+source $MYCONFIG/slash.vim
 
 " config
 source $MYCONFIG/vim.vim

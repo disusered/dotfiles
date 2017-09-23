@@ -57,14 +57,6 @@ nnoremap    <Leader><Space>   :nohlsearch<CR>
 map<silent> -                 <Plug>FileBeagleOpenCurrentBufferDir
 nnoremap    j                 gj
 nnoremap    k                 gk
-nnoremap    n                 nzz
-nnoremap    N                 Nzz
-nnoremap    *                 *zz
-nnoremap    }                 }zz
-nnoremap    {                 {zz
-nnoremap    #                 #zz
-nnoremap    g*                g*zz
-nnoremap    g#                g#zz
 nmap        [c                <Plug>GitGutterPrevHunk
 nmap        ]c                <Plug>GitGutterNextHunk
 
