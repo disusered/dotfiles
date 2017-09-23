@@ -48,6 +48,7 @@ nnoremap    <Leader>gt        :Gcommit -v -q %:p<CR>
 nnoremap    <Leader>gd        :Gdiff<CR>
 nnoremap    <Leader>gr        :Gread<CR>:GitGutter<CR>
 nnoremap    <Leader>gw        :Gwrite<CR>:GitGutter<CR>
+nnoremap    <Leader>gl        :Gitv<CR>
 nnoremap <silent><Leader>p    :GitFiles<CR>
 nnoremap <silent><Leader>f    :Files<CR>
 nnoremap    <Leader>b         :Buffers<CR>
