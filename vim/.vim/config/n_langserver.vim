@@ -6,9 +6,11 @@
 let g:LanguageClient_serverCommands = {
   \ 'javascript': ['javascript-typescript-stdio'],
   \ 'javascript.jsx': ['javascript-typescript-stdio'],
+  \ 'python': ['pyls'],
   \ }
 
 set completefunc=LanguageClient#complete
+set formatexpr=LanguageClient_textDocument_rangeFormatting()
 
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_selectionUI = 'fzf'
@@ -16,8 +18,10 @@ let g:echodoc#enable_at_startup = 1
 
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> gr :call LanguageClient_textDocument_references()<CR>
 nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 nnoremap <silent> <leader>s :call LanguageClient_textDocument_documentSymbol()<CR>
+nnoremap <silent> <leader>a :call LanguageClient_textDocument_formatting()<CR>
 
 let g:deoplete#enable_at_startup = 1
 

@@ -1,7 +1,7 @@
 scriptencoding utf-8
 
 let g:neomake_airline = 0
-let g:neomake_open_list = 0
+let g:neomake_open_list = 1
 let g:neomake_error_sign = {
     \ 'text': '✕',
     \ 'texthl': 'ErrorMsg',
@@ -24,8 +24,9 @@ let g:neomake_yaml_enabled_makers = ['yamllint']
 let g:neomake_go_enabled_makers = ['go', 'golint', 'govet']
 let g:neomake_reason_enabled_makers = ['merlin']
 let g:neomake_tex_enabled_makers = ['pdflatex', 'proselint']
+let g:neomake_python_enabled_makers = ['python', 'frosted', 'pylama']
 
 augroup user_lint
   autocmd!
-  autocmd Filetype {javascript,typescript,lua,json,vim,scss,markdown,sh,zsh,yaml,go,reason,tex} autocmd BufWritePost * Neomake
+  autocmd Filetype {javascript,typescript,python,lua,json,vim,scss,markdown,sh,zsh,yaml,go,reason,tex} autocmd BufWritePost * Neomake
 augroup END

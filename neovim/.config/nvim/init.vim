@@ -47,7 +47,6 @@
   source $MYCONFIG/plugins.vim
   Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'zchee/deoplete-jedi'
   call plug#end()
 
   source $MYCONFIG/n_autocommands.vim

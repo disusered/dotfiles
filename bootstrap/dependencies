@@ -16,7 +16,7 @@ pip2 install --user neovim
 pip3 install --user neovim
 
 # Python packages
-pip install --user proselint yamllint jedi
+pip install --user proselint yamllint frosted pylama python-language-server
 
 # Ruby packages
 gem install mdl
