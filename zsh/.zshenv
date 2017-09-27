@@ -34,6 +34,9 @@ export GIT_LOG_STYLE_BASIC="%C(magenta bold)%h%C(reset) %C(auto)%d%C(reset) %s"
 export GIT_LOG_STYLE_COMPLEX="%C(magenta bold)%h%C(reset) %C(blue bold)%aN%C(reset) %C(auto)%d%C(reset) %s %C(8)(%cr)%C(reset)"
 export GIT_LOG_STYLE=$GIT_LOG_STYLE_COMPLEX
 
+export NVM_DIR="$HOME/.dotfiles/nvm/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use
+
 case $(uname) in
   'Darwin')
     export BROWSER='open'
@@ -46,10 +49,6 @@ case $(uname) in
   'Linux')
     export ALSA_CARD=Audio
     export DROPBOX_HOME=$HOME/Dropbox
-    # nvm
-    [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
-    source /usr/share/nvm/nvm.sh --no-use
-    source /usr/share/nvm/install-nvm-exec
     ;;
 esac
 
