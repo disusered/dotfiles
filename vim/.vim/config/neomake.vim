@@ -1,7 +1,7 @@
 scriptencoding utf-8
 
 let g:neomake_airline = 0
-let g:neomake_open_list = 1
+let g:neomake_open_list = 0
 let g:neomake_error_sign = {
     \ 'text': '✕',
     \ 'texthl': 'ErrorMsg',
