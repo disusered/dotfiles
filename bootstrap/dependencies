@@ -5,15 +5,17 @@ case $(uname) in
   'Darwin')
     sudo easy_install pip virtualenv
     pip install --upgrade setuptools pip
+    pip3 install --upgrade setuptools pip
+    pip install --user neovim
+    pip3 install --user neovim
     ;;
   'Linux')
     sudo pip2 install --upgrade setuptools pip
     sudo pip3 install --upgrade setuptools pip
+    pip2 install --user neovim
+    pip3 install --user neovim
     ;;
 esac
-
-pip2 install --user neovim
-pip3 install --user neovim
 
 # Python packages
 pip install --user proselint yamllint frosted pylama python-language-server
