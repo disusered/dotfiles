@@ -108,6 +108,12 @@ cask 'skype'
 cask 'dash'
 cask 'xscope'
 cask 'monolingual'
+cask 'virtualbox'
+cask 'virtualbox-extension-pack'
+cask 'vagrant'
+cask 'vagrant-manager'
+cask 'basictex'
+cask 'tex-live-utility'
 
 # quicklook
 cask 'qlcolorcode'
@@ -122,12 +128,6 @@ cask 'suspicious-package'
 cask 'betterzipql'
 cask 'airfoil'
 cask 'keycastr'
-cask 'virtualbox'
-cask 'virtualbox-extension-pack'
-cask 'vagrant'
-cask 'vagrant-manager'
-cask 'basictex'
-cask 'tex-live-utility'
 
 # mac app store
 mas 'Xcode', id: 497799835
