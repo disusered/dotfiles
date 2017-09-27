@@ -31,7 +31,7 @@ function clipcopy() {
 
 # Git Log Interactive
 gli() {
-  git l --format=$GIT_LOG_STYLE |
+  git l --format=$GIT_LOG_STYLE $1 |
   fzf --ansi --no-sort --reverse --tiebreak=index \
       --preview "echo {} | grep -o '[a-f0-9]\{7\}' | head -1 |
                  xargs -I % sh -c 'git show --color=always % | head -$LINES'" \
