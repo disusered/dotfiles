@@ -17,12 +17,6 @@ case $(uname) in
     ;;
 esac
 
-# Python packages
-pip install --user proselint yamllint frosted pylama python-language-server
-
-# Ruby packages
-gem install mdl
-
 # Go deps
 go get github.com/tools/godep
 go get github.com/Unknwon/bra
@@ -35,23 +29,11 @@ nvm alias default node
 npm install -g npm@latest
 npm update -g npm
 
-# Neo/vim deps
-npm install -g babel-cli jsonlint jshint eslint babel-eslint jsonlint jshint \
-eslint-plugin-filenames eslint-plugin-flowtype eslint-plugin-lodash-fp \
-eslint-plugin-standard babel-plugin-module-resolver eslint-plugin-promise \
-eslint-config-standard-react eslint-config-standard eslint_d \
-flow-bin caniuse-cmd neovim-client csscomb emoj typescript tslint \
-diff-so-fancy tern tern-fetch yarn sass-lint alex flow-language-server \
-javascript-typescript-langserver heroku-cli
+npm install -g flow-bin caniuse-cmd typescript diff-so-fancy yarn \
+  http-server plugman cordova grunt-cli tldr heroku-cli
 
-# airbnb-eslint
-(
-  export PKG=eslint-config-airbnb;
-  npm info "$PKG@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "$PKG@latest"
-)
-
-# other node deps
-npm install -g http-server plugman cordova grunt-cli tldr
+# Lua dependencies
+# install luarocks
 
 # Mac deps
 case $(uname) in

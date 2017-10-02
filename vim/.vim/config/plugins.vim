@@ -15,17 +15,23 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-endwise'
 Plug 'SirVer/ultisnips'
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
-Plug 'benekastah/neomake'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-obsession'
-Plug 'reasonml/vim-reason'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'freitass/todo.txt-vim'
 Plug 'junegunn/vim-slash'
 Plug 'junegunn/gv.vim' | Plug 'tpope/vim-fugitive'
+
+function! NeomakeDeps(info)
+  if a:info.status == 'installed' || a:info.force
+    !gem install mdl
+    !pip install --user yamllint
+  endif
+endfunction
+Plug 'benekastah/neomake', { 'do': function('NeomakeDeps') }
 
 " load on command
 Plug 'Wolfy87/vim-enmasse',     { 'on': 'EnMasse' }

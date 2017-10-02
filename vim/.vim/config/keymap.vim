@@ -59,6 +59,3 @@ nnoremap    j                 gj
 nnoremap    k                 gk
 nmap        [c                <Plug>GitGutterPrevHunk
 nmap        ]c                <Plug>GitGutterNextHunk
-
-autocmd FileType reason map <buffer> <LocalLeader>e :MerlinErrorCheck<CR>
-autocmd FileType reason map <buffer> <LocalLeader>f :ReasonPrettyPrint<Cr>

@@ -45,7 +45,15 @@
 
   source $MYCONFIG/ft.vim
   source $MYCONFIG/plugins.vim
-  Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+  function! LanguageClient(info)
+    if a:info.status == 'installed' || a:info.force
+      !pip install --user python-language-server
+      !npm install -g vscode-json-languageserver-bin javascript-typescript-langserver vscode-css-languageserver-bin vscode-html-languageserver-bin flow-language-server
+      !luarocks --local install https://raw.githubusercontent.com/Alloyed/lua-lsp/master/lua-lsp-scm-1.rockspec
+      :UpdateRemotePlugins
+    endif
+  endfunction
+  Plug 'autozimu/LanguageClient-neovim', { 'do': function('LanguageClient') }
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   call plug#end()
 
