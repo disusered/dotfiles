@@ -49,6 +49,7 @@ case $(uname) in
   'Linux')
     export ALSA_CARD=Audio
     export DROPBOX_HOME=$HOME/Dropbox
+    export _JAVA_OPTIONS='-Dsun.java2d.opengl=true,-Dawt.useSystemAAFontSettings=on,-Dswing.aatext=true'
     ;;
 esac
 
