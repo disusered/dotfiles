@@ -15,6 +15,7 @@ case $(uname) in
       $HOME/.dotfiles/bin
       $HOME/.cargo/bin
       $HOME/.local/bin
+      $HOME/.luarocks/bin
       $HOME/.gem/ruby/2.4.0/bin
       $HOME/Android/Sdk/tools/bin
       $HOME/Android/Sdk/platform-tools
