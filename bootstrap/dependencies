@@ -17,10 +17,6 @@ case $(uname) in
     ;;
 esac
 
-# Go deps
-go get github.com/tools/godep
-go get github.com/Unknwon/bra
-
 # Install node
 nvm install node
 nvm alias default node
@@ -40,13 +36,6 @@ case $(uname) in
   'Darwin')
     # cordova-ios
     npm install -g ios-deploy ios-sim
-
-    # vagrant
-    vagrant plugin install vagrant-bindfs
-    vagrant plugin install vagrant-hostmanager
-
-    # ansible
-    sudo chmod 600 ~/.netrc
 
     # fonts
     mkdir -p "$HOME/.dotfiles/vendor/fonts/"

@@ -111,9 +111,10 @@ cask 'monolingual'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'vagrant'
-cask 'vagrant-manager'
 cask 'basictex'
 cask 'tex-live-utility'
+cask 'airfoil'
+cask 'keycastr'
 
 # quicklook
 cask 'qlcolorcode'
@@ -126,8 +127,6 @@ cask 'qlimagesize'
 cask 'webpquicklook'
 cask 'suspicious-package'
 cask 'betterzipql'
-cask 'airfoil'
-cask 'keycastr'
 
 # mac app store
 mas 'Xcode', id: 497799835
