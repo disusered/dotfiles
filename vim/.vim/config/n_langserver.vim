@@ -1,12 +1,16 @@
-" let g:LanguageClient_serverCommands = {
 " \ 'javascript': ['flow-language-server', '--stdio'],
 " \ 'javascript.jsx': ['flow-language-server', '--stdio'],
-" \ }
 
 let g:LanguageClient_serverCommands = {
   \ 'javascript': ['javascript-typescript-stdio'],
   \ 'javascript.jsx': ['javascript-typescript-stdio'],
   \ 'python': ['pyls'],
+  \ 'css': ['css-languageserver', '--stdio'],
+  \ 'scss': ['css-languageserver', '--stdio'],
+  \ 'less': ['css-languageserver', '--stdio'],
+  \ 'html': ['html-languageserver', '--stdio'],
+  \ 'json': ['json-languageserver', '--stdio'],
+  \ 'lua': ['lua-lsp'],
   \ }
 
 set completefunc=LanguageClient#complete
@@ -14,7 +18,6 @@ set formatexpr=LanguageClient_textDocument_rangeFormatting()
 
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_selectionUI = 'fzf'
-let g:echodoc#enable_at_startup = 1
 
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
