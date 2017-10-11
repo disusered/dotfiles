@@ -39,3 +39,6 @@ sec.conf
 # autokey
 autokey.log
 autokey.pid
+
+# wine
+defaults/.local/share/applications/wine*
