@@ -14,5 +14,4 @@ image/jpeg=feh.desktop;firefox-developer.desktop;
 image/png=feh.desktop;
 text/markdown=gvim.desktop;org.gnome.Showdown.desktop;nvim.desktop;
 text/plain=gvim.desktop;nvim.desktop;
-
-x-scheme-handler/steamvr=valve-steamvr.desktop
+x-scheme-handler/steamvr=valve-steamvr.desktop
