@@ -26,7 +26,7 @@ npm install -g npm@latest
 npm update -g npm
 
 npm install -g flow-bin caniuse-cmd typescript diff-so-fancy yarn \
-  http-server plugman cordova grunt-cli tldr heroku-cli
+  http-server plugman cordova grunt-cli tldr heroku-cli less
 
 # Lua dependencies
 # install luarocks
