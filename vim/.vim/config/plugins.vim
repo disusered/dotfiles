@@ -23,6 +23,7 @@ Plug 'tpope/vim-obsession'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'freitass/todo.txt-vim'
 Plug 'junegunn/vim-slash'
+Plug 'simnalamburt/vim-mundo'
 Plug 'junegunn/gv.vim' | Plug 'tpope/vim-fugitive'
 Plug 'junegunn/vim-peekaboo'
 function! NeomakeDeps(info)

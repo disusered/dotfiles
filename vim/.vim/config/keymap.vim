@@ -41,6 +41,7 @@ noremap     L                 g_
 nnoremap    Q                 <nop>
 nnoremap    <Leader><Enter>   :w<CR>
 nnoremap    <Leader>q         :bp\|bd #<CR>
+nnoremap    <Leader>u         :MundoToggle<CR>
 nnoremap    <Leader>gs        :Gstatus<CR>
 nnoremap    <Leader>ga        :Gcommit --amend<CR>
 nnoremap    <Leader>gc        :Gcommit -v -q<CR>
