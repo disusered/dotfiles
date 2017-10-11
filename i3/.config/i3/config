@@ -69,6 +69,7 @@ set $ws1 "1:main"
 set $ws2 "2:term"
 set $ws3 "3:git"
 set $ws4 "4:doc"
+set $ws9 "9:game"
 set $ws10 "0:alt"
 
 
@@ -168,11 +169,20 @@ smart_gaps on
 gaps inner 5
 gaps outer 0
 
+# use xprop to get class name
+
 for_window [class="mpv" instance="gl"] floating enable
 for_window [class="Vlc" instance="vlc"] floating enable
 for_window [class="Blueman-manager" instance="blueman-manager"] floating enable
 for_window [class="Thunar" instance="thunar"] floating enable
 for_window [class="Autokey-gtk" instance="autokey-gtk"] floating enable
+
+assign [class="^URxvt$"] → $ws2
+assign [class="^Firefox$"] → $ws1
+assign [class="^git-cola$"] → $ws3
+assign [class="^Slack$"] → $ws10
+assign [class="^steam.exe$"] → $ws9
+assign [class="^Steam$"] → $ws9
 
 # Startup
 exec --no-startup-id xautolock -time 2 -locker 'i3lock-fancy'
