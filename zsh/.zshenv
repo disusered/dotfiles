@@ -34,8 +34,7 @@ export GIT_LOG_STYLE_BASIC="%C(magenta bold)%h%C(reset) %C(auto)%d%C(reset) %s"
 export GIT_LOG_STYLE_COMPLEX="%C(magenta bold)%h%C(reset) %C(blue bold)%aN%C(reset) %C(auto)%d%C(reset) %s %C(8)(%cr)%C(reset)"
 export GIT_LOG_STYLE=$GIT_LOG_STYLE_COMPLEX
 
-export NVM_DIR="$HOME/.dotfiles/nvm/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use
+export NVM_LAZY_LOAD=true
 
 case $(uname) in
   'Darwin')
