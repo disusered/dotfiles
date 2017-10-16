@@ -6,6 +6,8 @@ font pango:Roboto 9
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+focus_follows_mouse no
+
 # daemonize the rxvt-unicode terminal emulator.
 exec --no-startup-id urxvtd -q -f -o &
 
