@@ -50,6 +50,7 @@
       !pip install --user --upgrade typing python-language-server
       !npm install -g vscode-json-languageserver-bin javascript-typescript-langserver vscode-css-languageserver-bin vscode-html-languageserver-bin flow-language-server
       !luarocks --local install https://raw.githubusercontent.com/Alloyed/lua-lsp/master/lua-lsp-scm-1.rockspec
+      !gem install language_server
       :UpdateRemotePlugins
     endif
   endfunction

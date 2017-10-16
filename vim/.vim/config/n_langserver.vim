@@ -11,6 +11,7 @@ let g:LanguageClient_serverCommands = {
   \ 'html': ['html-languageserver', '--stdio'],
   \ 'json': ['json-languageserver', '--stdio'],
   \ 'lua': ['lua-lsp'],
+  \ 'ruby': ['ruby'],
   \ }
 
 set completefunc=LanguageClient#complete
