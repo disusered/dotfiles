@@ -7,6 +7,7 @@ x-scheme-handler/unknown=chromium.desktop;
 inode/directory=Thunar.desktop;
 x-scheme-handler/file=Thunar.desktop;
 application/x-directory=Thunar.desktop
+x-scheme-handler/magnet=transmission-gtk.desktop;
 [Added Associations]
 application/pdf=zathura-pdf-poppler.desktop;
 application/zip=org.gnome.FileRoller.desktop;
