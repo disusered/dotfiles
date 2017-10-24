@@ -19,6 +19,7 @@ set formatexpr=LanguageClient_textDocument_rangeFormatting()
 
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_selectionUI = 'fzf'
+let g:LanguageClient_diagnosticsList = 'location'
 
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
