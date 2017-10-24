@@ -58,6 +58,7 @@ case $(uname) in
     stow autokey
     sudo stow --target=/ rxvt
     sudo stow --target=/ garmin
+    sudo stow --target=/ vmware
     sudo stow --target=/ oculus
     sudo systemctl daemon-reload
     sudo udevadm control --reload
