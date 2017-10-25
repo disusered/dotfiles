@@ -1,5 +1,5 @@
 " theme
-Plug 'chriskempson/base16-vim'
+Plug 'chriskempson/base16-vim', { 'commit': '2d991f14f688a38b7b2bcd397bad5efadd0f80a9' }
 
 " syntax
 Plug 'sheerun/vim-polyglot'
