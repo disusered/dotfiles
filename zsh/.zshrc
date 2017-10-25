@@ -263,5 +263,8 @@ HELPDIR=/usr/local/share/zsh/help
 # marker
 [[ -s "$HOME/.local/share/marker/marker.sh" ]] && source "$HOME/.local/share/marker/marker.sh"
 
+# virtualenvwrapper
+[[ -s "$HOME/.local/bin/virtualenvwrapper_lazy.sh" ]] && source "$HOME/.local/bin/virtualenvwrapper_lazy.sh"
+
 # Initialize zplug
 zplug load

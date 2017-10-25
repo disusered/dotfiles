@@ -34,6 +34,9 @@ export GIT_LOG_STYLE_BASIC="%C(magenta bold)%h%C(reset) %C(auto)%d%C(reset) %s"
 export GIT_LOG_STYLE_COMPLEX="%C(magenta bold)%h%C(reset) %C(blue bold)%aN%C(reset) %C(auto)%d%C(reset) %s %C(8)(%cr)%C(reset)"
 export GIT_LOG_STYLE=$GIT_LOG_STYLE_COMPLEX
 
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/.dotfiles/virtualenvwrapper
+
 export NVM_LAZY_LOAD=true
 
 case $(uname) in
