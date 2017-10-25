@@ -1,0 +1,2 @@
+mkvirtualenv -r requirements.txt --python=/usr/bin/python{{2.7}} {{env_name}}
+mkvirtualenv -r {{requirements.txt}} {{-i watchdog}} --python=/usr/bin/python{{2.7}} {{env_name}}
