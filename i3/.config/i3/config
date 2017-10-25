@@ -71,7 +71,7 @@ set $ws1 "1:main"
 set $ws2 "2:term"
 set $ws3 "3:git"
 set $ws4 "4:doc"
-set $ws5 "4:music"
+set $ws5 "5:music"
 set $ws9 "9:game"
 set $ws10 "0:alt"
 
