@@ -2,9 +2,9 @@
 Type=Application
 Name=Steam (Windows)
 Comment=Steam for Windows via Wine
-Exec=env WINEPREFIX=/home/carlos/.wine env WINEDEBUG=-all wine C:\\\\windows\\\\command\\\\start.exe "C:\\Program Files (x86)\\Steam\\Steam.exe" -no-cef-sandbox
+Exec=env WINEPREFIX=/home/carlos/.wine-steam env WINEARCH=win32 env WINEDEBUG=-all wine C:\\\\windows\\\\command\\\\start.exe "C:\\Program Files\\Steam\\Steam.exe" -no-cef-sandbox
 TryExec=/usr/bin/wine
-Path=/home/carlos/.wine/drive_c/Program Files (x86)/Steam
+# Path=/home/carlos/.wine/drive_c/Program Files/Steam/
 Terminal=false
 StartupNotify=true
 Icon=BAC4_steam.0
