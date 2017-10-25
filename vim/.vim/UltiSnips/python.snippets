@@ -1,4 +1,32 @@
-snippet d "Breakpoint"
+snippet pdb "pdb Breakpoint"
 import pdb; pdb.set_trace()
 endsnippet
 
+snippet pdb "ipdb Breakpoint"
+import pdb; pdb.set_trace()
+endsnippet
+
+snippet d "Breakpoint"
+import code; code.interact(local=locals())
+endsnippet
+
+snippet dg "Breakpoint (Globals)"
+import code;code.interact(local=dict(globals(),**locals()))
+endsnippet
+
+snippet def "Function"
+def ${1:name}(${2}):
+    $0
+endsnippet
+
+snippet if "Conditional"
+if ${1:expression}:
+    $0
+endsnippet
+
+snippet ife "Conditional Else"
+if ${1:expression}:
+    $2
+else:
+    $0
+endsnippet
