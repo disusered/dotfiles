@@ -1,3 +1,7 @@
+snippet prettier "Add prettier autoformatting"
+// @format
+endsnippet
+
 snippet use "Use Strict" b
 'use strict';
 endsnippet
@@ -15,28 +19,28 @@ endsnippet
 
 snippet if "A simple if condition" b
 if (${1:expression}) {
-	$0
+  $0
 }
 endsnippet
 
 snippet ife "A simple if else condition" b
 if (${1:expression}) {
-	$4
+  $4
 } else ${2:if (${3:bar}) }{
-	$0
+  $0
 }
 endsnippet
 
 snippet sw "Switch condition" b
 switch (${1:expression}) {
-	case ${2:alpha}:
-		${5:console.log($2);}
-		break;
-	case ${3:beta}:
-		${6:console.log($3);}
-		break;${4:
-	default:
-		${7:console.log('default');}}
+  case ${2:alpha}:
+    ${5:console.log($2);}
+    break;
+  case ${3:beta}:
+    ${6:console.log($3);}
+    break;${4:
+  default:
+    ${7:console.log('default');}}
 }
 endsnippet
 
@@ -47,13 +51,13 @@ endsnippet
 
 snippet fd "Function declaration"
 function ${1:name}(${2}) {
-	$0
+  $0
 }
 endsnippet
 
 snippet _f "Inline Function declaration" i
 function(${2}) {
-	$0
+  $0
 }
 endsnippet
 
@@ -71,7 +75,7 @@ endsnippet
 
 snippet fe "Function expression" b
 var ${1:name} = function ${1:name}(${2}){
-	$0
+  $0
 }
 endsnippet
 
@@ -145,7 +149,7 @@ endsnippet
 
 snippet rptsh "PropTypes.shape" i
 PropTypes.shape({
-	${1:key}: $0
+  ${1:key}: $0
 })
 endsnippet
 
@@ -208,7 +212,7 @@ endsnippet
 
 snippet ro "Return object"
 return {
-	${1:key}: ${2:value}
+  ${1:key}: ${2:value}
 };
 endsnippet
 
@@ -243,13 +247,13 @@ endsnippet
 
 snippet it "it should..."
 it('${1:should...}', () => {
-	$0
+  $0
 });
 endsnippet
 
 snippet des "describe"
 describe('$1', () => {
-	$0
+  $0
 });
 endsnippet
 
@@ -264,14 +268,14 @@ import test from 'ava';
 import $1 from '$2';
 
 test('${3:title}', t => {
-	t.is($1(), '$4');
+  t.is($1(), '$4');
 });
 $0
 endsnippet
 
 snippet test " AVA Test" b
 test('${1:title}', t => {
-	$2
+  $2
 });
 $0
 endsnippet
