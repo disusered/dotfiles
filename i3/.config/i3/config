@@ -180,6 +180,7 @@ for_window [class="Blueman-manager" instance="blueman-manager"] floating enable
 for_window [class="Thunar" instance="thunar"] floating enable
 for_window [class="Transmission-gtk"] floating enable
 for_window [class="Autokey-gtk" instance="autokey-gtk"] floating enable
+for_window [class="Pavucontrol"] floating enable
 
 assign [class="^URxvt$"] → $ws2
 assign [class="^Firefox$"] → $ws1
@@ -201,6 +202,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id emoji-keyboard
 exec --no-startup-id autokey-gtk
 exec --no-startup-id $HOME/.dotfiles/bin/thunar-tumbler.sh
+exec --no-startup-id pasystray
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Silentcast Workaround (because i3wm can't iconify)
