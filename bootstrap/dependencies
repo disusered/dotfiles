@@ -10,11 +10,11 @@ case $(uname) in
     pip3 install --user neovim
     ;;
   'Linux')
-    pip install --user virtualenv virtualenvwrapper
     sudo pip2 install --upgrade setuptools pip
     sudo pip3 install --upgrade setuptools pip
     pip2 install --user neovim
     pip3 install --user neovim
+    pip install --user virtualenv virtualenvwrapper
     ;;
 esac
 

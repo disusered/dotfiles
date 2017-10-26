@@ -265,6 +265,7 @@ HELPDIR=/usr/local/share/zsh/help
 
 # virtualenvwrapper
 [[ -s "$HOME/.local/bin/virtualenvwrapper_lazy.sh" ]] && source "$HOME/.local/bin/virtualenvwrapper_lazy.sh"
+[[ -s "/usr/local/bin/virtualenvwrapper_lazy.sh" ]] && source "/usr/local/bin/virtualenvwrapper_lazy.sh"
 
 # Initialize zplug
 zplug load
