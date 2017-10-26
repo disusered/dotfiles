@@ -2,11 +2,11 @@ snippet pdb "pdb Breakpoint"
 import pdb; pdb.set_trace()
 endsnippet
 
-snippet pdb "ipdb Breakpoint"
-import pdb; pdb.set_trace()
+snippet ipdb "ipdb Breakpoint"
+import ipdb as pdb; pdb.set_trace()
 endsnippet
 
-snippet d "Breakpoint"
+snippet ci "Breakpoint"
 import code; code.interact(local=locals())
 endsnippet
 
