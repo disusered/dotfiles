@@ -5,3 +5,6 @@
 *.jpeg
 *.gif
 *.map
+*.po
+*.pot
+*.mo
