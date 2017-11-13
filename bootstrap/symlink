@@ -39,6 +39,7 @@ stow weechat
 stow ranger
 stow npm
 stow marker
+stow psql
 
 case $(uname) in
   'Darwin')
