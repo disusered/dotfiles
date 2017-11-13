@@ -61,11 +61,6 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+d focus child
 
-# media keys
-bindsym XF86AudioRaiseVolume exec amixer set PCM 3%+ unmute
-bindsym XF86AudioLowerVolume exec amixer set PCM 3%- unmute
-bindsym XF86AudioMute exec amixer set PCM mute
-
 # named workspaces
 set $ws1 "1:main"
 set $ws2 "2:term"
@@ -135,6 +130,16 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Media player controls
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 ## Base16 Ocean
 # Author: Chris Kempson (http://chriskempson.com)
 #
@@ -173,7 +178,6 @@ gaps inner 5
 gaps outer 0
 
 # use xprop to get class name
-
 for_window [class="mpv" instance="gl"] floating enable
 for_window [class="Vlc" instance="vlc"] floating enable
 for_window [class="Blueman-manager" instance="blueman-manager"] floating enable
