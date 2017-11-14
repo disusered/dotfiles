@@ -5,6 +5,7 @@ case $(uname) in
       /usr/local/sbin
       $GOPATH/bin
       $HOME/.cargo/bin
+      $HOME/Library/Python/2.7/bin/
       $HOME/.luarocks/bin
       $HOME/.dotfiles/bin
       $path
