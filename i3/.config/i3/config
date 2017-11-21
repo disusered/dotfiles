@@ -196,6 +196,7 @@ for_window [class="Pavucontrol"] floating enable
 
 assign [class="^URxvt$"] → $ws2
 assign [class="^Firefox$"] → $ws1
+assign [class="^Firefox Developer Edition$"] → $ws1
 assign [class="^git-cola$"] → $ws3
 assign [class="^Slack$"] → $ws10
 assign [class="^Spotify$"] → $ws5
