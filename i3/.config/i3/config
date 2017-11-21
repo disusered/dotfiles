@@ -214,6 +214,7 @@ exec --no-startup-id emoji-keyboard
 exec --no-startup-id autokey-gtk
 exec --no-startup-id $HOME/.dotfiles/bin/thunar-tumbler.sh
 exec --no-startup-id pasystray
+exec --no-startup-id nm-applet
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Silentcast Workaround (because i3wm can't iconify)
