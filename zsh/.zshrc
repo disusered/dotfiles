@@ -260,6 +260,9 @@ HELPDIR=/usr/local/share/zsh/help
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# rbenv
+eval "$(rbenv init -)"
+
 # marker
 [[ -s "$HOME/.local/share/marker/marker.sh" ]] && source "$HOME/.local/share/marker/marker.sh"
 
