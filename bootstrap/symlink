@@ -80,7 +80,3 @@ esac
 
 # Install marker
 $HOME/.marker/install.py
-
-# Symlink Tmux Plugin Manager
-rm -f "$HOME/.tmux/plugins/tpm"
-ln -s "$HOME/.dotfiles/vendor/tpm" "$HOME/.tmux/plugins/tpm"
