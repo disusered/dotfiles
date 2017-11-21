@@ -20,6 +20,8 @@ case $(uname) in
       $HOME/Android/Sdk/tools/bin
       $HOME/Android/Sdk/platform-tools
       $HOME/.rbenv
+      $HOME/.yarn/bin
+      $HOME/.fzf/bin
       $path
     )
     ;;
