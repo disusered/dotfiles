@@ -204,7 +204,7 @@ assign [class="^Spotify$"] → $ws5
 # Startup
 exec --no-startup-id xautolock -time 2 -locker 'i3lock-fancy'
 exec --no-startup-id numlockx on
-exec --no-startup-id exec ~/.dropbox-dist/dropboxd
+exec --no-startup-id exec /usr/bin/dropbox
 exec --no-startup-id thunar --daemon
 exec --no-startup-id greenclip daemon
 exec --no-startup-id compton -b --config $HOME/.config/compton.conf
