@@ -30,7 +30,11 @@ npm install -g flow-bin caniuse-cmd typescript diff-so-fancy yarn \
   http-server plugman cordova grunt-cli tldr heroku-cli less
 
 # Lua dependencies
-# install luarocks
+case $(uname) in
+  'Linux')
+    yaourt -S lua luarocks
+    ;;
+esac
 
 # Mac deps
 case $(uname) in
