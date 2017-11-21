@@ -67,7 +67,7 @@ set $ws2 "2:term"
 set $ws3 "3:git"
 set $ws4 "4:doc"
 set $ws5 "5:music"
-set $ws9 "9:game"
+set $ws9 "9:irc"
 set $ws10 "0:alt"
 
 # move to other workspace
@@ -198,8 +198,6 @@ assign [class="^URxvt$"] → $ws2
 assign [class="^Firefox$"] → $ws1
 assign [class="^git-cola$"] → $ws3
 assign [class="^Slack$"] → $ws10
-assign [class="^steam.exe$"] → $ws9
-assign [class="^Steam$"] → $ws9
 assign [class="^Spotify$"] → $ws5
 
 # Startup
