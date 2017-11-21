@@ -1,3 +1,0 @@
-{
-  0: ('17/07/17 19:36:00', 'Global', 'irc.server.synirc', 'http://twitter.com/synirc', '\tGlobal (services@services.synirc.net): [Logon News - Oct 09 2014] Follow us on Twitter @synIRC - http://twitter.com/synirc'),
-}

@@ -16,11 +16,11 @@ vim/autoload/
 vim/view
 
 # weechat
-weechat/logs
-weechat/ssl
-weechat/*.log
-weechat/slack.cache
-weechat/urlserver_list.txt
+weechat/.weechat/logs
+weechat/.weechat/weechat.log
+weechat/.weechat/ssl
+weechat/.weechat/slack.cache
+weechat/.weechat/urlserver_list.txt
 
 # mps
 mps*/cache*
