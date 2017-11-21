@@ -4,6 +4,9 @@
 # Set background
 $HOME/.fehbg &
 
+# Increase key repeat rate
+xset r rate 200 25
+
 # Set numlock on at login
 setxkbmap -option caps:escape
 
