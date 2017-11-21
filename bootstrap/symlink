@@ -22,6 +22,9 @@ case $(uname) in
     sudo useradd --no-create-home --shell /usr/bin/nologin --user-group gps
     sudo gpasswd -a $USER gps
     newgrp gps
+    # backlight
+    sudo gpasswd -a $USER video
+    newgrp video
     ;;
 esac
 
@@ -58,9 +61,17 @@ case $(uname) in
     stow dunst
     stow autokey
     sudo stow --target=/ rxvt
-    sudo stow --target=/ garmin
-    sudo stow --target=/ vmware
-    sudo stow --target=/ oculus
+
+    # peripherals
+    # sudo stow --target=/ garmin
+    # sudo stow --target=/ vmware
+    # sudo stow --target=/ oculus
+
+    # laptop
+    sudo stow --target=/ thinkpad
+    sudo stow --target=/ monitor
+    sudo stow --target=/ backlight
+
     sudo systemctl daemon-reload
     sudo udevadm control --reload
     sudo udevadm trigger
