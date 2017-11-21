@@ -60,6 +60,7 @@ case $(uname) in
     stow compton
     stow dunst
     stow autokey
+
     sudo stow --target=/ rxvt
 
     # peripherals
@@ -71,6 +72,9 @@ case $(uname) in
     sudo stow --target=/ thinkpad
     sudo stow --target=/ monitor
     sudo stow --target=/ backlight
+
+    sudo rm /etc/dnsmasq.conf
+    sudo stow --target=/ dnsmasq
 
     sudo systemctl daemon-reload
     sudo udevadm control --reload
