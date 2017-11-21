@@ -14,7 +14,7 @@ Xft.lcdfilter: lcddefault
 Xft.rgba:      rgb
 
 URxvt.font: xft:Source Code Pro:pixelsize=13,\
-            xft:SauceCodePro Nerd Font:pixelsize=13,\
+            xft:SauceCodePro Nerd Font Mono:pixelsize=13,\
             xft:Noto Color Emoji:pixelsize=13, \
             Unifont
 
