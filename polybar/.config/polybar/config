@@ -17,6 +17,8 @@ green = #a3be8c
 bottom = false
 border-size = 0
 override-redirect = false
+; Multiple monitors
+monitor = ${env:MONITOR:}
 ; Set up modules
 modules-left = i3
 modules-center = xwindow
@@ -48,17 +50,23 @@ label-padding = 1
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
+pin-workspaces = true
 ; Mode i.e. resize
 label-mode = %mode%
 label-mode-padding = 3
 label-mode-foreground = ${colors.modfg}
 label-mode-underline = ${colors.modfg}
-; Focused workspace
+; Focused - active workspace on active monitor
 label-focused = %name%
 label-focused-foreground = ${colors.white}
 label-focused-underline = ${colors.green}
 label-focused-padding = 3
-; Unfocused workspace
+; Visible - inactive workspace on any monitor
+label-visible = %name%
+label-visible-foreground = ${colors.muted}
+label-visible-underline = ${colors.blue}
+label-visible-padding = 3
+; Unfocused - inactive workspace on any monitor
 label-unfocused = %name%
 label-unfocused-foreground = ${colors.muted}
 label-unfocused-underline = #4f5b66
@@ -138,3 +146,7 @@ label-padding = 1
 exec = .config/polybar/pkg.sh
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 click-left = "urxvtc --hold -e yaourt -Syu --aur"
+
+
+[settings]
+screenchange-reload = true

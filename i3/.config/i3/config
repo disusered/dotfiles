@@ -70,6 +70,9 @@ set $ws5 "5:music"
 set $ws9 "9:game"
 set $ws10 "0:alt"
 
+# move to other workspace
+bindsym $mod+x move workspace to output right
+bindsym $mod+Shift+x move container to output right
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
