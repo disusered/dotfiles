@@ -12,6 +12,7 @@ let g:neomake_warning_sign = {
     \ 'texthl': 'WarningMsg',
     \ }
 
+let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_markdown_enabled_makers = ['mdl']
 let g:neomake_sh_enabled_makers = ['sh', 'shellcheck']
 let g:neomake_zsh_enabled_makers = ['zsh']
@@ -21,5 +22,5 @@ let g:neomake_tex_enabled_makers = ['pdflatex']
 
 augroup user_lint
   autocmd!
-  autocmd Filetype {lua,markdown,sh,zsh,yaml,go,tex} autocmd BufWritePost * Neomake
+  autocmd Filetype {javascript,lua,markdown,sh,zsh,yaml,go,tex} autocmd BufWritePost * Neomake
 augroup END
