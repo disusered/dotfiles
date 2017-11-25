@@ -35,7 +35,7 @@ endfunction
 Plug 'benekastah/neomake', { 'do': function('NeomakeDeps') }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'md'] }
 
 " load on command
 Plug 'Wolfy87/vim-enmasse',     { 'on': 'EnMasse' }

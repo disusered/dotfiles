@@ -7,7 +7,7 @@ augroup user_ft
   autocmd FileType markdown setlocal spell
   autocmd FileType gitcommit setlocal spell
 
-  autocmd BufNewFile,BufRead {.jshintrc,.tern-project,.jscsrc,.eslintrc,.babelrc} set ft=json
+  autocmd BufNewFile,BufRead {.prettierrc,.jshintrc,.tern-project,.jscsrc,.eslintrc,.babelrc} set ft=json
   autocmd BufNewFile,BufRead {*.md,*.markdown} set filetype=markdown
   autocmd BufNewFile,BufRead {zshrc,zshenv} set filetype=zsh.sh
   autocmd BufNewFile,BufRead {Brewfile} set filetype=ruby
