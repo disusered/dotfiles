@@ -11,17 +11,6 @@ snippet eslint "ESLint Daemon"
 let g:neomake_javascript_eslint_exe = '/usr/local/bin/eslint_d'
 endsnippet
 
-snippet npm "Basic npm commands"
-map <silent> <Leader>mh :Start! npm start<CR>
-map <silent> <Leader>mt :Start! npm test<CR>
-endsnippet
-
-snippet chrome "Chrome, no CORS, remote debugging"
-map <silent> <Leader>mc :Start! noglob open -a Google\ Chrome --args --remote-debugging-port=9222 --allow-file-access-from-files --disable-web-security http://localhost:8000/webpack-dev-server/<CR>
-$0
-endsnippet
-
-snippet canary "Chrome, no CORS, remote debugging"
-map <silent> <Leader>mc :Start! noglob open -a Google\ Chrome\ Canary --args --remote-debugging-port=9222 --allow-file-access-from-files --disable-web-security http://localhost:8000/webpack-dev-server/<CR>
-$0
+snippet prettier "Add prettier autoformatting"
+let g:prettier#exec_cmd_path = "${0:./node_modules/.bin/prettier}"
 endsnippet
