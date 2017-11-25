@@ -17,7 +17,7 @@ function disconnect(){
 
 
 if [[ $(xrandr | grep "VGA-[0-9] connected") ]]; then
-  connect "VGA-2"
+  connect "VGA-1"
 else
-  disconnect "VGA-2"
+  disconnect "VGA-1"
 fi
