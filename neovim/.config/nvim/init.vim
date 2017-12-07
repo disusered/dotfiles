@@ -55,7 +55,14 @@
     endif
   endfunction
   Plug 'autozimu/LanguageClient-neovim', { 'do': function('LanguageClient') }
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  function! CompletionManager(info)
+    if a:info.status == 'installed' || a:info.force
+      !pip install --user --upgrade jedi mistune psutil setproctitle
+      :UpdateRemotePlugins
+    endif
+  endfunction
+  Plug 'roxma/nvim-completion-manager', { 'do': function('CompletionManager') }
+  Plug 'roxma/nvim-completion-manager'
   call plug#end()
 
   source $MYCONFIG/n_autocommands.vim

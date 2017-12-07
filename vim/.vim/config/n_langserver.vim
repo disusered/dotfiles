@@ -28,8 +28,6 @@ nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 nnoremap <silent> <leader>s :call LanguageClient_textDocument_documentSymbol()<CR>
 nnoremap <silent> <leader>a :call LanguageClient_textDocument_formatting()<CR>
 
-let g:deoplete#enable_at_startup = 1
-
 let g:LanguageClient_diagnosticsDisplay = {
   \   1: {
   \       "name": "Error",
