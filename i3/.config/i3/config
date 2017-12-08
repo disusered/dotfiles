@@ -123,10 +123,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym $mod+h resize shrink width 10 px or 10 ppt
-        bindsym $mod+j resize grow height 10 px or 10 ppt
-        bindsym $mod+k resize shrink height 10 px or 10 ppt
-        bindsym $mod+l resize grow width 10 px or 10 ppt
+        bindsym $mod+h resize shrink width 5 px or 5 ppt
+        bindsym $mod+j resize grow height 5 px or 5 ppt
+        bindsym $mod+k resize shrink height 5 px or 5 ppt
+        bindsym $mod+l resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -219,44 +219,3 @@ exec --no-startup-id $HOME/.dotfiles/bin/thunar-tumbler.sh
 exec --no-startup-id pasystray
 exec --no-startup-id nm-applet
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# Silentcast Workaround (because i3wm can't iconify)
-#
-# After copy and pasting this, make sure to change the display size at the end
-# of the first definition ($enable_floating_fullscreen) to match your display size
-#
-# Use these keybindings as follows:
-#   1. Start Silentcast
-#   2. $mod+Shift+s to make Silentcast a floating window filling the display
-#      (which allows other windows to be seen below it)
-#   3. Select the region to be recorded using standard Silentcast controls
-#   4. $mod+Shift+z to "iconify" silentcast to start recording (actually putting it on a
-#      workspace named Silencast and making it fullscreen again instead of floating)
-#   5. When done recording, $mod+x to "deiconify" Silentcast which will stop
-#      recording and move on to the next step as usual.
-#
-
-# define what fullscreen means for floating window - have to manually set the display size
-set $enable_floating_fullscreen  border none,fullscreen disable,floating enable,move absolute position 0 0,resize set 1680 1050
-
-# more definitions (i3wm doesn't seem to support using $variables in definitions of other $variables)
-set $work_in_temp move container to workspace Silentcast,workspace Silentcast
-
-set $return_from_temp move container to workspace back_and_forth,workspace back_and_forth
-
-set $iconify move container to workspace Silentcast,workspace Silentcast,floating disable,fullscreen enable,workspace back_and_forth
-
-set $deiconify workspace Silentcast,border none,fullscreen disable,floating enable,move absolute position 0 0,resize set 1920 1080,move container to workspace back_and_forth,workspace back_and_forth
-
-# change from fullscreen to floating_fullscreen because iw3m won't show other windows under it otherwise
-bindsym $mod+Shift+s [class="Silentcast"] $work_in_temp,$enable_floating_fullscreen,$return_from_temp
-
-# "iconify"
-bindsym $mod+Shift+z [class="Silentcast"] $iconify
-
-# "deiconify" to stop ffmpeg and continue
-bindsym $mod+x [class="Silentcast"] $deiconify
-
-#
-# End of Silentcast Workaround
-#
