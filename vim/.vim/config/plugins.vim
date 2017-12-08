@@ -26,6 +26,7 @@ Plug 'junegunn/vim-slash'
 Plug 'simnalamburt/vim-mundo'
 Plug 'junegunn/gv.vim' | Plug 'tpope/vim-fugitive'
 Plug 'junegunn/vim-peekaboo'
+Plug 'jiangmiao/auto-pairs'
 function! NeomakeDeps(info)
   if a:info.status == 'installed' || a:info.force
     !gem install mdl
