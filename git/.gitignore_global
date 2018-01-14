@@ -5,3 +5,5 @@ Session.vim
 *@neomake*.py
 *.py.orig
 requests.sh
+swatch*
+.ropeproject
