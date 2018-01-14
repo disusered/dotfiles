@@ -43,6 +43,7 @@ stow ranger
 stow npm
 stow marker
 stow psql
+stow mysql
 
 case $(uname) in
   'Darwin')
