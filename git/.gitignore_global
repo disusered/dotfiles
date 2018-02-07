@@ -6,4 +6,6 @@ Session.vim
 *.py.orig
 requests.sh
 swatch*
-.ropeproject
+*.ropeproject
+*.pgsql
+*.vscode
