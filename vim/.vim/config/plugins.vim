@@ -47,6 +47,7 @@ Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymot
 
 " load for ft
 Plug 'actionshrimp/vim-xpath',     { 'for': ['xml'] }
+Plug 'chrisbra/csv.vim',           { 'for': ['csv'] }
 Plug 'heavenshell/vim-jsdoc',      { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mattn/emmet-vim',            { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'css', 'scss', 'markdown', 'html.handlebars', 'xml', 'htmldjango'] }
 Plug 'jpalardy/vim-slime',         { 'for': ['javascript', 'sh', 'pgsql', 'sql']}
