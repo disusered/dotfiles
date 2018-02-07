@@ -46,6 +46,7 @@ Plug 'scrooloose/nerdtree',     { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-s2)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
 
 " load for ft
+Plug 'wannesm/wmgraphviz.vim',     { 'for': ['dot'] }
 Plug 'actionshrimp/vim-xpath',     { 'for': ['xml'] }
 Plug 'chrisbra/csv.vim',           { 'for': ['csv'] }
 Plug 'heavenshell/vim-jsdoc',      { 'for': ['javascript', 'javascript.jsx'] }
