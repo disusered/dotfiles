@@ -47,7 +47,7 @@
   source $MYCONFIG/plugins.vim
   function! LanguageClient(info)
     if a:info.status == 'installed' || a:info.force
-      !pip install --user --upgrade typing python-language-server
+      !pip install --user --upgrade typing python-language-server pyls-isort
       !npm install -g vscode-json-languageserver-bin javascript-typescript-langserver vscode-css-languageserver-bin vscode-html-languageserver-bin flow-language-server
       !luarocks --local install https://raw.githubusercontent.com/Alloyed/lua-lsp/master/lua-lsp-scm-1.rockspec
       !gem install language_server
