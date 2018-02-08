@@ -57,8 +57,8 @@
 	f = fetch
 	fm = pull
 	co = checkout
-[credential]
-	helper = osxkeychain
+# [credential]
+# 	helper = osxkeychain
 [grep]
 	lineNumber = true
 [diff]
@@ -75,13 +75,6 @@
 	cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
 [difftool "vimdiff"]
 	cmd = nvim -d -u ~/.nvimrc \"$LOCAL\" \"$REMOTE\"
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustexitcode = true
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[url "https://github"]
-	insteadOf = git://github
 [branch]
 	autosetuprebase = always
 [submodule]
