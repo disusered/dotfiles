@@ -5,6 +5,9 @@ set -o pipefail
 export DISPLAY=:0.0
 export XAUTHORITY=/home/carlos/.Xauthority
 
+TYPE=VGA
+ID=1
+
 function connect(){
    logger -t udev "$1 connected"
    xrandr --output "$1" --auto --right-of LVDS-1
@@ -12,12 +15,13 @@ function connect(){
 
 function disconnect(){
    logger -t udev "$1 disconnected"
-   xrandr --output "$1" --off
+   xrandr -s 0
+   # xrandr --output "$1" --off
 }
 
 
-if [[ $(xrandr | grep "VGA-[0-9] connected") ]]; then
-  connect "VGA-1"
+if [[ $(xrandr | grep "$TYPE-$ID connected") ]]; then
+  connect "$TYPE-$ID"
 else
-  disconnect "VGA-1"
+  disconnect "$TYPE-$ID"
 fi
