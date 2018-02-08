@@ -68,6 +68,7 @@ case $(uname) in
     # sudo stow --target=/ garmin
     # sudo stow --target=/ vmware
     # sudo stow --target=/ oculus
+    # sudo stow --target=/ hidclient
 
     # laptop
     sudo stow --target=/ thinkpad
