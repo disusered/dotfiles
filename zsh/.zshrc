@@ -117,7 +117,7 @@ case $(uname) in
     alias ls='ls -G'
     alias d='dict'
     alias p='preview'
-    alias flushdns='sudo discoveryutil udnsflushcaches'
+    alias flushdns='sudo killall -HUP mDNSResponder'
     alias pbc='pbcopy'
     alias pbp='pbpaste'
     alias fonts='fc-list | cut -f2 -d: | sort -u'

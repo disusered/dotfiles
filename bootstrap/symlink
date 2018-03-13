@@ -49,6 +49,9 @@ case $(uname) in
   'Darwin')
     stow hammerspoon
     stow karabiner
+
+    sudo rm /usr/local/etc/dnsmasq.conf
+    sudo stow --target=/ dnsmasq-mac
     ;;
   'Linux')
     stow xorg
