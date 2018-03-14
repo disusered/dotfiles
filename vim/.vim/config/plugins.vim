@@ -34,6 +34,7 @@ function! NeomakeDeps(info)
     !pip install --user yamllint
   endif
 endfunction
+Plug 'benjie/local-npm-bin.vim'
 Plug 'benekastah/neomake', { 'do': function('NeomakeDeps') }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
