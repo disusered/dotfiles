@@ -60,4 +60,4 @@ nnoremap    j                 gj
 nnoremap    k                 gk
 nmap        [c                <Plug>GitGutterPrevHunk
 nmap        ]c                <Plug>GitGutterNextHunk
-nmap        <Leader>y         <Plug>(Prettier)
+nmap        mp                :Neoformat<CR>

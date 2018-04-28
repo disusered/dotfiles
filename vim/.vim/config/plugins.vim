@@ -32,8 +32,7 @@ function! NeomakeDeps(info)
   endif
 endfunction
 Plug 'benekastah/neomake', { 'do': function('NeomakeDeps') }
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'npm install',
+Plug 'sbdchd/neoformat', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'md'] }
 
 " load on command
