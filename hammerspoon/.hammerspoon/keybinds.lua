@@ -18,16 +18,6 @@ hs.hotkey.bind({"shift"}, "delete", nil, function() hs.eventtap.keyStroke({"shif
     event.newKeyEvent({"shift"}, "\\", false):post()
   end)
 
--- show desktop
-hs.hotkey.bind({"cmd","alt","shift","ctrl"}, "j", nil, function()
-  hs.eventtap.keyStroke({"shift"}, "f13")
-end)
-
--- show mission control
-hs.hotkey.bind({"cmd","alt","shift","ctrl"}, "k", nil, function()
-  hs.eventtap.keyStroke({"cmd"}, "f13")
-end)
-
 -- full [1, 1/2]
 hs.hotkey.bind({"cmd","alt","shift","ctrl"}, "k", nil, function()
   nextKey = "k"
