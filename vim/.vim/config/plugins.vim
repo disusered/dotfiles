@@ -48,19 +48,17 @@ Plug 'mattn/emmet-vim',            { 'for': ['html', 'eruby', 'javascript', 'jav
 Plug 'jpalardy/vim-slime',         { 'for': ['javascript', 'sh', 'pgsql', 'sql']}
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 
-if g:os == 'Linux'
-  function! BuildComposer(info)
-    if a:info.status != 'unchanged' || a:info.force
-      if has('nvim')
-        !cargo build --release
-      else
-        !cargo build --release --no-default-features --features json-rpc
-      endif
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    if has('nvim')
+      !cargo build --release
+    else
+      !cargo build --release --no-default-features --features json-rpc
     endif
-  endfunction
+  endif
+endfunction
 
-  Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
-endif
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
 " load conditionally
 Plug 'MarcWeber/vim-addon-local-vimrc', { 'on': [] }
