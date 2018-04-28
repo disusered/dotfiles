@@ -18,14 +18,11 @@ Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat'
-Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-obsession'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'freitass/todo.txt-vim'
 Plug 'junegunn/vim-slash'
 Plug 'simnalamburt/vim-mundo'
 Plug 'junegunn/gv.vim' | Plug 'tpope/vim-fugitive'
-Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-abolish'
 Plug 'jaawerth/nrun.vim'
 function! NeomakeDeps(info)
@@ -46,9 +43,6 @@ Plug 'scrooloose/nerdtree',     { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-s2)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
 
 " load for ft
-Plug 'wannesm/wmgraphviz.vim',     { 'for': ['dot'] }
-Plug 'actionshrimp/vim-xpath',     { 'for': ['xml'] }
-Plug 'chrisbra/csv.vim',           { 'for': ['csv'] }
 Plug 'heavenshell/vim-jsdoc',      { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mattn/emmet-vim',            { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'css', 'scss', 'markdown', 'html.handlebars', 'xml', 'htmldjango'] }
 Plug 'jpalardy/vim-slime',         { 'for': ['javascript', 'sh', 'pgsql', 'sql']}
@@ -70,16 +64,11 @@ endif
 
 " load conditionally
 Plug 'MarcWeber/vim-addon-local-vimrc', { 'on': [] }
-Plug 'moll/vim-node',                   { 'on': [] }
 
 augroup conditional_load
   autocmd!
 
   if !empty(glob(getcwd().'/.local-vimrc'))
     call plug#load('vim-addon-local-vimrc')
-  endif
-
-  if !empty(glob(getcwd().'/package.json'))
-    call plug#load('vim-node')
   endif
 augroup END
