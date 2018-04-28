@@ -27,13 +27,13 @@ Plug 'simnalamburt/vim-mundo'
 Plug 'junegunn/gv.vim' | Plug 'tpope/vim-fugitive'
 Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-abolish'
+Plug 'jaawerth/nrun.vim'
 function! NeomakeDeps(info)
   if a:info.status == 'installed' || a:info.force
     !gem install mdl
     !pip install --user yamllint
   endif
 endfunction
-Plug 'benjie/local-npm-bin.vim'
 Plug 'benekastah/neomake', { 'do': function('NeomakeDeps') }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',

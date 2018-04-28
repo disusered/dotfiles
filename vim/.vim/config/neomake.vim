@@ -21,7 +21,4 @@ let g:neomake_yaml_enabled_makers = ['yamllint']
 let g:neomake_go_enabled_makers = ['go', 'golint', 'govet']
 let g:neomake_tex_enabled_makers = ['pdflatex']
 
-augroup user_lint
-  autocmd!
-  autocmd Filetype {javascript,lua,markdown,sh,zsh,yaml,go,tex,vue} autocmd BufWritePost * Neomake
-augroup END
+call neomake#configure#automake('nw', 750)

@@ -1,16 +1,7 @@
-snippet flow "Flow and ESLint"
-let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
-let g:neomake_jsx_enabled_makers = ['eslint', 'flow']
-endsnippet
-
 snippet eslint "Local ESLint"
-let g:neomake_javascript_eslint_exe = './node_modules/.bin/eslint'
+au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
 endsnippet
 
 snippet eslint "ESLint Daemon"
-let g:neomake_javascript_eslint_exe = '/usr/local/bin/eslint_d'
-endsnippet
-
-snippet prettier "Add prettier autoformatting"
-let g:prettier#exec_cmd_path = "${0:./node_modules/.bin/prettier}"
+au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint_d')
 endsnippet
