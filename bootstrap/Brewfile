@@ -5,6 +5,7 @@ tap 'homebrew/bundle'
 tap 'homebrew/services'
 tap 'neovim/neovim'
 tap 'homebrew/php'
+tap 'heroku/brew'
 
 # base
 brew 'mas'
@@ -57,7 +58,7 @@ brew 'jq'
 brew 'httpie'
 brew 'w3m'
 brew 'shellcheck'
-brew 'heroku-toolbelt'
+brew 'heroku'
 brew 'fpp'
 brew 'ctags'
 brew 'weechat', args: ['with-aspell', 'with-curl', 'with-lua', 'with-perl', 'with-python', 'with-ruby']
