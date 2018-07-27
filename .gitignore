@@ -42,3 +42,8 @@ autokey.pid
 
 # wine
 defaults/.local/share/applications/wine*
+
+# kiex
+kiex/.kiex/builds
+kiex/.kiex/elixirs
+kiex/.kiex/mix/archives

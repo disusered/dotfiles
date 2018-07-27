@@ -1,0 +1,4 @@
+## load correct version for this \$SHELL
+( ( env | grep '^SHELL=' | grep -qic '/csh$' ) && ( set | grep -qc '^BASH=' ; test $? -gt 0 ) ) \
+  && source $HOME/.kiex/scripts/kiex.csh \
+  || source $HOME/.kiex/scripts/kiex.bash
