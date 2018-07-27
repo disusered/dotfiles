@@ -81,6 +81,7 @@ brew 'graphicsmagick', args: ['with-webp']
 brew 'ffmpeg', args: ['with-faac', 'with-fdk-aac', 'with-openssl', 'with-tools', 'with-webp']
 brew 'aspell', args: ['with-lang-es', 'with-lang-en']
 brew 'pandoc'
+brew 'glide'
 
 # casks
 cask 'alfred'
