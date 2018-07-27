@@ -35,6 +35,9 @@ brew 'libtool'
 brew 'unixodbc'
 brew 'postgresql'
 brew 'zplug'
+brew 'kompose'
+brew 'kubernetes-cli'
+brew 'kubernetes-helm'
 brew 'source-highlight'
 brew 'go', args: ['cross-compile-common']
 brew 'lua', args: ['universal', 'with-completion']
@@ -118,6 +121,7 @@ cask 'basictex'
 cask 'tex-live-utility'
 cask 'airfoil'
 cask 'keycastr'
+cask 'minikube'
 
 # quicklook
 cask 'qlcolorcode'
