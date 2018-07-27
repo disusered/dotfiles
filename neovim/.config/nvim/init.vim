@@ -45,8 +45,10 @@
 
   source $MYCONFIG/ft.vim
   source $MYCONFIG/plugins.vim
+
   function! LanguageClient(info)
     if a:info.status == 'installed' || a:info.force
+      !bash install.sh
       !pip install --user --upgrade typing python-language-server pyls-isort
       !npm install -g vscode-json-languageserver-bin javascript-typescript-langserver vscode-css-languageserver-bin vscode-html-languageserver-bin flow-language-server
       !luarocks --local install https://raw.githubusercontent.com/Alloyed/lua-lsp/master/lua-lsp-scm-1.rockspec
@@ -54,21 +56,18 @@
       :UpdateRemotePlugins
     endif
   endfunction
-  Plug 'autozimu/LanguageClient-neovim', { 'do': function('LanguageClient') }
-  function! CompletionManager(info)
-    if a:info.status == 'installed' || a:info.force
-      !pip install --user --upgrade jedi mistune psutil setproctitle
-      :UpdateRemotePlugins
-    endif
-  endfunction
   Plug 'roxma/nvim-completion-manager', { 'do': function('CompletionManager') }
   Plug 'roxma/nvim-completion-manager'
+
+  Plug 'autozimu/LanguageClient-neovim', {
+      \ 'do': function('LanguageClient')
+      \ }
   call plug#end()
 
+  source $MYCONFIG/n_langserver.vim
   source $MYCONFIG/n_autocommands.vim
 
 " Settings =====================================================================
 set undodir=$HOME/.config/nvim/undo
 source $MYCONFIG/shared.vim
 source $MYCONFIG/n_keymap.vim
-source $MYCONFIG/n_langserver.vim

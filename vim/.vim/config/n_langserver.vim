@@ -12,21 +12,25 @@ let g:LanguageClient_serverCommands = {
   \ 'json': ['json-languageserver', '--stdio'],
   \ 'lua': ['lua-lsp'],
   \ 'ruby': ['language_server-ruby'],
+  \ 'reason': ['ocaml-language-server', '--stdio'],
+  \ 'ocaml': ['ocaml-language-server', '--stdio'],
   \ }
 
-set completefunc=LanguageClient#complete
-set formatexpr=LanguageClient_textDocument_rangeFormatting()
+set omnifunc=LanguageClient#complete
+" set formatexpr=LanguageClient_textDocument_rangeFormatting()
 
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_selectionUI = 'fzf'
 let g:LanguageClient_diagnosticsList = 'location'
 
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> gr :call LanguageClient_textDocument_references()<CR>
-nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
-nnoremap <silent> <leader>s :call LanguageClient_textDocument_documentSymbol()<CR>
-nnoremap <silent> <leader>a :call LanguageClient_textDocument_formatting()<CR>
+nnoremap <silent> gr :call LanguageClient_textDocument_rename()<CR>
+nnoremap <silent> gf :call LanguageClient_textDocument_formatting()<CR>
+nnoremap <silent> gs :call LanguageClient_textDocument_references()<CR>
+
+" nnoremap <silent> <Leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
 
 let g:LanguageClient_diagnosticsDisplay = {
   \   1: {
