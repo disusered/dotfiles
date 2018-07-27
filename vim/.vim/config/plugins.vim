@@ -54,6 +54,8 @@ Plug 'mattn/emmet-vim',            { 'for': ['html', 'eruby', 'javascript', 'jav
 Plug 'jpalardy/vim-slime',         { 'for': ['javascript', 'sh', 'pgsql', 'sql']}
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 
+Plug 'reasonml-editor/vim-reason-plus'
+
 function! BuildComposer(info)
   if a:info.status != 'unchanged' || a:info.force
     if has('nvim')
