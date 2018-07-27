@@ -58,7 +58,4 @@ case $(uname) in
       -type f -name "*.*tf" -exec cp "{}" "$HOME/Library/Fonts/" \;
     fc-cache -vf ~/.fonts
     ;;
-  'Linux')
-  # backlight
-  yaourt -S acpilight
 esac

@@ -22,10 +22,6 @@ case $(uname) in
     sudo useradd --no-create-home --shell /usr/bin/nologin --user-group gps
     sudo gpasswd -a $USER gps
     newgrp gps
-    # backlight
-    sudo gpasswd -a $USER video
-    newgrp video
-    ;;
 esac
 
 # update submodules
@@ -69,16 +65,10 @@ case $(uname) in
     sudo stow --target=/ rxvt
 
     # peripherals
-    # sudo stow --target=/ garmin
     # sudo stow --target=/ vmware
     # sudo stow --target=/ oculus
-    # sudo stow --target=/ hidclient
 
     # laptop
-    sudo stow --target=/ thinkpad
-    sudo stow --target=/ monitor
-    sudo stow --target=/ backlight
-
     sudo rm /etc/dnsmasq.conf
     sudo stow --target=/ dnsmasq
 

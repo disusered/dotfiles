@@ -1,2 +1,0 @@
-event=button/f20 F20 00000080 00000000 K
-action=/etc/acpi/lenovo-mutemic.sh
