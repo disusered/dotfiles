@@ -1,11 +1,23 @@
-let g:neoformat_enabled_javascript = ['prettier']
-let g:neoformat_javascript_prettier = {
+let g:neoformat_prettier_config = {
       \ 'exe': nrun#Which('prettier'),
       \ 'args': ['--write', '--config .prettierrc'],
       \ 'replace': 1
       \ }
 
-" augroup fmt
-"   autocmd!
-"   autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.babelrc,*.eslintrc,*.graphql try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
-" augroup END
+let g:neoformat_enabled_javascript = ['prettier']
+" let g:neoformat_javascript_prettier = g:neoformat_prettier_config
+
+let g:neoformat_enabled_scss = ['prettier']
+" let g:neoformat_scss_prettier = g:neoformat_prettier_config
+
+let g:neoformat_enabled_json = ['prettier']
+" let g:neoformat_json_prettier = g:neoformat_prettier_config
+
+let g:neoformat_enabled_vue = ['prettier']
+let g:neoformat_vue_prettier = {
+      \ 'exe': nrun#Which('vue-prettier'),
+      \ 'args': ['--write', '--config .prettierrc'],
+      \ 'replace': 1
+      \ }
+
+let g:neoformat_enabled_html = ['htmlbeautify']

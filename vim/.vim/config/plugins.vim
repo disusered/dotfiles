@@ -32,8 +32,15 @@ function! NeomakeDeps(info)
   endif
 endfunction
 Plug 'benekastah/neomake', { 'do': function('NeomakeDeps') }
+function! NeoformatDeps(info)
+  if a:info.status == 'installed' || a:info.force
+    !npm install --global prettier vue-prettier vue-template-compiler js-beautify @prettier/plugin-php
+  endif
+endfunction
 Plug 'sbdchd/neoformat', {
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'md'] }
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'md', 'html', 'vue', 'go', 'php', 'reason'],
+  \ 'do': function('NeoformatDeps')
+  \ }
 
 " load on command
 Plug 'Wolfy87/vim-enmasse',     { 'on': 'EnMasse' }
