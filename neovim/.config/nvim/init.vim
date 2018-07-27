@@ -56,8 +56,6 @@
       :UpdateRemotePlugins
     endif
   endfunction
-  Plug 'roxma/nvim-completion-manager', { 'do': function('CompletionManager') }
-  Plug 'roxma/nvim-completion-manager'
 
   Plug 'autozimu/LanguageClient-neovim', {
       \ 'do': function('LanguageClient')
