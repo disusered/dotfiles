@@ -9,6 +9,7 @@ case $(uname) in
       $HOME/.luarocks/bin
       $HOME/.dotfiles/bin
       $HOME/.rbenv/bin
+      /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
       $path
     )
     ;;
