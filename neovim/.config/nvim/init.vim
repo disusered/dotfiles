@@ -4,6 +4,7 @@
   set inccommand=split
 
   let $MYCONFIG='$HOME/.config/nvim/config'
+  let $MYPLUGINS='$HOME/.config/nvim/plugins'
   source $MYCONFIG/os.vim
 
   if g:os == 'Darwin'
@@ -58,11 +59,14 @@
   endfunction
 
   Plug 'autozimu/LanguageClient-neovim', {
+      \ 'branch': 'next',
       \ 'do': function('LanguageClient')
       \ }
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   call plug#end()
 
   source $MYCONFIG/n_langserver.vim
+  source $MYCONFIG/n_deoplete.vim
   source $MYCONFIG/n_autocommands.vim
 
 " Settings =====================================================================
