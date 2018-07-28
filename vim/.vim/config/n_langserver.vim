@@ -14,6 +14,7 @@ let g:LanguageClient_serverCommands = {
   \ 'ruby': ['language_server-ruby'],
   \ 'reason': ['ocaml-language-server', '--stdio'],
   \ 'ocaml': ['ocaml-language-server', '--stdio'],
+  \ 'go': ['go-langserver'],
   \ }
 
 set omnifunc=LanguageClient#complete
