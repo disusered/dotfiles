@@ -61,3 +61,10 @@ nnoremap    k                 gk
 nmap        [c                <Plug>GitGutterPrevHunk
 nmap        ]c                <Plug>GitGutterNextHunk
 nmap        mp                :Neoformat<CR>
+nnoremap    <F5>              :call LanguageClient_contextMenu()<CR>
+nnoremap    <silent>K         :call LanguageClient_textDocument_hover()<CR>
+nnoremap    <silent>gd        :call LanguageClient#textDocument_definition()<CR>
+nnoremap    <silent>gr        :call LanguageClient_textDocument_rename()<CR>
+nnoremap    <silent>gf        :call LanguageClient_textDocument_formatting()<CR>
+nnoremap    <silent>gs        :call LanguageClient_textDocument_references()<CR>
+nnoremap <silent><Leader>s   :call LanguageClient_textDocument_documentSymbol()<CR>
