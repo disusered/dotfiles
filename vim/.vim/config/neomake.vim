@@ -13,6 +13,7 @@ let g:neomake_warning_sign = {
     \ }
 
 let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_typescript_enabled_makers = ['tslint']
 let g:neomake_vue_enabled_makers = ['eslint']
 let g:neomake_markdown_enabled_makers = ['mdl']
 let g:neomake_sh_enabled_makers = ['sh', 'shellcheck']

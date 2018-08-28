@@ -4,6 +4,7 @@
 let g:LanguageClient_serverCommands = {
   \ 'javascript': ['javascript-typescript-stdio'],
   \ 'javascript.jsx': ['javascript-typescript-stdio'],
+  \ 'typescript': ['javascript-typescript-stdio'],
   \ 'python': ['pyls'],
   \ 'css': ['css-languageserver', '--stdio'],
   \ 'scss': ['css-languageserver', '--stdio'],

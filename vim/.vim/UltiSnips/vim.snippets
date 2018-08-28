@@ -2,6 +2,11 @@ snippet eslint "Local ESLint"
 au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
 endsnippet
 
+snippet eslint "Local TSLint"
+au BufEnter *.ts,*.tsx let b:neomake_typescript_tslint_exe = nrun#Which('tslint')
+endsnippet
+
 snippet eslint "ESLint Daemon"
 au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint_d')
 endsnippet
+
