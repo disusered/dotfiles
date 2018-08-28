@@ -22,6 +22,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
+Plug 'tpope/vim-dadbod'
 source $MYPLUGINS/localvimrc.vim
 
 " ide -> tmux
