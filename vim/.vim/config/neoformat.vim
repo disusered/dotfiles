@@ -21,3 +21,5 @@ let g:neoformat_vue_prettier = {
       \ }
 
 let g:neoformat_enabled_html = ['htmlbeautify']
+
+let g:neoformat_enabled_yaml = ['prettier']
