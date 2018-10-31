@@ -1,6 +1,8 @@
 " \ 'javascript': ['flow-language-server', '--stdio'],
 " \ 'javascript.jsx': ['flow-language-server', '--stdio'],
 
+  " \ 'typescript': [nrun#Which('javascript-typescript-stdio')],
+
 let g:LanguageClient_serverCommands = {
   \ 'javascript': ['javascript-typescript-stdio'],
   \ 'javascript.jsx': ['javascript-typescript-stdio'],
@@ -23,6 +25,7 @@ set omnifunc=LanguageClient#complete
 
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_selectionUI = 'fzf'
+let g:LanguageClient_diagnosticsEnable = 1
 let g:LanguageClient_diagnosticsList = 'location'
 
 nnoremap <silent> <Leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
