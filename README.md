@@ -4,7 +4,7 @@
 
 ```bash
 $ git clone --recursive https://github.com/disusered/dotfiles.git $HOME/.dotfiles
-$ ~/.dotfiles/run
+$ ~/.dotfiles/bootstrap/run
 ```
 
 ## Mac
