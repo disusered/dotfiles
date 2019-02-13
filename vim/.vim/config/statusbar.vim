@@ -115,17 +115,6 @@ function MyModified()
   endif
 endfunction
 
-function MyObsession()
-  if exists(':Obsession')
-    let l:status = ObsessionStatus('♻︎  ','♲  ')
-    if l:status ==? ''
-      return '♲  '
-    endif
-    return l:status
-  endif
-  return ''
-endfunction
-
 augroup statusline
   autocmd!
   au InsertEnter * hi! link StatusLine User3
@@ -137,7 +126,6 @@ augroup END
 set laststatus=2
 set statusline=
 set statusline+=%1*\                             " Space
-set statusline+=%0*%{MyObsession()}              " Session
 set statusline+=%0*%{MyMode()}                   " Current mode
 set statusline+=%7*%{MyPrefix(MyFilename())}     " FileType Prefix
 set statusline+=%1*%{MyFilename()}               " Filename
