@@ -150,10 +150,28 @@ PropTypes.shape({
 endsnippet
 
 snippet react_component_stateless "React Component (Stateless)"
-const ${1:`!p snip.rv = snip.basename`} = ({ ${2:children}${3: = ${4:'Hello World!'}} }) =>
-  ${8:<div>{${0:`!p snip.rv = t[2]`}}</div>}${5:
+import * as React from "react";
+import PropTypes from "prop-types";
 
-`!p snip.rv = t[1]`.propTypes = { `!p snip.rv = t[2]`: ${7:PropTypes.string} };}
+const ${1:`!p snip.rv = snip.basename`} = ({ ${2:children} }) => ${5:<div>{${0:`!p snip.rv = t[2]`}}</div>}${3:
+
+`!p snip.rv = t[1]`.propTypes = {
+	`!p snip.rv = t[2]`: ${4:PropTypes.node} };
+}
+
+export default `!p snip.rv = snip.basename`;
+endsnippet
+
+snippet react_component_function "React Component (Stateless)"
+import * as React from "react";
+
+function ${1:`!p snip.rv = snip.basename`}(${3:{ ${2:children} }}) {
+	return ${5:(
+		${0:<div>{`!p snip.rv = t[2]`}</div>}
+	)}
+}
+
+export default `!p snip.rv = snip.basename`;
 endsnippet
 
 snippet react_component_es5 "React Component (ES5)" i
@@ -161,9 +179,7 @@ var React = require('react');
 
 var ${1:`!p snip.rv = snip.basename`} = React.createClass({
   render: function() {
-    return (
-      <div>`!p snip.rv = t[1]`</div>
-    );
+    return (<div>`!p snip.rv = t[1]`</div>);
   }
 });
 
