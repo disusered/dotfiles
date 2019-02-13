@@ -1,147 +1,149 @@
 # taps
 tap 'caskroom/cask'
 tap 'caskroom/versions'
+tap 'heroku/brew'
 tap 'homebrew/bundle'
 tap 'homebrew/services'
 tap 'neovim/neovim'
-tap 'homebrew/php'
-tap 'heroku/brew'
-tap 'azure/draft'
+tap 'caskroom/fonts'
 
-# base
+# env
 brew 'mas'
 brew 'stow'
+brew 'zplug'
+
+# basics
+brew 'ag'
+brew 'fpp'
+brew 'fzf', args: ['HEAD']
 brew 'git'
 brew 'git-flow'
-brew 'git-ftp'
-brew 'hub'
-brew 'ag'
-brew 'wget'
-brew 'watchman'
-brew 'zsh'
-brew 'tmux'
-brew 'python'
-brew 'ruby'
-brew 'kerl'
-brew 'python3'
-brew 'coreutils'
 brew 'gpg'
-brew 'automake'
-brew 'autoconf'
-brew 'openssl'
-brew 'libyaml'
-brew 'readline'
-brew 'libxslt'
-brew 'libtool'
-brew 'unixodbc'
-brew 'postgresql'
-brew 'zplug'
-brew 'kompose'
+brew 'htop'
+brew 'httpie'
+brew 'jq'
+brew 'ncdu'
+brew 'ranger'
+brew 'tmux'
+brew 'tree'
+brew 'w3m'
+brew 'watch'
+brew 'wget'
+brew 'zsh'
+brew 'inetutils'
+
+# development
+brew 'mailhog'
+brew 'neovim', args: ['HEAD']
+brew 'vim', args: ['override-system-vi', 'with-lua', 'with-luajit', 'with-tcl']
+
+# deployments
+brew 'ansible'
+brew 'awscli'
+cask 'google-cloud-sdk'
+brew 'heroku'
+brew 'kubectx', args: ['with-short-names']
 brew 'kubernetes-cli'
 brew 'kubernetes-helm'
-brew 'kubectx', args: ['with-short-names']
-brew 'draft'
-brew 'source-highlight'
-brew 'go', args: ['cross-compile-common']
+
+# languages
+brew 'gcc'
+brew 'glide'
+brew 'go'
+cask 'java'
+brew 'gradle'
+brew 'kerl'
 brew 'lua', args: ['universal', 'with-completion']
 brew 'luajit', args: ['with-52compat']
-brew 'vim', args: ['override-system-vi', 'with-lua', 'with-luajit', 'with-tcl']
-brew 'ruby'
+brew 'python'
+brew 'python3'
 brew 'rbenv'
-brew 'reattach-to-user-namespace', args: ['with-wrap-pbcopy-and-pbpaste']
-brew 'fzf', args: ['HEAD']
-brew 'neovim', args: ['HEAD']
-
-# utilities
-brew 'awscli'
-brew 'ansible'
-brew 'mailhog'
-brew 'watch'
-brew 'tree'
-brew 'ncdu'
-brew 'htop'
-brew 'ranger'
-brew 'jq'
-brew 'httpie'
-brew 'w3m'
-brew 'shellcheck'
-brew 'heroku'
-brew 'fpp'
-brew 'ctags'
-brew 'weechat', args: ['with-aspell', 'with-curl', 'with-lua', 'with-perl', 'with-python', 'with-ruby']
+brew 'ruby'
+brew 'ruby-build'
 
 # dependencies
-brew 'atool'
-brew 'mediainfo'
-brew 'highlight'
-brew 'gcc'
-brew 'ant'
-brew 'gradle'
-brew 'curl', args: ['with-ssl', 'with-libssh2']
-brew 'composer'
-brew 'imagemagick', args: ['with-webp']
-brew 'graphicsmagick', args: ['with-webp']
-brew 'ffmpeg', args: ['with-faac', 'with-fdk-aac', 'with-openssl', 'with-tools', 'with-webp']
 brew 'aspell', args: ['with-lang-es', 'with-lang-en']
+brew 'atool'
+brew 'ctags'
+brew 'curl', args: ['with-ssl', 'with-libssh2']
+brew 'ffmpeg', args: ['with-faac', 'with-fdk-aac', 'with-openssl', 'with-tools', 'with-webp']
+brew 'graphicsmagick', args: ['with-webp']
+brew 'highlight'
+brew 'imagemagick', args: ['with-webp']
+brew 'ghostscript'
+brew 'mediainfo'
 brew 'pandoc'
-brew 'glide'
+brew 'reattach-to-user-namespace', args: ['with-wrap-pbcopy-and-pbpaste']
+brew 'shellcheck'
+brew 'source-highlight'
+brew 'watchman'
 
 # casks
-cask 'alfred'
-cask 'android-sdk'
 cask '1password-beta'
-cask 'iterm2-nightly'
-cask 'safari-technology-preview'
-cask 'hammerspoon'
-cask 'dropbox'
+cask 'airfoil'
+cask 'alfred'
+cask 'android-studio'
 cask 'appcleaner'
-cask 'imageoptim'
+cask 'bartender'
+cask 'poedit'
+cask 'basictex'
+cask 'dash'
+cask 'dropbox'
+cask 'firefox'
+cask 'firefox-developer-edition'
+cask 'google-chrome'
+#cask 'google-chrome-beta'
+cask 'google-chrome-canary'
+cask 'hammerspoon'
 cask 'imagealpha'
+cask 'imageoptim'
+cask 'iterm2-nightly'
+cask 'kaleidoscope'
+cask 'karabiner-elements'
+cask 'keycastr'
+cask 'licecap'
+cask 'monolingual'
+cask 'onyx'
 cask 'paw'
 cask 'psequel'
-cask 'kaleidoscope'
-cask 'sourcetree'
-cask 'transmission'
-cask 'licecap'
-cask 'vlc'
-cask 'bartender'
-cask 'firefox'
-cask 'firefoxdeveloperedition'
-cask 'google-chrome'
-cask 'google-chrome-beta'
-cask 'google-chrome-canary'
-cask 'onyx'
-cask 'karabiner-elements'
-cask 'java'
-cask 'xquartz-beta'
-cask 'skype'
-cask 'dash'
-cask 'xscope'
-cask 'monolingual'
-cask 'virtualbox'
-cask 'virtualbox-extension-pack'
-cask 'vagrant'
-cask 'basictex'
-cask 'tex-live-utility'
-cask 'airfoil'
-cask 'keycastr'
+cask 'safari-technology-preview'
 cask 'sequel-pro'
+cask 'skype'
+cask 'sourcetree'
+cask 'keybase'
+cask 'gpg-suite'
+cask 'tex-live-utility'
+cask 'transmission'
+cask 'soda-player'
+#cask 'vagrant'
+#cask 'virtualbox'
+#cask 'virtualbox-extension-pack'
+cask 'vlc'
+cask 'xquartz'
+cask 'font-hasklig'
+cask 'font-inconsolata'
+cask 'font-hack-nerd-font'
+cask 'font-source-code-pro'
 
 # quicklook
+#cask 'betterzipql'
 cask 'qlcolorcode'
-cask 'qlstephen'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'qlprettypatch'
-cask 'quicklook-csv'
 cask 'qlimagesize'
-cask 'webpquicklook'
+cask 'qlmarkdown'
+cask 'qlprettypatch'
+cask 'qlstephen'
+cask 'quicklook-csv'
+cask 'quicklook-json'
 cask 'suspicious-package'
-cask 'betterzipql'
+cask 'webpquicklook'
 
 # mac app store
-mas 'Xcode', id: 497799835
-mas 'xScope 4', id: 889428659
-mas 'Sim Daltonism', id: 693112260
-mas 'The Unarchiver', id: 425424353
-mas 'Slack', id: 803453959
+mas "Ka-Block!", id: 1335413823
+mas "Keynote", id: 409183694
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Sim Daltonism", id: 693112260
+mas "Slack", id: 803453959
+mas "The Unarchiver", id: 425424353
+mas "xScope", id: 889428659

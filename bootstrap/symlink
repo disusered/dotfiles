@@ -3,6 +3,9 @@
 # go to dotfiles directory
 cd "$HOME/.dotfiles" || exit
 
+ln -s $HOME/.dotfiles/vendor/vim-plug/plug.vim $HOME/.dotfiles/neovim/.config/nvim/autoload/plug.vim
+ln -s $HOME/.dotfiles/vendor/vim-plug/plug.vim $HOME/.dotfiles/vim/.vim/autoload/plug.vim
+
 case $(uname) in
   'Darwin')
     # setup zsh
@@ -34,10 +37,8 @@ stow git
 stow vim
 stow neovim
 stow ag
-stow weechat
 stow ranger
 stow npm
-stow marker
 stow psql
 stow mysql
 stow kiex
@@ -46,9 +47,6 @@ case $(uname) in
   'Darwin')
     stow hammerspoon
     stow karabiner
-
-    sudo rm /usr/local/etc/dnsmasq.conf
-    sudo stow --target=/ dnsmasq-mac
     ;;
   'Linux')
     stow xorg
@@ -68,15 +66,8 @@ case $(uname) in
     # sudo stow --target=/ vmware
     # sudo stow --target=/ oculus
 
-    # laptop
-    sudo rm /etc/dnsmasq.conf
-    sudo stow --target=/ dnsmasq
-
     sudo systemctl daemon-reload
     sudo udevadm control --reload
     sudo udevadm trigger
     ;;
 esac
-
-# Install marker
-$HOME/.marker/install.py

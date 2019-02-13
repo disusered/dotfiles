@@ -23,8 +23,6 @@ Fugitive
 | 💡 gc  | Git commit                      |
 | 💡 ga  | Git commit —amend               |
 | 💡 gt  | Git add current file and commit |
-| 💡 gps | :Dispatch! git push             |
-| 💡 gpl | :Dispatch! git pull             |
 
 |      | **Git Interactive Log**                   |
 |------|-------------------------------------------|

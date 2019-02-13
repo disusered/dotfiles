@@ -2,16 +2,16 @@
 
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-source $HOME/.bash_profile
 
 # Install dependencies
 cd bootstrap && brew bundle
 
 # Install shell plugins
-zplug install
+# not ready
+#zplug install
 
 # Install BasicTex
-open /usr/local/Caskroom/basictex/20170607/mactex-basictex-20170607.pkg
+open /usr/local/Caskroom/basictex/*/mactex-basictex-*.pkg
 sudo tlmgr update --self
 sudo tlmgr install setspace hyperref tucv lipsum dirtytalk
 
@@ -31,12 +31,3 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 chflags nohidden ~/Library
 
 # iTerm ^H fix
-case $(uname) in
-  'Darwin')
-    FIX='s/kbs=^[hH]/kbs=\\177/';
-    infocmp $TERM | sed $FIX > $HOME/.dotfiles/vendor/$TERM.ti
-    infocmp screen-256color | sed $FIX > $HOME/.dotfiles/vendor/screen-256color.ti
-    tic $HOME/.dotfiles/vendor/$TERM.ti
-    tic $HOME/.dotfiles/vendor/screen-256color.ti
-    ;;
-esac

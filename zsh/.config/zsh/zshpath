@@ -3,16 +3,16 @@ case $(uname) in
     path=(
       /usr/local/bin
       /usr/local/sbin
-      $GOPATH/bin
       $HOME/.cargo/bin
       $HOME/Library/Python/2.7/bin/
-      $HOME/Library/Python/3.6/bin/
+      $HOME/Library/Python/3.7/bin/
       $HOME/.luarocks/bin
       $HOME/.dotfiles/bin
       $HOME/.rbenv/bin
       $HOME/.yarn/bin
       $HOME/.config/yarn/global/node_modules/.bin
       /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
+      # /usr/local/opt/inetutils/libexec/gnubin
       $path
     )
     ;;
@@ -41,5 +41,12 @@ case $(uname) in
       /usr/local/share/zsh/site-functions
       $fpath
     )
+    ;;
+esac
+
+# Set man paths
+case $(uname) in
+  'Darwin')
+    MANPATH="/usr/local/opt/inetutils/libexec/gnuman:$MANPATH"
     ;;
 esac

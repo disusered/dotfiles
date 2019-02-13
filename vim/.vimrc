@@ -3,6 +3,7 @@
   set encoding=utf-8
 
   let $MYCONFIG='$HOME/.vim/config'
+  let $MYPLUGINS='$HOME/.vim/plugins'
   source $MYCONFIG/os.vim
 
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -19,15 +20,9 @@
   source $MYCONFIG/ft.vim
   source $MYCONFIG/plugins.vim
 
-  " vim specific
-  Plug 'maralla/completor.vim', { 'do': 'make js'}
-
   call plug#end()
 
 " Settings =====================================================================
 set ttymouse=xterm2
 set undodir=$HOME/.vim/undo
 source $MYCONFIG/shared.vim
-
-" vim specific
-source $MYCONFIG/v_completor.vim

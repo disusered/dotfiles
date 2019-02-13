@@ -48,11 +48,9 @@
   source $MYCONFIG/plugins.vim
 
   source $MYPLUGINS/languageclient.vim
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   call plug#end()
 
-  source $MYCONFIG/n_langserver.vim
-  source $MYCONFIG/n_deoplete.vim
+  source $MYCONFIG/n_languageserver.vim
   source $MYCONFIG/n_autocommands.vim
 
 " Settings =====================================================================

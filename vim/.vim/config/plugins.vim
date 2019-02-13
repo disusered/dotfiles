@@ -3,9 +3,9 @@ Plug 'chriskempson/base16-vim'
 Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
+Plug 'wincent/terminus'
 
 " editing
-Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
@@ -22,11 +22,9 @@ Plug 'tpope/vim-eunuch'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
-Plug 'tpope/vim-dadbod'
 source $MYPLUGINS/localvimrc.vim
 
 " ide -> tmux
-Plug 'tpope/vim-dispatch'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jpalardy/vim-slime', { 'for': ['javascript', 'sh', 'pgsql', 'sql']}
 
@@ -36,7 +34,6 @@ Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'css', 'scss', 'markdown', 'html.handlebars', 'xml', 'htmldjango', 'blade'] }
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 Plug 'jaawerth/nrun.vim'
-Plug 'tpope/vim-projectionist'
 Plug 'styled-components/vim-styled-components'
 source $MYPLUGINS/composer.vim
 source $MYPLUGINS/neomake.vim

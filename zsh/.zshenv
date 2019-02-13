@@ -1,16 +1,24 @@
 case $(uname) in
   'Darwin')
     export ZPLUG_HOME=/usr/local/opt/zplug
+    export BROWSER='open'
+    export JAVA_HOME=`/usr/libexec/java_home`
+    # export GOPATH="${HOME}/Development/SDK/gopath"
+    # export ANDROID_HOME=/usr/local/opt/android-sdk
+    # export VAGRANT_DEFAULT_PROVIDER=virtualbox
     ;;
   'Linux')
     export ZPLUG_HOME=$HOME/.zplug
+    export ALSA_CARD=Audio
+    export _JAVA_OPTIONS='-Dsun.java2d.opengl=true,-Dawt.useSystemAAFontSettings=on,-Dswing.aatext=true'
     ;;
 esac
 
 export MDV_THEME=884.0977
-export MARKER_KEY_GET="\C-@"
-export MARKER_KEY_MARK="\C-0"
-export MARKER_KEY_NEXT_PLACEHOLDER="\C-e"
+
+# export MARKER_KEY_GET="\C-@"
+# export MARKER_KEY_MARK="\C-0"
+# export MARKER_KEY_NEXT_PLACEHOLDER="\C-e"
 
 export MARKPATH=$HOME/.marks
 export TMPDIR="/tmp/$USER"
@@ -22,6 +30,7 @@ export LC_ALL='en_US.UTF-8'
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PAGER='less'
+
 export LESSPIPE=`which src-hilite-lesspipe.sh`
 export LESSOPEN="| ${LESSPIPE} %s"
 export LESS='-X -F -g -i -M -R -S -w -z-4'
@@ -38,23 +47,6 @@ export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/.dotfiles/virtualenvwrapper
 
 export NVM_LAZY_LOAD=true
-
-case $(uname) in
-  'Darwin')
-    export BROWSER='open'
-    export JAVA_HOME=`/usr/libexec/java_home`
-    export GOPATH="${HOME}/Development/SDK/gopath"
-    export ANDROID_HOME=/usr/local/opt/android-sdk
-    export VAGRANT_DEFAULT_PROVIDER=virtualbox
-    export DROPBOX_HOME=$HOME/Dropbox\ \(Personal\)
-    ;;
-  'Linux')
-    export ALSA_CARD=Audio
-    export DROPBOX_HOME=$HOME/Dropbox
-    export _JAVA_OPTIONS='-Dsun.java2d.opengl=true,-Dawt.useSystemAAFontSettings=on,-Dswing.aatext=true'
-    ;;
-esac
-
 
 # Load custom functions
 source $HOME/.config/zsh/zshfuns
