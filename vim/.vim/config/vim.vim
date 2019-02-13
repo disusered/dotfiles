@@ -59,7 +59,9 @@ set foldmethod=manual
 set spellfile=$HOME/.dotfiles/vim/spellfile.utf-8.add
 set synmaxcol=256
 set diffopt+=vertical
-set updatetime=1000
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
 
 set undofile
 filetype plugin on

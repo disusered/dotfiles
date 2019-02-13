@@ -7,7 +7,6 @@ vim
 | ^p    | Git files                                   |
 | ^f    | All files                                   |
 | ^b    | Buffers                                     |
-| ^s    | Symbols (depends on LanguageServer support) |
 
 |           | **Motion**     |
 |-----------|----------------|

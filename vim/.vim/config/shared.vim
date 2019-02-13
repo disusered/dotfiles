@@ -16,6 +16,7 @@ source $MYCONFIG/vimagit.vim
 source $MYCONFIG/gitgutter.vim
 source $MYCONFIG/slash.vim
 source $MYCONFIG/neoformat.vim
+source $MYCONFIG/coc.vim
 
 " config
 source $MYCONFIG/vim.vim

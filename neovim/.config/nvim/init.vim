@@ -47,10 +47,8 @@
   source $MYCONFIG/ft.vim
   source $MYCONFIG/plugins.vim
 
-  source $MYPLUGINS/languageclient.vim
   call plug#end()
 
-  source $MYCONFIG/n_languageserver.vim
   source $MYCONFIG/n_autocommands.vim
 
 " Settings =====================================================================

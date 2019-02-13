@@ -35,6 +35,7 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 Plug 'jaawerth/nrun.vim'
 Plug 'styled-components/vim-styled-components'
+source $MYPLUGINS/coc.vim
 source $MYPLUGINS/composer.vim
 source $MYPLUGINS/neomake.vim
 source $MYPLUGINS/neoformat.vim
