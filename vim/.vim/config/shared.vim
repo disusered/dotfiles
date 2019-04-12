@@ -12,9 +12,7 @@ source $MYCONFIG/nerdtree.vim
 source $MYCONFIG/tablemode.vim
 source $MYCONFIG/fzf.vim
 source $MYCONFIG/neomake.vim
-source $MYCONFIG/vimagit.vim
 source $MYCONFIG/gitgutter.vim
-source $MYCONFIG/slash.vim
 source $MYCONFIG/coc.vim
 source $MYCONFIG/hexokinase.vim
 
