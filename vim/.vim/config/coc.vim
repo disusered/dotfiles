@@ -47,13 +47,13 @@ augroup cocgroup
   autocmd FileType typescript,javascript,json,jsx setl formatexpr=CocAction('formatSelected')
   " Update signature help on jump placeholder
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+  " Highlight on hold
+  " autocmd CursorHold * silent call CocActionAsync('highlight')
 augroup end
 
 " :Format command
 command! -nargs=0 Format :call CocAction('format')
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Show docs
 nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-" Highlight on hold
-" autocmd CursorHold * silent call CocActionAsync('highlight')

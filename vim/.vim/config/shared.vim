@@ -16,7 +16,6 @@ source $MYCONFIG/vimagit.vim
 source $MYCONFIG/gitgutter.vim
 source $MYCONFIG/slash.vim
 source $MYCONFIG/coc.vim
-source $MYCONFIG/prettier.vim
 source $MYCONFIG/hexokinase.vim
 
 " config

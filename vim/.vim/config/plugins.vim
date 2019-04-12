@@ -37,8 +37,4 @@ Plug 'jaawerth/nrun.vim'
 source $MYPLUGINS/coc.vim
 source $MYPLUGINS/composer.vim
 source $MYPLUGINS/neomake.vim
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'branch': 'release/1.x',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'RRethy/vim-hexokinase'

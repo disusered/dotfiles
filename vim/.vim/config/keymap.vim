@@ -60,12 +60,13 @@ nnoremap    j                 gj
 nnoremap    k                 gk
 nmap        [c                <Plug>GitGutterPrevHunk
 nmap        ]c                <Plug>GitGutterNextHunk
-nmap <localleader>p <Plug>(PrettierAsync)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-declaration)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+vmap <localleader>p  <Plug>(coc-format-selected)
+nmap <localleader>p  <Plug>(coc-format)
 nmap <localleader>r <Plug>(coc-rename)
 nmap <localleader>a  <Plug>(coc-codeaction)
 vmap <localleader>as  <Plug>(coc-codeaction-selected)
