@@ -34,7 +34,6 @@ Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'css', 'scss', 'markdown', 'html.handlebars', 'xml', 'htmldjango', 'blade', 'vue'] }
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 Plug 'jaawerth/nrun.vim'
-Plug 'styled-components/vim-styled-components'
 source $MYPLUGINS/coc.vim
 source $MYPLUGINS/composer.vim
 source $MYPLUGINS/neomake.vim
