@@ -18,11 +18,22 @@ hi default link CocHighlightWrite  CocHighlightText
 hi default CocCodeLens ctermfg=Gray guifg=#999999
 
 " ultisnips
-let g:coc_snippet_next = '<c-j>'
-let g:coc_snippet_prev = '<c-k>'
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? coc#rpc#request('doKeymap', ['snippets-expand-jump','']) :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
+let g:coc_snippet_prev = '<s-tab>'
 
 " support functions
-function! g:ShowDocumentation()
+function! s:show_documentation()
   if &filetype == 'vim'
     execute 'h '.expand('<cword>')
   else
@@ -32,6 +43,17 @@ endfunction
 
 augroup cocgroup
   autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,javascript,json,jsx setl formatexpr=CocAction('formatSelected')
   " Update signature help on jump placeholder
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
+
+" :Format command
+command! -nargs=0 Format :call CocAction('format')
+
+" Show docs
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" Highlight on hold
+" autocmd CursorHold * silent call CocActionAsync('highlight')

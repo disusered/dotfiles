@@ -70,4 +70,5 @@ nmap <localleader>r <Plug>(coc-rename)
 nmap <localleader>a  <Plug>(coc-codeaction)
 vmap <localleader>as  <Plug>(coc-codeaction-selected)
 nmap <localleader>as  <Plug>(coc-codeaction-selected)
-nnoremap <silent> K :call ShowDocumentation()<CR>
+nmap <leader>qf  <Plug>(coc-fix-current)
+nnoremap <silent><Leader>l :<C-u>CocList<CR>

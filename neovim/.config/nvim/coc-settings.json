@@ -2,5 +2,19 @@
   "snippets.extends": {
     "javascriptreact": ["javascript"],
     "typescript": ["javascript"]
-  }
+  },
+  "languageserver": {
+    "elixirLS": {
+      "command": "/Users/carlos/.config/coc/elixir-ls/build/language_server.sh",
+      "filetypes": ["elixir", "eelixir"]
+    },
+    "golang": {
+      "command": "gopls",
+      "args": [],
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    }
+  },
+  "css.colorDecorators.enable": false,
+  "coc.preferences.colorSupport": false
 }
