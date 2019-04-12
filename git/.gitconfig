@@ -34,6 +34,7 @@
 	editor = nvim
 	autocrlf = input
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	trustctime = false
 [pretty]
 	basic = %C(magenta bold)%h%C(reset) %C(auto)%d%C(reset) %s
 	extended = %C(magenta bold)%h%C(reset)  %C(blue bold)%aN%C(reset) %C(auto)%d%C(reset) %s %C(8)(%cr)%C(reset)
