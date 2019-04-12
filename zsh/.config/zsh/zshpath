@@ -3,6 +3,7 @@ case $(uname) in
     path=(
       /usr/local/bin
       /usr/local/sbin
+      $HOME/go/bin
       $HOME/.cargo/bin
       $HOME/Library/Python/2.7/bin/
       $HOME/Library/Python/3.7/bin/
