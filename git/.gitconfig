@@ -63,11 +63,11 @@
 [grep]
 	lineNumber = true
 [diff]
-	tool = fugitive
+	tool = Kaleidoscope
 	indentHeuristic = true
 	submodule = log
 [merge]
-	tool = fugitive
+	tool = Kaleidoscope
 [difftool]
 	prompt = false
 [mergetool]
@@ -76,6 +76,11 @@
 	cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
 [difftool "vimdiff"]
 	cmd = nvim -d -u ~/.nvimrc \"$LOCAL\" \"$REMOTE\"
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
 [branch]
 	autosetuprebase = always
 [submodule]
@@ -94,8 +99,3 @@
 	submoduleSummary = true
 [url "git@bitbucket.org:"]
 	insteadOf = https://bitbucket.org/
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustexitcode = true
