@@ -2,17 +2,6 @@ snippet use "Use Strict" b
 'use strict';
 endsnippet
 
-snippet jdh "Javadoc header" b
-/**
- * `!p snip.rv = fn`
- *
- * @author ${1:Carlos Antonio}
- * @overview ${2:My cool project}
- * @copyright © `date +"%Y"` ${3:Carlos Antonio}
- * @license ${4:GPLv2}
- */
-endsnippet
-
 snippet if "A simple if condition" b
 if (${1:expression}) {
   $0
@@ -368,4 +357,35 @@ endsnippet
 
 snippet sdj "Sequelize json type"
 { type: Sequelize.DataTypeJSONType }
+endsnippet
+
+snippet jd "JSDoc single-line comment"
+/** ${0:A comment explaining stuff} */
+endsnippet
+
+snippet jdm "JSDoc multi-line comment"
+/**
+ * ${0:Represents a book.}${1:
+ * @param {string} title - The title of the book.}${2:
+ * @returns {number}}
+ */
+endsnippet
+
+snippet jdp "JSDoc param"
+* @param {${0:string}} ${1:title} - ${2: The title of the book}
+endsnippet
+
+snippet jdr "JSDoc return comment"
+* ${0:@returns {number}}
+endsnippet
+
+snippet jdh "JSDoc file header comment" b
+/**
+ * `!p snip.rv = fn`
+ *
+ * @author ${1:Carlos Antonio}
+ * @overview ${2:My cool project}
+ * @copyright © `date +"%Y"` ${3:Carlos Antonio}
+ * @license ${4:GPLv2}
+ */
 endsnippet
