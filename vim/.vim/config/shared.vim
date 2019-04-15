@@ -11,7 +11,6 @@ source $MYCONFIG/markdown.vim
 source $MYCONFIG/nerdtree.vim
 source $MYCONFIG/tablemode.vim
 source $MYCONFIG/fzf.vim
-source $MYCONFIG/neomake.vim
 source $MYCONFIG/gitgutter.vim
 source $MYCONFIG/coc.vim
 source $MYCONFIG/hexokinase.vim

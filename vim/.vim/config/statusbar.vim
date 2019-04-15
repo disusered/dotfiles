@@ -101,9 +101,9 @@ function MyMode()
 endfunction
 
 function MyErrors()
-  if exists(':Neomake')
-    return neomake#statusline#LoclistStatus()
-  endif
+  " if exists(':CocCommand')
+  "   return some#statusline#LoclistStatus()
+  " endif
   return ''
 endfunction
 
@@ -131,8 +131,8 @@ set statusline+=%7*%{MyPrefix(MyFilename())}     " FileType Prefix
 set statusline+=%1*%{MyFilename()}               " Filename
 set statusline+=%1*%{MyModified()}               " Modified
 set statusline+=%1*%{ReadOnly()}                 " Read only flag
-set statusline+=%2*%{MyPrefix(MyErrors())}       " Neomake Prefix
-set statusline+=%2*%{MyErrors()}                 " Neomake
+" set statusline+=%2*%{MyPrefix(MyErrors())}     " Errors Prefix
+" set statusline+=%2*%{MyErrors()}               " Errors
 set statusline+=%1*%=                            " Align right
 set statusline+=%7*%{MyPrefix(MyFiletype())}     " FileType Prefix
 set statusline+=%1*%{MyFiletype()}               " FileType

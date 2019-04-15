@@ -2,7 +2,6 @@
 .DS_Store
 .local-vimrc
 Session.vim
-*@neomake*.py
 *.py.orig
 requests.sh
 swatch*

@@ -48,9 +48,6 @@ vim
 |-----------|----------------------|
 | :Browser  | Open Chrome Canary   |
 | :Caniuse  | Caniuse under cursor |
-| :Nstart   | npm start            |
-| :Ninstall | npm install          |
-| :Nrun     | npm run arg          |
 
 |                   | **Spelling**            |
 |-------------------|-------------------------|
