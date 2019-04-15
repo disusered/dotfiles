@@ -26,6 +26,21 @@
       "args": ["--stdio"]
     }
   },
+  "diagnostic.enableSign": true,
+  "diagnostic.virtualText": false,
+  "diagnostic.locationlist": true,
+  "diagnostic.errorSign": "✕",
+  "diagnostic.warningSign": "△",
+  "diagnostic.infoSign": "⌽",
+  "diagnostic.hintSign": "⚡︎",
   "css.colorDecorators.enable": false,
-  "coc.preferences.colorSupport": false
+  "coc.preferences.colorSupport": false,
+  "eslint.enable": true,
+  "eslint.run": "onType",
+  "eslint.autoFix": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": ["javascript", "javascript.jsx", "vue"],
+  "prettier.eslintIntegration": true,
+  "prettier.stylelintIntegration": true,
+  "prettier.formatterPriority": -1
 }
