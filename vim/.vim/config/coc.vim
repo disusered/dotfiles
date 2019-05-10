@@ -57,3 +57,9 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Show docs
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" Jest commands
+" Run jest for current project
+command! -nargs=0 Jest :call  CocAction('runCommand', 'jest.projectTest')
+" Run jest for current file
+command! -nargs=0 JestCurrent :call  CocAction('runCommand', 'jest.fileTest', ['%'])

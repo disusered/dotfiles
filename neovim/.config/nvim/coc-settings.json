@@ -1,29 +1,70 @@
 {
   "snippets.extends": {
-    "javascriptreact": ["javascript"],
-    "typescript": ["javascript"]
+    "javascriptreact": [
+      "javascript"
+    ],
+    "typescript": [
+      "javascript"
+    ]
   },
   "languageserver": {
     "elixirLS": {
       "command": "/Users/carlos/.config/coc/elixir-ls/build/language_server.sh",
-      "filetypes": ["elixir", "eelixir"]
+      "filetypes": [
+        "elixir",
+        "eelixir"
+      ]
     },
     "golang": {
       "command": "gopls",
       "args": [],
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
+      "rootPatterns": [
+        "go.mod",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "filetypes": [
+        "go"
+      ]
     },
     "bash": {
       "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"],
-      "ignoredRootPaths": ["~"]
+      "args": [
+        "start"
+      ],
+      "filetypes": [
+        "sh"
+      ],
+      "ignoredRootPaths": [
+        "~"
+      ]
     },
     "dockerfile": {
       "command": "docker-langserver",
-      "filetypes": ["dockerfile", "Dockerfile"],
-      "args": ["--stdio"]
+      "filetypes": [
+        "dockerfile",
+        "Dockerfile"
+      ],
+      "args": [
+        "--stdio"
+      ]
+    },
+    "flow": {
+      "command": "flow",
+      "args": [
+        "lsp"
+      ],
+      "filetypes": [
+        "javascript",
+        "javascriptreact"
+      ],
+      "initializationOptions": {},
+      "requireRootPattern": true,
+      "settings": {},
+      "rootPatterns": [
+        ".flowconfig"
+      ]
     }
   },
   "diagnostic.enableSign": true,
@@ -39,8 +80,13 @@
   "eslint.run": "onType",
   "eslint.autoFix": true,
   "eslint.autoFixOnSave": true,
-  "eslint.filetypes": ["javascript", "javascript.jsx", "vue"],
+  "eslint.filetypes": [
+    "javascript",
+    "javascript.jsx",
+    "vue"
+  ],
   "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": true,
-  "prettier.formatterPriority": -1
+  "prettier.formatterPriority": 1,
+  "jest.watchman": true
 }
