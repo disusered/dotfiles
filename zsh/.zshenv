@@ -14,6 +14,7 @@ case $(uname) in
     ;;
 esac
 
+export BAT_THEME="OneHalfDark"
 export MDV_THEME=884.0977
 
 # export MARKER_KEY_GET="\C-@"
