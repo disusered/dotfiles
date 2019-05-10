@@ -14,6 +14,7 @@ source $MYCONFIG/fzf.vim
 source $MYCONFIG/gitgutter.vim
 source $MYCONFIG/coc.vim
 source $MYCONFIG/hexokinase.vim
+source $MYCONFIG/gitmessenger.vim
 
 " config
 source $MYCONFIG/vim.vim
