@@ -379,6 +379,22 @@ snippet jdr "JSDoc return comment"
 * ${0:@returns {number}}
 endsnippet
 
+snippet jdt "JSDoc type comment"
+* ${0:@type {number}}
+endsnippet
+
+snippet jdtd "JSDoc typedef comment"
+/**
+ * ${1:A song}
+ * @typedef {${2:Object}} ${3:Song}
+ * @property {${4:string}} ${5:title} - ${0:The title}
+ */
+endsnippet
+
+snippet jdtp "JSDoc property"
+* @property {${0:string}} ${1:title} - ${2: The title}
+endsnippet
+
 snippet jdh "JSDoc file header comment" b
 /**
  * `!p snip.rv = fn`
