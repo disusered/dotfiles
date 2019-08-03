@@ -29,6 +29,9 @@ esac
 
 #npm install -g caniuse-cmd diff-so-fancy yarn http-server
 
+# Install Stack (Haskell)
+curl -sSL https://get.haskellstack.org/ | sh
+
 # Lua dependencies
 case $(uname) in
   'Linux')
