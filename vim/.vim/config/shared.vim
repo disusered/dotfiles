@@ -15,6 +15,7 @@ source $MYCONFIG/coc.vim
 source $MYCONFIG/hexokinase.vim
 source $MYCONFIG/gitmessenger.vim
 source $MYCONFIG/markdownpreview.vim
+source $MYCONFIG/vimtex.vim
 
 " config
 source $MYCONFIG/vim.vim

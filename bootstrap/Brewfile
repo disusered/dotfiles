@@ -48,6 +48,7 @@ brew 'kubernetes-cli'
 brew 'kubernetes-helm'
 
 # languages
+brew 'tectonic'
 brew 'gcc'
 brew 'glide'
 brew 'go'

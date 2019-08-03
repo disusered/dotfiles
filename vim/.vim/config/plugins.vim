@@ -35,3 +35,4 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 source $MYPLUGINS/coc.vim
 Plug 'RRethy/vim-hexokinase'
+Plug 'lervag/vimtex'
