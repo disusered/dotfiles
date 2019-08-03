@@ -17,7 +17,6 @@ Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymot
 
 " ide -> os
 Plug 'simnalamburt/vim-mundo'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'tpope/vim-eunuch'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'

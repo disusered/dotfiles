@@ -8,7 +8,6 @@ source $MYCONFIG/slime.vim
 source $MYCONFIG/ultisnips.vim
 source $MYCONFIG/easymotion.vim
 source $MYCONFIG/markdown.vim
-source $MYCONFIG/nerdtree.vim
 source $MYCONFIG/tablemode.vim
 source $MYCONFIG/fzf.vim
 source $MYCONFIG/gitgutter.vim

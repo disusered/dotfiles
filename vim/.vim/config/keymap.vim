@@ -1,7 +1,5 @@
 scriptencoding utf-8
 
-map  <silent> <Leader>n       :NERDTreeToggle<CR>
-map  <silent> <Leader>N       :NERDTreeFind<CR>
 nmap        <Leader>e         <Plug>SlimeLineSend
 nmap        <Leader>ee        <Plug>SlimeMotionSend
 xmap        <Leader>ea        <Plug>SlimeRegionSend
