@@ -78,6 +78,7 @@ brew 'reattach-to-user-namespace', args: ['with-wrap-pbcopy-and-pbpaste']
 brew 'shellcheck'
 brew 'source-highlight'
 brew 'watchman'
+brew 'graphviz'
 
 # casks
 cask '1password-beta'
