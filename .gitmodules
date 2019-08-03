@@ -10,3 +10,6 @@
 [submodule "marker/.marker"]
 	path = marker/.marker
 	url = https://github.com/pindexis/marker
+[submodule "vendor/erd"]
+	path = vendor/erd
+	url = git://github.com/BurntSushi/erd
