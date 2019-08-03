@@ -1,48 +1,21 @@
 Fugitive
 ---------
 
-|      | **Merginal**                               |
-|------|--------------------------------------------|
-| 💡 gm | :Merginal                                  |
-| R    | Refresh branch list                        |
-| A    | Create branch based on current             |
-| C    | Checkout branch under cursor               |
-| D    | Delete branch under cursor                 |
-| M    | Merge branch under cursor into current     |
-| rb   | Rebase current against branch under cursor |
-| gd   | Diff against branch under cursor           |
-| rn   | Rename branch under cursor                 |
-
 |       | **Git**                         |
 |-------|---------------------------------|
-| 💡 ge  | :Gedit                          |
 | 💡 gw  | :Gwrite                         |
 | 💡 gs  | :Gstatus                        |
 | 💡 gd  | :Gdiff                          |
 | 💡 gr  | :Gread                          |
 | 💡 gc  | Git commit                      |
 | 💡 ga  | Git commit —amend               |
-| 💡 gt  | Git add current file and commit |
 
-|      | **Git Interactive Log**                   |
-|------|-------------------------------------------|
-| 💡 gl | Git history                               |
-| i    | Info                                      |
-| D    | Diff                                      |
-| S    | Diffstat                                  |
-| yc   | Copy sha                                  |
-| x    | Go to next branching point in history     |
-| X    | Go to previous branching point in history |
-| q    | Quit                                      |
-
-|          | **Git Interactive File Log**            |
-|----------|-----------------------------------------|
-| 💡 gh     | Git history of current file             |
-| :Manhunt | Change file comparison mode             |
-| working  | Compare against working version         |
-| pair     | Compare immediately subsequent versions |
-| pin      | Compare user defined versions           |
-| L/R      | Pin left/right view in pin mode         |
+|       | **Git Interactive Log**                           |
+|-------|---------------------------------------------------|
+| 💡 gl | Git history                                       |
+| :GV   | Git history                                       |
+| :GV!  | Git history of current file                       |
+| :GV?  | Fill location list with revisions of current file |
 
 |        | **Diff View**        |
 |--------|----------------------|
