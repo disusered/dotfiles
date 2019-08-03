@@ -52,8 +52,8 @@ augroup cocgroup
 augroup end
 
 " :Format command
-command! -nargs=0 Format :call CocAction('format')
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
+command! -nargs=0 Format :call CocAction('runCommand', 'format')
+command! -nargs=0 Prettier :call  CocAction('runCommand', 'prettier.formatFile')
 
 " Show docs
 nnoremap <silent> K :call <SID>show_documentation()<CR>

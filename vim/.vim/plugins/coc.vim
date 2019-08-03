@@ -8,7 +8,4 @@ function! CocSetup(info)
 endfunction
 
 " plugin
-Plug 'neoclide/coc.nvim', {
-    \ 'tag': '*',
-    \ 'do': './install.sh'
-    \ }
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
