@@ -93,13 +93,11 @@
   "eslint.run": "onType",
   "eslint.autoFix": true,
   "eslint.autoFixOnSave": true,
-  "eslint.filetypes": [
-    "javascript",
-    "javascript.jsx",
-    "vue"
-  ],
-  "prettier.eslintIntegration": true,
-  "prettier.stylelintIntegration": true,
+  "eslint.packageManager": "npm",
+  "eslint.filetypes": ["javascript", "javascript.jsx", "vuejs"],
+  "prettier.eslintIntegration": false,
+  "prettier.stylelintIntegration": false,
   "prettier.formatterPriority": 1,
+  "prettier.disableLanguages": ["vuejs"],
   "jest.watchman": true
 }
