@@ -32,7 +32,30 @@ endfunction
 let g:coc_snippet_next = '<tab>'
 let g:coc_snippet_prev = '<s-tab>'
 
-" support functions
+augroup cocgroup
+  autocmd!
+  " Highlight on hold
+  autocmd CursorHold * silent call CocActionAsync('highlight')
+  " Update signature help on jump placeholder
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
+" Use `:Format` to format current buffer
+command! -nargs=0 Format :call CocAction('format')
+" Use `:Prettier` to format current buffer
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+" Use `:Fold` to fold current buffer
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+" Use `:OR` for organize import of current buffer
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+" Use `:Jest` to run tests for current project
+command! -nargs=0 Jest :call  CocAction('runCommand', 'jest.projectTest')
+" Use `:JestCurrent` to run tests for current file
+command! -nargs=0 JestCurrent :call  CocAction('runCommand', 'jest.fileTest', ['%'])
+
+" Show docs
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
 function! s:show_documentation()
   if &filetype == 'vim'
     execute 'h '.expand('<cword>')
@@ -40,26 +63,3 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-
-augroup cocgroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,javascript,json,jsx setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-  " Highlight on hold
-  autocmd CursorHold * silent call CocActionAsync('highlight')
-augroup end
-
-" :Format command
-command! -nargs=0 Format :call CocAction('runCommand', 'format')
-command! -nargs=0 Prettier :call  CocAction('runCommand', 'prettier.formatFile')
-
-" Show docs
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-" Jest commands
-" Run jest for current project
-command! -nargs=0 Jest :call  CocAction('runCommand', 'jest.projectTest')
-" Run jest for current file
-command! -nargs=0 JestCurrent :call  CocAction('runCommand', 'jest.fileTest', ['%'])
