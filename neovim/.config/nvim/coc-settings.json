@@ -8,6 +8,19 @@
     ]
   },
   "languageserver": {
+    "vimls": {
+      "command": "vim-language-server",
+      "args": ["--stdio"],
+      "initializationOptions": {
+        "iskeyword": "vim iskeyword option",
+        "vimruntime": "path/to/$VIMRUNTIME",
+        "runtimepath": "vim/runtime/path",
+        "diagnostic": {
+          "enable": true
+        }
+      },
+      "filetypes": ["vim"]
+    },
     "elixirLS": {
       "command": "/Users/carlos/.config/coc/elixir-ls/build/language_server.sh",
       "filetypes": [
