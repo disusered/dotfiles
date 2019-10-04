@@ -47,3 +47,4 @@ defaults/.local/share/applications/wine*
 kiex/.kiex/builds
 kiex/.kiex/elixirs
 kiex/.kiex/mix/archives
+karabiner/.config/karabiner/automatic_backups
