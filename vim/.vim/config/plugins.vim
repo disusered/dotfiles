@@ -5,6 +5,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
 Plug 'wincent/terminus'
 
+
 " editing
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -34,5 +35,5 @@ Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'css', 'scss', 'markdown', 'html.handlebars', 'xml', 'htmldjango', 'blade', 'vue'] }
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 source $MYPLUGINS/coc.vim
-Plug 'RRethy/vim-hexokinase'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'lervag/vimtex'
