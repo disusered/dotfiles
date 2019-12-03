@@ -1,3 +1,6 @@
+# Enable profiling module
+# zmodload zsh/zprof
+
 # Set $path
 source $HOME/.config/zsh/zshpath
 
@@ -248,3 +251,5 @@ test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 # Autoload module completion
 autoload -U compinit && compinit
 
+# Enable profiling
+# zprof
