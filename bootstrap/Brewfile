@@ -34,6 +34,9 @@ brew 'inetutils'
 brew 'bat'
 
 # development
+brew 'usbmuxd', args: ['HEAD']
+brew 'libimobiledevice', args: ['HEAD']
+brew 'ios-webkit-debug-proxy', args: ['HEAD']
 brew 'mailhog'
 brew 'neovim', args: ['HEAD']
 brew 'vim', args: ['override-system-vi', 'with-lua', 'with-luajit', 'with-tcl']
@@ -48,19 +51,20 @@ brew 'kubernetes-cli'
 brew 'kubernetes-helm'
 
 # languages
-brew 'tectonic'
+brew 'languagetool' # grammar
+brew 'tectonic'     # latex
 brew 'gcc'
-brew 'glide'
+brew 'glide'        # golang
 brew 'go'
 cask 'java'
-brew 'gradle'
+brew 'gradle'       # java
 brew 'kerl'
 brew 'lua', args: ['universal', 'with-completion']
 brew 'luajit', args: ['with-52compat']
 brew 'python'
 brew 'python3'
-brew 'rbenv'
 brew 'ruby'
+brew 'rbenv'
 brew 'ruby-build'
 
 # dependencies
