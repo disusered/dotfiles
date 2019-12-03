@@ -19,7 +19,11 @@ Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymot
 Plug 'voldikss/vim-floaterm'
 Plug 'simnalamburt/vim-mundo'
 Plug 'tpope/vim-eunuch'
-Plug 'airblade/vim-gitgutter'
+if has('nvim') || has('patch-8.0.902')
+  Plug 'mhinz/vim-signify'
+else
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
 Plug 'tpope/vim-fugitive'
 Plug 'rhysd/git-messenger.vim'
 source $MYPLUGINS/localvimrc.vim

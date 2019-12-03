@@ -1,14 +1,16 @@
 Fugitive
 ---------
 
-|       | **Git**                         |
-|-------|---------------------------------|
-| 💡 gw  | :Gwrite                         |
-| 💡 gs  | :Gstatus                        |
-| 💡 gd  | :Gdiff                          |
-| 💡 gr  | :Gread                          |
-| 💡 gc  | Git commit                      |
-| 💡 ga  | Git commit —amend               |
+|       | **Git**           |
+|-------|-------------------|
+| 💡 gw | :Gwrite           |
+| 💡 gs | :Gstatus          |
+| 💡 gd | :Gdiff            |
+| 💡 gr | :Gread            |
+| 💡 gc | Git commit        |
+| 💡 ga | Git commit —amend |
+| 💡 gh | Git hunk diff     |
+| 💡 gu | Git hunk undo     |
 
 |       | **Git Window**                        |
 |-------|---------------------------------------|

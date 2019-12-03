@@ -40,13 +40,15 @@ nnoremap    Q                 <nop>
 nnoremap    <Leader><Enter>   :w<CR>
 nnoremap    <Leader>q         :bp\|bd #<CR>
 nnoremap    <Leader>u         :MundoToggle<CR>
-nnoremap    <Leader>gw        :Gwrite<CR>:GitGutter<CR>
+nnoremap    <Leader>gw        :Gwrite<CR>
 nnoremap    <Leader>gs        :Gstatus<CR>
 nnoremap    <Leader>gd        :Gdiff<CR>
-nnoremap    <Leader>gr        :Gread<CR>:GitGutter<CR>
+nnoremap    <Leader>gr        :Gread<CR>
 nnoremap    <Leader>gc        :Gcommit -v -q<CR>
 nnoremap    <Leader>ga        :Gcommit --amend<CR>
-nnoremap    <Leader>gl        :GV<CR>
+nnoremap    <Leader>gb        :Gblame<CR>
+nnoremap    <Leader>gh        :SignifyHunkDiff<CR>
+nnoremap    <Leader>gu        :SignifyHunkUndo<CR>
 nnoremap <silent><Leader>p    :GitFiles<CR>
 nnoremap <silent><Leader>f    :Files<CR>
 nnoremap    <Leader>b         :Buffers<CR>
@@ -55,8 +57,6 @@ nnoremap    <Leader><Space>   :nohlsearch<CR>
 map<silent> -                 <Plug>FileBeagleOpenCurrentBufferDir
 nnoremap    j                 gj
 nnoremap    k                 gk
-nmap        [c                <Plug>(GitGutterPrevHunk)
-nmap        ]c                <Plug>(GitGutterNextHunk)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-declaration)
 nmap <silent> gy <Plug>(coc-type-definition)

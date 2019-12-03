@@ -10,7 +10,7 @@ source $MYCONFIG/easymotion.vim
 source $MYCONFIG/markdown.vim
 source $MYCONFIG/tablemode.vim
 source $MYCONFIG/fzf.vim
-source $MYCONFIG/gitgutter.vim
+source $MYCONFIG/signify.vim
 source $MYCONFIG/coc.vim
 source $MYCONFIG/hexokinase.vim
 source $MYCONFIG/gitmessenger.vim
