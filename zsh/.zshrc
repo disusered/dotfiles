@@ -13,9 +13,7 @@ esac
 
 # plugins
 zplug 'junegunn/fzf', use:"shell/*.zsh"
-zplug 'mollifier/cd-gitroot'
 zplug 'zsh-users/zsh-history-substring-search'
-zplug 'hchbaw/zce.zsh'
 zplug 'lukechilds/zsh-nvm'
 
 # zsh-syntax-highlighting must be loaded after executing compinit & sourcing plugins
