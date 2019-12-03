@@ -1,47 +1,21 @@
 # Set $path
 source $HOME/.config/zsh/zshpath
 
-# zplug init
-case $(uname) in
-  'Darwin')
-    source $ZPLUG_HOME/init.zsh
-    ;;
-  'Linux')
-    source /usr/share/zsh/scripts/zplug/init.zsh
-    ;;
-esac
+# zplugin init
+source $HOME/.dotfiles/vendor/zplugin/zplugin.zsh
 
 # plugins
-zplug 'junegunn/fzf', use:"shell/*.zsh"
-zplug 'zsh-users/zsh-history-substring-search'
-zplug 'lukechilds/zsh-nvm'
-
-# zsh-syntax-highlighting must be loaded after executing compinit & sourcing plugins
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplugin light lukechilds/zsh-nvm
+zplugin light zsh-users/zsh-history-substring-search
+zplugin light zdharma/fast-syntax-highlighting
 
 # completions
-zplug "zsh-users/zsh-completions"
-zplug "lukechilds/zsh-better-npm-completion"
-case $(uname) in
-  'Darwin')
-    zplug "Homebrew/homebrew-services", use:"completions/zsh"
-    ;;
-esac
+zplugin ice blockf
+zplugin light zsh-users/zsh-completions
 
 # theme
-zplug "mafredri/zsh-async", on:"sindresorhus/pure"
-zplug "sindresorhus/pure", use:"pure.zsh"
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-# Autoload modules
-autoload -U compinit && compinit
+zplugin ice pick"async.zsh" src"pure.zsh"
+zplugin light sindresorhus/pure
 
 # History
 SAVEHIST=10000
@@ -271,5 +245,6 @@ eval "$(rbenv init -)"
 # kiex
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
-# Initialize zplug
-zplug load
+# Autoload module completion
+autoload -U compinit && compinit
+

@@ -10,7 +10,6 @@ tap 'caskroom/fonts'
 # env
 brew 'mas'
 brew 'stow'
-brew 'zplug'
 
 # basics
 brew 'ag'

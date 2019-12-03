@@ -1,6 +1,5 @@
 case $(uname) in
   'Darwin')
-    export ZPLUG_HOME=/usr/local/opt/zplug
     export BROWSER='open'
     export JAVA_HOME=`/usr/libexec/java_home`
     # export GOPATH="${HOME}/Development/SDK/gopath"
@@ -8,7 +7,6 @@ case $(uname) in
     # export VAGRANT_DEFAULT_PROVIDER=virtualbox
     ;;
   'Linux')
-    export ZPLUG_HOME=$HOME/.zplug
     export ALSA_CARD=Audio
     export _JAVA_OPTIONS='-Dsun.java2d.opengl=true,-Dawt.useSystemAAFontSettings=on,-Dswing.aatext=true'
     ;;

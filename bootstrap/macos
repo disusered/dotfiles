@@ -6,10 +6,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # Install dependencies
 cd bootstrap && brew bundle
 
-# Install shell plugins
-# not ready
-#zplug install
-
 # Install BasicTex
 open /usr/local/Caskroom/basictex/*/mactex-basictex-*.pkg
 sudo tlmgr update --self
