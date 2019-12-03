@@ -111,7 +111,7 @@ function MyErrors()
     if get(info, 'warning', 0)
       call add(msgs, 'W' . info['warning'])
     endif
-    return join(msgs, ' '). ' ' . get(g:, 'coc_status', '')
+    return join(msgs, ' '). ' ' . get(g:, 'coc_status', ''). ' '
   endif
   return ''
 endfunction
@@ -122,6 +122,28 @@ function MyModified()
   else
     return ''
   endif
+endfunction
+
+function! MyVcs()
+  let symbols = ['+', '-', '~']
+  let [added, modified, removed] = sy#repo#get_stats()
+  let stats = [added, removed, modified]  " reorder
+  let hunkline = ''
+
+  if winwidth(0) > 80
+    for i in range(3)
+      if stats[i] > 0
+        let hunkline .= printf('%s%s ', symbols[i], stats[i])
+      endif
+    endfor
+
+    if !empty(hunkline)
+      let hunkline = printf('%s', hunkline[:-2])
+    endif
+
+    return hunkline. ' '
+  endif
+  return ''
 endfunction
 
 augroup statusline
@@ -140,6 +162,7 @@ set statusline+=%7*%{MyPrefix(MyFilename())}     " FileType Prefix
 set statusline+=%1*%{MyFilename()}               " Filename
 set statusline+=%1*%{MyModified()}               " Modified
 set statusline+=%1*%{ReadOnly()}                 " Read only flag
+set statusline+=%7*%{MyVcs()}                    " VCS (Signify)
 set statusline+=%2*%{MyPrefix(MyErrors())}       " Errors Prefix
 set statusline+=%2*%{MyErrors()}                 " Errors
 set statusline+=%1*%=                            " Align right
