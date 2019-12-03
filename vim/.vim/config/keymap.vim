@@ -50,7 +50,7 @@ nnoremap    <Leader>gb        :Gblame<CR>
 nnoremap    <Leader>gl        :Glog<CR>
 nnoremap    <Leader>gh        :SignifyHunkDiff<CR>
 nnoremap    <Leader>gu        :SignifyHunkUndo<CR>
-nnoremap <silent><Leader>p    :GitFiles<CR>
+nnoremap <silent><Leader>p    :call fzf#vim#gitfiles('.', {'options': '--prompt ""'})<CR>
 nnoremap <silent><Leader>f    :Files<CR>
 nnoremap <silent><Leader>b    :Buffers<CR>
 nnoremap <silent><Leader>m    :Marks<CR>
