@@ -1,12 +1,13 @@
 vim
 ---------
 
-|       | **Action**                                  |
-|-------|---------------------------------------------|
-| Space | Leader                                      |
-| ^p    | Git files                                   |
-| ^f    | All files                                   |
-| ^b    | Buffers                                     |
+|       | **Action** |
+|-------|------------|
+| Space | Leader     |
+| ^p    | Git files  |
+| ^f    | All files  |
+| ^b    | Buffers    |
+| ^t    | Terminal   |
 
 |           | **Motion**     |
 |-----------|----------------|

@@ -5,7 +5,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
 Plug 'wincent/terminus'
 
-
 " editing
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -17,6 +16,7 @@ Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', '<Plug>(LiveEasyAl
 Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)', '<Plug>(easymotion-s2)', '<Plug>(easymotion-tl)', '<Plug>(easymotion-Tl)', '<Plug>(easymotion-fl)', '<Plug>(easymotion-Fl)', '<Plug>(easymotion-next)', '<Plug>(easymotion-prev)']}
 
 " ide -> os
+Plug 'voldikss/vim-floaterm'
 Plug 'simnalamburt/vim-mundo'
 Plug 'tpope/vim-eunuch'
 Plug 'airblade/vim-gitgutter'

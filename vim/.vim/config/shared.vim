@@ -16,6 +16,7 @@ source $MYCONFIG/hexokinase.vim
 source $MYCONFIG/gitmessenger.vim
 source $MYCONFIG/markdownpreview.vim
 source $MYCONFIG/vimtex.vim
+source $MYCONFIG/floatterm.vim
 
 " config
 source $MYCONFIG/vim.vim
