@@ -226,18 +226,21 @@ HELPDIR=/usr/local/share/zsh/help
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# TODO: Improve startup speed
 # rbenv
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # marker
 [[ -s "$HOME/.local/share/marker/marker.sh" ]] && source "$HOME/.local/share/marker/marker.sh"
 
+# TODO: Improve startup speed
 # virtualenvwrapper
-[[ -s "$HOME/.local/bin/virtualenvwrapper_lazy.sh" ]] && source "$HOME/.local/bin/virtualenvwrapper_lazy.sh"
-[[ -s "/usr/local/bin/virtualenvwrapper_lazy.sh" ]] && source "/usr/local/bin/virtualenvwrapper_lazy.sh"
+# [[ -s "$HOME/.local/bin/virtualenvwrapper_lazy.sh" ]] && source "$HOME/.local/bin/virtualenvwrapper_lazy.sh"
+# [[ -s "/usr/local/bin/virtualenvwrapper_lazy.sh" ]] && source "/usr/local/bin/virtualenvwrapper_lazy.sh"
 
+# TODO: Improve startup speed
 # kiex
-test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+# test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
 # fnm
 eval "$(fnm env --multi)"
