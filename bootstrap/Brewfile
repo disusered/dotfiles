@@ -6,6 +6,7 @@ tap 'homebrew/bundle'
 tap 'homebrew/services'
 tap 'neovim/neovim'
 tap 'caskroom/fonts'
+tap 'Schniz/tap'
 
 # env
 brew 'mas'
@@ -33,6 +34,7 @@ brew 'inetutils'
 brew 'bat'
 
 # development
+brew 'fnm'
 brew 'usbmuxd', args: ['HEAD']
 brew 'libimobiledevice', args: ['HEAD']
 brew 'ios-webkit-debug-proxy', args: ['HEAD']

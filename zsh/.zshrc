@@ -8,7 +8,6 @@ source $HOME/.config/zsh/zshpath
 source $HOME/.dotfiles/vendor/zplugin/zplugin.zsh
 
 # plugins
-zplugin light lukechilds/zsh-nvm
 zplugin light zsh-users/zsh-history-substring-search
 zplugin light zdharma/fast-syntax-highlighting
 
@@ -239,6 +238,29 @@ eval "$(rbenv init -)"
 
 # kiex
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+
+# fnm
+eval "$(fnm env --multi)"
+
+export PATH=/tmp/carlos/fnm-shell-5222166/bin:$PATH
+export FNM_MULTISHELL_PATH=/tmp/carlos/fnm-shell-5222166
+export FNM_DIR=/Users/carlos/.fnm/
+export FNM_NODE_DIST_MIRROR=https://nodejs.org/dist
+export FNM_LOGLEVEL=info
+
+autoload -U add-zsh-hook
+_fnm_autoload_hook () {
+  if [[ -f .node-version && -r .node-version ]]; then
+    echo "fnm: Found .node-version"
+    fnm use
+  elif [[ -f .nvmrc && -r .nvmrc ]]; then
+    echo "fnm: Found .nvmrc"
+    fnm use
+  fi
+}
+
+add-zsh-hook chpwd _fnm_autoload_hook \
+  && _fnm_autoload_hook
 
 # Autoload module completion
 autoload -U compinit && compinit
