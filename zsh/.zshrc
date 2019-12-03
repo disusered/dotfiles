@@ -266,7 +266,11 @@ add-zsh-hook chpwd _fnm_autoload_hook \
   && _fnm_autoload_hook
 
 # Autoload module completion
-autoload -U compinit && compinit
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
 
 # Enable profiling
 # zprof
