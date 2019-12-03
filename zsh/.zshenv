@@ -15,10 +15,6 @@ esac
 export BAT_THEME="OneHalfDark"
 export MDV_THEME=884.0977
 
-# export MARKER_KEY_GET="\C-@"
-# export MARKER_KEY_MARK="\C-0"
-# export MARKER_KEY_NEXT_PLACEHOLDER="\C-e"
-
 export MARKPATH=$HOME/.marks
 export TMPDIR="/tmp/$USER"
 export KEYTIMEOUT=1
