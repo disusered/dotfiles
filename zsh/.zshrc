@@ -51,7 +51,6 @@ alias r='ranger'
 alias j="selectmark"
 alias md='nohup showdown > /dev/null &!'
 alias t='twitter'
-alias cdg='cd-gitroot'
 alias top='htop'
 alias used='ncdu'
 alias ag='ag --hidden --pager "less -R" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34'
@@ -82,23 +81,17 @@ alias gco='g checkout'
 alias ll='ls -l'
 alias la='ls -la'
 alias dci='docker rmi $(docker images -f "dangling=true" -q --no-trunc)'
-alias kgp='kubectl get pods'
-alias kgs='kubectl get services'
 alias colors='( x=`tput op` y=`printf %$((${COLUMNS}-6))s`;for i in {0..256};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done; )'
 
 # Mac Aliases
 case $(uname) in
   'Darwin')
     alias ls='ls -G'
-    alias d='dict'
-    alias p='preview'
     alias flushdns='sudo killall -HUP mDNSResponder'
     alias pbc='pbcopy'
     alias pbp='pbpaste'
-    alias fonts='fc-list | cut -f2 -d: | sort -u'
-    alias help='md $(ls ~/.dotfiles/help/ | f --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%)'
-    alias chat='weechat'
-    alias preview='term-img'
+    alias fontnames='fc-list | cut -f2 -d: | sort -u'
+    alias help='bat $(ls ~/.dotfiles/help/ | f --prompt "❓  " | xargs -I % echo ~/.dotfiles/help/%)'
     ;;
   'Linux')
     alias pbc='clipcopy'
@@ -141,7 +134,6 @@ bindkey -v
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-bindkey -M vicmd 's' zce
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
