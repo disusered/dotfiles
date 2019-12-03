@@ -3,10 +3,12 @@
 # Neovim
 case $(uname) in
   'Darwin')
-    sudo easy_install pip virtualenv virtualenvwrapper
-    sudo pip install --upgrade setuptools pip
-    sudo pip3 install --upgrade setuptools pip
-    pip install --user neovim
+    chown -R `whoami` /usr/local/lib/python2.7/site-packages/
+    chown -R `whoami` /usr/local/lib/python3.7/site-packages/
+    # sudo easy_install pip virtualenv virtualenvwrapper
+    pip2 install --upgrade setuptools pip
+    pip3 install --upgrade setuptools pip
+    pip2 install --user neovim
     pip3 install --user neovim
     ;;
   'Linux')
