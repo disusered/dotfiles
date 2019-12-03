@@ -25,8 +25,8 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 "   return call('fzf#vim#grep', extend(['ag --hidden --nogroup --column --color '.a:command_suffix, 1], a:000))
 " endfunction
 
-let $FZF_DEFAULT_COMMAND =  "ag --hidden --pager \"less -R\" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34"
-let $FZF_DEFAULT_OPTS='--color hl:2,hl+:2,fg:8,fg+:15,bg+:0,info:8,prompt:5,spinner:135,pointer:12,marker:2 --layout=reverse  --margin=1,4'
+" let $FZF_DEFAULT_COMMAND =  "ag --hidden --pager \"less -R\" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34"
+let $FZF_DEFAULT_OPTS='--color hl:2,hl+:2,fg:8,fg+:15,bg+:0,info:8,prompt:5,spinner:135,pointer:12,marker:2 --layout=reverse  --margin=1,3'
 
 let g:fzf_buffers_jump = 1
 let g:fzf_layout = { 'window': 'call FloatingFZF()' }
