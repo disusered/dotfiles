@@ -7,6 +7,8 @@ vim
 | ^p    | Git files  |
 | ^f    | All files  |
 | ^b    | Buffers    |
+| ^w    | Windows    |
+| ^m    | Marks      |
 | ^t    | Terminal   |
 
 |           | **Motion**     |

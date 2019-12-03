@@ -47,11 +47,14 @@ nnoremap    <Leader>gr        :Gread<CR>
 nnoremap    <Leader>gc        :Gcommit -v -q<CR>
 nnoremap    <Leader>ga        :Gcommit --amend<CR>
 nnoremap    <Leader>gb        :Gblame<CR>
+nnoremap    <Leader>gl        :Glog<CR>
 nnoremap    <Leader>gh        :SignifyHunkDiff<CR>
 nnoremap    <Leader>gu        :SignifyHunkUndo<CR>
 nnoremap <silent><Leader>p    :GitFiles<CR>
 nnoremap <silent><Leader>f    :Files<CR>
-nnoremap    <Leader>b         :Buffers<CR>
+nnoremap <silent><Leader>b    :Buffers<CR>
+nnoremap <silent><Leader>m    :Marks<CR>
+nnoremap <silent><Leader>w    :Windows<CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
 nnoremap    <Leader><Space>   :nohlsearch<CR>
 map<silent> -                 <Plug>FileBeagleOpenCurrentBufferDir
