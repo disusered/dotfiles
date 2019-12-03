@@ -55,8 +55,8 @@ nnoremap    <Leader><Space>   :nohlsearch<CR>
 map<silent> -                 <Plug>FileBeagleOpenCurrentBufferDir
 nnoremap    j                 gj
 nnoremap    k                 gk
-nmap        [c                <Plug>GitGutterPrevHunk
-nmap        ]c                <Plug>GitGutterNextHunk
+nmap        [c                <Plug>(GitGutterPrevHunk)
+nmap        ]c                <Plug>(GitGutterNextHunk)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-declaration)
 nmap <silent> gy <Plug>(coc-type-definition)

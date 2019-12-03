@@ -8,3 +8,8 @@ let g:gitgutter_highlight_lines = 0
 " from https://github.com/airblade/vim-gitgutter/blob/eaea1c5bba8e0f72cbc923c51a18c5c9918eb513/plugin/gitgutter.vim#L144-L145
 nnoremap <silent> <expr> <Plug>GitGutterNextHunk &diff ? ']c' : ":\<C-U>execute v:count1 . 'GitGutterNextHunk'\<CR>"
 nnoremap <silent> <expr> <Plug>GitGutterPrevHunk &diff ? '[c' : ":\<C-U>execute v:count1 . 'GitGutterPrevHunk'\<CR>"
+
+augroup user_gitgutter
+  autocmd!
+  autocmd BufLeave fugitive://* call gitgutter#all(1)
+augroup END
