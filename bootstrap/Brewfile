@@ -32,6 +32,7 @@ brew 'wget'
 brew 'zsh'
 brew 'inetutils'
 brew 'bat'
+brew 'ripgrep'
 
 # development
 brew 'fnm'

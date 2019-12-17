@@ -1,8 +1,7 @@
 " base
 Plug 'chriskempson/base16-vim'
 Plug 'jeetsukumaran/vim-filebeagle'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'liuchengxu/vim-clap', { 'do': function('clap#helper#build_all') }
 Plug 'wincent/terminus'
 
 " editing

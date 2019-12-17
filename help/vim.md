@@ -1,15 +1,17 @@
 vim
 ---------
 
-|       | **Action** |
-|-------|------------|
-| Space | Leader     |
-| ^p    | Git files  |
-| ^f    | All files  |
-| ^b    | Buffers    |
-| ^w    | Windows    |
-| ^m    | Marks      |
-| ^t    | Terminal   |
+|       | **Action**  |
+|-------|-------------|
+| Space | Leader      |
+| ^c    | All finders |
+| ^p    | Git files   |
+| ^f    | All files   |
+| ^b    | Buffers     |
+| ^w    | Windows     |
+| ^m    | Marks       |
+| ^t    | Terminal    |
+| ^r    | Registers   |
 
 |           | **Motion**     |
 |-----------|----------------|
@@ -29,15 +31,15 @@ vim
 | @     | Executes registers in ex mode          |
 | Space | Fullscreen                             |
 
-|             | **Search**                       |
-|-------------|----------------------------------|
-| :EnMasse    | Replace on quickfix set          |
-| :Ag pattern | Search for pattern interactively |
-| Alt-A       | Select All                       |
-| Alt-D       | Deselect All                     |
-| Tab         | Open and add to quickfix list    |
-| \[q         | Go to previous result            |
-| \]q         | Go to next result                |
+|          | **Search**                       |
+|----------|----------------------------------|
+| :EnMasse | Replace on quickfix set          |
+| :Grep    | Search for pattern interactively |
+| Ctrl-j   | Previous                         |
+| Ctrl-k   | Next                             |
+| Tab      | Open and add to quickfix list    |
+| \[q      | Go to previous result            |
+| \]q      | Go to next result                |
 
 |     | **Testing**            |
 |-----|------------------------|

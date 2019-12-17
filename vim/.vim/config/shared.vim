@@ -9,7 +9,7 @@ source $MYCONFIG/ultisnips.vim
 source $MYCONFIG/easymotion.vim
 source $MYCONFIG/markdown.vim
 source $MYCONFIG/tablemode.vim
-source $MYCONFIG/fzf.vim
+source $MYCONFIG/clap.vim
 source $MYCONFIG/signify.vim
 source $MYCONFIG/coc.vim
 source $MYCONFIG/hexokinase.vim

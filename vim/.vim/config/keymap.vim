@@ -50,11 +50,14 @@ nnoremap    <Leader>gb        :Gblame<CR>
 nnoremap    <Leader>gl        :Glog<CR>
 nnoremap    <Leader>gh        :SignifyHunkDiff<CR>
 nnoremap    <Leader>gu        :SignifyHunkUndo<CR>
-nnoremap <silent><Leader>p    :call fzf#vim#gitfiles('.', {'options': '--prompt ""'})<CR>
-nnoremap <silent><Leader>f    :Files<CR>
-nnoremap <silent><Leader>b    :Buffers<CR>
-nnoremap <silent><Leader>m    :Marks<CR>
-nnoremap <silent><Leader>w    :Windows<CR>
+nnoremap <silent><Leader>c    :Clap<CR>
+nnoremap <silent><Leader>p    :Clap gfiles<CR>
+nnoremap <silent><Leader>f    :Clap files<CR>
+nnoremap <silent><Leader>b    :Clap buffers<CR>
+nnoremap <silent><Leader>m    :Clap marks<CR>
+nnoremap <silent><Leader>w    :Clap windows<CR>
+nnoremap <silent><Leader>r    :Clap registers<CR>
+nnoremap <silent>!            :Clap grep ++query=<cword><CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
 nnoremap    <Leader><Space>   :nohlsearch<CR>
 map<silent> -                 <Plug>FileBeagleOpenCurrentBufferDir
