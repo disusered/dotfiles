@@ -7,6 +7,7 @@ tap 'homebrew/services'
 tap 'neovim/neovim'
 tap 'caskroom/fonts'
 tap 'Schniz/tap'
+tap 'universal-ctags/universal-ctags'
 
 # env
 brew 'mas'
@@ -72,7 +73,7 @@ brew 'ruby-build'
 # dependencies
 brew 'aspell', args: ['with-lang-es', 'with-lang-en']
 brew 'atool'
-brew 'ctags'
+brew 'universal-ctags', args: ['HEAD']
 brew 'curl', args: ['with-ssl', 'with-libssh2']
 brew 'ffmpeg', args: ['with-faac', 'with-fdk-aac', 'with-openssl', 'with-tools', 'with-webp']
 brew 'graphicsmagick', args: ['with-webp']

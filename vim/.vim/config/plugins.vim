@@ -38,5 +38,6 @@ Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'css', 'scss', 'markdown', 'html.handlebars', 'xml', 'htmldjango', 'blade', 'vue'] }
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 source $MYPLUGINS/coc.vim
+Plug 'liuchengxu/vista.vim'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'lervag/vimtex'

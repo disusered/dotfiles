@@ -124,6 +124,12 @@ function MyModified()
   endif
 endfunction
 
+" function MyTags()
+"   let font = get(g:, 'eleline_powerline_fonts', get(g:, 'airline_powerline_fonts', 0))
+"   let function_icon = font ? ' Ⓕ  ' : ''
+"   return !empty(get(b:, 'vista_nearest_method_or_function', '')) ? function_icon.b:vista_nearest_method_or_function : ""
+" endfunction
+
 function! MyVcs()
   let symbols = ['+', '-', '~']
   let [added, modified, removed] = sy#repo#get_stats()
@@ -166,6 +172,7 @@ set statusline+=%7*%{MyVcs()}                    " VCS (Signify)
 set statusline+=%2*%{MyPrefix(MyErrors())}       " Errors Prefix
 set statusline+=%2*%{MyErrors()}                 " Errors
 set statusline+=%1*%=                            " Align right
+" set statusline+=%1*%{MyTags()}                   " Tags
 set statusline+=%7*%{MyPrefix(MyFiletype())}     " FileType Prefix
 set statusline+=%1*%{MyFiletype()}               " FileType
 set statusline+=%7*%{MyPrefix(MyFileformat(),1)} " FileFormat Prefix

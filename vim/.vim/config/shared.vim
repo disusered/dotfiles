@@ -9,9 +9,10 @@ source $MYCONFIG/ultisnips.vim
 source $MYCONFIG/easymotion.vim
 source $MYCONFIG/markdown.vim
 source $MYCONFIG/tablemode.vim
-source $MYCONFIG/clap.vim
 source $MYCONFIG/signify.vim
 source $MYCONFIG/coc.vim
+source $MYCONFIG/vista.vim
+source $MYCONFIG/clap.vim
 source $MYCONFIG/hexokinase.vim
 source $MYCONFIG/gitmessenger.vim
 source $MYCONFIG/markdownpreview.vim

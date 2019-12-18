@@ -1,17 +1,19 @@
 vim
 ---------
 
-|       | **Action**  |
-|-------|-------------|
-| Space | Leader      |
-| ^c    | All finders |
-| ^p    | Git files   |
-| ^f    | All files   |
-| ^b    | Buffers     |
-| ^w    | Windows     |
-| ^m    | Marks       |
-| ^t    | Terminal    |
-| ^r    | Registers   |
+|       | **Action**      |
+|-------|-----------------|
+| Space | Leader          |
+| ^c    | All finders     |
+| ^p    | Git files       |
+| ^f    | All files       |
+| ^b    | Buffers         |
+| ^w    | Windows         |
+| ^m    | Marks           |
+| ^t    | Terminal        |
+| ^r    | Registers       |
+| ^s    | Symbols         |
+| ^S    | Symbols sidebar |
 
 |           | **Motion**     |
 |-----------|----------------|
@@ -23,13 +25,6 @@ vim
 |-----|-------------------|
 | ^mm | Toggle table mode |
 | ^mt | CSV to table      |
-
-|       | **Registers**                          |
-|-------|----------------------------------------|
-| C-R   | Show registers in insert mode          |
-| "     | Show registers in normal mode (ex "1p) |
-| @     | Executes registers in ex mode          |
-| Space | Fullscreen                             |
 
 |          | **Search**                       |
 |----------|----------------------------------|
