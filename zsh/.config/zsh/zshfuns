@@ -50,7 +50,7 @@ gli() {
   while out=$(
       git l --format=$GIT_LOG_STYLE $1 |
       fzf --ansi --no-sort --reverse --multi --query="$q" \
-          --print-query --expect=ctrl-d,ctrl-c,ctrl-i --toggle-sort=\`); do
+          --print-query --expect=ctrl-d,ctrl-c,ctrl-i,ctrl-r --toggle-sort=\`); do
     q=$(head -1 <<< "$out")
     k=$(head -2 <<< "$out" | tail -1)
     shas=$(sed '1,2d;s/^[^a-z0-9]*//;/^$/d' <<< "$out" | awk '{print $1}')
@@ -63,6 +63,8 @@ gli() {
     elif [ "$k" = ctrl-c ]; then
       echo $shas | tr -d '\n' | clipcopy
       break
+    elif [ "$k" = ctrl-r ]; then
+      git reset --hard $shas
     else
       for sha in $shas; do
         git show --color=always $sha | less -R
