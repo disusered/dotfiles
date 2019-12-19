@@ -44,14 +44,25 @@ function clipcopy() {
 }
 
 # Git Log Interactive
+# https://gist.github.com/junegunn/f4fca918e937e6bf5bad
 gli() {
-  git l --format=$GIT_LOG_STYLE $1 |
-  fzf --ansi --no-sort --reverse --tiebreak=index \
-      --preview "echo {} | grep -o '[a-f0-9]\{7\}' | head -1 |
-                 xargs -I % sh -c 'git show --color=always % | head -$LINES'" \
-      --bind "enter:execute(echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs -I % echo -n % | clipcopy)" \
-      --bind "ctrl-d:execute:echo {} | grep -o '[a-f0-9]\{7\}' | head -1 |
-              xargs -I % sh -c 'vim fugitive://\$(git rev-parse --show-toplevel)/.git//% < /dev/tty'"
+  local out shas sha q k
+  while out=$(
+      git l --format=$GIT_LOG_STYLE $1 |
+      fzf --ansi --no-sort --reverse --multi --query="$q" \
+          --print-query --expect=ctrl-d --toggle-sort=\`); do
+    q=$(head -1 <<< "$out")
+    k=$(head -2 <<< "$out" | tail -1)
+    shas=$(sed '1,2d;s/^[^a-z0-9]*//;/^$/d' <<< "$out" | awk '{print $1}')
+    [ -z "$shas" ] && continue
+    if [ "$k" = ctrl-d ]; then
+      nvim fugitive://$(git rev-parse --show-toplevel)/.git//$(git rev-parse $shas)
+    else
+      for sha in $shas; do
+        git show --color=always $sha | less -R
+      done
+    fi
+  done
 }
 
 # Marks
