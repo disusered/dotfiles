@@ -71,14 +71,18 @@ vim
 | ctrl+w v  | Vertical split                      |
 | ctrl+w t  | New tab                             |
 | ctrl+w q  | Close pane                          |
+| ctrl+w o  | Close all other panes               |
 | ctrl+w x  | Transpose panes                     |
 | ctrl+w x  | Previous pane                       |
 | ctrl+hjkl | Move to vim/tmux split in direction |
 
-|    | **Folds**      |
-|----|----------------|
-| za | Toggle fold    |
-| zc | Reenable folds |
+|    | **Folds**       |
+|----|-----------------|
+| zo | Open fold       |
+| zc | Close fold      |
+| za | Toggle fold     |
+| zR | Open all folds  |
+| zM | Close all folds |
 
 |            | **Slime**       |
 |------------|-----------------|
