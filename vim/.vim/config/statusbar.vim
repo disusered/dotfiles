@@ -124,12 +124,6 @@ function MyModified()
   endif
 endfunction
 
-" function MyTags()
-"   let font = get(g:, 'eleline_powerline_fonts', get(g:, 'airline_powerline_fonts', 0))
-"   let function_icon = font ? ' Ⓕ  ' : ''
-"   return !empty(get(b:, 'vista_nearest_method_or_function', '')) ? function_icon.b:vista_nearest_method_or_function : ""
-" endfunction
-
 function! MyVcs()
   let symbols = ['+', '-', '~']
   let [added, modified, removed] = sy#repo#get_stats()

@@ -59,7 +59,6 @@ nnoremap <silent><Leader>w    :Clap windows<CR>
 nnoremap <silent><Leader>g    :Clap grep<CR>
 nnoremap <silent><Leader>r    :Clap registers<CR>
 nnoremap <silent><Leader>s    :Clap tags<CR>
-nnoremap <silent><Leader>S    :Vista<CR>
 nnoremap <silent>!            :Clap grep ++query=<cword><CR>
 nnoremap    <Leader>rt        :%s/\s\+$//e<CR>
 nnoremap    <Leader><Space>   :nohlsearch<CR>
