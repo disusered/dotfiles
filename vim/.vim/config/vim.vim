@@ -1,6 +1,5 @@
 set encoding=utf-8
 scriptencoding utf-8
-set termencoding=utf-8
 
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
