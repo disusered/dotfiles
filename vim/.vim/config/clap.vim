@@ -1,6 +1,14 @@
 " Search configuration
 let g:clap_provider_grep_executable = 'rg'
-let g:clap_provider_grep_opts = '-H --no-heading --vimgrep --smart-case --hidden -g "!.git/"'
+" let g:clap_provider_grep_opts = '-H --no-heading --vimgrep --smart-case --hidden -g "\!.git/"'
+let g:clap_provider_grep_opts = '-H --no-heading --vimgrep --smart-case --hidden'
+
+
+" Allow closing with <Esc>
+let g:clap_insert_mode_only = 1
+
+" Floating window size
+let g:clap_layout = { 'relative': 'editor' }
 
 " Prompt configuration
 let g:clap_prompt_format = ' %provider_id% ❯ '

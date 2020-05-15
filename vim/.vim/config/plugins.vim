@@ -1,7 +1,7 @@
 " base
 Plug 'chriskempson/base16-vim'
 Plug 'jeetsukumaran/vim-filebeagle'
-Plug 'liuchengxu/vim-clap', { 'do': function('clap#helper#build_all') }
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 Plug 'wincent/terminus'
 
 " editing
