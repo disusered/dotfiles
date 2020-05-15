@@ -1,4 +1,3 @@
-let g:vim_node_rpc_folder = "~/.nvm/versions/node/v11.1.0/lib/node_modules"
 let g:coc_status_error_sign = "✕"
 let g:coc_status_warning_sign = "▵"
 
