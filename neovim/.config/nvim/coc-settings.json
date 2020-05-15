@@ -2,8 +2,10 @@
   "snippets.extends": {
     "vue": ["javascript"],
     "javascriptreact": ["javascript"],
-    "typescript": ["javascript"]
+    "typescript": ["javascript"],
+    "typescriptreact": ["typescript"]
   },
+  "snippets.ultisnips.enable": true,
   "languageserver": {
     "dls": {
       "command": "diagnostic-languageserver",
@@ -122,6 +124,8 @@
   "diagnostic.hintSign": "⚡︎",
   "css.colorDecorators.enable": false,
   "coc.preferences.colorSupport": false,
+  "coc.preferences.formatOnType": false,
+  "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact"],
   "vetur.format.enable": true,
   "vetur.completion.autoImport": true,
   "vetur.validation.style": true,
@@ -144,5 +148,17 @@
   "prettier.disableLanguages": ["vue"],
   "jest.watchman": true,
   "tsserver.enable": true,
-  "tsserver.npm": "/Users/carlos/.nvm/versions/node/v11.1.0/bin/npm" 
+  "typescript.updateImportsOnFileMove.enable": true,
+  "typescript.suggest.autoImports": true,
+  "typescript.referencesCodeLens.enable": true,
+  "typescript.implementationsCodeLens.enable": true,
+  "typescript.suggestionActions.enabled": true,
+  "typescript.showUnused": true,
+  "typescript.suggest.paths": true,
+  "typescript.format.enabled": true,
+  "typescript.suggest.enabled": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.preferences.quoteStyle": "auto",
+  "tsserver.disableAutomaticTypeAcquisition": false
 }

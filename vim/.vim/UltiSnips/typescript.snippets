@@ -2,8 +2,16 @@ priority 10
 
 extends javascript
 
-# snippet d "debugger;"
-# /* tslint:disable */
-# debugger; // eslint-disable-line jshint ignore:line
-# /* tslint:enable */
-# endsnippet
+snippet jdm "TSDoc multi-line comment"
+/**
+ * $0
+ */
+endsnippet
+
+snippet jdp "TSDoc parameter"
+@param $1 - ${0:TODO: Description}
+endsnippet
+
+snippet jdr "TSDOC return"
+@returns $0
+endsnippet
