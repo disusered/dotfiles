@@ -36,6 +36,7 @@ brew 'bat'
 brew 'ripgrep'
 
 # development
+brew 'deno'
 brew 'fnm'
 brew 'usbmuxd', args: ['HEAD']
 brew 'libimobiledevice', args: ['HEAD']
