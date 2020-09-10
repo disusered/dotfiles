@@ -40,7 +40,7 @@
 	extended = %C(magenta bold)%h%C(reset)  %C(blue bold)%aN%C(reset) %C(auto)%d%C(reset) %s %C(8)(%cr)%C(reset)
 	reflog = %C(magenta bold)%h%C(reset)  %C(blue bold)%gd%C(reset) %gs %C(8)(%cr)%C(reset)
 [alias]
-	l = log --graph --color --pretty=extended --abbrev-commit --date=relative --all
+	l = log --graph --color --pretty=extended --abbrev-commit --date=relative --branches --remotes --tags --oneline --decorate
 	s = status --short --branch
 	b = branch
 	bc = checkout -b
@@ -74,6 +74,9 @@
 	prompt = false
 [mergetool "fugitive"]
 	cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
 [difftool "vimdiff"]
 	cmd = nvim -d -u ~/.nvimrc \"$LOCAL\" \"$REMOTE\"
 [difftool "Kaleidoscope"]
@@ -99,3 +102,9 @@
 	submoduleSummary = true
 [url "git@bitbucket.org:"]
 	insteadOf = https://bitbucket.org/
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg
+[init]
+	defaultBranch = main
