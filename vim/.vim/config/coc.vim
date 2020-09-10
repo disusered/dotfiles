@@ -28,8 +28,16 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-let g:coc_snippet_next = '<tab>'
-let g:coc_snippet_prev = '<s-tab>'
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
 
 augroup cocgroup
   autocmd!
@@ -58,7 +66,7 @@ command! -nargs=0 JestCurrent :call  CocAction('runCommand', 'jest.fileTest', ['
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
-  if &filetype == 'vim'
+  if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
     call CocAction('doHover')

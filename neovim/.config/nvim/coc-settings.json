@@ -1,4 +1,11 @@
 {
+  "snippets.extends": {
+    "vue": ["javascript"],
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"],
+    "typescriptreact": ["typescript"]
+  },
+  "snippets.ultisnips.enable": true,
   "languageserver": {
     "dls": {
       "command": "diagnostic-languageserver",

@@ -24,8 +24,10 @@ omap        ;                 <Plug>(easymotion-next)
 nmap        ,                 <Plug>(easymotion-prev)
 omap        ,                 <Plug>(easymotion-prev)
 vmap        ,                 <Plug>(easymotion-prev)
+" TODO: Replace
 nmap        <Leader>/         gcc
 vmap        <Leader>/         gc
+
 nmap<silent><Leader>,         :vertical resize 87<CR>
 nmap        ˚                 [e
 nmap        ∆                 ]e
@@ -82,3 +84,13 @@ nmap <localleader>q  <Plug>(coc-fix-current)
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nnoremap <silent><Leader>l :<C-u>CocList<CR>
+xmap if <Plug>(coc-funcobj-i)
+omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap af <Plug>(coc-funcobj-a)
+xmap ic <Plug>(coc-classobj-i)
+omap ic <Plug>(coc-classobj-i)
+xmap ac <Plug>(coc-classobj-a)
+omap ac <Plug>(coc-classobj-a)
+nmap <silent> <C-s> <Plug>(coc-range-select)
+xmap <silent> <C-s> <Plug>(coc-range-select)
