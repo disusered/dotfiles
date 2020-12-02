@@ -38,7 +38,11 @@ Plug 'jpalardy/vim-slime', { 'for': ['javascript', 'sh', 'pgsql', 'sql']}
 
 " ide -> language
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
+" option needs to be set before loading polyglot
+let g:polyglot_disabled = ['tex']
 Plug 'sheerun/vim-polyglot'
+
 Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'typescriptreact', 'css', 'scss', 'markdown', 'html.handlebars', 'xml', 'htmldjango', 'blade', 'vue'] }
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }

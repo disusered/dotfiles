@@ -1,3 +1,5 @@
+let g:tex_flavor = 'latex'
+
 " let g:vimtex_compiler_method = 'tectonic'
 let g:vimtex_quickfix_open_on_warning = 0
 
