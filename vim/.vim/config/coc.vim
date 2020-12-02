@@ -1,6 +1,25 @@
 let g:coc_status_error_sign = "✕"
 let g:coc_status_warning_sign = "▵"
 
+let g:coc_global_extensions = [
+  \ 'coc-tsserver',
+  \ 'coc-html',
+  \ 'coc-css',
+  \ 'coc-python',
+  \ 'coc-yaml',
+  \ 'coc-json',
+  \ 'coc-vimlsp',
+  \ 'coc-elixir',
+  \ 'coc-cssmodules',
+  \ 'coc-sh',
+  \ 'coc-tailwindcss',
+  \ 'coc-vetur',
+  \ 'coc-snippets',
+  \ 'coc-eslint',
+  \ 'coc-jest',
+  \ 'coc-prettier',
+  \ ]
+
 " custom
 hi default link CocErrorSign ErrorMsg
 hi default link CocWarningSign WarningMsg
@@ -28,16 +47,13 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
-
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
-" position. Coc only does snippet and additional edit on confirm.
-if exists('*complete_info')
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-else
-  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
 
 augroup cocgroup
   autocmd!
@@ -45,7 +61,7 @@ augroup cocgroup
   autocmd CursorHold * silent call CocActionAsync('highlight')
   " Setup formatexpr specified filetype(s).
   autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder
+  " Update signature help on jump placeholder.
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
@@ -68,8 +84,10 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
   else
-    call CocAction('doHover')
+    execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
 
