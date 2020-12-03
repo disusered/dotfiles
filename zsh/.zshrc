@@ -240,7 +240,7 @@ HELPDIR=/usr/local/share/zsh/help
 
 # TODO: Improve startup speed
 # kiex
-# test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
 # fnm
 eval "$(fnm env --multi)"

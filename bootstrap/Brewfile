@@ -73,6 +73,7 @@ brew 'rbenv'
 brew 'ruby-build'
 
 # dependencies
+brew 'openssl'
 brew 'aspell', args: ['with-lang-es', 'with-lang-en']
 brew 'atool'
 brew 'universal-ctags', args: ['HEAD']
