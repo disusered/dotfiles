@@ -72,9 +72,10 @@ nmap <silent> gD <Plug>(coc-declaration)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-vmap <localleader>p  <Plug>(coc-format-selected)
-xmap <localleader>p  <Plug>(coc-format-selected)
-nmap <localleader>p  <Plug>(coc-format)
+" TODO: Use prettier for format
+" vmap <localleader>p  <Plug>(coc-format-selected)
+" nmap <localleader>p  <Plug>(coc-format-selected)
+nmap <localleader>p :CocCommand prettier.formatFile<CR>
 nmap <localleader>r  <Plug>(coc-rename)
 nmap <localleader>a  <Plug>(coc-codeaction)
 vmap <localleader>a  <Plug>(coc-codeaction-selected)
