@@ -8,14 +8,14 @@ case $(uname) in
     # sudo easy_install pip virtualenv virtualenvwrapper
     pip2 install --upgrade setuptools pip
     pip3 install --upgrade setuptools pip
-    pip2 install --user neovim
-    pip3 install --user neovim
+    pip2 install --user pynvim
+    pip3 install --user pynvim
     ;;
   'Linux')
     sudo pip2 install --upgrade setuptools pip
     sudo pip3 install --upgrade setuptools pip
-    pip2 install --user neovim
-    pip3 install --user neovim neovim-remote
+    pip2 install --user pynvim
+    pip3 install --user pynvim
     pip install --user virtualenv virtualenvwrapper
     ;;
 esac

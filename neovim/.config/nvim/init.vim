@@ -33,13 +33,13 @@
   let g:terminal_color_16 = '#cf8772'
 
   " nvim plugin hosts
-  if g:os == 'Darwin'
-    let g:python_host_prog = '/usr/local/bin/python2'
-    let g:python3_host_prog = '/usr/local/bin/python3'
-  elseif g:os == 'Linux'
-    let g:python_host_prog = '/usr/bin/python2'
-    let g:python3_host_prog = '/usr/bin/python3'
-  endif
+  " if g:os == 'Darwin'
+  "   let g:python_host_prog = '/usr/local/bin/python2'
+  "   let g:python3_host_prog = '/usr/bin/python3'
+  " elseif g:os == 'Linux'
+  "   let g:python_host_prog = '/usr/bin/python2'
+  "   let g:python3_host_prog = '/usr/bin/python3'
+  " endif
   " let g:python_host_skip_check=1
 
   call plug#begin('~/.dotfiles/vendor/nplugged')
