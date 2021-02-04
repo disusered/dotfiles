@@ -242,29 +242,6 @@ HELPDIR=/usr/local/share/zsh/help
 # kiex
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
-# fnm
-eval "$(fnm env)"
-
-export PATH=/tmp/carlos/fnm-shell-5222166/bin:$PATH
-export FNM_MULTISHELL_PATH=/tmp/carlos/fnm-shell-5222166
-export FNM_DIR=/Users/carlos/.fnm/
-export FNM_NODE_DIST_MIRROR=https://nodejs.org/dist
-export FNM_LOGLEVEL=info
-
-autoload -U add-zsh-hook
-_fnm_autoload_hook () {
-  if [[ -f .node-version && -r .node-version ]]; then
-    echo "fnm: Found .node-version"
-    fnm use
-  elif [[ -f .nvmrc && -r .nvmrc ]]; then
-    echo "fnm: Found .nvmrc"
-    fnm use
-  fi
-}
-
-add-zsh-hook chpwd _fnm_autoload_hook \
-  && _fnm_autoload_hook
-
 # Autoload module completion
 autoload -Uz compinit
 for dump in ~/.zcompdump(N.mh+24); do

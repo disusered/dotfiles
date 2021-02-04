@@ -38,7 +38,6 @@ brew 'ripgrep'
 # development
 brew 'gh'
 brew 'deno'
-brew 'fnm'
 brew 'usbmuxd', args: ['HEAD']
 brew 'libimobiledevice', args: ['HEAD']
 brew 'ios-webkit-debug-proxy', args: ['HEAD']
