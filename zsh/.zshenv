@@ -40,7 +40,6 @@ export GIT_LOG_STYLE=$GIT_LOG_STYLE_COMPLEX
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/.dotfiles/virtualenvwrapper
 
-export NVM_LAZY_LOAD=false
 
 # Load custom functions
 source $HOME/.config/zsh/zshfuns
