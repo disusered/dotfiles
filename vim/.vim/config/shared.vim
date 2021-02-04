@@ -1,4 +1,5 @@
 " plugins
+source $MYCONFIG/fugitive.vim
 source $MYCONFIG/polyglot.vim
 source $MYCONFIG/filebeagle.vim
 source $MYCONFIG/javascript.vim
