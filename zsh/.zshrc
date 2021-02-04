@@ -243,7 +243,7 @@ HELPDIR=/usr/local/share/zsh/help
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
 # fnm
-eval "$(fnm env --multi)"
+eval "$(fnm env)"
 
 export PATH=/tmp/carlos/fnm-shell-5222166/bin:$PATH
 export FNM_MULTISHELL_PATH=/tmp/carlos/fnm-shell-5222166
