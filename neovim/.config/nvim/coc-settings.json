@@ -29,7 +29,11 @@
   "css.colorDecorators.enable": false,
   "coc.preferences.colorSupport": false,
   "coc.preferences.formatOnType": false,
-  "coc.preferences.formatOnSaveFiletypes": ["vue", "typescript", "typescriptreact"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "vue",
+    "typescript",
+    "typescriptreact"
+  ],
   "vetur.format.enable": true,
   "vetur.completion.autoImport": true,
   "vetur.validation.style": true,
