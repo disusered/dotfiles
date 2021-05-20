@@ -16,3 +16,6 @@
 [submodule "vendor/zplugin"]
 	path = vendor/zplugin
 	url = https://github.com/zdharma/zplugin.git
+[submodule "vendor/elixir-ls"]
+	path = vendor/elixir-ls
+	url = https://github.com/elixir-lsp/elixir-ls.git

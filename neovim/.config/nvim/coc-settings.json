@@ -60,5 +60,6 @@
   "tsserver.disableAutomaticTypeAcquisition": false,
   "elixirLS.mixEnv": "dev",
   "elixirLS.fetchDeps": true,
-  "elixirLS.dialyzerEnabled": true
+  "elixirLS.dialyzerEnabled": true,
+  "elixir.pathToElixirLS": "~/.dotfiles/vendor/elixir-ls/release/language_server.sh"
 }
