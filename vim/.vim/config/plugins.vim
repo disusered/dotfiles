@@ -28,13 +28,9 @@ else
   Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
 endif
 Plug 'tpope/vim-fugitive'
-Plug 'junegunn/gv.vim'
-Plug 'rhysd/git-messenger.vim'
-source $MYPLUGINS/localvimrc.vim
 
 " ide -> tmux
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'jpalardy/vim-slime', { 'for': ['javascript', 'sh', 'pgsql', 'sql']}
 
 " ide -> language
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
@@ -43,7 +39,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 let g:polyglot_disabled = ['tex']
 Plug 'sheerun/vim-polyglot'
 
-Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips' " find something that works better with coc
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'javascript', 'javascript.jsx', 'typescriptreact', 'css', 'scss', 'markdown', 'html.handlebars', 'xml', 'htmldjango', 'blade', 'vue'] }
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 source $MYPLUGINS/coc.vim
