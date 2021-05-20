@@ -8,6 +8,7 @@ tap 'neovim/neovim'
 tap 'caskroom/fonts'
 tap 'Schniz/tap'
 tap 'universal-ctags/universal-ctags'
+tap 'hashicorp/tap'
 
 # env
 brew 'mas'
@@ -53,6 +54,9 @@ brew 'heroku'
 brew 'kubectx', args: ['with-short-names']
 brew 'kubernetes-cli'
 brew 'kubernetes-helm'
+brew 'hashicorp/tap/terraform'
+brew 'hashicorp/tap/terraform-ls'
+brew 'hashicorp/tap/packer'
 
 # languages
 brew 'languagetool' # grammar

@@ -11,6 +11,13 @@
       "command": "docker-langserver",
       "filetypes": ["dockerfile", "Dockerfile"],
       "args": ["--stdio"]
+    },
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf", "hcl"],
+      "initializationOptions": {},
+      "settings": {}
     }
   },
   "diagnostic.enableSign": true,
