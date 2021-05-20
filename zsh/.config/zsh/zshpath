@@ -6,7 +6,7 @@ case $(uname) in
       $HOME/go/bin
       $HOME/.cargo/bin
       $HOME/Library/Python/2.7/bin/
-      $HOME/Library/Python/3.7/bin/
+      $HOME/Library/Python/3.9/bin/
       $HOME/.luarocks/bin
       $HOME/.dotfiles/bin
       $HOME/.rbenv/bin
