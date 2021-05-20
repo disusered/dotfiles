@@ -37,6 +37,7 @@ stow git
 stow vim
 stow neovim
 stow ag
+stow rg
 stow ranger
 stow npm
 stow psql
