@@ -9,7 +9,7 @@ cd bootstrap && brew bundle
 # Install BasicTex
 open /usr/local/Caskroom/basictex/*/mactex-basictex-*.pkg
 sudo tlmgr update --self
-sudo tlmgr install setspace hyperref tucv lipsum dirtytalk
+sudo tlmgr install setspace hyperref tucv lipsum dirtytalk latexmk
 
 # Enable text selection in QuickLook
 defaults write com.apple.finder QLEnableTextSelection -bool true && killall Finder

@@ -34,8 +34,11 @@
 
   " nvim plugin hosts
   " if g:os == 'Darwin'
-  "   let g:python_host_prog = '/usr/local/bin/python2'
-  "   let g:python3_host_prog = '/usr/bin/python3'
+  let g:python_host_prog = '/usr/local/bin/python2'
+  let g:python3_host_prog = '/usr/local/bin/python3'
+  if executable('volta')
+    let g:node_host_prog = trim(system("volta which neovim-node-host"))
+  endif
   " elseif g:os == 'Linux'
   "   let g:python_host_prog = '/usr/bin/python2'
   "   let g:python3_host_prog = '/usr/bin/python3'

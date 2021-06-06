@@ -8,14 +8,14 @@ case $(uname) in
     # sudo easy_install pip virtualenv virtualenvwrapper
     pip2 install --upgrade setuptools pip
     pip3 install --upgrade setuptools pip
-    pip2 install --user pynvim
-    pip3 install --user pynvim
+    pip2 install --user --upgrade pynvim
+    pip3 install --user --upgrade pynvim neovim-remote
     ;;
   'Linux')
     sudo pip2 install --upgrade setuptools pip
     sudo pip3 install --upgrade setuptools pip
-    pip2 install --user pynvim
-    pip3 install --user pynvim
+    pip2 install --user --upgrade pynvim
+    pip3 install --user --upgrade pynvim neovim-remote
     pip install --user virtualenv virtualenvwrapper
     ;;
 esac
@@ -29,7 +29,7 @@ esac
 #npm install -g npm@latest
 #npm update -g npm
 
-#npm install -g caniuse-cmd diff-so-fancy yarn http-server @zeit/ncc
+#npm install -g caniuse-cmd diff-so-fancy yarn http-server @zeit/ncc neovim
 
 # Install Stack (Haskell)
 curl -sSL https://get.haskellstack.org/ | sh
