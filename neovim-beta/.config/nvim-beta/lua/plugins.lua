@@ -10,9 +10,17 @@ return require('packer').startup(function(use)
   -- Integration with Tmux pane navigation
   use 'christoomey/vim-tmux-navigator'
 
-  -- Colorscheme
-  use 'folke/tokyonight.nvim'
+  -- Status Line
+  use {
+    'hoob3rt/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
 
+  -- Colorscheme
+  use {
+    'folke/tokyonight.nvim',
+    requires = {'hoob3rt/lualine.nvim'}
+  }
   -----------------------------------------------------------------------------
   -- Text Editing plugins
   -----------------------------------------------------------------------------
@@ -39,7 +47,11 @@ return require('packer').startup(function(use)
   -- File picker
   use {
     'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+    requires = {
+      {'nvim-lua/popup.nvim'},
+      {'nvim-lua/plenary.nvim'},
+      {'kyazdani42/nvim-web-devicons', opt = true}
+    }
   }
 
   -----------------------------------------------------------------------------
