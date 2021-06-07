@@ -29,7 +29,7 @@ esac
 #npm install -g npm@latest
 #npm update -g npm
 
-#npm install -g caniuse-cmd diff-so-fancy yarn http-server @zeit/ncc neovim
+#npm install -g caniuse-cmd yarn http-server @zeit/ncc neovim
 
 # Install Stack (Haskell)
 curl -sSL https://get.haskellstack.org/ | sh

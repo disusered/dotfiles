@@ -35,6 +35,7 @@ brew 'zsh'
 brew 'inetutils'
 brew 'bat'
 brew 'ripgrep'
+brew 'git-delta'
 
 # development
 brew 'gh'

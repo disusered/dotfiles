@@ -19,3 +19,6 @@
 [submodule "vendor/elixir-ls"]
 	path = vendor/elixir-ls
 	url = https://github.com/elixir-lsp/elixir-ls.git
+[submodule "vendor/delta"]
+	path = vendor/delta
+	url = git@github.com:dandavison/delta.git
