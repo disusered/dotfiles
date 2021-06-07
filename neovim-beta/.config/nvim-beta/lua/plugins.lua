@@ -24,6 +24,10 @@ return require('packer').startup(function(use)
     'folke/tokyonight.nvim',
     requires = {'hoob3rt/lualine.nvim'}
   }
+
+  -- Add keybinding helper
+  use "folke/which-key.nvim"
+
   -----------------------------------------------------------------------------
   -- Text Editing plugins
   -----------------------------------------------------------------------------
