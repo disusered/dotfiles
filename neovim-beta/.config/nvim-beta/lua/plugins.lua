@@ -48,6 +48,12 @@ return require('packer').startup(function(use)
   -- IDE plugins
   -----------------------------------------------------------------------------
 
+  -- LSP
+  use {
+    'glepnir/lspsaga.nvim',
+    requires = {'neovim/nvim-lspconfig'}
+  }
+
   -- Git support
   use 'tpope/vim-fugitive'
 
