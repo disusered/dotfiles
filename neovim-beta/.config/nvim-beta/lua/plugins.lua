@@ -30,6 +30,12 @@ return require('packer').startup(function(use)
   -- File browsing
   use 'jeetsukumaran/vim-filebeagle'
 
+  -- File picker
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+  }
+
   -----------------------------------------------------------------------------
   -- Etc
   -----------------------------------------------------------------------------

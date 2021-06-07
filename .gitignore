@@ -7,7 +7,7 @@ vim/.ycm_extra_conf.pyc
 vim/cache
 vim/.vim/undo
 neovim/.config/nvim/undo
-*packer_compiled.vim
+neovim/.config/nvim/plugin/packer_compiled.vim
 npm-debug.log
 plug.vim
 vendor/plugged
