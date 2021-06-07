@@ -45,6 +45,9 @@ return require('packer').startup(function(use)
   -- IDE plugins
   -----------------------------------------------------------------------------
 
+  -- Git support
+  use 'tpope/vim-fugitive'
+
   -- TreeSitter integration
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
