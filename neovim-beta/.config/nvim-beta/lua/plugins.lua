@@ -7,6 +7,9 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- Sensible defaults for Vim
+  use 'tpope/vim-sensible'
+
   -- Integration with Tmux pane navigation
   use 'christoomey/vim-tmux-navigator'
 
