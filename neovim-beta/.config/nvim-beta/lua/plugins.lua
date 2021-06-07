@@ -1,6 +1,18 @@
 return require('packer').startup(function(use)
+
+  -----------------------------------------------------------------------------
+  -- Meta
+  -----------------------------------------------------------------------------
+
+  -- Lua dependencies
+  use_rocks 'luafilesystem'
+
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+
+  -----------------------------------------------------------------------------
+  -- Text Editing plugins
+  -----------------------------------------------------------------------------
 
   -- Automatically end block structures in supported languages
   use 'tpope/vim-endwise'
@@ -8,12 +20,22 @@ return require('packer').startup(function(use)
   -- Improved match with %
   use 'andymass/vim-matchup'
 
+  -----------------------------------------------------------------------------
+  -- IDE plugins
+  -----------------------------------------------------------------------------
+
+  -- TreeSitter integration
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
+  -- File browsing
+  use 'jeetsukumaran/vim-filebeagle'
+
+  -----------------------------------------------------------------------------
+  -- Etc
+  -----------------------------------------------------------------------------
+
   -- TODO: Enable and configure MarkdownPreview
   -- use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
-
-  -- TODO: Enable and configure Treesitter integration
-  -- Post-install/update hook with neovim command
-  -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- TODO: Enable and configure Neovim+Chrome integration
   -- Post-install/update hook with call of vimscript function with argument
