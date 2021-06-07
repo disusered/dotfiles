@@ -13,6 +13,11 @@ require 'nvim-treesitter.configs'.setup {
     disable = {}
   },
 
+  -- Enable TreeSitter indent
+  indent = {
+    enable = true
+  },
+
   -- Enable TreeSitter integration with vim-matchup
   -- https://github.com/andymass/vim-matchup
   matchup = {
