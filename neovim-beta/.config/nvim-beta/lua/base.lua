@@ -20,6 +20,9 @@ vim.o.autochdir = true
 -- Enable line numbers
 vim.o.number = true
 
+-- Enable hidden buffers
+vim.o.hidden = true
+
 --Remap space as leader key
 vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent=true})
 
