@@ -1,6 +1,10 @@
-Map('n', '<leader>p', [[<cmd>lua require('telescope.builtin').git_files()<cr>]], {})
-Map('n', '<leader>f', [[<cmd>lua require('telescope.builtin').find_files()<cr>]], {})
-Map('n', '!', [[<cmd>lua require('telescope.builtin').grep_string()<cr>]], {})
-Map('n', '<leader>l', [[<cmd>lua require('telescope.builtin').builtin()<cr>]], {})
-Map('n', '<leader>g', [[<cmd>lua require('telescope.builtin').live_grep()<cr>]], {})
-Map('n', '<leader>b', [[<cmd>lua require('telescope.builtin').buffers()<cr>]], {})
+function T (cmd)
+  return "<cmd>lua require'telescope.builtin'." .. cmd .. "(require('telescope.themes').get_ivy({}))<cr>"
+end
+
+Map('n', '<leader>p', T('git_files'), {})
+Map('n', '<leader>f', T('find_files'), {})
+Map('n', '!', T('grep_string'), {})
+Map('n', '<leader>l', T('builtin'), {})
+Map('n', '<leader>g', T('live_grep'), {})
+Map('n', '<leader>b', T('buffers'), {})
