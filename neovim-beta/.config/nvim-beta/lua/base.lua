@@ -13,6 +13,9 @@ vim.o.encoding = 'utf-8'
 -- Enable live search and replace
 vim.o.inccommand = 'split'
 
+-- Enable 24-bit RGB color in TUI (Darwin)
+vim.o.termguicolors = true
+
 --Remap space as leader key
 vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent=true})
 

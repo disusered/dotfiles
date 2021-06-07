@@ -4,9 +4,6 @@ return require('packer').startup(function(use)
   -- Meta
   -----------------------------------------------------------------------------
 
-  -- Lua dependencies
-  use_rocks 'luafilesystem'
-
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
@@ -19,6 +16,9 @@ return require('packer').startup(function(use)
 
   -- Improved match with %
   use 'andymass/vim-matchup'
+
+  -- Colorize hex/rgba/hsla codes
+  use 'norcalli/nvim-colorizer.lua'
 
   -----------------------------------------------------------------------------
   -- IDE plugins

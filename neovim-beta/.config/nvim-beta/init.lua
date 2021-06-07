@@ -15,6 +15,3 @@ require ('plugins')
 
 -- Configures the plugins by requiring config/*
 require ('configs')
-
--- UI, colorscheme, etc
-require ('ui')
