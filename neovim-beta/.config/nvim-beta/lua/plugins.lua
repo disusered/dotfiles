@@ -28,6 +28,9 @@ return require('packer').startup(function(use)
   -- Add keybinding helper
   use "folke/which-key.nvim"
 
+  -- Add window closer
+  use 'moll/vim-bbye'
+
   -----------------------------------------------------------------------------
   -- Text Editing plugins
   -----------------------------------------------------------------------------
@@ -36,7 +39,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-endwise'
 
   -- Improved match with %
-  use 'andymass/vim-matchup'
+  use {'andymass/vim-matchup', event = 'VimEnter'}
 
   -- Colorize hex/rgba/hsla codes
   use 'norcalli/nvim-colorizer.lua'
