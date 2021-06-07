@@ -13,12 +13,6 @@ return require('packer').startup(function(use)
   -- Integration with Tmux pane navigation
   use 'christoomey/vim-tmux-navigator'
 
-  -- Tab bar
-  use {
-    'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
-
   -- Status Line
   use {
     'hoob3rt/lualine.nvim',
