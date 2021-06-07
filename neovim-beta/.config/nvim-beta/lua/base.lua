@@ -16,6 +16,12 @@ vim.o.inccommand = 'split'
 -- Enable 24-bit RGB color in TUI (Darwin)
 vim.o.termguicolors = true
 
+-- Automatically set current directory to shell
+vim.o.autochdir = true
+
+-- Enable line numbers
+vim.o.number = true
+
 --Remap space as leader key
 vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent=true})
 

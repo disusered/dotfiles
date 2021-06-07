@@ -7,6 +7,12 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- Integration with Tmux pane navigation
+  use 'christoomey/vim-tmux-navigator'
+
+  -- Colorscheme
+  use 'folke/tokyonight.nvim'
+
   -----------------------------------------------------------------------------
   -- Text Editing plugins
   -----------------------------------------------------------------------------
