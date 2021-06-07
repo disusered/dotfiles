@@ -30,3 +30,6 @@ G('mapleader', ' ')
 
 -- Set local leader to m
 G('maplocalleader', ' ')
+
+-- Enable mouse mode
+vim.o.mouse = 'a'
