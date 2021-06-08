@@ -15,3 +15,6 @@ require ('plugins')
 
 -- Configures the plugins by requiring config/*
 require ('configs')
+
+-- Useful keymaps
+require('maps')
