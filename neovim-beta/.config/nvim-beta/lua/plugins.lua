@@ -51,14 +51,18 @@ return require('packer').startup(function(use)
   use 'b3nj5m1n/kommentary'
 
   -----------------------------------------------------------------------------
+  -- Language & Syntax
+  -----------------------------------------------------------------------------
+
+  -- Elixir syntax
+  use 'elixir-editors/vim-elixir'
+
+  -----------------------------------------------------------------------------
   -- IDE plugins
   -----------------------------------------------------------------------------
 
   -- LSP
-  use {
-    'glepnir/lspsaga.nvim',
-    requires = {'neovim/nvim-lspconfig'}
-  }
+  use { 'glepnir/lspsaga.nvim', requires = {'neovim/nvim-lspconfig'} }
 
   -- Git support
   use 'tpope/vim-fugitive'
