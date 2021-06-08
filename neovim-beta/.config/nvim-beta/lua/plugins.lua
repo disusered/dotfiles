@@ -61,6 +61,9 @@ return require('packer').startup(function(use)
   -- IDE plugins
   -----------------------------------------------------------------------------
 
+  -- Adds Unix file manipulation :Commands
+  use 'tpope/vim-eunuch'
+
   -- LSP
   use { 'glepnir/lspsaga.nvim', requires = {'neovim/nvim-lspconfig'} }
 
