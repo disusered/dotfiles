@@ -50,6 +50,9 @@ return require('packer').startup(function(use)
   -- Allow commenting current line, visual selection or motion
   use 'b3nj5m1n/kommentary'
 
+  -- EasyMotion-like movement
+  use 'justinmk/vim-sneak'
+
   -----------------------------------------------------------------------------
   -- Language & Syntax
   -----------------------------------------------------------------------------
