@@ -20,10 +20,7 @@ return require('packer').startup(function(use)
   }
 
   -- Colorscheme
-  use {
-    'folke/tokyonight.nvim',
-    requires = {'hoob3rt/lualine.nvim'}
-  }
+  use { 'folke/tokyonight.nvim', requires = {'hoob3rt/lualine.nvim'} }
 
   -- Add keybinding helper
   use "folke/which-key.nvim"
@@ -38,11 +35,20 @@ return require('packer').startup(function(use)
   -- Automatically end block structures in supported languages
   use 'tpope/vim-endwise'
 
+  -- Easily manipulate parentheses, brackets, quotes, XML tags, and more
+  use { 'tpope/vim-surround', requires = {'tpope/vim-repeat'} }
+
+  -- Handy bracket mappings
+  use { 'tpope/vim-unimpaired', requires = {'tpope/vim-repeat'} }
+
   -- Improved match with %
   use {'andymass/vim-matchup', event = 'VimEnter'}
 
   -- Colorize hex/rgba/hsla codes
   use 'norcalli/nvim-colorizer.lua'
+
+  -- Allow commenting current line, visual selection or motion
+  use 'b3nj5m1n/kommentary'
 
   -----------------------------------------------------------------------------
   -- IDE plugins

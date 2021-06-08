@@ -11,4 +11,5 @@ Map('n', '<Leader><Space>', ':nohlsearch<CR>', {})
 Map('n', 'Q', '<nop', {})
 
 -- Delete trailing spaces
-Map('n', '<Leader>rt', ':%s/\s\+$//e<CR>', {})
+-- BUG: Escape sequence error
+-- Map('n', '<Leader>rt', ':%s/\s\+$//e<CR>', {})
