@@ -1,5 +1,11 @@
 local saga = require 'lspsaga'
 
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+        virtual_text = false
+    }
+)
+
 saga.init_lsp_saga {
   -- Enable LSP diagnostic signs
   use_saga_diagnostic_sign = true,
