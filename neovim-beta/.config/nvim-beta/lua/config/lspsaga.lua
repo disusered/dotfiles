@@ -10,8 +10,8 @@ saga.init_lsp_saga {
   hint_sign = '',
   infor_sign = '',
   definition_preview_icon = '  ',
-  finder_definition_icon = '  ',
-  finder_reference_icon = '  ',
+  finder_definition_icon = ' ',
+  finder_reference_icon = '☈ ',
   dianostic_header_icon = '   ',
   code_action_icon = ' ',
 

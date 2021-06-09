@@ -30,7 +30,7 @@ vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent=true})
 G('mapleader', ' ')
 
 -- Set local leader to m
-G('maplocalleader', ' ')
+G('maplocalleader', 'm')
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
