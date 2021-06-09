@@ -89,6 +89,12 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- Lua
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons"
+  }
+
   -- Enable GitGutter like signs
   use {
     'lewis6991/gitsigns.nvim',

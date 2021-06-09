@@ -5,10 +5,10 @@ saga.init_lsp_saga {
   use_saga_diagnostic_sign = true,
 
   -- Configure diagnostic sign icons
-  error_sign = '✕',
-  warn_sign = '△',
-  hint_sign = '⚡︎',
-  infor_sign = '⌽',
+  error_sign = '',
+  warn_sign = '',
+  hint_sign = '',
+  infor_sign = '',
   definition_preview_icon = '  ',
   finder_definition_icon = '  ',
   finder_reference_icon = '  ',
