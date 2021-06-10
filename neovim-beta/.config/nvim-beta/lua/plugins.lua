@@ -53,6 +53,9 @@ return require('packer').startup(function(use)
   -- EasyMotion-like movement
   use 'justinmk/vim-sneak'
 
+  -- Automatically close tags using TreeSitter
+  use 'windwp/nvim-ts-autotag'
+
   -----------------------------------------------------------------------------
   -- Language & Syntax
   -----------------------------------------------------------------------------
