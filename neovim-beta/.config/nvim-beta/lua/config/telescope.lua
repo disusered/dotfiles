@@ -19,12 +19,12 @@ telescope.setup{
       i = {
         ["<C-w>"] = actions.send_selected_to_qflist,
         ["<C-q>"] = actions.send_to_qflist,
-        ["<C-t>"] = trouble.open_with_trouble
+        ["<C-l>"] = trouble.open_with_trouble
       },
       n = {
         ["<C-w>"] = actions.send_selected_to_qflist,
         ["<C-q>"] = actions.send_to_qflist,
-        ["<C-t>"] = trouble.open_with_trouble
+        ["<C-l>"] = trouble.open_with_trouble
       },
     },
   }
