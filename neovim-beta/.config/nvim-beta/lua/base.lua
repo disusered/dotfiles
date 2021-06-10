@@ -34,3 +34,7 @@ G('maplocalleader', 'm')
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
+
+-- Set characters to distinguish tabs and spaces
+vim.o.list = true
+vim.o.listchars = 'trail:●,tab:⇥ᐧ,extends:▸,precedes:◂'
