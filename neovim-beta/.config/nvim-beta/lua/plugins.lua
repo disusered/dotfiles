@@ -95,7 +95,10 @@ return require('packer').startup(function(use)
     }
   }
 
-  -- Lua
+  -- Completion
+  use 'hrsh7th/nvim-compe'
+
+  -- Diagnostics
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons"

@@ -88,3 +88,6 @@ vim.o.diffopt = vim.o.diffopt .. ',vertical'
 
 -- Lower threshhold before CursorHold autocommand is run
 vim.o.updatetime = 750
+
+-- Configure completion menu
+vim.o.completeopt = "menuone,noselect"
