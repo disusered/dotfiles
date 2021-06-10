@@ -9,17 +9,22 @@ Map('n', '<leader>l', T('builtin'), {})
 Map('n', '<leader>r', T('live_grep'), {})
 Map('n', '<leader>b', T('buffers'), {})
 
+local telescope = require("telescope")
 local actions = require('telescope.actions')
-require('telescope').setup{
+local trouble = require("trouble.providers.telescope")
+
+telescope.setup{
   defaults = {
     mappings = {
       i = {
         ["<C-w>"] = actions.send_selected_to_qflist,
         ["<C-q>"] = actions.send_to_qflist,
+        ["<C-t>"] = trouble.open_with_trouble
       },
       n = {
         ["<C-w>"] = actions.send_selected_to_qflist,
         ["<C-q>"] = actions.send_to_qflist,
+        ["<C-t>"] = trouble.open_with_trouble
       },
     },
   }

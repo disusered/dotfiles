@@ -14,9 +14,18 @@ wk.register({
     -- Rename variable
     r = { [[<cmd>lua require('lspsaga.rename').rename()<CR>]], 'Rename', noremap=true, silent = true },
     -- Definition preview
-    p = { [[<cmd>lua require'lspsaga.provider'.preview_definition()<CR>]], 'Preview declaration', noremap=true, silent = true },
-    -- Definition and references
-    d = { [[<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>]], 'Show declaration and references', noremap=true, silent = true },
+    p = { [[<cmd>lua require'lspsaga.provider'.preview_definition()<CR>]], 'Preview definition', noremap=true, silent = true },
+    -- Go to definition
+    d = { [[<cmd>lua vim.lsp.buf.definition()<CR>]], 'Go to definition', noremap=true, silent = true },
+    -- Go to declaration
+    D = { [[<cmd>lua vim.lsp.buf.declaration()<CR>]], 'Go to declaration', noremap=true, silent = true },
+    -- Go to reference
+    r = { [[<cmd>lua vim.lsp.buf.references()<CR>]], 'Go to reference', noremap=true, silent = true },
+    -- Reference preview
+    R = { [[<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>]], 'Show references', noremap=true, silent = true },
+    -- R = { [[<cmd>TroubleToggle lsp_references<CR>]], 'Go to reference', noremap=true, silent = true },
+    -- Go to implementation
+    i = { [[<cmd>lua vim.lsp.buf.implementation()<CR>]], 'Go to implementation', noremap=true, silent = true },
     -- Code Actions
     a = { [[<cmd>lua require'lspsaga.codeaction'.code_action()<CR>]], 'Code action', noremap=true, silent=true },
     -- Signature help
@@ -26,7 +35,13 @@ wk.register({
     -- Show cursor diagnostics
     c = { [[<cmd>lua require'lspsaga.diagnostic'.show_cursor_diagnostics()<CR>]], 'Line diagnostics', noremap=true, silent=true },
     -- Format buffer
-    p = { [[<cmd>lua vim.lsp.buf.formatting()<CR>]], 'Format buffer', noremap=true, silent=true }
+    p = { [[<cmd>lua vim.lsp.buf.formatting()<CR>]], 'Format buffer', noremap=true, silent=true },
+    -- Trouble
+    xx = { [[<cmd>TroubleToggle<cr>]], 'Toggle diagnostics', noremap=true, silent = true },
+    xw = { [[<cmd>TroubleToggle lsp_workspace_diagnostics<cr>]], 'Workspace diagnostics', noremap=true, silent = true },
+    xd = { [[<cmd>TroubleToggle lsp_document_diagnostics<cr>]], 'Document diagnostics', noremap=true, silent = true },
+    xq = { [[<cmd>TroubleToggle quickfix<cr>]], 'Quickfix', noremap=true, silent = true },
+    xl = { [[<cmd>TroubleToggle loclist<cr>]], 'Location list', noremap=true, silent = true }
   }
 })
 
