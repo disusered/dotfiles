@@ -8,7 +8,7 @@ G('fugitive_pty', false)
 wk.register({
   ["<leader>g"] = {
     name = "Git",
-    s = { ':Gstatus<CR>', 'Git status (interactive)', noremap=true, silent = true },
+    s = { ':Git<CR>', 'Git status (interactive)', noremap=true, silent = true },
     w = { ':Gwrite<CR>', 'Git write current file', noremap=true, silent = true },
     r = { ':Gwrite<CR>', 'Git read current file', noremap=true, silent = true },
     b = { ':Gblame<CR>', 'Git blame current file', noremap=true, silent = true },
