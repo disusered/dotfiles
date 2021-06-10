@@ -56,6 +56,9 @@ return require('packer').startup(function(use)
   -- Automatically close tags using TreeSitter
   use 'windwp/nvim-ts-autotag'
 
+  -- Add indent lines
+  use { 'lukas-reineke/indent-blankline.nvim', branch="lua" }
+
   -----------------------------------------------------------------------------
   -- Language & Syntax
   -----------------------------------------------------------------------------
