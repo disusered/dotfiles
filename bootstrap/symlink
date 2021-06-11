@@ -36,7 +36,6 @@ stow tmux
 stow git
 stow vim
 stow neovim
-stow neovim-beta
 stow ag
 stow rg
 stow ranger
