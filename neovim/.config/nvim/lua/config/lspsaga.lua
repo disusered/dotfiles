@@ -57,8 +57,8 @@ saga.init_lsp_saga {
 }
 
 -- Enable Language Server configs
-require('config.lsp.vue')
-require('config.lsp.elixir')
+require('config.lsp.vuels')
+require('config.lsp.elixirls')
 
 -- Keymaps
 require('config.lsp.maps')
