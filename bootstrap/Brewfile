@@ -53,6 +53,7 @@ brew 'ansible'
 brew 'awscli'
 cask 'google-cloud-sdk'
 brew 'heroku'
+brew 'jmeter'
 brew 'kubectx', args: ['with-short-names']
 brew 'kubernetes-cli'
 brew 'kubernetes-helm'
