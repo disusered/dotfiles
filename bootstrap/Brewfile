@@ -56,9 +56,9 @@ brew 'heroku'
 brew 'kubectx', args: ['with-short-names']
 brew 'kubernetes-cli'
 brew 'kubernetes-helm'
-brew 'hashicorp/tap/terraform'
-brew 'hashicorp/tap/terraform-ls'
-brew 'hashicorp/tap/packer'
+brew 'terraform'
+brew 'terraform-ls'
+brew 'packer'
 
 # languages
 brew 'languagetool' # grammar
