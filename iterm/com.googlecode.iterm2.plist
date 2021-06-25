@@ -1903,7 +1903,7 @@
 		</dict>
 	</dict>
 	<key>Default Bookmark Guid</key>
-	<string>8068CDF1-29D8-4035-B06B-E49B289AC73F</string>
+	<string>651E25D4-A303-4979-9E58-FCB452957A02</string>
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DimInactiveSplitPanes</key>
@@ -4193,7 +4193,7 @@
 			<key>Normal Font</key>
 			<string>Hasklig-Regular 13</string>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<integer>0</integer>
 			<key>Right Option Key Sends</key>
