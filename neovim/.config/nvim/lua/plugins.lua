@@ -67,6 +67,9 @@ return require('packer').startup(function(use)
   -- Elixir syntax
   use 'elixir-editors/vim-elixir'
 
+  -- Markdown
+  use {'iamcco/markdown-preview.nvim', run = function() vim.fn['mkdp#util#install'](0) end}
+
   -----------------------------------------------------------------------------
   -- IDE plugins
   -----------------------------------------------------------------------------
