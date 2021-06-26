@@ -18,7 +18,7 @@ local on_attach = function(client, bufnr)
       -- Rename variable
       r = { [[<cmd>lua require('lspsaga.rename').rename()<CR>]], 'Rename', noremap=true, silent = true },
       -- Definition preview
-      p = { [[<cmd>lua require'lspsaga.provider'.preview_definition()<CR>]], 'Preview definition', noremap=true, silent = true },
+      P = { [[<cmd>lua require'lspsaga.provider'.preview_definition()<CR>]], 'Preview definition', noremap=true, silent = true },
       -- Go to definition
       d = { [[<cmd>lua vim.lsp.buf.definition()<CR>]], 'Go to definition', noremap=true, silent = true },
       -- Go to declaration
