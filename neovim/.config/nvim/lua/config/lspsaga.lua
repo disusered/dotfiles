@@ -62,6 +62,3 @@ require('config.lsp.html')
 require('config.lsp.cssls')
 require('config.lsp.tsserver')
 require('config.lsp.elixirls')
-
--- Keymaps
-require('config.lsp.maps')

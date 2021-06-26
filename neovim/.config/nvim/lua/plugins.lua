@@ -1,8 +1,25 @@
-return require('packer').startup(function(use)
+local packer = require'packer'
+local util = require'packer.util'
+
+packer.init({
+  package_root = util.join_paths(vim.fn.stdpath('data'), 'site', 'pack'),
+  luarocks = {
+    -- TODO: Find the luarocks paths
+    -- setup_paths = '/usr/local/lib/luarocks/'
+  }
+})
+
+-- Install LuaRocks integration
+require'packer.luarocks'.install_commands()
+
+return packer.startup(function(use)
 
   -----------------------------------------------------------------------------
   -- Meta
   -----------------------------------------------------------------------------
+  --
+  use_rocks 'stdlib'
+  use_rocks 'luafilesystem'
 
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -102,7 +119,11 @@ return require('packer').startup(function(use)
   -- Completion
   use {
     'hrsh7th/nvim-compe',
-    requires = {{'hrsh7th/vim-vsnip', opt = true}, {'hrsh7th/vim-vsnip-integ', opt = true}}
+    requires = {
+      {'hrsh7th/vim-vsnip', opt = true},
+      {'hrsh7th/vim-vsnip-integ', opt = true},
+      {'ray-x/lsp_signature.nvim'}
+    }
   }
 
   -- Diagnostics
@@ -121,17 +142,7 @@ return require('packer').startup(function(use)
   -- Etc
   -----------------------------------------------------------------------------
 
-  -- TODO: Enable and configure MarkdownPreview
-  -- use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
-
   -- TODO: Enable and configure Neovim+Chrome integration
   -- Post-install/update hook with call of vimscript function with argument
   -- use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end }
-
-  -- TODO: Enable and configure GitGutter replacements
-  -- Use dependency and run lua function after load
-  -- use {
-  --   'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
-  --   config = function() require('gitsigns').setup() end
-  -- }
 end)

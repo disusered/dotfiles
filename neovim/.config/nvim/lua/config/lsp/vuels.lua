@@ -54,6 +54,15 @@ require'lspconfig'.vuels.setup{
     }
   },
 
-  root_dir = nvim_lsp.util.root_pattern("package.json", "vue.config.js", "nuxt.config.js")
+  -- Define root Vue project directory pattern
+  root_dir = nvim_lsp.util.root_pattern("package.json", "vue.config.js", "nuxt.config.js"),
+
+  on_attach = function(client, bufnr)
+    -- Register keymaps
+    require'config.lsp.maps'(bufnr)
+
+    -- Attach LSP signature plugin and config
+    require'config.lspsignature'()
+  end
 }
 
