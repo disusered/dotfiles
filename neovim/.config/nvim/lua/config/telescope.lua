@@ -4,6 +4,7 @@ end
 
 Map('n', '<leader>p', T('git_files'), {})
 Map('n', '<leader>f', T('find_files'), {})
+Map('n', '<leader>y', T('lsp_dynamic_workspace_symbols'), {})
 Map('n', '!', T('grep_string'), {})
 Map('n', '<leader>l', T('builtin'), {})
 Map('n', '<leader>r', T('live_grep'), {})
