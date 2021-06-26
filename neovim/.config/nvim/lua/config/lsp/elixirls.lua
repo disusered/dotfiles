@@ -8,5 +8,8 @@ require'lspconfig'.elixirls.setup{
 
     -- Attach LSP signature plugin and config
     require'config.lspsignature'()
+
+    -- Attach LSP kind plugin and config
+    require'config.lspkind'()
   end
 }
