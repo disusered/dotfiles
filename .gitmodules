@@ -22,3 +22,6 @@
 [submodule "vendor/delta"]
 	path = vendor/delta
 	url = git@github.com:dandavison/delta.git
+[submodule "vendor/lua-ls"]
+	path = vendor/lua-ls
+	url = git@github.com:sumneko/lua-language-server.git

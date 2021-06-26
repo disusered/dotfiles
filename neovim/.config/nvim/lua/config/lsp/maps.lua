@@ -1,8 +1,7 @@
--- Use an on_attach function to only map the following keys 
+-- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-local attach_keymaps = function(bufnr)
+local attach_keymaps = function()
   local wk = require("which-key")
-  local options = {buffer = bufnr}
 
   -- Hover docs with K
   Map('n', 'K', [[<cmd>lua require('lspsaga.hover').render_hover_doc()<cr>]])
@@ -23,11 +22,9 @@ local attach_keymaps = function(bufnr)
       d = { [[<cmd>lua vim.lsp.buf.definition()<CR>]], 'Go to definition', noremap=true, silent = true },
       -- Go to declaration
       D = { [[<cmd>lua vim.lsp.buf.declaration()<CR>]], 'Go to declaration', noremap=true, silent = true },
-      -- Go to reference
-      r = { [[<cmd>lua vim.lsp.buf.references()<CR>]], 'Go to reference', noremap=true, silent = true },
-      -- Reference preview
-      R = { [[<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>]], 'Show references', noremap=true, silent = true },
-      -- R = { [[<cmd>TroubleToggle lsp_references<CR>]], 'Go to reference', noremap=true, silent = true },
+      -- Open references in Quickfix
+      R = { [[<cmd>lua vim.lsp.buf.references()<CR>]], 'Go to reference', noremap=true, silent = true },
+      -- R = { [[<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>]], 'Show references', noremap=true, silent = true },
       -- Go to implementation
       i = { [[<cmd>lua vim.lsp.buf.implementation()<CR>]], 'Go to implementation', noremap=true, silent = true },
       -- Code Actions
@@ -37,7 +34,7 @@ local attach_keymaps = function(bufnr)
       -- Show line diagnostics
       g = { [[<cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>]], 'Line diagnostics', noremap=true, silent=true },
       -- Show cursor diagnostics
-      c = { [[<cmd>lua require'lspsaga.diagnostic'.show_cursor_diagnostics()<CR>]], 'Line diagnostics', noremap=true, silent=true },
+      c = { [[<cmd>lua require'lspsaga.diagnostic'.show_cursor_diagnostics()<CR>]], 'Cursor diagnostics', noremap=true, silent=true },
       -- Format buffer
       p = { [[<cmd>lua vim.lsp.buf.formatting()<CR>]], 'Format buffer', noremap=true, silent=true },
       -- Trouble

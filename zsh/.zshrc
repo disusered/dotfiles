@@ -81,6 +81,7 @@ alias ll='ls -l'
 alias la='ls -la'
 alias dci='docker rmi $(docker images -f "dangling=true" -q --no-trunc)'
 alias colors='( x=`tput op` y=`printf %$((${COLUMNS}-6))s`;for i in {0..256};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done; )'
+alias luamake=/Users/carlos/.dotfiles/vendor/lua-ls/3rd/luamake/luamake
 
 
 # Mac Aliases

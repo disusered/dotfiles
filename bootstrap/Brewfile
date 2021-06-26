@@ -47,6 +47,7 @@ brew 'ios-webkit-debug-proxy', args: ['HEAD']
 brew 'mailhog'
 brew 'neovim', args: ['HEAD']
 brew 'vim', args: ['override-system-vi', 'with-lua', 'with-luajit', 'with-tcl']
+brew 'ninja'
 
 # deployments
 brew 'ansible'

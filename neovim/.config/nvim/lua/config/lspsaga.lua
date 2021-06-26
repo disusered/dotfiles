@@ -1,9 +1,9 @@
 local saga = require 'lspsaga'
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics, {
-        virtual_text = false
-    }
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    virtual_text = false
+  }
 )
 
 saga.init_lsp_saga {
@@ -62,3 +62,4 @@ require('config.lsp.html')
 require('config.lsp.cssls')
 require('config.lsp.tsserver')
 require('config.lsp.elixirls')
+require('config.lsp.luals')
