@@ -26,8 +26,11 @@ vim.o.number = true
 -- Enable hidden buffers
 vim.o.hidden = true
 
---Remap space as leader key
+-- Remap space as leader key
 vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent=true})
+
+-- Set a minimum width for signcolumn
+vim.o.signcolumn = 'yes:1'
 
 -- Set leader to space
 G('mapleader', ' ')
