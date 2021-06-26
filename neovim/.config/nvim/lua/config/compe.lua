@@ -18,7 +18,10 @@ require'compe'.setup {
     calc = true;
     nvim_lsp = true;
     nvim_lua = true;
-    vsnip = false;
-    ultisnips = true;
+    vsnip = true;
+    ultisnips = false;
   };
 }
+
+-- Allow expansion of completions and snippets with Enter key
+Map("i", "<CR>", "compe#confirm('<CR>')", {noremap = true, silent = true, expr = true});

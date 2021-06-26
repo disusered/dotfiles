@@ -32,9 +32,6 @@ return require('packer').startup(function(use)
   -- Text Editing plugins
   -----------------------------------------------------------------------------
 
-  -- Automatically end block structures in supported languages
-  use 'tpope/vim-endwise'
-
   -- Easily manipulate parentheses, brackets, quotes, XML tags, and more
   use { 'tpope/vim-surround', requires = {'tpope/vim-repeat'} }
 
