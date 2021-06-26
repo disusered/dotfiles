@@ -2,13 +2,27 @@ local nvim_lsp = require('lspconfig')
 
 require'lspconfig'.vuels.setup{
   -- Vue Language Server start command
-  cmd = { "vls" },
+  cmd = { vim.loop.os_homedir().."/.volta/bin/vls" },
 
   -- Start on filetypes
   filetypes = { "vue" },
 
   init_options = {
     config = {
+      css = {},
+      emmet = {},
+      html = {
+        suggest = {}
+      },
+      javascript = {
+        format = {}
+      },
+      stylusSupremacy = {},
+      typescript = {
+        format = {}
+      },
+
+      -- Vetur options
       vetur = {
         experimental = {
           -- Enable hover/definition/references in Vue interpolations
@@ -20,7 +34,11 @@ require'lspconfig'.vuels.setup{
           -- Casing conversion for tag completion
           tagCasing = "kebab",
           -- Where Vetur sources scaffold snippets
-          useScaffoldSnippets = false
+          useScaffoldSnippets = true
+        },
+        underline = {
+          -- Enable underline `.value` when using composition API.
+          refValue = true
         },
         format = {
           -- Enable document formatter
@@ -40,11 +58,13 @@ require'lspconfig'.vuels.setup{
           scriptInitialIndent = false,
           styleInitialIndent = false
         },
+
         -- Try to use local dependencies (TS only)
-        useWorkspaceDependencies = false,
+        useWorkspaceDependencies = true,
+
         -- Which diagnostics to enable or disable
         validation = {
-          interpolation = false,
+          interpolation = true,
           script = true,
           style = true,
           template = true,
