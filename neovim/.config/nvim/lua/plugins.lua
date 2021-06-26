@@ -120,9 +120,11 @@ return packer.startup(function(use)
   use {
     'hrsh7th/nvim-compe',
     requires = {
-      {'hrsh7th/vim-vsnip', opt = true},
-      {'hrsh7th/vim-vsnip-integ', opt = true},
-      {'ray-x/lsp_signature.nvim'}
+      {'hrsh7th/vim-vsnip'},
+      {'hrsh7th/vim-vsnip-integ'},
+      {'rafamadriz/friendly-snippets'},
+      {'ray-x/lsp_signature.nvim'},
+      {'onsails/lspkind-nvim'}
     }
   }
 

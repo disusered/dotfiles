@@ -25,3 +25,17 @@ require'compe'.setup {
 
 -- Allow expansion of completions and snippets with Enter key
 Map("i", "<CR>", "compe#confirm('<CR>')", {noremap = true, silent = true, expr = true});
+
+-- Map Tab and S-Tab for expand and/or jump depending on context
+-- https://github.com/hrsh7th/vim-vsnip#2-setting
+Map("i", "<Tab>", "vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<Tab>'", { noremap = false, expr = true });
+Map("s", "<Tab>", "vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<Tab>'", { noremap = false, expr = true });
+
+Map("i", "<S-Tab>", "vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'", { noremap = false, expr = true });
+Map("s", "<S-Tab>", "vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'", { noremap = false, expr = true });
+
+-- Enable snippets in additional contexts
+vim.g.vsnip_filetypes = {
+  typescriptreact = {"typescript"},
+  javascriptreact = {"javascript"},
+}

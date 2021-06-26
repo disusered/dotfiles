@@ -8,7 +8,6 @@ G('python3_host_prog', '/usr/local/bin/python3')
 -- TODO: Fix in projects, maybe use system node
 -- G('node_host_prog', os.execute('volta which neovim-node-host'))
 
-
 -- Use system clipboard as default
 vim.o.clipboard = 'unnamed'
 
