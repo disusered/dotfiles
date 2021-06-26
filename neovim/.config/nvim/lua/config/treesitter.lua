@@ -24,4 +24,10 @@ require 'nvim-treesitter.configs'.setup {
     enable = true, -- mandatory, false will disable the whole extension
     disable = {},  -- optional, list of language that will be disabled
   },
+
+  -- Enable AutoTag
+  -- https://github.com/windwp/nvim-ts-autotag
+  autotag = {
+    enable = true,
+  }
 }

@@ -41,9 +41,6 @@ return require('packer').startup(function(use)
   -- Handy bracket mappings
   use { 'tpope/vim-unimpaired', requires = {'tpope/vim-repeat'} }
 
-  -- Improved match with %
-  use {'andymass/vim-matchup', event = 'VimEnter'}
-
   -- Colorize hex/rgba/hsla codes
   use 'norcalli/nvim-colorizer.lua'
 
@@ -53,9 +50,6 @@ return require('packer').startup(function(use)
   -- EasyMotion-like movement
   -- use 'justinmk/vim-sneak'
   use { 'phaazon/hop.nvim', as = 'hop' }
-
-  -- Automatically close tags using TreeSitter
-  use 'windwp/nvim-ts-autotag'
 
   -- Add indent lines
   use { 'lukas-reineke/indent-blankline.nvim', branch="lua" }
@@ -84,7 +78,16 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
 
   -- TreeSitter integration
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    requires = {
+      -- Improved match with %
+      {'andymass/vim-matchup', event = 'VimEnter'},
+      -- Automatically close tags using TreeSitter
+      {'windwp/nvim-ts-autotag'}
+    }
+  }
 
   -- File browsing
   use 'jeetsukumaran/vim-filebeagle'
@@ -100,7 +103,10 @@ return require('packer').startup(function(use)
   }
 
   -- Completion
-  use 'hrsh7th/nvim-compe'
+  use {
+    'hrsh7th/nvim-compe',
+    requires = {{'hrsh7th/vim-vsnip', opt = true}, {'hrsh7th/vim-vsnip-integ', opt = true}}
+  }
 
   -- Diagnostics
   use {
