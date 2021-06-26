@@ -1,12 +1,12 @@
 -- Set Python2 host
-G('python_host_prog', '/usr/local/bin/python2')
+vim.g.python_host_prog = '/usr/local/bin/python2'
 
 -- Set Python3 host
-G('python3_host_prog', '/usr/local/bin/python3')
+vim.g.python3_host_prog = '/usr/local/bin/python3'
 
 -- Set Node host from Volta
 -- TODO: Fix in projects, maybe use system node
--- G('node_host_prog', os.execute('volta which neovim-node-host'))
+-- vim.g.node_host_prog = os.execute('volta which neovim-node-host')
 
 -- Use system clipboard as default
 vim.o.clipboard = 'unnamed'
@@ -33,10 +33,10 @@ vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent=true})
 vim.o.signcolumn = 'yes:1'
 
 -- Set leader to space
-G('mapleader', ' ')
+vim.g.mapleader = ' '
 
 -- Set local leader to m
-G('maplocalleader', 'm')
+vim.g.maplocalleader = 'm'
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
