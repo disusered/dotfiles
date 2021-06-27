@@ -37,6 +37,7 @@ brew 'bat'
 brew 'fd'
 brew 'ripgrep'
 brew 'git-delta'
+brew 'jesseduffield/lazygit/lazygit'
 
 # development
 brew 'gh'
