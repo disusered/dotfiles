@@ -1,3 +1,8 @@
+-- Fix bug with LuaRocks
+-- https://github.com/wbthomason/packer.nvim/issues/180
+vim.fn.setenv("MACOSX_DEPLOYMENT_TARGET", "10.15")
+
+-- Install Packer if it does not exist
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
