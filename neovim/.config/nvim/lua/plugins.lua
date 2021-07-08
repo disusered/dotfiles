@@ -66,7 +66,7 @@ return packer.startup(function(use)
   use { 'phaazon/hop.nvim', as = 'hop' }
 
   -- Add indent lines
-  use { 'lukas-reineke/indent-blankline.nvim', branch="lua" }
+  use { 'lukas-reineke/indent-blankline.nvim' }
 
   -----------------------------------------------------------------------------
   -- Language & Syntax
@@ -139,12 +139,4 @@ return packer.startup(function(use)
     'lewis6991/gitsigns.nvim',
     requires = {'nvim-lua/plenary.nvim'}
   }
-
-  -----------------------------------------------------------------------------
-  -- Etc
-  -----------------------------------------------------------------------------
-
-  -- TODO: Enable and configure Neovim+Chrome integration
-  -- Post-install/update hook with call of vimscript function with argument
-  -- use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end }
 end)
