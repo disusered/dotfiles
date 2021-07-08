@@ -34,7 +34,7 @@ esac
 # TODO: Extract language server installs to install script
 npm install -g neovim vls vscode-langservers-extracted typescript \
   typescript-language-server prettier prettier-eslint prettier-tslint \
-  bash-language-server
+  bash-language-server dockerfile-language-server-nodejs
 
 
 # Install Stack (Haskell)
