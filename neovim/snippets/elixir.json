@@ -1,0 +1,7 @@
+{
+  "debugger": {
+    "prefix": "d"
+    "body": "require IEx; IEx.pry",
+    "description": "Pry into the current code in IEx"
+  }
+}
