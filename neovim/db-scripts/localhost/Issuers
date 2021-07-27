@@ -1,0 +1,1 @@
+select id, name, email, uuid, is_deleted from issuers;

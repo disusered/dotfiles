@@ -126,4 +126,10 @@ return packer.startup(function(use)
     'lewis6991/gitsigns.nvim',
     requires = {'nvim-lua/plenary.nvim'}
   }
+
+  -- DBA UI
+  use {
+    'tpope/vim-dadbod',
+    requires = {'kristijanhusak/vim-dadbod-ui'}
+  }
 end)
