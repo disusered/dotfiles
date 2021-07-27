@@ -30,14 +30,14 @@ return packer.startup(function(use)
   -- Integration with Tmux pane navigation
   use 'christoomey/vim-tmux-navigator'
 
+  -- Used by lualine, trouble, others
+  use 'kyazdani42/nvim-web-devicons'
+
   -- Status Line
-  use {
-    'hoob3rt/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
+  use 'hoob3rt/lualine.nvim'
 
   -- Colorscheme
-  use { 'folke/tokyonight.nvim', requires = {'hoob3rt/lualine.nvim'} }
+  use 'folke/tokyonight.nvim'
 
   -- Add keybinding helper
   use "folke/which-key.nvim"
@@ -111,8 +111,7 @@ return packer.startup(function(use)
     'nvim-telescope/telescope.nvim',
     requires = {
       {'nvim-lua/popup.nvim'},
-      {'nvim-lua/plenary.nvim'},
-      {'kyazdani42/nvim-web-devicons', opt = true}
+      {'nvim-lua/plenary.nvim'}
     }
   }
 
@@ -129,10 +128,7 @@ return packer.startup(function(use)
   }
 
   -- Diagnostics
-  use {
-    "folke/trouble.nvim",
-    requires = "kyazdani42/nvim-web-devicons"
-  }
+  use "folke/trouble.nvim"
 
   -- Enable GitGutter like signs
   use {
