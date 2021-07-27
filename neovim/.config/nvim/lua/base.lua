@@ -93,3 +93,12 @@ vim.o.updatetime = 750
 
 -- Configure completion menu
 vim.o.completeopt = "menuone,noselect"
+
+
+-- Add alias to common typos for closing and saving windows
+vim.cmd(':command! WQ wq')
+vim.cmd(':command! WQ wq')
+vim.cmd(':command! Wq wq')
+vim.cmd(':command! Wqa wqa')
+vim.cmd(':command! W w')
+vim.cmd(':command! Q q')
