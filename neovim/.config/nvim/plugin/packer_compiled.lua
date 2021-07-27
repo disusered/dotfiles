@@ -125,6 +125,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
   },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
@@ -152,6 +156,14 @@ _G.packer_plugins = {
   ["vim-bbye"] = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vim-bbye"
+  },
+  ["vim-dadbod"] = {
+    loaded = true,
+    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vim-dadbod"
+  },
+  ["vim-dadbod-ui"] = {
+    loaded = true,
+    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui"
   },
   ["vim-elixir"] = {
     loaded = true,

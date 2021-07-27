@@ -50,20 +50,20 @@ return packer.startup(function(use)
   -----------------------------------------------------------------------------
 
   -- Easily manipulate parentheses, brackets, quotes, XML tags, and more
-  use { 'tpope/vim-surround', requires = {'tpope/vim-repeat'} }
+  use {'tpope/vim-surround', requires = {'tpope/vim-repeat'}}
 
   -- Handy bracket mappings
-  use { 'tpope/vim-unimpaired', requires = {'tpope/vim-repeat'} }
+  use {'tpope/vim-unimpaired', requires = {'tpope/vim-repeat'}}
 
   -- Colorize hex/rgba/hsla codes
   use 'norcalli/nvim-colorizer.lua'
 
   -- Allow commenting current line, visual selection or motion
-  use 'b3nj5m1n/kommentary'
+  use {'b3nj5m1n/kommentary', requires = {'JoosepAlviste/nvim-ts-context-commentstring'}}
 
   -- EasyMotion-like movement
   -- use 'justinmk/vim-sneak'
-  use { 'phaazon/hop.nvim', as = 'hop' }
+  use {'phaazon/hop.nvim', as = 'hop'}
 
   -----------------------------------------------------------------------------
   -- Language & Syntax

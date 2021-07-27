@@ -29,5 +29,12 @@ require 'nvim-treesitter.configs'.setup {
   -- https://github.com/windwp/nvim-ts-autotag
   autotag = {
     enable = true,
+  },
+
+  -- Configure kommentary with nvim-ts-context-commentstring
+  -- https://github.com/JoosepAlviste/nvim-ts-context-commentstring#kommentary
+  context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
   }
 }
