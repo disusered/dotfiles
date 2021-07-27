@@ -65,9 +65,6 @@ return packer.startup(function(use)
   -- use 'justinmk/vim-sneak'
   use { 'phaazon/hop.nvim', as = 'hop' }
 
-  -- Add indent lines
-  use { 'lukas-reineke/indent-blankline.nvim' }
-
   -----------------------------------------------------------------------------
   -- Language & Syntax
   -----------------------------------------------------------------------------
