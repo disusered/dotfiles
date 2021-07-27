@@ -17,8 +17,8 @@ vim.o.inccommand = 'split'
 -- Enable 24-bit RGB color in TUI (Darwin)
 vim.o.termguicolors = true
 
--- Automatically set current directory to shell
-vim.o.autochdir = true
+-- Don't automatically set current directory to buffer path
+vim.o.autochdir = false
 
 -- Enable line numbers
 vim.o.number = true
