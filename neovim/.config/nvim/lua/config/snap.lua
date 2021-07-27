@@ -1,44 +1,40 @@
--- TODO: Workspace symbols
--- Map('n', '<leader>y', T('lsp_dynamic_workspace_symbols'), {})
-
--- TODO: Grep on !
--- Map('n', '!', T('grep_string'), {})
-
 local snap = require'snap'
 
-local function producer(args)
-  -- Defaults for all producers
-  local defaults = {
-    prompt = args.prompt or "Results",
-    suffix = " »",
-    producer = args.producer or "ripgrep.file",
-    select = args.select or snap.get'select.file'.select,
-    multiselect = args.multiselect or snap.get'select.file'.multiselect,
-    views = args.views or {snap.get'preview.file'},
-    args = {"--hidden", "--iglob", "!.git/*"},
-    mappings = {
-      ["enter-split"] = {"<C-s>"},
-      ["next-item"] = {"<C-n>", "<Down>"},
-      ["prev-item"] = {"<C-p>", "<Up>"},
-    },
-    preview = true,
-    layout = snap.get('layout').bottom
-  }
+local defaults = {
+  consumer = "fzy",
+  reverse = false,
+  preview = true,
+  suffix = " »",
+  mappings = {
+    ["enter-split"] = {"<C-s>"},
+    ["next-item"] = {"<C-n>", "<Down>"},
+    ["prev-item"] = {"<C-p>", "<Up>"},
+  },
+  args = {'--hidden', '--iglob', '!.git/*'},
+  layout = snap.get('layout').bottom,
+  limit = 50000
+}
 
-  -- Use builtin config helper
-  return snap.config.file(defaults)
-end
+local file = snap.config.file:with(defaults)
+local vimgrep = snap.config.vimgrep:with(defaults)
+
 
 snap.maps {
-  {"<Leader>p", producer {producer = snap.get'consumer.fzy'(snap.get'producer.git.file'), prompt = "Git Files"}},
-  {"<Leader>f", producer {producer = "ripgrep.file", prompt = "Files"}},
-  {"<Leader>b", producer {producer = "vim.buffer", prompt = "Buffers"}},
-  {"<Leader>o", producer {producer = "vim.oldfile", prompt = "Recently Used"}},
-  {"<Leader>r", producer {
-    producer = snap.get'consumer.limit'(10000, snap.get'producer.ripgrep.vimgrep'),
-    prompt = "Grep",
-    select = snap.get'select.vimgrep'.select,
-    multiselect = snap.get'select.vimgrep'.multiselect,
-    views = {snap.get'preview.vimgrep'}
-  }}
+  {"<Leader>p", file {producer = snap.get'consumer.fzy'(snap.get'producer.git.file'), prompt = "Git Files"}},
+  {"<Leader>f", file {producer = "ripgrep.file", prompt = "Files"}},
+  {"<Leader>b", file {producer = "vim.buffer", prompt = "Buffers"}},
+  {"<Leader>o", file {producer = "vim.oldfile", prompt = "Recently Used"}},
+  {"<Leader>r", vimgrep {prompt = "Grep"}},
+  {"!", vimgrep {prompt = "Grep", filter_with = "cword"}}
 }
+
+-- Configure custom :Grep commands
+local exports = {}
+
+function exports.grep(args)
+  return vimgrep {prompt = "Grep", filter = args}()
+end
+
+vim.cmd("command! -nargs=* Grep :lua require('config.snap').grep(<f-args>)")
+
+return exports
