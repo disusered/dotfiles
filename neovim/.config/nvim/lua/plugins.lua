@@ -4,12 +4,12 @@ local util = require'packer.util'
 packer.init({
   package_root = util.join_paths(vim.fn.stdpath('data'), 'site', 'pack'),
   luarocks = {
-    -- TODO: Find the luarocks paths
-    -- setup_paths = '/usr/local/lib/luarocks/'
+    python_cmd = 'python3',
   }
 })
 
 -- Install LuaRocks integration
+require'packer.luarocks'.setup_paths(util.join_paths(vim.fn.stdpath('cache'), 'packer_hererocks', '2.1.0-beta3'))
 require'packer.luarocks'.install_commands()
 
 return packer.startup(function(use)
@@ -104,13 +104,7 @@ return packer.startup(function(use)
   use 'jeetsukumaran/vim-filebeagle'
 
   -- File picker
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = {
-      {'nvim-lua/popup.nvim'},
-      {'nvim-lua/plenary.nvim'}
-    }
-  }
+  use { 'camspiers/snap', rocks = {'fzy'}}
 
   -- Completion
   use {

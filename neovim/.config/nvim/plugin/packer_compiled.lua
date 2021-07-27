@@ -1,17 +1,14 @@
-" Automatically generated packer.nvim plugin loader code
+-- Automatically generated packer.nvim plugin loader code
 
-if !has('nvim-0.5')
-  echohl WarningMsg
-  echom "Invalid Neovim version for packer.nvim!"
-  echohl None
-  finish
-endif
+if vim.api.nvim_call_function('has', {'nvim-0.5'}) ~= 1 then
+  vim.api.nvim_command('echohl WarningMsg | echom "Invalid Neovim version for packer.nvim! | echohl None"')
+  return
+end
 
-packadd packer.nvim
+vim.api.nvim_command('packadd packer.nvim')
 
-try
+local no_errors, error_msg = pcall(function()
 
-lua << END
   local time
   local profile_info
   local should_profile = false
@@ -46,7 +43,7 @@ local function save_profiles(threshold)
   _G._packer.profile_output = results
 end
 
-time("Luarocks path setup", true)
+time([[Luarocks path setup]], true)
 local package_path_str = "/Users/carlos/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/carlos/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/carlos/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/carlos/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
 local install_cpath_pattern = "/Users/carlos/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
@@ -57,8 +54,8 @@ if not string.find(package.cpath, install_cpath_pattern, 1, true) then
   package.cpath = package.cpath .. ';' .. install_cpath_pattern
 end
 
-time("Luarocks path setup", false)
-time("try_loadstring definition", true)
+time([[Luarocks path setup]], false)
+time([[try_loadstring definition]], true)
 local function try_loadstring(s, component, name)
   local success, result = pcall(loadstring(s))
   if not success then
@@ -69,16 +66,32 @@ local function try_loadstring(s, component, name)
   return result
 end
 
-time("try_loadstring definition", false)
-time("Defining packer_plugins", true)
+time([[try_loadstring definition]], false)
+time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/friendly-snippets"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
+  hop = {
+    loaded = true,
+    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/hop"
+  },
   kommentary = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/kommentary"
+  },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
+  },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
   },
   ["lspsaga.nvim"] = {
     loaded = true,
@@ -88,9 +101,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
+  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
+  },
+  ["nvim-compe"] = {
+    loaded = true,
+    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -116,13 +137,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
-  ["popup.nvim"] = {
+  snap = {
     loaded = true,
-    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/popup.nvim"
-  },
-  ["telescope.nvim"] = {
-    loaded = true,
-    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/snap"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
@@ -139,10 +156,6 @@ _G.packer_plugins = {
   ["vim-elixir"] = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vim-elixir"
-  },
-  ["vim-endwise"] = {
-    loaded = true,
-    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vim-endwise"
   },
   ["vim-eunuch"] = {
     loaded = true,
@@ -170,10 +183,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vim-sensible"
   },
-  ["vim-sneak"] = {
-    loaded = true,
-    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vim-sneak"
-  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vim-surround"
@@ -186,27 +195,32 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vim-unimpaired"
   },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+  },
+  ["vim-vsnip-integ"] = {
+    loaded = true,
+    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/which-key.nvim"
   }
 }
 
-time("Defining packer_plugins", false)
+time([[Defining packer_plugins]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
-time("Defining lazy-load event autocommands", true)
+time([[Defining lazy-load event autocommands]], true)
 vim.cmd [[au VimEnter * ++once lua require("packer.load")({'vim-matchup'}, { event = "VimEnter *" }, _G.packer_plugins)]]
-time("Defining lazy-load event autocommands", false)
+time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
-END
+end)
 
-catch
-  echohl ErrorMsg
-  echom "Error in packer_compiled: " .. v:exception
-  echom "Please check your config for correctness"
-  echohl None
-endtry
+if not no_errors then
+  vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
+end
