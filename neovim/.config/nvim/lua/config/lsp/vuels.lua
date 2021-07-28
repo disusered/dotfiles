@@ -24,51 +24,46 @@ require'lspconfig'.vuels.setup{
 
       -- Vetur options
       vetur = {
+        -- Enable hover/definition/references in Vue interpolations
+        -- WARNING: Requires JSDoc or TS annotations
         experimental = {
-          -- Enable hover/definition/references in Vue interpolations
           templateInterpolationService = false
         },
         completion = {
           -- Include completion for module export and auto import them
-          autoImport = true,
+          autoImport = false,
           -- Casing conversion for tag completion
           tagCasing = "kebab",
           -- Where Vetur sources scaffold snippets
           useScaffoldSnippets = true
         },
+        -- Enable underline `.value` when using composition API.
         underline = {
-          -- Enable underline `.value` when using composition API.
           refValue = true
         },
         format = {
           -- Enable document formatter
-          enable = true,
+          enable = false,
+          -- TODO: Fix in the future and deprecate formatting plugins
           -- Configure default code formatters for template blocks
-          defaultFormatter = {
-            css = "prettier",
-            postcss = "prettier",
-            sass = "prettier",
-            scss = "prettier",
-            js = "prettier-eslint",
-            ts = "prettier-tslint",
-            html = "prettier"
-          },
-          defaultFormatterOptions = {},
-          -- Whether to indent the content of the template blocks
-          scriptInitialIndent = false,
-          styleInitialIndent = false
+          -- defaultFormatter = {
+          --   css = "prettier",
+          --   postcss = "prettier",
+          --   sass = "sass-formatter",
+          --   scss = "prettier",
+          --   js = "prettier-eslint",
+          --   ts = "prettier-eslint",
+          --   html = "prettier"
+          -- }
         },
 
-        -- Try to use local dependencies (TS only)
-        useWorkspaceDependencies = true,
-
-        -- Which diagnostics to enable or disable
+        -- Which built-in diagnostics to enable or disable. Disabling will
+        -- fallback to ESLint, which is generally what we want in a project
+        -- https://vuejs.github.io/vetur/guide/linting-error.html#linting
         validation = {
-          interpolation = true,
-          script = true,
-          style = true,
-          template = true,
-          templateProps = false
+          script = false,
+          style = false,
+          template = false
         }
       }
     }
