@@ -75,6 +75,9 @@ return packer.startup(function(use)
   -- Markdown
   use {'iamcco/markdown-preview.nvim', run = function() vim.fn['mkdp#util#install'](0) end}
 
+  -- LaTex
+  use {'lervag/vimtex'}
+
   -----------------------------------------------------------------------------
   -- IDE plugins
   -----------------------------------------------------------------------------
