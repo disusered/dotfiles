@@ -9,19 +9,6 @@ require'lspconfig'.vuels.setup{
 
   init_options = {
     config = {
-      css = {},
-      emmet = {},
-      html = {
-        suggest = {}
-      },
-      javascript = {
-        format = {}
-      },
-      stylusSupremacy = {},
-      typescript = {
-        format = {}
-      },
-
       -- Vetur options
       vetur = {
         -- Enable hover/definition/references in Vue interpolations
@@ -31,7 +18,7 @@ require'lspconfig'.vuels.setup{
         },
         completion = {
           -- Include completion for module export and auto import them
-          autoImport = false,
+          autoImport = true,
           -- Casing conversion for tag completion
           tagCasing = "kebab",
           -- Where Vetur sources scaffold snippets
@@ -43,27 +30,28 @@ require'lspconfig'.vuels.setup{
         },
         format = {
           -- Enable document formatter
-          enable = false,
-          -- TODO: Fix in the future and deprecate formatting plugins
+          enable = true,
           -- Configure default code formatters for template blocks
-          -- defaultFormatter = {
-          --   css = "prettier",
-          --   postcss = "prettier",
-          --   sass = "sass-formatter",
-          --   scss = "prettier",
-          --   js = "prettier-eslint",
-          --   ts = "prettier-eslint",
-          --   html = "prettier"
-          -- }
+          defaultFormatter = {
+            css = "prettier",
+            postcss = "prettier",
+            sass = "sass-formatter",
+            scss = "prettier",
+            js = "prettier-eslint",
+            ts = "prettier-eslint",
+            html = "prettier"
+          }
         },
 
         -- Which built-in diagnostics to enable or disable. Disabling will
         -- fallback to ESLint, which is generally what we want in a project
         -- https://vuejs.github.io/vetur/guide/linting-error.html#linting
         validation = {
-          script = false,
-          style = false,
-          template = false
+          template = true,
+          script = true,
+          style = true,
+          templateProps = true,
+          interpolation = true
         }
       }
     }
@@ -81,6 +69,13 @@ require'lspconfig'.vuels.setup{
 
     -- Attach LSP kind plugin and config
     require'config.lspkind'()
+
+      -- Internal Vetur formatting is not supported out of the box
+      -- This line below is required if you:
+        -- want to format using Nvim's native `vim.lsp.buf.formatting**()`
+        -- want to use Vetur's formatting config instead, e.g, settings.vetur.format {...}
+      -- https://github.com/ngtinsmith/dotfiles/blob/b78bf3115d746d037c814ce6767b4c6ba38021c5/.vimrc#L558
+    client.resolved_capabilities.document_formatting = true
   end
 }
 
