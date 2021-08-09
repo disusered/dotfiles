@@ -43,6 +43,7 @@ stow npm
 stow psql
 stow mysql
 stow kiex
+stow latexmk
 
 case $(uname) in
   'Darwin')
