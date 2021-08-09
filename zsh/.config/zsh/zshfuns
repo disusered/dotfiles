@@ -67,7 +67,7 @@ gli() {
       git reset --hard $shas
     else
       for sha in $shas; do
-        git show --color=always $sha | less -R
+        git show --color=always $sha
       done
     fi
   done
