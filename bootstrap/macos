@@ -9,7 +9,13 @@ cd bootstrap && brew bundle
 # Install BasicTex
 open /usr/local/Caskroom/basictex/*/mactex-basictex-*.pkg
 sudo tlmgr update --self
-sudo tlmgr install setspace hyperref tucv lipsum dirtytalk latexmk
+sudo tlmgr install setspace hyperref tucv lipsum dirtytalk latexmk latexindent chktex
+
+# Dependencies for latexindent
+# https://github.com/Glavin001/atom-beautify/issues/1792#issuecomment-327071117
+sudo perl -MCPAN -e 'install "File::HomeDir"'
+sudo cpan YAML::Tiny
+sudo cpan Unicode::GCString
 
 # Enable text selection in QuickLook
 defaults write com.apple.finder QLEnableTextSelection -bool true && killall Finder

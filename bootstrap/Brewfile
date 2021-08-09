@@ -67,6 +67,7 @@ brew 'packer'
 # languages
 brew 'languagetool' # grammar
 brew 'tectonic'     # latex
+brew 'texlab'
 brew 'gcc'
 brew 'glide'        # golang
 brew 'go'

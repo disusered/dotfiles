@@ -1,3 +1,7 @@
+-- Make j and j less surprising on wrapped lines
+Map('n', 'k', 'gk', {})
+Map('n', 'j', 'gj', {})
+
 -- Resize to accomodate 80 character width code
 Map('n', '<Leader>,', ':vertical resize 87<CR>', {})
 

@@ -215,6 +215,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
   },
+  vimtex = {
+    loaded = true,
+    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vimtex"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/which-key.nvim"
