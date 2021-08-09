@@ -45,3 +45,4 @@ export VOLTA_HOME="$HOME/.volta"
 
 # Load custom functions
 source $HOME/.config/zsh/zshfuns
+if [ -e /Users/carlos/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/carlos/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
