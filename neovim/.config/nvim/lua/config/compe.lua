@@ -53,10 +53,3 @@ Map("i", "<CR>", [[compe#confirm("<CR>")]], {noremap = false, expr = true, silen
 
 -- Allow closing completion PUM with C-e
 Map("i", "<C-e>", [[compe#close("<C-e>")]], {noremap = false, expr = true, silent = true})
-
--- Enable snippets in additional contexts
-vim.g.vsnip_filetypes = {
-  typescriptreact = {"typescript"},
-  javascriptreact = {"javascript"},
-  vue = {"javascript"},
-}
