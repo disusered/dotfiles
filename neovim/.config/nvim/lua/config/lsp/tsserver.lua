@@ -14,5 +14,8 @@ require'lspconfig'.tsserver.setup{
 
     -- Attach LSP kind plugin and config
     require'config.lspkind'()
+
+    -- Disable language server formatting
+    client.resolved_capabilities.document_formatting = false
   end
 }
