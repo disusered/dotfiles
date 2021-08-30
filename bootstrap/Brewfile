@@ -59,6 +59,7 @@ brew 'jmeter'
 brew 'kubectx', args: ['with-short-names']
 brew 'kubernetes-cli'
 brew 'kubernetes-helm'
+brew 'kustomize'
 brew 'terraform'
 brew 'terraformer'
 brew 'terraform-ls'
