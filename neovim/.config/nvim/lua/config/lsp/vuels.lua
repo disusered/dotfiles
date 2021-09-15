@@ -30,7 +30,7 @@ require'lspconfig'.vuels.setup{
         },
         format = {
           -- Enable document formatter
-          enable = true,
+          enable = false,
           -- Configure default code formatters for template blocks
           defaultFormatter = {
             css = "prettier",
@@ -75,7 +75,7 @@ require'lspconfig'.vuels.setup{
         -- want to format using Nvim's native `vim.lsp.buf.formatting**()`
         -- want to use Vetur's formatting config instead, e.g, settings.vetur.format {...}
       -- https://github.com/ngtinsmith/dotfiles/blob/b78bf3115d746d037c814ce6767b4c6ba38021c5/.vimrc#L558
-    client.resolved_capabilities.document_formatting = true
+    client.resolved_capabilities.document_formatting = false
   end
 }
 
