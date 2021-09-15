@@ -1,4 +1,5 @@
 local filetypes = {
+  vue = "prettier",
   javascript = "prettier",
   javascriptreact = "prettier",
   typescript = "prettierts",
@@ -6,6 +7,7 @@ local filetypes = {
 }
 
 local formatters = {
+  eslint = {command="eslint", args = { "--fix", "--stdin-filename", "%filepath"}},
   prettier = {command = "prettier", args = {"--stdin-filepath", "%filepath"}},
   prettierts = {command = "prettier", args = {"--parser", "typescript", "--stdin-filepath", "%filepath"}}
 }
