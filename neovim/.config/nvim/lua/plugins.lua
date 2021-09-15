@@ -65,6 +65,9 @@ return packer.startup(function(use)
   -- use 'justinmk/vim-sneak'
   use {'phaazon/hop.nvim', as = 'hop'}
 
+  -- EnMasse
+  use {'Wolfy87/vim-enmasse'}
+
   -----------------------------------------------------------------------------
   -- Language & Syntax
   -----------------------------------------------------------------------------
