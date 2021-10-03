@@ -16,8 +16,8 @@ local lsp_signature_init = function()
     -- Virtual hint disable
     hint_enable = false,
 
-    -- Use LSPSaga popup
-    use_lspsaga = true
+    -- Don't use LSPSaga popup
+    use_lspsaga = false
   })
 end
 

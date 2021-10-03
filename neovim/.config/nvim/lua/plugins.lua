@@ -89,7 +89,7 @@ return packer.startup(function(use)
   use 'tpope/vim-eunuch'
 
   -- LSP
-  use { 'rinx/lspsaga.nvim', requires = {'neovim/nvim-lspconfig'} }
+  use { 'neovim/nvim-lspconfig' }
 
   -- Git support
   use 'tpope/vim-fugitive'

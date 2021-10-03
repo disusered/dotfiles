@@ -10,7 +10,7 @@ require'lspconfig'.yamlls.setup{
 
   on_attach = function(client, bufnr)
     -- Register keymaps
-    require'config.lsp.maps'(bufnr)
+    require'config.lsp.maps'(client, bufnr)
 
     -- Attach LSP signature plugin and config
     require'config.lspsignature'()
