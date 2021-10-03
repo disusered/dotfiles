@@ -169,6 +169,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vim-elixir"
   },
+  ["vim-enmasse"] = {
+    loaded = true,
+    path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vim-enmasse"
+  },
   ["vim-eunuch"] = {
     loaded = true,
     path = "/Users/carlos/.local/share/nvim/site/pack/packer/start/vim-eunuch"
