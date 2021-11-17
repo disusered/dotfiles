@@ -20,6 +20,7 @@ brew 'fpp'
 brew 'fzf', args: ['HEAD']
 brew 'git'
 brew 'git-flow'
+brew 'git-lfs'
 brew 'gpg'
 brew 'htop'
 brew 'httpie'
