@@ -81,6 +81,9 @@ return packer.startup(function(use)
   -- LaTex
   use {'lervag/vimtex'}
 
+  -- CoPilot
+  use {'github/copilot.vim'}
+
   -----------------------------------------------------------------------------
   -- IDE plugins
   -----------------------------------------------------------------------------
