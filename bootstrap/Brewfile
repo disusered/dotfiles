@@ -9,6 +9,7 @@ tap 'caskroom/fonts'
 tap 'Schniz/tap'
 tap 'universal-ctags/universal-ctags'
 tap 'hashicorp/tap'
+tap 'mongodb/brew'
 
 # env
 brew 'mas'
@@ -50,6 +51,8 @@ brew 'mailhog'
 brew 'neovim', args: ['HEAD']
 brew 'vim', args: ['override-system-vi', 'with-lua', 'with-luajit', 'with-tcl']
 brew 'ninja'
+brew 'mongodb-community@5.0'
+brew 'redis'
 
 # deployments
 brew 'ansible'
