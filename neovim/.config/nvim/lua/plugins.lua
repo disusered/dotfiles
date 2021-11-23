@@ -133,7 +133,8 @@ return packer.startup(function(use)
   -- Enable GitGutter like signs
   use {
     'lewis6991/gitsigns.nvim',
-    requires = {'nvim-lua/plenary.nvim'}
+    requires = {'nvim-lua/plenary.nvim'},
+    tag = 'release'
   }
 
   -- DBA UI
