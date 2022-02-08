@@ -1,5 +1,5 @@
 require("trouble").setup {
-  mode = "lsp_document_diagnostics", -- "lsp_workspace_diagnostics", "lsp_document_diagnostics", "quickfix", "lsp_references", "loclist"
+  mode = "document_diagnostics", -- "lsp_workspace_diagnostics", "lsp_document_diagnostics", "quickfix", "lsp_references", "loclist"
   action_keys = {
     -- map to {} to remove a mapping, for example:
     -- close = {},
@@ -21,5 +21,5 @@ require("trouble").setup {
     previous = "k", -- preview item
     next = "j" -- next item
   },
-  use_lsp_diagnostic_signs = true -- enabling this will use the signs defined in your lsp client
+  use_diagnostic_signs = true -- enabling this will use the signs defined in your lsp client
 }
