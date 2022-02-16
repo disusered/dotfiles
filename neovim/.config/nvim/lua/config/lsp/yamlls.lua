@@ -16,7 +16,12 @@ require'lspconfig'.yamlls.setup{
     require'config.lspsignature'()
 
     -- Attach LSP kind plugin and config
-    require'config.lspkind'()
+    require('lspkind').init({
+      -- options: 'text', 'text_symbol', 'symbol_text', 'symbol'
+      mode = 'symbol_text',
+      -- options: 'default', 'codicons'
+      preset = 'default'
+    })
   end,
 
   cmd = { "yaml-language-server", "--stdio" },
